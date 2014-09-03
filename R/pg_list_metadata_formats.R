@@ -2,7 +2,6 @@
 #'
 #' @export
 #' @import OAIHarvester
-#' @param
 #'
 #' @examples
 #' pg_list_metadata_formats()
