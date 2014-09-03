@@ -11,6 +11,8 @@
 pg_identify <- function(transform = TRUE) {
   url <- "http://ws.pangaea.de/oai"
   tmp <- oaih_identify(url, transform = transform)
-  tmp$description <- oaih_transform(tmp$description[[1L]])
-  return(tmp)
+  if (transform == TRUE) {
+    tmp$description <- oaih_transform(tmp$description[[1L]])
+ }
+ return(tmp)
 }
