@@ -4,10 +4,12 @@
 #' @import OAIHarvester
 #' @param
 #'
-#' @examples
-#' pg_getrecord()
+#' @examples \dontrun{
+#' record <- pg_getrecord(Identifier = "oai:pangaea.de:doi:10.1594/PANGAEA.788382")
+#' hed(record)
+#' }
 
-pg_getrecord(Identifier, transform = TRUE){
+pg_getrecord <- function(Identifier, transform = TRUE){
   baseurl <- "http://ws.pangaea.de/oai/"
   oaih_get_record(baseurl, identifier = Identifier, transform = transform)
 }
