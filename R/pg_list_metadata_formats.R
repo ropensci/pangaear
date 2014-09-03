@@ -1,8 +1,7 @@
 #' Get metadata formats from the Pangaea repository
 #'
 #' @export
-#' @import OAIHarvester
-#' @param
+#' @importFrom OAIHarvester oaih_list_metadata_formats
 #'
 #' @examples
 #' pg_list_metadata_formats()
