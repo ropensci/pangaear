@@ -5,8 +5,10 @@
 #' @param transform A logical indicating whether the OAI-PMH XML results to “useful” R data
 #' structures via oaih_transform. Default: true.
 #'
-#' @examples
+#' @examples \dontrun{
 #' pg_identify()
+#' }
+#'
 
 pg_identify <- function(transform = TRUE) {
   url <- "http://ws.pangaea.de/oai"
