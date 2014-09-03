@@ -33,6 +33,12 @@ List records from Pangaea
 \dontrun{
 res <- pg_list_records(from='2012-01-01', until='2012-01-15')
 head(res)
+
+res <- pg_list_records(set='geomound', from='2012-01-01', until='2012-01-05')
+head(res); NROW(res)
+
+# When no results found > "Error: Received condition 'noRecordsMatch'"
+pg_list_records(set='geomound', from='2012-01-01', until='2012-01-01')
 }
 }
 

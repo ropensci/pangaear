@@ -1,5 +1,6 @@
 .DS_Store
 .Rproj.user
 .gitignore
-*.Rproj
-*.Rbuildignore
+.Rbuildignore
+.Rproj
+.Rhistory
