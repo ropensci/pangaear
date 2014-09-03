@@ -13,6 +13,7 @@ structures via oaih_transform. Default: true.}
 Identify information about the Pangaea repository
 }
 \examples{
+\dontrun{
 pg_identify()
 }
-
+}
