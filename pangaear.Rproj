@@ -9,8 +9,13 @@ UseSpacesForTab: Yes
 NumSpacesForTab: 2
 Encoding: UTF-8
 
+<<<<<<< HEAD
+RnwWeave: Sweave
+LaTeX: pdfLaTeX
+=======
 RnwWeave: knitr
 LaTeX: XeLaTeX
+>>>>>>> upstream/master
 
 AutoAppendNewline: Yes
 StripTrailingWhitespace: Yes
