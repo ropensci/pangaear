@@ -10,5 +10,4 @@ License: What license is it under?
 LazyData: true
 Imports:
     OAIHarvester,
-    RCurl,
-    devtools
+    RCurl
