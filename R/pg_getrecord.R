@@ -1,7 +1,7 @@
 #' Get record from the Pangaea repository
 #'
 #' @export
-#' @import OAIHarvester
+#' @importFrom OAIHarvester oaih_get_record
 #' @param identifier description
 #' @param transform logical;
 #'
