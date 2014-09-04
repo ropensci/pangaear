@@ -5,7 +5,7 @@
 #' @param identifier description
 #' @param transform logical;
 #'
-#' @examples \dontrun{
+#' @examples \donttest{
 #' record <- pg_getrecord(identifier = "oai:pangaea.de:doi:10.1594/PANGAEA.788382")
 #' head(record)
 #' }
