@@ -3,7 +3,7 @@
 #' Grabs data as a dataframe or list of dataframes from a Pangaea data repository URI; see: \url{http://www.pangaea.de/}. Expects the individual data files to be in tab-delimited text format
 #'
 #' @author Naupaka Zimmerman
-#' @import RCurl devtools
+#' @import RCurl
 #' @export
 #' @param uri Public internet address of the data
 #' @return dataframe with rows of data, list of dataframes with rows of data if there are multiple related data sets found at the URI
@@ -24,7 +24,7 @@ pg_get_data_from_uri <- function(uri){
 #' Grabs data as a dataframe or list of dataframes from a Pangaea data repository URI; see: \url{http://www.pangaea.de/}. Expects the individual data files to be in tab-delimited text format
 #'
 #' @author Naupaka Zimmerman
-#' @import RCurl devtools
+#' @import RCurl
 #' @export
 #' @param uri Public internet address of the data
 #' @return dataframe with rows of data, list of dataframes with rows of data if there are multiple related data sets found at the URI
