@@ -19,6 +19,10 @@ pg_get_data_from_uri <- function(uri){
     df
 }
 
+#' Function to download multiple data files from Pangaea.
+#'
+#' Grabs data as a dataframe or list of dataframes from a Pangaea data repository URI; see: \url{http://www.pangaea.de/}. Expects the individual data files to be in tab-delimited text format
+#'
 #' @author Naupaka Zimmerman
 #' @import RCurl devtools
 #' @export
