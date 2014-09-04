@@ -1,7 +1,7 @@
 #' Identify information about the Pangaea repository
 #'
 #' @export
-#' @importFrom OAIHarvester oaih_identify ohi_transform
+#' @importFrom OAIHarvester oaih_identify oaih_transform
 #' @param transform logical; whether the OAI-PMH XML results to \emph{useful} R data
 #' structures via \code{link{oaih_transform}}. Default: \code{TRUE}.
 #'
