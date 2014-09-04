@@ -1,9 +1,9 @@
 #' Identify information about the Pangaea repository
 #'
 #' @export
-#' @import OAIHarvester
-#' @param transform A logical indicating whether the OAI-PMH XML results to “useful” R data
-#' structures via oaih_transform. Default: true.
+#' @importFrom OAIHarvester oaih_identify ohi_transform
+#' @param transform logical; whether the OAI-PMH XML results to \emph{useful} R data
+#' structures via \code{link{oaih_transform}}. Default: \code{TRUE}.
 #'
 #' @examples
 #' pg_identify()
@@ -13,6 +13,6 @@ pg_identify <- function(transform = TRUE) {
   tmp <- oaih_identify(url, transform = transform)
   if (transform == TRUE) {
     tmp$description <- oaih_transform(tmp$description[[1L]])
- }
- return(tmp)
+  }
+  tmp
 }
