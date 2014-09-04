@@ -2,7 +2,7 @@
 
 export(pg_get_data_from_uri)
 export(pg_get_multiple_data_from_uri)
-export(pg_getrecord)
+export(pg_get_record)
 export(pg_identify)
 export(pg_list_metadata_formats)
 export(pg_list_records)
