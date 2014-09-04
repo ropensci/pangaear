@@ -13,7 +13,7 @@
 
 pg_get_data_from_uri <- function(uri){
     uri <- paste0(uri,"?format=textfile")
-    response <- RCurl::getURLContent(uri)
+    response <- getURLContent(uri)
     raw_data <- gsub("/\\*.*\\*/\n", "", response)
     df <- read.delim(textConnection(raw_data))
     df
@@ -34,7 +34,7 @@ pg_get_data_from_uri <- function(uri){
 
 pg_get_multiple_data_from_uri <- function(uri){
 
-  response <- RCurl::getURLContent(uri)
+  response <- getURLContent(uri)
   if(grepl("name=\"dslist\"", response) == TRUE){
     data_file_dois <- gregexpr("<div class=\"MetaHeaderItem\"><a rel=\"follow\" href=\"(http://doi.pangaea.de/.*?)\">", response)
     data_file_dois <- regmatches(response, data_file_dois)
