@@ -3,7 +3,7 @@
 \alias{pg_get_record}
 \title{Get record from the Pangaea repository}
 \usage{
-pg_get_record(Identifier, transform = TRUE)
+pg_get_record(identifier, transform = TRUE)
 }
 \arguments{
 \item{identifier}{description}
@@ -14,7 +14,7 @@ pg_get_record(Identifier, transform = TRUE)
 Get record from the Pangaea repository
 }
 \examples{
-\dontrun{
+\donttest{
 record <- pg_get_record(identifier = "oai:pangaea.de:doi:10.1594/PANGAEA.788382")
 head(record)
 }
