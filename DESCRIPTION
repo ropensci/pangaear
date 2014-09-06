@@ -1,13 +1,19 @@
 Package: pangaear
-Title: What the package does (short line)
-Version: 0.1
-Authors@R: person("Scott", "Chamberlain", email = "scott@email.com", role =
-    c("aut","cre"))
-Description: What the package does (paragraph)
-Depends:
-    R (>= 3.1.1)
-License: What license is it under?
+Title: R client for the Pangaea Database.
+Version: 0.0.1.99
+Date: 2014-09-05
+Authors@R: c(person("Scott", "Chamberlain", email = "myrmecocystus@gmail.com", role =
+    c("aut","cre")), person("Kara", "Woo", email = "kara@gmail.com",
+    role = "aut"), person("Andrew", "MacDonald", email = "a.a.m.macdonald@gmail.com",
+    role = "aut"), person("Naupaka ", "Zimmerman", email = "naupaka@gmail.com",
+    role = "aut"), person("Gavin", "Simpson", email = "ucfagls@gmail.com",
+    role = "aut"))
+Description: R client for the Pangaea Database.
+License: MIT + file LICENSE
 LazyData: true
+Roxygen: list(wrap = FALSE)
+URL: https://github.com/ropensci/pangaear
+BugReports: https://github.com/ropensci/pangaear/issues
 Imports:
     OAIHarvester,
     RCurl
