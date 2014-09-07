@@ -17,3 +17,11 @@ library('pangaear')
 ```r
 do stuff and things...
 ```
+
+## Contributors (alphebetical)
+
+* Scott Chamberlain
+* Andrew MacDonald
+* Gavin Simpson
+* Kara Woo
+* Naupaka Zimmerman
