@@ -7,7 +7,6 @@
 #' pg_list_metadata_formats()
 
 pg_list_metadata_formats <- function(){
-  baseurl <- "http://ws.pangaea.de/oai/"
-  formats <- oaih_list_metadata_formats(baseurl)
+  formats <- oaih_list_metadata_formats(baseoai())
   data.frame(formats)
 }

@@ -29,7 +29,6 @@
 #' }
 
 pg_list_records <- function(prefix = "oai_dc", from = NULL, until = NULL, set = NULL, transform = TRUE) {
-  url <- "http://ws.pangaea.de/oai"
-  tmp <- oaih_list_records(url, prefix = prefix, from = from, until = until, set = set, transform = transform)
+  tmp <- oaih_list_records(baseoai(), prefix = prefix, from = from, until = until, set = set, transform = transform)
   data.frame(tmp, stringsAsFactors = FALSE)
 }

@@ -11,6 +11,5 @@
 #' }
 
 pg_get_record <- function(identifier, transform = TRUE){
-  baseurl <- "http://ws.pangaea.de/oai/"
-  oaih_get_record(baseurl, identifier = identifier, transform = transform)
+  oaih_get_record(baseoai(), identifier = identifier, transform = transform)
 }

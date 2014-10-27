@@ -11,12 +11,10 @@
 #' pg_list_sets()
 #' }
 
-
 pg_list_sets <- function(transform = TRUE) {
-  url <- "http://ws.pangaea.de/oai"
   verb <- "ListSets"
   if (transform == TRUE) {
-    tmp <- oaih_list_sets(url, transform = transform)
+    tmp <- oaih_list_sets(baseoai(), transform = transform)
     data.frame(tmp, stringsAsFactors = FALSE)
   } else {
     url2 <- paste(url, "/?verb=", verb, sep = "")
