@@ -15,5 +15,6 @@ Roxygen: list(wrap = FALSE)
 URL: https://github.com/ropensci/pangaear
 BugReports: https://github.com/ropensci/pangaear/issues
 Imports:
+    RCurl,
     httr,
     XML
