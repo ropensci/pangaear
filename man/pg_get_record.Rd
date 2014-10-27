@@ -3,7 +3,7 @@
 \alias{pg_get_record}
 \title{Get record from the Pangaea repository}
 \usage{
-pg_get_record(identifier, transform = TRUE)
+pg_get_record(identifier, prefix = "oai_dc", transform = TRUE)
 }
 \arguments{
 \item{identifier}{Dataset identifier. See Examples.}
@@ -18,6 +18,10 @@ Get record from the Pangaea repository
 record <- pg_get_record(identifier = "oai:pangaea.de:doi:10.1594/PANGAEA.788382")
 record$identifier
 record$metadata
+
+record <- pg_get_record(identifier = "oai:pangaea.de:doi:10.1594/PANGAEA.269656",
+prefix="iso19139")
+record$identifier
 }
 }
 

@@ -4,6 +4,8 @@
 
 An R client to interact with the [Pangaea database](http://www.pangaea.de/).
 
+Pangaea [API docs]().
+
 ## Installation
 
 ```r

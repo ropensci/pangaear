@@ -27,6 +27,12 @@
 #'
 #' # When no results found > "Error: Received condition 'noRecordsMatch'"
 #' pg_list_records(set='geomound', from='2012-01-01', until='2012-01-01')
+#'
+#' # More examples
+#' pg_list_records(set='citable', from='2012-01-01', until='2012-01-05')
+#' pg_list_records(prefix="iso19139", set='citable', from='2012-01-01', until='2012-01-05')
+#' pg_list_records(prefix="dif", set='citable', from='2012-01-01', until='2012-01-05')
+#' pg_list_records(prefix="dif", set='project4094', from='2012-01-01', until='2012-01-05')
 #' }
 
 pg_list_records <- function(prefix = "oai_dc", from = NULL, until = NULL, set = NULL, transform = TRUE) {

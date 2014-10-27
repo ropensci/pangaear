@@ -9,8 +9,12 @@
 #' record <- pg_get_record(identifier = "oai:pangaea.de:doi:10.1594/PANGAEA.788382")
 #' record$identifier
 #' record$metadata
+#'
+#' record <- pg_get_record(identifier = "oai:pangaea.de:doi:10.1594/PANGAEA.269656",
+#' prefix="iso19139")
+#' record$identifier
 #' }
 
-pg_get_record <- function(identifier, transform = TRUE){
-  oaih_get_record(baseoai(), identifier = identifier, transform = transform)
+pg_get_record <- function(identifier, prefix = "oai_dc", transform = TRUE){
+  oaih_get_record(baseoai(), identifier = identifier, prefix = prefix, transform = transform)
 }
