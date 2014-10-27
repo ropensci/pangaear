@@ -2,7 +2,6 @@
 #'
 #' @export
 #' @param ... Curl debugging options passed on to \code{\link[httr]{GET}}
-#' @param x Input to print.
 #'
 #' @examples \donttest{
 #' pg_identify()
@@ -11,11 +10,11 @@
 pg_identify <- function(...) {
   res <- pg_GET(args = list(verb="Identify"), unname = FALSE, ...)
   res <- as.list(sapply(res, xmlValue))
-  structure(res, class="pgidentify")
+  structure(res, class="pg_identify")
 }
 
 #' @export
-print.pgidentify <- function(x, ...){
+print.pg_identify <- function(x, ...){
   cat("<Pangaea>", "\n", sep = "")
   cat("  repositoryName: ", x$repositoryName, "\n", sep = "")
   cat("  baseURL: ", x$baseURL, "\n", sep = "")

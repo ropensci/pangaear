@@ -1,7 +1,7 @@
 #' List identifiers of the Pangaea repository
 #'
 #' @export
-#' @importFrom httr GET content
+#' @importFrom httr GET content stop_for_status
 #' @inheritParams pg_list_records
 #'
 #' @examples \donttest{

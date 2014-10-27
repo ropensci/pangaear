@@ -1,7 +1,7 @@
 #' List the set structure of the Pangaea repository
 #'
 #' @export
-#' @importFrom XML xmlParse
+#' @importFrom XML xmlParse xmlChildren xmlRoot xmlValue xmlToList
 #' @param ... Curl debugging options passed on to \code{\link[httr]{GET}}
 #'
 #' @examples \donttest{
