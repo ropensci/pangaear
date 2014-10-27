@@ -1,17 +1,30 @@
 #' Identify information about the Pangaea repository
 #'
 #' @export
-#' @importFrom OAIHarvester oaih_identify oaih_transform
-#' @param transform (logical) Whether the OAI-PMH XML results to \emph{useful} R data
-#' structures via \code{link{oaih_transform}}. Default: \code{TRUE}.
+#' @param ... Curl debugging options passed on to \code{\link[httr]{GET}}
+#' @param x Input to print.
 #'
-#' @examples
+#' @examples \donttest{
 #' pg_identify()
+#' }
 
-pg_identify <- function(transform = TRUE) {
-  tmp <- oaih_identify(baseoai(), transform = transform)
-  if (transform == TRUE) {
-    tmp$description <- oaih_transform(tmp$description[[1L]])
-  }
-  tmp
+pg_identify <- function(...) {
+  res <- pg_GET(args = list(verb="Identify"), unname = FALSE, ...)
+  res <- as.list(sapply(res, xmlValue))
+  structure(res, class="pgidentify")
+}
+
+#' @export
+print.pgidentify <- function(x, ...){
+  cat("<Pangaea>", "\n", sep = "")
+  cat("  repositoryName: ", x$repositoryName, "\n", sep = "")
+  cat("  baseURL: ", x$baseURL, "\n", sep = "")
+  cat("  protocolVersion: ", x$protocolVersion, "\n", sep = "")
+  cat("  adminEmail: ", x$adminEmail, "\n", sep = "")
+  cat("  adminEmail: ", x$adminEmail, "\n", sep = "")
+  cat("  earliestDatestamp: ", x$earliestDatestamp, "\n", sep = "")
+  cat("  deletedRecord: ", x$deletedRecord, "\n", sep = "")
+  cat("  granularity: ", x$granularity, "\n", sep = "")
+  cat("  compression: ", paste0(x[ names(x) %in% "compression" ], collapse = ","), "\n", sep = "")
+  cat("  description: ", x$description, "\n", sep = "")
 }

@@ -3,12 +3,17 @@
 \alias{pg_list_metadata_formats}
 \title{Get metadata formats from the Pangaea repository}
 \usage{
-pg_list_metadata_formats()
+pg_list_metadata_formats(...)
+}
+\arguments{
+\item{...}{Curl debugging options passed on to \code{\link[httr]{GET}}}
 }
 \description{
 Get metadata formats from the Pangaea repository
 }
 \examples{
+\donttest{
 pg_list_metadata_formats()
+}
 }
 

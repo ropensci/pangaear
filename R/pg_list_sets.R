@@ -2,24 +2,25 @@
 #'
 #' @export
 #' @importFrom OAIHarvester oaih_list_sets
-#' @importFrom RCurl getURLContent
 #' @importFrom XML xmlParse
-#' @param transform (logical) Whether the OAI-PMH XML results to \emph{useful} R data
-#' structures via \code{link{oaih_transform}}. Default: \code{TRUE}.
+#' @param ... Curl debugging options passed on to \code{\link[httr]{GET}}
 #'
 #' @examples \donttest{
 #' head( pg_list_sets() )
+#' library('httr')
+#' res <- pg_list_sets(verbose())
 #' }
 
-pg_list_sets <- function(transform = TRUE) {
-  verb <- "ListSets"
-  if (transform == TRUE) {
-    tmp <- oaih_list_sets(baseoai(), transform = transform)
-    data.frame(tmp, stringsAsFactors = FALSE)
-  } else {
-    url2 <- paste(url, "/?verb=", verb, sep = "")
-    tmp <- getURLContent(url2)
-    tmp <- xmlParse(tmp)
-  }
-  tmp
+pg_list_sets <- function(...) {
+  res <- pg_GET(args = pgc(list(verb="ListSets")), ...)
+  data.frame(do.call(rbind, res), stringsAsFactors = FALSE)
 }
+#   if (transform) {
+#     tmp <- oaih_list_sets(baseoai(), transform = transform)
+#     data.frame(tmp, stringsAsFactors = FALSE)
+#   } else {
+#     url2 <- paste(baseoai(), "/?verb=", "ListSets", sep = "")
+#     tmp <- GET(url2)
+#     tmp <- xmlParse(tmp)
+#   }
+#   tmp

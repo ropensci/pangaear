@@ -3,11 +3,10 @@
 \alias{pg_list_sets}
 \title{List the set structure of the Pangaea repository}
 \usage{
-pg_list_sets(transform = TRUE)
+pg_list_sets(...)
 }
 \arguments{
-\item{transform}{(logical) Whether the OAI-PMH XML results to \emph{useful} R data
-structures via \code{link{oaih_transform}}. Default: \code{TRUE}.}
+\item{...}{Curl debugging options passed on to \code{\link[httr]{GET}}}
 }
 \description{
 List the set structure of the Pangaea repository
@@ -15,6 +14,8 @@ List the set structure of the Pangaea repository
 \examples{
 \donttest{
 head( pg_list_sets() )
+library('httr')
+res <- pg_list_sets(verbose())
 }
 }
 

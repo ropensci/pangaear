@@ -3,16 +3,19 @@
 \alias{pg_identify}
 \title{Identify information about the Pangaea repository}
 \usage{
-pg_identify(transform = TRUE)
+pg_identify(...)
 }
 \arguments{
-\item{transform}{(logical) Whether the OAI-PMH XML results to \emph{useful} R data
-structures via \code{link{oaih_transform}}. Default: \code{TRUE}.}
+\item{...}{Curl debugging options passed on to \code{\link[httr]{GET}}}
+
+\item{x}{Input to print.}
 }
 \description{
 Identify information about the Pangaea repository
 }
 \examples{
+\donttest{
 pg_identify()
+}
 }
 
