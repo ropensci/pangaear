@@ -1,0 +1,82 @@
+# pangaear
+
+[![Build Status](https://api.travis-ci.org/ropensci/pangaear.png)](https://travis-ci.org/ropensci/pangaear)
+[![Build status](https://ci.appveyor.com/api/projects/status/564oioj2oyefax08?svg=true)](https://ci.appveyor.com/project/sckott/pangaear)
+
+An R client to interact with the [Pangaea database](http://www.pangaea.de/).
+
+## Info
+
+* Pangaea [website](http://www.pangaea.de/).
+* Pangaea [OAI-PMH docs](http://wiki.pangaea.de/wiki/OAI-PMH).
+* [OAI-PMH Spec](http://www.openarchives.org/OAI/openarchivesprotocol.html)
+
+## Quick start
+
+### Installation
+
+```{r eval=FALSE}
+install.packages("devtools")
+devtools::install_github('ropensci/pangaear')
+```
+
+```{r}
+library('pangaear')
+```
+
+### Identify the service
+
+```{r}
+pg_identify()
+```
+
+### List metadata formats
+
+```{r}
+pg_list_metadata_formats()
+```
+
+### List identifiers
+
+```{r}
+head( pg_list_identifiers(from='2012-01-01', until='2012-01-05') )
+```
+
+### List sets
+
+```{r}
+head( pg_list_sets() )
+```
+
+### List records
+
+```{r}
+res <- pg_list_records(from='2012-01-01', until='2012-01-15')
+head(res$headers); NROW(res$headers)
+```
+
+### Geta a record
+
+```{r}
+record <- pg_get_record(identifier = "oai:pangaea.de:doi:10.1594/PANGAEA.788382")
+record$header
+record$metadata
+```
+
+### 
+
+## Contributors (alphabetical)
+
+* Scott Chamberlain
+* Andrew MacDonald
+* Gavin Simpson
+* Kara Woo
+* Naupaka Zimmerman
+
+## Meta
+
+* Please [report any issues or bugs](https://github.com/ropensci/pangaear/issues).
+* License: MIT
+* Get citation information for `pangaear` in R doing `citation(package = 'pangaear')`
+
+[![](http://ropensci.org/public_images/github_footer.png)](http://ropensci.org)
