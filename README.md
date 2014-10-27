@@ -18,7 +18,7 @@ library('pangaear')
 do stuff and things...
 ```
 
-## Contributors (alphebetical)
+## Contributors (alphabetical)
 
 * Scott Chamberlain
 * Andrew MacDonald
