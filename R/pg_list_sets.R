@@ -4,11 +4,11 @@
 #' @importFrom OAIHarvester oaih_list_sets
 #' @importFrom RCurl getURLContent
 #' @importFrom XML xmlParse
-#' @param transform logical; whether the OAI-PMH XML results to \emph{useful} R data
+#' @param transform (logical) Whether the OAI-PMH XML results to \emph{useful} R data
 #' structures via \code{link{oaih_transform}}. Default: \code{TRUE}.
 #'
 #' @examples \donttest{
-#' pg_list_sets()
+#' head( pg_list_sets() )
 #' }
 
 pg_list_sets <- function(transform = TRUE) {

@@ -6,7 +6,7 @@
 pg_identify(transform = TRUE)
 }
 \arguments{
-\item{transform}{logical; whether the OAI-PMH XML results to \emph{useful} R data
+\item{transform}{(logical) Whether the OAI-PMH XML results to \emph{useful} R data
 structures via \code{link{oaih_transform}}. Default: \code{TRUE}.}
 }
 \description{

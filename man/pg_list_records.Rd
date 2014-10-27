@@ -8,12 +8,13 @@ pg_list_records(prefix = "oai_dc", from = NULL, until = NULL,
 }
 \arguments{
 \item{prefix}{A character string to specify the metadata format in OAI-PMH requests issued to
-the repository. The default (\code{"oai_dc"}) corresponds to the mandatory OAI unqualified Dublin Core
-metadata schema.}
+the repository. The default (\code{"oai_dc"}) corresponds to the mandatory OAI unqualified
+Dublin Core metadata schema.}
 
-\item{from}{Character string giving datestamp to be used as lower bound for datestamp-based selective harvesting (i.e., only harvest records with
-datestamps in the given range). Dates and times must be encoded using ISO 8601. The trailing
-Z must be used when including time. OAI-PMH implies UTC for data/time specifications.}
+\item{from}{Character string giving datestamp to be used as lower bound for datestamp-based
+selective harvesting (i.e., only harvest records with datestamps in the given range). Dates
+and times must be encoded using ISO 8601. The trailing Z must be used when including time.
+OAI-PMH implies UTC for data/time specifications.}
 
 \item{until}{Character string giving a datestamp to be used as an upper bound,
 for datestamp-based selective harvesting (i.e., only harvest records with datestamps in
@@ -23,7 +24,7 @@ the given range).}
 harvest records in the given set).}
 
 \item{transform}{A logical indicating whether the OAI-PMH XML results to \emph{useful} R data
-structures via \code{\link{oaih_transform}}. Default: \code{TRUE}.}
+structures via \code{\link[OAIHarvester]{oaih_transform}}. Default: \code{TRUE}.}
 }
 \description{
 List records from Pangaea
@@ -31,7 +32,7 @@ List records from Pangaea
 \examples{
 \donttest{
 res <- pg_list_records(from='2012-01-01', until='2012-01-15')
-head(res)
+head(res); NROW(res)
 
 res <- pg_list_records(set='geomound', from='2012-01-01', until='2012-01-05')
 head(res); NROW(res)

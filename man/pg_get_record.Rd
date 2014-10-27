@@ -6,9 +6,9 @@
 pg_get_record(identifier, transform = TRUE)
 }
 \arguments{
-\item{identifier}{description}
+\item{identifier}{Dataset identifier. See Examples.}
 
-\item{transform}{logical;}
+\item{transform}{(logical) Transform the output to XML via \code{\link[XML]{xmlParse}}}
 }
 \description{
 Get record from the Pangaea repository
@@ -16,7 +16,8 @@ Get record from the Pangaea repository
 \examples{
 \donttest{
 record <- pg_get_record(identifier = "oai:pangaea.de:doi:10.1594/PANGAEA.788382")
-head(record)
+record$identifier
+record$metadata
 }
 }
 
