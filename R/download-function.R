@@ -4,7 +4,7 @@
 #' \url{http://www.pangaea.de/}.
 #'
 #' @export
-#' @importFrom httr write_disk
+#' @importFrom httr write_disk config
 #'
 #' @param doi DOI of Pangaeae dataset
 #' @param write (logical) Write dataset to disk or read into memory (the R session). Default: TRUE
