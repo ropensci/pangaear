@@ -6,14 +6,14 @@
 #' @export
 #' @importFrom httr write_disk config
 #'
-#' @param doi DOI of Pangaeae dataset
-#' @param write (logical) Write dataset to disk or read into memory (the R session). Default: TRUE
+#' @param doi DOI of Pangaeae single dataset, or of a collection of datasets.
 #' @param path (character) Path to store files in. Default: \emph{"~/.pangaea/"}
 #' @param overwrite (logical) Ovewrite a file if one is found with the same name
 #' @param ... Curl debugging options passed on to \code{\link[httr]{GET}}
 #'
-#' @return dataframe with rows of data, list of dataframes with rows of data if there are multiple
-#' related data sets found at the URI
+#' @return One or more items of class pangaea, each with a citation object, metadata object,
+#' and data object. Each data object is printed as a \code{\link[dplyr]{tbl_df}} object, but the
+#' actual object is simply a \code{data.frame}.
 #' @author Naupaka Zimmerman
 #' @examples \donttest{
 #' # a single file
@@ -35,7 +35,7 @@
 #' res[[2]]
 #' }
 
-pg_data <- function(doi, write=TRUE, path="~/.pangaea/", overwrite=TRUE, ...)
+pg_data <- function(doi, path="~/.pangaea/", overwrite=TRUE, ...)
 {
   dois <- check_many(doi)
   invisible(lapply(dois, function(x){

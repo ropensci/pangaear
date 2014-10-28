@@ -3,12 +3,10 @@
 \alias{pg_data}
 \title{Download data from Pangaea.}
 \usage{
-pg_data(doi, write = TRUE, path = "~/.pangaea/", overwrite = TRUE, ...)
+pg_data(doi, path = "~/.pangaea/", overwrite = TRUE, ...)
 }
 \arguments{
-\item{doi}{DOI of Pangaeae dataset}
-
-\item{write}{(logical) Write dataset to disk or read into memory (the R session). Default: TRUE}
+\item{doi}{DOI of Pangaeae single dataset, or of a collection of datasets.}
 
 \item{path}{(character) Path to store files in. Default: \emph{"~/.pangaea/"}}
 
@@ -17,8 +15,9 @@ pg_data(doi, write = TRUE, path = "~/.pangaea/", overwrite = TRUE, ...)
 \item{...}{Curl debugging options passed on to \code{\link[httr]{GET}}}
 }
 \value{
-dataframe with rows of data, list of dataframes with rows of data if there are multiple
-related data sets found at the URI
+One or more items of class pangaea, each with a citation object, metadata object,
+and data object. Each data object is printed as a \code{\link[dplyr]{tbl_df}} object, but the
+actual object is simply a \code{data.frame}.
 }
 \description{
 Grabs data as a dataframe or list of dataframes from a Pangaea data repository URI; see:
