@@ -65,7 +65,7 @@ pang_GET <- function(bp, url, doi, overwrite){
   dir.create(bp, showWarnings = FALSE, recursive = TRUE)
   fname <- rdoi(doi)
   res <- GET(url,
-             query=list(format="textfile"),
+             query=list(format="textfile", charset="UTF-8"),
              config(followlocation = TRUE),
              write_disk(file.path(bp, fname), overwrite))
   stop_for_status(res)
