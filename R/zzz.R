@@ -1,5 +1,6 @@
 baseoai <- function() "http://ws.pangaea.de/oai/"
 base <- function() 'http://doi.pangaea.de/'
+sbase <- function() "http://www.pangaea.de/search"
 
 pgc <- function (l) Filter(Negate(is.null), l)
 
@@ -37,6 +38,8 @@ read_csv <- function(x){
 #   names(tmp) <- tolower(gsub("\\.", "_", gsub("\\.\\.", "_", gsub("\\.+$", "", names(tmp)))))
   tmp
 }
+
+ifn <- function(x) if(is.null(x)) NA else x
 
 # ff <- file(x, open = "r", encoding = "UTF-8")
 # read.table(ff, header = TRUE, sep = "\t", stringsAsFactors=FALSE)
