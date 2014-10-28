@@ -1,4 +1,14 @@
-# pangaear
+pangaear
+========
+
+```{r echo=FALSE}
+knitr::opts_chunk$set(
+  comment = "#>",
+  collapse = TRUE,
+  warning = FALSE, 
+  message = FALSE
+)
+```
 
 [![Build Status](https://api.travis-ci.org/ropensci/pangaear.png)](https://travis-ci.org/ropensci/pangaear)
 [![Build status](https://ci.appveyor.com/api/projects/status/564oioj2oyefax08?svg=true)](https://ci.appveyor.com/project/sckott/pangaear)
@@ -63,7 +73,13 @@ record$header
 record$metadata
 ```
 
-### 
+### Get data
+
+```{r}
+res <- pg_data(doi='10.1594/PANGAEA.761032')
+res[[1]]
+```
+
 
 ## Contributors (alphabetical)
 
