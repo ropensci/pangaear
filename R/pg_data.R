@@ -10,6 +10,8 @@
 #' @param path (character) Path to store files in. Default: \emph{"~/.pangaea/"}
 #' @param overwrite (logical) Ovewrite a file if one is found with the same name
 #' @param ... Curl debugging options passed on to \code{\link[httr]{GET}}
+#' @param prompt (logical) Prompt before clearing all files in cache? No prompt used when DOIs
+#' assed in. Default: TRUE
 #'
 #' @return One or more items of class pangaea, each with a citation object, metadata object,
 #' and data object. Each data object is printed as a \code{\link[dplyr]{tbl_df}} object, but the
@@ -33,6 +35,26 @@
 #' res <- pg_data(doi='10.1594/PANGAEA.761032')
 #' res[[1]]
 #' res[[2]]
+#'
+#' # Manipulating the cache
+#' ## list files in the cache
+#' pg_cache_list()
+#'
+#' ## clear all data
+#' pg_cache_clear()
+#' pg_cache_list()
+#'
+#' ## clear a single dataset by DOI
+#' pg_data(doi='10.1594/PANGAEA.812093')
+#' pg_cache_list()
+#' pg_cache_clear(doi='10.1594/PANGAEA.812093')
+#' pg_cache_list()
+#'
+#' ## clear more than 1 dataset by DOI
+#' lapply(c('10.1594/PANGAEA.746398','10.1594/PANGAEA.746400'), pg_data)
+#' pg_cache_list()
+#' pg_cache_clear(doi=c('10.1594/PANGAEA.746398','10.1594/PANGAEA.746400'))
+#' pg_cache_list()
 #' }
 
 pg_data <- function(doi, path="~/.pangaea/", overwrite=TRUE, ...)
@@ -60,6 +82,23 @@ print.meta <- function(x, ...){
 print.citation <- function(x, ...){
   cat(x$citation, sep = "\n")
 }
+
+#' @export
+#' @rdname pg_data
+pg_cache_clear <- function(path="~/.pangaea/", doi=NULL, prompt=TRUE){
+  if(is.null(doi)){
+    files <- list.files(path, full.names = TRUE)
+    resp <- if(prompt) readline(sprintf("Sure you want to clear all %s files? [y/n]:  ", length(files))) else "y"
+    if(resp == "y") unlink(files, force = TRUE) else NULL
+  } else {
+    files <- file.path(path, rdoi(doi))
+    unlink(files, force = TRUE)
+  }
+}
+
+#' @export
+#' @rdname pg_data
+pg_cache_list <- function(path="~/.pangaea/") list.files(path)
 
 pang_GET <- function(bp, url, doi, overwrite){
   dir.create(bp, showWarnings = FALSE, recursive = TRUE)
