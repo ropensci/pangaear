@@ -14,4 +14,7 @@ on_failure:
   - ./travis-tool.sh dump_logs
 
 notifications:
- slack: ropensci:wh30e1MP9Am3wXb2wJx1ZRFi:builds
+	slack: ropensci:6CDrHoua0c7LCT9BgnxO4dVQ:builds
+	email:
+	 on_success: change
+	 on_failure: change
