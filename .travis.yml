@@ -1,5 +1,11 @@
 language: r
 
+r_github_packages:
+  - jimhester/covr
+
+after_success:
+  - Rscript -e 'covr::codecov()'
+
 notifications:
   slack:
     secure: ZwvL7pgs0YkqCXYMp2Mmu+qA+frsBPMmksZZQDxG9LgRHDTDMNEsyiFGKSot/yLYAbCEiWS/B+hI1Ow3f1SgbOvovjsTQVOr0tONq1Wyg44DaR637zUTVy40FXAwGTnQNTpFq7WTiwyrB+dt81svNWV/ZFpV+/vgpFF1lTp+PhM=
