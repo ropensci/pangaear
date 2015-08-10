@@ -169,8 +169,8 @@ pg_list_metadata_formats()
 
 
 ```r
-head( pg_list_identifiers(from='2012-01-01', until='2012-01-05') )
-#> data frame with 0 columns and 0 rows
+head( pg_list_identifiers(from='2015-01-01', until='2015-02-05')  )
+#> Error in pg_GET(args = args, ...): server error: (503) Service Unavailable
 ```
 
 #### List sets
@@ -178,20 +178,7 @@ head( pg_list_identifiers(from='2012-01-01', until='2012-01-05') )
 
 ```r
 head( pg_list_sets() )
-#>       setSpec
-#> 1  projectXXX
-#> 2   authorXXX
-#> 3       piXXX
-#> 4  journalXXX
-#> 5    basisXXX
-#> 6 campaignXXX
-#>                                                                                                                  setName
-#> 1                Virtual set: Data related to project with database identifier XXX (replace 'XXX' by PANGAEA identifier)
-#> 2                 Virtual set: Data related to author with database identifier XXX (replace 'XXX' by PANGAEA identifier)
-#> 3 Virtual set: Data related to principal investigator with database identifier XXX (replace 'XXX' by PANGAEA identifier)
-#> 4    Virtual set: Data related to articles of journal with database identifier XXX (replace 'XXX' by PANGAEA identifier)
-#> 5             Virtual set: Data related to basis/ship with database identifier XXX (replace 'XXX' by PANGAEA identifier)
-#> 6               Virtual set: Data related to campaign with database identifier XXX (replace 'XXX' by PANGAEA identifier)
+#> Error in pg_GET(args = pgc(list(verb = "ListSets")), ...): server error: (503) Service Unavailable
 ```
 
 #### List records
@@ -199,7 +186,7 @@ head( pg_list_sets() )
 
 ```r
 res <- pg_list_records(from='2012-01-01', until='2012-01-15')
-#> Error in d[[1]]: subscript out of bounds
+#> Error in pg_GET(args = args, ...): server error: (503) Service Unavailable
 head(res$headers); NROW(res$headers)
 #> NULL
 #> [1] 0

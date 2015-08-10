@@ -5,7 +5,7 @@ pangaear
 knitr::opts_chunk$set(
   comment = "#>",
   collapse = TRUE,
-  warning = FALSE, 
+  warning = FALSE,
   message = FALSE
 )
 ```
@@ -74,7 +74,7 @@ pg_list_metadata_formats()
 #### List identifiers
 
 ```{r}
-head( pg_list_identifiers(from='2012-01-01', until='2012-01-05') )
+head( pg_list_identifiers(from='2015-01-01', until='2015-02-05')  )
 ```
 
 #### List sets
@@ -86,7 +86,7 @@ head( pg_list_sets() )
 #### List records
 
 ```{r}
-res <- pg_list_records(from='2012-01-01', until='2012-01-15')
+res <- pg_list_records(from='2015-01-01', until='2015-01-15')
 head(res$headers); NROW(res$headers)
 ```
 
