@@ -5,6 +5,7 @@ pangaear
 
 [![Build Status](https://api.travis-ci.org/ropensci/pangaear.png)](https://travis-ci.org/ropensci/pangaear)
 [![Build status](https://ci.appveyor.com/api/projects/status/564oioj2oyefax08?svg=true)](https://ci.appveyor.com/project/sckott/pangaear)
+[![codecov.io](https://codecov.io/github/sckott/pangaear/coverage.svg?branch=master)](https://codecov.io/github/sckott/pangaear?branch=master)
 
 An R client to interact with the [Pangaea database](http://www.pangaea.de/).
 
@@ -38,16 +39,16 @@ This is a thin wrapper around the GUI search interface on the page [http://www.p
 pg_search(query='water', bbox=c(-124.2, 41.8, -116.8, 46.1), count=3)
 #>                      doi score_per size_datasets
 #> 1 10.1594/PANGAEA.736010       100             9
-#> 2 10.1594/PANGAEA.803591        96             2
-#> 3 10.1594/PANGAEA.812094        91             2
+#> 2 10.1594/PANGAEA.812094        88             2
+#> 3 10.1594/PANGAEA.803591        85             2
 #>                                                                                                                          citation
 #> 1                                           Archer, DE; Devol, AH (1992): Benthic oxygen flixes on the Washington shelf and slope
-#> 2 Lorenson, TD; Collett, TS (2000): Gas content, composition of gas hydrate and volumetric gas/water ratios of ODP and DSDP sites
-#> 3                                              Simonyan, AV; Dultz, S; Behrens, H (2012): Diffusion transport of water in basalts
+#> 2                                              Simonyan, AV; Dultz, S; Behrens, H (2012): Diffusion transport of water in basalts
+#> 3 Lorenson, TD; Collett, TS (2000): Gas content, composition of gas hydrate and volumetric gas/water ratios of ODP and DSDP sites
 #>                                                                                                                                                                                                                                                                                                                supplement_to
 #> 1                                                                                                                                    Archer, DE; Devol, AH (1992): Benthic oxygen fluxes on the Washington shelf and slope: A comparison of in situ microelectrode and chamber flux measurements. Limnology and Oceanography
-#> 2 Lorenson, TD; Collett, TS (2000): Gas content and composition of gas hydrate from sediments of the southeastern North American continental margin. In: Paull, CK; Matsumoto, R; Wallace, PJ; Dillon, WP (eds.) Proceedings of the Ocean Drilling Program, Scientific Results, College Station, TX (Ocean Drilling Program)
-#> 3                                                                                                                                                                               Simonyan, AV; Dultz, S; Behrens, H (2012): Diffusive transport of water in porous fresh to altered mid-ocean ridge basalts. Chemical Geology
+#> 2                                                                                                                                                                               Simonyan, AV; Dultz, S; Behrens, H (2012): Diffusive transport of water in porous fresh to altered mid-ocean ridge basalts. Chemical Geology
+#> 3 Lorenson, TD; Collett, TS (2000): Gas content and composition of gas hydrate from sediments of the southeastern North American continental margin. In: Paull, CK; Matsumoto, R; Wallace, PJ; Dillon, WP (eds.) Proceedings of the Ocean Drilling Program, Scientific Results, College Station, TX (Ocean Drilling Program)
 #>   related_to
 #> 1         NA
 #> 2         NA
@@ -73,8 +74,8 @@ res[[1]]
 #> 9  NBP97-05/01 1997-08-04T12:09 -57.5007  -44.9915         -3090
 #> 10 NBP97-05/01 1997-08-04T12:09 -57.5007  -44.9915         -3090
 #> ..         ...              ...      ...       ...           ...
-#> Variables not shown: Depth water [m] (int), Temp [Â°C] (dbl), Sal (dbl),
-#>      Tpot [Â°C] (dbl)
+#> Variables not shown: Depth water [m] (int), Temp [°C] (dbl), Sal (dbl),
+#>      Tpot [°C] (dbl)
 ```
 
 Search for data then pass DOI to data function.
@@ -84,46 +85,43 @@ Search for data then pass DOI to data function.
 res <- pg_search(query='water', bbox=c(-124.2, 41.8, -116.8, 46.1), count=3)
 pg_data(res$doi[3])
 #> [[1]]
-#> <Pangaea data> 10.1594/PANGAEA.812092
-#>         Event Latitude Longitude Elevation [m]                Label
-#> 1    169-856H   48.434  -128.681         -2423       169-856H-55R-1
-#> 2    169-856H   48.434  -128.681         -2423 169-856H-57R-1,52-54
-#> 3    169-856H   48.434  -128.681         -2423 169-856H-64R-2,93-95
-#> 4    169-856H   48.434  -128.681         -2423 169-856H-65R-1,35-38
-#> 5  SO145/2_20  -14.153  -112.514         -2650        20DS4-surface
-#> 6  SO145/2_20  -14.153  -112.514         -2650           20DS4-core
-#> 7  SO145/2_29  -14.825  -111.907         -3355        29DS2-surface
-#> 8  SO145/2_29  -14.825  -111.907         -3355           29DS2-core
-#> 9  SO145/2_36  -14.892  -109.187         -3503        36DS1-surface
-#> 10 SO145/2_36  -14.892  -109.187         -3503           36DS1-core
-#> ..        ...      ...       ...           ...                  ...
-#> Variables not shown: Samp com (chr), Depth [m] (dbl), Age [ka BP] (int),
-#>      Rock (chr), Alteration (chr), DBD [g/cm**3] (dbl), Poros frac (MIP)
-#>      (dbl), Pore radius mean [mm] (dbl), SSA [m**2/g] (dbl), Poros frac
-#>      (#1 NIR) (dbl), Poros frac (#2 NIR) (dbl), Water dm [%] (dbl),
-#>      Minerals (chr)
+#> <Pangaea data> 10.1594/PANGAEA.803588
+#>       Event Latitude Longitude Elevation [m] Sample code/label   Samp type
+#> 1  164-994A  31.7857  -75.5459         -2798    164-994A-30X-5    Gas tube
+#> 2  164-994A  31.7857  -75.5459         -2798    164-994A-31X-5    Gas tube
+#> 3  164-994C  31.7857  -75.5459         -2799    164-994C-31X-3    Free gas
+#> 4  164-994C  31.7857  -75.5459         -2799    164-994C-31X-7 Hydrate gas
+#> 5  164-996A  32.4939  -76.1909         -2170     164-996A-1H-1 Hydrate gas
+#> 6  164-996A  32.4939  -76.1909         -2170     164-996A-8H-3    Free gas
+#> 7  164-996A  32.4939  -76.1909         -2170     164-996A-8H-4 Hydrate gas
+#> 8  164-996A  32.4939  -76.1909         -2170     164-996A-8H-5    Free gas
+#> 9  164-996A  32.4939  -76.1909         -2170    164-996A-9H-CC Hydrate gas
+#> 10 164-996B  32.4939  -76.1909         -2173     164-996B-1H-1 Hydrate gas
+#> ..      ...      ...       ...           ...               ...         ...
+#> Variables not shown: Depth [m] (dbl), V/V (gas/water) (int), V/V
+#>      (gas/water, chlorinity corrected) (int), cl [mmol/l] (int), CH4 [%]
+#>      (dbl), C2H6 [ppmv] (int), C3H8 [ppmv] (dbl), i-C4H10 [ppmv] (dbl),
+#>      n-C4H10 [ppmv] (dbl), CO2 [%] (dbl), C1/(C2+C3) (int), d13C CH4 [per
+#>      mil PDB] (dbl), d2H CH4 [per mil] (dbl), d13C CO2 GH [per mil PDB]
+#>      (dbl), d2H H2O [per mil SMOW] (dbl)
 #> 
 #> [[2]]
-#> <Pangaea data> 10.1594/PANGAEA.812093
-#>       Event          Label                                      Samp com
-#> 1  169-856H 169-856H-55R-1 complete altered, thickness of basalt =200 µm
-#> 2  169-856H 169-856H-55R-1 complete altered, thickness of basalt =200 µm
-#> 3  169-856H 169-856H-55R-1 complete altered, thickness of basalt =200 µm
-#> 4  169-856H 169-856H-55R-1 complete altered, thickness of basalt =200 µm
-#> 5  169-856H 169-856H-55R-1 complete altered, thickness of basalt =200 µm
-#> 6  169-856H 169-856H-55R-1 complete altered, thickness of basalt =200 µm
-#> 7  169-856H 169-856H-55R-1 complete altered, thickness of basalt =200 µm
-#> 8  169-856H 169-856H-55R-1 complete altered, thickness of basalt =200 µm
-#> 9  169-856H 169-856H-55R-1 complete altered, thickness of basalt =200 µm
-#> 10 169-856H 169-856H-55R-1 complete altered, thickness of basalt =200 µm
-#> ..      ...            ...                                           ...
-#> Variables not shown: Depth [m] (dbl), Distance [Âµm] (int), T tech [Â°C]
-#>      (dbl), Run (chr), - (initial concentration of diff...) (dbl), -
-#>      (initial concentration of diff...) (dbl), Poros frac (#1, from fit)
-#>      (dbl), Poros frac (#2, from fit) (dbl), Diff coeff [10**-6 cm**2/s]
-#>      (dbl), Diff coeff std dev [Â±] (effective from fit) (dbl), Diff coeff
-#>      std dev [Â±] (effective total) (dbl), X (dbl), X (average) (int), F
-#>      (int), - (m) (dbl)
+#> <Pangaea data> 10.1594/PANGAEA.803590
+#>          Event Latitude Longitude Elevation [m]                  Area
+#> 1      76-533A  31.2600  -74.8698         -3191           Blake Ridge
+#> 2  84-565_Site   9.7282  -86.0907         -3099 Middle America Trench
+#> 3  84-568_Site  13.0722  -90.8000         -2010   Offshore Costa Rica
+#> 4  84-568_Site  13.0722  -90.8000         -2010   Offshore Costa Rica
+#> 5  84-570_Site  13.2853  -91.3928         -1698   Offshore Costa Rica
+#> 6  84-570_Site  13.2853  -91.3928         -1698   Offshore Costa Rica
+#> 7  84-570_Site  13.2853  -91.3928         -1698   Offshore Costa Rica
+#> 8  84-570_Site  13.2853  -91.3928         -1698   Offshore Costa Rica
+#> 9  84-570_Site  13.2853  -91.3928         -1698   Offshore Costa Rica
+#> 10    112-685A  -9.1130  -80.5835         -5093         Offshore Peru
+#> ..         ...      ...       ...           ...                   ...
+#> Variables not shown: Depth [m] (dbl), Depth top [m] (int), Depth bot [m]
+#>      (int), V/V (gas/water; # = 24-42) (chr), V/V (gas/water, chlorinity
+#>      correct...) (chr), cl [mmol/l] (dbl), Reference (chr)
 ```
 
 ### OAI-PMH metadata
@@ -135,11 +133,11 @@ pg_data(res$doi[3])
 pg_identify()
 #> <Pangaea>
 #>   repositoryName: PANGAEA - Data Publisher for Earth & Environmental Science
-#>   baseURL: http://ws.pangaea.de/oai/
+#>   baseURL: http://ws.pangaea.de/oai/provider
 #>   protocolVersion: 2.0
 #>   adminEmail: tech@pangaea.de
 #>   adminEmail: tech@pangaea.de
-#>   earliestDatestamp: 2009-03-14T00:00:00Z
+#>   earliestDatestamp: 2015-01-01T00:00:00Z
 #>   deletedRecord: transient
 #>   granularity: YYYY-MM-DDThh:mm:ssZ
 #>   compression: gzip,deflate
@@ -157,12 +155,14 @@ pg_list_metadata_formats()
 #> 3            dif http://gcmd.gsfc.nasa.gov/Aboutus/xml/dif/dif_v9.4.xsd
 #> 4       iso19139               http://www.isotc211.org/2005/gmd/gmd.xsd
 #> 5  iso19139.iodp               http://www.isotc211.org/2005/gmd/gmd.xsd
+#> 6      datacite3  http://schema.datacite.org/meta/kernel-3/metadata.xsd
 #>                             metadataNamespace
 #> 1 http://www.openarchives.org/OAI/2.0/oai_dc/
 #> 2              http://www.pangaea.de/MetaData
 #> 3  http://gcmd.gsfc.nasa.gov/Aboutus/xml/dif/
 #> 4            http://www.isotc211.org/2005/gmd
 #> 5            http://www.isotc211.org/2005/gmd
+#> 6         http://datacite.org/schema/kernel-3
 ```
 
 #### List identifiers
@@ -170,13 +170,7 @@ pg_list_metadata_formats()
 
 ```r
 head( pg_list_identifiers(from='2012-01-01', until='2012-01-05') )
-#>                                  identifier            datestamp setSpec
-#> 1 oai:pangaea.de:doi:10.1594/PANGAEA.510194 2012-01-04T16:02:57Z        
-#> 2 oai:pangaea.de:doi:10.1594/PANGAEA.510195 2012-01-04T16:02:51Z        
-#> 3 oai:pangaea.de:doi:10.1594/PANGAEA.699614 2012-01-03T11:21:24Z        
-#> 4 oai:pangaea.de:doi:10.1594/PANGAEA.699615 2012-01-03T11:21:24Z        
-#> 5 oai:pangaea.de:doi:10.1594/PANGAEA.699616 2012-01-03T11:21:25Z        
-#> 6 oai:pangaea.de:doi:10.1594/PANGAEA.699617 2012-01-03T11:21:25Z
+#> data frame with 0 columns and 0 rows
 ```
 
 #### List sets
@@ -184,13 +178,20 @@ head( pg_list_identifiers(from='2012-01-01', until='2012-01-05') )
 
 ```r
 head( pg_list_sets() )
-#>        setSpec                                               setName
-#> 1   jcorestest   Datasets with PANGAEA technical keyword @jcorestest
-#> 2 paleoclimate Datasets with PANGAEA technical keyword @paleoclimate
-#> 3       IMAGES       Datasets with PANGAEA technical keyword @IMAGES
-#> 4       SFB313       Datasets with PANGAEA technical keyword @SFB313
-#> 5       ORFOIS       Datasets with PANGAEA technical keyword @ORFOIS
-#> 6         WATT         Datasets with PANGAEA technical keyword @WATT
+#>       setSpec
+#> 1  projectXXX
+#> 2   authorXXX
+#> 3       piXXX
+#> 4  journalXXX
+#> 5    basisXXX
+#> 6 campaignXXX
+#>                                                                                                                  setName
+#> 1                Virtual set: Data related to project with database identifier XXX (replace 'XXX' by PANGAEA identifier)
+#> 2                 Virtual set: Data related to author with database identifier XXX (replace 'XXX' by PANGAEA identifier)
+#> 3 Virtual set: Data related to principal investigator with database identifier XXX (replace 'XXX' by PANGAEA identifier)
+#> 4    Virtual set: Data related to articles of journal with database identifier XXX (replace 'XXX' by PANGAEA identifier)
+#> 5             Virtual set: Data related to basis/ship with database identifier XXX (replace 'XXX' by PANGAEA identifier)
+#> 6               Virtual set: Data related to campaign with database identifier XXX (replace 'XXX' by PANGAEA identifier)
 ```
 
 #### List records
@@ -198,15 +199,10 @@ head( pg_list_sets() )
 
 ```r
 res <- pg_list_records(from='2012-01-01', until='2012-01-15')
+#> Error in d[[1]]: subscript out of bounds
 head(res$headers); NROW(res$headers)
-#>                                  identifier            datestamp setSpec
-#> 1 oai:pangaea.de:doi:10.1594/PANGAEA.188779 2012-01-11T10:07:35Z        
-#> 2 oai:pangaea.de:doi:10.1594/PANGAEA.510104 2012-01-11T22:31:30Z        
-#> 3 oai:pangaea.de:doi:10.1594/PANGAEA.510105 2012-01-11T22:31:38Z        
-#> 4 oai:pangaea.de:doi:10.1594/PANGAEA.510106 2012-01-11T22:42:31Z        
-#> 5 oai:pangaea.de:doi:10.1594/PANGAEA.510107 2012-01-11T22:42:21Z        
-#> 6 oai:pangaea.de:doi:10.1594/PANGAEA.510108 2012-01-11T22:48:22Z
-#> [1] 100
+#> NULL
+#> [1] 0
 ```
 
 #### Geta a record
@@ -219,19 +215,7 @@ record$header
 #> [1] "oai:pangaea.de:doi:10.1594/PANGAEA.788382"
 #> 
 #> $datestamp
-#> [1] "2014-10-22T14:33:02Z"
-#> 
-#> $setSpec
-#> [1] "citable"
-#> 
-#> $setSpec
-#> [1] "geocode1600"
-#> 
-#> $setSpec
-#> [1] "geocode1601"
-#> 
-#> $setSpec
-#> [1] "project4026"
+#> [1] "2015-04-12T02:47:43Z"
 record$metadata
 #> $dc
 #> $dc$title
@@ -283,10 +267,10 @@ record$metadata
 #> [1] "Access constraints: unrestricted"
 #> 
 #> $dc$coverage
-#> [1] "MEDIAN LATITUDE: 29.437467 * MEDIAN LONGITUDE: -62.287367 * SOUTH-BOUND LATITUDE: 9.833000 * WEST-BOUND LONGITUDE: -111.400000 * NORTH-BOUND LATITUDE: 37.840000 * EAST-BOUND LONGITUDE: -31.516667"
+#> [1] "MEDIAN LATITUDE: 29.154888 * MEDIAN LONGITUDE: -62.164078 * SOUTH-BOUND LATITUDE: 9.833000 * WEST-BOUND LONGITUDE: -111.400000 * NORTH-BOUND LATITUDE: 37.840000 * EAST-BOUND LONGITUDE: -31.516667"
 #> 
 #> $dc$subject
-#> [1] "Ag; Ag std dev; Antimony; Antimony, standard deviation; Aragonite; Archive of Ocean Data; ARCOD; Area; Area/locality; Arg; Arsenic; Arsenic, standard deviation; As; As std dev; Atomic absorption spectrometry (AAS); Ba; Barium; Barium, standard deviation; Ba std dev; Ca; Cadmium; Cadmium, standard deviation; Cal; Calcite; Calcium; Calcium, standard deviation; Calculated; Carbon, organic, total; Carbon analyser AN-7529, 7560; Ca std dev; Cd; Cd std dev; Chromium; Chromium, standard deviation; Co; Cobalt; Cobalt, standard deviation; Copper; Copper, standard deviation; Co std dev; Cr; Cr std dev; Cu; Cu std dev; d13C carb; d13C std dev; delta 13C, carbonate; delta 13C, standard deviation; deviation; EF; Enrichment factor; Fe; Fe std dev; Hg; Hg std dev; Instrumental neutron activation analysis (INAA); Iron; Iron, standard deviation; K; K std dev; Lab no; Lead; Lead, standard deviation; Manganese; Manganese, standard deviation; Mass spectrometry; Mercury; Mercury, standard deviation; Mn; Mn std dev; Na; Na std dev; Ni; Nickel; Nickel, standard deviation; Ni std dev; NOBS; Number of observations; Organ; Pb; Pb std dev; Potassium; Potassium, standard deviation; Ruler tape; Samp com; Sample, optional label/labor no; Sample comment; Sample type; Samp type; Sb; Sb std dev; Se; Selenium; Shell l; Shell length; Silver; Silver, standard deviation; Sodium; Sodium, standard deviation; Species; Sr; Sr std dev; Strontium; Strontium, standard deviation; Taxa; Taxon/taxa; TOC; X-ray diffraction; Zinc; Zinc, standard deviation; Zn; Zn std dev"
+#> [1] "Ag; Ag std dev; Antimony; Antimony, standard deviation; Aragonite; Archive of Ocean Data; ARCOD; Area; Area/locality; Arg; Arsenic; Arsenic, standard deviation; As; As std dev; Atomic absorption spectrometry (AAS); Ba; Barium; Barium, standard deviation; Ba std dev; Ca; Cadmium; Cadmium, standard deviation; Cal; Calcite; Calcium; Calcium, standard deviation; Calculated; Carbon, organic, total; Carbon analyser AN-7529, 7560; Ca std dev; Cd; Cd std dev; Chromium; Chromium, standard deviation; Co; Cobalt; Cobalt, standard deviation; Copper; Copper, standard deviation; Co std dev; Cr; Cr std dev; Cu; Cu std dev; d13C carb; d13C std dev; delta 13C, carbonate; delta 13C, standard deviation; deviation; EF; Enrichment factor; Event; Fe; Fe std dev; Hg; Hg std dev; Instrumental neutron activation analysis (INAA); Iron; Iron, standard deviation; K; K std dev; Lab no; Lead; Lead, standard deviation; Manganese; Manganese, standard deviation; Mass spectrometry; Mercury; Mercury, standard deviation; Mn; Mn std dev; Na; Na std dev; Ni; Nickel; Nickel, standard deviation; Ni std dev; NOBS; Number of observations; Organ; Pb; Pb std dev; Potassium; Potassium, standard deviation; Ruler tape; Samp com; Sample, optional label/labor no; Sample comment; Sample type; Samp type; Sb; Sb std dev; Se; Selenium; Shell l; Shell length; Silver; Silver, standard deviation; Sodium; Sodium, standard deviation; Species; Sr; Sr std dev; Strontium; Strontium, standard deviation; Taxa; Taxon/taxa; TOC; X-ray diffraction; Zinc; Zinc, standard deviation; Zn; Zn std dev"
 #> 
 #> $dc$.attrs
 #>                                                                               schemaLocation 
@@ -310,4 +294,4 @@ record$metadata
 * License: MIT
 * Get citation information for `pangaear` in R doing `citation(package = 'pangaear')`
 
-[![](http://ropensci.org/public_images/github_footer.png)](http://ropensci.org)
+[![ro_footer](http://ropensci.org/public_images/github_footer.png)](http://ropensci.org)

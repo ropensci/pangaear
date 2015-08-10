@@ -12,6 +12,7 @@ knitr::opts_chunk$set(
 
 [![Build Status](https://api.travis-ci.org/ropensci/pangaear.png)](https://travis-ci.org/ropensci/pangaear)
 [![Build status](https://ci.appveyor.com/api/projects/status/564oioj2oyefax08?svg=true)](https://ci.appveyor.com/project/sckott/pangaear)
+[![codecov.io](https://codecov.io/github/sckott/pangaear/coverage.svg?branch=master)](https://codecov.io/github/sckott/pangaear?branch=master)
 
 An R client to interact with the [Pangaea database](http://www.pangaea.de/).
 
@@ -111,4 +112,4 @@ record$metadata
 * License: MIT
 * Get citation information for `pangaear` in R doing `citation(package = 'pangaear')`
 
-[![](http://ropensci.org/public_images/github_footer.png)](http://ropensci.org)
+[![ro_footer](http://ropensci.org/public_images/github_footer.png)](http://ropensci.org)

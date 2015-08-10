@@ -12,7 +12,6 @@ Authors@R: c(person("Scott", "Chamberlain", email = "myrmecocystus@gmail.com", r
              person("Gavin", "Simpson", email = "ucfagls@gmail.com", role = "aut"))
 License: MIT + file LICENSE
 LazyData: true
-Roxygen: list(wrap = FALSE)
 URL: https://github.com/ropensci/pangaear
 BugReports: https://github.com/ropensci/pangaear/issues
 Imports:
