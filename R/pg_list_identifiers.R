@@ -23,10 +23,4 @@ pg_list_identifiers <- function(prefix = "oai_dc", from = NULL, until = NULL,
 
   oai::list_identifiers(url = baseoai(), prefix = prefix, from = from, until = until,
                         set = set, token = token, as = as, ...)
-  # args <- pgc(list(verb="ListIdentifiers", metadataPrefix=prefix, from=from, until=until, set=set))
-  # res <- pg_GET(args = args, ...)
-  # done <- lapply(res, function(x){
-  #   c(x[1:2], setSpec=paste0(unlist(x[names(x) %in% "setSpec"]), collapse = ","))
-  # })
-  # data.frame(do.call(rbind, done), stringsAsFactors = FALSE)
 }

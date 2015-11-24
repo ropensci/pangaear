@@ -8,6 +8,4 @@
 #' }
 pg_list_metadata_formats <- function(...) {
   oai::list_metadataformats(url = baseoai(), ...)
-  # res <- pg_GET(args = list(verb="ListMetadataFormats"), ...)
-  # data.frame(do.call(rbind, res), stringsAsFactors = FALSE)
 }

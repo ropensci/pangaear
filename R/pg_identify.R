@@ -7,8 +7,6 @@
 #' }
 pg_identify <- function(...) {
   res <- oai::id(url = baseoai(), ...)
-  # res <- pg_GET(args = list(verb="Identify"), unname = FALSE, ...)
-  # res <- as.list(sapply(res, xmlValue))
   structure(as.list(res), class = "pg_identify")
 }
 

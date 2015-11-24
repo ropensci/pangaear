@@ -41,29 +41,4 @@ pg_list_records <- function(prefix = "oai_dc", from = NULL, until = NULL, set = 
                             token = NULL, as = "df", ...) {
   oai::list_records(url = baseoai(), prefix = prefix, from = from,
                     until = until, set = set, token = token, as = as, ...)
-
-  # args <- pgc(list(verb = "ListRecords", metadataPrefix = prefix, from = from,
-  #                  until = until, set = set))
-  # res <- pg_GET(args = args, ...)
-  # d <- Filter(function(x) names(x)[1] != "text", res)
-  #
-  # header <- lapply(d, function(z){
-  #   tmp <- z$header
-  #   c(tmp[ !names(tmp) %in% c('setSpec','.attrs')], setSpec = paste0(tmp[ names(tmp) %in% 'setSpec'], collapse = ","))
-  # })
-  # headerdf <- data.frame(do.call(rbind, header), stringsAsFactors = FALSE)
-  #
-  # metadata <- NULL
-  # if (length(d) != 0) {
-  #   if ("metadata" %in% names(d[[1]])) {
-  #     metadata <- lapply(d, function(z){
-  #       tmp <- z$metadata[[1]]
-  #       tmp <- c(tmp[ !names(tmp) %in% 'creator'], creator = paste0(tmp[ names(tmp) %in% 'creator'], collapse = ","))
-  #       tmp[ !names(tmp) %in% ".attrs" ]
-  #     })
-  #     names(metadata) <- pluck(header, "identifier", "")
-  #   }
-  # }
-  #
-  # list(headers = headerdf, metadata = metadata)
 }

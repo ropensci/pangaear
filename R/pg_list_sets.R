@@ -16,6 +16,4 @@
 
 pg_list_sets <- function(token = NULL, as = "df", ...) {
   oai::list_sets(url = baseoai(), token = token, as = as, ...)
-  # res <- pg_GET(args = pgc(list(verb = "ListSets")), ...)
-  # data.frame(do.call(rbind, res), stringsAsFactors = FALSE)
 }

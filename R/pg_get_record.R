@@ -26,7 +26,4 @@
 #' }
 pg_get_record <- function(identifier, prefix = "oai_dc", as = "df", ...){
   oai::get_records(ids = identifier, prefix = prefix, url = baseoai(), as = as, ...)
-  # res <- pg_GET(args = list(verb = "GetRecord", identifier = identifier, metadataPrefix = prefix), ...)
-  # check(res[[1]])
-  # list(header = res[[1]]$header, metadata = res[[1]]$metadata)
 }

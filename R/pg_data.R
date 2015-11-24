@@ -133,10 +133,6 @@ get_meta <- function(x){
   ln_no <- grep("\\*/", lns) - 1
   use <- lns[2:ln_no]
   structure(list(meta=use), class="meta")
-#   toget <- c('Citation','Related to','Project','Coverage','Event','Parameter','License','Size')
-#   lapply(toget, function(z){
-#     grep(z, use, value = TRUE)
-#   })
 }
 
 rdoi <- function(x) paste0(gsub("/|\\.", "_", x), ".txt")
