@@ -9,6 +9,9 @@ pg_identify(...)
 \arguments{
 \item{...}{Curl debugging options passed on to \code{\link[httr]{GET}}}
 }
+\value{
+list
+}
 \description{
 Identify information about the Pangaea repository
 }

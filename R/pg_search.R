@@ -9,10 +9,9 @@
 #' @param bbox  (numeric) A bounding box, of the form: minlon, minlat, maxlon, maxlat
 #' @param mindate,maxdate (character) Dates to search for, of the form "2014-10-28"
 #' @param ... Further args passed on to \code{\link[httr]{GET}}
-#'
+#' @return data.frame
 #' @details This is a thin wrapper around the GUI search interface on the page
 #' \url{http://www.pangaea.de/}. Everything you can do there, you can do here.
-#'
 #' @examples \dontrun{
 #' pg_search(query='water')
 #' pg_search(query='water', count=2)

@@ -2,6 +2,7 @@
 #'
 #' @export
 #' @param ... Curl debugging options passed on to \code{\link[httr]{GET}}
+#' @return list
 #' @examples \dontrun{
 #' pg_identify()
 #' }

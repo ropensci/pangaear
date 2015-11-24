@@ -22,6 +22,9 @@ See examples.}
 
 \item{...}{Further args passed on to \code{\link[httr]{GET}}}
 }
+\value{
+data.frame
+}
 \description{
 Search the Pangaea database
 }

@@ -33,6 +33,10 @@ loop for you internally to get all the records you asked for.}
 
 \item{...}{Curl debugging options passed on to \code{\link[httr]{GET}}}
 }
+\value{
+XML character string, data.frame, or list, depending on what requested
+witht the \code{as} parameter
+}
 \description{
 List identifiers of the Pangaea repository
 }

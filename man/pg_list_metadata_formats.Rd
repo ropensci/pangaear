@@ -9,6 +9,9 @@ pg_list_metadata_formats(...)
 \arguments{
 \item{...}{Curl debugging options passed on to \code{\link[httr]{GET}}}
 }
+\value{
+data.frame
+}
 \description{
 Get metadata formats from the Pangaea repository
 }

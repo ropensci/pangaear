@@ -7,7 +7,8 @@
 #' loop for you internally to get all the records you asked for.
 #' @param as (character) What to return. One of "df" (for data.frame; default),
 #' "list", or "raw" (raw text)
-#'
+#' @return XML character string, data.frame, or list, depending on what requested
+#' witht the \code{as} parameter
 #' @examples \dontrun{
 #' pg_list_identifiers(from='2015-09-01', until='2015-09-05')
 #' pg_list_identifiers(set="geocode1", from='2015-09-01', until='2015-09-05')

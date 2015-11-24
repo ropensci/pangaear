@@ -18,6 +18,10 @@ Dublin Core metadata schema.}
 
 \item{...}{Curl debugging options passed on to \code{\link[httr]{GET}}}
 }
+\value{
+XML character string, data.frame, or list, depending on what requested
+witht the \code{as} parameter
+}
 \description{
 Get record from the Pangaea repository
 }

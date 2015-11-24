@@ -10,7 +10,6 @@
 #' @param ... Curl debugging options passed on to \code{\link[httr]{GET}}
 #' @param prompt (logical) Prompt before clearing all files in cache? No prompt used when DOIs
 #' assed in. Default: TRUE
-#'
 #' @return One or more items of class pangaea, each with a citation object, metadata object,
 #' and data object. Each data object is printed as a \code{tbl_df} object, but the
 #' actual object is simply a \code{data.frame}.

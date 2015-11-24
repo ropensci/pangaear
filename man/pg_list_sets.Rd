@@ -16,12 +16,18 @@ loop for you internally to get all the records you asked for.}
 
 \item{...}{Curl debugging options passed on to \code{\link[httr]{GET}}}
 }
+\value{
+XML character string, data.frame, or list, depending on what requested
+witht the \code{as} parameter
+}
 \description{
 List the set structure of the Pangaea repository
 }
 \examples{
 \dontrun{
 pg_list_sets()
+pg_list_sets(as = "list")
+pg_list_sets(as = "raw")
 library('httr')
 res <- pg_list_sets(config = verbose())
 }
