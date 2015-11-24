@@ -5,6 +5,9 @@
 #' @importFrom XML xmlParse xmlChildren xmlRoot xmlValue xmlToList
 #' xpathApply readHTMLTable
 #' @importFrom httr GET content stop_for_status write_disk config
+#' @importFrom methods is
+#' @importFrom stats setNames
+#' @importFrom utils head read.csv
 #' @name pangaear-package
 #' @aliases pangaear
 #' @docType package
