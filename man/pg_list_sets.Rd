@@ -20,7 +20,7 @@ loop for you internally to get all the records you asked for.}
 List the set structure of the Pangaea repository
 }
 \examples{
-\donttest{
+\dontrun{
 pg_list_sets()
 library('httr')
 res <- pg_list_sets(config = verbose())

@@ -34,7 +34,7 @@ Grabs data as a dataframe or list of dataframes from a Pangaea data repository U
 \url{http://www.pangaea.de/}.
 }
 \examples{
-\donttest{
+\dontrun{
 # a single file
 res <- pg_data(doi='10.1594/PANGAEA.807580')
 res

@@ -8,7 +8,7 @@
 #' "list", or "raw" (raw text)
 #' @param ... Curl debugging options passed on to \code{\link[httr]{GET}}
 #'
-#' @examples \donttest{
+#' @examples \dontrun{
 #' pg_list_sets()
 #' library('httr')
 #' res <- pg_list_sets(config = verbose())

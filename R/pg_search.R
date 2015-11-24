@@ -13,7 +13,7 @@
 #' @details This is a thin wrapper around the GUI search interface on the page
 #' \url{http://www.pangaea.de/}. Everything you can do there, you can do here.
 #'
-#' @examples \donttest{
+#' @examples \dontrun{
 #' pg_search(query='water')
 #' pg_search(query='water', count=2)
 #' pg_search(query='water', count=20)

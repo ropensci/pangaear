@@ -37,7 +37,7 @@ loop for you internally to get all the records you asked for.}
 List identifiers of the Pangaea repository
 }
 \examples{
-\donttest{
+\dontrun{
 pg_list_identifiers(from='2015-09-01', until='2015-09-05')
 pg_list_identifiers(set="geocode1", from='2015-09-01', until='2015-09-05')
 pg_list_identifiers(prefix="iso19139", from='2015-09-01', until='2015-09-20')

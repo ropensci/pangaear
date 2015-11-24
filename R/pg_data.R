@@ -15,7 +15,7 @@
 #' and data object. Each data object is printed as a \code{\link[dplyr]{tbl_df}} object, but the
 #' actual object is simply a \code{data.frame}.
 #' @author Naupaka Zimmerman
-#' @examples \donttest{
+#' @examples \dontrun{
 #' # a single file
 #' res <- pg_data(doi='10.1594/PANGAEA.807580')
 #' res

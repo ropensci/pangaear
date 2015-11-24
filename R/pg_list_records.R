@@ -21,7 +21,7 @@
 #' "list", or "raw" (raw text)
 #' @param ... Curl debugging options passed on to \code{\link[httr]{GET}}
 #'
-#' @examples \donttest{
+#' @examples \dontrun{
 #' pg_list_records(from='2015-09-01', until='2015-09-10')
 #' pg_list_records(set='geomound', from='2015-01-01', until='2015-01-05')
 #'

@@ -13,7 +13,7 @@ pg_list_metadata_formats(...)
 Get metadata formats from the Pangaea repository
 }
 \examples{
-\donttest{
+\dontrun{
 pg_list_metadata_formats()
 }
 }

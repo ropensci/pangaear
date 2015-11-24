@@ -22,7 +22,7 @@ Dublin Core metadata schema.}
 Get record from the Pangaea repository
 }
 \examples{
-\donttest{
+\dontrun{
 pg_get_record(identifier = "oai:pangaea.de:doi:10.1594/PANGAEA.788382")
 pg_get_record(identifier = "oai:pangaea.de:doi:10.1594/PANGAEA.269656",
 prefix="iso19139")

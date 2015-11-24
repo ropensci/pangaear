@@ -9,7 +9,7 @@
 #' "list", or "raw" (raw text)
 #' @param ... Curl debugging options passed on to \code{\link[httr]{GET}}
 #'
-#' @examples \donttest{
+#' @examples \dontrun{
 #' pg_get_record(identifier = "oai:pangaea.de:doi:10.1594/PANGAEA.788382")
 #' pg_get_record(identifier = "oai:pangaea.de:doi:10.1594/PANGAEA.269656",
 #' prefix="iso19139")

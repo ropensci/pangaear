@@ -2,7 +2,7 @@
 #'
 #' @export
 #' @param ... Curl debugging options passed on to \code{\link[httr]{GET}}
-#' @examples \donttest{
+#' @examples \dontrun{
 #' pg_identify()
 #' }
 pg_identify <- function(...) {

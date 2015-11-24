@@ -37,7 +37,7 @@ loop for you internally to get all the records you asked for.}
 List records from Pangaea
 }
 \examples{
-\donttest{
+\dontrun{
 pg_list_records(from='2015-09-01', until='2015-09-10')
 pg_list_records(set='geomound', from='2015-01-01', until='2015-01-05')
 

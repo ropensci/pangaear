@@ -13,7 +13,7 @@ pg_identify(...)
 Identify information about the Pangaea repository
 }
 \examples{
-\donttest{
+\dontrun{
 pg_identify()
 }
 }
