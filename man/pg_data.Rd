@@ -26,7 +26,7 @@ assed in. Default: TRUE}
 }
 \value{
 One or more items of class pangaea, each with a citation object, metadata object,
-and data object. Each data object is printed as a \code{\link[dplyr]{tbl_df}} object, but the
+and data object. Each data object is printed as a \code{tbl_df} object, but the
 actual object is simply a \code{data.frame}.
 }
 \description{
