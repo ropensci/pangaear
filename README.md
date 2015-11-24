@@ -5,7 +5,6 @@ pangaear
 
 [![Build Status](https://api.travis-ci.org/ropensci/pangaear.png)](https://travis-ci.org/ropensci/pangaear)
 [![Build status](https://ci.appveyor.com/api/projects/status/564oioj2oyefax08?svg=true)](https://ci.appveyor.com/project/sckott/pangaear)
-[![codecov.io](https://codecov.io/github/sckott/pangaear/coverage.svg?branch=master)](https://codecov.io/github/sckott/pangaear?branch=master)
 
 An R client to interact with the [Pangaea database](http://www.pangaea.de/).
 
@@ -15,9 +14,16 @@ An R client to interact with the [Pangaea database](http://www.pangaea.de/).
 * Pangaea [OAI-PMH docs](http://wiki.pangaea.de/wiki/OAI-PMH).
 * [OAI-PMH Spec](http://www.openarchives.org/OAI/openarchivesprotocol.html)
 
-## Quick start
+## Installation
 
-### Installation
+Stable version
+
+
+```r
+install.packages("pangaear")
+```
+
+Dev version
 
 
 ```r
@@ -30,7 +36,7 @@ devtools::install_github('ropensci/pangaear')
 library('pangaear')
 ```
 
-### Search for data
+## Search for data
 
 This is a thin wrapper around the GUI search interface on the page [http://www.pangaea.de/](http://www.pangaea.de/). Everything you can do there, you can do here.
 
@@ -38,9 +44,9 @@ This is a thin wrapper around the GUI search interface on the page [http://www.p
 ```r
 pg_search(query='water', bbox=c(-124.2, 41.8, -116.8, 46.1), count=3)
 #>                      doi score_per size_datasets
-#> 1 10.1594/PANGAEA.736010       100             9
-#> 2 10.1594/PANGAEA.812094        88             2
-#> 3 10.1594/PANGAEA.803591        85             2
+#> 1 10.1594/PANGAEA.736010        NA             9
+#> 2 10.1594/PANGAEA.812094        NA             2
+#> 3 10.1594/PANGAEA.803591        NA             2
 #>                                                                                                                          citation
 #> 1                                           Archer, DE; Devol, AH (1992): Benthic oxygen flixes on the Washington shelf and slope
 #> 2                                              Simonyan, AV; Dultz, S; Behrens, H (2012): Diffusion transport of water in basalts
@@ -55,7 +61,7 @@ pg_search(query='water', bbox=c(-124.2, 41.8, -116.8, 46.1), count=3)
 #> 3         NA
 ```
 
-### Get data
+## Get data
 
 
 ```r
@@ -124,9 +130,9 @@ pg_data(res$doi[3])
 #>      correct...) (chr), cl [mmol/l] (dbl), Reference (chr)
 ```
 
-### OAI-PMH metadata
+## OAI-PMH metadata
 
-#### Identify the service
+### Identify the service
 
 
 ```r
@@ -140,11 +146,16 @@ pg_identify()
 #>   earliestDatestamp: 2015-01-01T00:00:00Z
 #>   deletedRecord: transient
 #>   granularity: YYYY-MM-DDThh:mm:ssZ
-#>   compression: gzip,deflate
-#>   description: oaipangaea.de:oai:pangaea.de:doi:10.1594/PANGAEA.999999
+#>   compression: gzip
+#>   description: 
+#> 
+#> oai
+#> pangaea.de
+#> :
+#> oai:pangaea.de:doi:10.1594/PANGAEA.999999
 ```
 
-#### List metadata formats
+### List metadata formats
 
 
 ```r
@@ -165,106 +176,111 @@ pg_list_metadata_formats()
 #> 6         http://datacite.org/schema/kernel-3
 ```
 
-#### List identifiers
+### List identifiers
 
 
 ```r
-head( pg_list_identifiers(from='2015-01-01', until='2015-02-05')  )
-#> Error in pg_GET(args = args, ...): server error: (503) Service Unavailable
+pg_list_identifiers(from = '2015-09-01', until = '2015-09-05')
+#> <ListRecords> 558 X 4 
+#> 
+#>                                   identifier            datestamp setSpec
+#> 1  oai:pangaea.de:doi:10.1594/PANGAEA.184936 2015-09-01T20:37:55Z      NA
+#> 2  oai:pangaea.de:doi:10.1594/PANGAEA.183555 2015-09-01T20:37:53Z      NA
+#> 3  oai:pangaea.de:doi:10.1594/PANGAEA.185032 2015-09-01T20:37:55Z      NA
+#> 4  oai:pangaea.de:doi:10.1594/PANGAEA.183548 2015-09-01T20:37:52Z      NA
+#> 5  oai:pangaea.de:doi:10.1594/PANGAEA.839344 2015-09-03T11:13:36Z      NA
+#> 6   oai:pangaea.de:doi:10.1594/PANGAEA.55971 2015-09-01T20:36:44Z  ORFOIS
+#> 7  oai:pangaea.de:doi:10.1594/PANGAEA.785469 2015-09-02T13:57:49Z    BCCR
+#> 8  oai:pangaea.de:doi:10.1594/PANGAEA.829952 2015-09-01T20:56:03Z      NA
+#> 9  oai:pangaea.de:doi:10.1594/PANGAEA.762358 2015-09-02T13:59:34Z      NA
+#> 10 oai:pangaea.de:doi:10.1594/PANGAEA.848610 2015-09-03T03:04:29Z      NA
+#> ..                                       ...                  ...     ...
+#> Variables not shown: setSpec.1 (chr)
 ```
 
-#### List sets
+### List sets
 
 
 ```r
-head( pg_list_sets() )
-#> Error in pg_GET(args = pgc(list(verb = "ListSets")), ...): server error: (503) Service Unavailable
+pg_list_sets()
+#> <ListSets> 224 X 2 
+#> 
+#>         setSpec
+#> 1    projectXXX
+#> 2     authorXXX
+#> 3         piXXX
+#> 4    journalXXX
+#> 5      basisXXX
+#> 6   campaignXXX
+#> 7     deviceXXX
+#> 8    geocodeXXX
+#> 9  query~BASE64
+#> 10          ACD
+#> ..          ...
+#> Variables not shown: setName (chr)
 ```
 
-#### List records
+### List records
 
 
 ```r
-res <- pg_list_records(from='2012-01-01', until='2012-01-15')
-#> Error in pg_GET(args = args, ...): server error: (503) Service Unavailable
-head(res$headers); NROW(res$headers)
-#> NULL
-#> [1] 0
+pg_list_records(from = '2015-09-01', until = '2015-09-10')
+#> <ListRecords> 763 X 95 
+#> 
+#>                                   identifier            datestamp
+#> 1  oai:pangaea.de:doi:10.1594/PANGAEA.184936 2015-09-01T20:37:55Z
+#> 2  oai:pangaea.de:doi:10.1594/PANGAEA.183555 2015-09-01T20:37:53Z
+#> 3  oai:pangaea.de:doi:10.1594/PANGAEA.185032 2015-09-01T20:37:55Z
+#> 4  oai:pangaea.de:doi:10.1594/PANGAEA.183548 2015-09-01T20:37:52Z
+#> 5  oai:pangaea.de:doi:10.1594/PANGAEA.839344 2015-09-03T11:13:36Z
+#> 6  oai:pangaea.de:doi:10.1594/PANGAEA.418297 2015-09-10T15:21:30Z
+#> 7  oai:pangaea.de:doi:10.1594/PANGAEA.321210 2015-09-10T15:21:33Z
+#> 8  oai:pangaea.de:doi:10.1594/PANGAEA.309957 2015-09-10T15:21:33Z
+#> 9  oai:pangaea.de:doi:10.1594/PANGAEA.253597 2015-09-10T15:21:33Z
+#> 10 oai:pangaea.de:doi:10.1594/PANGAEA.762169 2015-09-09T11:36:24Z
+#> ..                                       ...                  ...
+#> Variables not shown: title (chr), creator (chr), creator.1 (chr),
+#>      creator.2 (chr), publisher (chr), date (chr), type (chr), format
+#>      (chr), identifier.2 (chr), identifier.1 (chr), language (chr), rights
+#>      (chr), rights.1 (chr), relation (chr), relation.1 (chr), coverage
+#>      (chr), subject (chr), creator.3 (chr), source (chr), description
+#>      (chr), setSpec (chr), setSpec.1 (chr), relation.2 (chr), creator.4
+#>      (chr), creator.5 (chr), relation.3 (chr), creator.6 (chr), creator.7
+#>      (chr), creator.8 (chr), creator.9 (chr), relation.4 (chr), relation.5
+#>      (chr), relation.6 (chr), relation.7 (chr), relation.8 (chr),
+#>      relation.9 (chr), relation.10 (chr), relation.11 (chr), relation.12
+#>      (chr), relation.13 (chr), relation.14 (chr), relation.15 (chr),
+#>      relation.16 (chr), relation.17 (chr), relation.18 (chr), relation.19
+#>      (chr), relation.20 (chr), relation.21 (chr), relation.22 (chr),
+#>      relation.23 (chr), relation.24 (chr), relation.25 (chr), relation.26
+#>      (chr), relation.27 (chr), relation.28 (chr), relation.29 (chr),
+#>      relation.30 (chr), relation.31 (chr), relation.32 (chr), relation.33
+#>      (chr), relation.34 (chr), relation.35 (chr), relation.36 (chr),
+#>      relation.37 (chr), relation.38 (chr), relation.39 (chr), relation.40
+#>      (chr), source.1 (chr), creator.10 (chr), creator.11 (chr), creator.12
+#>      (chr), creator.13 (chr), creator.14 (chr), creator.15 (chr),
+#>      creator.16 (chr), creator.17 (chr), creator.18 (chr), creator.19
+#>      (chr), creator.20 (chr), creator.21 (chr), creator.22 (chr),
+#>      creator.23 (chr), creator.24 (chr), creator.25 (chr), creator.26
+#>      (chr), creator.27 (chr), creator.28 (chr), creator.29 (chr),
+#>      creator.30 (chr), creator.31 (chr), creator.32 (chr), creator.33
+#>      (chr), creator.34 (chr)
 ```
 
-#### Geta a record
+### Get a record
 
 
 ```r
-record <- pg_get_record(identifier = "oai:pangaea.de:doi:10.1594/PANGAEA.788382")
-record$header
-#> $identifier
-#> [1] "oai:pangaea.de:doi:10.1594/PANGAEA.788382"
+pg_get_record(identifier = "oai:pangaea.de:doi:10.1594/PANGAEA.788382")
+#> <GetRecord> 1 X 20 
 #> 
-#> $datestamp
-#> [1] "2015-04-12T02:47:43Z"
-record$metadata
-#> $dc
-#> $dc$title
-#> [1] "Trace metals in shells of mussels and clams from deep-sea hydrothermal vent fields of the Mid-Atlantic Ridge and East Pacific Rise"
-#> 
-#> $dc$creator
-#> [1] "Demina, Lyudmila L"
-#> 
-#> $dc$creator
-#> [1] "Galkin, Sergey V"
-#> 
-#> $dc$creator
-#> [1] "Dara, OM"
-#> 
-#> $dc$source
-#> [1] "P.P. Shirshov Institute of Oceanology, Russian Academy of Sciences, Moscow"
-#> 
-#> $dc$source
-#> [1] "Supplement to: Demina, Lyudmila L; Galkin, Sergey V; Dara, OM (2012): Trace metal bioaccumulation in the shells of mussels and clams at deep-sea hydrothermal vent fields. Translated from Geokhimiya, 2012, 50(2), 147-163, Geochemistry International, 50(2), 133-147, doi:10.1134/S0016702911120056"
-#> 
-#> $dc$publisher
-#> [1] "PANGAEA"
-#> 
-#> $dc$date
-#> [1] "2012-09-07"
-#> 
-#> $dc$type
-#> [1] "Dataset"
-#> 
-#> $dc$format
-#> [1] "application/zip, 5 datasets"
-#> 
-#> $dc$identifier
-#> [1] "http://doi.pangaea.de/10.1594/PANGAEA.788382"
-#> 
-#> $dc$identifier
-#> [1] "doi:10.1594/PANGAEA.788382"
-#> 
-#> $dc$description
-#> [1] "Bioaccumulation of trace metals in carbonate shells of mussels and clams was investigated at seven hydrothermal vent fields of the Mid-Atlantic Ridge (Menez Gwen, Snake Pit, Rainbow, and Broken Spur) and the Eastern Pacific (9°N and 21°N at the East Pacific Rise and the southern trough of Guaymas Basin, Gulf of California). Mineralogical analysis showed that carbonate skeletons of mytilid mussel Bathymodiolus sp. and vesicomyid clam Calyptogena m. are composed mainly of calcite and aragonite, respectively. The first data were obtained for contents of a variety of chemical elements in bivalve carbonate shells from various hydrothermal vent sites. Analyses of chemical compositions (including Fe, Mn, Zn, Cu, Cd, Pb, Ag, Ni, Cr, Co, As, Se, Sb, and Hg) of 35 shell samples and 14 water samples from mollusk biotopes revealed influences of environmental conditions and some biological parameters on bioaccumulation of metals. Bivalve shells from hydrothermal fields with black smokers are enriched in Fe and Mn by factor of 20-30 relative to the same species from the Menez Gwen low-temperature vent site. It was shown that essential elements (Fe, Mn, Ni, and Cu) more actively accumulated during early ontogeny of the shells. High enrichment factors of most metals (n x 100 - n x 10000) indicate efficient accumulation function of bivalve carbonate shells. Passive metal accumulation owing to adsorption on shell surfaces was estimated to be no higher than 50% of total amount and varied from 14% for Fe to 46% for Mn."
-#> 
-#> $dc$language
-#> [1] "en"
-#> 
-#> $dc$rights
-#> [1] "CC-BY: Creative Commons Attribution 3.0 Unported"
-#> 
-#> $dc$rights
-#> [1] "Access constraints: unrestricted"
-#> 
-#> $dc$coverage
-#> [1] "MEDIAN LATITUDE: 29.154888 * MEDIAN LONGITUDE: -62.164078 * SOUTH-BOUND LATITUDE: 9.833000 * WEST-BOUND LONGITUDE: -111.400000 * NORTH-BOUND LATITUDE: 37.840000 * EAST-BOUND LONGITUDE: -31.516667"
-#> 
-#> $dc$subject
-#> [1] "Ag; Ag std dev; Antimony; Antimony, standard deviation; Aragonite; Archive of Ocean Data; ARCOD; Area; Area/locality; Arg; Arsenic; Arsenic, standard deviation; As; As std dev; Atomic absorption spectrometry (AAS); Ba; Barium; Barium, standard deviation; Ba std dev; Ca; Cadmium; Cadmium, standard deviation; Cal; Calcite; Calcium; Calcium, standard deviation; Calculated; Carbon, organic, total; Carbon analyser AN-7529, 7560; Ca std dev; Cd; Cd std dev; Chromium; Chromium, standard deviation; Co; Cobalt; Cobalt, standard deviation; Copper; Copper, standard deviation; Co std dev; Cr; Cr std dev; Cu; Cu std dev; d13C carb; d13C std dev; delta 13C, carbonate; delta 13C, standard deviation; deviation; EF; Enrichment factor; Event; Fe; Fe std dev; Hg; Hg std dev; Instrumental neutron activation analysis (INAA); Iron; Iron, standard deviation; K; K std dev; Lab no; Lead; Lead, standard deviation; Manganese; Manganese, standard deviation; Mass spectrometry; Mercury; Mercury, standard deviation; Mn; Mn std dev; Na; Na std dev; Ni; Nickel; Nickel, standard deviation; Ni std dev; NOBS; Number of observations; Organ; Pb; Pb std dev; Potassium; Potassium, standard deviation; Ruler tape; Samp com; Sample, optional label/labor no; Sample comment; Sample type; Samp type; Sb; Sb std dev; Se; Selenium; Shell l; Shell length; Silver; Silver, standard deviation; Sodium; Sodium, standard deviation; Species; Sr; Sr std dev; Strontium; Strontium, standard deviation; Taxa; Taxon/taxa; TOC; X-ray diffraction; Zinc; Zinc, standard deviation; Zn; Zn std dev"
-#> 
-#> $dc$.attrs
-#>                                                                               schemaLocation 
-#> "http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd" 
-#> attr(,"namespaces")
-#> http://www.w3.org/2001/XMLSchema-instance 
-#>                                     "xsi"
+#>                                  identifier            datestamp
+#> 1 oai:pangaea.de:doi:10.1594/PANGAEA.788382 2015-04-12T02:47:43Z
+#> Variables not shown: title (chr), creator (chr), creator.1 (chr),
+#>      creator.2 (chr), source (chr), source.1 (chr), publisher (chr), date
+#>      (chr), type (chr), format (chr), identifier.2 (chr), identifier.1
+#>      (chr), description (chr), language (chr), rights (chr), rights.1
+#>      (chr), coverage (chr), subject (chr)
 ```
 
 ## Contributors (alphabetical)

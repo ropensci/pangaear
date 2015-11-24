@@ -12,7 +12,6 @@ knitr::opts_chunk$set(
 
 [![Build Status](https://api.travis-ci.org/ropensci/pangaear.png)](https://travis-ci.org/ropensci/pangaear)
 [![Build status](https://ci.appveyor.com/api/projects/status/564oioj2oyefax08?svg=true)](https://ci.appveyor.com/project/sckott/pangaear)
-[![codecov.io](https://codecov.io/github/sckott/pangaear/coverage.svg?branch=master)](https://codecov.io/github/sckott/pangaear?branch=master)
 
 An R client to interact with the [Pangaea database](http://www.pangaea.de/).
 
@@ -22,9 +21,15 @@ An R client to interact with the [Pangaea database](http://www.pangaea.de/).
 * Pangaea [OAI-PMH docs](http://wiki.pangaea.de/wiki/OAI-PMH).
 * [OAI-PMH Spec](http://www.openarchives.org/OAI/openarchivesprotocol.html)
 
-## Quick start
+## Installation
 
-### Installation
+Stable version
+
+```{r eval=FALSE}
+install.packages("pangaear")
+```
+
+Dev version
 
 ```{r eval=FALSE}
 install.packages("devtools")
@@ -35,7 +40,7 @@ devtools::install_github('ropensci/pangaear')
 library('pangaear')
 ```
 
-### Search for data
+## Search for data
 
 This is a thin wrapper around the GUI search interface on the page [http://www.pangaea.de/](http://www.pangaea.de/). Everything you can do there, you can do here.
 
@@ -43,7 +48,7 @@ This is a thin wrapper around the GUI search interface on the page [http://www.p
 pg_search(query='water', bbox=c(-124.2, 41.8, -116.8, 46.1), count=3)
 ```
 
-### Get data
+## Get data
 
 ```{r}
 res <- pg_data(doi='10.1594/PANGAEA.761032')
@@ -57,45 +62,42 @@ res <- pg_search(query='water', bbox=c(-124.2, 41.8, -116.8, 46.1), count=3)
 pg_data(res$doi[3])
 ```
 
-### OAI-PMH metadata
+## OAI-PMH metadata
 
-#### Identify the service
+### Identify the service
 
 ```{r}
 pg_identify()
 ```
 
-#### List metadata formats
+### List metadata formats
 
 ```{r}
 pg_list_metadata_formats()
 ```
 
-#### List identifiers
+### List identifiers
 
 ```{r}
-head( pg_list_identifiers(from='2015-01-01', until='2015-02-05')  )
+pg_list_identifiers(from = '2015-09-01', until = '2015-09-05')
 ```
 
-#### List sets
+### List sets
 
 ```{r}
-head( pg_list_sets() )
+pg_list_sets()
 ```
 
-#### List records
+### List records
 
 ```{r}
-res <- pg_list_records(from='2015-01-01', until='2015-01-15')
-head(res$headers); NROW(res$headers)
+pg_list_records(from = '2015-09-01', until = '2015-09-10')
 ```
 
-#### Geta a record
+### Get a record
 
 ```{r}
-record <- pg_get_record(identifier = "oai:pangaea.de:doi:10.1594/PANGAEA.788382")
-record$header
-record$metadata
+pg_get_record(identifier = "oai:pangaea.de:doi:10.1594/PANGAEA.788382")
 ```
 
 ## Contributors (alphabetical)
