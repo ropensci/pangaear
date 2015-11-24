@@ -4,3 +4,8 @@
 appveyor\.yml$
 README.Rmd
 ^CONDUCT\.md$
+cran-comments.md
+man-roxygen
+.travis.yml
+Makefile
+NEWS.md
