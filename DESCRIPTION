@@ -3,18 +3,19 @@ Title: Client for the Pangaea Database
 Description: Tools to interact with the Pangaea Database (http://www.pangaea.de/),
     including functions for searching for data, fetching datasets by dataset ID,
     and working with the Pangaea OAI-PMH service.
-Version: 0.0.6.9910
-Date: 2015-08-10
-Authors@R: c(person("Scott", "Chamberlain", email = "myrmecocystus@gmail.com", role = c("aut","cre")),
-             person("Kara", "Woo", email = "woo.kara@gmail.com", role = "aut"),
-             person("Andrew", "MacDonald", email = "a.a.m.macdonald@gmail.com", role = "aut"),
-             person("Naupaka ", "Zimmerman", email = "naupaka@gmail.com", role = "aut"),
-             person("Gavin", "Simpson", email = "ucfagls@gmail.com", role = "aut"))
+Version: 0.0.6.9911
+Date: 2015-11-24
+Authors@R: c(person("Scott", "Chamberlain",
+		email = "myrmecocystus@gmail.com", role = c("aut","cre")),
+    person("Kara", "Woo", email = "woo.kara@gmail.com", role = "aut"),
+    person("Andrew", "MacDonald", email = "a.a.m.macdonald@gmail.com", role = "aut"),
+    person("Naupaka ", "Zimmerman", email = "naupaka@gmail.com", role = "aut"),
+    person("Gavin", "Simpson", email = "ucfagls@gmail.com", role = "aut"))
 License: MIT + file LICENSE
 LazyData: true
 URL: https://github.com/ropensci/pangaear
 BugReports: https://github.com/ropensci/pangaear/issues
 Imports:
-    httr,
+    httr (>= 1.0.0),
     XML,
     stringr
