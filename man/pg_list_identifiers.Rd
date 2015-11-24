@@ -5,7 +5,7 @@
 \title{List identifiers of the Pangaea repository}
 \usage{
 pg_list_identifiers(prefix = "oai_dc", from = NULL, until = NULL,
-  set = NULL, ...)
+  set = NULL, token = NULL, as = "df", ...)
 }
 \arguments{
 \item{prefix}{A character string to specify the metadata format in OAI-PMH requests issued to
@@ -24,6 +24,13 @@ the given range).}
 \item{set}{A character string giving a set to be used for selective harvesting (i.e., only
 harvest records in the given set).}
 
+\item{token}{(character) a token previously provided by the server to resume a
+request where it last left off. 50 is max number of records returned. We will
+loop for you internally to get all the records you asked for.}
+
+\item{as}{(character) What to return. One of "df" (for data.frame; default),
+"list", or "raw" (raw text)}
+
 \item{...}{Curl debugging options passed on to \code{\link[httr]{GET}}}
 }
 \description{
@@ -31,14 +38,13 @@ List identifiers of the Pangaea repository
 }
 \examples{
 \donttest{
-pg_list_identifiers(from='2012-01-01', until='2012-01-05')
-pg_list_identifiers(from='2013-10-01', until='2013-10-05')
-pg_list_identifiers(from='2013-10-01', until='2013-10-03', set="geocode1")
-pg_list_identifiers(prefix="iso19139", from='2012-01-01', until='2012-01-05')
-pg_list_identifiers(prefix="dif", from='2012-01-01', until='2012-01-05')
+pg_list_identifiers(from='2015-09-01', until='2015-09-05')
+pg_list_identifiers(set="geocode1", from='2015-09-01', until='2015-09-05')
+pg_list_identifiers(prefix="iso19139", from='2015-09-01', until='2015-09-20')
+pg_list_identifiers(prefix="dif", from='2015-09-01', until='2015-09-20')
 
 library('httr')
-pg_list_identifiers(prefix="dif", from='2012-01-01', until='2012-01-05', config=verbose())
+pg_list_identifiers(prefix="dif", from='2015-09-01', until='2015-09-05', config=verbose())
 }
 }
 

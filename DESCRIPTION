@@ -18,5 +18,6 @@ BugReports: https://github.com/ropensci/pangaear/issues
 Imports:
     httr (>= 1.0.0),
     XML,
-    stringr
+    stringr,
+    oai
 RoxygenNote: 5.0.1

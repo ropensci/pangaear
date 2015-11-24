@@ -1,9 +1,6 @@
 #' Search the Pangaea database
 #'
-#' @importFrom stringr str_extract
-#' @importFrom XML xpathApply xmlValue xmlChildren readHTMLTable
 #' @export
-#'
 #' @param query (character) Query terms. You can refine a search by prefixing the term(s) with a
 #' category, one of citation, reference, parameter, event, project, campaign, or basis.
 #' See examples.

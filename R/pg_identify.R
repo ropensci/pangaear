@@ -2,15 +2,14 @@
 #'
 #' @export
 #' @param ... Curl debugging options passed on to \code{\link[httr]{GET}}
-#'
 #' @examples \donttest{
 #' pg_identify()
 #' }
-
 pg_identify <- function(...) {
-  res <- pg_GET(args = list(verb="Identify"), unname = FALSE, ...)
-  res <- as.list(sapply(res, xmlValue))
-  structure(res, class="pg_identify")
+  res <- oai::id_entify(url = baseoai(), ...)
+  # res <- pg_GET(args = list(verb="Identify"), unname = FALSE, ...)
+  # res <- as.list(sapply(res, xmlValue))
+  structure(as.list(res), class = "pg_identify")
 }
 
 #' @export

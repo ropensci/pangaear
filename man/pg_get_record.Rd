@@ -4,7 +4,7 @@
 \alias{pg_get_record}
 \title{Get record from the Pangaea repository}
 \usage{
-pg_get_record(identifier, prefix = "oai_dc", ...)
+pg_get_record(identifier, prefix = "oai_dc", as = "df", ...)
 }
 \arguments{
 \item{identifier}{Dataset identifier. See Examples.}
@@ -13,6 +13,9 @@ pg_get_record(identifier, prefix = "oai_dc", ...)
 the repository. The default (\code{"oai_dc"}) corresponds to the mandatory OAI unqualified
 Dublin Core metadata schema.}
 
+\item{as}{(character) What to return. One of "df" (for data.frame; default),
+"list", or "raw" (raw text)}
+
 \item{...}{Curl debugging options passed on to \code{\link[httr]{GET}}}
 }
 \description{
@@ -20,19 +23,11 @@ Get record from the Pangaea repository
 }
 \examples{
 \donttest{
-record <- pg_get_record(identifier = "oai:pangaea.de:doi:10.1594/PANGAEA.788382")
-record$header
-record$metadata
-
-record <- pg_get_record(identifier = "oai:pangaea.de:doi:10.1594/PANGAEA.269656",
+pg_get_record(identifier = "oai:pangaea.de:doi:10.1594/PANGAEA.788382")
+pg_get_record(identifier = "oai:pangaea.de:doi:10.1594/PANGAEA.269656",
 prefix="iso19139")
-record$header
-record$metadata
-
-record <- pg_get_record(identifier = "oai:pangaea.de:doi:10.1594/PANGAEA.269656",
+pg_get_record(identifier = "oai:pangaea.de:doi:10.1594/PANGAEA.269656",
 prefix="dif")
-record$header
-record$metadata
 
 # curl options
 library('httr')

@@ -14,51 +14,56 @@
 #' the given range).
 #' @param set A character string giving a set to be used for selective harvesting (i.e., only
 #' harvest records in the given set).
+#' @param token	(character) a token previously provided by the server to resume a
+#' request where it last left off. 50 is max number of records returned. We will
+#' loop for you internally to get all the records you asked for.
+#' @param as (character) What to return. One of "df" (for data.frame; default),
+#' "list", or "raw" (raw text)
 #' @param ... Curl debugging options passed on to \code{\link[httr]{GET}}
 #'
 #' @examples \donttest{
-#' res <- pg_list_records(from='2015-01-01', until='2015-01-15')
-#' head(res$headers); NROW(res$headers)
+#' pg_list_records(from='2015-09-01', until='2015-09-10')
+#' pg_list_records(set='geomound', from='2015-01-01', until='2015-01-05')
 #'
-#' res <- pg_list_records(set='geomound', from='2015-01-01', until='2015-01-05')
-#' head(res$headers); NROW(res$headers)
-#'
-#' # When no results found > "Error: Received condition 'noRecordsMatch'"
-#' pg_list_records(set='geomound', from='2015-01-01', until='2015-01-01')
+#' # When no results found > "'noRecordsMatch'"
+#' # pg_list_records(set='geomound', from='2015-01-01', until='2015-01-01')
 #'
 #' # More examples
-#' res <- pg_list_records(set='citable', from='2015-01-01', until='2015-01-05')
-#' head(res$headers)
+#' pg_list_records(set='citable', from='2015-10-01', until='2015-10-02')
 #'
-#' pg_list_records(prefix="iso19139", set='citable', from='2015-01-01', until='2015-01-05')
+#' pg_list_records(prefix="iso19139", set='citable', from='2015-10-01', until='2015-10-02')
 #' ## FIXME - below are broken
 #' # pg_list_records(prefix="dif", set='citable', from='2015-01-01', until='2015-01-05')
 #' # pg_list_records(prefix="dif", set='project4094', from='2015-01-01', until='2015-01-05')
 #' }
 
-pg_list_records <- function(prefix = "oai_dc", from = NULL, until = NULL, set = NULL, ...) {
-  args <- pgc(list(verb = "ListRecords", metadataPrefix = prefix, from = from,
-                   until = until, set = set))
-  res <- pg_GET(args = args, ...)
-  d <- Filter(function(x) names(x)[1] != "text", res)
+pg_list_records <- function(prefix = "oai_dc", from = NULL, until = NULL, set = NULL,
+                            token = NULL, as = "df", ...) {
+  oai::list_records(url = baseoai(), prefix = prefix, from = from,
+                    until = until, set = set, token = token, as = as, ...)
 
-  header <- lapply(d, function(z){
-    tmp <- z$header
-    c(tmp[ !names(tmp) %in% c('setSpec','.attrs')], setSpec = paste0(tmp[ names(tmp) %in% 'setSpec'], collapse = ","))
-  })
-  headerdf <- data.frame(do.call(rbind, header), stringsAsFactors = FALSE)
-
-  metadata <- NULL
-  if (length(d) != 0) {
-    if ("metadata" %in% names(d[[1]])) {
-      metadata <- lapply(d, function(z){
-        tmp <- z$metadata[[1]]
-        tmp <- c(tmp[ !names(tmp) %in% 'creator'], creator = paste0(tmp[ names(tmp) %in% 'creator'], collapse = ","))
-        tmp[ !names(tmp) %in% ".attrs" ]
-      })
-      names(metadata) <- pluck(header, "identifier", "")
-    }
-  }
-
-  list(headers = headerdf, metadata = metadata)
+  # args <- pgc(list(verb = "ListRecords", metadataPrefix = prefix, from = from,
+  #                  until = until, set = set))
+  # res <- pg_GET(args = args, ...)
+  # d <- Filter(function(x) names(x)[1] != "text", res)
+  #
+  # header <- lapply(d, function(z){
+  #   tmp <- z$header
+  #   c(tmp[ !names(tmp) %in% c('setSpec','.attrs')], setSpec = paste0(tmp[ names(tmp) %in% 'setSpec'], collapse = ","))
+  # })
+  # headerdf <- data.frame(do.call(rbind, header), stringsAsFactors = FALSE)
+  #
+  # metadata <- NULL
+  # if (length(d) != 0) {
+  #   if ("metadata" %in% names(d[[1]])) {
+  #     metadata <- lapply(d, function(z){
+  #       tmp <- z$metadata[[1]]
+  #       tmp <- c(tmp[ !names(tmp) %in% 'creator'], creator = paste0(tmp[ names(tmp) %in% 'creator'], collapse = ","))
+  #       tmp[ !names(tmp) %in% ".attrs" ]
+  #     })
+  #     names(metadata) <- pluck(header, "identifier", "")
+  #   }
+  # }
+  #
+  # list(headers = headerdf, metadata = metadata)
 }

@@ -4,8 +4,6 @@
 #' \url{http://www.pangaea.de/}.
 #'
 #' @export
-#' @importFrom httr write_disk config
-#'
 #' @param doi DOI of Pangaeae single dataset, or of a collection of datasets.
 #' @param path (character) Path to store files in. Default: \emph{"~/.pangaea/"}
 #' @param overwrite (logical) Ovewrite a file if one is found with the same name
