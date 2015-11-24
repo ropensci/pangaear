@@ -6,6 +6,7 @@ pangaear
 [![Build Status](https://api.travis-ci.org/ropensci/pangaear.png)](https://travis-ci.org/ropensci/pangaear)
 [![Build status](https://ci.appveyor.com/api/projects/status/564oioj2oyefax08?svg=true)](https://ci.appveyor.com/project/sckott/pangaear)
 [![rstudio mirror downloads](http://cranlogs.r-pkg.org/badges/pangaear)](https://github.com/metacran/cranlogs.app)
+[![cran version](http://www.r-pkg.org/badges/version/pangaear)](http://cran.rstudio.com/web/packages/pangaear)
 
 An R client to interact with the [Pangaea database](http://www.pangaea.de/).
 
