@@ -39,8 +39,8 @@ library('httr')
 pg_get_record(identifier = "oai:pangaea.de:doi:10.1594/PANGAEA.788382", config=verbose())
 
 # invalid record id
-pg_get_record(identifier = "oai:pangaea.de:doi:10.1594/PANGAEA.11111")
-pg_get_record(identifier = "oai:pangaea.de:doi:10.1594/PANGAEA.11111", prefix="adfadf")
+# pg_get_record(identifier = "oai:pangaea.de:doi:10.1594/PANGAEA.11111")
+# pg_get_record(identifier = "oai:pangaea.de:doi:10.1594/PANGAEA.11111", prefix="adfadf")
 }
 }
 

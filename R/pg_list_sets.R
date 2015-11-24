@@ -7,10 +7,10 @@
 #' @examples \donttest{
 #' head( pg_list_sets() )
 #' library('httr')
-#' res <- pg_list_sets(verbose())
+#' res <- pg_list_sets(config = verbose())
 #' }
 
 pg_list_sets <- function(...) {
-  res <- pg_GET(args = pgc(list(verb="ListSets")), ...)
+  res <- pg_GET(args = pgc(list(verb = "ListSets")), ...)
   data.frame(do.call(rbind, res), stringsAsFactors = FALSE)
 }

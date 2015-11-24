@@ -42,7 +42,7 @@ pg_search <- function(query, count=10, env="all", bbox=NULL, mindate=NULL, maxda
   html <- content(res)
   nodes <- xpathApply(html, "//li")
   dat <- lapply(nodes, parse_res)
-  do.call(rbind, lapply(dat, data.frame, stringsAsFactors = FALSE))
+  do.call("rbind.data.frame", lapply(dat, data.frame, stringsAsFactors = FALSE))
 }
 
 parse_res <- function(x){
@@ -54,9 +54,11 @@ parse_res <- function(x){
   size <- as.numeric(str_extract(vals$size, "[0-9]+"))
   doi <- str_extract(tab[grep("doi", tab[,1]), 1], "10\\.1594/PANGAEA\\.[0-9]+")
   score <- as.numeric(sub("%", "", str_extract(tab[grep("doi", tab[,1]), 1], "[0-9]+%")))
-  list(doi=doi, score_per=score, size_datasets=size,
+  lis <- list(doi=doi, score_per=score, size_datasets=size,
        citation=citation, supplement_to=ifn(vals$supplement_to),
        related_to=ifn(vals$related_to))
+  lis[sapply(lis, length) == 0] <- NA
+  lis
 }
 
 capwords <- function(s, strict = FALSE, onlyfirst = FALSE) {

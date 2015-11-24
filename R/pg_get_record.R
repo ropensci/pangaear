@@ -27,12 +27,11 @@
 #' pg_get_record(identifier = "oai:pangaea.de:doi:10.1594/PANGAEA.788382", config=verbose())
 #'
 #' # invalid record id
-#' pg_get_record(identifier = "oai:pangaea.de:doi:10.1594/PANGAEA.11111")
-#' pg_get_record(identifier = "oai:pangaea.de:doi:10.1594/PANGAEA.11111", prefix="adfadf")
+#' # pg_get_record(identifier = "oai:pangaea.de:doi:10.1594/PANGAEA.11111")
+#' # pg_get_record(identifier = "oai:pangaea.de:doi:10.1594/PANGAEA.11111", prefix="adfadf")
 #' }
-
 pg_get_record <- function(identifier, prefix = "oai_dc", ...){
-  res <- pg_GET(args = list(verb="GetRecord", identifier=identifier, metadataPrefix=prefix), ...)
+  res <- pg_GET(args = list(verb = "GetRecord", identifier = identifier, metadataPrefix = prefix), ...)
   check(res[[1]])
-  list(header=res[[1]]$header, metadata=res[[1]]$metadata)
+  list(header = res[[1]]$header, metadata = res[[1]]$metadata)
 }

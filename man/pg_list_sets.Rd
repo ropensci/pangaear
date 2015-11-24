@@ -16,7 +16,7 @@ List the set structure of the Pangaea repository
 \donttest{
 head( pg_list_sets() )
 library('httr')
-res <- pg_list_sets(verbose())
+res <- pg_list_sets(config = verbose())
 }
 }
 

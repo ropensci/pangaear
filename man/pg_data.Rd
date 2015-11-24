@@ -58,7 +58,7 @@ res[[2]]
 pg_cache_list()
 
 ## clear all data
-pg_cache_clear()
+# pg_cache_clear()
 pg_cache_list()
 
 ## clear a single dataset by DOI
