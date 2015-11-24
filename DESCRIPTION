@@ -1,8 +1,8 @@
 Package: pangaear
 Title: Client for the Pangaea Database
-Description: Tools to interact with the Pangaea Database (http://www.pangaea.de/),
-    including functions for searching for data, fetching datasets by dataset ID,
-    and working with the Pangaea OAI-PMH service.
+Description: Tools to interact with the Pangaea Database (http://
+    www.pangaea.de/), including functions for searching for data, fetching datasets
+    by dataset ID, and working with the Pangaea OAI-PMH service.
 Version: 0.0.6.9911
 Date: 2015-11-24
 Authors@R: c(person("Scott", "Chamberlain",
@@ -19,3 +19,4 @@ Imports:
     httr (>= 1.0.0),
     XML,
     stringr
+RoxygenNote: 5.0.1
