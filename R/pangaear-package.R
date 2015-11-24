@@ -5,7 +5,6 @@
 #' @importFrom XML xmlParse xmlChildren xmlRoot xmlValue xmlToList
 #' xpathApply readHTMLTable
 #' @importFrom httr GET content stop_for_status write_disk config
-#' @importFrom stringr str_extract
 #' @name pangaear
 #' @docType package
 NULL

@@ -48,9 +48,9 @@ parse_res <- function(x){
   tab <- readHTMLTable(tt$table, header = FALSE, trim = TRUE, stringsAsFactors=FALSE)
   tabdf <- tab[-grep("doi", tab[,1]), ]
   vals <- as.list(structure(tabdf[,2], .Names = gsub(":", "", gsub("\\s", "_", tolower(tabdf[,1])))))
-  size <- as.numeric(str_extract(vals$size, "[0-9]+"))
-  doi <- str_extract(tab[grep("doi", tab[,1]), 1], "10\\.1594/PANGAEA\\.[0-9]+")
-  score <- as.numeric(sub("%", "", str_extract(tab[grep("doi", tab[,1]), 1], "[0-9]+%")))
+  size <- as.numeric(strextract(vals$size, "[0-9]+"))
+  doi <- strextract(tab[grep("doi", tab[,1]), 1], "10\\.1594/PANGAEA\\.[0-9]+")
+  score <- as.numeric(sub("%", "", strextract(tab[grep("doi", tab[,1]), 1], "[0-9]+%")))
   lis <- list(doi=doi, score_per=score, size_datasets=size,
        citation=citation, supplement_to=ifn(vals$supplement_to),
        related_to=ifn(vals$related_to))

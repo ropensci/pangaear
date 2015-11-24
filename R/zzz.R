@@ -45,3 +45,5 @@ ifn <- function(x) if(is.null(x)) NA else x
 
 # ff <- file(x, open = "r", encoding = "UTF-8")
 # read.table(ff, header = TRUE, sep = "\t", stringsAsFactors=FALSE)
+
+strextract <- function(str, pattern) regmatches(str, regexpr(pattern, str))
