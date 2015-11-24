@@ -1,10 +1,11 @@
-#' pangaear.
+#' Client for the Pangaea Database
 #'
 #' @importFrom oai list_identifiers get_records list_sets list_metadataformats
 #' list_identifiers id_entify
 #' @importFrom XML xmlParse xmlChildren xmlRoot xmlValue xmlToList
 #' xpathApply readHTMLTable
 #' @importFrom httr GET content stop_for_status write_disk config
-#' @name pangaear
+#' @name pangaear-package
+#' @aliases pangaear
 #' @docType package
 NULL
