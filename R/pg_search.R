@@ -33,18 +33,18 @@
 pg_search <- function(query, count=10, env="all", bbox=NULL, mindate=NULL, maxdate=NULL, ...){
   args <- pgc(list(count=count, q=query, env=capwords(env), mindate=mindate, maxdate=maxdate))
   if(!is.null(bbox)) args <- c(args, as.list(setNames(bbox, c('minlon', 'minlat', 'maxlon', 'maxlat'))))
-  res <- GET(sbase(), query=args, ...)
-  stop_for_status(res)
-  html <- content(res)
-  nodes <- xpathApply(html, "//li")
+  res <- httr::GET(sbase(), query=args, ...)
+  httr::stop_for_status(res)
+  html <- XML::xmlParse(httr::content(res, "text", encoding = "UTF-8"))
+  nodes <- XML::xpathApply(html, "//li")
   dat <- lapply(nodes, parse_res)
   do.call("rbind.data.frame", lapply(dat, data.frame, stringsAsFactors = FALSE))
 }
 
 parse_res <- function(x){
-  tt <- xmlChildren(x)
-  citation <- xmlValue(xmlChildren(tt$p)$a)
-  tab <- readHTMLTable(tt$table, header = FALSE, trim = TRUE, stringsAsFactors=FALSE)
+  tt <- XML::xmlChildren(x)
+  citation <- XML::xmlValue(XML::xmlChildren(tt$p)$a)
+  tab <- XML::readHTMLTable(tt$table, header = FALSE, trim = TRUE, stringsAsFactors=FALSE)
   tabdf <- tab[-grep("doi", tab[,1]), ]
   vals <- as.list(structure(tabdf[,2], .Names = gsub(":", "", gsub("\\s", "_", tolower(tabdf[,1])))))
   size <- as.numeric(strextract(vals$size, "[0-9]+"))

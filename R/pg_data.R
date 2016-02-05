@@ -100,11 +100,11 @@ pg_cache_list <- function(path="~/.pangaea/") list.files(path)
 pang_GET <- function(bp, url, doi, overwrite){
   dir.create(bp, showWarnings = FALSE, recursive = TRUE)
   fname <- rdoi(doi)
-  res <- GET(url,
-             query=list(format="textfile", charset="UTF-8"),
-             config(followlocation = TRUE),
-             write_disk(file.path(bp, fname), overwrite))
-  stop_for_status(res)
+  res <- httr::GET(url,
+             query = list(format="textfile", charset = "UTF-8"),
+             httr::config(followlocation = TRUE),
+             httr::write_disk(file.path(bp, fname), overwrite))
+  httr::stop_for_status(res)
 }
 
 process_pg <- function(bp, x){
@@ -137,10 +137,10 @@ get_meta <- function(x){
 rdoi <- function(x) paste0(gsub("/|\\.", "_", x), ".txt")
 
 check_many <- function(x){
-  res <- GET(paste0(base(), x))
-  if(!grepl("name=\"dslist\"", content(res, "text"))){ x } else {
+  res <- httr::GET(paste0(base(), x))
+  if(!grepl("name=\"dslist\"", httr::content(res, "text", encoding = "UTF-8"))){ x } else {
     d <- gregexpr("<div class=\"MetaHeaderItem\"><a rel=\"follow\" href=\"(http://doi.pangaea.de/.*?)\">", res)
-    d <- unlist(regmatches(content(res, "text"), d))
+    d <- unlist(regmatches(httr::content(res, "text", encoding = "UTF-8"), d))
     split_d <- strsplit(d, split = "\"")
     vapply(split_d, function (x) sub("http://doi.pangaea.de/", "", x[grepl("doi",x)]), "")
   }
