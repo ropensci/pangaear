@@ -7,7 +7,7 @@
 #' pg_identify()
 #' }
 pg_identify <- function(...) {
-  res <- oai::id_entify(url = baseoai(), ...)
+  res <- oai::id(url = baseoai(), ...)
   structure(as.list(res), class = "pg_identify")
 }
 

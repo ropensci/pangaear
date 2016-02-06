@@ -1,8 +1,5 @@
 language: r
 
-r_github_packages:
-  - ropensci/oai
-
 notifications:
   email:
     on_success: change
