@@ -8,10 +8,10 @@
 #' @param env (character) Type of data to search, one of "all", "sediment", "water", "ice", "atomosphere"
 #' @param bbox  (numeric) A bounding box, of the form: minlon, minlat, maxlon, maxlat
 #' @param mindate,maxdate (character) Dates to search for, of the form "2014-10-28"
-#' @param ... Further args passed on to \code{\link[httr]{GET}}
+#' @param ... Curl options passed on to \code{\link[httr]{GET}}
 #' @return data.frame
 #' @details This is a thin wrapper around the GUI search interface on the page
-#' \url{http://www.pangaea.de/}. Everything you can do there, you can do here.
+#' \url{https://www.pangaea.de}. Everything you can do there, you can do here.
 #' @examples \dontrun{
 #' pg_search(query='water')
 #' pg_search(query='water', count=2)
@@ -30,7 +30,11 @@
 #' pg_search(query='basis:Meteor')
 #' }
 
-pg_search <- function(query, count=10, env="all", bbox=NULL, mindate=NULL, maxdate=NULL, ...){
+pg_search <- function(query, count=10, env="all", bbox=NULL, mindate=NULL, maxdate=NULL, ...) {
+  check_if(count, c("numeric", "integer"))
+  check_if(env, "character")
+  check_if(mindate, "character")
+  check_if(maxdate, "character")
   args <- pgc(list(count = count, q = query, env = capwords(env), mindate = mindate, maxdate = maxdate))
   if (!is.null(bbox)) args <- c(args, as.list(setNames(bbox, c('minlon', 'minlat', 'maxlon', 'maxlat'))))
   res <- GET(sbase(), query = args, ...)
@@ -45,11 +49,21 @@ parse_res <- function(x){
   doi <- xml_attr(xml_find_all(x, './/p[@class="citation"]/a'), "href")
   citation <- xml_text(xml_find_all(x, './/p[@class="citation"]/a'))
   tab <- xml_find_all(x, './/table/tr')
-  supp <- xml_text(xml_find_all(tab[[1]], ".//td")[2])
-  size <- strextract(xml_text(xml_find_all(tab[[2]], ".//td")[2]), "[[:digit:]]+")
-  score <- strextract(strsplit(xml_text(xml_find_all(tab[[3]], ".//td")), "Score:")[[1]][2], "[[:digit:]]+\\.[[:digit:]]+")
-  lis <- list(doi = doi, score = score, size_datasets = size,
+  #supp <- xml_text(xml_find_all(tab[[1]], ".//td")[2])
+  supp <- xml_text(xml_find_one(xml_parent(xml_find_all(tab, ".//td[contains(.,'Supplement')]")), './/td[@class="content"]'))
+  size <- strextract(xml_text(xml_find_all(xml_parent(xml_find_all(tab, ".//td[contains(.,'Size')]")), './/td[@class="content"]')), "[[:digit:]]+")
+  #score <- strextract(strsplit(xml_text(xml_find_all(tab[[3]], ".//td")), "Score:")[[1]][2], "[[:digit:]]+\\.[[:digit:]]+")
+  score <- strextract(strsplit(xml_text(xml_find_all(tab, './/td[@class="datasetid"]')), "Score:")[[1]][2], "[[:digit:]]+\\.[[:digit:]]+")
+  lis <- list(doi = doi, score = as.numeric(score), size_datasets = as.numeric(size),
        citation = citation, supplement_to = supp)
   lis[vapply(lis, length, 1) == 0] <- NA
   lis
+}
+
+check_if <- function(x, cls) {
+  if (!is.null(x)) {
+    if (!class(x) %in% cls) {
+      stop(substitute(x), " must be of class: ", paste0(cls, collapse = ", "), call. = FALSE)
+    }
+  }
 }

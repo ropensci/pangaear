@@ -20,7 +20,7 @@ See examples.}
 
 \item{mindate, maxdate}{(character) Dates to search for, of the form "2014-10-28"}
 
-\item{...}{Further args passed on to \code{\link[httr]{GET}}}
+\item{...}{Curl options passed on to \code{\link[httr]{GET}}}
 }
 \value{
 data.frame
@@ -30,7 +30,7 @@ Search the Pangaea database
 }
 \details{
 This is a thin wrapper around the GUI search interface on the page
-\url{http://www.pangaea.de/}. Everything you can do there, you can do here.
+\url{https://www.pangaea.de}. Everything you can do there, you can do here.
 }
 \examples{
 \dontrun{

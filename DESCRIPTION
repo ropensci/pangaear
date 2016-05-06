@@ -1,9 +1,9 @@
 Package: pangaear
 Title: Client for the 'Pangaea' Database
-Description: Tools to interact with the 'Pangaea' Database (http://
-    www.pangaea.de/), including functions for searching for data, fetching 'datasets'
+Description: Tools to interact with the 'Pangaea' Database (<https://
+    www.pangaea.de>), including functions for searching for data, fetching 'datasets'
     by 'dataset' 'ID', and working with the 'Pangaea' 'OAI-PMH' service.
-Version: 0.1.8.9000
+Version: 0.1.8.9400
 Authors@R: c(person("Scott", "Chamberlain",
 		email = "myrmecocystus@gmail.com", role = c("aut","cre")),
     person("Kara", "Woo", email = "woo.kara@gmail.com", role = "aut"),
@@ -22,4 +22,8 @@ Imports:
     xml2 (>= 0.1.2),
     oai (>= 0.2.0),
     tibble (>= 1.0)
+Suggests:
+    testthat,
+    roxygen2 (>= 5.0.1),
+    covr
 RoxygenNote: 5.0.1
