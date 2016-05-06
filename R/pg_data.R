@@ -4,7 +4,9 @@
 #' \url{https://www.pangaea.de/}.
 #'
 #' @export
-#' @param doi DOI of Pangaeae single dataset, or of a collection of datasets.
+#' @param doi DOI of Pangaeae single dataset, or of a collection of datasets. Expects
+#' either just a DOI of the form \code{10.1594/PANGAEA.746398}, or with the URL part
+#' in front, like \code{https://doi.pangaea.de/10.1594/PANGAEA.746398}
 #' @param overwrite (logical) Ovewrite a file if one is found with the same name
 #' @param ... Curl options passed on to \code{\link[httr]{GET}}
 #' @param prompt (logical) Prompt before clearing all files in cache? No prompt used when DOIs
@@ -140,7 +142,7 @@ fix_doi <- function(x) {
     x
   } else {
     # make sure doi is cleaned up before making a url
-    if (!grepl("^10.1594", x)) stop(x, " not of right form", call. = FALSE)
+    if (!grepl("^10.1594", x)) stop(x, " not of right form, expecting a DOI, see pg_data help file", call. = FALSE)
     paste0(base(), x)
   }
 }

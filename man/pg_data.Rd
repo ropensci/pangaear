@@ -13,7 +13,9 @@ pg_cache_list()
 pg_data(doi, overwrite = TRUE, ...)
 }
 \arguments{
-\item{doi}{DOI of Pangaeae single dataset, or of a collection of datasets.}
+\item{doi}{DOI of Pangaeae single dataset, or of a collection of datasets. Expects
+either just a DOI of the form \code{10.1594/PANGAEA.746398}, or with the URL part
+in front, like \code{https://doi.pangaea.de/10.1594/PANGAEA.746398}}
 
 \item{prompt}{(logical) Prompt before clearing all files in cache? No prompt used when DOIs
 assed in. Default: \code{TRUE}}

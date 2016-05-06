@@ -1,6 +1,6 @@
 context("pg_search")
 
-test_that("", {
+test_that("pg_Search works and stuff, and stuff and things, also, it works", {
   skip_on_cran()
 
   aa <- pg_search(query='water')
