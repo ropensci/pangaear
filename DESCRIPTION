@@ -3,8 +3,7 @@ Title: Client for the 'Pangaea' Database
 Description: Tools to interact with the 'Pangaea' Database (http://
     www.pangaea.de/), including functions for searching for data, fetching 'datasets'
     by 'dataset' 'ID', and working with the 'Pangaea' 'OAI-PMH' service.
-Version: 0.1.0.9840
-Date: 2016-05-06
+Version: 0.1.8.9000
 Authors@R: c(person("Scott", "Chamberlain",
 		email = "myrmecocystus@gmail.com", role = c("aut","cre")),
     person("Kara", "Woo", email = "woo.kara@gmail.com", role = "aut"),
@@ -16,11 +15,11 @@ LazyData: true
 URL: https://github.com/ropensci/pangaear
 BugReports: https://github.com/ropensci/pangaear/issues
 Imports:
-    methods,
     stats,
     utils,
     httr (>= 1.0.0),
-    xml2,
-    oai,
-    tibble
+    rappdirs (>= 0.3.1),
+    xml2 (>= 0.1.2),
+    oai (>= 0.2.0),
+    tibble (>= 1.0)
 RoxygenNote: 5.0.1

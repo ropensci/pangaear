@@ -5,7 +5,6 @@
 #'
 #' @export
 #' @param doi DOI of Pangaeae single dataset, or of a collection of datasets.
-#' @param path (character) Path to store files in. Default: \emph{"~/.pangaea/"}
 #' @param overwrite (logical) Ovewrite a file if one is found with the same name
 #' @param ... Curl options passed on to \code{\link[httr]{GET}}
 #' @param prompt (logical) Prompt before clearing all files in cache? No prompt used when DOIs
@@ -14,12 +13,18 @@
 #' and data object. Each data object is printed as a \code{tbl_df} object, but the
 #' actual object is simply a \code{data.frame}.
 #' @author Naupaka Zimmerman
+#' @references \url{https://www.pangaea.de}
+#' @details Data files are stored in an operating system appropriate location.
+#' Run \code{rappdirs::user_cache_dir("pangaear")} to get the storage location
+#' on your machine.
 #' @examples \dontrun{
 #' # a single file
 #' res <- pg_data(doi='10.1594/PANGAEA.807580')
 #' res
+#' res[[1]]$doi
 #' res[[1]]$citation
 #' res[[1]]$meta
+#' res[[1]]$data
 #'
 #' # another single file
 #' pg_data(doi='10.1594/PANGAEA.807584')
@@ -50,21 +55,22 @@
 #' pg_cache_list()
 #' }
 
-pg_data <- function(doi, path = "~/.pangaea/", overwrite = TRUE, ...) {
+pg_data <- function(doi, overwrite = TRUE, ...) {
   dois <- check_many(doi)
   invisible(lapply(dois, function(x) {
-    if ( !is_pangaea(path.expand(path), x) ) {
-      pang_GET(bp = path, url = paste0(base(), x), doi = x, overwrite)
+    if ( !is_pangaea(env$path, x) ) {
+      pang_GET(url = paste0(base(), x), doi = x, overwrite)
     }
   }))
-  out <- process_pg(path, dois)
+  out <- process_pg(dois)
   lapply(out, structure, class = "pangaea")
 }
 
 #' @export
 print.pangaea <- function(x, ...) {
   cat(sprintf("<Pangaea data> %s", x$doi), sep = "\n")
-  print(as_data_frame(x$data))
+  print(x$data)
+  #print(as_data_frame(x$data))
 }
 
 print.meta <- function(x, ...){
@@ -75,39 +81,23 @@ print.citation <- function(x, ...){
   cat(x$citation, sep = "\n")
 }
 
-#' @export
-#' @rdname pg_data
-pg_cache_clear <- function(path="~/.pangaea/", doi=NULL, prompt=TRUE) {
-  if (is.null(doi)) {
-    files <- list.files(path, full.names = TRUE)
-    resp <- if (prompt) readline(sprintf("Sure you want to clear all %s files? [y/n]:  ", length(files))) else "y"
-    if (resp == "y") unlink(files, force = TRUE) else NULL
-  } else {
-    files <- file.path(path, rdoi(doi))
-    unlink(files, force = TRUE)
-  }
-}
-
-#' @export
-#' @rdname pg_data
-pg_cache_list <- function(path="~/.pangaea/") list.files(path)
-
-pang_GET <- function(bp, url, doi, overwrite){
-  dir.create(bp, showWarnings = FALSE, recursive = TRUE)
+pang_GET <- function(url, doi, overwrite){
+  dir.create(env$path, showWarnings = FALSE, recursive = TRUE)
   fname <- rdoi(doi)
   res <- httr::GET(url,
              query = list(format = "textfile", charset = "UTF-8"),
              httr::config(followlocation = TRUE),
-             httr::write_disk(file.path(bp, fname), overwrite))
+             httr::write_disk(file.path(env$path, fname), overwrite))
   httr::stop_for_status(res)
 }
 
-process_pg <- function(bp, x){
+process_pg <- function(x){
   lapply(x, function(m){
     list(doi = m,
          citation = pg_citation(m),
-         meta = get_meta(file.path(bp, rdoi(m))),
-         data = read_csv(file.path(bp, rdoi(m)))
+         meta = get_meta(file.path(env$path, rdoi(m))),
+         #data = read_csv(file.path(env$path, rdoi(m)))
+         data = as_data_frame(read_csv(file.path(env$path, rdoi(m))))
     )
   })
 }
@@ -134,7 +124,7 @@ get_meta <- function(x){
 rdoi <- function(x) paste0(gsub("/|\\.", "_", x), ".txt")
 
 check_many <- function(x){
-  res <- httr::GET(paste0(base(), x))
+  res <- httr::GET(fix_doi(x))
   if (!grepl("name=\"dslist\"", content(res, "text", encoding = "UTF-8"))) {
     x
   } else {
@@ -142,5 +132,15 @@ check_many <- function(x){
     d <- unlist(regmatches(content(res, "text", encoding = "UTF-8"), d))
     split_d <- strsplit(d, split = "\"")
     vapply(split_d, function(x) sub("https://doi.pangaea.de/", "", x[grepl("doi",x)]), "")
+  }
+}
+
+fix_doi <- function(x) {
+  if (grepl("https?://doi.pangaea.de/?", x)) {
+    x
+  } else {
+    # make sure doi is cleaned up before making a url
+    if (!grepl("^10.1594", x)) stop(x, " not of right form", call. = FALSE)
+    paste0(base(), x)
   }
 }
