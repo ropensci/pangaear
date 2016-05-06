@@ -1,6 +1,6 @@
 context("pg_search")
 
-test_that("pg_Search works and stuff, and stuff and things, also, it works", {
+test_that("pg_search works and stuff, and stuff and things, also, it works", {
   skip_on_cran()
 
   aa <- pg_search(query='water')
@@ -12,7 +12,7 @@ test_that("pg_Search works and stuff, and stuff and things, also, it works", {
 
   expect_is(aa, "tbl_df")
   expect_named(aa, c('doi','score','size_datasets','citation','supplement_to'))
-  expect_match(aa$doi, "doi.pangaea.de")
+  expect_match(aa$doi, "10.1594")
   expect_is(aa$score, "numeric")
   expect_is(aa$size_datasets, "numeric")
   expect_is(aa$supplement_to, "character")
