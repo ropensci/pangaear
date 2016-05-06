@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
 [![Build Status](https://api.travis-ci.org/ropensci/pangaear.png)](https://travis-ci.org/ropensci/pangaear)
 [![Build status](https://ci.appveyor.com/api/projects/status/564oioj2oyefax08?svg=true)](https://ci.appveyor.com/project/sckott/pangaear)
 [![rstudio mirror downloads](http://cranlogs.r-pkg.org/badges/pangaear)](https://github.com/metacran/cranlogs.app)
-[![cran version](http://www.r-pkg.org/badges/version/pangaear)](http://cran.rstudio.com/web/packages/pangaear)
+[![cran version](http://www.r-pkg.org/badges/version/pangaear)](https://cran.r-project.org/package=pangaear)
 
 An R client to interact with the [Pangaea database](http://www.pangaea.de/).
 
@@ -53,7 +53,7 @@ pg_search(query='water', bbox=c(-124.2, 41.8, -116.8, 46.1), count=3)
 ## Get data
 
 ```{r}
-res <- pg_data(doi='10.1594/PANGAEA.761032')
+res <- pg_data(doi='10.1594/PANGAEA.807580')
 res[[1]]
 ```
 

@@ -1,8 +1,8 @@
 baseoai <- function() "http://ws.pangaea.de/oai/"
-base <- function() 'http://doi.pangaea.de/'
-sbase <- function() "http://www.pangaea.de/search"
+base <- function() 'https://doi.pangaea.de/'
+sbase <- function() "https://www.pangaea.de/search"
 
-pgc <- function (l) Filter(Negate(is.null), l)
+pgc <- function(x) Filter(Negate(is.null), x)
 
 pluck <- function(x, name, type) {
   if (missing(type)) {
@@ -30,3 +30,17 @@ read_csv <- function(x){
 ifn <- function(x) if(is.null(x)) NA else x
 
 strextract <- function(str, pattern) regmatches(str, regexpr(pattern, str))
+
+capwords <- function(s, strict = FALSE, onlyfirst = FALSE) {
+  cap <- function(s) paste(toupper(substring(s,1,1)), {
+    s <- substring(s,2); if(strict) tolower(s) else s
+  }, sep = "", collapse = " " )
+  if(!onlyfirst){
+    sapply(strsplit(s, split = " "), cap, USE.NAMES = !is.null(names(s)))
+  } else {
+    sapply(s, function(x)
+      paste(toupper(substring(x,1,1)),
+            tolower(substring(x,2)),
+            sep="", collapse=" "), USE.NAMES=F)
+  }
+}

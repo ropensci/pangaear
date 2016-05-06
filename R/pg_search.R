@@ -31,42 +31,25 @@
 #' }
 
 pg_search <- function(query, count=10, env="all", bbox=NULL, mindate=NULL, maxdate=NULL, ...){
-  args <- pgc(list(count=count, q=query, env=capwords(env), mindate=mindate, maxdate=maxdate))
-  if(!is.null(bbox)) args <- c(args, as.list(setNames(bbox, c('minlon', 'minlat', 'maxlon', 'maxlat'))))
-  res <- httr::GET(sbase(), query=args, ...)
-  httr::stop_for_status(res)
-  html <- XML::xmlParse(httr::content(res, "text", encoding = "UTF-8"))
-  nodes <- XML::xpathApply(html, "//li")
+  args <- pgc(list(count = count, q = query, env = capwords(env), mindate = mindate, maxdate = maxdate))
+  if (!is.null(bbox)) args <- c(args, as.list(setNames(bbox, c('minlon', 'minlat', 'maxlon', 'maxlat'))))
+  res <- GET(sbase(), query = args, ...)
+  stop_for_status(res)
+  html <- read_html(content(res, "text", encoding = "UTF-8"))
+  nodes <- xml_find_all(html, "//li")
   dat <- lapply(nodes, parse_res)
-  do.call("rbind.data.frame", lapply(dat, data.frame, stringsAsFactors = FALSE))
+  as_data_frame(do.call("rbind.data.frame", lapply(dat, as_data_frame)))
 }
 
 parse_res <- function(x){
-  tt <- XML::xmlChildren(x)
-  citation <- XML::xmlValue(XML::xmlChildren(tt$p)$a)
-  tab <- XML::readHTMLTable(tt$table, header = FALSE, trim = TRUE, stringsAsFactors=FALSE)
-  tabdf <- tab[-grep("doi", tab[,1]), ]
-  vals <- as.list(structure(tabdf[,2], .Names = gsub(":", "", gsub("\\s", "_", tolower(tabdf[,1])))))
-  size <- as.numeric(strextract(vals$size, "[0-9]+"))
-  doi <- strextract(tab[grep("doi", tab[,1]), 1], "10\\.1594/PANGAEA\\.[0-9]+")
-  score <- as.numeric(sub("%", "", strextract(tab[grep("doi", tab[,1]), 1], "[0-9]+%")))
-  lis <- list(doi=doi, score_per=score, size_datasets=size,
-       citation=citation, supplement_to=ifn(vals$supplement_to),
-       related_to=ifn(vals$related_to))
-  lis[sapply(lis, length) == 0] <- NA
+  doi <- xml_attr(xml_find_all(x, './/p[@class="citation"]/a'), "href")
+  citation <- xml_text(xml_find_all(x, './/p[@class="citation"]/a'))
+  tab <- xml_find_all(x, './/table/tr')
+  supp <- xml_text(xml_find_all(tab[[1]], ".//td")[2])
+  size <- strextract(xml_text(xml_find_all(tab[[2]], ".//td")[2]), "[[:digit:]]+")
+  score <- strextract(strsplit(xml_text(xml_find_all(tab[[3]], ".//td")), "Score:")[[1]][2], "[[:digit:]]+\\.[[:digit:]]+")
+  lis <- list(doi = doi, score = score, size_datasets = size,
+       citation = citation, supplement_to = supp)
+  lis[vapply(lis, length, 1) == 0] <- NA
   lis
-}
-
-capwords <- function(s, strict = FALSE, onlyfirst = FALSE) {
-  cap <- function(s) paste(toupper(substring(s,1,1)), {
-    s <- substring(s,2); if(strict) tolower(s) else s
-  }, sep = "", collapse = " " )
-  if(!onlyfirst){
-    sapply(strsplit(s, split = " "), cap, USE.NAMES = !is.null(names(s)))
-  } else {
-    sapply(s, function(x)
-      paste(toupper(substring(x,1,1)),
-            tolower(substring(x,2)),
-            sep="", collapse=" "), USE.NAMES=F)
-  }
 }

@@ -2,9 +2,9 @@
 #'
 #' @importFrom oai list_identifiers get_records list_sets list_metadataformats
 #' list_identifiers id
-#' @importFrom XML xmlParse xmlChildren xmlRoot xmlValue xmlToList
-#' xpathApply readHTMLTable
 #' @importFrom httr GET content stop_for_status write_disk config
+#' @importFrom xml2 read_html xml_find_all xml_attr xml_text
+#' @importFrom tibble as_data_frame
 #' @importFrom methods is
 #' @importFrom stats setNames
 #' @importFrom utils head read.csv
