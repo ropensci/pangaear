@@ -3,7 +3,7 @@ Title: Client for the 'Pangaea' Database
 Description: Tools to interact with the 'Pangaea' Database (http://
     www.pangaea.de/), including functions for searching for data, fetching 'datasets'
     by 'dataset' 'ID', and working with the 'Pangaea' 'OAI-PMH' service.
-Version: 0.1.0.9800
+Version: 0.1.0.9840
 Date: 2016-05-06
 Authors@R: c(person("Scott", "Chamberlain",
 		email = "myrmecocystus@gmail.com", role = c("aut","cre")),

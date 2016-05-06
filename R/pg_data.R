@@ -1,15 +1,15 @@
 #' Download data from Pangaea.
 #'
 #' Grabs data as a dataframe or list of dataframes from a Pangaea data repository URI; see:
-#' \url{http://www.pangaea.de/}.
+#' \url{https://www.pangaea.de/}.
 #'
 #' @export
 #' @param doi DOI of Pangaeae single dataset, or of a collection of datasets.
 #' @param path (character) Path to store files in. Default: \emph{"~/.pangaea/"}
 #' @param overwrite (logical) Ovewrite a file if one is found with the same name
-#' @param ... Curl debugging options passed on to \code{\link[httr]{GET}}
+#' @param ... Curl options passed on to \code{\link[httr]{GET}}
 #' @param prompt (logical) Prompt before clearing all files in cache? No prompt used when DOIs
-#' assed in. Default: TRUE
+#' assed in. Default: \code{TRUE}
 #' @return One or more items of class pangaea, each with a citation object, metadata object,
 #' and data object. Each data object is printed as a \code{tbl_df} object, but the
 #' actual object is simply a \code{data.frame}.
@@ -50,7 +50,7 @@
 #' pg_cache_list()
 #' }
 
-pg_data <- function(doi, path="~/.pangaea/", overwrite=TRUE, ...) {
+pg_data <- function(doi, path = "~/.pangaea/", overwrite = TRUE, ...) {
   dois <- check_many(doi)
   invisible(lapply(dois, function(x) {
     if ( !is_pangaea(path.expand(path), x) ) {
@@ -62,9 +62,9 @@ pg_data <- function(doi, path="~/.pangaea/", overwrite=TRUE, ...) {
 }
 
 #' @export
-print.pangaea <- function(x, ..., n = 10){
+print.pangaea <- function(x, ...) {
   cat(sprintf("<Pangaea data> %s", x$doi), sep = "\n")
-  trunc_mat(x$data, n = n)
+  print(as_data_frame(x$data))
 }
 
 print.meta <- function(x, ...){
@@ -114,7 +114,7 @@ process_pg <- function(bp, x){
 
 pg_citation <- function(x){
   structure(list(
-    citation = sprintf('See http://doi.pangaea.de/%s for the citation', x)),
+    citation = sprintf('See https://doi.pangaea.de/%s for the citation', x)),
             class = "citation")
 }
 
@@ -135,12 +135,12 @@ rdoi <- function(x) paste0(gsub("/|\\.", "_", x), ".txt")
 
 check_many <- function(x){
   res <- httr::GET(paste0(base(), x))
-  if (!grepl("name=\"dslist\"", httr::content(res, "text", encoding = "UTF-8"))) {
+  if (!grepl("name=\"dslist\"", content(res, "text", encoding = "UTF-8"))) {
     x
   } else {
-    d <- gregexpr("<div class=\"MetaHeaderItem\"><a rel=\"follow\" href=\"(http://doi.pangaea.de/.*?)\">", res)
-    d <- unlist(regmatches(httr::content(res, "text", encoding = "UTF-8"), d))
+    d <- gregexpr("<div class=\"MetaHeaderItem\"><a rel=\"follow\" href=\"(https://doi.pangaea.de/.*?)\">", res)
+    d <- unlist(regmatches(content(res, "text", encoding = "UTF-8"), d))
     split_d <- strsplit(d, split = "\"")
-    vapply(split_d, function(x) sub("http://doi.pangaea.de/", "", x[grepl("doi",x)]), "")
+    vapply(split_d, function(x) sub("https://doi.pangaea.de/", "", x[grepl("doi",x)]), "")
   }
 }

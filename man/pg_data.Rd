@@ -19,10 +19,10 @@ pg_cache_list(path = "~/.pangaea/")
 
 \item{overwrite}{(logical) Ovewrite a file if one is found with the same name}
 
-\item{...}{Curl debugging options passed on to \code{\link[httr]{GET}}}
+\item{...}{Curl options passed on to \code{\link[httr]{GET}}}
 
 \item{prompt}{(logical) Prompt before clearing all files in cache? No prompt used when DOIs
-assed in. Default: TRUE}
+assed in. Default: \code{TRUE}}
 }
 \value{
 One or more items of class pangaea, each with a citation object, metadata object,
@@ -31,7 +31,7 @@ actual object is simply a \code{data.frame}.
 }
 \description{
 Grabs data as a dataframe or list of dataframes from a Pangaea data repository URI; see:
-\url{http://www.pangaea.de/}.
+\url{https://www.pangaea.de/}.
 }
 \examples{
 \dontrun{
