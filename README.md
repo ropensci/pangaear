@@ -5,6 +5,7 @@ pangaear
 
 [![Build Status](https://api.travis-ci.org/ropensci/pangaear.png)](https://travis-ci.org/ropensci/pangaear)
 [![Build status](https://ci.appveyor.com/api/projects/status/564oioj2oyefax08?svg=true)](https://ci.appveyor.com/project/sckott/pangaear)
+[![codecov](https://codecov.io/gh/ropensci/pangaear/branch/master/graph/badge.svg)](https://codecov.io/gh/ropensci/pangaear)
 [![rstudio mirror downloads](http://cranlogs.r-pkg.org/badges/pangaear)](https://github.com/metacran/cranlogs.app)
 [![cran version](http://www.r-pkg.org/badges/version/pangaear)](https://cran.r-project.org/package=pangaear)
 
@@ -47,11 +48,11 @@ This is a thin wrapper around the GUI search interface on the page [http://www.p
 pg_search(query = 'water', bbox = c(-124.2, 41.8, -116.8, 46.1), count = 3)
 #> Source: local data frame [3 x 5]
 #> 
-#>                                             doi score size_datasets
-#>                                           <chr> <chr>         <chr>
-#> 1 https://doi.pangaea.de/10.1594/PANGAEA.736010  2.38             9
-#> 2 https://doi.pangaea.de/10.1594/PANGAEA.812094  2.24             2
-#> 3 https://doi.pangaea.de/10.1594/PANGAEA.803591  2.02             2
+#>                      doi score size_datasets
+#>                    <chr> <dbl>         <dbl>
+#> 1 10.1594/PANGAEA.736010  2.38             9
+#> 2 10.1594/PANGAEA.812094  2.24             2
+#> 3 10.1594/PANGAEA.803591  2.02             2
 #> Variables not shown: citation <chr>, supplement_to <chr>.
 ```
 
