@@ -46,7 +46,7 @@ pg_search <- function(query, count=10, env="all", bbox=NULL, mindate=NULL, maxda
 }
 
 parse_res <- function(x){
-  doi <- xml_attr(xml_find_all(x, './/p[@class="citation"]/a'), "href")
+  doi <- sub("https?://doi.pangaea.de/", "", xml_attr(xml_find_all(x, './/p[@class="citation"]/a'), "href"))
   citation <- xml_text(xml_find_all(x, './/p[@class="citation"]/a'))
   tab <- xml_find_all(x, './/table/tr')
   #supp <- xml_text(xml_find_all(tab[[1]], ".//td")[2])
