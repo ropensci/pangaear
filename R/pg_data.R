@@ -25,10 +25,6 @@
 #' pg_data(doi='10.1594/PANGAEA.807584')
 #'
 #' # Many files
-#' res <- pg_data(doi='10.1594/PANGAEA.807587')
-#' res[[3]]
-#'
-#' # Another example of many files
 #' res <- pg_data(doi='10.1594/PANGAEA.761032')
 #' res[[1]]
 #' res[[2]]
@@ -54,16 +50,15 @@
 #' pg_cache_list()
 #' }
 
-pg_data <- function(doi, path="~/.pangaea/", overwrite=TRUE, ...)
-{
+pg_data <- function(doi, path="~/.pangaea/", overwrite=TRUE, ...) {
   dois <- check_many(doi)
-  invisible(lapply(dois, function(x){
-    if( !is_pangaea(path.expand(path), x) ){
+  invisible(lapply(dois, function(x) {
+    if ( !is_pangaea(path.expand(path), x) ) {
       pang_GET(bp = path, url = paste0(base(), x), doi = x, overwrite)
     }
   }))
   out <- process_pg(path, dois)
-  lapply(out, structure, class="pangaea")
+  lapply(out, structure, class = "pangaea")
 }
 
 #' @export
@@ -82,11 +77,11 @@ print.citation <- function(x, ...){
 
 #' @export
 #' @rdname pg_data
-pg_cache_clear <- function(path="~/.pangaea/", doi=NULL, prompt=TRUE){
-  if(is.null(doi)){
+pg_cache_clear <- function(path="~/.pangaea/", doi=NULL, prompt=TRUE) {
+  if (is.null(doi)) {
     files <- list.files(path, full.names = TRUE)
-    resp <- if(prompt) readline(sprintf("Sure you want to clear all %s files? [y/n]:  ", length(files))) else "y"
-    if(resp == "y") unlink(files, force = TRUE) else NULL
+    resp <- if (prompt) readline(sprintf("Sure you want to clear all %s files? [y/n]:  ", length(files))) else "y"
+    if (resp == "y") unlink(files, force = TRUE) else NULL
   } else {
     files <- file.path(path, rdoi(doi))
     unlink(files, force = TRUE)
@@ -101,7 +96,7 @@ pang_GET <- function(bp, url, doi, overwrite){
   dir.create(bp, showWarnings = FALSE, recursive = TRUE)
   fname <- rdoi(doi)
   res <- httr::GET(url,
-             query = list(format="textfile", charset = "UTF-8"),
+             query = list(format = "textfile", charset = "UTF-8"),
              httr::config(followlocation = TRUE),
              httr::write_disk(file.path(bp, fname), overwrite))
   httr::stop_for_status(res)
@@ -109,21 +104,23 @@ pang_GET <- function(bp, url, doi, overwrite){
 
 process_pg <- function(bp, x){
   lapply(x, function(m){
-    list(doi=m,
-         citation=pg_citation(m),
-         meta=get_meta(file.path(bp, rdoi(m))),
-         data=read_csv(file.path(bp, rdoi(m)))
+    list(doi = m,
+         citation = pg_citation(m),
+         meta = get_meta(file.path(bp, rdoi(m))),
+         data = read_csv(file.path(bp, rdoi(m)))
     )
   })
 }
 
 pg_citation <- function(x){
-  structure(list(citation=sprintf('See http://doi.pangaea.de/%s for the citation', x)), class="citation")
+  structure(list(
+    citation = sprintf('See http://doi.pangaea.de/%s for the citation', x)),
+            class = "citation")
 }
 
 is_pangaea <- function(x, doi){
-  if( identical(list.files(x), character(0)) ) { FALSE } else {
-    if( any(rdoi(doi) %in% list.files(x)) ) TRUE else FALSE
+  if ( identical(list.files(x), character(0)) ) { FALSE } else {
+    if ( any(rdoi(doi) %in% list.files(x)) ) TRUE else FALSE
   }
 }
 
@@ -131,17 +128,19 @@ get_meta <- function(x){
   lns <- readLines(x, n = 300)
   ln_no <- grep("\\*/", lns) - 1
   use <- lns[2:ln_no]
-  structure(list(meta=use), class="meta")
+  structure(list(meta = use), class = "meta")
 }
 
 rdoi <- function(x) paste0(gsub("/|\\.", "_", x), ".txt")
 
 check_many <- function(x){
   res <- httr::GET(paste0(base(), x))
-  if(!grepl("name=\"dslist\"", httr::content(res, "text", encoding = "UTF-8"))){ x } else {
+  if (!grepl("name=\"dslist\"", httr::content(res, "text", encoding = "UTF-8"))) {
+    x
+  } else {
     d <- gregexpr("<div class=\"MetaHeaderItem\"><a rel=\"follow\" href=\"(http://doi.pangaea.de/.*?)\">", res)
     d <- unlist(regmatches(httr::content(res, "text", encoding = "UTF-8"), d))
     split_d <- strsplit(d, split = "\"")
-    vapply(split_d, function (x) sub("http://doi.pangaea.de/", "", x[grepl("doi",x)]), "")
+    vapply(split_d, function(x) sub("http://doi.pangaea.de/", "", x[grepl("doi",x)]), "")
   }
 }

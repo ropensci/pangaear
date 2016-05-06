@@ -45,10 +45,6 @@ res[[1]]$meta
 pg_data(doi='10.1594/PANGAEA.807584')
 
 # Many files
-res <- pg_data(doi='10.1594/PANGAEA.807587')
-res[[3]]
-
-# Another example of many files
 res <- pg_data(doi='10.1594/PANGAEA.761032')
 res[[1]]
 res[[2]]
