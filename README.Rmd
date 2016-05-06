@@ -15,12 +15,12 @@ knitr::opts_chunk$set(
 [![rstudio mirror downloads](http://cranlogs.r-pkg.org/badges/pangaear)](https://github.com/metacran/cranlogs.app)
 [![cran version](http://www.r-pkg.org/badges/version/pangaear)](https://cran.r-project.org/package=pangaear)
 
-An R client to interact with the [Pangaea database](http://www.pangaea.de/).
+An R client to interact with the [Pangaea database](https://www.pangaea.de/).
 
 ## Info
 
-* Pangaea [website](http://www.pangaea.de/).
-* Pangaea [OAI-PMH docs](http://wiki.pangaea.de/wiki/OAI-PMH).
+* Pangaea [website](https://www.pangaea.de/).
+* Pangaea [OAI-PMH docs](https://wiki.pangaea.de/wiki/OAI-PMH).
 * [OAI-PMH Spec](http://www.openarchives.org/OAI/openarchivesprotocol.html)
 
 ## Installation
@@ -47,20 +47,20 @@ library('pangaear')
 This is a thin wrapper around the GUI search interface on the page [http://www.pangaea.de/](http://www.pangaea.de/). Everything you can do there, you can do here.
 
 ```{r}
-pg_search(query='water', bbox=c(-124.2, 41.8, -116.8, 46.1), count=3)
+pg_search(query = 'water', bbox = c(-124.2, 41.8, -116.8, 46.1), count = 3)
 ```
 
 ## Get data
 
 ```{r}
-res <- pg_data(doi='10.1594/PANGAEA.807580')
+res <- pg_data(doi = '10.1594/PANGAEA.807580')
 res[[1]]
 ```
 
 Search for data then pass DOI to data function.
 
 ```{r}
-res <- pg_search(query='water', bbox=c(-124.2, 41.8, -116.8, 46.1), count=3)
+res <- pg_search(query = 'water', bbox = c(-124.2, 41.8, -116.8, 46.1), count = 3)
 pg_data(res$doi[3])
 ```
 
@@ -102,13 +102,13 @@ pg_list_records(from = '2015-09-01', until = '2015-09-10')
 pg_get_record(identifier = "oai:pangaea.de:doi:10.1594/PANGAEA.788382")
 ```
 
-## Contributors (alphabetical)
+## Contributors (reverse alphabetical)
 
-* Scott Chamberlain
-* Andrew MacDonald
-* Gavin Simpson
-* Kara Woo
 * Naupaka Zimmerman
+* Kara Woo
+* Gavin Simpson
+* Andrew MacDonald
+* Scott Chamberlain
 
 ## Meta
 

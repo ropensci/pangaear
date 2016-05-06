@@ -8,12 +8,12 @@ pangaear
 [![rstudio mirror downloads](http://cranlogs.r-pkg.org/badges/pangaear)](https://github.com/metacran/cranlogs.app)
 [![cran version](http://www.r-pkg.org/badges/version/pangaear)](https://cran.r-project.org/package=pangaear)
 
-An R client to interact with the [Pangaea database](http://www.pangaea.de/).
+An R client to interact with the [Pangaea database](https://www.pangaea.de/).
 
 ## Info
 
-* Pangaea [website](http://www.pangaea.de/).
-* Pangaea [OAI-PMH docs](http://wiki.pangaea.de/wiki/OAI-PMH).
+* Pangaea [website](https://www.pangaea.de/).
+* Pangaea [OAI-PMH docs](https://wiki.pangaea.de/wiki/OAI-PMH).
 * [OAI-PMH Spec](http://www.openarchives.org/OAI/openarchivesprotocol.html)
 
 ## Installation
@@ -44,14 +44,14 @@ This is a thin wrapper around the GUI search interface on the page [http://www.p
 
 
 ```r
-pg_search(query='water', bbox=c(-124.2, 41.8, -116.8, 46.1), count=3)
+pg_search(query = 'water', bbox = c(-124.2, 41.8, -116.8, 46.1), count = 3)
 #> Source: local data frame [3 x 5]
 #> 
-#>                                             doi score_per size_datasets
-#>                                           <chr>     <chr>         <chr>
-#> 1 https://doi.pangaea.de/10.1594/PANGAEA.736010      2.38             9
-#> 2 https://doi.pangaea.de/10.1594/PANGAEA.812094      2.24             2
-#> 3 https://doi.pangaea.de/10.1594/PANGAEA.803591      2.02             2
+#>                                             doi score size_datasets
+#>                                           <chr> <chr>         <chr>
+#> 1 https://doi.pangaea.de/10.1594/PANGAEA.736010  2.38             9
+#> 2 https://doi.pangaea.de/10.1594/PANGAEA.812094  2.24             2
+#> 3 https://doi.pangaea.de/10.1594/PANGAEA.803591  2.02             2
 #> Variables not shown: citation <chr>, supplement_to <chr>.
 ```
 
@@ -59,10 +59,13 @@ pg_search(query='water', bbox=c(-124.2, 41.8, -116.8, 46.1), count=3)
 
 
 ```r
-res <- pg_data(doi='10.1594/PANGAEA.807580')
+res <- pg_data(doi = '10.1594/PANGAEA.807580')
 res[[1]]
 #> <Pangaea data> 10.1594/PANGAEA.807580
+#> Source: local data frame [32,179 x 13]
+#> 
 #>                Event        Date/Time Latitude Longitude Elevation [m]
+#>                <chr>            <chr>    <dbl>     <dbl>         <int>
 #> 1  M36/6-CTD-365_003 1996-10-14T12:24  48.9667  -16.4633         -4802
 #> 2  M36/6-CTD-365_003 1996-10-14T12:24  48.9667  -16.4633         -4802
 #> 3  M36/6-CTD-365_003 1996-10-14T12:24  48.9667  -16.4633         -4802
@@ -74,18 +77,64 @@ res[[1]]
 #> 9  M36/6-CTD-365_003 1996-10-14T12:24  48.9667  -16.4633         -4802
 #> 10 M36/6-CTD-365_003 1996-10-14T12:24  48.9667  -16.4633         -4802
 #> ..               ...              ...      ...       ...           ...
-#> Variables not shown: Depth water [m] (dbl), Press [dbar] (int), Temp [°C]
-#>      (dbl), Sal (dbl), Tpot [°C] (dbl), Sigma-theta [kg/m**3] (dbl), Sigma
-#>      in situ [kg/m**3] (dbl), Cond [mS/cm] (dbl)
+#> Variables not shown: Depth water [m] <dbl>, Press [dbar] <int>, Temp [°C]
+#>   <dbl>, Sal <dbl>, Tpot [°C] <dbl>, Sigma-theta [kg/m**3] <dbl>, Sigma in
+#>   situ [kg/m**3] <dbl>, Cond [mS/cm] <dbl>.
 ```
 
 Search for data then pass DOI to data function.
 
 
 ```r
-res <- pg_search(query='water', bbox=c(-124.2, 41.8, -116.8, 46.1), count=3)
+res <- pg_search(query = 'water', bbox = c(-124.2, 41.8, -116.8, 46.1), count = 3)
 pg_data(res$doi[3])
-#> Error in pang_GET(bp = path, url = paste0(base(), x), doi = x, overwrite): Not Found (HTTP 404).
+#> [[1]]
+#> <Pangaea data> 10.1594/PANGAEA.803588
+#> Source: local data frame [24 x 21]
+#> 
+#>       Event Latitude Longitude Elevation [m]          Label   Samp type
+#>       <chr>    <dbl>     <dbl>         <int>          <chr>       <chr>
+#> 1  164-994A  31.7857  -75.5459         -2798 164-994A-30X-5    Gas tube
+#> 2  164-994A  31.7857  -75.5459         -2798 164-994A-31X-5    Gas tube
+#> 3  164-994C  31.7857  -75.5459         -2799 164-994C-31X-3    Free gas
+#> 4  164-994C  31.7857  -75.5459         -2799 164-994C-31X-7 Hydrate gas
+#> 5  164-996A  32.4939  -76.1909         -2170  164-996A-1H-1 Hydrate gas
+#> 6  164-996A  32.4939  -76.1909         -2170  164-996A-8H-3    Free gas
+#> 7  164-996A  32.4939  -76.1909         -2170  164-996A-8H-4 Hydrate gas
+#> 8  164-996A  32.4939  -76.1909         -2170  164-996A-8H-5    Free gas
+#> 9  164-996A  32.4939  -76.1909         -2170 164-996A-9H-CC Hydrate gas
+#> 10 164-996B  32.4939  -76.1909         -2173  164-996B-1H-1 Hydrate gas
+#> ..      ...      ...       ...           ...            ...         ...
+#> Variables not shown: Depth [m] <dbl>, V/V (gas/water) <int>, V/V
+#>   (gas/water, chlorinity corrected) <int>, cl [mmol/l] <int>, CH4 [%]
+#>   <dbl>, C2H6 [ppmv] <int>, C3H8 [ppmv] <dbl>, i-C4H10 [ppmv] <dbl>,
+#>   n-C4H10 [ppmv] <dbl>, CO2 [%] <dbl>, C1/(C2+C3) <int>, d13C CH4 [per mil
+#>   PDB] <dbl>, dD CH4 [per mil] <dbl>, d13C CO2 GH [per mil PDB] <dbl>, dD
+#>   H2O [per mil SMOW] <dbl>.
+#> 
+#> [[2]]
+#> <Pangaea data> 10.1594/PANGAEA.803590
+#> Source: local data frame [14 x 12]
+#> 
+#>          Event Latitude Longitude Elevation [m]                      Area
+#>          <chr>    <dbl>     <dbl>         <int>                     <chr>
+#> 1      76-533A  31.2600  -74.8698         -3191               Blake Ridge
+#> 2  84-565_Site   9.7282  -86.0907         -3099     Middle America Trench
+#> 3  84-568_Site  13.0722  -90.8000         -2010       Offshore Costa Rica
+#> 4  84-568_Site  13.0722  -90.8000         -2010       Offshore Costa Rica
+#> 5  84-570_Site  13.2853  -91.3928         -1698       Offshore Costa Rica
+#> 6  84-570_Site  13.2853  -91.3928         -1698       Offshore Costa Rica
+#> 7  84-570_Site  13.2853  -91.3928         -1698       Offshore Costa Rica
+#> 8  84-570_Site  13.2853  -91.3928         -1698       Offshore Costa Rica
+#> 9  84-570_Site  13.2853  -91.3928         -1698       Offshore Costa Rica
+#> 10    112-685A  -9.1130  -80.5835         -5093             Offshore Peru
+#> 11    112-688A -11.5377  -78.9428         -3827             Offshore Peru
+#> 12    112-688A -11.5377  -78.9428         -3827             Offshore Peru
+#> 13    146-892D  44.6740 -125.1190          -686 Cascadia, offshore Oregon
+#> 14    146-892D  44.6740 -125.1190          -686 Cascadia, offshore Oregon
+#> Variables not shown: Depth [m] <dbl>, Depth top [m] <int>, Depth bot [m]
+#>   <int>, V/V (gas/water; # = 24-42) <chr>, V/V (gas/water, chlorinity
+#>   correct...) <chr>, cl [mmol/l] <dbl>, Reference <chr>.
 ```
 
 ## OAI-PMH metadata
@@ -225,13 +274,13 @@ pg_get_record(identifier = "oai:pangaea.de:doi:10.1594/PANGAEA.788382")
 #>      (chr)
 ```
 
-## Contributors (alphabetical)
+## Contributors (reverse alphabetical)
 
-* Scott Chamberlain
-* Andrew MacDonald
-* Gavin Simpson
-* Kara Woo
 * Naupaka Zimmerman
+* Kara Woo
+* Gavin Simpson
+* Andrew MacDonald
+* Scott Chamberlain
 
 ## Meta
 
