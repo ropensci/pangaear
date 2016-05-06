@@ -61,7 +61,7 @@ pg_data <- function(doi, overwrite = TRUE, ...) {
   dois <- check_many(doi)
   invisible(lapply(dois, function(x) {
     if ( !is_pangaea(env$path, x) ) {
-      pang_GET(url = paste0(base(), x), doi = x, overwrite)
+      pang_GET(url = paste0(base(), x), doi = x, overwrite, ...)
     }
   }))
   out <- process_pg(dois)
@@ -72,7 +72,6 @@ pg_data <- function(doi, overwrite = TRUE, ...) {
 print.pangaea <- function(x, ...) {
   cat(sprintf("<Pangaea data> %s", x$doi), sep = "\n")
   print(x$data)
-  #print(as_data_frame(x$data))
 }
 
 print.meta <- function(x, ...){
@@ -83,13 +82,13 @@ print.citation <- function(x, ...){
   cat(x$citation, sep = "\n")
 }
 
-pang_GET <- function(url, doi, overwrite){
+pang_GET <- function(url, doi, overwrite, ...){
   dir.create(env$path, showWarnings = FALSE, recursive = TRUE)
   fname <- rdoi(doi)
   res <- httr::GET(url,
              query = list(format = "textfile", charset = "UTF-8"),
              httr::config(followlocation = TRUE),
-             httr::write_disk(file.path(env$path, fname), overwrite))
+             httr::write_disk(file.path(env$path, fname), overwrite), ...)
   httr::stop_for_status(res)
 }
 
