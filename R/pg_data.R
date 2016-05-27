@@ -116,7 +116,7 @@ is_pangaea <- function(x, doi){
 }
 
 get_meta <- function(x){
-  lns <- readLines(x, n = 300)
+  lns <- readLines(x, n = 1000)
   ln_no <- grep("\\*/", lns) - 1
   use <- lns[2:ln_no]
   structure(list(meta = use), class = "meta")
