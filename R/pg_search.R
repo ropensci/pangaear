@@ -50,7 +50,7 @@ parse_res <- function(x){
   citation <- xml_text(xml_find_all(x, './/p[@class="citation"]/a'))
   tab <- xml_find_all(x, './/table/tr')
   #supp <- xml_text(xml_find_all(tab[[1]], ".//td")[2])
-  supp <- xml_text(xml_find_one(xml_parent(xml_find_all(tab, ".//td[contains(.,'Supplement')]")), './/td[@class="content"]'))
+  supp <- xml_text(xml_find_first(xml_parent(xml_find_all(tab, ".//td[contains(.,'Supplement')]")), './/td[@class="content"]'))
   size <- strextract(xml_text(xml_find_all(xml_parent(xml_find_all(tab, ".//td[contains(.,'Size')]")), './/td[@class="content"]')), "[[:digit:]]+")
   #score <- strextract(strsplit(xml_text(xml_find_all(tab[[3]], ".//td")), "Score:")[[1]][2], "[[:digit:]]+\\.[[:digit:]]+")
   score <- strextract(strsplit(xml_text(xml_find_all(tab, './/td[@class="datasetid"]')), "Score:")[[1]][2], "[[:digit:]]+\\.[[:digit:]]+")

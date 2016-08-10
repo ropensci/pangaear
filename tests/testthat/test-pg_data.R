@@ -22,3 +22,9 @@ test_that("fails well", {
   expect_error(pg_data(), "\"doi\" is missing")
   expect_error(pg_data(5), "not of right form")
 })
+
+test_that("", {
+  skip_on_cran()
+
+  aa <- pg_data(doi = '10.1594/PANGAEA.804606')
+})

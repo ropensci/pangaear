@@ -19,16 +19,16 @@ test_that("pg_list_sets() works", {
   expect_is(aa$setName, "character")
 })
 
-test_that("pg_list_records() works", {
-  skip_on_cran()
-
-  aa <- pg_list_records(from='2015-09-01', until='2015-09-10')
-
-  expect_is(aa, "data.frame")
-  expect_is(aa, "oai_df")
-  expect_match(aa$identifier, "oai:pangaea.de")
-  expect_is(aa$title, "character")
-})
+# test_that("pg_list_records() works", {
+#   skip_on_cran()
+#
+#   aa <- pg_list_records(from='2015-09-01', until='2015-10-03', config=verbose())
+#
+#   expect_is(aa, "data.frame")
+#   expect_is(aa, "oai_df")
+#   expect_match(aa$identifier, "oai:pangaea.de")
+#   expect_is(aa$title, "character")
+# })
 
 test_that("pg_list_metadata_formats() works", {
   skip_on_cran()
@@ -40,15 +40,15 @@ test_that("pg_list_metadata_formats() works", {
   expect_true(any(grepl("oai_dc", aa$metadataPrefix)))
 })
 
-test_that("pg_list_identifiers() works", {
-  skip_on_cran()
-
-  aa <- pg_list_identifiers(from = '2015-09-01', until = '2015-09-05')
-
-  expect_is(aa, "data.frame")
-  expect_is(aa, "oai_df")
-  expect_match(aa$identifier, "oai:pangaea.de")
-})
+# test_that("pg_list_identifiers() works", {
+#   skip_on_cran()
+#
+#   aa <- pg_list_identifiers(from = '2015-09-01', until = '2015-10-05')
+#
+#   expect_is(aa, "data.frame")
+#   expect_is(aa, "oai_df")
+#   expect_match(aa$identifier, "oai:pangaea.de")
+# })
 
 test_that("pg_get_record() works", {
   skip_on_cran()

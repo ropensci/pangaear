@@ -1,4 +1,4 @@
-baseoai <- function() "http://ws.pangaea.de/oai/"
+baseoai <- function() "http://ws.pangaea.de/oai/provider"
 base <- function() 'https://doi.pangaea.de/'
 sbase <- function() "https://www.pangaea.de/search"
 
