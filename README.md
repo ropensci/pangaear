@@ -3,7 +3,7 @@ pangaear
 
 
 
-[![Build Status](https://api.travis-ci.org/ropensci/pangaear.png)](https://travis-ci.org/ropensci/pangaear)
+[![Build Status](https://travis-ci.org/ropensci/pangaear.svg?branch=master)](https://travis-ci.org/ropensci/pangaear)
 [![Build status](https://ci.appveyor.com/api/projects/status/564oioj2oyefax08?svg=true)](https://ci.appveyor.com/project/sckott/pangaear)
 [![codecov](https://codecov.io/gh/ropensci/pangaear/branch/master/graph/badge.svg)](https://codecov.io/gh/ropensci/pangaear)
 [![rstudio mirror downloads](http://cranlogs.r-pkg.org/badges/pangaear)](https://github.com/metacran/cranlogs.app)
@@ -46,14 +46,13 @@ This is a thin wrapper around the GUI search interface on the page [http://www.p
 
 ```r
 pg_search(query = 'water', bbox = c(-124.2, 41.8, -116.8, 46.1), count = 3)
-#> Source: local data frame [3 x 5]
-#> 
-#>                      doi score size_datasets
-#>                    <chr> <dbl>         <dbl>
-#> 1 10.1594/PANGAEA.736010  2.38             9
-#> 2 10.1594/PANGAEA.812094  2.24             2
-#> 3 10.1594/PANGAEA.803591  2.02             2
-#> Variables not shown: citation <chr>, supplement_to <chr>.
+#> # A tibble: 3 × 6
+#>      score                    doi  size size_measure
+#> *    <dbl>                  <chr> <dbl>        <chr>
+#> 1 2.429901 10.1594/PANGAEA.736010     9     datasets
+#> 2 2.367171 10.1594/PANGAEA.812094     2     datasets
+#> 3 2.093661 10.1594/PANGAEA.863080   171  data points
+#> # ... with 2 more variables: citation <chr>, supplement_to <chr>
 ```
 
 ## Get data
@@ -63,24 +62,23 @@ pg_search(query = 'water', bbox = c(-124.2, 41.8, -116.8, 46.1), count = 3)
 res <- pg_data(doi = '10.1594/PANGAEA.807580')
 res[[1]]
 #> <Pangaea data> 10.1594/PANGAEA.807580
-#> Source: local data frame [32,179 x 13]
-#> 
-#>                Event        Date/Time Latitude Longitude Elevation [m]
-#>                <chr>            <chr>    <dbl>     <dbl>         <int>
-#> 1  M36/6-CTD-365_003 1996-10-14T12:24  48.9667  -16.4633         -4802
-#> 2  M36/6-CTD-365_003 1996-10-14T12:24  48.9667  -16.4633         -4802
-#> 3  M36/6-CTD-365_003 1996-10-14T12:24  48.9667  -16.4633         -4802
-#> 4  M36/6-CTD-365_003 1996-10-14T12:24  48.9667  -16.4633         -4802
-#> 5  M36/6-CTD-365_003 1996-10-14T12:24  48.9667  -16.4633         -4802
-#> 6  M36/6-CTD-365_003 1996-10-14T12:24  48.9667  -16.4633         -4802
-#> 7  M36/6-CTD-365_003 1996-10-14T12:24  48.9667  -16.4633         -4802
-#> 8  M36/6-CTD-365_003 1996-10-14T12:24  48.9667  -16.4633         -4802
-#> 9  M36/6-CTD-365_003 1996-10-14T12:24  48.9667  -16.4633         -4802
-#> 10 M36/6-CTD-365_003 1996-10-14T12:24  48.9667  -16.4633         -4802
-#> ..               ...              ...      ...       ...           ...
-#> Variables not shown: Depth water [m] <dbl>, Press [dbar] <int>, Temp [°C]
-#>   <dbl>, Sal <dbl>, Tpot [°C] <dbl>, Sigma-theta [kg/m**3] <dbl>, Sigma in
-#>   situ [kg/m**3] <dbl>, Cond [mS/cm] <dbl>.
+#> # A tibble: 32,179 × 13
+#>                Event      `Date/Time` Latitude Longitude `Elevation [m]`
+#>                <chr>            <chr>    <dbl>     <dbl>           <int>
+#> 1  M36/6-CTD-365_003 1996-10-14T12:24  48.9667  -16.4633           -4802
+#> 2  M36/6-CTD-365_003 1996-10-14T12:24  48.9667  -16.4633           -4802
+#> 3  M36/6-CTD-365_003 1996-10-14T12:24  48.9667  -16.4633           -4802
+#> 4  M36/6-CTD-365_003 1996-10-14T12:24  48.9667  -16.4633           -4802
+#> 5  M36/6-CTD-365_003 1996-10-14T12:24  48.9667  -16.4633           -4802
+#> 6  M36/6-CTD-365_003 1996-10-14T12:24  48.9667  -16.4633           -4802
+#> 7  M36/6-CTD-365_003 1996-10-14T12:24  48.9667  -16.4633           -4802
+#> 8  M36/6-CTD-365_003 1996-10-14T12:24  48.9667  -16.4633           -4802
+#> 9  M36/6-CTD-365_003 1996-10-14T12:24  48.9667  -16.4633           -4802
+#> 10 M36/6-CTD-365_003 1996-10-14T12:24  48.9667  -16.4633           -4802
+#> # ... with 32,169 more rows, and 8 more variables: `Depth water
+#> #   [m]` <dbl>, `Press [dbar]` <int>, `Temp [°C]` <dbl>, Sal <dbl>, `Tpot
+#> #   [°C]` <dbl>, `Sigma-theta [kg/m**3]` <dbl>, `Sigma in situ
+#> #   [kg/m**3]` <dbl>, `Cond [mS/cm]` <dbl>
 ```
 
 Search for data then pass DOI to data function.
@@ -90,52 +88,32 @@ Search for data then pass DOI to data function.
 res <- pg_search(query = 'water', bbox = c(-124.2, 41.8, -116.8, 46.1), count = 3)
 pg_data(res$doi[3])
 #> [[1]]
-#> <Pangaea data> 10.1594/PANGAEA.803588
-#> Source: local data frame [24 x 21]
-#> 
-#>       Event Latitude Longitude Elevation [m]          Label   Samp type
-#>       <chr>    <dbl>     <dbl>         <int>          <chr>       <chr>
-#> 1  164-994A  31.7857  -75.5459         -2798 164-994A-30X-5    Gas tube
-#> 2  164-994A  31.7857  -75.5459         -2798 164-994A-31X-5    Gas tube
-#> 3  164-994C  31.7857  -75.5459         -2799 164-994C-31X-3    Free gas
-#> 4  164-994C  31.7857  -75.5459         -2799 164-994C-31X-7 Hydrate gas
-#> 5  164-996A  32.4939  -76.1909         -2170  164-996A-1H-1 Hydrate gas
-#> 6  164-996A  32.4939  -76.1909         -2170  164-996A-8H-3    Free gas
-#> 7  164-996A  32.4939  -76.1909         -2170  164-996A-8H-4 Hydrate gas
-#> 8  164-996A  32.4939  -76.1909         -2170  164-996A-8H-5    Free gas
-#> 9  164-996A  32.4939  -76.1909         -2170 164-996A-9H-CC Hydrate gas
-#> 10 164-996B  32.4939  -76.1909         -2173  164-996B-1H-1 Hydrate gas
-#> ..      ...      ...       ...           ...            ...         ...
-#> Variables not shown: Depth [m] <dbl>, V/V (gas/water) <int>, V/V
-#>   (gas/water, chlorinity corrected) <int>, cl [mmol/l] <int>, CH4 [%]
-#>   <dbl>, C2H6 [ppmv] <int>, C3H8 [ppmv] <dbl>, i-C4H10 [ppmv] <dbl>,
-#>   n-C4H10 [ppmv] <dbl>, CO2 [%] <dbl>, C1/(C2+C3) <int>, d13C CH4 [per mil
-#>   PDB] <dbl>, dD CH4 [per mil] <dbl>, d13C CO2 GH [per mil PDB] <dbl>, dD
-#>   H2O [per mil SMOW] <dbl>.
-#> 
-#> [[2]]
-#> <Pangaea data> 10.1594/PANGAEA.803590
-#> Source: local data frame [14 x 12]
-#> 
-#>          Event Latitude Longitude Elevation [m]                      Area
-#>          <chr>    <dbl>     <dbl>         <int>                     <chr>
-#> 1      76-533A  31.2600  -74.8698         -3191               Blake Ridge
-#> 2  84-565_Site   9.7282  -86.0907         -3099     Middle America Trench
-#> 3  84-568_Site  13.0722  -90.8000         -2010       Offshore Costa Rica
-#> 4  84-568_Site  13.0722  -90.8000         -2010       Offshore Costa Rica
-#> 5  84-570_Site  13.2853  -91.3928         -1698       Offshore Costa Rica
-#> 6  84-570_Site  13.2853  -91.3928         -1698       Offshore Costa Rica
-#> 7  84-570_Site  13.2853  -91.3928         -1698       Offshore Costa Rica
-#> 8  84-570_Site  13.2853  -91.3928         -1698       Offshore Costa Rica
-#> 9  84-570_Site  13.2853  -91.3928         -1698       Offshore Costa Rica
-#> 10    112-685A  -9.1130  -80.5835         -5093             Offshore Peru
-#> 11    112-688A -11.5377  -78.9428         -3827             Offshore Peru
-#> 12    112-688A -11.5377  -78.9428         -3827             Offshore Peru
-#> 13    146-892D  44.6740 -125.1190          -686 Cascadia, offshore Oregon
-#> 14    146-892D  44.6740 -125.1190          -686 Cascadia, offshore Oregon
-#> Variables not shown: Depth [m] <dbl>, Depth top [m] <int>, Depth bot [m]
-#>   <int>, V/V (gas/water; # = 24-42) <chr>, V/V (gas/water, chlorinity
-#>   correct...) <chr>, cl [mmol/l] <dbl>, Reference <chr>.
+#> <Pangaea data> 10.1594/PANGAEA.863080
+#> # A tibble: 19 × 15
+#>              Event Latitude Longitude `Elevation [m]`           Device
+#>              <chr>    <dbl>     <dbl>           <int>            <chr>
+#> 1          CHA-248  37.6833 -177.0667           -5304        Trawl net
+#> 2          CHA-252  37.8667 -160.2833           -4499             Grab
+#> 3          CHA-285 -32.6000 -137.7167           -3900             Grab
+#> 4          SJE-910  22.0003 -114.1000           -4000           Dredge
+#> 5           BAC-56  22.8367 -109.5583           -1700           Dredge
+#> 6        MV65-1-38  24.4003 -113.2667           -1950           Dredge
+#> 7        BLAKE-317  31.9500  -78.3097            -640           Dredge
+#> 8        BLAKE-317  31.9500  -78.3097            -640           Dredge
+#> 9      HUD67/19-54  39.0000  -60.9500           -1700           Dredge
+#> 10     HUD67/19-54  39.0000  -60.9500           -1700           Dredge
+#> 11           D4799  26.0670  -22.3670            2300           Dredge
+#> 12       MABAH-166   6.9167   67.1833           -4793 Monegasque Trawl
+#> 13       MABAH-166   6.9167   67.1833           -4793 Monegasque Trawl
+#> 14       MABAH-166   6.9167   67.1833           -4793 Monegasque Trawl
+#> 15     Loch_Fyne_B  55.8433   -5.3283            -190             Grab
+#> 16          JVIN_G  50.1033 -123.7933            -338           Dredge
+#> 17 Lake_LillaUlv_S  59.5821   17.5399               4
+#> 18    Noil_Tobee_M  -9.7672  124.5312             480
+#> 19       Saline_MO  39.2695  -93.2708             197
+#> # ... with 10 more variables: ID <chr>, Label <chr>, `Depth [m]` <int>,
+#> #   `Mn [%]` <dbl>, `Fe [%]` <dbl>, `Co [%]` <dbl>, `Ni [%]` <dbl>, `Cu
+#> #   [%]` <dbl>, `Sn [mg/kg]` <dbl>, Description <chr>
 ```
 
 ## OAI-PMH metadata
@@ -155,12 +133,7 @@ pg_identify()
 #>   deletedRecord: transient
 #>   granularity: YYYY-MM-DDThh:mm:ssZ
 #>   compression: gzip
-#>   description: 
-#> 
-#> oai
-#> pangaea.de
-#> :
-#> oai:pangaea.de:doi:10.1594/PANGAEA.999999
+#>   description: oaipangaea.de:oai:pangaea.de:doi:10.1594/PANGAEA.999999
 ```
 
 ### List metadata formats
@@ -188,22 +161,23 @@ pg_list_metadata_formats()
 
 
 ```r
-pg_list_identifiers(from = '2015-09-01', until = '2015-09-05')
-#> <ListRecords> 244 X 5 
-#> 
-#>                                   identifier            datestamp
-#> 1  oai:pangaea.de:doi:10.1594/PANGAEA.131638 2015-09-01T20:36:34Z
-#> 2  oai:pangaea.de:doi:10.1594/PANGAEA.183530 2015-09-01T20:37:49Z
-#> 3  oai:pangaea.de:doi:10.1594/PANGAEA.138509 2015-09-01T20:37:42Z
-#> 4  oai:pangaea.de:doi:10.1594/PANGAEA.354765 2015-09-01T20:35:30Z
-#> 5  oai:pangaea.de:doi:10.1594/PANGAEA.763664 2015-09-01T20:49:23Z
-#> 6   oai:pangaea.de:doi:10.1594/PANGAEA.66910 2015-09-01T20:37:00Z
-#> 7  oai:pangaea.de:doi:10.1594/PANGAEA.759867 2015-09-01T20:48:55Z
-#> 8  oai:pangaea.de:doi:10.1594/PANGAEA.183545 2015-09-01T20:37:51Z
-#> 9  oai:pangaea.de:doi:10.1594/PANGAEA.712451 2015-09-01T20:45:25Z
-#> 10 oai:pangaea.de:doi:10.1594/PANGAEA.788012 2015-09-01T08:22:36Z
-#> ..                                       ...                  ...
-#> Variables not shown: setSpec (chr), setSpec.1 (chr), setSpec.2 (chr)
+pg_list_identifiers(from = Sys.Date() - 2, until = Sys.Date())
+#> <ListRecords> 59065 X 7
+#>
+#>                                   identifier            datestamp setSpec
+#> 1  oai:pangaea.de:doi:10.1594/PANGAEA.111526 2016-10-04T08:35:04Z      NA
+#> 2  oai:pangaea.de:doi:10.1594/PANGAEA.111527 2016-10-04T08:35:04Z      NA
+#> 3  oai:pangaea.de:doi:10.1594/PANGAEA.111528 2016-10-04T08:35:05Z      NA
+#> 4  oai:pangaea.de:doi:10.1594/PANGAEA.111529 2016-10-04T08:35:05Z      NA
+#> 5  oai:pangaea.de:doi:10.1594/PANGAEA.111560 2016-10-04T08:35:12Z      NA
+#> 6  oai:pangaea.de:doi:10.1594/PANGAEA.111561 2016-10-04T08:35:13Z      NA
+#> 7  oai:pangaea.de:doi:10.1594/PANGAEA.111562 2016-10-04T08:35:13Z      NA
+#> 8  oai:pangaea.de:doi:10.1594/PANGAEA.111510 2016-10-04T08:35:00Z      NA
+#> 9  oai:pangaea.de:doi:10.1594/PANGAEA.111511 2016-10-04T08:35:01Z      NA
+#> 10 oai:pangaea.de:doi:10.1594/PANGAEA.111512 2016-10-04T08:35:01Z      NA
+#> ..                                       ...                  ...     ...
+#> Variables not shown: setSpec.1 (chr), setSpec.2 (chr), setSpec.3 (chr),
+#>      setSpec.4 (chr)
 ```
 
 ### List sets
@@ -211,8 +185,8 @@ pg_list_identifiers(from = '2015-09-01', until = '2015-09-05')
 
 ```r
 pg_list_sets()
-#> <ListSets> 233 X 2 
-#> 
+#> <ListSets> 236 X 2
+#>
 #>         setSpec
 #> 1    projectXXX
 #> 2     authorXXX
@@ -232,30 +206,28 @@ pg_list_sets()
 
 
 ```r
-pg_list_records(from = '2015-09-01', until = '2015-09-10')
-#> <ListRecords> 274 X 36 
-#> 
+pg_list_records(from = Sys.Date() - 1, until = Sys.Date())
+#> <ListRecords> 973 X 584
+#>
 #>                                   identifier            datestamp
-#> 1  oai:pangaea.de:doi:10.1594/PANGAEA.131638 2015-09-01T20:36:34Z
-#> 2  oai:pangaea.de:doi:10.1594/PANGAEA.183530 2015-09-01T20:37:49Z
-#> 3  oai:pangaea.de:doi:10.1594/PANGAEA.138509 2015-09-01T20:37:42Z
-#> 4   oai:pangaea.de:doi:10.1594/PANGAEA.57294 2015-09-08T08:26:51Z
-#> 5  oai:pangaea.de:doi:10.1594/PANGAEA.354765 2015-09-01T20:35:30Z
-#> 6  oai:pangaea.de:doi:10.1594/PANGAEA.763664 2015-09-01T20:49:23Z
-#> 7   oai:pangaea.de:doi:10.1594/PANGAEA.66910 2015-09-01T20:37:00Z
-#> 8  oai:pangaea.de:doi:10.1594/PANGAEA.759867 2015-09-01T20:48:55Z
-#> 9  oai:pangaea.de:doi:10.1594/PANGAEA.183545 2015-09-01T20:37:51Z
-#> 10 oai:pangaea.de:doi:10.1594/PANGAEA.712451 2015-09-01T20:45:25Z
+#> 1  oai:pangaea.de:doi:10.1594/PANGAEA.841123 2016-10-05T07:54:00Z
+#> 2  oai:pangaea.de:doi:10.1594/PANGAEA.841124 2016-10-05T07:54:00Z
+#> 3  oai:pangaea.de:doi:10.1594/PANGAEA.858057 2016-10-05T07:38:36Z
+#> 4  oai:pangaea.de:doi:10.1594/PANGAEA.864346 2016-10-05T06:15:52Z
+#> 5  oai:pangaea.de:doi:10.1594/PANGAEA.864352 2016-10-05T06:16:00Z
+#> 6  oai:pangaea.de:doi:10.1594/PANGAEA.864348 2016-10-05T06:15:54Z
+#> 7  oai:pangaea.de:doi:10.1594/PANGAEA.864351 2016-10-05T06:15:59Z
+#> 8  oai:pangaea.de:doi:10.1594/PANGAEA.836114 2016-10-05T08:29:21Z
+#> 9  oai:pangaea.de:doi:10.1594/PANGAEA.865195 2016-10-05T08:29:21Z
+#> 10 oai:pangaea.de:doi:10.1594/PANGAEA.861354 2016-10-05T08:24:54Z
 #> ..                                       ...                  ...
-#> Variables not shown: title (chr), creator (chr), publisher (chr), date
-#>      (chr), type (chr), format (chr), identifier.2 (chr), identifier.1
-#>      (chr), language (chr), rights (chr), rights.1 (chr), relation (chr),
-#>      coverage (chr), subject (chr), setSpec (chr), relation.1 (chr),
-#>      creator.1 (chr), creator.2 (chr), source (chr), setSpec.1 (chr),
-#>      setSpec.2 (chr), description (chr), creator.3 (chr), creator.4 (chr),
-#>      creator.5 (chr), creator.6 (chr), creator.7 (chr), creator.8 (chr),
-#>      creator.9 (chr), creator.10 (chr), source.1 (chr), relation.2 (chr),
-#>      relation.3 (chr), relation.4 (chr)
+#> Variables not shown: title (chr), creator (chr), source (chr), publisher
+#>      (chr), date (chr), type (chr), format (chr), identifier.2 (chr),
+#>      identifier.1 (chr), language (chr), rights (chr), rights.1 (chr),
+#>      relation (chr), relation.1 (chr), coverage (chr), subject (chr),
+#>      setSpec (chr), setSpec.1 (chr), creator.1 (chr), creator.2 (chr),
+#>      creator.3 (chr), description (chr), creator.4 (chr), creator.5 (chr),
+#>      creator.6 (chr), creator.7 (chr), setSpec.2 (chr), creator.8 (chr),
 ```
 
 ### Get a record
@@ -263,10 +235,10 @@ pg_list_records(from = '2015-09-01', until = '2015-09-10')
 
 ```r
 pg_get_record(identifier = "oai:pangaea.de:doi:10.1594/PANGAEA.788382")
-#> <GetRecord> 1 X 23 
-#> 
+#> <GetRecord> 1 X 23
+#>
 #>                                  identifier            datestamp setSpec
-#> 1 oai:pangaea.de:doi:10.1594/PANGAEA.788382 2015-04-12T02:47:43Z citable
+#> 1 oai:pangaea.de:doi:10.1594/PANGAEA.788382 2016-06-25T14:58:45Z citable
 #> Variables not shown: setSpec.1 (chr), setSpec.2 (chr), title (chr),
 #>      creator (chr), creator.1 (chr), creator.2 (chr), source (chr),
 #>      source.1 (chr), publisher (chr), date (chr), type (chr), format

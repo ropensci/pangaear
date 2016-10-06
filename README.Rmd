@@ -10,7 +10,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-[![Build Status](https://api.travis-ci.org/ropensci/pangaear.png)](https://travis-ci.org/ropensci/pangaear)
+[![Build Status](https://travis-ci.org/ropensci/pangaear.svg?branch=master)](https://travis-ci.org/ropensci/pangaear)
 [![Build status](https://ci.appveyor.com/api/projects/status/564oioj2oyefax08?svg=true)](https://ci.appveyor.com/project/sckott/pangaear)
 [![codecov](https://codecov.io/gh/ropensci/pangaear/branch/master/graph/badge.svg)](https://codecov.io/gh/ropensci/pangaear)
 [![rstudio mirror downloads](http://cranlogs.r-pkg.org/badges/pangaear)](https://github.com/metacran/cranlogs.app)
@@ -82,7 +82,7 @@ pg_list_metadata_formats()
 ### List identifiers
 
 ```{r}
-pg_list_identifiers(from = '2015-09-01', until = '2015-09-05')
+pg_list_identifiers(from = Sys.Date() - 2, until = Sys.Date())
 ```
 
 ### List sets
@@ -94,7 +94,7 @@ pg_list_sets()
 ### List records
 
 ```{r}
-pg_list_records(from = '2015-09-01', until = '2015-09-10')
+pg_list_records(from = Sys.Date() - 1, until = Sys.Date())
 ```
 
 ### Get a record

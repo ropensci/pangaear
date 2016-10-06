@@ -1,19 +1,21 @@
 #' Download data from Pangaea.
 #'
-#' Grabs data as a dataframe or list of dataframes from a Pangaea data repository URI; see:
-#' \url{https://www.pangaea.de/}.
+#' Grabs data as a dataframe or list of dataframes from a Pangaea data
+#' repository URI; see: \url{https://www.pangaea.de/}.
 #'
 #' @export
-#' @param doi DOI of Pangaeae single dataset, or of a collection of datasets. Expects
-#' either just a DOI of the form \code{10.1594/PANGAEA.746398}, or with the URL part
-#' in front, like \code{https://doi.pangaea.de/10.1594/PANGAEA.746398}
+#' @param doi DOI of Pangaeae single dataset, or of a collection of datasets.
+#' Expects either just a DOI of the form \code{10.1594/PANGAEA.746398}, or with
+#' the URL part in front, like
+#' \code{https://doi.pangaea.de/10.1594/PANGAEA.746398}
 #' @param overwrite (logical) Ovewrite a file if one is found with the same name
+#' @param verbose (logical) print information messages. Default: \code{TRUE}
 #' @param ... Curl options passed on to \code{\link[httr]{GET}}
-#' @param prompt (logical) Prompt before clearing all files in cache? No prompt used when DOIs
-#' assed in. Default: \code{TRUE}
-#' @return One or more items of class pangaea, each with a citation object, metadata object,
-#' and data object. Each data object is printed as a \code{tbl_df} object, but the
-#' actual object is simply a \code{data.frame}.
+#' @param prompt (logical) Prompt before clearing all files in cache? No prompt
+#' used when DOIs assed in. Default: \code{TRUE}
+#' @return One or more items of class pangaea, each with a citation object,
+#' metadata object, and data object. Each data object is printed as a
+#' \code{tbl_df} object, but the actual object is simply a \code{data.frame}.
 #' @author Naupaka Zimmerman
 #' @references \url{https://www.pangaea.de}
 #' @details Data files are stored in an operating system appropriate location.
@@ -32,7 +34,7 @@
 #' pg_data(doi='10.1594/PANGAEA.807584')
 #'
 #' # Many files
-#' res <- pg_data(doi='10.1594/PANGAEA.761032')
+#' (res <- pg_data(doi='10.1594/PANGAEA.761032'))
 #' res[[1]]
 #' res[[2]]
 #'
@@ -55,15 +57,25 @@
 #' pg_cache_list()
 #' pg_cache_clear(doi=c('10.1594/PANGAEA.746398','10.1594/PANGAEA.746400'))
 #' pg_cache_list()
+#'
+#' # search for datasets, then pass in DOIs
+#' res <- pg_search(query='water', count=20)
+#' pg_data(res$doi[1])
+#' pg_data(res$doi[2])
+#' pg_data(res$doi[3])
+#' pg_data(res$doi[4])
+#' pg_data(res$doi[5])
 #' }
 
-pg_data <- function(doi, overwrite = TRUE, ...) {
+pg_data <- function(doi, overwrite = TRUE, verbose = TRUE, ...) {
   dois <- check_many(doi)
+  if (verbose) message("Downloading ", length(dois), " datasets from ", doi)
   invisible(lapply(dois, function(x) {
     if ( !is_pangaea(env$path, x) ) {
       pang_GET(url = paste0(base(), x), doi = x, overwrite, ...)
     }
   }))
+  if (verbose) message("Processing ", length(dois), " files")
   out <- process_pg(dois)
   lapply(out, structure, class = "pangaea")
 }
@@ -86,7 +98,7 @@ pang_GET <- function(url, doi, overwrite, ...){
   dir.create(env$path, showWarnings = FALSE, recursive = TRUE)
   fname <- rdoi(doi)
   res <- httr::GET(url,
-             query = list(format = "textfile", charset = "UTF-8"),
+             query = list(format = "textfile"),
              httr::config(followlocation = TRUE),
              httr::write_disk(file.path(env$path, fname), overwrite), ...)
   httr::stop_for_status(res)
@@ -94,11 +106,15 @@ pang_GET <- function(url, doi, overwrite, ...){
 
 process_pg <- function(x){
   lapply(x, function(m){
-    list(doi = m,
-         citation = pg_citation(m),
-         meta = get_meta(file.path(env$path, rdoi(m))),
-         #data = read_csv(file.path(env$path, rdoi(m)))
-         data = as_data_frame(read_csv(file.path(env$path, rdoi(m))))
+    file <- file.path(env$path, rdoi(m))
+    list(
+      doi = m,
+      citation = pg_citation(m),
+      meta = get_meta(file),
+      data = {
+        dat <- read_csv(file)
+        as_data_frame(dat, validate = FALSE)
+      }
     )
   })
 }
@@ -122,18 +138,30 @@ get_meta <- function(x){
   structure(list(meta = use), class = "meta")
 }
 
-rdoi <- function(x) paste0(gsub("/|\\.", "_", x), ".txt")
+rdoi <- function(x, ext = ".txt") paste0(gsub("/|\\.", "_", x), ext)
 
 check_many <- function(x){
   res <- httr::GET(fix_doi(x))
-  if (!grepl("name=\"dslist\"", content(res, "text", encoding = "UTF-8"))) {
+  txt <- xml2::read_html(cuf8(res))
+  if (!grepl(
+    "zip",
+    xml_attr(xml_find_first(txt, "//meta[@name=\"DC.format\"]"), "content")
+  )) {
     x
   } else {
-    d <- gregexpr("<div class=\"MetaHeaderItem\"><a rel=\"follow\" href=\"(https://doi.pangaea.de/.*?)\">", res)
-    d <- unlist(regmatches(content(res, "text", encoding = "UTF-8"), d))
-    split_d <- strsplit(d, split = "\"")
-    vapply(split_d, function(x) sub("https://doi.pangaea.de/", "", x[grepl("doi",x)]), "")
+    gsub("https://doi.pangaea.de/", "", xml_attr(
+      xml_find_all(txt, ".//div[@class=\"MetaHeaderItem\"]//a[@rel=\"follow\"]"),
+      "href"
+    ))
   }
+  # if (!grepl("name=\"dslist\"", content(res, "text", encoding = "UTF-8"))) {
+  #   x
+  # } else {
+  #   d <- gregexpr("<div class=\"MetaHeaderItem\"><a rel=\"follow\" href=\"(https://doi.pangaea.de/.*?)\">", res)
+  #   d <- unlist(regmatches(content(res, "text", encoding = "UTF-8"), d))
+  #   split_d <- strsplit(d, split = "\"")
+  #   vapply(split_d, function(x) sub("https://doi.pangaea.de/", "", x[grepl("doi",x)]), "")
+  # }
 }
 
 fix_doi <- function(x) {

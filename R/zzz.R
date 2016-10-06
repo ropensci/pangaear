@@ -45,3 +45,5 @@ capwords <- function(s, strict = FALSE, onlyfirst = FALSE) {
             sep = "", collapse = " "), USE.NAMES = FALSE)
   }
 }
+
+cuf8 <- function(x) httr::content(x, "text", encoding = "UTF-8")

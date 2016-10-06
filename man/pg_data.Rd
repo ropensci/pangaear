@@ -10,28 +10,31 @@ pg_cache_clear(doi = NULL, prompt = TRUE)
 
 pg_cache_list()
 
-pg_data(doi, overwrite = TRUE, ...)
+pg_data(doi, overwrite = TRUE, verbose = TRUE, ...)
 }
 \arguments{
-\item{doi}{DOI of Pangaeae single dataset, or of a collection of datasets. Expects
-either just a DOI of the form \code{10.1594/PANGAEA.746398}, or with the URL part
-in front, like \code{https://doi.pangaea.de/10.1594/PANGAEA.746398}}
+\item{doi}{DOI of Pangaeae single dataset, or of a collection of datasets.
+Expects either just a DOI of the form \code{10.1594/PANGAEA.746398}, or with
+the URL part in front, like
+\code{https://doi.pangaea.de/10.1594/PANGAEA.746398}}
 
-\item{prompt}{(logical) Prompt before clearing all files in cache? No prompt used when DOIs
-assed in. Default: \code{TRUE}}
+\item{prompt}{(logical) Prompt before clearing all files in cache? No prompt
+used when DOIs assed in. Default: \code{TRUE}}
 
 \item{overwrite}{(logical) Ovewrite a file if one is found with the same name}
+
+\item{verbose}{(logical) print information messages. Default: \code{TRUE}}
 
 \item{...}{Curl options passed on to \code{\link[httr]{GET}}}
 }
 \value{
-One or more items of class pangaea, each with a citation object, metadata object,
-and data object. Each data object is printed as a \code{tbl_df} object, but the
-actual object is simply a \code{data.frame}.
+One or more items of class pangaea, each with a citation object,
+metadata object, and data object. Each data object is printed as a
+\code{tbl_df} object, but the actual object is simply a \code{data.frame}.
 }
 \description{
-Grabs data as a dataframe or list of dataframes from a Pangaea data repository URI; see:
-\url{https://www.pangaea.de/}.
+Grabs data as a dataframe or list of dataframes from a Pangaea data
+repository URI; see: \url{https://www.pangaea.de/}.
 }
 \details{
 Data files are stored in an operating system appropriate location.
@@ -52,7 +55,7 @@ res[[1]]$data
 pg_data(doi='10.1594/PANGAEA.807584')
 
 # Many files
-res <- pg_data(doi='10.1594/PANGAEA.761032')
+(res <- pg_data(doi='10.1594/PANGAEA.761032'))
 res[[1]]
 res[[2]]
 
@@ -75,6 +78,14 @@ lapply(c('10.1594/PANGAEA.746398','10.1594/PANGAEA.746400'), pg_data)
 pg_cache_list()
 pg_cache_clear(doi=c('10.1594/PANGAEA.746398','10.1594/PANGAEA.746400'))
 pg_cache_list()
+
+# search for datasets, then pass in DOIs
+res <- pg_search(query='water', count=20)
+pg_data(res$doi[1])
+pg_data(res$doi[2])
+pg_data(res$doi[3])
+pg_data(res$doi[4])
+pg_data(res$doi[5])
 }
 }
 \author{
