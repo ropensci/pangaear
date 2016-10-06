@@ -4,21 +4,26 @@
 \alias{pg_search}
 \title{Search the Pangaea database}
 \usage{
-pg_search(query, count = 10, env = "all", bbox = NULL, mindate = NULL,
+pg_search(query, count = 10, topic = NULL, bbox = NULL, mindate = NULL,
   maxdate = NULL, ...)
 }
 \arguments{
-\item{query}{(character) Query terms. You can refine a search by prefixing the term(s) with a
-category, one of citation, reference, parameter, event, project, campaign, or basis.
-See examples.}
+\item{query}{(character) Query terms. You can refine a search by prefixing
+the term(s) with a category, one of citation, reference, parameter, event,
+project, campaign, or basis. See examples.}
 
 \item{count}{(integer) Number of items to return.}
 
-\item{env}{(character) Type of data to search, one of "all", "sediment", "water", "ice", "atomosphere"}
+\item{topic}{(character) topic area: one of NULL (all areas), "Agriculture",
+"Atomosphere", "Biological Classification", "Biospshere", "Chemistry",
+"Cryosphere", "Ecology", "Fisheries", "Geophysics", "Human Dimensions",
+"Lakes & Rivers", "Land Surface", "Lithosphere", "Oceans", "Paleontology"}
 
-\item{bbox}{(numeric) A bounding box, of the form: minlon, minlat, maxlon, maxlat}
+\item{bbox}{(numeric) A bounding box, of the form: minlon, minlat, maxlon,
+maxlat}
 
-\item{mindate, maxdate}{(character) Dates to search for, of the form "2014-10-28"}
+\item{mindate, maxdate}{(character) Dates to search for, of the form
+"2014-10-28"}
 
 \item{...}{Curl options passed on to \code{\link[httr]{GET}}}
 }
@@ -37,11 +42,9 @@ This is a thin wrapper around the GUI search interface on the page
 pg_search(query='water')
 pg_search(query='water', count=2)
 pg_search(query='water', count=20)
-pg_search(query='water', env="water")
-pg_search(query='water', env="sediment")
 pg_search(query='water', mindate="2013-06-01", maxdate="2013-07-01")
 pg_search(query='water', bbox=c(-124.2, 41.8, -116.8, 46.1))
-pg_search(query='citation:Archer')
+pg_search(query='citation:Archer', config=verbose())
 pg_search(query='reference:Archer')
 pg_search(query='parameter:"carbon dioxide"')
 pg_search(query='event:M2-track')
@@ -49,6 +52,13 @@ pg_search(query='event:TT011_2-CTD31')
 pg_search(query='project:Joint Global Ocean Flux Study')
 pg_search(query='campaign:M2')
 pg_search(query='basis:Meteor')
+
+# get attributes: maxScore, totalCount, and offset
+res <- pg_search(query='water', bbox=c(-124.2, 41.8, -116.8, 46.1))
+attributes(res)
+attr(res, "maxScore")
+attr(res, "totalCount")
+attr(res, "offset")
 }
 }
 
