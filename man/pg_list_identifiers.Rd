@@ -8,21 +8,22 @@ pg_list_identifiers(prefix = "oai_dc", from = NULL, until = NULL,
   set = NULL, token = NULL, as = "df", ...)
 }
 \arguments{
-\item{prefix}{A character string to specify the metadata format in OAI-PMH requests issued to
-the repository. The default (\code{"oai_dc"}) corresponds to the mandatory OAI unqualified
-Dublin Core metadata schema.}
+\item{prefix}{A character string to specify the metadata format in OAI-PMH
+requests issued to the repository. The default (\code{"oai_dc"}) corresponds
+to the mandatory OAI unqualified Dublin Core metadata schema.}
 
-\item{from}{Character string giving datestamp to be used as lower bound for datestamp-based
-selective harvesting (i.e., only harvest records with datestamps in the given range). Dates
-and times must be encoded using ISO 8601. The trailing Z must be used when including time.
-OAI-PMH implies UTC for data/time specifications.}
+\item{from}{Character string giving datestamp to be used as lower bound for
+datestamp-based selective harvesting (i.e., only harvest records with
+datestamps in the given range). Dates and times must be encoded using
+ISO 8601. The trailing Z must be used when including time. OAI-PMH implies
+UTC for data/time specifications.}
 
-\item{until}{Character string giving a datestamp to be used as an upper bound,
-for datestamp-based selective harvesting (i.e., only harvest records with datestamps in
-the given range).}
+\item{until}{Character string giving a datestamp to be used as an upper
+bound, for datestamp-based selective harvesting (i.e., only harvest records
+with datestamps in the given range).}
 
-\item{set}{A character string giving a set to be used for selective harvesting (i.e., only
-harvest records in the given set).}
+\item{set}{A character string giving a set to be used for selective
+harvesting (i.e., only harvest records in the given set).}
 
 \item{token}{(character) a token previously provided by the server to resume a
 request where it last left off. 50 is max number of records returned. We will
@@ -42,13 +43,10 @@ List identifiers of the Pangaea repository
 }
 \examples{
 \dontrun{
-pg_list_identifiers(from='2015-09-01', until='2015-09-05')
-pg_list_identifiers(set="geocode1", from='2015-09-01', until='2015-09-05')
-pg_list_identifiers(prefix="iso19139", from='2015-09-01', until='2015-09-20')
-pg_list_identifiers(prefix="dif", from='2015-09-01', until='2015-09-20')
-
-library('httr')
-pg_list_identifiers(prefix="dif", from='2015-09-01', until='2015-09-05', config=verbose())
+pg_list_identifiers(from=Sys.Date()-1, until=Sys.Date())
+pg_list_identifiers(set="geocode1", from=Sys.Date()-1, until=Sys.Date())
+pg_list_identifiers(prefix="iso19139", from=Sys.Date()-1, until=Sys.Date())
+pg_list_identifiers(prefix="dif", from=Sys.Date()-1, until=Sys.Date())
 }
 }
 

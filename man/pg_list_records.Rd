@@ -8,25 +8,27 @@ pg_list_records(prefix = "oai_dc", from = NULL, until = NULL,
   set = NULL, token = NULL, as = "df", ...)
 }
 \arguments{
-\item{prefix}{A character string to specify the metadata format in OAI-PMH requests issued to
-the repository. The default (\code{"oai_dc"}) corresponds to the mandatory OAI unqualified
-Dublin Core metadata schema.}
+\item{prefix}{A character string to specify the metadata format in OAI-PMH
+requests issued to the repository. The default (\code{"oai_dc"}) corresponds
+to the mandatory OAI unqualified Dublin Core metadata schema.}
 
-\item{from}{Character string giving datestamp to be used as lower bound for datestamp-based
-selective harvesting (i.e., only harvest records with datestamps in the given range). Dates
-and times must be encoded using ISO 8601. The trailing Z must be used when including time.
-OAI-PMH implies UTC for data/time specifications.}
+\item{from}{Character string giving datestamp to be used as lower bound for
+datestamp-based selective harvesting (i.e., only harvest records with
+datestamps in the given range). Dates and times must be encoded using
+ISO 8601. The trailing Z must be used when including time. OAI-PMH implies
+UTC for data/time specifications.}
 
-\item{until}{Character string giving a datestamp to be used as an upper bound,
-for datestamp-based selective harvesting (i.e., only harvest records with datestamps in
-the given range).}
+\item{until}{Character string giving a datestamp to be used as an upper
+bound, for datestamp-based selective harvesting (i.e., only harvest records
+with datestamps in the given range).}
 
-\item{set}{A character string giving a set to be used for selective harvesting (i.e., only
-harvest records in the given set).}
+\item{set}{A character string giving a set to be used for selective
+harvesting (i.e., only harvest records in the given set).}
 
-\item{token}{(character) a token previously provided by the server to resume a
-request where it last left off. 50 is max number of records returned. We will
-loop for you internally to get all the records you asked for.}
+\item{token}{(character) a token previously provided by the server to
+resume a request where it last left off. 50 is max number of records
+returned. We will loop for you internally to get all the records you
+asked for.}
 
 \item{as}{(character) What to return. One of "df" (for data.frame; default),
 "list", or "raw" (raw text)}
@@ -34,27 +36,29 @@ loop for you internally to get all the records you asked for.}
 \item{...}{Curl debugging options passed on to \code{\link[httr]{GET}}}
 }
 \value{
-XML character string, data.frame, or list, depending on what requested
-witht the \code{as} parameter
+XML character string, data.frame, or list, depending on what
+requested witht the \code{as} parameter
 }
 \description{
 List records from Pangaea
 }
 \examples{
 \dontrun{
-pg_list_records(from='2015-09-01', until='2015-09-10')
-pg_list_records(set='geomound', from='2015-01-01', until='2015-01-05')
+pg_list_records(set='geomound', from=Sys.Date()-10, until=Sys.Date())
 
 # When no results found > "'noRecordsMatch'"
 # pg_list_records(set='geomound', from='2015-01-01', until='2015-01-01')
 
 # More examples
-pg_list_records(set='citable', from='2015-10-01', until='2015-10-02')
+pg_list_records(set='citable', from=Sys.Date()-1, until=Sys.Date())
 
-pg_list_records(prefix="iso19139", set='citable', from='2015-10-01', until='2015-10-02')
+pg_list_records(prefix="iso19139", set='citable', from=Sys.Date()-1,
+  until=Sys.Date())
 ## FIXME - below are broken
-# pg_list_records(prefix="dif", set='citable', from='2015-01-01', until='2015-01-05')
-# pg_list_records(prefix="dif", set='project4094', from='2015-01-01', until='2015-01-05')
+# pg_list_records(prefix="dif", set='citable', from=Sys.Date()-4,
+#   until=Sys.Date())
+# pg_list_records(prefix="dif", set='project4094', from=Sys.Date()-4,
+#   until=Sys.Date())
 }
 }
 
