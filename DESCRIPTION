@@ -1,8 +1,9 @@
 Package: pangaear
 Title: Client for the 'Pangaea' Database
-Description: Tools to interact with the 'Pangaea' Database (<https://
-    www.pangaea.de>), including functions for searching for data, fetching 'datasets'
-    by 'dataset' 'ID', and working with the 'Pangaea' 'OAI-PMH' service.
+Description: Tools to interact with the 'Pangaea' Database 
+    (<https://www.pangaea.de>), including functions for searching for data, 
+    fetching 'datasets' by 'dataset' 'ID', and working with the 'Pangaea' 
+    'OAI-PMH' service.
 Version: 0.2.4.9000
 Authors@R: c(person("Scott", "Chamberlain",
 		email = "myrmecocystus@gmail.com", role = c("aut","cre")),
