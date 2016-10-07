@@ -154,14 +154,6 @@ check_many <- function(x){
       "href"
     ))
   }
-  # if (!grepl("name=\"dslist\"", content(res, "text", encoding = "UTF-8"))) {
-  #   x
-  # } else {
-  #   d <- gregexpr("<div class=\"MetaHeaderItem\"><a rel=\"follow\" href=\"(https://doi.pangaea.de/.*?)\">", res)
-  #   d <- unlist(regmatches(content(res, "text", encoding = "UTF-8"), d))
-  #   split_d <- strsplit(d, split = "\"")
-  #   vapply(split_d, function(x) sub("https://doi.pangaea.de/", "", x[grepl("doi",x)]), "")
-  # }
 }
 
 fix_doi <- function(x) {

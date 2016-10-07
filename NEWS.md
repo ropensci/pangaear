@@ -1,3 +1,22 @@
+pangaear 0.2.4
+==============
+
+## MINOR IMPROVEMENTS
+
+* Improved examples in the OAI methods to make sure they work 
+regardless of when the user runs them
+
+## BUG FIXES
+
+* Fixes to `pg_search()` needed due to changes in the Pangaea 
+website. Nearly identical functionality, but one parameter switch
+(`env` param is now `topic`). More parameters may be added in the 
+future. New fields are added to output, added to docs for the 
+function. (#50)
+* Fixes to `pg_data()` needed due to changes in the Pangaea 
+website. Nothing should be different for the user. (#51)
+
+
 pangaear 0.2.0
 ==============
 

@@ -1,9 +1,26 @@
-R CMD CHECK passed on my local OS X install with R 3.3.0 and
-R development version, Ubuntu running on Travis-CI, and Windows
-on Win-Builder.
+## Test environments
 
-This submission fixes a bug, improves internal handling,
-and adds a test suite.
+* local OS X install, R 3.3.1
+* ubuntu 12.04 (on travis-ci), R 3.3.1
+* win-builder (devel and release)
 
-Thanks!
-Scott Chamberlain
+## R CMD check results
+
+0 errors | 0 warnings | 1 note
+
+   License components with restrictions and base license permitting such:
+     MIT + file LICENSE
+   File 'LICENSE':
+     YEAR: 2016
+     COPYRIGHT HOLDER: Scott Chamberlai
+
+## Reverse dependencies
+
+There are no reverse dependencies.
+
+---
+
+This release includes bug fixes due to website changes in the 
+data source.
+
+Thanks. Scott Chamberlain

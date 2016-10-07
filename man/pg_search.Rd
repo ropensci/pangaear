@@ -28,7 +28,16 @@ maxlat}
 \item{...}{Curl options passed on to \code{\link[httr]{GET}}}
 }
 \value{
-data.frame
+tibble/data.frame with the structure:
+\itemize{
+ \item score - match score, higher is a better match
+ \item doi - the DOI for the data package
+ \item size - size number
+ \item size_measure - size measure, one of "data points" or "datasets"
+ \item citation - citation for the data package
+ \item supplement_to - citation for what the data package is a
+ supplement to
+}
 }
 \description{
 Search the Pangaea database
