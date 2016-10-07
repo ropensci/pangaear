@@ -12,7 +12,7 @@ regardless of when the user runs them
 website. Nearly identical functionality, but one parameter switch
 (`env` param is now `topic`). More parameters may be added in the 
 future. New fields are added to output, added to docs for the 
-function. (#50)
+function. Now importing `jsonlite` as a result of these changes (#50)
 * Fixes to `pg_data()` needed due to changes in the Pangaea 
 website. Nothing should be different for the user. (#51)
 
