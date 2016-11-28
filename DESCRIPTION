@@ -22,7 +22,7 @@ Imports:
     jsonlite (>= 1.1),
     rappdirs (>= 0.3.1),
     xml2 (>= 1.0.0),
-    oai (>= 0.2.0),
+    oai (>= 0.2.2),
     tibble (>= 1.1)
 Suggests:
     roxygen2 (>= 5.0.1),
