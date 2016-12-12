@@ -22,6 +22,7 @@ print.pg_identify <- function(x, ...){
   cat("  earliestDatestamp: ", x$earliestDatestamp, "\n", sep = "")
   cat("  deletedRecord: ", x$deletedRecord, "\n", sep = "")
   cat("  granularity: ", x$granularity, "\n", sep = "")
-  cat("  compression: ", paste0(x[ names(x) %in% "compression" ], collapse = ","), "\n", sep = "")
+  cat("  compression: ", paste0(x[ names(x) %in% "compression" ],
+                                collapse = ","), "\n", sep = "")
   cat("  description: ", x$description, "\n", sep = "")
 }

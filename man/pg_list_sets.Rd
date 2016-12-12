@@ -7,9 +7,10 @@
 pg_list_sets(token = NULL, as = "df", ...)
 }
 \arguments{
-\item{token}{(character) a token previously provided by the server to resume a
-request where it last left off. 50 is max number of records returned. We will
-loop for you internally to get all the records you asked for.}
+\item{token}{(character) a token previously provided by the server to
+resume a request where it last left off. 50 is max number of records
+returned. We will loop for you internally to get all the records you
+asked for.}
 
 \item{as}{(character) What to return. One of "df" (for data.frame; default),
 "list", or "raw" (raw text)}
@@ -17,8 +18,8 @@ loop for you internally to get all the records you asked for.}
 \item{...}{Curl debugging options passed on to \code{\link[httr]{GET}}}
 }
 \value{
-XML character string, data.frame, or list, depending on what requested
-witht the \code{as} parameter
+XML character string, data.frame, or list, depending on what
+requested with the \code{as} parameter
 }
 \description{
 List the set structure of the Pangaea repository

@@ -161,7 +161,10 @@ fix_doi <- function(x) {
     x
   } else {
     # make sure doi is cleaned up before making a url
-    if (!grepl("^10.1594", x)) stop(x, " not of right form, expecting a DOI, see pg_data help file", call. = FALSE)
+    if (!grepl("^10.1594", x)) {
+      stop(x, " not of right form, expecting a DOI, see pg_data help file",
+           call. = FALSE)
+    }
     paste0(base(), x)
   }
 }
