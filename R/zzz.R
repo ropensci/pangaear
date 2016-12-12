@@ -22,10 +22,10 @@ check <- function(x){
 read_csv <- function(x){
   lns <- readLines(x, n = 1000)
   ln_no <- grep("\\*/", lns)
-  tmp <- read.csv(x, header = FALSE, sep = "\t",
+  tmp <- utils::read.csv(x, header = FALSE, sep = "\t",
                   skip = ln_no + 1, stringsAsFactors = FALSE)
   nn <- strsplit(lns[ln_no + 1], "\t")[[1]]
-  setNames(tmp, nn)
+  stats::setNames(tmp, nn)
 }
 
 ifn <- function(x) if (is.null(x)) NA else x

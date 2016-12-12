@@ -53,7 +53,6 @@ pg_search(query='water', count=2)
 pg_search(query='water', count=20)
 pg_search(query='water', mindate="2013-06-01", maxdate="2013-07-01")
 pg_search(query='water', bbox=c(-124.2, 41.8, -116.8, 46.1))
-pg_search(query='citation:Archer', config=verbose())
 pg_search(query='reference:Archer')
 pg_search(query='parameter:"carbon dioxide"')
 pg_search(query='event:M2-track')
@@ -68,6 +67,10 @@ attributes(res)
 attr(res, "maxScore")
 attr(res, "totalCount")
 attr(res, "offset")
+
+# curl options
+library(httr)
+pg_search(query='citation:Archer', config = verbose())
 }
 }
 

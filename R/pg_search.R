@@ -32,7 +32,6 @@
 #' pg_search(query='water', count=20)
 #' pg_search(query='water', mindate="2013-06-01", maxdate="2013-07-01")
 #' pg_search(query='water', bbox=c(-124.2, 41.8, -116.8, 46.1))
-#' pg_search(query='citation:Archer', config=verbose())
 #' pg_search(query='reference:Archer')
 #' pg_search(query='parameter:"carbon dioxide"')
 #' pg_search(query='event:M2-track')
@@ -47,6 +46,10 @@
 #' attr(res, "maxScore")
 #' attr(res, "totalCount")
 #' attr(res, "offset")
+#'
+#' # curl options
+#' library(httr)
+#' pg_search(query='citation:Archer', config = verbose())
 #' }
 
 pg_search <- function(query, count = 10, topic = NULL, bbox = NULL,
@@ -65,7 +68,7 @@ pg_search <- function(query, count = 10, topic = NULL, bbox = NULL,
   args <- pgc(list(t = topic, count = count, q = query, mindate = mindate,
                    maxdate = maxdate))
   if (!is.null(bbox)) args <- c(
-    args, as.list(setNames(bbox, c('minlon', 'minlat', 'maxlon', 'maxlat'))))
+    args, as.list(stats::setNames(bbox, c('minlon', 'minlat', 'maxlon', 'maxlat'))))
   res <- GET(sbase(), query = args, ...)
   stop_for_status(res)
   results <- jsonlite::fromJSON(content(res, "text", encoding = "UTF-8"), FALSE)
