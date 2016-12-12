@@ -44,16 +44,14 @@ List records from Pangaea
 }
 \examples{
 \dontrun{
-pg_list_records(set='geomound', from=Sys.Date()-10, until=Sys.Date())
+pg_list_records(set='citable', from=Sys.Date()-1, until=Sys.Date())
 
 # When no results found > "'noRecordsMatch'"
 # pg_list_records(set='geomound', from='2015-01-01', until='2015-01-01')
 
-# More examples
-pg_list_records(set='citable', from=Sys.Date()-1, until=Sys.Date())
-
 pg_list_records(prefix="iso19139", set='citable', from=Sys.Date()-1,
   until=Sys.Date())
+
 ## FIXME - below are broken
 # pg_list_records(prefix="dif", set='citable', from=Sys.Date()-4,
 #   until=Sys.Date())
