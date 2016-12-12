@@ -5,9 +5,7 @@ cache: packages
 after_success:
  - Rscript -e 'covr::codecov()'
 
-env:
-  global:
-    - R_CHECK_ARGS="--run-dontrun --as-cran"
+r_check_args: "--as-cran --run-dontrun"
 
 notifications:
   email:
