@@ -73,4 +73,7 @@ library(httr)
 pg_search(query='citation:Archer', config = verbose())
 }
 }
+\seealso{
+\code{\link{pg_search_es}}
+}
 

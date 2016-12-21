@@ -26,6 +26,7 @@
 #' }
 #' @details This is a thin wrapper around the GUI search interface on the page
 #' \url{https://www.pangaea.de}. Everything you can do there, you can do here.
+#' @seealso \code{\link{pg_search_es}}
 #' @examples \dontrun{
 #' pg_search(query='water')
 #' pg_search(query='water', count=2)

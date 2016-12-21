@@ -1,6 +1,7 @@
 baseoai <- function() "https://ws.pangaea.de/oai/provider"
 base <- function() 'https://doi.pangaea.de/'
 sbase <- function() "https://www.pangaea.de/advanced/search.php"
+esbase <- function() "https://ws.pangaea.de/es/pangaea/panmd/_search"
 
 pgc <- function(x) Filter(Negate(is.null), x)
 
@@ -47,3 +48,28 @@ capwords <- function(s, strict = FALSE, onlyfirst = FALSE) {
 }
 
 cuf8 <- function(x) httr::content(x, "text", encoding = "UTF-8")
+
+cl <- function(x) if (is.null(x)) NULL else paste0(x, collapse = ",")
+
+cn <- function(x) {
+  name <- substitute(x)
+  if (!is.null(x)) {
+    tryx <- tryCatch(as.numeric(as.character(x)), warning = function(e) e)
+    if ("warning" %in% class(tryx)) {
+      stop(name, " should be a numeric or integer class value", call. = FALSE)
+    }
+    if (!is(tryx, "numeric") | is.na(tryx))
+      stop(name, " should be a numeric or integer class value", call. = FALSE)
+    return( format(x, digits = 22, scientific = FALSE) )
+  } else {
+    NULL
+  }
+}
+
+as_log <- function(x) {
+  if (is.null(x)) {
+    x
+  } else {
+    if (x) 'true' else 'false'
+  }
+}
