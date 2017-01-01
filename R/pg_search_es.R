@@ -19,12 +19,6 @@
 #' \code{AND} or \code{OR}. Default: \code{OR}
 #' @param explain (logical) For each hit, contain an explanation of how
 #' scoring of the hits was computed. Default: \code{FALSE}
-#' @param source (logical) Set to \code{FALSE} to disable retrieval of the
-#' \code{_source} field. You can also retrieve part of the document by
-#' using \code{_source_include} & \code{_source_exclude} (see the \code{body}
-#' documentation for more details). You can also include a comma-delimited
-#' string of fields from the source document  that you want back. See also
-#' the \strong{fields} parameter
 #' @param sort (character) Sorting to perform. Can either be in the form of
 #' fieldName, or \code{fieldName:asc}/\code{fieldName:desc}. The fieldName
 #' can either be an actual field within the document, or the special

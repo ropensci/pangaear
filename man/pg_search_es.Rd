@@ -72,13 +72,6 @@ analyzed or not. Default: \code{FALSE}.}
 \item{version}{(logical) Print the document version with each document.}
 
 \item{...}{Curl options passed on to \code{\link[httr]{GET}}}
-
-\item{source}{(logical) Set to \code{FALSE} to disable retrieval of the
-\code{_source} field. You can also retrieve part of the document by
-using \code{_source_include} & \code{_source_exclude} (see the \code{body}
-documentation for more details). You can also include a comma-delimited
-string of fields from the source document  that you want back. See also
-the \strong{fields} parameter}
 }
 \value{
 tibble/data.frame, empty if no results
