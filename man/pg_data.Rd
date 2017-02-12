@@ -85,7 +85,6 @@ pg_data(res$doi[1])
 pg_data(res$doi[2])
 pg_data(res$doi[3])
 pg_data(res$doi[4])
-pg_data(res$doi[5])
 }
 }
 \author{

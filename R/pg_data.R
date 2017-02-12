@@ -64,7 +64,6 @@
 #' pg_data(res$doi[2])
 #' pg_data(res$doi[3])
 #' pg_data(res$doi[4])
-#' pg_data(res$doi[5])
 #' }
 
 pg_data <- function(doi, overwrite = TRUE, verbose = TRUE, ...) {
