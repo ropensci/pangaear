@@ -8,7 +8,9 @@
 #' "Atomosphere", "Biological Classification", "Biospshere", "Chemistry",
 #' "Cryosphere", "Ecology", "Fisheries", "Geophysics", "Human Dimensions",
 #' "Lakes & Rivers", "Land Surface", "Lithosphere", "Oceans", "Paleontology"
-#' @param count (integer) Number of items to return.
+#' @param count (integer) Number of items to return. Default: 10. Maximum: 500.
+#' Use \code{offset} parameter to page through results - see examples
+#' @param offset (integer) Record number to start at. Default: 0
 #' @param bbox  (numeric) A bounding box, of the form: minlon, minlat, maxlon,
 #' maxlat
 #' @param mindate,maxdate (character) Dates to search for, of the form
@@ -41,6 +43,13 @@
 #' pg_search(query='campaign:M2')
 #' pg_search(query='basis:Meteor')
 #'
+#' # paging with count and offset
+#' # max is 500 records per request - if you need > 500, use offset and count
+#' res1 <- pg_search(query = "florisphaera", count = 500, offset = 1000)
+#' res2 <- pg_search(query = "florisphaera", count = 500, offset = 1000)
+#' res3 <- pg_search(query = "florisphaera", count = 500, offset = 1000)
+#' do.call("rbind.data.frame", list(res1, res2, res3))
+#'
 #' # get attributes: maxScore, totalCount, and offset
 #' res <- pg_search(query='water', bbox=c(-124.2, 41.8, -116.8, 46.1))
 #' attributes(res)
@@ -53,7 +62,7 @@
 #' pg_search(query='citation:Archer', config = verbose())
 #' }
 
-pg_search <- function(query, count = 10, topic = NULL, bbox = NULL,
+pg_search <- function(query, count = 10, offset = 0, topic = NULL, bbox = NULL,
                       mindate = NULL, maxdate = NULL, ...) {
   calls <- names(sapply(match.call(), deparse))[-1]
   calls_vec <- "env" %in% calls
@@ -66,8 +75,8 @@ pg_search <- function(query, count = 10, topic = NULL, bbox = NULL,
   check_if(topic, "character")
   check_if(mindate, "character")
   check_if(maxdate, "character")
-  args <- pgc(list(t = topic, count = count, q = query, mindate = mindate,
-                   maxdate = maxdate))
+  args <- pgc(list(t = topic, count = count, offset = offset, q = query,
+                   mindate = mindate, maxdate = maxdate))
   if (!is.null(bbox)) args <- c(
     args, as.list(stats::setNames(bbox, c('minlon', 'minlat', 'maxlon', 'maxlat'))))
   res <- GET(sbase(), query = args, ...)
