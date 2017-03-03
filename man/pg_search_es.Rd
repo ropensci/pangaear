@@ -105,4 +105,3 @@ pg_search_es(query = 'water', sort = "minElevation:desc")
 \seealso{
 \code{\link{pg_search}}
 }
-

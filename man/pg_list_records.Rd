@@ -59,4 +59,3 @@ pg_list_records(prefix="iso19139", set='citable', from=Sys.Date()-1,
 #   until=Sys.Date())
 }
 }
-

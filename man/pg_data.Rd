@@ -87,10 +87,9 @@ pg_data(res$doi[3])
 pg_data(res$doi[4])
 }
 }
-\author{
-Naupaka Zimmerman
-}
 \references{
 \url{https://www.pangaea.de}
 }
-
+\author{
+Naupaka Zimmerman
+}

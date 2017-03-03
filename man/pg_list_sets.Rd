@@ -33,4 +33,3 @@ library('httr')
 res <- pg_list_sets(config = verbose())
 }
 }
-

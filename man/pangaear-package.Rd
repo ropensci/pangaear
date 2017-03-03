@@ -2,10 +2,9 @@
 % Please edit documentation in R/pangaear-package.R
 \docType{package}
 \name{pangaear-package}
-\alias{pangaear}
 \alias{pangaear-package}
+\alias{pangaear}
 \title{Client for the Pangaea Database}
 \description{
 Client for the Pangaea Database
 }
-

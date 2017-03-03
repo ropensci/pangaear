@@ -20,4 +20,3 @@ Get metadata formats from the Pangaea repository
 pg_list_metadata_formats()
 }
 }
-

@@ -56,4 +56,3 @@ pg_list_identifiers(prefix="dif",
 )
 }
 }
-

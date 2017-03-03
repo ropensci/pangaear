@@ -44,4 +44,3 @@ pg_get_record(identifier = "oai:pangaea.de:doi:10.1594/PANGAEA.788382",
 #   prefix="adfadf")
 }
 }
-

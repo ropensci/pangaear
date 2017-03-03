@@ -20,4 +20,3 @@ Identify information about the Pangaea repository
 pg_identify()
 }
 }
-
