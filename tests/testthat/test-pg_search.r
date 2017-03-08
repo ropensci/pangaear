@@ -11,7 +11,8 @@ test_that("pg_search works and stuff, and stuff and things, also, it works", {
   ff <- pg_search(query='citation:Archer')
 
   expect_is(aa, "tbl_df")
-  expect_equal(sort(names(aa)), c('citation', 'doi','score','size','size_measure','supplement_to'))
+  expect_equal(sort(names(aa)),
+            c('citation', 'doi','score','size','size_measure','supplement_to'))
   expect_match(aa$doi, "10.1594")
   expect_is(aa$score, "numeric")
   expect_is(aa$size, "numeric")

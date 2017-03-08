@@ -22,7 +22,8 @@ test_that("pg_list_sets() works", {
 # test_that("pg_list_records() works", {
 #   skip_on_cran()
 #
-#   aa <- pg_list_records(from='2015-09-01', until='2015-10-03', config=verbose())
+#   aa <-
+# pg_list_records(from='2015-09-01', until='2015-10-03', config=verbose())
 #
 #   expect_is(aa, "data.frame")
 #   expect_is(aa, "oai_df")
@@ -69,5 +70,6 @@ test_that("fails well", {
   expect_error(pg_list_sets(as = "adsff"), "not in acceptable")
   expect_error(pg_list_records(prefix = "adsfadf"), "unknown")
   expect_error(pg_list_identifiers(from = 3), "Invalid datestamp")
-  expect_error(pg_get_record(identifier = 4444), "Identifier is not a valid OAI")
+  expect_error(pg_get_record(identifier = 4444),
+               "Identifier is not a valid OAI")
 })

@@ -149,7 +149,7 @@ check_many <- function(x){
     x
   } else {
     gsub("https://doi.pangaea.de/", "", xml_attr(
-      xml_find_all(txt, ".//div[@class=\"MetaHeaderItem\"]//a[@rel=\"follow\"]"),
+    xml_find_all(txt, ".//div[@class=\"MetaHeaderItem\"]//a[@rel=\"follow\"]"),
       "href"
     ))
   }

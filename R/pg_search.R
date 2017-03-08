@@ -78,7 +78,8 @@ pg_search <- function(query, count = 10, offset = 0, topic = NULL, bbox = NULL,
   args <- pgc(list(t = topic, count = count, offset = offset, q = query,
                    mindate = mindate, maxdate = maxdate))
   if (!is.null(bbox)) args <- c(
-    args, as.list(stats::setNames(bbox, c('minlon', 'minlat', 'maxlon', 'maxlat'))))
+    args, as.list(stats::setNames(bbox,
+                                  c('minlon', 'minlat', 'maxlon', 'maxlat'))))
   res <- GET(sbase(), query = args, ...)
   stop_for_status(res)
   results <- jsonlite::fromJSON(content(res, "text", encoding = "UTF-8"), FALSE)
@@ -130,7 +131,8 @@ parse_res <- function(x) {
 check_if <- function(x, cls) {
   if (!is.null(x)) {
     if (!class(x) %in% cls) {
-      stop(substitute(x), " must be of class: ", paste0(cls, collapse = ", "), call. = FALSE)
+      stop(substitute(x), " must be of class: ", paste0(cls, collapse = ", "),
+           call. = FALSE)
     }
   }
 }
