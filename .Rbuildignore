@@ -9,3 +9,5 @@ man-roxygen
 .travis.yml
 Makefile
 ^cran-comments\.md$
+docs
+
