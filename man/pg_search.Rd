@@ -66,8 +66,8 @@ pg_search(query='basis:Meteor')
 
 # paging with count and offset
 # max is 500 records per request - if you need > 500, use offset and count
-res1 <- pg_search(query = "florisphaera", count = 500, offset = 1000)
-res2 <- pg_search(query = "florisphaera", count = 500, offset = 1000)
+res1 <- pg_search(query = "florisphaera", count = 500, offset = 0)
+res2 <- pg_search(query = "florisphaera", count = 500, offset = 500)
 res3 <- pg_search(query = "florisphaera", count = 500, offset = 1000)
 do.call("rbind.data.frame", list(res1, res2, res3))
 
