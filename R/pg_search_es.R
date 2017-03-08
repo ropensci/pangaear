@@ -50,7 +50,7 @@
 #' @details An interface to Pangaea's Elasticsearch query interface.
 #' You can also just use [elastic](https://github.com/ropensci/elastic)
 #' package to interact with it. The base URL is
-#' <https://ws.pangaea.de/es/pangaea/panmd/_search>
+#' https://ws.pangaea.de/es/pangaea/panmd/_search
 #' @examples \dontrun{
 #' (res <- pg_search_es())
 #' attributes(res)

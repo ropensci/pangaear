@@ -83,7 +83,7 @@ Search the Pangaea database with Elasticsearch
 An interface to Pangaea's Elasticsearch query interface.
 You can also just use \href{https://github.com/ropensci/elastic}{elastic}
 package to interact with it. The base URL is
-\url{https://ws.pangaea.de/es/pangaea/panmd/_search}
+https://ws.pangaea.de/es/pangaea/panmd/_search
 }
 \examples{
 \dontrun{
