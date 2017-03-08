@@ -11,6 +11,8 @@
 #' @return XML character string, data.frame, or list, depending on what
 #' requested with the `as` parameter
 #' @references [OAI-PMH documentation](https://www.openarchives.org/pmh/)
+#' @seealso wraps [oai::list_sets()]
+#' @family oai methods
 #' @examples \dontrun{
 #' pg_list_sets()
 #' pg_list_sets(as = "list")

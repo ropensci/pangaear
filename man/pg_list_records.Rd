@@ -62,3 +62,12 @@ pg_list_records(prefix="iso19139", set='citable', from=Sys.Date()-1,
 \references{
 \href{https://www.openarchives.org/pmh/}{OAI-PMH documentation}
 }
+\seealso{
+wraps \code{\link[oai:list_records]{oai::list_records()}}
+
+Other oai methods: \code{\link{pg_get_record}},
+  \code{\link{pg_identify}},
+  \code{\link{pg_list_identifiers}},
+  \code{\link{pg_list_metadata_formats}},
+  \code{\link{pg_list_sets}}
+}

@@ -11,6 +11,8 @@
 #' @return XML character string, data.frame, or list, depending on what
 #' requested with the `as` parameter
 #' @references [OAI-PMH documentation](https://www.openarchives.org/pmh/)
+#' @seealso wraps [oai::get_records()]
+#' @family oai methods
 #' @examples \dontrun{
 #' pg_get_record(identifier = "oai:pangaea.de:doi:10.1594/PANGAEA.788382")
 #' pg_get_record(identifier = "oai:pangaea.de:doi:10.1594/PANGAEA.269656",

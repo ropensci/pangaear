@@ -11,6 +11,8 @@
 #' @return XML character string, data.frame, or list, depending on what
 #' requested with the `as` parameter
 #' @references [OAI-PMH documentation](https://www.openarchives.org/pmh/)
+#' @seealso wraps [oai::list_identifiers()]
+#' @family oai methods
 #' @examples \dontrun{
 #' pg_list_identifiers(
 #'   from = paste0(Sys.Date() - 2, "T00:00:00Z"),

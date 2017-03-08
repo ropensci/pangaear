@@ -4,6 +4,8 @@
 #' @param ... Curl debugging options passed on to [httr::GET()]
 #' @return list
 #' @references [OAI-PMH documentation](https://www.openarchives.org/pmh/)
+#' @seealso wraps [oai::id()]
+#' @family oai methods
 #' @examples \dontrun{
 #' pg_identify()
 #' }

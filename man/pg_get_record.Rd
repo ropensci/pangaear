@@ -47,3 +47,11 @@ pg_get_record(identifier = "oai:pangaea.de:doi:10.1594/PANGAEA.788382",
 \references{
 \href{https://www.openarchives.org/pmh/}{OAI-PMH documentation}
 }
+\seealso{
+wraps \code{\link[oai:get_records]{oai::get_records()}}
+
+Other oai methods: \code{\link{pg_identify}},
+  \code{\link{pg_list_identifiers}},
+  \code{\link{pg_list_metadata_formats}},
+  \code{\link{pg_list_records}}, \code{\link{pg_list_sets}}
+}

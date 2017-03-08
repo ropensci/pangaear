@@ -24,6 +24,8 @@
 #' @return XML character string, data.frame, or list, depending on what
 #' requested witht the `as` parameter
 #' @references [OAI-PMH documentation](https://www.openarchives.org/pmh/)
+#' @seealso wraps [oai::list_records()]
+#' @family oai methods
 #' @examples \dontrun{
 #' pg_list_records(set='citable', from=Sys.Date()-1, until=Sys.Date())
 #'
