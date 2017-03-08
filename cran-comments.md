@@ -20,6 +20,6 @@ There are no reverse dependencies.
 
 ---
 
-This release includes two bug fixes and more tests.
+This release adds a new function, includes two bug fixes, and adds more tests.
 
 Thanks. Scott Chamberlain
