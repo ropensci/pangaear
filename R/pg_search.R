@@ -9,13 +9,13 @@
 #' "Cryosphere", "Ecology", "Fisheries", "Geophysics", "Human Dimensions",
 #' "Lakes & Rivers", "Land Surface", "Lithosphere", "Oceans", "Paleontology"
 #' @param count (integer) Number of items to return. Default: 10. Maximum: 500.
-#' Use \code{offset} parameter to page through results - see examples
+#' Use `offset` parameter to page through results - see examples
 #' @param offset (integer) Record number to start at. Default: 0
 #' @param bbox  (numeric) A bounding box, of the form: minlon, minlat, maxlon,
 #' maxlat
 #' @param mindate,maxdate (character) Dates to search for, of the form
 #' "2014-10-28"
-#' @param ... Curl options passed on to \code{\link[httr]{GET}}
+#' @param ... Curl options passed on to [httr::GET()]
 #' @return tibble/data.frame with the structure:
 #' \itemize{
 #'  \item score - match score, higher is a better match
@@ -27,8 +27,8 @@
 #'  supplement to
 #' }
 #' @details This is a thin wrapper around the GUI search interface on the page
-#' \url{https://www.pangaea.de}. Everything you can do there, you can do here.
-#' @seealso \code{\link{pg_search_es}}
+#' <https://www.pangaea.de>. Everything you can do there, you can do here.
+#' @seealso [pg_search_es()]
 #' @examples \dontrun{
 #' pg_search(query='water')
 #' pg_search(query='water', count=2)

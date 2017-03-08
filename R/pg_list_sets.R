@@ -7,9 +7,10 @@
 #' asked for.
 #' @param as (character) What to return. One of "df" (for data.frame; default),
 #' "list", or "raw" (raw text)
-#' @param ... Curl debugging options passed on to \code{\link[httr]{GET}}
+#' @param ... Curl debugging options passed on to [httr::GET()]
 #' @return XML character string, data.frame, or list, depending on what
-#' requested with the \code{as} parameter
+#' requested with the `as` parameter
+#' @references [OAI-PMH documentation](https://www.openarchives.org/pmh/)
 #' @examples \dontrun{
 #' pg_list_sets()
 #' pg_list_sets(as = "list")

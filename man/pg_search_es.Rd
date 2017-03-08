@@ -67,11 +67,11 @@ search that can be performed.}
 lowercased or not. Default: \code{TRUE}.}
 
 \item{analyze_wildcard}{(logical) Should wildcard and prefix queries be
-analyzed or not. Default: \code{FALSE}.}
+analyzed or not. Default: \code{FALSE}}
 
 \item{version}{(logical) Print the document version with each document.}
 
-\item{...}{Curl options passed on to \code{\link[httr]{GET}}}
+\item{...}{Curl options passed on to \code{\link[httr:GET]{httr::GET()}}}
 }
 \value{
 tibble/data.frame, empty if no results
@@ -81,8 +81,9 @@ Search the Pangaea database with Elasticsearch
 }
 \details{
 An interface to Pangaea's Elasticsearch query interface.
-You can also just use \code{elastic} package to interact with it.
-The base URL is https://ws.pangaea.de/es/pangaea/panmd/_search
+You can also just use \href{https://github.com/ropensci/elastic}{elastic}
+package to interact with it. The base URL is
+\url{https://ws.pangaea.de/es/pangaea/panmd/_search}
 }
 \examples{
 \dontrun{
@@ -103,5 +104,5 @@ pg_search_es(query = 'water', sort = "minElevation:desc")
 }
 }
 \seealso{
-\code{\link{pg_search}}
+\code{\link[=pg_search]{pg_search()}}
 }

@@ -7,7 +7,7 @@
 pg_identify(...)
 }
 \arguments{
-\item{...}{Curl debugging options passed on to \code{\link[httr]{GET}}}
+\item{...}{Curl debugging options passed on to \code{\link[httr:GET]{httr::GET()}}}
 }
 \value{
 list
@@ -19,4 +19,7 @@ Identify information about the Pangaea repository
 \dontrun{
 pg_identify()
 }
+}
+\references{
+\href{https://www.openarchives.org/pmh/}{OAI-PMH documentation}
 }

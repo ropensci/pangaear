@@ -1,5 +1,12 @@
 #' Client for the Pangaea Database
 #'
+#' [Pangaea database](https://www.pangaea.de/)
+#'
+#' Package includes tools to interact with the Pangaea Database,
+#' including functions for searching for data, fetching datasets by
+#' dataset ID, working with the Pangaea OAI-PMH service, and
+#' Elasticsearch service.
+#'
 #' @importFrom oai list_identifiers get_records list_sets list_metadataformats
 #' list_identifiers id
 #' @importFrom httr GET content stop_for_status write_disk config

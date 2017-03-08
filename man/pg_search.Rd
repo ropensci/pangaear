@@ -28,18 +28,18 @@ maxlat}
 \item{mindate, maxdate}{(character) Dates to search for, of the form
 "2014-10-28"}
 
-\item{...}{Curl options passed on to \code{\link[httr]{GET}}}
+\item{...}{Curl options passed on to \code{\link[httr:GET]{httr::GET()}}}
 }
 \value{
 tibble/data.frame with the structure:
 \itemize{
- \item score - match score, higher is a better match
- \item doi - the DOI for the data package
- \item size - size number
- \item size_measure - size measure, one of "data points" or "datasets"
- \item citation - citation for the data package
- \item supplement_to - citation for what the data package is a
- supplement to
+\item score - match score, higher is a better match
+\item doi - the DOI for the data package
+\item size - size number
+\item size_measure - size measure, one of "data points" or "datasets"
+\item citation - citation for the data package
+\item supplement_to - citation for what the data package is a
+supplement to
 }
 }
 \description{
@@ -84,5 +84,5 @@ pg_search(query='citation:Archer', config = verbose())
 }
 }
 \seealso{
-\code{\link{pg_search_es}}
+\code{\link[=pg_search_es]{pg_search_es()}}
 }

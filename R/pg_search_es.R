@@ -18,13 +18,13 @@
 #' @param default_operator (character) The default operator to be used, can be
 #' \code{AND} or \code{OR}. Default: \code{OR}
 #' @param explain (logical) For each hit, contain an explanation of how
-#' scoring of the hits was computed. Default: \code{FALSE}
+#' scoring of the hits was computed. Default: `FALSE`
 #' @param sort (character) Sorting to perform. Can either be in the form of
 #' fieldName, or \code{fieldName:asc}/\code{fieldName:desc}. The fieldName
 #' can either be an actual field within the document, or the special
 #' \code{_score} name to indicate sorting based on scores. There can be several
 #' sort parameters (order is important).
-#' @param track_scores (logical) When sorting, set to \code{TRUE} in order to
+#' @param track_scores (logical) When sorting, set to `TRUE` in order to
 #' still track scores and return them as part of each hit.
 #' @param timeout (numeric) A search timeout, bounding the search request to
 #' be executed within the specified time value and bail with the hits
@@ -35,21 +35,22 @@
 #' indicate whether the query execution has actually terminated_early.
 #' Default: no terminate_after
 #' @param search_type (character) The type of the search operation to perform.
-#' Can be \code{query_then_fetch} (default) or \code{dfs_query_then_fetch}.
-#' Types \code{scan} and \code{count} are deprecated.
-#' See \url{http://bit.ly/19Am9xP} for more details on the different types of
+#' Can be `query_then_fetch` (default) or `dfs_query_then_fetch`.
+#' Types `scan` and `count` are deprecated.
+#' See <http://bit.ly/19Am9xP> for more details on the different types of
 #' search that can be performed.
 #' @param lowercase_expanded_terms (logical) Should terms be automatically
-#' lowercased or not. Default: \code{TRUE}.
+#' lowercased or not. Default: `TRUE`.
 #' @param analyze_wildcard (logical) Should wildcard and prefix queries be
-#' analyzed or not. Default: \code{FALSE}.
+#' analyzed or not. Default: `FALSE`
 #' @param version (logical) Print the document version with each document.
-#' @param ... Curl options passed on to \code{\link[httr]{GET}}
+#' @param ... Curl options passed on to [httr::GET()]
 #' @return tibble/data.frame, empty if no results
-#' @seealso \code{\link{pg_search}}
+#' @seealso [pg_search()]
 #' @details An interface to Pangaea's Elasticsearch query interface.
-#' You can also just use \code{elastic} package to interact with it.
-#' The base URL is https://ws.pangaea.de/es/pangaea/panmd/_search
+#' You can also just use [elastic](https://github.com/ropensci/elastic)
+#' package to interact with it. The base URL is
+#' <https://ws.pangaea.de/es/pangaea/panmd/_search>
 #' @examples \dontrun{
 #' (res <- pg_search_es())
 #' attributes(res)

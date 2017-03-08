@@ -7,7 +7,7 @@
 pg_list_metadata_formats(...)
 }
 \arguments{
-\item{...}{Curl debugging options passed on to \code{\link[httr]{GET}}}
+\item{...}{Curl debugging options passed on to \code{\link[httr:GET]{httr::GET()}}}
 }
 \value{
 data.frame
@@ -19,4 +19,7 @@ Get metadata formats from the Pangaea repository
 \dontrun{
 pg_list_metadata_formats()
 }
+}
+\references{
+\href{https://www.openarchives.org/pmh/}{OAI-PMH documentation}
 }

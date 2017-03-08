@@ -16,7 +16,7 @@ pg_data(doi, overwrite = TRUE, verbose = TRUE, ...)
 \item{doi}{DOI of Pangaeae single dataset, or of a collection of datasets.
 Expects either just a DOI of the form \code{10.1594/PANGAEA.746398}, or with
 the URL part in front, like
-\code{https://doi.pangaea.de/10.1594/PANGAEA.746398}}
+\url{https://doi.pangaea.de/10.1594/PANGAEA.746398}}
 
 \item{prompt}{(logical) Prompt before clearing all files in cache? No prompt
 used when DOIs assed in. Default: \code{TRUE}}
@@ -25,7 +25,7 @@ used when DOIs assed in. Default: \code{TRUE}}
 
 \item{verbose}{(logical) print information messages. Default: \code{TRUE}}
 
-\item{...}{Curl options passed on to \code{\link[httr]{GET}}}
+\item{...}{Curl options passed on to \code{\link[httr:GET]{httr::GET()}}}
 }
 \value{
 One or more items of class pangaea, each with a citation object,
@@ -34,7 +34,7 @@ metadata object, and data object. Each data object is printed as a
 }
 \description{
 Grabs data as a dataframe or list of dataframes from a Pangaea data
-repository URI; see: \url{https://www.pangaea.de/}.
+repository URI; see: \url{https://www.pangaea.de/}
 }
 \details{
 Data files are stored in an operating system appropriate location.

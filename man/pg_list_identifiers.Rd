@@ -9,7 +9,7 @@ pg_list_identifiers(prefix = "oai_dc", from = NULL, until = NULL,
 }
 \arguments{
 \item{prefix}{A character string to specify the metadata format in OAI-PMH
-requests issued to the repository. The default (\code{"oai_dc"}) corresponds
+requests issued to the repository. The default (\code{oai_dc}) corresponds
 to the mandatory OAI unqualified Dublin Core metadata schema.}
 
 \item{from}{Character string giving datestamp to be used as lower bound for
@@ -33,7 +33,7 @@ asked for.}
 \item{as}{(character) What to return. One of "df" (for data.frame; default),
 "list", or "raw" (raw text)}
 
-\item{...}{Curl debugging options passed on to \code{\link[httr]{GET}}}
+\item{...}{Curl debugging options passed on to \code{\link[httr:GET]{httr::GET()}}}
 }
 \value{
 XML character string, data.frame, or list, depending on what
@@ -55,4 +55,7 @@ pg_list_identifiers(prefix="dif",
   until = paste0(Sys.Date() - 1, "T18:00:00Z")
 )
 }
+}
+\references{
+\href{https://www.openarchives.org/pmh/}{OAI-PMH documentation}
 }

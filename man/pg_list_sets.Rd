@@ -15,7 +15,7 @@ asked for.}
 \item{as}{(character) What to return. One of "df" (for data.frame; default),
 "list", or "raw" (raw text)}
 
-\item{...}{Curl debugging options passed on to \code{\link[httr]{GET}}}
+\item{...}{Curl debugging options passed on to \code{\link[httr:GET]{httr::GET()}}}
 }
 \value{
 XML character string, data.frame, or list, depending on what
@@ -32,4 +32,7 @@ pg_list_sets(as = "raw")
 library('httr')
 res <- pg_list_sets(config = verbose())
 }
+}
+\references{
+\href{https://www.openarchives.org/pmh/}{OAI-PMH documentation}
 }

@@ -1,3 +1,19 @@
+pangaear 0.3.0
+==============
+
+## MINOR IMPROVEMENTS
+
+* xxx (#xx)
+* xxx (#xx)
+* xxx (#xx)
+
+## BUG FIXES
+
+* xxx (#xx)
+* xxx (#xx)
+* xxx (#xx)
+
+
 pangaear 0.2.4
 ==============
 
