@@ -26,6 +26,29 @@ test_that("pg_search works and stuff, and stuff and things, also, it works", {
   expect_is(ff, "tbl_df")
 })
 
+test_that("pg_search paging works", {
+  skip_on_cran()
+
+  res1 <- pg_search(query = "florisphaera", count = 10)
+  res2 <- pg_search(query = "florisphaera", count = 10, offset = 10)
+  res3 <- pg_search(query = "florisphaera", count = 10, offset = 20)
+
+  expect_is(res1, "tbl_df")
+  expect_is(res2, "tbl_df")
+  expect_is(res3, "tbl_df")
+
+  expect_equal(NROW(res1), 10)
+  expect_equal(NROW(res2), 10)
+  expect_equal(NROW(res3), 10)
+
+  expect_gte(min(res1$score), max(res2$score))
+  expect_gte(min(res2$score), max(res3$score))
+
+  expect_false(identical(res1$doi, res2$doi))
+  expect_false(identical(res2$doi, res3$doi))
+  expect_false(identical(res1$doi, res3$doi))
+})
+
 test_that("fails well", {
   skip_on_cran()
 

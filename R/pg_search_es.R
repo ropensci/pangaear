@@ -74,6 +74,21 @@ pg_search_es <- function(query = NULL, size = 10, from = NULL, source = NULL,
   search_type=NULL, lowercase_expanded_terms=NULL, analyze_wildcard=NULL,
   version=FALSE, ...) {
 
+  check_if(size, c("numeric", "integer"))
+  check_if(from, c("numeric", "integer"))
+  check_if(source, "character")
+  check_if(analyzer, "character")
+  check_if(default_operator, "character")
+  check_if(explain, "logical")
+  check_if(sort, "character")
+  check_if(track_scores, "logical")
+  check_if(timeout, c("numeric", "integer"))
+  check_if(terminate_after, c("numeric", "integer"))
+  check_if(search_type, "character")
+  check_if(lowercase_expanded_terms, "logical")
+  check_if(analyze_wildcard, "logical")
+  check_if(version, "logical")
+
   args <- pgc(
     list(
       q = query, size = size, from = from, `_source` = cl(source),
