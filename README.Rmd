@@ -124,4 +124,4 @@ pg_get_record(identifier = "oai:pangaea.de:doi:10.1594/PANGAEA.788382")
 * Get citation information for `pangaear` in R doing `citation(package = 'pangaear')`
 * Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms.
 
-[![ro_footer](http://ropensci.org/public_images/github_footer.png)](http://ropensci.org)
+[![ro_footer](https://ropensci.org/public_images/github_footer.png)](https://ropensci.org)

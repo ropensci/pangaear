@@ -107,7 +107,7 @@ pg_data(res$doi[3])[1:3]
 #>   `Depth [m]` `SOD [mmol/m**2/day]` `SOD [mmol/m**2/day]` `O2 [µmol/l]`
 #>         <int>                 <dbl>                 <dbl>         <dbl>
 #> 1           0                  1.51                  0.74            25
-#> 
+#>
 #> [[2]]
 #> <Pangaea data> 10.1594/PANGAEA.77397
 #> # A tibble: 27 × 6
@@ -124,7 +124,7 @@ pg_data(res$doi[3])[1:3]
 #> 9        0.005           0.0          0.8            NA            NA
 #> 10       0.006           0.4          0.7            NA            NA
 #> # ... with 17 more rows, and 1 more variables: `TOC [%]` <dbl>
-#> 
+#>
 #> [[3]]
 #> <Pangaea data> 10.1594/PANGAEA.77398
 #> # A tibble: 27 × 6
@@ -292,7 +292,7 @@ pg_get_record(identifier = "oai:pangaea.de:doi:10.1594/PANGAEA.788382")
 #>                                       <chr>                <chr>
 #> 1 oai:pangaea.de:doi:10.1594/PANGAEA.788382 2016-06-25T14:58:45Z
 #> # ... with 1 more variables: setSpec <chr>
-#> 
+#>
 #> $`oai:pangaea.de:doi:10.1594/PANGAEA.788382`$metadata
 #> # A tibble: 1 × 13
 #>                                                                         title
@@ -319,4 +319,4 @@ pg_get_record(identifier = "oai:pangaea.de:doi:10.1594/PANGAEA.788382")
 * Get citation information for `pangaear` in R doing `citation(package = 'pangaear')`
 * Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms.
 
-[![ro_footer](http://ropensci.org/public_images/github_footer.png)](http://ropensci.org)
+[![ro_footer](https://ropensci.org/public_images/github_footer.png)](https://ropensci.org)
