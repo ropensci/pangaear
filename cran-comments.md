@@ -20,7 +20,6 @@ There are no reverse dependencies.
 
 ---
 
-This release includes bug fixes due to website changes in the 
-data source.
+This release includes two bug fixes and more tests.
 
 Thanks. Scott Chamberlain
