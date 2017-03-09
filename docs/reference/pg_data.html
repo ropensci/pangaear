@@ -108,15 +108,20 @@ used when DOIs assed in. Default: <code>TRUE</code></dd>
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>One or more items of class pangaea, each with a citation object,
-metadata object, and data object. Each data object is printed as a
-<code>tbl_df</code> object, but the actual object is simply a <code>data.frame</code>.</p>
+    <p>One or more items of class pangaea, each with the doi, parent doi
+(if many dois within a parent doi), url, citation, path, and data object.
+Data object depends on what kind of file it is. For tabular data, we print
+the first 10 columns or so; for a zip file we list the files in the zip
+(but leave it up to the user to dig unzip and get files from the zip file);
+for png files, we point the user to read the file in with <code><a href='http://www.rdocumentation.org/packages/png/topics/readPNG'>png::readPNG()</a></code></p>
     
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>Data files are stored in an operating system appropriate location.
 Run <code>rappdirs::user_cache_dir(&quot;pangaear&quot;)</code> to get the storage location
 on your machine.</p>
+    <p>Some files/datasets require the user to be logged in. For now we
+just pass on these - that is, give back nothing other than metadata.</p>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
@@ -126,8 +131,13 @@ on your machine.</p>
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
 <span class='co'># a single file</span>
-<span class='no'>res</span> <span class='kw'>&lt;-</span> <span class='fu'>pg_data</span>(<span class='kw'>doi</span><span class='kw'>=</span><span class='st'>'10.1594/PANGAEA.807580'</span>)</div><div class='output co'>#&gt; <span class='message'>Downloading 1 datasets from 10.1594/PANGAEA.807580</span></div><div class='output co'>#&gt; <span class='message'>Processing 1 files</span></div><div class='input'><span class='no'>res</span></div><div class='output co'>#&gt; [[1]]
+(<span class='no'>res</span> <span class='kw'>&lt;-</span> <span class='fu'>pg_data</span>(<span class='kw'>doi</span><span class='kw'>=</span><span class='st'>'10.1594/PANGAEA.807580'</span>))</div><div class='output co'>#&gt; <span class='message'>Downloading 1 datasets from 10.1594/PANGAEA.807580</span></div><div class='output co'>#&gt; <span class='message'>Processing 1 files</span></div><div class='output co'>#&gt; [[1]]
 #&gt; &lt;Pangaea data&gt; 10.1594/PANGAEA.807580
+#&gt;   parent doi: 10.1594/PANGAEA.807580
+#&gt;   url:        https://doi.org/10.1594/PANGAEA.807580
+#&gt;   citation:   Schiebel, Ralf; Waniek, Joanna J; Bork, Matthias; Hemleben, Christoph (2001): Physical oceanography during METEOR cruise M36/6. doi:10.1594/PANGAEA.807580,In supplement to: Schiebel, R et al. (2001): Planktic foraminiferal production stimulated by chlorophyll redistribution and entrainment of nutrients. Deep Sea Research Part I: Oceanographic Research Papers, 48(3), 721-740, doi:10.1016/S0967-0637(00)00065-0
+#&gt;   path:       /Users/sacmac/Library/Caches/pangaear/10_1594_PANGAEA_807580.txt
+#&gt;   data:
 #&gt; # A tibble: 32,179 × 13
 #&gt;                Event      `Date/Time` Latitude Longitude `Elevation [m]`
 #&gt;                &lt;chr&gt;            &lt;chr&gt;    &lt;dbl&gt;     &lt;dbl&gt;           &lt;int&gt;
@@ -145,41 +155,7 @@ on your machine.</p>
 #&gt; #   `Press [dbar]` &lt;int&gt;, `Temp [°C]` &lt;dbl&gt;, Sal &lt;dbl&gt;, `Tpot [°C]` &lt;dbl&gt;,
 #&gt; #   `Sigma-theta [kg/m**3]` &lt;dbl&gt;, `Sigma in situ [kg/m**3]` &lt;dbl&gt;, `Cond
 #&gt; #   [mS/cm]` &lt;dbl&gt;
-#&gt; </div><div class='input'><span class='no'>res</span><span class='kw'>[[</span><span class='fl'>1</span>]]$<span class='no'>doi</span></div><div class='output co'>#&gt; [1] &quot;10.1594/PANGAEA.807580&quot;</div><div class='input'><span class='no'>res</span><span class='kw'>[[</span><span class='fl'>1</span>]]$<span class='no'>citation</span></div><div class='output co'>#&gt; See https://doi.pangaea.de/10.1594/PANGAEA.807580 for the citation</div><div class='input'><span class='no'>res</span><span class='kw'>[[</span><span class='fl'>1</span>]]$<span class='no'>meta</span></div><div class='output co'>#&gt; Citation:	Schiebel, Ralf; Waniek, Joanna J; Bork, Matthias; Hemleben, Christoph (2001): Physical oceanography during METEOR cruise M36/6. doi:10.1594/PANGAEA.807580, 
-#&gt; 	In supplement to: Schiebel, R et al. (2001): Planktic foraminiferal production stimulated by chlorophyll redistribution and entrainment of nutrients. Deep Sea Research Part I: Oceanographic Research Papers, 48(3), 721-740, doi:10.1016/S0967-0637(00)00065-0
-#&gt; Project(s):	Joint Global Ocean Flux Study (JGOFS) (URI: http://ijgofs.whoi.edu/)
-#&gt; Coverage:	MEDIAN LATITUDE: 47.554050 * MEDIAN LONGITUDE: -18.229529 * SOUTH-BOUND LATITUDE: 45.598300 * WEST-BOUND LONGITUDE: -19.581700 * NORTH-BOUND LATITUDE: 48.968300 * EAST-BOUND LONGITUDE: -16.461700
-#&gt; 	DATE/TIME START: 1996-10-14T12:24:00 * DATE/TIME END: 1996-11-01T07:18:00
-#&gt; 	MINIMUM DEPTH, water: 0.00 m * MAXIMUM DEPTH, water: 4822.01 m
-#&gt; Event(s):	M36/6-CTD-365_003 * LATITUDE: 48.966700 * LONGITUDE: -16.463300 * DATE/TIME START: 1996-10-14T12:24:00 * DATE/TIME END: 1996-10-14T13:11:00 * ELEVATION: -4802.0 m * CAMPAIGN: M36/6 (URI: doi:10.2312/cr_m36) * BASIS: Meteor (1986) (URI: https://de.wikipedia.org/wiki/Meteor_(Schiff,_1986)) * DEVICE: CTD/Rosette (CTD-RO)
-#&gt; 	M36/6-CTD-366_004 * LATITUDE: 48.966700 * LONGITUDE: -16.478300 * DATE/TIME START: 1996-10-16T09:40:00 * DATE/TIME END: 1996-10-16T11:39:00 * ELEVATION: -4802.0 m * CAMPAIGN: M36/6 (URI: doi:10.2312/cr_m36) * BASIS: Meteor (1986) (URI: https://de.wikipedia.org/wiki/Meteor_(Schiff,_1986)) * DEVICE: CTD/Rosette (CTD-RO)
-#&gt; 	M36/6-CTD-375_005 * LATITUDE: 48.966700 * LONGITUDE: -16.461700 * DATE/TIME START: 1996-10-19T16:55:00 * DATE/TIME END: 1996-10-19T18:48:00 * ELEVATION: -4802.0 m * CAMPAIGN: M36/6 (URI: doi:10.2312/cr_m36) * BASIS: Meteor (1986) (URI: https://de.wikipedia.org/wiki/Meteor_(Schiff,_1986)) * DEVICE: CTD/Rosette (CTD-RO)
-#&gt; 	M36/6-CTD-380_006 * LATITUDE: 48.968300 * LONGITUDE: -16.466700 * DATE/TIME START: 1996-10-20T22:52:00 * DATE/TIME END: 1996-10-21T00:46:00 * ELEVATION: -4804.0 m * CAMPAIGN: M36/6 (URI: doi:10.2312/cr_m36) * BASIS: Meteor (1986) (URI: https://de.wikipedia.org/wiki/Meteor_(Schiff,_1986)) * DEVICE: CTD/Rosette (CTD-RO)
-#&gt; 	M36/6-CTD-386_007 * LATITUDE: 47.181700 * LONGITUDE: -19.561700 * DATE/TIME START: 1996-10-23T12:41:00 * DATE/TIME END: 1996-10-23T13:26:00 * ELEVATION: -4565.0 m * CAMPAIGN: M36/6 (URI: doi:10.2312/cr_m36) * BASIS: Meteor (1986) (URI: https://de.wikipedia.org/wiki/Meteor_(Schiff,_1986)) * DEVICE: CTD/Rosette (CTD-RO)
-#&gt; 	M36/6-CTD-392_008 * LATITUDE: 47.196700 * LONGITUDE: -19.581700 * DATE/TIME START: 1996-10-24T20:21:00 * DATE/TIME END: 1996-10-24T22:16:00 * ELEVATION: -4561.0 m * CAMPAIGN: M36/6 (URI: doi:10.2312/cr_m36) * BASIS: Meteor (1986) (URI: https://de.wikipedia.org/wiki/Meteor_(Schiff,_1986)) * DEVICE: CTD/Rosette (CTD-RO)
-#&gt; 	M36/6-CTD-393_009 * LATITUDE: 47.588300 * LONGITUDE: -18.861700 * DATE/TIME START: 1996-10-25T02:40:00 * DATE/TIME END: 1996-10-25T03:16:00 * ELEVATION: -4120.0 m * CAMPAIGN: M36/6 (URI: doi:10.2312/cr_m36) * BASIS: Meteor (1986) (URI: https://de.wikipedia.org/wiki/Meteor_(Schiff,_1986)) * DEVICE: CTD/Rosette (CTD-RO)
-#&gt; 	M36/6-CTD-394_010 * LATITUDE: 48.095000 * LONGITUDE: -18.156700 * DATE/TIME START: 1996-10-25T08:27:00 * DATE/TIME END: 1996-10-25T09:05:00 * ELEVATION: -4436.0 m * CAMPAIGN: M36/6 (URI: doi:10.2312/cr_m36) * BASIS: Meteor (1986) (URI: https://de.wikipedia.org/wiki/Meteor_(Schiff,_1986)) * DEVICE: CTD/Rosette (CTD-RO)
-#&gt; 	M36/6-CTD-397_011 * LATITUDE: 47.178300 * LONGITUDE: -19.568300 * DATE/TIME START: 1996-10-28T12:39:00 * DATE/TIME END: 1996-10-28T13:16:00 * ELEVATION: -4567.0 m * CAMPAIGN: M36/6 (URI: doi:10.2312/cr_m36) * BASIS: Meteor (1986) (URI: https://de.wikipedia.org/wiki/Meteor_(Schiff,_1986)) * DEVICE: CTD/Rosette (CTD-RO)
-#&gt; 	M36/6-CTD-404_012 * LATITUDE: 47.186700 * LONGITUDE: -19.560000 * DATE/TIME START: 1996-10-30T08:01:00 * DATE/TIME END: 1996-10-30T09:49:00 * ELEVATION: -4565.0 m * CAMPAIGN: M36/6 (URI: doi:10.2312/cr_m36) * BASIS: Meteor (1986) (URI: https://de.wikipedia.org/wiki/Meteor_(Schiff,_1986)) * DEVICE: CTD/Rosette (CTD-RO)
-#&gt; 	M36/6-CTD-407_013 * LATITUDE: 47.183300 * LONGITUDE: -19.566700 * DATE/TIME START: 1996-10-31T03:42:00 * DATE/TIME END: 1996-10-31T04:55:00 * ELEVATION: -4566.0 m * CAMPAIGN: M36/6 (URI: doi:10.2312/cr_m36) * BASIS: Meteor (1986) (URI: https://de.wikipedia.org/wiki/Meteor_(Schiff,_1986)) * DEVICE: CTD/Rosette (CTD-RO)
-#&gt; 	M36/6-CTD-409_014 * LATITUDE: 46.585000 * LONGITUDE: -18.873300 * DATE/TIME START: 1996-10-31T20:32:00 * DATE/TIME END: 1996-10-31T21:07:00 * ELEVATION: -4610.0 m * CAMPAIGN: M36/6 (URI: doi:10.2312/cr_m36) * BASIS: Meteor (1986) (URI: https://de.wikipedia.org/wiki/Meteor_(Schiff,_1986)) * DEVICE: CTD/Rosette (CTD-RO)
-#&gt; 	M36/6-CTD-410_015 * LATITUDE: 46.095000 * LONGITUDE: -18.155000 * DATE/TIME START: 1996-11-01T01:25:00 * DATE/TIME END: 1996-11-01T02:00:00 * ELEVATION: -4120.0 m * CAMPAIGN: M36/6 (URI: doi:10.2312/cr_m36) * BASIS: Meteor (1986) (URI: https://de.wikipedia.org/wiki/Meteor_(Schiff,_1986)) * DEVICE: CTD/Rosette (CTD-RO)
-#&gt; 	M36/6-CTD-411_016 * LATITUDE: 45.598300 * LONGITUDE: -17.458300 * DATE/TIME START: 1996-11-01T06:45:00 * DATE/TIME END: 1996-11-01T07:18:00 * ELEVATION: -4651.0 m * CAMPAIGN: M36/6 (URI: doi:10.2312/cr_m36) * BASIS: Meteor (1986) (URI: https://de.wikipedia.org/wiki/Meteor_(Schiff,_1986)) * DEVICE: CTD/Rosette (CTD-RO)
-#&gt; Parameter(s):	Event label (Event)
-#&gt; 	Date/Time of event (Date/Time)
-#&gt; 	Latitude of event (Latitude)
-#&gt; 	Longitude of event (Longitude)
-#&gt; 	Elevation of event [m] (Elevation)
-#&gt; 	DEPTH, water [m] (Depth water) * GEOCODE
-#&gt; 	Pressure, water [dbar] (Press) * PI: Waniek, Joanna J (joanna.waniek@io-warnemuende.de, http://www.io-warnemuende.de/homepages/waniek/) * METHOD: CTD, Neil Brown, Mark III B
-#&gt; 	Temperature, water [°C] (Temp) * PI: Waniek, Joanna J (joanna.waniek@io-warnemuende.de, http://www.io-warnemuende.de/homepages/waniek/) * METHOD: CTD, Neil Brown, Mark III B
-#&gt; 	Salinity (Sal) * PI: Waniek, Joanna J (joanna.waniek@io-warnemuende.de, http://www.io-warnemuende.de/homepages/waniek/) * METHOD: Calculated from conductivity
-#&gt; 	Temperature, water, potential [°C] (Tpot) * PI: Waniek, Joanna J (joanna.waniek@io-warnemuende.de, http://www.io-warnemuende.de/homepages/waniek/) * METHOD: Calculated
-#&gt; 	Density, sigma-theta (0) [kg/m**3] (Sigma-theta) * PI: Waniek, Joanna J (joanna.waniek@io-warnemuende.de, http://www.io-warnemuende.de/homepages/waniek/) * METHOD: Calculated
-#&gt; 	Density, sigma, in situ [kg/m**3] (Sigma in situ) * PI: Waniek, Joanna J (joanna.waniek@io-warnemuende.de, http://www.io-warnemuende.de/homepages/waniek/) * METHOD: Calculated
-#&gt; 	Conductivity [mS/cm] (Cond) * PI: Waniek, Joanna J (joanna.waniek@io-warnemuende.de, http://www.io-warnemuende.de/homepages/waniek/) * METHOD: CTD, Neil Brown, Mark III B
-#&gt; License:	Creative Commons Attribution 3.0 Unported (CC-BY)
-#&gt; Size:	225253 data points</div><div class='input'><span class='no'>res</span><span class='kw'>[[</span><span class='fl'>1</span>]]$<span class='no'>data</span></div><div class='output co'>#&gt; # A tibble: 32,179 × 13
+#&gt; </div><div class='input'><span class='no'>res</span><span class='kw'>[[</span><span class='fl'>1</span>]]$<span class='no'>doi</span></div><div class='output co'>#&gt; [1] &quot;10.1594/PANGAEA.807580&quot;</div><div class='input'><span class='no'>res</span><span class='kw'>[[</span><span class='fl'>1</span>]]$<span class='no'>citation</span></div><div class='output co'>#&gt; [1] &quot;Schiebel, Ralf; Waniek, Joanna J; Bork, Matthias; Hemleben, Christoph (2001): Physical oceanography during METEOR cruise M36/6. doi:10.1594/PANGAEA.807580,In supplement to: Schiebel, R et al. (2001): Planktic foraminiferal production stimulated by chlorophyll redistribution and entrainment of nutrients. Deep Sea Research Part I: Oceanographic Research Papers, 48(3), 721-740, doi:10.1016/S0967-0637(00)00065-0&quot;</div><div class='input'><span class='no'>res</span><span class='kw'>[[</span><span class='fl'>1</span>]]$<span class='no'>data</span></div><div class='output co'>#&gt; # A tibble: 32,179 × 13
 #&gt;                Event      `Date/Time` Latitude Longitude `Elevation [m]`
 #&gt;                &lt;chr&gt;            &lt;chr&gt;    &lt;dbl&gt;     &lt;dbl&gt;           &lt;int&gt;
 #&gt; 1  M36/6-CTD-365_003 1996-10-14T12:24  48.9667  -16.4633           -4802
@@ -199,6 +175,11 @@ on your machine.</p>
 <span class='co'># another single file</span>
 <span class='fu'>pg_data</span>(<span class='kw'>doi</span><span class='kw'>=</span><span class='st'>'10.1594/PANGAEA.807584'</span>)</div><div class='output co'>#&gt; <span class='message'>Downloading 1 datasets from 10.1594/PANGAEA.807584</span></div><div class='output co'>#&gt; <span class='message'>Processing 1 files</span></div><div class='output co'>#&gt; [[1]]
 #&gt; &lt;Pangaea data&gt; 10.1594/PANGAEA.807584
+#&gt;   parent doi: 10.1594/PANGAEA.807584
+#&gt;   url:        https://doi.org/10.1594/PANGAEA.807584
+#&gt;   citation:   Schiebel, Ralf; Waniek, Joanna J; Bork, Matthias; Hemleben, Christoph (2001): Plasm bearing foraminifera counts during METEOR cruise M36/5. doi:10.1594/PANGAEA.807584,In supplement to: Schiebel, Ralf; Waniek, Joanna J; Bork, Matthias; Hemleben, Christoph (2001): Planktic foraminiferal production stimulated by chlorophyll redistribution and entrainment of nutrients. Deep Sea Research Part I: Oceanographic Research Papers, 48(3), 721-740, doi:10.1016/S0967-0637(00)00065-0
+#&gt;   path:       /Users/sacmac/Library/Caches/pangaear/10_1594_PANGAEA_807584.txt
+#&gt;   data:
 #&gt; # A tibble: 698 × 53
 #&gt;            Event      `Date/Time` Latitude Longitude `Elevation [m]`
 #&gt;            &lt;chr&gt;            &lt;chr&gt;    &lt;dbl&gt;     &lt;dbl&gt;           &lt;int&gt;
@@ -234,6 +215,11 @@ on your machine.</p>
 <span class='co'># Many files</span>
 (<span class='no'>res</span> <span class='kw'>&lt;-</span> <span class='fu'>pg_data</span>(<span class='kw'>doi</span><span class='kw'>=</span><span class='st'>'10.1594/PANGAEA.761032'</span>))</div><div class='output co'>#&gt; <span class='message'>Downloading 2 datasets from 10.1594/PANGAEA.761032</span></div><div class='output co'>#&gt; <span class='message'>Processing 2 files</span></div><div class='output co'>#&gt; [[1]]
 #&gt; &lt;Pangaea data&gt; 10.1594/PANGAEA.761002
+#&gt;   parent doi: 10.1594/PANGAEA.761032
+#&gt;   url:        https://doi.org/10.1594/PANGAEA.761002
+#&gt;   citation:   Gordon, Arnold L; Visbeck, Martin; Huber, Bruce (2001): Physical oceanography and current velocity during Nathaniel B. Palmer cruise NBP97-05. doi:10.1594/PANGAEA.761032,Supplement to: Gordon, AL et al. (2001): Export of Weddell Sea deep and bottom water. Journal of Geophysical Research-Oceans, 106(C5), 9005-9017, doi:10.1029/2000JC000281
+#&gt;   path:       /Users/sacmac/Library/Caches/pangaear/10_1594_PANGAEA_761002.txt
+#&gt;   data:
 #&gt; # A tibble: 250,201 × 9
 #&gt;          Event      `Date/Time` Latitude Longitude `Elevation [m]`
 #&gt;          &lt;chr&gt;            &lt;chr&gt;    &lt;dbl&gt;     &lt;dbl&gt;           &lt;int&gt;
@@ -252,6 +238,11 @@ on your machine.</p>
 #&gt; 
 #&gt; [[2]]
 #&gt; &lt;Pangaea data&gt; 10.1594/PANGAEA.319391
+#&gt;   parent doi: 10.1594/PANGAEA.761032
+#&gt;   url:        https://doi.org/10.1594/PANGAEA.319391
+#&gt;   citation:   Gordon, Arnold L; Visbeck, Martin; Huber, Bruce (2001): Physical oceanography and current velocity during Nathaniel B. Palmer cruise NBP97-05. doi:10.1594/PANGAEA.761032,Supplement to: Gordon, AL et al. (2001): Export of Weddell Sea deep and bottom water. Journal of Geophysical Research-Oceans, 106(C5), 9005-9017, doi:10.1029/2000JC000281
+#&gt;   path:       /Users/sacmac/Library/Caches/pangaear/10_1594_PANGAEA_319391.txt
+#&gt;   data:
 #&gt; # A tibble: 6,060 × 12
 #&gt;         `Date/Time` Latitude Longitude `Depth water [m]` `UC [cm/s]`
 #&gt;               &lt;chr&gt;    &lt;dbl&gt;     &lt;dbl&gt;             &lt;int&gt;       &lt;dbl&gt;
@@ -270,6 +261,11 @@ on your machine.</p>
 #&gt; #   velo SU std dev [±]` &lt;dbl&gt;, `Ship velo SV [m/s]` &lt;dbl&gt;, `Ship velo SV std
 #&gt; #   dev [±]` &lt;dbl&gt;
 #&gt; </div><div class='input'><span class='no'>res</span><span class='kw'>[[</span><span class='fl'>1</span>]]</div><div class='output co'>#&gt; &lt;Pangaea data&gt; 10.1594/PANGAEA.761002
+#&gt;   parent doi: 10.1594/PANGAEA.761032
+#&gt;   url:        https://doi.org/10.1594/PANGAEA.761002
+#&gt;   citation:   Gordon, Arnold L; Visbeck, Martin; Huber, Bruce (2001): Physical oceanography and current velocity during Nathaniel B. Palmer cruise NBP97-05. doi:10.1594/PANGAEA.761032,Supplement to: Gordon, AL et al. (2001): Export of Weddell Sea deep and bottom water. Journal of Geophysical Research-Oceans, 106(C5), 9005-9017, doi:10.1029/2000JC000281
+#&gt;   path:       /Users/sacmac/Library/Caches/pangaear/10_1594_PANGAEA_761002.txt
+#&gt;   data:
 #&gt; # A tibble: 250,201 × 9
 #&gt;          Event      `Date/Time` Latitude Longitude `Elevation [m]`
 #&gt;          &lt;chr&gt;            &lt;chr&gt;    &lt;dbl&gt;     &lt;dbl&gt;           &lt;int&gt;
@@ -285,6 +281,11 @@ on your machine.</p>
 #&gt; 10 NBP97-05/01 1997-08-04T12:09 -57.5007  -44.9915           -3090
 #&gt; # ... with 250,191 more rows, and 4 more variables: `Depth water [m]` &lt;int&gt;,
 #&gt; #   `Temp [°C]` &lt;dbl&gt;, Sal &lt;dbl&gt;, `Tpot [°C]` &lt;dbl&gt;</div><div class='input'><span class='no'>res</span><span class='kw'>[[</span><span class='fl'>2</span>]]</div><div class='output co'>#&gt; &lt;Pangaea data&gt; 10.1594/PANGAEA.319391
+#&gt;   parent doi: 10.1594/PANGAEA.761032
+#&gt;   url:        https://doi.org/10.1594/PANGAEA.319391
+#&gt;   citation:   Gordon, Arnold L; Visbeck, Martin; Huber, Bruce (2001): Physical oceanography and current velocity during Nathaniel B. Palmer cruise NBP97-05. doi:10.1594/PANGAEA.761032,Supplement to: Gordon, AL et al. (2001): Export of Weddell Sea deep and bottom water. Journal of Geophysical Research-Oceans, 106(C5), 9005-9017, doi:10.1029/2000JC000281
+#&gt;   path:       /Users/sacmac/Library/Caches/pangaear/10_1594_PANGAEA_319391.txt
+#&gt;   data:
 #&gt; # A tibble: 6,060 × 12
 #&gt;         `Date/Time` Latitude Longitude `Depth water [m]` `UC [cm/s]`
 #&gt;               &lt;chr&gt;    &lt;dbl&gt;     &lt;dbl&gt;             &lt;int&gt;       &lt;dbl&gt;
@@ -309,8 +310,11 @@ on your machine.</p>
 #&gt;  [5] &quot;10_1594_PANGAEA_77399.txt&quot;  &quot;10_1594_PANGAEA_77400.txt&quot; 
 #&gt;  [7] &quot;10_1594_PANGAEA_77401.txt&quot;  &quot;10_1594_PANGAEA_77402.txt&quot; 
 #&gt;  [9] &quot;10_1594_PANGAEA_77403.txt&quot;  &quot;10_1594_PANGAEA_77404.txt&quot; 
-#&gt; [11] &quot;10_1594_PANGAEA_77406.txt&quot;  &quot;10_1594_PANGAEA_804606.txt&quot;
-#&gt; [13] &quot;10_1594_PANGAEA_807580.txt&quot; &quot;10_1594_PANGAEA_807584.txt&quot;</div><div class='input'>
+#&gt; [11] &quot;10_1594_PANGAEA_77406.txt&quot;  &quot;10_1594_PANGAEA_807580.txt&quot;
+#&gt; [13] &quot;10_1594_PANGAEA_807584.txt&quot; &quot;10_1594_PANGAEA_825423.txt&quot;
+#&gt; [15] &quot;10_1594_PANGAEA_825424.txt&quot; &quot;10_1594_PANGAEA_825425.txt&quot;
+#&gt; [17] &quot;10_1594_PANGAEA_825426.txt&quot; &quot;10_1594_PANGAEA_825427.png&quot;
+#&gt; [19] &quot;10_1594_PANGAEA_860500.zip&quot;</div><div class='input'>
 <span class='co'>## clear all data</span>
 <span class='co'># pg_cache_clear()</span>
 <span class='fu'>pg_cache_list</span>()</div><div class='output co'>#&gt;  [1] &quot;10_1594_PANGAEA_319391.txt&quot; &quot;10_1594_PANGAEA_761002.txt&quot;
@@ -318,11 +322,19 @@ on your machine.</p>
 #&gt;  [5] &quot;10_1594_PANGAEA_77399.txt&quot;  &quot;10_1594_PANGAEA_77400.txt&quot; 
 #&gt;  [7] &quot;10_1594_PANGAEA_77401.txt&quot;  &quot;10_1594_PANGAEA_77402.txt&quot; 
 #&gt;  [9] &quot;10_1594_PANGAEA_77403.txt&quot;  &quot;10_1594_PANGAEA_77404.txt&quot; 
-#&gt; [11] &quot;10_1594_PANGAEA_77406.txt&quot;  &quot;10_1594_PANGAEA_804606.txt&quot;
-#&gt; [13] &quot;10_1594_PANGAEA_807580.txt&quot; &quot;10_1594_PANGAEA_807584.txt&quot;</div><div class='input'>
+#&gt; [11] &quot;10_1594_PANGAEA_77406.txt&quot;  &quot;10_1594_PANGAEA_807580.txt&quot;
+#&gt; [13] &quot;10_1594_PANGAEA_807584.txt&quot; &quot;10_1594_PANGAEA_825423.txt&quot;
+#&gt; [15] &quot;10_1594_PANGAEA_825424.txt&quot; &quot;10_1594_PANGAEA_825425.txt&quot;
+#&gt; [17] &quot;10_1594_PANGAEA_825426.txt&quot; &quot;10_1594_PANGAEA_825427.png&quot;
+#&gt; [19] &quot;10_1594_PANGAEA_860500.zip&quot;</div><div class='input'>
 <span class='co'>## clear a single dataset by DOI</span>
 <span class='fu'>pg_data</span>(<span class='kw'>doi</span><span class='kw'>=</span><span class='st'>'10.1594/PANGAEA.812093'</span>)</div><div class='output co'>#&gt; <span class='message'>Downloading 1 datasets from 10.1594/PANGAEA.812093</span></div><div class='output co'>#&gt; <span class='message'>Processing 1 files</span></div><div class='output co'>#&gt; [[1]]
 #&gt; &lt;Pangaea data&gt; 10.1594/PANGAEA.812093
+#&gt;   parent doi: 10.1594/PANGAEA.812093
+#&gt;   url:        https://doi.org/10.1594/PANGAEA.812093
+#&gt;   citation:   Simonyan, Anna V; Dultz, Stefan; Behrens, Harald (2012): (Table 2) Conditions and results of diffusion experiments of East Pacific Ocean basalt samples. doi:10.1594/PANGAEA.812093,In supplement to: Simonyan, AV et al. (2012): Diffusive transport of water in porous fresh to altered mid-ocean ridge basalts. Chemical Geology, 306-307, 63-77, doi:10.1016/j.chemgeo.2012.02.017
+#&gt;   path:       /Users/sacmac/Library/Caches/pangaear/10_1594_PANGAEA_812093.txt
+#&gt;   data:
 #&gt; # A tibble: 36 × 18
 #&gt;       Event `Sample label`                              `Sample comment`
 #&gt;       &lt;chr&gt;          &lt;chr&gt;                                         &lt;chr&gt;
@@ -348,20 +360,30 @@ on your machine.</p>
 #&gt;  [5] &quot;10_1594_PANGAEA_77399.txt&quot;  &quot;10_1594_PANGAEA_77400.txt&quot; 
 #&gt;  [7] &quot;10_1594_PANGAEA_77401.txt&quot;  &quot;10_1594_PANGAEA_77402.txt&quot; 
 #&gt;  [9] &quot;10_1594_PANGAEA_77403.txt&quot;  &quot;10_1594_PANGAEA_77404.txt&quot; 
-#&gt; [11] &quot;10_1594_PANGAEA_77406.txt&quot;  &quot;10_1594_PANGAEA_804606.txt&quot;
-#&gt; [13] &quot;10_1594_PANGAEA_807580.txt&quot; &quot;10_1594_PANGAEA_807584.txt&quot;
-#&gt; [15] &quot;10_1594_PANGAEA_812093.txt&quot;</div><div class='input'><span class='fu'>pg_cache_clear</span>(<span class='kw'>doi</span><span class='kw'>=</span><span class='st'>'10.1594/PANGAEA.812093'</span>)
+#&gt; [11] &quot;10_1594_PANGAEA_77406.txt&quot;  &quot;10_1594_PANGAEA_807580.txt&quot;
+#&gt; [13] &quot;10_1594_PANGAEA_807584.txt&quot; &quot;10_1594_PANGAEA_812093.txt&quot;
+#&gt; [15] &quot;10_1594_PANGAEA_825423.txt&quot; &quot;10_1594_PANGAEA_825424.txt&quot;
+#&gt; [17] &quot;10_1594_PANGAEA_825425.txt&quot; &quot;10_1594_PANGAEA_825426.txt&quot;
+#&gt; [19] &quot;10_1594_PANGAEA_825427.png&quot; &quot;10_1594_PANGAEA_860500.zip&quot;</div><div class='input'><span class='fu'>pg_cache_clear</span>(<span class='kw'>doi</span><span class='kw'>=</span><span class='st'>'10.1594/PANGAEA.812093'</span>)
 <span class='fu'>pg_cache_list</span>()</div><div class='output co'>#&gt;  [1] &quot;10_1594_PANGAEA_319391.txt&quot; &quot;10_1594_PANGAEA_761002.txt&quot;
 #&gt;  [3] &quot;10_1594_PANGAEA_77397.txt&quot;  &quot;10_1594_PANGAEA_77398.txt&quot; 
 #&gt;  [5] &quot;10_1594_PANGAEA_77399.txt&quot;  &quot;10_1594_PANGAEA_77400.txt&quot; 
 #&gt;  [7] &quot;10_1594_PANGAEA_77401.txt&quot;  &quot;10_1594_PANGAEA_77402.txt&quot; 
 #&gt;  [9] &quot;10_1594_PANGAEA_77403.txt&quot;  &quot;10_1594_PANGAEA_77404.txt&quot; 
-#&gt; [11] &quot;10_1594_PANGAEA_77406.txt&quot;  &quot;10_1594_PANGAEA_804606.txt&quot;
-#&gt; [13] &quot;10_1594_PANGAEA_807580.txt&quot; &quot;10_1594_PANGAEA_807584.txt&quot;</div><div class='input'>
+#&gt; [11] &quot;10_1594_PANGAEA_77406.txt&quot;  &quot;10_1594_PANGAEA_807580.txt&quot;
+#&gt; [13] &quot;10_1594_PANGAEA_807584.txt&quot; &quot;10_1594_PANGAEA_825423.txt&quot;
+#&gt; [15] &quot;10_1594_PANGAEA_825424.txt&quot; &quot;10_1594_PANGAEA_825425.txt&quot;
+#&gt; [17] &quot;10_1594_PANGAEA_825426.txt&quot; &quot;10_1594_PANGAEA_825427.png&quot;
+#&gt; [19] &quot;10_1594_PANGAEA_860500.zip&quot;</div><div class='input'>
 <span class='co'>## clear more than 1 dataset by DOI</span>
 <span class='fu'>lapply</span>(<span class='fu'>c</span>(<span class='st'>'10.1594/PANGAEA.746398'</span>,<span class='st'>'10.1594/PANGAEA.746400'</span>), <span class='no'>pg_data</span>)</div><div class='output co'>#&gt; <span class='message'>Downloading 1 datasets from 10.1594/PANGAEA.746398</span></div><div class='output co'>#&gt; <span class='message'>Processing 1 files</span></div><div class='output co'>#&gt; <span class='message'>Downloading 1 datasets from 10.1594/PANGAEA.746400</span></div><div class='output co'>#&gt; <span class='message'>Processing 1 files</span></div><div class='output co'>#&gt; [[1]]
 #&gt; [[1]][[1]]
 #&gt; &lt;Pangaea data&gt; 10.1594/PANGAEA.746398
+#&gt;   parent doi: 10.1594/PANGAEA.746398
+#&gt;   url:        https://doi.org/10.1594/PANGAEA.746398
+#&gt;   citation:   Sval&#39;nov, Vyacheslav N; Alekseeva, Tatyana N (2005): Grain size composition of sediments from Core PS-279. P.P. Shirshov Institute of Oceanology, Russian Academy of Sciences, Moscow, doi:10.1594/PANGAEA.746398,In supplement to: Sval&#39;nov, VN; Alekseeva, TN (2005): Grain Size Composition of Bottom Sediments of the World Ocean. Nauka Publ. (Moscow): in Russian, 297 pp
+#&gt;   path:       /Users/sacmac/Library/Caches/pangaear/10_1594_PANGAEA_746398.txt
+#&gt;   data:
 #&gt; # A tibble: 4 × 13
 #&gt;   `Depth [m]` `Depth top [m]` `Depth bot [m]`         Sediment `1-0.5 mm [%]`
 #&gt;         &lt;dbl&gt;           &lt;dbl&gt;           &lt;dbl&gt;            &lt;chr&gt;          &lt;dbl&gt;
@@ -377,6 +399,11 @@ on your machine.</p>
 #&gt; [[2]]
 #&gt; [[2]][[1]]
 #&gt; &lt;Pangaea data&gt; 10.1594/PANGAEA.746400
+#&gt;   parent doi: 10.1594/PANGAEA.746400
+#&gt;   url:        https://doi.org/10.1594/PANGAEA.746400
+#&gt;   citation:   Sval&#39;nov, Vyacheslav N; Alekseeva, Tatyana N (2005): Grain size composition of sediments from Core PS-281. P.P. Shirshov Institute of Oceanology, Russian Academy of Sciences, Moscow, doi:10.1594/PANGAEA.746400,In supplement to: Sval&#39;nov, VN; Alekseeva, TN (2005): Grain Size Composition of Bottom Sediments of the World Ocean. Nauka Publ. (Moscow): in Russian, 297 pp
+#&gt;   path:       /Users/sacmac/Library/Caches/pangaear/10_1594_PANGAEA_746400.txt
+#&gt;   data:
 #&gt; # A tibble: 11 × 13
 #&gt;    `Depth [m]` `Depth top [m]` `Depth bot [m]`           Sediment
 #&gt;          &lt;dbl&gt;           &lt;dbl&gt;           &lt;dbl&gt;              &lt;chr&gt;
@@ -401,374 +428,347 @@ on your machine.</p>
 #&gt;  [7] &quot;10_1594_PANGAEA_77399.txt&quot;  &quot;10_1594_PANGAEA_77400.txt&quot; 
 #&gt;  [9] &quot;10_1594_PANGAEA_77401.txt&quot;  &quot;10_1594_PANGAEA_77402.txt&quot; 
 #&gt; [11] &quot;10_1594_PANGAEA_77403.txt&quot;  &quot;10_1594_PANGAEA_77404.txt&quot; 
-#&gt; [13] &quot;10_1594_PANGAEA_77406.txt&quot;  &quot;10_1594_PANGAEA_804606.txt&quot;
-#&gt; [15] &quot;10_1594_PANGAEA_807580.txt&quot; &quot;10_1594_PANGAEA_807584.txt&quot;</div><div class='input'><span class='fu'>pg_cache_clear</span>(<span class='kw'>doi</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='st'>'10.1594/PANGAEA.746398'</span>,<span class='st'>'10.1594/PANGAEA.746400'</span>))
+#&gt; [13] &quot;10_1594_PANGAEA_77406.txt&quot;  &quot;10_1594_PANGAEA_807580.txt&quot;
+#&gt; [15] &quot;10_1594_PANGAEA_807584.txt&quot; &quot;10_1594_PANGAEA_825423.txt&quot;
+#&gt; [17] &quot;10_1594_PANGAEA_825424.txt&quot; &quot;10_1594_PANGAEA_825425.txt&quot;
+#&gt; [19] &quot;10_1594_PANGAEA_825426.txt&quot; &quot;10_1594_PANGAEA_825427.png&quot;
+#&gt; [21] &quot;10_1594_PANGAEA_860500.zip&quot;</div><div class='input'><span class='fu'>pg_cache_clear</span>(<span class='kw'>doi</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='st'>'10.1594/PANGAEA.746398'</span>,<span class='st'>'10.1594/PANGAEA.746400'</span>))
 <span class='fu'>pg_cache_list</span>()</div><div class='output co'>#&gt;  [1] &quot;10_1594_PANGAEA_319391.txt&quot; &quot;10_1594_PANGAEA_761002.txt&quot;
 #&gt;  [3] &quot;10_1594_PANGAEA_77397.txt&quot;  &quot;10_1594_PANGAEA_77398.txt&quot; 
 #&gt;  [5] &quot;10_1594_PANGAEA_77399.txt&quot;  &quot;10_1594_PANGAEA_77400.txt&quot; 
 #&gt;  [7] &quot;10_1594_PANGAEA_77401.txt&quot;  &quot;10_1594_PANGAEA_77402.txt&quot; 
 #&gt;  [9] &quot;10_1594_PANGAEA_77403.txt&quot;  &quot;10_1594_PANGAEA_77404.txt&quot; 
-#&gt; [11] &quot;10_1594_PANGAEA_77406.txt&quot;  &quot;10_1594_PANGAEA_804606.txt&quot;
-#&gt; [13] &quot;10_1594_PANGAEA_807580.txt&quot; &quot;10_1594_PANGAEA_807584.txt&quot;</div><div class='input'>
+#&gt; [11] &quot;10_1594_PANGAEA_77406.txt&quot;  &quot;10_1594_PANGAEA_807580.txt&quot;
+#&gt; [13] &quot;10_1594_PANGAEA_807584.txt&quot; &quot;10_1594_PANGAEA_825423.txt&quot;
+#&gt; [15] &quot;10_1594_PANGAEA_825424.txt&quot; &quot;10_1594_PANGAEA_825425.txt&quot;
+#&gt; [17] &quot;10_1594_PANGAEA_825426.txt&quot; &quot;10_1594_PANGAEA_825427.png&quot;
+#&gt; [19] &quot;10_1594_PANGAEA_860500.zip&quot;</div><div class='input'>
 <span class='co'># search for datasets, then pass in DOIs</span>
-<span class='no'>res</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='pg_search.html'>pg_search</a></span>(<span class='kw'>query</span><span class='kw'>=</span><span class='st'>'water'</span>, <span class='kw'>count</span><span class='kw'>=</span><span class='fl'>20</span>)
-<span class='fu'>pg_data</span>(<span class='no'>res</span>$<span class='no'>doi</span>[<span class='fl'>1</span>])</div><div class='output co'>#&gt; <span class='message'>Downloading 7 datasets from 10.1594/PANGAEA.843740</span></div><div class='output co'>#&gt; <span class='message'>Processing 7 files</span></div><div class='output co'>#&gt; [[1]]
-#&gt; &lt;Pangaea data&gt; 10.1594/PANGAEA.843733
-#&gt; # A tibble: 52,560 × 5
-#&gt;         `Date/Time` `Press [dbar]`
-#&gt;               &lt;chr&gt;          &lt;dbl&gt;
-#&gt; 1  2005-01-01T00:00          12.70
-#&gt; 2  2005-01-01T00:10          12.79
-#&gt; 3  2005-01-01T00:20          12.87
-#&gt; 4  2005-01-01T00:30          12.92
-#&gt; 5  2005-01-01T00:40          12.99
-#&gt; 6  2005-01-01T00:50          13.05
-#&gt; 7  2005-01-01T01:00          13.11
-#&gt; 8  2005-01-01T01:10          13.16
-#&gt; 9  2005-01-01T01:20          13.19
-#&gt; 10 2005-01-01T01:30          13.22
-#&gt; # ... with 52,550 more rows, and 3 more variables: `Water level [m] (with trend
-#&gt; #   and outlier removal)` &lt;dbl&gt;, `Water level [m] (after all processing
-#&gt; #   steps)` &lt;dbl&gt;, `Flag [#]` &lt;int&gt;
+(<span class='no'>searchres</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='pg_search.html'>pg_search</a></span>(<span class='kw'>query</span> <span class='kw'>=</span> <span class='st'>'birds'</span>, <span class='kw'>count</span> <span class='kw'>=</span> <span class='fl'>20</span>))</div><div class='output co'>#&gt; # A tibble: 20 × 6
+#&gt;        score                    doi  size size_measure
+#&gt; *      &lt;dbl&gt;                  &lt;chr&gt; &lt;dbl&gt;        &lt;chr&gt;
+#&gt; 1  105.46468 10.1594/PANGAEA.743406     2     datasets
+#&gt; 2   69.22585 10.1594/PANGAEA.788547     3     datasets
+#&gt; 3   68.81578 10.1594/PANGAEA.839226    74  data points
+#&gt; 4   64.36520 10.1594/PANGAEA.808549    80  data points
+#&gt; 5   63.67343 10.1594/PANGAEA.633712    16     datasets
+#&gt; 6   60.86255 10.1594/PANGAEA.817547     3     datasets
+#&gt; 7   60.61428 10.1594/PANGAEA.872356   220  data points
+#&gt; 8   59.76067 10.1594/PANGAEA.837408    92  data points
+#&gt; 9   57.46819 10.1594/PANGAEA.786530   363  data points
+#&gt; 10  56.91473 10.1594/PANGAEA.841257 38990  data points
+#&gt; 11  55.95452 10.1594/PANGAEA.816022     4     datasets
+#&gt; 12  52.03966 10.1594/PANGAEA.841258    75  data points
+#&gt; 13  50.92400 10.1594/PANGAEA.808873    39  data points
+#&gt; 14  50.85811 10.1594/PANGAEA.761424     2     datasets
+#&gt; 15  50.85655 10.1594/PANGAEA.841264     3     datasets
+#&gt; 16  48.45797 10.1594/PANGAEA.633713    30     datasets
+#&gt; 17  46.88770 10.1594/PANGAEA.815269    20  data points
+#&gt; 18  44.58861 10.1594/PANGAEA.841252 25236  data points
+#&gt; 19  42.99368 10.1594/PANGAEA.819304   186  data points
+#&gt; 20  41.71456 10.1594/PANGAEA.815229     3     datasets
+#&gt; # ... with 2 more variables: citation &lt;chr&gt;, supplement_to &lt;chr&gt;</div><div class='input'><span class='fu'>pg_data</span>(<span class='no'>searchres</span>$<span class='no'>doi</span>[<span class='fl'>1</span>])</div><div class='output co'>#&gt; <span class='message'>Downloading 2 datasets from 10.1594/PANGAEA.743406</span></div><div class='output co'>#&gt; <span class='message'>Processing 2 files</span></div><div class='output co'>#&gt; [[1]]
+#&gt; &lt;Pangaea data&gt; 10.1594/PANGAEA.743401
+#&gt;   parent doi: 10.1594/PANGAEA.743406
+#&gt;   url:        https://doi.org/10.1594/PANGAEA.743401
+#&gt;   citation:   Novatti, Ricardo (1963): Bird observations in the Weddell Sea. doi:10.1594/PANGAEA.743406,Supplement to: Novatti, R (1963): Pelagic distribution of birds at the Weddell Sea. Polarforschung, 33(1/2), 207-213, hdl:10013/epic.29260.d001
+#&gt;   path:       /Users/sacmac/Library/Caches/pangaear/10_1594_PANGAEA_743401.txt
+#&gt;   data:
+#&gt; # A tibble: 45 × 23
+#&gt;    `Date/Time` Latitude Longitude `P. atriceps [#]` `S. vittata [#]`
+#&gt;          &lt;chr&gt;    &lt;dbl&gt;     &lt;dbl&gt;             &lt;int&gt;            &lt;chr&gt;
+#&gt; 1   1955-12-06  -63.983   -55.067                 0                0
+#&gt; 2   1955-12-07  -61.233   -46.250                 0                0
+#&gt; 3   1955-12-08  -60.750   -44.717                 0               ?1
+#&gt; 4   1955-12-09  -60.750   -44.717                 2               ?1
+#&gt; 5   1955-12-10  -60.750   -44.717                22                2
+#&gt; 6   1955-12-11  -60.750   -44.717                 7                1
+#&gt; 7   1955-12-12  -60.133   -37.267                 0                0
+#&gt; 8   1955-12-13  -59.500   -28.133                 0                0
+#&gt; 9   1955-12-14  -59.450   -27.250                 0                0
+#&gt; 10  1955-12-15  -64.317   -36.467                 0                0
+#&gt; # ... with 35 more rows, and 18 more variables: `L. dominicanus [#]` &lt;chr&gt;, `C.
+#&gt; #   skua [#]` &lt;chr&gt;, `C. alba [#]` &lt;int&gt;, `O. oceanicus [#]` &lt;chr&gt;, `H.
+#&gt; #   caerulea [#]` &lt;chr&gt;, `P. desolata [#]` &lt;chr&gt;, `P. nivea [#]` &lt;chr&gt;, `D.
+#&gt; #   capensis [#]` &lt;chr&gt;, `T. antarctica [#]` &lt;chr&gt;, `F. glacialoides
+#&gt; #   [#]` &lt;chr&gt;, `M. giganteus [#]` &lt;int&gt;, `D. exulans exulans [#]` &lt;int&gt;, `E.
+#&gt; #   chrysolophus [#]` &lt;int&gt;, `P. papua [#]` &lt;chr&gt;, `P. antarctica [#]` &lt;chr&gt;,
+#&gt; #   `P. adeliae [#]` &lt;chr&gt;, `A. forsteri [#]` &lt;chr&gt;, Comment &lt;chr&gt;
 #&gt; 
 #&gt; [[2]]
-#&gt; &lt;Pangaea data&gt; 10.1594/PANGAEA.843734
-#&gt; # A tibble: 52,560 × 5
-#&gt;         `Date/Time` `Press [dbar]`
-#&gt;               &lt;chr&gt;          &lt;dbl&gt;
-#&gt; 1  2006-01-01T00:00          12.09
-#&gt; 2  2006-01-01T00:10          12.00
-#&gt; 3  2006-01-01T00:20          11.90
-#&gt; 4  2006-01-01T00:30          11.79
-#&gt; 5  2006-01-01T00:40          11.69
-#&gt; 6  2006-01-01T00:50          11.59
-#&gt; 7  2006-01-01T01:00          11.48
-#&gt; 8  2006-01-01T01:10          11.37
-#&gt; 9  2006-01-01T01:20          11.26
-#&gt; 10 2006-01-01T01:30          11.15
-#&gt; # ... with 52,550 more rows, and 3 more variables: `Water level [m] (with trend
-#&gt; #   and outlier removal)` &lt;dbl&gt;, `Water level [m] (after all processing
-#&gt; #   steps)` &lt;dbl&gt;, `Flag [#]` &lt;int&gt;
-#&gt; 
-#&gt; [[3]]
-#&gt; &lt;Pangaea data&gt; 10.1594/PANGAEA.843735
-#&gt; # A tibble: 52,560 × 5
-#&gt;         `Date/Time` `Press [dbar]`
-#&gt;               &lt;chr&gt;          &lt;dbl&gt;
-#&gt; 1  2007-01-01T00:00          11.41
-#&gt; 2  2007-01-01T00:10          11.39
-#&gt; 3  2007-01-01T00:20          11.34
-#&gt; 4  2007-01-01T00:30          11.28
-#&gt; 5  2007-01-01T00:40          11.31
-#&gt; 6  2007-01-01T00:50          11.32
-#&gt; 7  2007-01-01T01:00          11.29
-#&gt; 8  2007-01-01T01:10          11.23
-#&gt; 9  2007-01-01T01:20          11.29
-#&gt; 10 2007-01-01T01:30          11.31
-#&gt; # ... with 52,550 more rows, and 3 more variables: `Water level [m] (with trend
-#&gt; #   and outlier removal)` &lt;dbl&gt;, `Water level [m] (after all processing
-#&gt; #   steps)` &lt;dbl&gt;, `Flag [#]` &lt;int&gt;
-#&gt; 
-#&gt; [[4]]
-#&gt; &lt;Pangaea data&gt; 10.1594/PANGAEA.843736
-#&gt; # A tibble: 52,704 × 5
-#&gt;         `Date/Time` `Press [dbar]`
-#&gt;               &lt;chr&gt;          &lt;dbl&gt;
-#&gt; 1  2008-01-01T00:00          11.40
-#&gt; 2  2008-01-01T00:10          11.55
-#&gt; 3  2008-01-01T00:20          11.67
-#&gt; 4  2008-01-01T00:30          11.80
-#&gt; 5  2008-01-01T00:40          11.92
-#&gt; 6  2008-01-01T00:50          12.01
-#&gt; 7  2008-01-01T01:00          12.10
-#&gt; 8  2008-01-01T01:10          12.18
-#&gt; 9  2008-01-01T01:20          12.27
-#&gt; 10 2008-01-01T01:30          12.34
-#&gt; # ... with 52,694 more rows, and 3 more variables: `Water level [m] (with trend
-#&gt; #   and outlier removal)` &lt;dbl&gt;, `Water level [m] (after all processing
-#&gt; #   steps)` &lt;dbl&gt;, `Flag [#]` &lt;int&gt;
-#&gt; 
-#&gt; [[5]]
-#&gt; &lt;Pangaea data&gt; 10.1594/PANGAEA.843737
-#&gt; # A tibble: 52,560 × 5
-#&gt;         `Date/Time` `Press [dbar]`
-#&gt;               &lt;chr&gt;          &lt;dbl&gt;
-#&gt; 1  2009-01-01T00:00          11.63
-#&gt; 2  2009-01-01T00:10          11.70
-#&gt; 3  2009-01-01T00:20          11.78
-#&gt; 4  2009-01-01T00:30          11.84
-#&gt; 5  2009-01-01T00:40          11.90
-#&gt; 6  2009-01-01T00:50          11.94
-#&gt; 7  2009-01-01T01:00          11.97
-#&gt; 8  2009-01-01T01:10          11.98
-#&gt; 9  2009-01-01T01:20          11.97
-#&gt; 10 2009-01-01T01:30          11.95
-#&gt; # ... with 52,550 more rows, and 3 more variables: `Water level [m] (with trend
-#&gt; #   and outlier removal)` &lt;dbl&gt;, `Water level [m] (after all processing
-#&gt; #   steps)` &lt;dbl&gt;, `Flag [#]` &lt;int&gt;
-#&gt; 
-#&gt; [[6]]
-#&gt; &lt;Pangaea data&gt; 10.1594/PANGAEA.843738
-#&gt; # A tibble: 52,560 × 5
-#&gt;         `Date/Time` `Press [dbar]`
-#&gt;               &lt;chr&gt;          &lt;dbl&gt;
-#&gt; 1  2010-01-01T00:00          12.12
-#&gt; 2  2010-01-01T00:10          12.02
-#&gt; 3  2010-01-01T00:20          11.90
-#&gt; 4  2010-01-01T00:30          11.79
-#&gt; 5  2010-01-01T00:40          11.69
-#&gt; 6  2010-01-01T00:50          11.58
-#&gt; 7  2010-01-01T01:00          11.48
-#&gt; 8  2010-01-01T01:10          11.37
-#&gt; 9  2010-01-01T01:20          11.26
-#&gt; 10 2010-01-01T01:30          11.16
-#&gt; # ... with 52,550 more rows, and 3 more variables: `Water level [m] (with trend
-#&gt; #   and outlier removal)` &lt;dbl&gt;, `Water level [m] (after all processing
-#&gt; #   steps)` &lt;dbl&gt;, `Flag [#]` &lt;int&gt;
-#&gt; 
-#&gt; [[7]]
-#&gt; &lt;Pangaea data&gt; 10.1594/PANGAEA.843739
-#&gt; # A tibble: 52,560 × 5
-#&gt;         `Date/Time` `Press [dbar]`
-#&gt;               &lt;chr&gt;          &lt;dbl&gt;
-#&gt; 1  2011-01-01T00:00          11.11
-#&gt; 2  2011-01-01T00:10          11.07
-#&gt; 3  2011-01-01T00:20          11.03
-#&gt; 4  2011-01-01T00:30          11.01
-#&gt; 5  2011-01-01T00:40          10.97
-#&gt; 6  2011-01-01T00:50          10.93
-#&gt; 7  2011-01-01T01:00          10.94
-#&gt; 8  2011-01-01T01:10          10.93
-#&gt; 9  2011-01-01T01:20          10.93
-#&gt; 10 2011-01-01T01:30          10.94
-#&gt; # ... with 52,550 more rows, and 3 more variables: `Water level [m] (with trend
-#&gt; #   and outlier removal)` &lt;dbl&gt;, `Water level [m] (after all processing
-#&gt; #   steps)` &lt;dbl&gt;, `Flag [#]` &lt;int&gt;
-#&gt; </div><div class='input'><span class='fu'>pg_data</span>(<span class='no'>res</span>$<span class='no'>doi</span>[<span class='fl'>2</span>])</div><div class='output co'>#&gt; <span class='message'>Downloading 1 datasets from 10.1594/PANGAEA.762952</span></div><div class='output co'>#&gt; <span class='message'>Processing 1 files</span></div><div class='output co'>#&gt; [[1]]
-#&gt; &lt;Pangaea data&gt; 10.1594/PANGAEA.762952
-#&gt; # A tibble: 13 × 10
-#&gt;                    Species               `Growth form` `Water dm [%] (initial)`
-#&gt;                      &lt;chr&gt;                       &lt;chr&gt;                    &lt;int&gt;
-#&gt; 1  Schistidium antarcticum              entire cushion                      133
-#&gt; 2  Schistidium antarcticum                   tall turf                      554
-#&gt; 3  Schistidium antarcticum                  short turf                      565
-#&gt; 4             Bryum algens  shorl turf, dense rhizoids                      717
-#&gt; 5             Bryum algens short turf, sparse rhizoids                      182
-#&gt; 6         Usnca sphacelata                 robust form                       73
-#&gt; 7         Usnca sphacelata                   fine form                      114
-#&gt; 8         Usnca sphacelata                  shade form                      103
-#&gt; 9         Usnea antarctica                 robust form                       85
-#&gt; 10        Usnea antarctica                   fine form                       83
-#&gt; 11     Alectoria minuscula                                                  351
-#&gt; 12   Umbilicaria decussata                                                  130
-#&gt; 13      Umbilicaria aprina                                                  204
-#&gt; # ... with 7 more variables: `Water std dev [±] (initial)` &lt;int&gt;, `Water loss
-#&gt; #   dry wgt [%] (Time 1 hr)` &lt;int&gt;, `Water loss dry wgt [%] (Time 6 hr)` &lt;int&gt;,
-#&gt; #   `Water loss dry wgt [%] (Time 12 hr)` &lt;int&gt;, `Water loss dry wgt [%] (Time
-#&gt; #   24 hr)` &lt;int&gt;, `Water dm [%]` &lt;int&gt;, `Water std dev [±]` &lt;dbl&gt;
-#&gt; </div><div class='input'><span class='fu'>pg_data</span>(<span class='no'>res</span>$<span class='no'>doi</span>[<span class='fl'>3</span>])</div><div class='output co'>#&gt; <span class='message'>Downloading 10 datasets from 10.1594/PANGAEA.811079</span></div><div class='output co'>#&gt; <span class='message'>Processing 10 files</span></div><div class='output co'>#&gt; [[1]]
-#&gt; &lt;Pangaea data&gt; 10.1594/PANGAEA.811075
-#&gt; # A tibble: 2,165 × 2
-#&gt;         `Date/Time` `Q [l/s]`
-#&gt;               &lt;chr&gt;     &lt;dbl&gt;
-#&gt; 1  2011-07-04T02:15    1.0264
-#&gt; 2  2011-07-04T02:45    0.9767
-#&gt; 3  2011-07-04T03:15    1.0193
-#&gt; 4  2011-07-04T03:45    0.9557
-#&gt; 5  2011-07-04T04:15    0.9879
-#&gt; 6  2011-07-04T04:45    1.0351
-#&gt; 7  2011-07-04T05:15    1.0956
-#&gt; 8  2011-07-04T05:45    1.1674
-#&gt; 9  2011-07-04T06:15    1.1720
-#&gt; 10 2011-07-04T06:45    1.1856
-#&gt; # ... with 2,155 more rows
+#&gt; &lt;Pangaea data&gt; 10.1594/PANGAEA.743405
+#&gt;   parent doi: 10.1594/PANGAEA.743406
+#&gt;   url:        https://doi.org/10.1594/PANGAEA.743405
+#&gt;   citation:   Novatti, Ricardo (1963): Bird observations in the Weddell Sea. doi:10.1594/PANGAEA.743406,Supplement to: Novatti, R (1963): Pelagic distribution of birds at the Weddell Sea. Polarforschung, 33(1/2), 207-213, hdl:10013/epic.29260.d001
+#&gt;   path:       /Users/sacmac/Library/Caches/pangaear/10_1594_PANGAEA_743405.txt
+#&gt;   data:
+#&gt; # A tibble: 24 × 22
+#&gt;    `Date/Time` Latitude Longitude `C. skua [#]` `C. alba [#]`
+#&gt;          &lt;chr&gt;    &lt;dbl&gt;     &lt;dbl&gt;         &lt;int&gt;         &lt;int&gt;
+#&gt; 1   1959-12-22  -63.833   -56.183             0             0
+#&gt; 2   1959-12-23  -62.233   -51.167             0             1
+#&gt; 3   1959-12-24  -61.200   -45.217             0             0
+#&gt; 4   1959-12-25  -60.183   -38.317             0             0
+#&gt; 5   1959-12-26  -60.200   -31.333             0             1
+#&gt; 6   1959-12-27  -61.333   -23.067             0             0
+#&gt; 7   1959-12-28  -65.200   -21.833             0             0
+#&gt; 8   1959-12-29  -66.967   -18.333             0             0
+#&gt; 9   1959-12-30  -69.333   -16.150             0             0
+#&gt; 10  1959-12-31  -68.667   -14.100             0             0
+#&gt; # ... with 14 more rows, and 17 more variables: `O. oceanicus [#]` &lt;int&gt;, `H.
+#&gt; #   caerulea [#]` &lt;int&gt;, `P. macro. macroptera [#]` &lt;int&gt;, `P. desolata
+#&gt; #   [#]` &lt;int&gt;, `P. nivea [#]` &lt;int&gt;, `T. antarctica [#]` &lt;int&gt;, `D. capensis
+#&gt; #   [#]` &lt;int&gt;, `F. glacialoides [#]` &lt;int&gt;, `M. giganteus [#]` &lt;int&gt;, `D.
+#&gt; #   exulans exulans [#]` &lt;int&gt;, `D. chrysostoma [#]` &lt;int&gt;, `D. melanophris
+#&gt; #   [#]` &lt;int&gt;, `P. palpebrata [#]` &lt;int&gt;, `P. fusca [#]` &lt;int&gt;, `P. antarctica
+#&gt; #   [#]` &lt;int&gt;, `P. adeliae [#]` &lt;int&gt;, `A. forsteri [#]` &lt;int&gt;
+#&gt; </div><div class='input'><span class='fu'>pg_data</span>(<span class='no'>searchres</span>$<span class='no'>doi</span>[<span class='fl'>2</span>])</div><div class='output co'>#&gt; <span class='message'>Downloading 3 datasets from 10.1594/PANGAEA.788547</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Log in required, skipping file download</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Log in required, skipping file download</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Log in required, skipping file download</span></div><div class='output co'>#&gt; <span class='message'>Processing 3 files</span></div><div class='output co'>#&gt; [[1]]
+#&gt; &lt;Pangaea data&gt; 10.1594/PANGAEA.788545
+#&gt;   parent doi: 10.1594/PANGAEA.788547
+#&gt;   url:        https://doi.org/10.1594/PANGAEA.788545
+#&gt;   citation:   Muñoz, Juan C; Aerts, Raf; Thijs, Koen W; Stevenson, Pablo R; Muys, Bart; Sekercioglu, Cagan H (2013): Contribution of woody habitat islands to the conservation of birds and their potential ecosystem services in an extensive Colombian rangeland. doi:10.1594/PANGAEA.788547,Supplement to: Muñoz, JC et al. (2013): Contribution of woody habitat islands to the conservation of birds and their potential ecosystem services in an extensive Colombian rangeland. Agriculture Ecosystems &amp; Environment, 173, 13-19, doi:10.1016/j.agee.2013.04.006
+#&gt;   path:       NA
+#&gt;   data:
+#&gt; [1] NA
 #&gt; 
 #&gt; [[2]]
-#&gt; &lt;Pangaea data&gt; 10.1594/PANGAEA.811076
-#&gt; # A tibble: 4,215 × 3
-#&gt;         `Date/Time` `ET [mm/h]` `Precip [mm/h]`
-#&gt;               &lt;chr&gt;       &lt;dbl&gt;           &lt;dbl&gt;
-#&gt; 1  2011-05-24T04:45      0.0116          0.0000
-#&gt; 2  2011-05-24T05:15      0.0149          0.0000
-#&gt; 3  2011-05-24T05:45      0.0182          0.4464
-#&gt; 4  2011-05-24T06:15      0.0230          0.0000
-#&gt; 5  2011-05-24T06:45      0.0278          0.0000
-#&gt; 6  2011-05-24T07:15      0.0174          0.0000
-#&gt; 7  2011-05-24T07:45      0.0140          0.0000
-#&gt; 8  2011-05-24T08:15      0.0096          0.0000
-#&gt; 9  2011-05-24T08:45      0.0135          0.0000
-#&gt; 10 2011-05-24T09:15      0.0158          0.0000
-#&gt; # ... with 4,205 more rows
+#&gt; &lt;Pangaea data&gt; 10.1594/PANGAEA.788544
+#&gt;   parent doi: 10.1594/PANGAEA.788547
+#&gt;   url:        https://doi.org/10.1594/PANGAEA.788544
+#&gt;   citation:   Muñoz, Juan C; Aerts, Raf; Thijs, Koen W; Stevenson, Pablo R; Muys, Bart; Sekercioglu, Cagan H (2013): Contribution of woody habitat islands to the conservation of birds and their potential ecosystem services in an extensive Colombian rangeland. doi:10.1594/PANGAEA.788547,Supplement to: Muñoz, JC et al. (2013): Contribution of woody habitat islands to the conservation of birds and their potential ecosystem services in an extensive Colombian rangeland. Agriculture Ecosystems &amp; Environment, 173, 13-19, doi:10.1016/j.agee.2013.04.006
+#&gt;   path:       NA
+#&gt;   data:
+#&gt; [1] NA
 #&gt; 
 #&gt; [[3]]
-#&gt; &lt;Pangaea data&gt; 10.1594/PANGAEA.811084
-#&gt; # A tibble: 13 × 4
-#&gt;    `Date/Time` `Depth [m]` `Kfs [m/day]` `Soil comp`
-#&gt;          &lt;chr&gt;       &lt;dbl&gt;         &lt;dbl&gt;       &lt;chr&gt;
-#&gt; 1   2012-07-01        0.02        42.336        moss
-#&gt; 2   2012-07-02        0.07         3.283     organic
-#&gt; 3   2012-07-03        0.07         2.246     organic
-#&gt; 4   2012-07-04        0.14         0.207     mineral
-#&gt; 5   2012-07-05        0.23         0.030     mineral
-#&gt; 6   2012-07-06        0.23         0.199     mineral
-#&gt; 7   2012-07-07        0.02        38.016        moss
-#&gt; 8   2012-07-08        0.10         1.123     organic
-#&gt; 9   2012-07-09        0.18         0.458     mineral
-#&gt; 10  2012-07-10        0.17         0.214     mineral
-#&gt; 11  2012-07-11        0.17         0.049     mineral
-#&gt; 12  2012-07-12        0.10         0.562     organic
-#&gt; 13  2012-07-13        0.07        17.280     organic
+#&gt; &lt;Pangaea data&gt; 10.1594/PANGAEA.788546
+#&gt;   parent doi: 10.1594/PANGAEA.788547
+#&gt;   url:        https://doi.org/10.1594/PANGAEA.788546
+#&gt;   citation:   Muñoz, Juan C; Aerts, Raf; Thijs, Koen W; Stevenson, Pablo R; Muys, Bart; Sekercioglu, Cagan H (2013): Contribution of woody habitat islands to the conservation of birds and their potential ecosystem services in an extensive Colombian rangeland. doi:10.1594/PANGAEA.788547,Supplement to: Muñoz, JC et al. (2013): Contribution of woody habitat islands to the conservation of birds and their potential ecosystem services in an extensive Colombian rangeland. Agriculture Ecosystems &amp; Environment, 173, 13-19, doi:10.1016/j.agee.2013.04.006
+#&gt;   path:       NA
+#&gt;   data:
+#&gt; [1] NA
+#&gt; </div><div class='input'><span class='fu'>pg_data</span>(<span class='no'>searchres</span>$<span class='no'>doi</span>[<span class='fl'>3</span>])</div><div class='output co'>#&gt; <span class='message'>Downloading 1 datasets from 10.1594/PANGAEA.839226</span></div><div class='output co'>#&gt; <span class='message'>Processing 1 files</span></div><div class='output co'>#&gt; [[1]]
+#&gt; &lt;Pangaea data&gt; 10.1594/PANGAEA.839226
+#&gt;   parent doi: 10.1594/PANGAEA.839226
+#&gt;   url:        https://doi.org/10.1594/PANGAEA.839226
+#&gt;   citation:   Thierry, Anne-Mathilde; Massemin, Sylvie; Handrich, Yves; Raclot, Thierry (2013): (Table 1) Breeding parameters for 60 male Adélie penguins (Pygoscelis adeliae) at station Dumont d&#39;Urville (Antarctica) depending on treatment (control vs. CORT). doi:10.1594/PANGAEA.839226,Supplement to: Thierry, A-M et al. (2013): Elevated corticosterone levels and severe weather conditions decrease parental investment of incubating Adélie penguins. Hormones and Behavior, 63(3), 475-483, doi:10.1016/j.yhbeh.2012.12.011
+#&gt;   path:       /Users/sacmac/Library/Caches/pangaear/10_1594_PANGAEA_839226.txt
+#&gt;   data:
+#&gt; # A tibble: 4 × 23
+#&gt;    Coverage      `Method comm`   Treat `P. adeliae [#]`
+#&gt;       &lt;chr&gt;              &lt;chr&gt;   &lt;chr&gt;            &lt;int&gt;
+#&gt; 1 2007-2010 Without dummy eggs Control               23
+#&gt; 2 2007-2010 Without dummy eggs    CORT               23
+#&gt; 3 2007-2010    With dummy eggs Control                5
+#&gt; 4 2007-2010    With dummy eggs    CORT                9
+#&gt; # ... with 19 more variables: `Treat (date of implantation)` &lt;chr&gt;, `Std dev
+#&gt; #   [±] (implantation date)` &lt;dbl&gt;, `P. adeliae m [kg]` &lt;dbl&gt;, `P. adeliae std
+#&gt; #   dev [±] (male body mass)` &lt;dbl&gt;, `P. adeliae egg laying` &lt;chr&gt;, `P. adeliae
+#&gt; #   std dev [±] (egg laying date)` &lt;dbl&gt;, `Treat (date of female
+#&gt; #   departure)` &lt;chr&gt;, `Std dev [±] (female departure date)` &lt;dbl&gt;,
+#&gt; #   `Eggs/clutch [#]` &lt;dbl&gt;, `Eggs/clutch std e [±]` &lt;dbl&gt;, `Treat (date start
+#&gt; #   of incubation beha...)` &lt;chr&gt;, `Std dev [±] (start of behaviour
+#&gt; #   recording)` &lt;dbl&gt;, `Treat (date end of incubation behavi...)` &lt;chr&gt;, `Std
+#&gt; #   dev [±] (end of behaviour recording)` &lt;dbl&gt;, `Treat (date of male
+#&gt; #   departure)` &lt;chr&gt;, `Std dev [±] (male departure date)` &lt;dbl&gt;, `P. adeliae
+#&gt; #   hatching` &lt;chr&gt;, `P. adeliae std dev [±] (hatching date)` &lt;dbl&gt;,
+#&gt; #   Comment &lt;chr&gt;
+#&gt; </div><div class='input'><span class='fu'>pg_data</span>(<span class='no'>searchres</span>$<span class='no'>doi</span>[<span class='fl'>4</span>])</div><div class='output co'>#&gt; <span class='message'>Downloading 1 datasets from 10.1594/PANGAEA.808549</span></div><div class='output co'>#&gt; <span class='message'>Processing 1 files</span></div><div class='output co'>#&gt; [[1]]
+#&gt; &lt;Pangaea data&gt; 10.1594/PANGAEA.808549
+#&gt;   parent doi: 10.1594/PANGAEA.808549
+#&gt;   url:        https://doi.org/10.1594/PANGAEA.808549
+#&gt;   citation:   Cottin, Manuelle; Kato, Akiko; Thierry, Anne-Mathilde; Le Maho, Yvon; Raclot, Thierry; Ropert-Coudert, Yan (2011): (Table 1) Diving behaviour of male Adélie penguins (Pygoscelis adeliae) with and without corticosterone implants at Pointe Géologie. doi:10.1594/PANGAEA.808549,Supplement to: Cottin, M et al. (2011): Does corticosterone affect diving behaviour of male Adelie Penguins? A preliminary experimental study. ORNITHOLOGICAL SCIENCE, 10(1), 3-11, doi:10.2326/osj.10.3
+#&gt;   path:       /Users/sacmac/Library/Caches/pangaear/10_1594_PANGAEA_808549.txt
+#&gt;   data:
+#&gt; # A tibble: 4 × 20
+#&gt;     Treat        ID `Duration [days] (of recording)`
+#&gt;     &lt;chr&gt;     &lt;chr&gt;                            &lt;dbl&gt;
+#&gt; 1 Control Control 1                             15.7
+#&gt; 2 Control Control 2                             15.2
+#&gt; 3    CORT    CORT 3                             21.3
+#&gt; 4    CORT    CORT 4                             16.7
+#&gt; # ... with 17 more variables: `Duration [days] (per trip, mean)` &lt;dbl&gt;, `Std
+#&gt; #   dev [±] (mean trip duration)` &lt;dbl&gt;, `Dives [#]` &lt;int&gt;, `Std dev [±] (no.
+#&gt; #   dives/trip)` &lt;int&gt;, `Time [s]` &lt;int&gt;, `No (of bouts per trip (bout =
+#&gt; #   sho...)` &lt;int&gt;, `Std dev [±] (no. bouts/trip)` &lt;int&gt;, `No (of dives per
+#&gt; #   bout (bout = sho...)` &lt;int&gt;, `Std dev [±] (no.dives/bout)` &lt;int&gt;,
+#&gt; #   `Proportion of time` &lt;dbl&gt;, `Proportion of time std e [±]` &lt;dbl&gt;, `P.
+#&gt; #   adeliae dive max [m] (shallow dives)` &lt;int&gt;, `P. adeliae std dev [±] (dive
+#&gt; #   depth max shallow)` &lt;int&gt;, `P. adeliae dive max [m] (deep dives)` &lt;int&gt;,
+#&gt; #   `P. adeliae std dev [±] (dive depth max deep)` &lt;int&gt;, `No (of undulations
+#&gt; #   per dive)` &lt;dbl&gt;, `Std dev [±] (no. of undulations/dive)` &lt;dbl&gt;
+#&gt; </div><div class='input'><span class='fu'>pg_data</span>(<span class='no'>searchres</span>$<span class='no'>doi</span>[<span class='fl'>7</span>])</div><div class='output co'>#&gt; <span class='message'>Downloading 1 datasets from 10.1594/PANGAEA.872356</span></div><div class='output co'>#&gt; <span class='message'>Processing 1 files</span></div><div class='output co'>#&gt; [[1]]
+#&gt; &lt;Pangaea data&gt; 10.1594/PANGAEA.872356
+#&gt;   parent doi: 10.1594/PANGAEA.872356
+#&gt;   url:        https://doi.org/10.1594/PANGAEA.872356
+#&gt;   citation:   Georgios, Goras; Chrysoula, Tananaki; Vasileios, Kanelis; Christakis, Tofaris; Epaminontas, Giannouris; Nikolia, Argena; Sofia, Gounari; Andreas, Thrasyvoulou (2017): The conflict of survival of Bee-eaters and of honey bees. Dataset #872356 (DOI registration in progress),Supplement to: Georgios, G et al. (submitted): The conflict of survival of Bee-eaters and of honey bees in Cyprus.
+#&gt;   path:       /Users/sacmac/Library/Caches/pangaear/10_1594_PANGAEA_872356.txt
+#&gt;   data:
+#&gt; # A tibble: 44 × 5
+#&gt;                                                                       Content
+#&gt;                                                                         &lt;chr&gt;
+#&gt; 1                                 1 Two apiaries  in experimental area, video
+#&gt; 2                                                2 Experimental Apiary, video
+#&gt; 3                      3 Hanging shiny objects to chase the bee-eaters, video
+#&gt; 4                                 4 Bird sounds from Birdchaser device, video
+#&gt; 5                                     5 Scaring voices from bee eaters, video
+#&gt; 6  6 Bee-eaters form a ring over the apiary 200-300 meters from apiary, video
+#&gt; 7                               7 Restriction of bees into their hives, video
+#&gt; 8                                  8 The complete cease of bee flights, video
+#&gt; 9                  9 No flights of bees with the present of bee-eaters, video
+#&gt; 10                                10 Flight of bees without bee-eaters, video
+#&gt; # ... with 34 more rows, and 4 more variables: `File name` &lt;chr&gt;, `File
+#&gt; #   format` &lt;chr&gt;, `File size [kByte]` &lt;dbl&gt;, `URL file` &lt;chr&gt;
+#&gt; </div><div class='input'>
+<span class='co'># png file</span>
+<span class='fu'>pg_data</span>(<span class='kw'>doi</span> <span class='kw'>=</span> <span class='st'>"10.1594/PANGAEA.825428"</span>)</div><div class='output co'>#&gt; <span class='message'>Downloading 5 datasets from 10.1594/PANGAEA.825428</span></div><div class='output co'>#&gt; <span class='message'>Processing 5 files</span></div><div class='output co'>#&gt; [[1]]
+#&gt; &lt;Pangaea data&gt; 10.1594/PANGAEA.825427
+#&gt;   parent doi: 10.1594/PANGAEA.825428
+#&gt;   url:        https://doi.org/10.1594/PANGAEA.825427
+#&gt;   citation:   Kharanzhevskaya, Yulia Alexsandrovna (2014): Mire water balance within the River Klyuch basin, Western Siberia. doi:10.1594/PANGAEA.825428,Supplement to: Kharanzhevskaya, YA (2014): Estimation of peculiarities and long-term dynamics of mire water balance in Western Siberia. Siberian Research Institute of Agriculture and Peat, 13 pp
+#&gt;   path:       /Users/sacmac/Library/Caches/pangaear/10_1594_PANGAEA_825427.png
+#&gt;   data:
+#&gt; [1] &quot;png; read with png::readPNG()&quot;
+#&gt; 
+#&gt; [[2]]
+#&gt; &lt;Pangaea data&gt; 10.1594/PANGAEA.825423
+#&gt;   parent doi: 10.1594/PANGAEA.825428
+#&gt;   url:        https://doi.org/10.1594/PANGAEA.825423
+#&gt;   citation:   Kharanzhevskaya, Yulia Alexsandrovna (2014): Mire water balance within the River Klyuch basin, Western Siberia. doi:10.1594/PANGAEA.825428,Supplement to: Kharanzhevskaya, YA (2014): Estimation of peculiarities and long-term dynamics of mire water balance in Western Siberia. Siberian Research Institute of Agriculture and Peat, 13 pp
+#&gt;   path:       /Users/sacmac/Library/Caches/pangaear/10_1594_PANGAEA_825423.txt
+#&gt;   data:
+#&gt; # A tibble: 191 × 3
+#&gt;    `Date/Time` `Water level [m] (of Klyuch River given in mete...)`
+#&gt;          &lt;chr&gt;                                                &lt;dbl&gt;
+#&gt; 1   2007-04-24                                              102.271
+#&gt; 2   2007-04-25                                              102.021
+#&gt; 3   2007-04-26                                              101.891
+#&gt; 4   2007-04-27                                              101.841
+#&gt; 5   2007-04-28                                              101.771
+#&gt; 6   2007-04-29                                              101.641
+#&gt; 7   2007-04-30                                              101.531
+#&gt; 8   2007-05-01                                              101.451
+#&gt; 9   2007-05-02                                              101.381
+#&gt; 10  2007-05-03                                              101.351
+#&gt; # ... with 181 more rows, and 1 more variables: `Water level [m] (of Vasyugan
+#&gt; #   mire given in met...)` &lt;dbl&gt;
+#&gt; 
+#&gt; [[3]]
+#&gt; &lt;Pangaea data&gt; 10.1594/PANGAEA.825424
+#&gt;   parent doi: 10.1594/PANGAEA.825428
+#&gt;   url:        https://doi.org/10.1594/PANGAEA.825424
+#&gt;   citation:   Kharanzhevskaya, Yulia Alexsandrovna (2014): Mire water balance within the River Klyuch basin, Western Siberia. doi:10.1594/PANGAEA.825428,Supplement to: Kharanzhevskaya, YA (2014): Estimation of peculiarities and long-term dynamics of mire water balance in Western Siberia. Siberian Research Institute of Agriculture and Peat, 13 pp
+#&gt;   path:       /Users/sacmac/Library/Caches/pangaear/10_1594_PANGAEA_825424.txt
+#&gt;   data:
+#&gt; # A tibble: 36 × 2
+#&gt;    `Date/Time` `Runoff [l/km**2/s]`
+#&gt;          &lt;chr&gt;                &lt;dbl&gt;
+#&gt; 1      2006-05                 2.49
+#&gt; 2      2006-06                 0.41
+#&gt; 3      2006-07                 0.16
+#&gt; 4      2006-08                 0.31
+#&gt; 5      2006-09                 0.17
+#&gt; 6      2006-10                 0.69
+#&gt; 7      2007-04                 5.25
+#&gt; 8      2007-05                 3.21
+#&gt; 9      2007-06                 4.96
+#&gt; 10     2007-07                 3.19
+#&gt; # ... with 26 more rows
 #&gt; 
 #&gt; [[4]]
-#&gt; &lt;Pangaea data&gt; 10.1594/PANGAEA.811070
-#&gt; # A tibble: 4,215 × 2
-#&gt;         `Date/Time` `NLF [mm/h]`
-#&gt;               &lt;chr&gt;        &lt;dbl&gt;
-#&gt; 1  2011-05-24T04:45      -0.2604
-#&gt; 2  2011-05-24T05:15      -0.2216
-#&gt; 3  2011-05-24T05:45       0.0010
-#&gt; 4  2011-05-24T06:15      -0.0697
-#&gt; 5  2011-05-24T06:45      -0.1706
-#&gt; 6  2011-05-24T07:15      -0.0451
-#&gt; 7  2011-05-24T07:45       0.0338
-#&gt; 8  2011-05-24T08:15      -0.0425
-#&gt; 9  2011-05-24T08:45      -0.0594
-#&gt; 10 2011-05-24T09:15      -0.2294
-#&gt; # ... with 4,205 more rows
+#&gt; &lt;Pangaea data&gt; 10.1594/PANGAEA.825425
+#&gt;   parent doi: 10.1594/PANGAEA.825428
+#&gt;   url:        https://doi.org/10.1594/PANGAEA.825425
+#&gt;   citation:   Kharanzhevskaya, Yulia Alexsandrovna (2014): Mire water balance within the River Klyuch basin, Western Siberia. doi:10.1594/PANGAEA.825428,Supplement to: Kharanzhevskaya, YA (2014): Estimation of peculiarities and long-term dynamics of mire water balance in Western Siberia. Siberian Research Institute of Agriculture and Peat, 13 pp
+#&gt;   path:       /Users/sacmac/Library/Caches/pangaear/10_1594_PANGAEA_825425.txt
+#&gt;   data:
+#&gt; # A tibble: 60 × 2
+#&gt;    `Date/Time` `Water level [m]`
+#&gt;          &lt;chr&gt;             &lt;dbl&gt;
+#&gt; 1      1998-05           113.611
+#&gt; 2      1998-06           113.551
+#&gt; 3      1998-07           113.541
+#&gt; 4      1998-08           113.501
+#&gt; 5      1998-09           113.497
+#&gt; 6      1999-05           113.601
+#&gt; 7      1999-06           113.551
+#&gt; 8      1999-07           113.481
+#&gt; 9      1999-08           113.391
+#&gt; 10     1999-09           113.400
+#&gt; # ... with 50 more rows
 #&gt; 
 #&gt; [[5]]
-#&gt; &lt;Pangaea data&gt; 10.1594/PANGAEA.811071
-#&gt; # A tibble: 4,215 × 2
-#&gt;         `Date/Time` `NLF [mm/h]`
-#&gt;               &lt;chr&gt;        &lt;dbl&gt;
-#&gt; 1  2011-05-24T04:45       0.6314
-#&gt; 2  2011-05-24T05:15       0.3428
-#&gt; 3  2011-05-24T05:45      -0.2033
-#&gt; 4  2011-05-24T06:15       0.1897
-#&gt; 5  2011-05-24T06:45       0.0846
-#&gt; 6  2011-05-24T07:15       0.1246
-#&gt; 7  2011-05-24T07:45       0.1148
-#&gt; 8  2011-05-24T08:15       0.1506
-#&gt; 9  2011-05-24T08:45       0.1396
-#&gt; 10 2011-05-24T09:15       0.1558
-#&gt; # ... with 4,205 more rows
+#&gt; &lt;Pangaea data&gt; 10.1594/PANGAEA.825426
+#&gt;   parent doi: 10.1594/PANGAEA.825428
+#&gt;   url:        https://doi.org/10.1594/PANGAEA.825426
+#&gt;   citation:   Kharanzhevskaya, Yulia Alexsandrovna (2014): Mire water balance within the River Klyuch basin, Western Siberia. doi:10.1594/PANGAEA.825428,Supplement to: Kharanzhevskaya, YA (2014): Estimation of peculiarities and long-term dynamics of mire water balance in Western Siberia. Siberian Research Institute of Agriculture and Peat, 13 pp
+#&gt;   path:       /Users/sacmac/Library/Caches/pangaear/10_1594_PANGAEA_825426.txt
+#&gt;   data:
+#&gt; # A tibble: 41 × 2
+#&gt;    `Date/Time` `Evaporation [mm/a]`
+#&gt;          &lt;chr&gt;                &lt;dbl&gt;
+#&gt; 1      1970-10                  0.0
+#&gt; 2      1971-10                 36.8
+#&gt; 3      1972-10                 37.8
+#&gt; 4      1973-10                 53.6
+#&gt; 5      1974-10                 34.1
+#&gt; 6      1975-10                  0.0
+#&gt; 7      1976-10                  0.0
+#&gt; 8      1977-10                  0.0
+#&gt; 9      1978-10                 32.8
+#&gt; 10     1979-10                 94.8
+#&gt; # ... with 31 more rows
+#&gt; </div><div class='input'>
+<span class='co'># zip file</span>
+<span class='fu'>pg_data</span>(<span class='kw'>doi</span> <span class='kw'>=</span> <span class='st'>"10.1594/PANGAEA.860500"</span>)</div><div class='output co'>#&gt; <span class='message'>Downloading 1 datasets from 10.1594/PANGAEA.860500</span></div><div class='output co'>#&gt; <span class='message'>Processing 1 files</span></div><div class='output co'>#&gt; [[1]]
+#&gt; &lt;Pangaea data&gt; 10.1594/PANGAEA.860500
+#&gt;   parent doi: 10.1594/PANGAEA.860500
+#&gt;   url:        https://doi.org/10.1594/PANGAEA.860500
+#&gt;   citation:   Bartsch, Annett; Pathe, Carsten; Wagner, Wolfgang; Scipal, Klaus (2008): Permanent open water surfaces in central Siberia from ENVISAT ASAR wide swath data 2003/2004, link to shapefile. doi:10.1594/PANGAEA.860500,Supplement to: Bartsch, A et al. (2008): Detection of permanent open water surfaces in central Siberia with ENVISAT ASAR wide swath data with special emphasis on the estimation of methane fluxes from tundra wetlands. Hydrology Research, 39(2), 89-100, doi:10.2166/nh.2008.041
+#&gt;   path:       /Users/sacmac/Library/Caches/pangaear/10_1594_PANGAEA_860500.zip
+#&gt;   data:
+#&gt;                                                              Name  Length
+#&gt; 1                        open_water_central_siberia_ASAR_WS_2003/       0
+#&gt; 2 open_water_central_siberia_ASAR_WS_2003/complete_water_2003.dbf 1513810
+#&gt; 3 open_water_central_siberia_ASAR_WS_2003/complete_water_2003.prj     435
+#&gt; 4 open_water_central_siberia_ASAR_WS_2003/complete_water_2003.shp 8867724
+#&gt; 5 open_water_central_siberia_ASAR_WS_2003/complete_water_2003.shx  302836
+#&gt;                  Date
+#&gt; 1 2016-05-17 10:11:00
+#&gt; 2 2004-08-18 09:55:00
+#&gt; 3 2016-05-14 19:03:00
+#&gt; 4 2004-08-18 09:55:00
+#&gt; 5 2004-08-18 09:55:00
+#&gt; </div><div class='input'>
+<span class='co'># login required</span>
+<span class='co'>## we skip file download</span>
+<span class='fu'>pg_data</span>(<span class='st'>"10.1594/PANGAEA.788547"</span>)</div><div class='output co'>#&gt; <span class='message'>Downloading 3 datasets from 10.1594/PANGAEA.788547</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Log in required, skipping file download</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Log in required, skipping file download</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Log in required, skipping file download</span></div><div class='output co'>#&gt; <span class='message'>Processing 3 files</span></div><div class='output co'>#&gt; [[1]]
+#&gt; &lt;Pangaea data&gt; 10.1594/PANGAEA.788545
+#&gt;   parent doi: 10.1594/PANGAEA.788547
+#&gt;   url:        https://doi.org/10.1594/PANGAEA.788545
+#&gt;   citation:   Muñoz, Juan C; Aerts, Raf; Thijs, Koen W; Stevenson, Pablo R; Muys, Bart; Sekercioglu, Cagan H (2013): Contribution of woody habitat islands to the conservation of birds and their potential ecosystem services in an extensive Colombian rangeland. doi:10.1594/PANGAEA.788547,Supplement to: Muñoz, JC et al. (2013): Contribution of woody habitat islands to the conservation of birds and their potential ecosystem services in an extensive Colombian rangeland. Agriculture Ecosystems &amp; Environment, 173, 13-19, doi:10.1016/j.agee.2013.04.006
+#&gt;   path:       NA
+#&gt;   data:
+#&gt; [1] NA
 #&gt; 
-#&gt; [[6]]
-#&gt; &lt;Pangaea data&gt; 10.1594/PANGAEA.811072
-#&gt; # A tibble: 3,292 × 2
-#&gt;         `Date/Time` `NLF [mm/h]`
-#&gt;               &lt;chr&gt;        &lt;dbl&gt;
-#&gt; 1  2011-06-12T10:15      -0.4887
-#&gt; 2  2011-06-12T10:45      -0.1092
-#&gt; 3  2011-06-12T11:15       0.2135
-#&gt; 4  2011-06-12T11:45       0.2696
-#&gt; 5  2011-06-12T12:15       0.1619
-#&gt; 6  2011-06-12T12:45       0.1603
-#&gt; 7  2011-06-12T13:15       0.0641
-#&gt; 8  2011-06-12T13:45      -0.0571
-#&gt; 9  2011-06-12T14:15      -0.0704
-#&gt; 10 2011-06-12T14:45      -0.0447
-#&gt; # ... with 3,282 more rows
+#&gt; [[2]]
+#&gt; &lt;Pangaea data&gt; 10.1594/PANGAEA.788544
+#&gt;   parent doi: 10.1594/PANGAEA.788547
+#&gt;   url:        https://doi.org/10.1594/PANGAEA.788544
+#&gt;   citation:   Muñoz, Juan C; Aerts, Raf; Thijs, Koen W; Stevenson, Pablo R; Muys, Bart; Sekercioglu, Cagan H (2013): Contribution of woody habitat islands to the conservation of birds and their potential ecosystem services in an extensive Colombian rangeland. doi:10.1594/PANGAEA.788547,Supplement to: Muñoz, JC et al. (2013): Contribution of woody habitat islands to the conservation of birds and their potential ecosystem services in an extensive Colombian rangeland. Agriculture Ecosystems &amp; Environment, 173, 13-19, doi:10.1016/j.agee.2013.04.006
+#&gt;   path:       NA
+#&gt;   data:
+#&gt; [1] NA
 #&gt; 
-#&gt; [[7]]
-#&gt; &lt;Pangaea data&gt; 10.1594/PANGAEA.811073
-#&gt; # A tibble: 3,647 × 2
-#&gt;         `Date/Time` `NLF [mm/h]`
-#&gt;               &lt;chr&gt;        &lt;dbl&gt;
-#&gt; 1  2011-06-05T00:45      -0.3481
-#&gt; 2  2011-06-05T01:15       0.5254
-#&gt; 3  2011-06-05T01:45      -0.1642
-#&gt; 4  2011-06-05T02:15       0.1954
-#&gt; 5  2011-06-05T02:45       0.3474
-#&gt; 6  2011-06-05T03:15       0.1642
-#&gt; 7  2011-06-05T03:45       0.0578
-#&gt; 8  2011-06-05T04:15       0.0011
-#&gt; 9  2011-06-05T04:45       0.1135
-#&gt; 10 2011-06-05T05:15       0.4130
-#&gt; # ... with 3,637 more rows
-#&gt; 
-#&gt; [[8]]
-#&gt; &lt;Pangaea data&gt; 10.1594/PANGAEA.811074
-#&gt; # A tibble: 2,145 × 2
-#&gt;         `Date/Time` `NLF [mm/h]`
-#&gt;               &lt;chr&gt;        &lt;dbl&gt;
-#&gt; 1  2011-07-06T07:45       1.7942
-#&gt; 2  2011-07-06T08:15       1.1926
-#&gt; 3  2011-07-06T08:45       0.4628
-#&gt; 4  2011-07-06T09:15       1.3922
-#&gt; 5  2011-07-06T09:45       0.9768
-#&gt; 6  2011-07-06T10:15       0.4352
-#&gt; 7  2011-07-06T10:45       0.1580
-#&gt; 8  2011-07-06T11:15      -0.0499
-#&gt; 9  2011-07-06T11:45       0.1517
-#&gt; 10 2011-07-06T12:15      -0.0004
-#&gt; # ... with 2,135 more rows
-#&gt; 
-#&gt; [[9]]
-#&gt; &lt;Pangaea data&gt; 10.1594/PANGAEA.811077
-#&gt; # A tibble: 4,215 × 2
-#&gt;         `Date/Time` `NLF [mm/h]`
-#&gt;               &lt;chr&gt;        &lt;dbl&gt;
-#&gt; 1  2011-05-24T04:45      -0.4233
-#&gt; 2  2011-05-24T05:15      -0.4290
-#&gt; 3  2011-05-24T05:45      -0.5916
-#&gt; 4  2011-05-24T06:15      -0.5141
-#&gt; 5  2011-05-24T06:45      -0.6595
-#&gt; 6  2011-05-24T07:15      -0.5933
-#&gt; 7  2011-05-24T07:45      -0.4699
-#&gt; 8  2011-05-24T08:15      -0.3536
-#&gt; 9  2011-05-24T08:45      -0.4149
-#&gt; 10 2011-05-24T09:15      -0.6739
-#&gt; # ... with 4,205 more rows
-#&gt; 
-#&gt; [[10]]
-#&gt; &lt;Pangaea data&gt; 10.1594/PANGAEA.811078
-#&gt; # A tibble: 3,647 × 2
-#&gt;         `Date/Time` `NLF [mm/h]`
-#&gt;               &lt;chr&gt;        &lt;dbl&gt;
-#&gt; 1  2011-06-05T00:45       0.0490
-#&gt; 2  2011-06-05T01:15      -0.0669
-#&gt; 3  2011-06-05T01:45      -0.0449
-#&gt; 4  2011-06-05T02:15       0.0901
-#&gt; 5  2011-06-05T02:45       0.0373
-#&gt; 6  2011-06-05T03:15       0.0382
-#&gt; 7  2011-06-05T03:45      -0.0214
-#&gt; 8  2011-06-05T04:15      -0.0148
-#&gt; 9  2011-06-05T04:45       0.0573
-#&gt; 10 2011-06-05T05:15       0.0705
-#&gt; # ... with 3,637 more rows
-#&gt; </div><div class='input'><span class='fu'>pg_data</span>(<span class='no'>res</span>$<span class='no'>doi</span>[<span class='fl'>4</span>])</div><div class='output co'>#&gt; <span class='message'>Downloading 1 datasets from 10.1594/PANGAEA.759113</span></div><div class='output co'>#&gt; <span class='message'>Processing 1 files</span></div><div class='output co'>#&gt; [[1]]
-#&gt; &lt;Pangaea data&gt; 10.1594/PANGAEA.759113
-#&gt; # A tibble: 20 × 29
-#&gt;            Event Latitude Longitude `Depth [m]` `Depth top [m]` `Depth bot [m]`
-#&gt;            &lt;chr&gt;    &lt;dbl&gt;     &lt;dbl&gt;       &lt;dbl&gt;           &lt;int&gt;           &lt;dbl&gt;
-#&gt; 1   Yur-8-9/87-1  50.6880  155.9038        0.25               0             0.5
-#&gt; 2   Yur-8-9/87-2  50.6884  155.9033        0.25               0             0.5
-#&gt; 3   Yur-8-9/87-3  50.6888  155.9025        0.25               0             0.5
-#&gt; 4   Yur-8-9/87-4  50.6893  155.9014        0.25               0             0.5
-#&gt; 5   Yur-8-9/87-5  50.6897  155.9007        0.25               0             0.5
-#&gt; 6   Yur-8-9/87-6  50.6900  155.9001        0.25               0             0.5
-#&gt; 7   Yur-8-9/87-7  50.6906  155.8990        0.25               0             0.5
-#&gt; 8   Yur-8-9/87-8  50.6889  155.9080        0.25               0             0.5
-#&gt; 9   Yur-8-9/87-9  50.6894  155.9074        0.25               0             0.5
-#&gt; 10 Yur-8-9/87-10  50.6897  155.9068        0.25               0             0.5
-#&gt; 11 Yur-8-9/87-11  50.6902  155.9063        0.25               0             0.5
-#&gt; 12 Yur-8-9/87-12  50.6907  155.9054        0.25               0             0.5
-#&gt; 13 Yur-8-9/87-13  50.6913  155.9045        0.25               0             0.5
-#&gt; 14 Yur-8-9/87-14  50.6917  155.9038        0.25               0             0.5
-#&gt; 15 Yur-8-9/87-15  50.6901  155.9096        0.25               0             0.5
-#&gt; 16 Yur-8-9/87-16  50.6907  155.9089        0.25               0             0.5
-#&gt; 17 Yur-8-9/87-17  50.6912  155.9084        0.25               0             0.5
-#&gt; 18 Yur-8-9/87-18  50.6917  155.9075        0.25               0             0.5
-#&gt; 19 Yur-8-9/87-19  50.6921  155.9069        0.25               0             0.5
-#&gt; 20 Yur-8-9/87-20  50.6927  155.9062        0.25               0             0.5
-#&gt; # ... with 23 more variables: pH &lt;dbl&gt;, `Cl [g/l]` &lt;dbl&gt;, `TPM [mg/l]` &lt;dbl&gt;,
-#&gt; #   `Fe [µg/l]` &lt;dbl&gt;, `Fe part [mg/l]` &lt;int&gt;, `Fe part [%]` &lt;dbl&gt;, `Fe
-#&gt; #   [%]` &lt;dbl&gt;, `Mn2+ [µg/l]` &lt;dbl&gt;, `Mn [mg/l]` &lt;dbl&gt;, `Mn part [%]` &lt;dbl&gt;,
-#&gt; #   `Mn [%]` &lt;dbl&gt;, `Ni [µg/l]` &lt;dbl&gt;, `Ni part [mg/l]` &lt;dbl&gt;, `Ni part
-#&gt; #   [%]` &lt;dbl&gt;, `Ni [%]` &lt;dbl&gt;, `Cu [µg/l]` &lt;dbl&gt;, `Cu part [mg/l]` &lt;dbl&gt;, `Cu
-#&gt; #   part [%]` &lt;dbl&gt;, `Cu [%]` &lt;dbl&gt;, `Zn [µg/l]` &lt;dbl&gt;, `Zn part [mg/l]` &lt;dbl&gt;,
-#&gt; #   `Zn part [%]` &lt;dbl&gt;, `Zn [%]` &lt;dbl&gt;
+#&gt; [[3]]
+#&gt; &lt;Pangaea data&gt; 10.1594/PANGAEA.788546
+#&gt;   parent doi: 10.1594/PANGAEA.788547
+#&gt;   url:        https://doi.org/10.1594/PANGAEA.788546
+#&gt;   citation:   Muñoz, Juan C; Aerts, Raf; Thijs, Koen W; Stevenson, Pablo R; Muys, Bart; Sekercioglu, Cagan H (2013): Contribution of woody habitat islands to the conservation of birds and their potential ecosystem services in an extensive Colombian rangeland. doi:10.1594/PANGAEA.788547,Supplement to: Muñoz, JC et al. (2013): Contribution of woody habitat islands to the conservation of birds and their potential ecosystem services in an extensive Colombian rangeland. Agriculture Ecosystems &amp; Environment, 173, 13-19, doi:10.1016/j.agee.2013.04.006
+#&gt;   path:       NA
+#&gt;   data:
+#&gt; [1] NA
 #&gt; </div><div class='input'>
 </div></pre>
   </div>
@@ -788,7 +788,7 @@ on your machine.</p>
 
     <h2>Author</h2>
     
-Naupaka Zimmerman
+Naupaka Zimmerman, Scott Chamberlain
 
   </div>
 </div>

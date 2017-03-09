@@ -138,65 +138,66 @@ requested with the <code>as</code> parameter</p>
 <span class='fu'>pg_list_identifiers</span>(
   <span class='kw'>from</span> <span class='kw'>=</span> <span class='fu'>paste0</span>(<span class='fu'>Sys.Date</span>() - <span class='fl'>2</span>, <span class='st'>"T00:00:00Z"</span>),
   <span class='kw'>until</span> <span class='kw'>=</span> <span class='fu'>paste0</span>(<span class='fu'>Sys.Date</span>() - <span class='fl'>1</span>, <span class='st'>"T18:00:00Z"</span>)
-)</div><div class='output co'>#&gt; # A tibble: 19,237 × 7
+)</div><div class='output co'>#&gt; # A tibble: 1,993 × 7
 #&gt;                                   identifier            datestamp setSpec
 #&gt;                                        &lt;chr&gt;                &lt;chr&gt;   &lt;chr&gt;
-#&gt; 1   oai:pangaea.de:doi:10.1594/PANGAEA.52692 2017-03-05T14:44:38Z citable
-#&gt; 2   oai:pangaea.de:doi:10.1594/PANGAEA.53178 2017-03-05T14:26:18Z citable
-#&gt; 3   oai:pangaea.de:doi:10.1594/PANGAEA.57539 2017-03-05T14:25:32Z citable
-#&gt; 4  oai:pangaea.de:doi:10.1594/PANGAEA.142421 2017-03-05T13:53:45Z citable
-#&gt; 5  oai:pangaea.de:doi:10.1594/PANGAEA.149998 2017-03-05T13:59:10Z citable
-#&gt; 6  oai:pangaea.de:doi:10.1594/PANGAEA.208129 2017-03-05T14:35:04Z citable
-#&gt; 7  oai:pangaea.de:doi:10.1594/PANGAEA.228741 2017-03-05T13:59:25Z citable
-#&gt; 8  oai:pangaea.de:doi:10.1594/PANGAEA.547798 2017-03-05T13:40:00Z citable
-#&gt; 9  oai:pangaea.de:doi:10.1594/PANGAEA.547942 2017-03-05T13:40:00Z citable
-#&gt; 10 oai:pangaea.de:doi:10.1594/PANGAEA.552177 2017-03-05T14:25:31Z citable
-#&gt; # ... with 19,227 more rows, and 4 more variables: setSpec.1 &lt;chr&gt;,
-#&gt; #   setSpec.2 &lt;chr&gt;, setSpec.3 &lt;chr&gt;, setSpec.4 &lt;chr&gt;</div><div class='input'><span class='fu'>pg_list_identifiers</span>(<span class='kw'>set</span><span class='kw'>=</span><span class='st'>"geocode1"</span>, <span class='kw'>from</span><span class='kw'>=</span><span class='fu'>Sys.Date</span>()-<span class='fl'>1</span>, <span class='kw'>until</span><span class='kw'>=</span><span class='fu'>Sys.Date</span>())</div><div class='output co'>#&gt; # A tibble: 351 × 8
+#&gt; 1   oai:pangaea.de:doi:10.1594/PANGAEA.55417 2017-03-08T13:19:32Z citable
+#&gt; 2   oai:pangaea.de:doi:10.1594/PANGAEA.57910 2017-03-08T13:17:50Z  ORFOIS
+#&gt; 3   oai:pangaea.de:doi:10.1594/PANGAEA.77250 2017-03-08T13:19:59Z citable
+#&gt; 4  oai:pangaea.de:doi:10.1594/PANGAEA.149999 2017-03-07T09:22:22Z citable
+#&gt; 5  oai:pangaea.de:doi:10.1594/PANGAEA.208129 2017-03-08T13:19:16Z citable
+#&gt; 6  oai:pangaea.de:doi:10.1594/PANGAEA.314690 2017-03-07T11:47:26Z citable
+#&gt; 7  oai:pangaea.de:doi:10.1594/PANGAEA.351146 2017-03-08T13:18:19Z citable
+#&gt; 8  oai:pangaea.de:doi:10.1594/PANGAEA.611095 2017-03-07T11:01:44Z citable
+#&gt; 9  oai:pangaea.de:doi:10.1594/PANGAEA.693923 2017-03-08T13:17:24Z citable
+#&gt; 10 oai:pangaea.de:doi:10.1594/PANGAEA.716835 2017-03-07T10:52:54Z citable
+#&gt; # ... with 1,983 more rows, and 4 more variables: setSpec.1 &lt;chr&gt;,
+#&gt; #   setSpec.2 &lt;chr&gt;, setSpec.3 &lt;chr&gt;, setSpec.4 &lt;chr&gt;</div><div class='input'><span class='fu'>pg_list_identifiers</span>(<span class='kw'>set</span><span class='kw'>=</span><span class='st'>"geocode1"</span>, <span class='kw'>from</span><span class='kw'>=</span><span class='fu'>Sys.Date</span>()-<span class='fl'>1</span>, <span class='kw'>until</span><span class='kw'>=</span><span class='fu'>Sys.Date</span>())</div><div class='output co'>#&gt; # A tibble: 604 × 7
 #&gt;                                   identifier            datestamp setSpec
 #&gt;                                        &lt;chr&gt;                &lt;chr&gt;   &lt;chr&gt;
-#&gt; 1  oai:pangaea.de:doi:10.1594/PANGAEA.314690 2017-03-07T11:47:26Z citable
-#&gt; 2  oai:pangaea.de:doi:10.1594/PANGAEA.611095 2017-03-07T11:01:44Z citable
-#&gt; 3  oai:pangaea.de:doi:10.1594/PANGAEA.716835 2017-03-07T10:52:54Z citable
-#&gt; 4  oai:pangaea.de:doi:10.1594/PANGAEA.785456 2017-03-07T11:02:51Z citable
-#&gt; 5  oai:pangaea.de:doi:10.1594/PANGAEA.807446 2017-03-07T11:06:14Z citable
-#&gt; 6  oai:pangaea.de:doi:10.1594/PANGAEA.846306 2017-03-07T10:35:30Z citable
-#&gt; 7  oai:pangaea.de:doi:10.1594/PANGAEA.867475 2017-03-06T13:50:35Z citable
-#&gt; 8  oai:pangaea.de:doi:10.1594/PANGAEA.871636 2017-03-07T03:10:43Z citable
-#&gt; 9  oai:pangaea.de:doi:10.1594/PANGAEA.871704 2017-03-06T03:15:28Z citable
-#&gt; 10 oai:pangaea.de:doi:10.1594/PANGAEA.871714 2017-03-06T03:15:30Z citable
-#&gt; # ... with 341 more rows, and 5 more variables: setSpec.1 &lt;chr&gt;,
-#&gt; #   setSpec.2 &lt;chr&gt;, setSpec.3 &lt;chr&gt;, setSpec.4 &lt;chr&gt;, setSpec.5 &lt;chr&gt;</div><div class='input'><span class='fu'>pg_list_identifiers</span>(<span class='kw'>prefix</span><span class='kw'>=</span><span class='st'>"iso19139"</span>, <span class='kw'>from</span><span class='kw'>=</span><span class='fu'>Sys.Date</span>()-<span class='fl'>1</span>, <span class='kw'>until</span><span class='kw'>=</span><span class='fu'>Sys.Date</span>())</div><div class='output co'>#&gt; # A tibble: 1,450 × 7
+#&gt; 1   oai:pangaea.de:doi:10.1594/PANGAEA.55417 2017-03-08T13:19:32Z citable
+#&gt; 2   oai:pangaea.de:doi:10.1594/PANGAEA.77250 2017-03-08T13:19:59Z citable
+#&gt; 3  oai:pangaea.de:doi:10.1594/PANGAEA.351146 2017-03-08T13:18:19Z citable
+#&gt; 4  oai:pangaea.de:doi:10.1594/PANGAEA.693923 2017-03-08T13:17:24Z citable
+#&gt; 5  oai:pangaea.de:doi:10.1594/PANGAEA.726410 2017-03-08T13:17:54Z citable
+#&gt; 6  oai:pangaea.de:doi:10.1594/PANGAEA.794530 2017-03-08T13:18:46Z citable
+#&gt; 7  oai:pangaea.de:doi:10.1594/PANGAEA.803266 2017-03-08T13:17:31Z citable
+#&gt; 8  oai:pangaea.de:doi:10.1594/PANGAEA.804819 2017-03-08T13:19:03Z citable
+#&gt; 9  oai:pangaea.de:doi:10.1594/PANGAEA.805538 2017-03-08T13:19:18Z citable
+#&gt; 10 oai:pangaea.de:doi:10.1594/PANGAEA.837756 2017-03-08T13:18:04Z citable
+#&gt; # ... with 594 more rows, and 4 more variables: setSpec.1 &lt;chr&gt;,
+#&gt; #   setSpec.2 &lt;chr&gt;, setSpec.3 &lt;chr&gt;, setSpec.4 &lt;chr&gt;</div><div class='input'><span class='fu'>pg_list_identifiers</span>(<span class='kw'>prefix</span><span class='kw'>=</span><span class='st'>"iso19139"</span>, <span class='kw'>from</span><span class='kw'>=</span><span class='fu'>Sys.Date</span>()-<span class='fl'>1</span>, <span class='kw'>until</span><span class='kw'>=</span><span class='fu'>Sys.Date</span>())</div><div class='output co'>#&gt; # A tibble: 6,378 × 9
 #&gt;                                   identifier            datestamp setSpec
 #&gt;                                        &lt;chr&gt;                &lt;chr&gt;   &lt;chr&gt;
-#&gt; 1  oai:pangaea.de:doi:10.1594/PANGAEA.149999 2017-03-07T09:22:22Z citable
-#&gt; 2  oai:pangaea.de:doi:10.1594/PANGAEA.314690 2017-03-07T11:47:26Z citable
-#&gt; 3  oai:pangaea.de:doi:10.1594/PANGAEA.611095 2017-03-07T11:01:44Z citable
-#&gt; 4  oai:pangaea.de:doi:10.1594/PANGAEA.716835 2017-03-07T10:52:54Z citable
-#&gt; 5  oai:pangaea.de:doi:10.1594/PANGAEA.728847 2017-03-07T13:17:12Z citable
-#&gt; 6  oai:pangaea.de:doi:10.1594/PANGAEA.735539 2017-03-07T13:19:15Z citable
-#&gt; 7  oai:pangaea.de:doi:10.1594/PANGAEA.737438 2017-03-06T15:40:27Z citable
-#&gt; 8  oai:pangaea.de:doi:10.1594/PANGAEA.745833 2017-03-07T13:19:13Z citable
-#&gt; 9  oai:pangaea.de:doi:10.1594/PANGAEA.746016 2017-03-07T09:22:25Z citable
-#&gt; 10 oai:pangaea.de:doi:10.1594/PANGAEA.753644 2017-03-07T11:44:13Z citable
-#&gt; # ... with 1,440 more rows, and 4 more variables: setSpec.1 &lt;chr&gt;,
-#&gt; #   setSpec.2 &lt;chr&gt;, setSpec.3 &lt;chr&gt;, setSpec.4 &lt;chr&gt;</div><div class='input'><span class='fu'>pg_list_identifiers</span>(<span class='kw'>prefix</span><span class='kw'>=</span><span class='st'>"dif"</span>,
+#&gt; 1   oai:pangaea.de:doi:10.1594/PANGAEA.55417 2017-03-08T13:19:32Z citable
+#&gt; 2   oai:pangaea.de:doi:10.1594/PANGAEA.57910 2017-03-08T13:17:50Z  ORFOIS
+#&gt; 3   oai:pangaea.de:doi:10.1594/PANGAEA.77250 2017-03-08T13:19:59Z citable
+#&gt; 4  oai:pangaea.de:doi:10.1594/PANGAEA.208129 2017-03-08T13:19:16Z citable
+#&gt; 5  oai:pangaea.de:doi:10.1594/PANGAEA.351146 2017-03-08T13:18:19Z citable
+#&gt; 6  oai:pangaea.de:doi:10.1594/PANGAEA.693923 2017-03-08T13:17:24Z citable
+#&gt; 7  oai:pangaea.de:doi:10.1594/PANGAEA.726410 2017-03-08T13:17:54Z citable
+#&gt; 8  oai:pangaea.de:doi:10.1594/PANGAEA.757616 2017-03-08T13:18:05Z citable
+#&gt; 9  oai:pangaea.de:doi:10.1594/PANGAEA.758696 2017-03-08T13:19:02Z citable
+#&gt; 10 oai:pangaea.de:doi:10.1594/PANGAEA.760166 2017-03-09T14:54:46Z    BCCR
+#&gt; # ... with 6,368 more rows, and 6 more variables: setSpec.1 &lt;chr&gt;,
+#&gt; #   setSpec.2 &lt;chr&gt;, setSpec.3 &lt;chr&gt;, setSpec.4 &lt;chr&gt;, setSpec.5 &lt;chr&gt;,
+#&gt; #   setSpec.6 &lt;chr&gt;</div><div class='input'><span class='fu'>pg_list_identifiers</span>(<span class='kw'>prefix</span><span class='kw'>=</span><span class='st'>"dif"</span>,
   <span class='kw'>from</span> <span class='kw'>=</span> <span class='fu'>paste0</span>(<span class='fu'>Sys.Date</span>() - <span class='fl'>2</span>, <span class='st'>"T00:00:00Z"</span>),
   <span class='kw'>until</span> <span class='kw'>=</span> <span class='fu'>paste0</span>(<span class='fu'>Sys.Date</span>() - <span class='fl'>1</span>, <span class='st'>"T18:00:00Z"</span>)
-)</div><div class='output co'>#&gt; # A tibble: 19,237 × 7
+)</div><div class='output co'>#&gt; # A tibble: 1,993 × 7
 #&gt;                                   identifier            datestamp setSpec
 #&gt;                                        &lt;chr&gt;                &lt;chr&gt;   &lt;chr&gt;
-#&gt; 1   oai:pangaea.de:doi:10.1594/PANGAEA.52692 2017-03-05T14:44:38Z citable
-#&gt; 2   oai:pangaea.de:doi:10.1594/PANGAEA.53178 2017-03-05T14:26:18Z citable
-#&gt; 3   oai:pangaea.de:doi:10.1594/PANGAEA.57539 2017-03-05T14:25:32Z citable
-#&gt; 4  oai:pangaea.de:doi:10.1594/PANGAEA.142421 2017-03-05T13:53:45Z citable
-#&gt; 5  oai:pangaea.de:doi:10.1594/PANGAEA.149998 2017-03-05T13:59:10Z citable
-#&gt; 6  oai:pangaea.de:doi:10.1594/PANGAEA.208129 2017-03-05T14:35:04Z citable
-#&gt; 7  oai:pangaea.de:doi:10.1594/PANGAEA.228741 2017-03-05T13:59:25Z citable
-#&gt; 8  oai:pangaea.de:doi:10.1594/PANGAEA.547798 2017-03-05T13:40:00Z citable
-#&gt; 9  oai:pangaea.de:doi:10.1594/PANGAEA.547942 2017-03-05T13:40:00Z citable
-#&gt; 10 oai:pangaea.de:doi:10.1594/PANGAEA.552177 2017-03-05T14:25:31Z citable
-#&gt; # ... with 19,227 more rows, and 4 more variables: setSpec.1 &lt;chr&gt;,
+#&gt; 1   oai:pangaea.de:doi:10.1594/PANGAEA.55417 2017-03-08T13:19:32Z citable
+#&gt; 2   oai:pangaea.de:doi:10.1594/PANGAEA.57910 2017-03-08T13:17:50Z  ORFOIS
+#&gt; 3   oai:pangaea.de:doi:10.1594/PANGAEA.77250 2017-03-08T13:19:59Z citable
+#&gt; 4  oai:pangaea.de:doi:10.1594/PANGAEA.149999 2017-03-07T09:22:22Z citable
+#&gt; 5  oai:pangaea.de:doi:10.1594/PANGAEA.208129 2017-03-08T13:19:16Z citable
+#&gt; 6  oai:pangaea.de:doi:10.1594/PANGAEA.314690 2017-03-07T11:47:26Z citable
+#&gt; 7  oai:pangaea.de:doi:10.1594/PANGAEA.351146 2017-03-08T13:18:19Z citable
+#&gt; 8  oai:pangaea.de:doi:10.1594/PANGAEA.611095 2017-03-07T11:01:44Z citable
+#&gt; 9  oai:pangaea.de:doi:10.1594/PANGAEA.693923 2017-03-08T13:17:24Z citable
+#&gt; 10 oai:pangaea.de:doi:10.1594/PANGAEA.716835 2017-03-07T10:52:54Z citable
+#&gt; # ... with 1,983 more rows, and 4 more variables: setSpec.1 &lt;chr&gt;,
 #&gt; #   setSpec.2 &lt;chr&gt;, setSpec.3 &lt;chr&gt;, setSpec.4 &lt;chr&gt;</div><div class='input'>
 </div></pre>
   </div>

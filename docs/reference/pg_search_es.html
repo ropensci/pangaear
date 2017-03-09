@@ -162,7 +162,7 @@ analyzed or not. Default: <code>FALSE</code></dd>
     <p>An interface to Pangaea&#39;s Elasticsearch query interface.
 You can also just use <a href = 'elastic'>https://github.com/ropensci/elastic</a>
 package to interact with it. The base URL is
-<a href = 'https://ws.pangaea.de/es/pangaea/panmd/_search'>https://ws.pangaea.de/es/pangaea/panmd/_search</a></p>
+https://ws.pangaea.de/es/pangaea/panmd/_search</p>
     
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
@@ -171,7 +171,7 @@ package to interact with it. The base URL is
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-(<span class='no'>res</span> <span class='kw'>&lt;-</span> <span class='fu'>pg_search_es</span>())</div><div class='output co'>#&gt; <span class='message'>total hits: 361563</span></div><div class='output co'>#&gt; # A tibble: 10 × 29
+(<span class='no'>res</span> <span class='kw'>&lt;-</span> <span class='fu'>pg_search_es</span>())</div><div class='output co'>#&gt; <span class='message'>total hits: 361638</span></div><div class='output co'>#&gt; # A tibble: 10 × 29
 #&gt;      `_index` `_type`  `_id` `_score` `_source.internal-datestamp`
 #&gt; *       &lt;chr&gt;   &lt;chr&gt;  &lt;chr&gt;    &lt;dbl&gt;                        &lt;chr&gt;
 #&gt; 1  pangaea_v2   panmd 578301        1     2016-10-11T09:54:31.000Z
@@ -219,30 +219,30 @@ package to interact with it. The base URL is
 #&gt; [1] &quot;tbl_df&quot;     &quot;tbl&quot;        &quot;data.frame&quot;
 #&gt; 
 #&gt; $total
-#&gt; [1] 361563
+#&gt; [1] 361638
 #&gt; 
 #&gt; $max_score
 #&gt; [1] 1
-#&gt; </div><div class='input'><span class='fu'>attr</span>(<span class='no'>res</span>, <span class='st'>"total"</span>)</div><div class='output co'>#&gt; [1] 361563</div><div class='input'><span class='fu'>attr</span>(<span class='no'>res</span>, <span class='st'>"max_score"</span>)</div><div class='output co'>#&gt; [1] 1</div><div class='input'>
-<span class='fu'>pg_search_es</span>(<span class='kw'>query</span> <span class='kw'>=</span> <span class='st'>'water'</span>, <span class='kw'>source</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='st'>'parentURI'</span>, <span class='st'>'minElevation'</span>))</div><div class='output co'>#&gt; <span class='message'>total hits: 141207</span></div><div class='output co'>#&gt; # A tibble: 10 × 6
+#&gt; </div><div class='input'><span class='fu'>attr</span>(<span class='no'>res</span>, <span class='st'>"total"</span>)</div><div class='output co'>#&gt; [1] 361638</div><div class='input'><span class='fu'>attr</span>(<span class='no'>res</span>, <span class='st'>"max_score"</span>)</div><div class='output co'>#&gt; [1] 1</div><div class='input'>
+<span class='fu'>pg_search_es</span>(<span class='kw'>query</span> <span class='kw'>=</span> <span class='st'>'water'</span>, <span class='kw'>source</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='st'>'parentURI'</span>, <span class='st'>'minElevation'</span>))</div><div class='output co'>#&gt; <span class='message'>total hits: 141221</span></div><div class='output co'>#&gt; # A tibble: 10 × 6
 #&gt;      `_index` `_type`  `_id` `_score`        `_source.parentURI`
 #&gt; *       &lt;chr&gt;   &lt;chr&gt;  &lt;chr&gt;    &lt;dbl&gt;                      &lt;chr&gt;
-#&gt; 1  pangaea_v2   panmd 810858 1.973378 doi:10.1594/PANGAEA.819717
-#&gt; 2  pangaea_v2   panmd 810857 1.968188 doi:10.1594/PANGAEA.819717
-#&gt; 3  pangaea_v2   panmd  55746 1.909301                       &lt;NA&gt;
-#&gt; 4  pangaea_v2   panmd  55747 1.892445                       &lt;NA&gt;
-#&gt; 5  pangaea_v2   panmd 873072 1.892088 doi:10.1594/PANGAEA.873075
-#&gt; 6  pangaea_v2   panmd 831466 1.883156 doi:10.1594/PANGAEA.831469
-#&gt; 7  pangaea_v2   panmd 854443 1.870381 doi:10.1594/PANGAEA.854468
-#&gt; 8  pangaea_v2   panmd 854445 1.870381 doi:10.1594/PANGAEA.854468
-#&gt; 9  pangaea_v2   panmd 873052 1.870147 doi:10.1594/PANGAEA.873054
-#&gt; 10 pangaea_v2   panmd 819717 1.869914                       &lt;NA&gt;
-#&gt; # ... with 1 more variables: `_source.minElevation` &lt;dbl&gt;</div><div class='input'><span class='fu'>pg_search_es</span>(<span class='kw'>query</span> <span class='kw'>=</span> <span class='st'>'water'</span>, <span class='kw'>size</span> <span class='kw'>=</span> <span class='fl'>3</span>)</div><div class='output co'>#&gt; <span class='message'>total hits: 141207</span></div><div class='output co'>#&gt; # A tibble: 3 × 32
+#&gt; 1  pangaea_v2   panmd 810857 2.002838 doi:10.1594/PANGAEA.819717
+#&gt; 2  pangaea_v2   panmd 810858 1.993505 doi:10.1594/PANGAEA.819717
+#&gt; 3  pangaea_v2   panmd  55746 1.943496                       &lt;NA&gt;
+#&gt; 4  pangaea_v2   panmd  55747 1.912406                       &lt;NA&gt;
+#&gt; 5  pangaea_v2   panmd 873072 1.911549 doi:10.1594/PANGAEA.873075
+#&gt; 6  pangaea_v2   panmd 873052 1.904045 doi:10.1594/PANGAEA.873054
+#&gt; 7  pangaea_v2   panmd 831466 1.902873 doi:10.1594/PANGAEA.831469
+#&gt; 8  pangaea_v2   panmd 854442 1.898477 doi:10.1594/PANGAEA.854468
+#&gt; 9  pangaea_v2   panmd 854444 1.898477 doi:10.1594/PANGAEA.854468
+#&gt; 10 pangaea_v2   panmd 819717 1.890004                       &lt;NA&gt;
+#&gt; # ... with 1 more variables: `_source.minElevation` &lt;dbl&gt;</div><div class='input'><span class='fu'>pg_search_es</span>(<span class='kw'>query</span> <span class='kw'>=</span> <span class='st'>'water'</span>, <span class='kw'>size</span> <span class='kw'>=</span> <span class='fl'>3</span>)</div><div class='output co'>#&gt; <span class='message'>total hits: 141221</span></div><div class='output co'>#&gt; # A tibble: 3 × 32
 #&gt;     `_index` `_type`  `_id` `_score` `_source.internal-datestamp`
 #&gt; *      &lt;chr&gt;   &lt;chr&gt;  &lt;chr&gt;    &lt;dbl&gt;                        &lt;chr&gt;
-#&gt; 1 pangaea_v2   panmd 810858 1.973378     2017-02-04T02:15:57.000Z
-#&gt; 2 pangaea_v2   panmd 810857 1.968188     2017-02-04T02:12:52.000Z
-#&gt; 3 pangaea_v2   panmd  55746 1.909301     2017-01-19T09:35:35.000Z
+#&gt; 1 pangaea_v2   panmd 810857 2.002838     2017-02-04T02:12:52.000Z
+#&gt; 2 pangaea_v2   panmd 810858 1.993505     2017-02-04T02:15:57.000Z
+#&gt; 3 pangaea_v2   panmd  55746 1.943496     2017-01-19T09:35:35.000Z
 #&gt; # ... with 27 more variables: `_source.parentURI` &lt;chr&gt;,
 #&gt; #   `_source.minElevation` &lt;dbl&gt;, `_source.sf-authortitle` &lt;chr&gt;,
 #&gt; #   `_source.parentIdDataSet` &lt;int&gt;, `_source.techKeyword` &lt;list&gt;,
@@ -256,39 +256,39 @@ package to interact with it. The base URL is
 #&gt; #   `_source.southBoundLatitude` &lt;dbl&gt;, `_source.idDataSet` &lt;int&gt;,
 #&gt; #   `_source.boost` &lt;dbl&gt;, `_source.maxElevation` &lt;dbl&gt;,
 #&gt; #   `_source.elevationGeocode` &lt;chr&gt;, `_source.oaiSet` &lt;chr&gt;,
-#&gt; #   `_source.meanPosition.lat` &lt;dbl&gt;, `_source.meanPosition.lon` &lt;dbl&gt;</div><div class='input'><span class='fu'>pg_search_es</span>(<span class='kw'>query</span> <span class='kw'>=</span> <span class='st'>'water'</span>, <span class='kw'>size</span> <span class='kw'>=</span> <span class='fl'>3</span>, <span class='kw'>from</span> <span class='kw'>=</span> <span class='fl'>10</span>)</div><div class='output co'>#&gt; <span class='message'>total hits: 141207</span></div><div class='output co'>#&gt; # A tibble: 3 × 32
+#&gt; #   `_source.meanPosition.lat` &lt;dbl&gt;, `_source.meanPosition.lon` &lt;dbl&gt;</div><div class='input'><span class='fu'>pg_search_es</span>(<span class='kw'>query</span> <span class='kw'>=</span> <span class='st'>'water'</span>, <span class='kw'>size</span> <span class='kw'>=</span> <span class='fl'>3</span>, <span class='kw'>from</span> <span class='kw'>=</span> <span class='fl'>10</span>)</div><div class='output co'>#&gt; <span class='message'>total hits: 141221</span></div><div class='output co'>#&gt; # A tibble: 3 × 32
 #&gt;     `_index` `_type`  `_id` `_score` `_source.internal-datestamp`
 #&gt; *      &lt;chr&gt;   &lt;chr&gt;  &lt;chr&gt;    &lt;dbl&gt;                        &lt;chr&gt;
-#&gt; 1 pangaea_v2   panmd 779032 1.869821     2017-02-24T08:49:38.000Z
-#&gt; 2 pangaea_v2   panmd 854442 1.865297     2017-01-30T15:42:07.000Z
-#&gt; 3 pangaea_v2   panmd 854444 1.865297     2017-01-30T15:42:08.000Z
+#&gt; 1 pangaea_v2   panmd 854443 1.889737     2017-01-30T15:42:07.000Z
+#&gt; 2 pangaea_v2   panmd 854445 1.889737     2017-01-30T15:42:07.000Z
+#&gt; 3 pangaea_v2   panmd 779032 1.889495     2017-02-24T08:49:38.000Z
 #&gt; # ... with 27 more variables: `_source.parentURI` &lt;chr&gt;,
 #&gt; #   `_source.minElevation` &lt;dbl&gt;, `_source.sf-authortitle` &lt;chr&gt;,
 #&gt; #   `_source.parentIdDataSet` &lt;int&gt;, `_source.techKeyword` &lt;list&gt;,
 #&gt; #   `_source.geocodes` &lt;list&gt;, `_source.sp-loginOption` &lt;int&gt;,
 #&gt; #   `_source.eastBoundLongitude` &lt;dbl&gt;, `_source.URI` &lt;chr&gt;,
 #&gt; #   `_source.minDateTime` &lt;chr&gt;, `_source.xml-thumb` &lt;chr&gt;,
-#&gt; #   `_source.xml` &lt;chr&gt;, `_source.maxDateTime` &lt;chr&gt;,
-#&gt; #   `_source.xml-sitemap` &lt;chr&gt;, `_source.westBoundLongitude` &lt;dbl&gt;,
-#&gt; #   `_source.northBoundLatitude` &lt;dbl&gt;, `_source.sp-dataStatus` &lt;int&gt;,
-#&gt; #   `_source.sp-hidden` &lt;int&gt;, `_source.internal-source` &lt;chr&gt;,
-#&gt; #   `_source.southBoundLatitude` &lt;dbl&gt;, `_source.idDataSet` &lt;int&gt;,
-#&gt; #   `_source.boost` &lt;dbl&gt;, `_source.oaiSet` &lt;chr&gt;,
-#&gt; #   `_source.maxElevation` &lt;dbl&gt;, `_source.elevationGeocode` &lt;chr&gt;,
+#&gt; #   `_source.xml` &lt;chr&gt;, `_source.elevationGeocode` &lt;chr&gt;,
+#&gt; #   `_source.maxDateTime` &lt;chr&gt;, `_source.xml-sitemap` &lt;chr&gt;,
+#&gt; #   `_source.westBoundLongitude` &lt;dbl&gt;, `_source.northBoundLatitude` &lt;dbl&gt;,
+#&gt; #   `_source.sp-dataStatus` &lt;int&gt;, `_source.sp-hidden` &lt;int&gt;,
+#&gt; #   `_source.internal-source` &lt;chr&gt;, `_source.southBoundLatitude` &lt;dbl&gt;,
+#&gt; #   `_source.idDataSet` &lt;int&gt;, `_source.boost` &lt;dbl&gt;,
+#&gt; #   `_source.maxElevation` &lt;dbl&gt;, `_source.oaiSet` &lt;chr&gt;,
 #&gt; #   `_source.meanPosition.lat` &lt;dbl&gt;, `_source.meanPosition.lon` &lt;dbl&gt;</div><div class='input'>
-<span class='fu'>pg_search_es</span>(<span class='kw'>query</span> <span class='kw'>=</span> <span class='st'>'water sky'</span>, <span class='kw'>default_operator</span> <span class='kw'>=</span> <span class='st'>"OR"</span>)</div><div class='output co'>#&gt; <span class='message'>total hits: 141899</span></div><div class='output co'>#&gt; # A tibble: 10 × 33
+<span class='fu'>pg_search_es</span>(<span class='kw'>query</span> <span class='kw'>=</span> <span class='st'>'water sky'</span>, <span class='kw'>default_operator</span> <span class='kw'>=</span> <span class='st'>"OR"</span>)</div><div class='output co'>#&gt; <span class='message'>total hits: 141913</span></div><div class='output co'>#&gt; # A tibble: 10 × 33
 #&gt;      `_index` `_type`  `_id` `_score` `_source.internal-datestamp`
 #&gt; *       &lt;chr&gt;   &lt;chr&gt;  &lt;chr&gt;    &lt;dbl&gt;                        &lt;chr&gt;
-#&gt; 1  pangaea_v2   panmd 588218 13.58088     2016-10-08T17:30:18.000Z
-#&gt; 2  pangaea_v2   panmd 810739 13.54150     2016-12-10T05:21:27.000Z
-#&gt; 3  pangaea_v2   panmd 843208 13.54150     2016-06-25T09:44:20.000Z
-#&gt; 4  pangaea_v2   panmd 843210 13.32852     2016-06-25T09:44:20.000Z
-#&gt; 5  pangaea_v2   panmd 843211 13.32852     2016-06-25T09:44:21.000Z
-#&gt; 6  pangaea_v2   panmd 753832 13.21544     2016-06-25T11:51:37.000Z
-#&gt; 7  pangaea_v2   panmd 845444 13.03556     2016-06-25T15:07:20.000Z
-#&gt; 8  pangaea_v2   panmd 759690 12.31106     2016-06-25T14:49:54.000Z
-#&gt; 9  pangaea_v2   panmd 829437 10.77627     2016-06-24T19:41:41.000Z
-#&gt; 10 pangaea_v2   panmd 820115 10.77627     2016-06-25T01:52:35.000Z
+#&gt; 1  pangaea_v2   panmd 588218 13.64311     2016-10-08T17:30:18.000Z
+#&gt; 2  pangaea_v2   panmd 810739 13.56159     2016-12-10T05:21:27.000Z
+#&gt; 3  pangaea_v2   panmd 843208 13.56159     2016-06-25T09:44:20.000Z
+#&gt; 4  pangaea_v2   panmd 843210 13.35775     2016-06-25T09:44:20.000Z
+#&gt; 5  pangaea_v2   panmd 843211 13.35775     2016-06-25T09:44:21.000Z
+#&gt; 6  pangaea_v2   panmd 753832 13.24579     2016-06-25T11:51:37.000Z
+#&gt; 7  pangaea_v2   panmd 845444 13.07270     2016-06-25T15:07:20.000Z
+#&gt; 8  pangaea_v2   panmd 759690 12.34557     2016-06-25T14:49:54.000Z
+#&gt; 9  pangaea_v2   panmd 829437 10.80603     2016-06-24T19:41:41.000Z
+#&gt; 10 pangaea_v2   panmd 820115 10.80603     2016-06-25T01:52:35.000Z
 #&gt; # ... with 28 more variables: `_source.maxDateTime` &lt;chr&gt;,
 #&gt; #   `_source.minElevation` &lt;dbl&gt;, `_source.sf-authortitle` &lt;chr&gt;,
 #&gt; #   `_source.xml-sitemap` &lt;chr&gt;, `_source.techKeyword` &lt;list&gt;,
@@ -305,16 +305,16 @@ package to interact with it. The base URL is
 #&gt; #   `_source.meanPosition.lat` &lt;dbl&gt;, `_source.meanPosition.lon` &lt;dbl&gt;</div><div class='input'><span class='fu'>pg_search_es</span>(<span class='kw'>query</span> <span class='kw'>=</span> <span class='st'>'water sky'</span>, <span class='kw'>default_operator</span> <span class='kw'>=</span> <span class='st'>"AND"</span>)</div><div class='output co'>#&gt; <span class='message'>total hits: 43</span></div><div class='output co'>#&gt; # A tibble: 10 × 33
 #&gt;      `_index` `_type`  `_id`  `_score` `_source.internal-datestamp`
 #&gt; *       &lt;chr&gt;   &lt;chr&gt;  &lt;chr&gt;     &lt;dbl&gt;                        &lt;chr&gt;
-#&gt; 1  pangaea_v2   panmd 588218 13.580884     2016-10-08T17:30:18.000Z
-#&gt; 2  pangaea_v2   panmd 845444 13.035557     2016-06-25T15:07:20.000Z
-#&gt; 3  pangaea_v2   panmd 759690 12.311061     2016-06-25T14:49:54.000Z
-#&gt; 4  pangaea_v2   panmd 872596 10.686980     2017-02-22T19:20:56.000Z
-#&gt; 5  pangaea_v2   panmd 872598 10.686980     2017-02-22T13:26:55.000Z
-#&gt; 6  pangaea_v2   panmd 872044  9.531056     2017-02-21T13:39:06.000Z
-#&gt; 7  pangaea_v2   panmd 871490  9.106581     2017-02-28T09:43:01.000Z
-#&gt; 8  pangaea_v2   panmd 824787  9.085766     2016-06-25T00:06:55.000Z
-#&gt; 9  pangaea_v2   panmd 823527  9.085766     2016-06-24T22:21:18.000Z
-#&gt; 10 pangaea_v2   panmd 824826  9.085766     2016-06-24T23:02:19.000Z
+#&gt; 1  pangaea_v2   panmd 588218 13.643109     2016-10-08T17:30:18.000Z
+#&gt; 2  pangaea_v2   panmd 845444 13.072703     2016-06-25T15:07:20.000Z
+#&gt; 3  pangaea_v2   panmd 759690 12.345572     2016-06-25T14:49:54.000Z
+#&gt; 4  pangaea_v2   panmd 872598 10.741166     2017-02-22T13:26:55.000Z
+#&gt; 5  pangaea_v2   panmd 872596 10.741166     2017-02-22T19:20:56.000Z
+#&gt; 6  pangaea_v2   panmd 872044  9.596715     2017-02-21T13:39:06.000Z
+#&gt; 7  pangaea_v2   panmd 871490  9.163753     2017-02-28T09:43:01.000Z
+#&gt; 8  pangaea_v2   panmd 824787  9.137165     2016-06-25T00:06:55.000Z
+#&gt; 9  pangaea_v2   panmd 823527  9.137165     2016-06-24T22:21:18.000Z
+#&gt; 10 pangaea_v2   panmd 824826  9.137165     2016-06-24T23:02:19.000Z
 #&gt; # ... with 28 more variables: `_source.maxDateTime` &lt;chr&gt;,
 #&gt; #   `_source.minElevation` &lt;dbl&gt;, `_source.sf-authortitle` &lt;chr&gt;,
 #&gt; #   `_source.xml-sitemap` &lt;chr&gt;, `_source.techKeyword` &lt;list&gt;,
@@ -329,7 +329,7 @@ package to interact with it. The base URL is
 #&gt; #   `_source.supplementToDOI` &lt;chr&gt;, `_source.oaiSet` &lt;list&gt;,
 #&gt; #   `_source.parentURI` &lt;chr&gt;, `_source.parentIdDataSet` &lt;int&gt;,
 #&gt; #   `_source.meanPosition.lat` &lt;dbl&gt;, `_source.meanPosition.lon` &lt;dbl&gt;</div><div class='input'>
-<span class='fu'>pg_search_es</span>(<span class='kw'>query</span> <span class='kw'>=</span> <span class='st'>'water'</span>, <span class='kw'>sort</span> <span class='kw'>=</span> <span class='st'>"minElevation"</span>)</div><div class='output co'>#&gt; <span class='message'>total hits: 141207</span></div><div class='output co'>#&gt; # A tibble: 10 × 30
+<span class='fu'>pg_search_es</span>(<span class='kw'>query</span> <span class='kw'>=</span> <span class='st'>'water'</span>, <span class='kw'>sort</span> <span class='kw'>=</span> <span class='st'>"minElevation"</span>)</div><div class='output co'>#&gt; <span class='message'>total hits: 141221</span></div><div class='output co'>#&gt; # A tibble: 10 × 30
 #&gt;      `_index` `_type`  `_id` `_score`      sort `_source.internal-datestamp`
 #&gt; *       &lt;chr&gt;   &lt;chr&gt;  &lt;chr&gt;    &lt;lgl&gt;    &lt;list&gt;                        &lt;chr&gt;
 #&gt; 1  pangaea_v2   panmd 775536       NA &lt;dbl [1]&gt;     2017-02-04T02:09:47.000Z
@@ -353,7 +353,7 @@ package to interact with it. The base URL is
 #&gt; #   `_source.internal-source` &lt;chr&gt;, `_source.southBoundLatitude` &lt;dbl&gt;,
 #&gt; #   `_source.idDataSet` &lt;int&gt;, `_source.boost` &lt;dbl&gt;, `_source.oaiSet` &lt;chr&gt;,
 #&gt; #   `_source.maxElevation` &lt;dbl&gt;, `_source.meanPosition.lat` &lt;dbl&gt;,
-#&gt; #   `_source.meanPosition.lon` &lt;dbl&gt;</div><div class='input'><span class='fu'>pg_search_es</span>(<span class='kw'>query</span> <span class='kw'>=</span> <span class='st'>'water'</span>, <span class='kw'>sort</span> <span class='kw'>=</span> <span class='st'>"minElevation:desc"</span>)</div><div class='output co'>#&gt; <span class='message'>total hits: 141207</span></div><div class='output co'>#&gt; # A tibble: 10 × 30
+#&gt; #   `_source.meanPosition.lon` &lt;dbl&gt;</div><div class='input'><span class='fu'>pg_search_es</span>(<span class='kw'>query</span> <span class='kw'>=</span> <span class='st'>'water'</span>, <span class='kw'>sort</span> <span class='kw'>=</span> <span class='st'>"minElevation:desc"</span>)</div><div class='output co'>#&gt; <span class='message'>total hits: 141221</span></div><div class='output co'>#&gt; # A tibble: 10 × 30
 #&gt;      `_index` `_type`  `_id` `_score`      sort `_source.internal-datestamp`
 #&gt; *       &lt;chr&gt;   &lt;chr&gt;  &lt;chr&gt;    &lt;lgl&gt;    &lt;list&gt;                        &lt;chr&gt;
 #&gt; 1  pangaea_v2   panmd 316838       NA &lt;dbl [1]&gt;     2016-08-01T14:46:57.000Z

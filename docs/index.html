@@ -39,7 +39,7 @@
 <li>
   <a href="https://github.com/ropensci/pangaear">
     <span class="fa fa-github fa-lg"></span>
-
+     
   </a>
 </li>
       </ul>
@@ -50,13 +50,13 @@
 </div>
 <!--/.navbar -->
 
-
+      
       </header><div class="row">
   <div class="col-md-9">
+    
 
-
-
-
+    
+    
 <div class="contents">
 <div id="pangaear" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
@@ -77,16 +77,16 @@
 <a href="#package-api" class="anchor"> </a>Package API</h2>
 <ul>
 <li>pg_data</li>
-<li>pg_list_identifiers</li>
-<li>pg_cache_list</li>
+<li>pg_list_metadata_formats</li>
 <li>pg_identify</li>
 <li>pg_list_records</li>
-<li>pg_list_metadata_formats</li>
 <li>pg_list_sets</li>
-<li>pg_get_record</li>
-<li>pg_cache_clear</li>
-<li>pg_search_es</li>
+<li>pg_list_identifiers</li>
 <li>pg_search</li>
+<li>pg_get_record</li>
+<li>pg_search_es</li>
+<li>pg_cache_list</li>
+<li>pg_cache_clear</li>
 </ul>
 </div>
 <div id="installation" class="section level2">
@@ -107,9 +107,9 @@ devtools::<span class="kw">install_github</span>(<span class="st">'ropensci/pang
 <span class="co">#&gt; # A tibble: 3 × 6</span>
 <span class="co">#&gt;      score                    doi  size size_measure</span>
 <span class="co">#&gt; *    &lt;dbl&gt;                  &lt;chr&gt; &lt;dbl&gt;        &lt;chr&gt;</span>
-<span class="co">#&gt; 1 21.58509 10.1594/PANGAEA.812094     2     datasets</span>
-<span class="co">#&gt; 2 11.01751 10.1594/PANGAEA.862525   372     datasets</span>
-<span class="co">#&gt; 3 10.91036 10.1594/PANGAEA.736010     9     datasets</span>
+<span class="co">#&gt; 1 21.82350 10.1594/PANGAEA.812094     2     datasets</span>
+<span class="co">#&gt; 2 11.09732 10.1594/PANGAEA.862525   372     datasets</span>
+<span class="co">#&gt; 3 10.92197 10.1594/PANGAEA.736010     9     datasets</span>
 <span class="co">#&gt; # ... with 2 more variables: citation &lt;chr&gt;, supplement_to &lt;chr&gt;</span></code></pre></div>
 </div>
 <div id="get-data" class="section level2">
@@ -118,6 +118,11 @@ devtools::<span class="kw">install_github</span>(<span class="st">'ropensci/pang
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">res &lt;-<span class="st"> </span><span class="kw"><a href="reference/pg_cache_clear.html">pg_data</a></span>(<span class="dt">doi =</span> <span class="st">'10.1594/PANGAEA.807580'</span>)
 res[[<span class="dv">1</span>]]
 <span class="co">#&gt; &lt;Pangaea data&gt; 10.1594/PANGAEA.807580</span>
+<span class="co">#&gt;   parent doi: 10.1594/PANGAEA.807580</span>
+<span class="co">#&gt;   url:        https://doi.org/10.1594/PANGAEA.807580</span>
+<span class="co">#&gt;   citation:   Schiebel, Ralf; Waniek, Joanna J; Bork, Matthias; Hemleben, Christoph (2001): Physical oceanography during METEOR cruise M36/6. doi:10.1594/PANGAEA.807580,In supplement to: Schiebel, R et al. (2001): Planktic foraminiferal production stimulated by chlorophyll redistribution and entrainment of nutrients. Deep Sea Research Part I: Oceanographic Research Papers, 48(3), 721-740, doi:10.1016/S0967-0637(00)00065-0</span>
+<span class="co">#&gt;   path:       /Users/sacmac/Library/Caches/pangaear/10_1594_PANGAEA_807580.txt</span>
+<span class="co">#&gt;   data:</span>
 <span class="co">#&gt; # A tibble: 32,179 × 13</span>
 <span class="co">#&gt;                Event      `Date/Time` Latitude Longitude `Elevation [m]`</span>
 <span class="co">#&gt;                &lt;chr&gt;            &lt;chr&gt;    &lt;dbl&gt;     &lt;dbl&gt;           &lt;int&gt;</span>
@@ -140,6 +145,11 @@ res[[<span class="dv">1</span>]]
 <span class="kw"><a href="reference/pg_cache_clear.html">pg_data</a></span>(res$doi[<span class="dv">3</span>])[<span class="dv">1</span>:<span class="dv">3</span>]
 <span class="co">#&gt; [[1]]</span>
 <span class="co">#&gt; &lt;Pangaea data&gt; 10.1594/PANGAEA.77406</span>
+<span class="co">#&gt;   parent doi: 10.1594/PANGAEA.736010</span>
+<span class="co">#&gt;   url:        https://doi.org/10.1594/PANGAEA.77406</span>
+<span class="co">#&gt;   citation:   Archer, David E; Devol, Alan H (1992): Benthic oxygen flixes on the Washington shelf and slope. doi:10.1594/PANGAEA.736010,Supplement to: Archer, DE; Devol, AH (1992): Benthic oxygen fluxes on the Washington shelf and slope: A comparison of in situ microelectrode and chamber flux measurements. Limnology and Oceanography, 37(3), 614-629, doi:10.4319/lo.1992.37.3.0614</span>
+<span class="co">#&gt;   path:       /Users/sacmac/Library/Caches/pangaear/10_1594_PANGAEA_77406.txt</span>
+<span class="co">#&gt;   data:</span>
 <span class="co">#&gt; # A tibble: 1 × 4</span>
 <span class="co">#&gt;   `Depth [m]` `SOD [mmol/m**2/day]` `SOD [mmol/m**2/day]` `O2 [µmol/l]`</span>
 <span class="co">#&gt;         &lt;int&gt;                 &lt;dbl&gt;                 &lt;dbl&gt;         &lt;dbl&gt;</span>
@@ -147,6 +157,11 @@ res[[<span class="dv">1</span>]]
 <span class="co">#&gt; </span>
 <span class="co">#&gt; [[2]]</span>
 <span class="co">#&gt; &lt;Pangaea data&gt; 10.1594/PANGAEA.77397</span>
+<span class="co">#&gt;   parent doi: 10.1594/PANGAEA.736010</span>
+<span class="co">#&gt;   url:        https://doi.org/10.1594/PANGAEA.77397</span>
+<span class="co">#&gt;   citation:   Archer, David E; Devol, Alan H (1992): Benthic oxygen flixes on the Washington shelf and slope. doi:10.1594/PANGAEA.736010,Supplement to: Archer, DE; Devol, AH (1992): Benthic oxygen fluxes on the Washington shelf and slope: A comparison of in situ microelectrode and chamber flux measurements. Limnology and Oceanography, 37(3), 614-629, doi:10.4319/lo.1992.37.3.0614</span>
+<span class="co">#&gt;   path:       /Users/sacmac/Library/Caches/pangaear/10_1594_PANGAEA_77397.txt</span>
+<span class="co">#&gt;   data:</span>
 <span class="co">#&gt; # A tibble: 27 × 6</span>
 <span class="co">#&gt;    `Depth [m]` `O2 [µmol/l]` `Poros frac` `Mn [µmol/l]` `Fe [µmol/l]`</span>
 <span class="co">#&gt;          &lt;dbl&gt;         &lt;dbl&gt;        &lt;dbl&gt;         &lt;dbl&gt;         &lt;dbl&gt;</span>
@@ -164,6 +179,11 @@ res[[<span class="dv">1</span>]]
 <span class="co">#&gt; </span>
 <span class="co">#&gt; [[3]]</span>
 <span class="co">#&gt; &lt;Pangaea data&gt; 10.1594/PANGAEA.77398</span>
+<span class="co">#&gt;   parent doi: 10.1594/PANGAEA.736010</span>
+<span class="co">#&gt;   url:        https://doi.org/10.1594/PANGAEA.77398</span>
+<span class="co">#&gt;   citation:   Archer, David E; Devol, Alan H (1992): Benthic oxygen flixes on the Washington shelf and slope. doi:10.1594/PANGAEA.736010,Supplement to: Archer, DE; Devol, AH (1992): Benthic oxygen fluxes on the Washington shelf and slope: A comparison of in situ microelectrode and chamber flux measurements. Limnology and Oceanography, 37(3), 614-629, doi:10.4319/lo.1992.37.3.0614</span>
+<span class="co">#&gt;   path:       /Users/sacmac/Library/Caches/pangaear/10_1594_PANGAEA_77398.txt</span>
+<span class="co">#&gt;   data:</span>
 <span class="co">#&gt; # A tibble: 27 × 6</span>
 <span class="co">#&gt;    `Depth [m]` `O2 [µmol/l]` `Poros frac` `Mn [µmol/l]` `Fe [µmol/l]`</span>
 <span class="co">#&gt;          &lt;dbl&gt;         &lt;dbl&gt;        &lt;dbl&gt;         &lt;dbl&gt;         &lt;dbl&gt;</span>
@@ -221,21 +241,22 @@ res[[<span class="dv">1</span>]]
 <h3 class="hasAnchor">
 <a href="#list-identifiers" class="anchor"> </a>List identifiers</h3>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="reference/pg_list_identifiers.html">pg_list_identifiers</a></span>(<span class="dt">from =</span> <span class="kw">Sys.Date</span>() -<span class="st"> </span><span class="dv">2</span>, <span class="dt">until =</span> <span class="kw">Sys.Date</span>())
-<span class="co">#&gt; # A tibble: 20,528 × 7</span>
+<span class="co">#&gt; # A tibble: 7,607 × 9</span>
 <span class="co">#&gt;                                   identifier            datestamp setSpec</span>
 <span class="co">#&gt;                                        &lt;chr&gt;                &lt;chr&gt;   &lt;chr&gt;</span>
-<span class="co">#&gt; 1   oai:pangaea.de:doi:10.1594/PANGAEA.52692 2017-03-05T14:44:38Z citable</span>
-<span class="co">#&gt; 2   oai:pangaea.de:doi:10.1594/PANGAEA.53178 2017-03-05T14:26:18Z citable</span>
-<span class="co">#&gt; 3   oai:pangaea.de:doi:10.1594/PANGAEA.57539 2017-03-05T14:25:32Z citable</span>
-<span class="co">#&gt; 4  oai:pangaea.de:doi:10.1594/PANGAEA.142421 2017-03-05T13:53:45Z citable</span>
-<span class="co">#&gt; 5  oai:pangaea.de:doi:10.1594/PANGAEA.149998 2017-03-05T13:59:10Z citable</span>
-<span class="co">#&gt; 6  oai:pangaea.de:doi:10.1594/PANGAEA.149999 2017-03-07T09:22:22Z citable</span>
-<span class="co">#&gt; 7  oai:pangaea.de:doi:10.1594/PANGAEA.208129 2017-03-05T14:35:04Z citable</span>
-<span class="co">#&gt; 8  oai:pangaea.de:doi:10.1594/PANGAEA.228741 2017-03-05T13:59:25Z citable</span>
-<span class="co">#&gt; 9  oai:pangaea.de:doi:10.1594/PANGAEA.314690 2017-03-07T11:47:26Z citable</span>
-<span class="co">#&gt; 10 oai:pangaea.de:doi:10.1594/PANGAEA.547798 2017-03-05T13:40:00Z citable</span>
-<span class="co">#&gt; # ... with 20,518 more rows, and 4 more variables: setSpec.1 &lt;chr&gt;,</span>
-<span class="co">#&gt; #   setSpec.2 &lt;chr&gt;, setSpec.3 &lt;chr&gt;, setSpec.4 &lt;chr&gt;</span></code></pre></div>
+<span class="co">#&gt; 1   oai:pangaea.de:doi:10.1594/PANGAEA.55417 2017-03-08T13:19:32Z citable</span>
+<span class="co">#&gt; 2   oai:pangaea.de:doi:10.1594/PANGAEA.57910 2017-03-08T13:17:50Z  ORFOIS</span>
+<span class="co">#&gt; 3   oai:pangaea.de:doi:10.1594/PANGAEA.77250 2017-03-08T13:19:59Z citable</span>
+<span class="co">#&gt; 4  oai:pangaea.de:doi:10.1594/PANGAEA.149999 2017-03-07T09:22:22Z citable</span>
+<span class="co">#&gt; 5  oai:pangaea.de:doi:10.1594/PANGAEA.208129 2017-03-08T13:19:16Z citable</span>
+<span class="co">#&gt; 6  oai:pangaea.de:doi:10.1594/PANGAEA.314690 2017-03-07T11:47:26Z citable</span>
+<span class="co">#&gt; 7  oai:pangaea.de:doi:10.1594/PANGAEA.351146 2017-03-08T13:18:19Z citable</span>
+<span class="co">#&gt; 8  oai:pangaea.de:doi:10.1594/PANGAEA.611095 2017-03-07T11:01:44Z citable</span>
+<span class="co">#&gt; 9  oai:pangaea.de:doi:10.1594/PANGAEA.693923 2017-03-08T13:17:24Z citable</span>
+<span class="co">#&gt; 10 oai:pangaea.de:doi:10.1594/PANGAEA.716835 2017-03-07T10:52:54Z citable</span>
+<span class="co">#&gt; # ... with 7,597 more rows, and 6 more variables: setSpec.1 &lt;chr&gt;,</span>
+<span class="co">#&gt; #   setSpec.2 &lt;chr&gt;, setSpec.3 &lt;chr&gt;, setSpec.4 &lt;chr&gt;, setSpec.5 &lt;chr&gt;,</span>
+<span class="co">#&gt; #   setSpec.6 &lt;chr&gt;</span></code></pre></div>
 </div>
 <div id="list-sets" class="section level3">
 <h3 class="hasAnchor">
@@ -260,52 +281,25 @@ res[[<span class="dv">1</span>]]
 <h3 class="hasAnchor">
 <a href="#list-records" class="anchor"> </a>List records</h3>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="reference/pg_list_records.html">pg_list_records</a></span>(<span class="dt">from =</span> <span class="kw">Sys.Date</span>() -<span class="st"> </span><span class="dv">1</span>, <span class="dt">until =</span> <span class="kw">Sys.Date</span>())
-<span class="co">#&gt; # A tibble: 1,450 × 587</span>
-<span class="co">#&gt;                                   identifier            datestamp setSpec</span>
-<span class="co">#&gt;                                        &lt;chr&gt;                &lt;chr&gt;   &lt;chr&gt;</span>
-<span class="co">#&gt; 1  oai:pangaea.de:doi:10.1594/PANGAEA.149999 2017-03-07T09:22:22Z citable</span>
-<span class="co">#&gt; 2  oai:pangaea.de:doi:10.1594/PANGAEA.314690 2017-03-07T11:47:26Z citable</span>
-<span class="co">#&gt; 3  oai:pangaea.de:doi:10.1594/PANGAEA.611095 2017-03-07T11:01:44Z citable</span>
-<span class="co">#&gt; 4  oai:pangaea.de:doi:10.1594/PANGAEA.716835 2017-03-07T10:52:54Z citable</span>
-<span class="co">#&gt; 5  oai:pangaea.de:doi:10.1594/PANGAEA.728847 2017-03-07T13:17:12Z citable</span>
-<span class="co">#&gt; 6  oai:pangaea.de:doi:10.1594/PANGAEA.735539 2017-03-07T13:19:15Z citable</span>
-<span class="co">#&gt; 7  oai:pangaea.de:doi:10.1594/PANGAEA.737438 2017-03-06T15:40:27Z citable</span>
-<span class="co">#&gt; 8  oai:pangaea.de:doi:10.1594/PANGAEA.745833 2017-03-07T13:19:13Z citable</span>
-<span class="co">#&gt; 9  oai:pangaea.de:doi:10.1594/PANGAEA.746016 2017-03-07T09:22:25Z citable</span>
-<span class="co">#&gt; 10 oai:pangaea.de:doi:10.1594/PANGAEA.753644 2017-03-07T11:44:13Z citable</span>
-<span class="co">#&gt; # ... with 1,440 more rows, and 584 more variables: setSpec.1 &lt;chr&gt;,</span>
-<span class="co">#&gt; #   setSpec.2 &lt;chr&gt;, title &lt;chr&gt;, creator &lt;chr&gt;, source &lt;chr&gt;,</span>
-<span class="co">#&gt; #   publisher &lt;chr&gt;, date &lt;chr&gt;, type &lt;chr&gt;, format &lt;chr&gt;,</span>
-<span class="co">#&gt; #   identifier.2 &lt;chr&gt;, identifier.1 &lt;chr&gt;, description &lt;chr&gt;,</span>
-<span class="co">#&gt; #   language &lt;chr&gt;, rights &lt;chr&gt;, rights.1 &lt;chr&gt;, relation &lt;chr&gt;,</span>
-<span class="co">#&gt; #   relation.1 &lt;chr&gt;, relation.2 &lt;chr&gt;, relation.3 &lt;chr&gt;,</span>
-<span class="co">#&gt; #   relation.4 &lt;chr&gt;, relation.5 &lt;chr&gt;, relation.6 &lt;chr&gt;,</span>
-<span class="co">#&gt; #   relation.7 &lt;chr&gt;, relation.8 &lt;chr&gt;, relation.9 &lt;chr&gt;,</span>
-<span class="co">#&gt; #   relation.10 &lt;chr&gt;, relation.11 &lt;chr&gt;, relation.12 &lt;chr&gt;,</span>
-<span class="co">#&gt; #   relation.13 &lt;chr&gt;, relation.14 &lt;chr&gt;, relation.15 &lt;chr&gt;,</span>
-<span class="co">#&gt; #   relation.16 &lt;chr&gt;, relation.17 &lt;chr&gt;, relation.18 &lt;chr&gt;,</span>
-<span class="co">#&gt; #   relation.19 &lt;chr&gt;, relation.20 &lt;chr&gt;, relation.21 &lt;chr&gt;,</span>
-<span class="co">#&gt; #   relation.22 &lt;chr&gt;, relation.23 &lt;chr&gt;, relation.24 &lt;chr&gt;,</span>
-<span class="co">#&gt; #   relation.25 &lt;chr&gt;, relation.26 &lt;chr&gt;, relation.27 &lt;chr&gt;,</span>
-<span class="co">#&gt; #   relation.28 &lt;chr&gt;, relation.29 &lt;chr&gt;, relation.30 &lt;chr&gt;,</span>
-<span class="co">#&gt; #   relation.31 &lt;chr&gt;, relation.32 &lt;chr&gt;, relation.33 &lt;chr&gt;,</span>
-<span class="co">#&gt; #   relation.34 &lt;chr&gt;, relation.35 &lt;chr&gt;, relation.36 &lt;chr&gt;,</span>
-<span class="co">#&gt; #   relation.37 &lt;chr&gt;, relation.38 &lt;chr&gt;, relation.39 &lt;chr&gt;,</span>
-<span class="co">#&gt; #   relation.40 &lt;chr&gt;, relation.41 &lt;chr&gt;, relation.42 &lt;chr&gt;,</span>
-<span class="co">#&gt; #   relation.43 &lt;chr&gt;, relation.44 &lt;chr&gt;, relation.45 &lt;chr&gt;,</span>
-<span class="co">#&gt; #   relation.46 &lt;chr&gt;, relation.47 &lt;chr&gt;, relation.48 &lt;chr&gt;,</span>
-<span class="co">#&gt; #   relation.49 &lt;chr&gt;, relation.50 &lt;chr&gt;, relation.51 &lt;chr&gt;,</span>
-<span class="co">#&gt; #   relation.52 &lt;chr&gt;, relation.53 &lt;chr&gt;, relation.54 &lt;chr&gt;,</span>
-<span class="co">#&gt; #   relation.55 &lt;chr&gt;, relation.56 &lt;chr&gt;, relation.57 &lt;chr&gt;,</span>
-<span class="co">#&gt; #   relation.58 &lt;chr&gt;, relation.59 &lt;chr&gt;, relation.60 &lt;chr&gt;,</span>
-<span class="co">#&gt; #   relation.61 &lt;chr&gt;, relation.62 &lt;chr&gt;, relation.63 &lt;chr&gt;,</span>
-<span class="co">#&gt; #   relation.64 &lt;chr&gt;, relation.65 &lt;chr&gt;, relation.66 &lt;chr&gt;,</span>
-<span class="co">#&gt; #   relation.67 &lt;chr&gt;, relation.68 &lt;chr&gt;, relation.69 &lt;chr&gt;,</span>
-<span class="co">#&gt; #   relation.70 &lt;chr&gt;, relation.71 &lt;chr&gt;, relation.72 &lt;chr&gt;,</span>
-<span class="co">#&gt; #   relation.73 &lt;chr&gt;, relation.74 &lt;chr&gt;, relation.75 &lt;chr&gt;,</span>
-<span class="co">#&gt; #   relation.76 &lt;chr&gt;, relation.77 &lt;chr&gt;, relation.78 &lt;chr&gt;,</span>
-<span class="co">#&gt; #   relation.79 &lt;chr&gt;, relation.80 &lt;chr&gt;, relation.81 &lt;chr&gt;,</span>
-<span class="co">#&gt; #   relation.82 &lt;chr&gt;, relation.83 &lt;chr&gt;, relation.84 &lt;chr&gt;, ...</span></code></pre></div>
+<span class="co">#&gt; # A tibble: 6,374 × 48</span>
+<span class="co">#&gt;                                   identifier            datestamp setSpec         setSpec.1         setSpec.2</span>
+<span class="co">#&gt;                                        &lt;chr&gt;                &lt;chr&gt;   &lt;chr&gt;             &lt;chr&gt;             &lt;chr&gt;</span>
+<span class="co">#&gt; 1   oai:pangaea.de:doi:10.1594/PANGAEA.55417 2017-03-08T13:19:32Z citable citableWithChilds        supplement</span>
+<span class="co">#&gt; 2   oai:pangaea.de:doi:10.1594/PANGAEA.57910 2017-03-08T13:17:50Z  ORFOIS           citable citableWithChilds</span>
+<span class="co">#&gt; 3   oai:pangaea.de:doi:10.1594/PANGAEA.77250 2017-03-08T13:19:59Z citable citableWithChilds        supplement</span>
+<span class="co">#&gt; 4  oai:pangaea.de:doi:10.1594/PANGAEA.208129 2017-03-08T13:19:16Z citable citableWithChilds        supplement</span>
+<span class="co">#&gt; 5  oai:pangaea.de:doi:10.1594/PANGAEA.351146 2017-03-08T13:18:19Z citable citableWithChilds        supplement</span>
+<span class="co">#&gt; 6  oai:pangaea.de:doi:10.1594/PANGAEA.693923 2017-03-08T13:17:24Z citable citableWithChilds        supplement</span>
+<span class="co">#&gt; 7  oai:pangaea.de:doi:10.1594/PANGAEA.726410 2017-03-08T13:17:54Z citable citableWithChilds        supplement</span>
+<span class="co">#&gt; 8  oai:pangaea.de:doi:10.1594/PANGAEA.757616 2017-03-08T13:18:05Z citable citableWithChilds        supplement</span>
+<span class="co">#&gt; 9  oai:pangaea.de:doi:10.1594/PANGAEA.758696 2017-03-08T13:19:02Z citable citableWithChilds        supplement</span>
+<span class="co">#&gt; 10 oai:pangaea.de:doi:10.1594/PANGAEA.760166 2017-03-09T14:54:46Z    BCCR            IMAGES       Past4Future</span>
+<span class="co">#&gt; # ... with 6,364 more rows, and 43 more variables: title &lt;chr&gt;, creator &lt;chr&gt;, creator.1 &lt;chr&gt;, source &lt;chr&gt;, publisher &lt;chr&gt;, date &lt;chr&gt;,</span>
+<span class="co">#&gt; #   type &lt;chr&gt;, format &lt;chr&gt;, identifier.2 &lt;chr&gt;, identifier.1 &lt;chr&gt;, description &lt;chr&gt;, language &lt;chr&gt;, rights &lt;chr&gt;, rights.1 &lt;chr&gt;,</span>
+<span class="co">#&gt; #   coverage &lt;chr&gt;, subject &lt;chr&gt;, setSpec.3 &lt;chr&gt;, creator.2 &lt;chr&gt;, creator.3 &lt;chr&gt;, relation &lt;chr&gt;, relation.1 &lt;chr&gt;, relation.2 &lt;chr&gt;,</span>
+<span class="co">#&gt; #   relation.3 &lt;chr&gt;, relation.4 &lt;chr&gt;, creator.4 &lt;chr&gt;, creator.5 &lt;chr&gt;, creator.6 &lt;chr&gt;, creator.7 &lt;chr&gt;, setSpec.4 &lt;chr&gt;, setSpec.5 &lt;chr&gt;,</span>
+<span class="co">#&gt; #   setSpec.6 &lt;chr&gt;, source.1 &lt;chr&gt;, creator.8 &lt;chr&gt;, creator.9 &lt;chr&gt;, creator.10 &lt;chr&gt;, creator.11 &lt;chr&gt;, creator.12 &lt;chr&gt;, creator.13 &lt;chr&gt;,</span>
+<span class="co">#&gt; #   relation.5 &lt;chr&gt;, relation.6 &lt;chr&gt;, relation.7 &lt;chr&gt;, relation.8 &lt;chr&gt;, creator.14 &lt;chr&gt;</span></code></pre></div>
 </div>
 <div id="get-a-record" class="section level3">
 <h3 class="hasAnchor">
@@ -314,20 +308,17 @@ res[[<span class="dv">1</span>]]
 <span class="co">#&gt; $`oai:pangaea.de:doi:10.1594/PANGAEA.788382`</span>
 <span class="co">#&gt; $`oai:pangaea.de:doi:10.1594/PANGAEA.788382`$header</span>
 <span class="co">#&gt; # A tibble: 1 × 3</span>
-<span class="co">#&gt;                                  identifier            datestamp</span>
-<span class="co">#&gt;                                       &lt;chr&gt;                &lt;chr&gt;</span>
-<span class="co">#&gt; 1 oai:pangaea.de:doi:10.1594/PANGAEA.788382 2016-06-25T14:58:45Z</span>
-<span class="co">#&gt; # ... with 1 more variables: setSpec &lt;chr&gt;</span>
+<span class="co">#&gt;                                  identifier            datestamp                              setSpec</span>
+<span class="co">#&gt;                                       &lt;chr&gt;                &lt;chr&gt;                                &lt;chr&gt;</span>
+<span class="co">#&gt; 1 oai:pangaea.de:doi:10.1594/PANGAEA.788382 2016-06-25T14:58:45Z citable;citableWithChilds;supplement</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; $`oai:pangaea.de:doi:10.1594/PANGAEA.788382`$metadata</span>
 <span class="co">#&gt; # A tibble: 1 × 13</span>
-<span class="co">#&gt;                                                                         title</span>
-<span class="co">#&gt;                                                                         &lt;chr&gt;</span>
-<span class="co">#&gt; 1 Trace metals in shells of mussels and clams from deep-sea hydrothermal vent</span>
-<span class="co">#&gt; # ... with 12 more variables: creator &lt;chr&gt;, source &lt;chr&gt;,</span>
-<span class="co">#&gt; #   publisher &lt;chr&gt;, date &lt;chr&gt;, type &lt;chr&gt;, format &lt;chr&gt;,</span>
-<span class="co">#&gt; #   identifier &lt;chr&gt;, description &lt;chr&gt;, language &lt;chr&gt;, rights &lt;chr&gt;,</span>
-<span class="co">#&gt; #   coverage &lt;chr&gt;, subject &lt;chr&gt;</span></code></pre></div>
+<span class="co">#&gt;                                                                                                                                title</span>
+<span class="co">#&gt;                                                                                                                                &lt;chr&gt;</span>
+<span class="co">#&gt; 1 Trace metals in shells of mussels and clams from deep-sea hydrothermal vent fields of the Mid-Atlantic Ridge and East Pacific Rise</span>
+<span class="co">#&gt; # ... with 12 more variables: creator &lt;chr&gt;, source &lt;chr&gt;, publisher &lt;chr&gt;, date &lt;chr&gt;, type &lt;chr&gt;, format &lt;chr&gt;, identifier &lt;chr&gt;,</span>
+<span class="co">#&gt; #   description &lt;chr&gt;, language &lt;chr&gt;, rights &lt;chr&gt;, coverage &lt;chr&gt;, subject &lt;chr&gt;</span></code></pre></div>
 </div>
 </div>
 <div id="contributors-reverse-alphabetical" class="section level2">

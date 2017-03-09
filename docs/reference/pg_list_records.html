@@ -136,96 +136,81 @@ requested witht the <code>as</code> parameter</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>pg_list_records</span>(<span class='kw'>set</span><span class='kw'>=</span><span class='st'>'citable'</span>, <span class='kw'>from</span><span class='kw'>=</span><span class='fu'>Sys.Date</span>()-<span class='fl'>1</span>, <span class='kw'>until</span><span class='kw'>=</span><span class='fu'>Sys.Date</span>())</div><div class='output co'>#&gt; # A tibble: 57 × 577
+<span class='fu'>pg_list_records</span>(<span class='kw'>set</span><span class='kw'>=</span><span class='st'>'citable'</span>, <span class='kw'>from</span><span class='kw'>=</span><span class='fu'>Sys.Date</span>()-<span class='fl'>1</span>, <span class='kw'>until</span><span class='kw'>=</span><span class='fu'>Sys.Date</span>())</div><div class='output co'>#&gt; # A tibble: 142 × 44
 #&gt;                                   identifier            datestamp setSpec
 #&gt;                                        &lt;chr&gt;                &lt;chr&gt;   &lt;chr&gt;
-#&gt; 1  oai:pangaea.de:doi:10.1594/PANGAEA.149999 2017-03-07T09:22:22Z citable
-#&gt; 2  oai:pangaea.de:doi:10.1594/PANGAEA.314690 2017-03-07T11:47:26Z citable
-#&gt; 3  oai:pangaea.de:doi:10.1594/PANGAEA.611095 2017-03-07T11:01:44Z citable
-#&gt; 4  oai:pangaea.de:doi:10.1594/PANGAEA.716835 2017-03-07T10:52:54Z citable
-#&gt; 5  oai:pangaea.de:doi:10.1594/PANGAEA.728847 2017-03-07T13:17:12Z citable
-#&gt; 6  oai:pangaea.de:doi:10.1594/PANGAEA.735539 2017-03-07T13:19:15Z citable
-#&gt; 7  oai:pangaea.de:doi:10.1594/PANGAEA.737438 2017-03-06T15:40:27Z citable
-#&gt; 8  oai:pangaea.de:doi:10.1594/PANGAEA.745833 2017-03-07T13:19:13Z citable
-#&gt; 9  oai:pangaea.de:doi:10.1594/PANGAEA.746016 2017-03-07T09:22:25Z citable
-#&gt; 10 oai:pangaea.de:doi:10.1594/PANGAEA.753644 2017-03-07T11:44:13Z citable
-#&gt; # ... with 47 more rows, and 574 more variables: setSpec.1 &lt;chr&gt;,
-#&gt; #   setSpec.2 &lt;chr&gt;, title &lt;chr&gt;, creator &lt;chr&gt;, source &lt;chr&gt;, publisher &lt;chr&gt;,
-#&gt; #   date &lt;chr&gt;, type &lt;chr&gt;, format &lt;chr&gt;, identifier.2 &lt;chr&gt;,
+#&gt; 1   oai:pangaea.de:doi:10.1594/PANGAEA.55417 2017-03-08T13:19:32Z citable
+#&gt; 2   oai:pangaea.de:doi:10.1594/PANGAEA.57910 2017-03-08T13:17:50Z  ORFOIS
+#&gt; 3   oai:pangaea.de:doi:10.1594/PANGAEA.77250 2017-03-08T13:19:59Z citable
+#&gt; 4  oai:pangaea.de:doi:10.1594/PANGAEA.208129 2017-03-08T13:19:16Z citable
+#&gt; 5  oai:pangaea.de:doi:10.1594/PANGAEA.351146 2017-03-08T13:18:19Z citable
+#&gt; 6  oai:pangaea.de:doi:10.1594/PANGAEA.693923 2017-03-08T13:17:24Z citable
+#&gt; 7  oai:pangaea.de:doi:10.1594/PANGAEA.726410 2017-03-08T13:17:54Z citable
+#&gt; 8  oai:pangaea.de:doi:10.1594/PANGAEA.757616 2017-03-08T13:18:05Z citable
+#&gt; 9  oai:pangaea.de:doi:10.1594/PANGAEA.758696 2017-03-08T13:19:02Z citable
+#&gt; 10 oai:pangaea.de:doi:10.1594/PANGAEA.760166 2017-03-09T14:54:46Z    BCCR
+#&gt; # ... with 132 more rows, and 41 more variables: setSpec.1 &lt;chr&gt;,
+#&gt; #   setSpec.2 &lt;chr&gt;, title &lt;chr&gt;, creator &lt;chr&gt;, creator.1 &lt;chr&gt;, source &lt;chr&gt;,
+#&gt; #   publisher &lt;chr&gt;, date &lt;chr&gt;, type &lt;chr&gt;, format &lt;chr&gt;, identifier.2 &lt;chr&gt;,
 #&gt; #   identifier.1 &lt;chr&gt;, description &lt;chr&gt;, language &lt;chr&gt;, rights &lt;chr&gt;,
-#&gt; #   rights.1 &lt;chr&gt;, relation &lt;chr&gt;, relation.1 &lt;chr&gt;, relation.2 &lt;chr&gt;,
-#&gt; #   relation.3 &lt;chr&gt;, relation.4 &lt;chr&gt;, relation.5 &lt;chr&gt;, relation.6 &lt;chr&gt;,
-#&gt; #   relation.7 &lt;chr&gt;, relation.8 &lt;chr&gt;, relation.9 &lt;chr&gt;, relation.10 &lt;chr&gt;,
-#&gt; #   relation.11 &lt;chr&gt;, relation.12 &lt;chr&gt;, relation.13 &lt;chr&gt;, relation.14 &lt;chr&gt;,
-#&gt; #   relation.15 &lt;chr&gt;, relation.16 &lt;chr&gt;, relation.17 &lt;chr&gt;, relation.18 &lt;chr&gt;,
-#&gt; #   relation.19 &lt;chr&gt;, relation.20 &lt;chr&gt;, relation.21 &lt;chr&gt;, relation.22 &lt;chr&gt;,
-#&gt; #   relation.23 &lt;chr&gt;, relation.24 &lt;chr&gt;, relation.25 &lt;chr&gt;, relation.26 &lt;chr&gt;,
-#&gt; #   relation.27 &lt;chr&gt;, relation.28 &lt;chr&gt;, relation.29 &lt;chr&gt;, relation.30 &lt;chr&gt;,
-#&gt; #   relation.31 &lt;chr&gt;, relation.32 &lt;chr&gt;, relation.33 &lt;chr&gt;, relation.34 &lt;chr&gt;,
-#&gt; #   relation.35 &lt;chr&gt;, relation.36 &lt;chr&gt;, relation.37 &lt;chr&gt;, relation.38 &lt;chr&gt;,
-#&gt; #   relation.39 &lt;chr&gt;, relation.40 &lt;chr&gt;, relation.41 &lt;chr&gt;, relation.42 &lt;chr&gt;,
-#&gt; #   relation.43 &lt;chr&gt;, relation.44 &lt;chr&gt;, relation.45 &lt;chr&gt;, relation.46 &lt;chr&gt;,
-#&gt; #   relation.47 &lt;chr&gt;, relation.48 &lt;chr&gt;, relation.49 &lt;chr&gt;, relation.50 &lt;chr&gt;,
-#&gt; #   relation.51 &lt;chr&gt;, relation.52 &lt;chr&gt;, relation.53 &lt;chr&gt;, relation.54 &lt;chr&gt;,
-#&gt; #   relation.55 &lt;chr&gt;, relation.56 &lt;chr&gt;, relation.57 &lt;chr&gt;, relation.58 &lt;chr&gt;,
-#&gt; #   relation.59 &lt;chr&gt;, relation.60 &lt;chr&gt;, relation.61 &lt;chr&gt;, relation.62 &lt;chr&gt;,
-#&gt; #   relation.63 &lt;chr&gt;, relation.64 &lt;chr&gt;, relation.65 &lt;chr&gt;, relation.66 &lt;chr&gt;,
-#&gt; #   relation.67 &lt;chr&gt;, relation.68 &lt;chr&gt;, relation.69 &lt;chr&gt;, relation.70 &lt;chr&gt;,
-#&gt; #   relation.71 &lt;chr&gt;, relation.72 &lt;chr&gt;, relation.73 &lt;chr&gt;, relation.74 &lt;chr&gt;,
-#&gt; #   relation.75 &lt;chr&gt;, relation.76 &lt;chr&gt;, relation.77 &lt;chr&gt;, relation.78 &lt;chr&gt;,
-#&gt; #   relation.79 &lt;chr&gt;, relation.80 &lt;chr&gt;, relation.81 &lt;chr&gt;, relation.82 &lt;chr&gt;,
-#&gt; #   relation.83 &lt;chr&gt;, relation.84 &lt;chr&gt;, ...</div><div class='input'>
+#&gt; #   rights.1 &lt;chr&gt;, coverage &lt;chr&gt;, subject &lt;chr&gt;, setSpec.3 &lt;chr&gt;,
+#&gt; #   creator.2 &lt;chr&gt;, creator.3 &lt;chr&gt;, relation &lt;chr&gt;, relation.1 &lt;chr&gt;,
+#&gt; #   relation.2 &lt;chr&gt;, relation.3 &lt;chr&gt;, relation.4 &lt;chr&gt;, creator.4 &lt;chr&gt;,
+#&gt; #   creator.5 &lt;chr&gt;, creator.6 &lt;chr&gt;, creator.7 &lt;chr&gt;, setSpec.4 &lt;chr&gt;,
+#&gt; #   setSpec.5 &lt;chr&gt;, setSpec.6 &lt;chr&gt;, source.1 &lt;chr&gt;, creator.8 &lt;chr&gt;,
+#&gt; #   creator.9 &lt;chr&gt;, creator.10 &lt;chr&gt;, creator.11 &lt;chr&gt;, creator.12 &lt;chr&gt;,
+#&gt; #   creator.13 &lt;chr&gt;, relation.5 &lt;chr&gt;</div><div class='input'>
 <span class='co'># When no results found &gt; "'noRecordsMatch'"</span>
 <span class='co'># pg_list_records(set='geomound', from='2015-01-01', until='2015-01-01')</span>
 
 <span class='fu'>pg_list_records</span>(<span class='kw'>prefix</span><span class='kw'>=</span><span class='st'>"iso19139"</span>, <span class='kw'>set</span><span class='kw'>=</span><span class='st'>'citable'</span>, <span class='kw'>from</span><span class='kw'>=</span><span class='fu'>Sys.Date</span>()-<span class='fl'>1</span>,
-  <span class='kw'>until</span><span class='kw'>=</span><span class='fu'>Sys.Date</span>())</div><div class='output co'>#&gt; # A tibble: 57 × 404
+  <span class='kw'>until</span><span class='kw'>=</span><span class='fu'>Sys.Date</span>())</div><div class='output co'>#&gt; # A tibble: 142 × 136
 #&gt;                                   identifier            datestamp setSpec
 #&gt;                                        &lt;chr&gt;                &lt;chr&gt;   &lt;chr&gt;
-#&gt; 1  oai:pangaea.de:doi:10.1594/PANGAEA.149999 2017-03-07T09:22:22Z citable
-#&gt; 2  oai:pangaea.de:doi:10.1594/PANGAEA.314690 2017-03-07T11:47:26Z citable
-#&gt; 3  oai:pangaea.de:doi:10.1594/PANGAEA.611095 2017-03-07T11:01:44Z citable
-#&gt; 4  oai:pangaea.de:doi:10.1594/PANGAEA.716835 2017-03-07T10:52:54Z citable
-#&gt; 5  oai:pangaea.de:doi:10.1594/PANGAEA.728847 2017-03-07T13:17:12Z citable
-#&gt; 6  oai:pangaea.de:doi:10.1594/PANGAEA.735539 2017-03-07T13:19:15Z citable
-#&gt; 7  oai:pangaea.de:doi:10.1594/PANGAEA.737438 2017-03-06T15:40:27Z citable
-#&gt; 8  oai:pangaea.de:doi:10.1594/PANGAEA.745833 2017-03-07T13:19:13Z citable
-#&gt; 9  oai:pangaea.de:doi:10.1594/PANGAEA.746016 2017-03-07T09:22:25Z citable
-#&gt; 10 oai:pangaea.de:doi:10.1594/PANGAEA.753644 2017-03-07T11:44:13Z citable
-#&gt; # ... with 47 more rows, and 401 more variables: setSpec.1 &lt;chr&gt;,
+#&gt; 1   oai:pangaea.de:doi:10.1594/PANGAEA.55417 2017-03-08T13:19:32Z citable
+#&gt; 2   oai:pangaea.de:doi:10.1594/PANGAEA.57910 2017-03-08T13:17:50Z  ORFOIS
+#&gt; 3   oai:pangaea.de:doi:10.1594/PANGAEA.77250 2017-03-08T13:19:59Z citable
+#&gt; 4  oai:pangaea.de:doi:10.1594/PANGAEA.208129 2017-03-08T13:19:16Z citable
+#&gt; 5  oai:pangaea.de:doi:10.1594/PANGAEA.351146 2017-03-08T13:18:19Z citable
+#&gt; 6  oai:pangaea.de:doi:10.1594/PANGAEA.693923 2017-03-08T13:17:24Z citable
+#&gt; 7  oai:pangaea.de:doi:10.1594/PANGAEA.726410 2017-03-08T13:17:54Z citable
+#&gt; 8  oai:pangaea.de:doi:10.1594/PANGAEA.757616 2017-03-08T13:18:05Z citable
+#&gt; 9  oai:pangaea.de:doi:10.1594/PANGAEA.758696 2017-03-08T13:19:02Z citable
+#&gt; 10 oai:pangaea.de:doi:10.1594/PANGAEA.760166 2017-03-09T14:54:46Z    BCCR
+#&gt; # ... with 132 more rows, and 133 more variables: setSpec.1 &lt;chr&gt;,
 #&gt; #   setSpec.2 &lt;chr&gt;, fileIdentifier &lt;chr&gt;, contact &lt;chr&gt;, dateStamp &lt;chr&gt;,
 #&gt; #   dataSetURI &lt;chr&gt;, identificationInfo &lt;chr&gt;, contentInfo &lt;chr&gt;,
 #&gt; #   contentInfo.1 &lt;chr&gt;, contentInfo.2 &lt;chr&gt;, contentInfo.3 &lt;chr&gt;,
 #&gt; #   contentInfo.4 &lt;chr&gt;, contentInfo.5 &lt;chr&gt;, contentInfo.6 &lt;chr&gt;,
-#&gt; #   contentInfo.7 &lt;chr&gt;, contentInfo.8 &lt;chr&gt;, distributionInfo &lt;chr&gt;,
-#&gt; #   dataQualityInfo &lt;chr&gt;, contentInfo.9 &lt;chr&gt;, contentInfo.10 &lt;chr&gt;,
-#&gt; #   contentInfo.11 &lt;chr&gt;, contentInfo.12 &lt;chr&gt;, contentInfo.13 &lt;chr&gt;,
-#&gt; #   contentInfo.14 &lt;chr&gt;, contentInfo.15 &lt;chr&gt;, contentInfo.16 &lt;chr&gt;,
-#&gt; #   contentInfo.17 &lt;chr&gt;, contentInfo.18 &lt;chr&gt;, contentInfo.19 &lt;chr&gt;,
-#&gt; #   contentInfo.20 &lt;chr&gt;, contentInfo.21 &lt;chr&gt;, setSpec.3 &lt;chr&gt;,
-#&gt; #   setSpec.4 &lt;chr&gt;, contentInfo.22 &lt;chr&gt;, contentInfo.23 &lt;chr&gt;,
-#&gt; #   contentInfo.24 &lt;chr&gt;, contentInfo.25 &lt;chr&gt;, contentInfo.26 &lt;chr&gt;,
-#&gt; #   contentInfo.27 &lt;chr&gt;, contentInfo.28 &lt;chr&gt;, contentInfo.29 &lt;chr&gt;,
-#&gt; #   contentInfo.30 &lt;chr&gt;, contentInfo.31 &lt;chr&gt;, contentInfo.32 &lt;chr&gt;,
-#&gt; #   contentInfo.33 &lt;chr&gt;, contentInfo.34 &lt;chr&gt;, contentInfo.35 &lt;chr&gt;,
-#&gt; #   contentInfo.36 &lt;chr&gt;, contentInfo.37 &lt;chr&gt;, contentInfo.38 &lt;chr&gt;,
-#&gt; #   contentInfo.39 &lt;chr&gt;, contentInfo.40 &lt;chr&gt;, contentInfo.41 &lt;chr&gt;,
-#&gt; #   contentInfo.42 &lt;chr&gt;, contentInfo.43 &lt;chr&gt;, contentInfo.44 &lt;chr&gt;,
-#&gt; #   contentInfo.45 &lt;chr&gt;, contentInfo.46 &lt;chr&gt;, contentInfo.47 &lt;chr&gt;,
-#&gt; #   contentInfo.48 &lt;chr&gt;, contentInfo.49 &lt;chr&gt;, contentInfo.50 &lt;chr&gt;,
-#&gt; #   contentInfo.51 &lt;chr&gt;, contentInfo.52 &lt;chr&gt;, contentInfo.53 &lt;chr&gt;,
-#&gt; #   contentInfo.54 &lt;chr&gt;, contentInfo.55 &lt;chr&gt;, contentInfo.56 &lt;chr&gt;,
-#&gt; #   contentInfo.57 &lt;chr&gt;, contentInfo.58 &lt;chr&gt;, contentInfo.59 &lt;chr&gt;,
-#&gt; #   contentInfo.60 &lt;chr&gt;, contentInfo.61 &lt;chr&gt;, contentInfo.62 &lt;chr&gt;,
-#&gt; #   contentInfo.63 &lt;chr&gt;, contentInfo.64 &lt;chr&gt;, contentInfo.65 &lt;chr&gt;,
-#&gt; #   contentInfo.66 &lt;chr&gt;, contentInfo.67 &lt;chr&gt;, contentInfo.68 &lt;chr&gt;,
-#&gt; #   contentInfo.69 &lt;chr&gt;, contentInfo.70 &lt;chr&gt;, contentInfo.71 &lt;chr&gt;,
-#&gt; #   contentInfo.72 &lt;chr&gt;, contentInfo.73 &lt;chr&gt;, contentInfo.74 &lt;chr&gt;,
-#&gt; #   contentInfo.75 &lt;chr&gt;, contentInfo.76 &lt;chr&gt;, contentInfo.77 &lt;chr&gt;,
-#&gt; #   contentInfo.78 &lt;chr&gt;, contentInfo.79 &lt;chr&gt;, contentInfo.80 &lt;chr&gt;,
-#&gt; #   contentInfo.81 &lt;chr&gt;, contentInfo.82 &lt;chr&gt;, contentInfo.83 &lt;chr&gt;,
-#&gt; #   contentInfo.84 &lt;chr&gt;, contentInfo.85 &lt;chr&gt;, contentInfo.86 &lt;chr&gt;,
-#&gt; #   contentInfo.87 &lt;chr&gt;, contentInfo.88 &lt;chr&gt;, ...</div><div class='input'>
+#&gt; #   contentInfo.7 &lt;chr&gt;, contentInfo.8 &lt;chr&gt;, contentInfo.9 &lt;chr&gt;,
+#&gt; #   contentInfo.10 &lt;chr&gt;, contentInfo.11 &lt;chr&gt;, contentInfo.12 &lt;chr&gt;,
+#&gt; #   contentInfo.13 &lt;chr&gt;, contentInfo.14 &lt;chr&gt;, contentInfo.15 &lt;chr&gt;,
+#&gt; #   contentInfo.16 &lt;chr&gt;, contentInfo.17 &lt;chr&gt;, contentInfo.18 &lt;chr&gt;,
+#&gt; #   contentInfo.19 &lt;chr&gt;, contentInfo.20 &lt;chr&gt;, contentInfo.21 &lt;chr&gt;,
+#&gt; #   contentInfo.22 &lt;chr&gt;, distributionInfo &lt;chr&gt;, dataQualityInfo &lt;chr&gt;,
+#&gt; #   setSpec.3 &lt;chr&gt;, contentInfo.23 &lt;chr&gt;, contentInfo.24 &lt;chr&gt;,
+#&gt; #   contentInfo.25 &lt;chr&gt;, contentInfo.26 &lt;chr&gt;, contentInfo.27 &lt;chr&gt;,
+#&gt; #   contentInfo.28 &lt;chr&gt;, contentInfo.29 &lt;chr&gt;, contentInfo.30 &lt;chr&gt;,
+#&gt; #   setSpec.4 &lt;chr&gt;, setSpec.5 &lt;chr&gt;, setSpec.6 &lt;chr&gt;, contentInfo.31 &lt;chr&gt;,
+#&gt; #   contentInfo.32 &lt;chr&gt;, contentInfo.33 &lt;chr&gt;, contentInfo.34 &lt;chr&gt;,
+#&gt; #   contentInfo.35 &lt;chr&gt;, contentInfo.36 &lt;chr&gt;, contentInfo.37 &lt;chr&gt;,
+#&gt; #   contentInfo.38 &lt;chr&gt;, contentInfo.39 &lt;chr&gt;, contentInfo.40 &lt;chr&gt;,
+#&gt; #   contentInfo.41 &lt;chr&gt;, contentInfo.42 &lt;chr&gt;, contentInfo.43 &lt;chr&gt;,
+#&gt; #   contentInfo.44 &lt;chr&gt;, contentInfo.45 &lt;chr&gt;, contentInfo.46 &lt;chr&gt;,
+#&gt; #   contentInfo.47 &lt;chr&gt;, contentInfo.48 &lt;chr&gt;, contentInfo.49 &lt;chr&gt;,
+#&gt; #   contentInfo.50 &lt;chr&gt;, contentInfo.51 &lt;chr&gt;, contentInfo.52 &lt;chr&gt;,
+#&gt; #   contentInfo.53 &lt;chr&gt;, contentInfo.54 &lt;chr&gt;, contentInfo.55 &lt;chr&gt;,
+#&gt; #   contentInfo.56 &lt;chr&gt;, contentInfo.57 &lt;chr&gt;, contentInfo.58 &lt;chr&gt;,
+#&gt; #   contentInfo.59 &lt;chr&gt;, contentInfo.60 &lt;chr&gt;, contentInfo.61 &lt;chr&gt;,
+#&gt; #   contentInfo.62 &lt;chr&gt;, contentInfo.63 &lt;chr&gt;, contentInfo.64 &lt;chr&gt;,
+#&gt; #   contentInfo.65 &lt;chr&gt;, contentInfo.66 &lt;chr&gt;, contentInfo.67 &lt;chr&gt;,
+#&gt; #   contentInfo.68 &lt;chr&gt;, contentInfo.69 &lt;chr&gt;, contentInfo.70 &lt;chr&gt;,
+#&gt; #   contentInfo.71 &lt;chr&gt;, contentInfo.72 &lt;chr&gt;, contentInfo.73 &lt;chr&gt;,
+#&gt; #   contentInfo.74 &lt;chr&gt;, contentInfo.75 &lt;chr&gt;, contentInfo.76 &lt;chr&gt;,
+#&gt; #   contentInfo.77 &lt;chr&gt;, contentInfo.78 &lt;chr&gt;, contentInfo.79 &lt;chr&gt;,
+#&gt; #   contentInfo.80 &lt;chr&gt;, contentInfo.81 &lt;chr&gt;, contentInfo.82 &lt;chr&gt;,
+#&gt; #   contentInfo.83 &lt;chr&gt;, contentInfo.84 &lt;chr&gt;, contentInfo.85 &lt;chr&gt;,
+#&gt; #   contentInfo.86 &lt;chr&gt;, ...</div><div class='input'>
 <span class='co'>## FIXME - below are broken</span>
 <span class='co'># pg_list_records(prefix="dif", set='citable', from=Sys.Date()-4,</span>
 <span class='co'>#   until=Sys.Date())</span>
