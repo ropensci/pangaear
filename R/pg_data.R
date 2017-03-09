@@ -13,21 +13,25 @@
 #' @param ... Curl options passed on to [httr::GET()]
 #' @param prompt (logical) Prompt before clearing all files in cache? No prompt
 #' used when DOIs assed in. Default: `TRUE`
-#' @return One or more items of class pangaea, each with a citation object,
-#' metadata object, and data object. Each data object is printed as a
-#' `tbl_df` object, but the actual object is simply a `data.frame`.
-#' @author Naupaka Zimmerman
+#' @return One or more items of class pangaea, each with the doi, parent doi
+#' (if many dois within a parent doi), url, citation, path, and data object.
+#' Data object depends on what kind of file it is. For tabular data, we print
+#' the first 10 columns or so; for a zip file we list the files in the zip
+#' (but leave it up to the user to dig unzip and get files from the zip file);
+#' for png files, we point the user to read the file in with [png::readPNG()]
+#' @author Naupaka Zimmerman, Scott Chamberlain
 #' @references <https://www.pangaea.de>
 #' @details Data files are stored in an operating system appropriate location.
 #' Run `rappdirs::user_cache_dir("pangaear")` to get the storage location
 #' on your machine.
+#'
+#' Some files/datasets require the user to be logged in. For now we
+#' just pass on these - that is, give back nothing other than metadata.
 #' @examples \dontrun{
 #' # a single file
-#' res <- pg_data(doi='10.1594/PANGAEA.807580')
-#' res
+#' (res <- pg_data(doi='10.1594/PANGAEA.807580'))
 #' res[[1]]$doi
 #' res[[1]]$citation
-#' res[[1]]$meta
 #' res[[1]]$data
 #'
 #' # another single file
@@ -59,15 +63,27 @@
 #' pg_cache_list()
 #'
 #' # search for datasets, then pass in DOIs
-#' res <- pg_search(query='water', count=20)
-#' pg_data(res$doi[1])
-#' pg_data(res$doi[2])
-#' pg_data(res$doi[3])
-#' pg_data(res$doi[4])
+#' (searchres <- pg_search(query = 'birds', count = 20))
+#' pg_data(searchres$doi[1])
+#' pg_data(searchres$doi[2])
+#' pg_data(searchres$doi[3])
+#' pg_data(searchres$doi[4])
+#' pg_data(searchres$doi[7])
+#'
+#' # png file
+#' pg_data(doi = "10.1594/PANGAEA.825428")
+#'
+#' # zip file
+#' pg_data(doi = "10.1594/PANGAEA.860500")
+#'
+#' # login required
+#' ## we skip file download
+#' pg_data("10.1594/PANGAEA.788547")
 #' }
 
 pg_data <- function(doi, overwrite = TRUE, verbose = TRUE, ...) {
   dois <- check_many(doi)
+  citation <- attr(dois, "citation")
   if (verbose) message("Downloading ", length(dois), " datasets from ", doi)
   invisible(lapply(dois, function(x) {
     if ( !is_pangaea(env$path, x) ) {
@@ -75,66 +91,104 @@ pg_data <- function(doi, overwrite = TRUE, verbose = TRUE, ...) {
     }
   }))
   if (verbose) message("Processing ", length(dois), " files")
-  out <- process_pg(dois)
+  out <- process_pg(dois, doi, citation)
   lapply(out, structure, class = "pangaea")
 }
 
 #' @export
 print.pangaea <- function(x, ...) {
   cat(sprintf("<Pangaea data> %s", x$doi), sep = "\n")
+  cat(sprintf("  parent doi: %s", x$parent_doi), sep = "\n")
+  cat(sprintf("  url:        %s", x$url), sep = "\n")
+  cat(sprintf("  citation:   %s", x$citation), sep = "\n")
+  cat(sprintf("  path:       %s", x$path), sep = "\n")
+  cat("  data:", sep = "\n")
   print(x$data)
-}
-
-print.meta <- function(x, ...){
-  cat(x$meta, sep = "\n")
-}
-
-print.citation <- function(x, ...){
-  cat(x$citation, sep = "\n")
 }
 
 pang_GET <- function(url, doi, overwrite, ...){
   dir.create(env$path, showWarnings = FALSE, recursive = TRUE)
-  fname <- rdoi(doi)
-  res <- httr::GET(url,
-             query = list(format = "textfile"),
-             httr::config(followlocation = TRUE),
-             httr::write_disk(file.path(env$path, fname), overwrite), ...)
+  res <- httr::GET(url, query = list(format = "textfile"),
+                   httr::config(followlocation = TRUE), ...)
   httr::stop_for_status(res)
+  # if login required, stop with just metadata
+  if (grepl("text/html", res$headers$`content-type`)) {
+    if (
+      grepl("Log in",
+            xml2::xml_text(
+              xml2::xml_find_first(xml2::read_html(cuf8(res)), "//title")))
+    ) {
+      warning("Log in required, skipping file download", call. = FALSE)
+      return()
+    }
+  }
+
+  fname <- rdoi(
+    doi,
+    switch(
+      res$headers$`content-type`,
+      `image/png` = ".png",
+      `text/tab-separated-values;charset=UTF-8` = ".txt",
+      `application/zip` = ".zip"
+    )
+  )
+  switch(
+    res$headers$`content-type`,
+    `image/png` = png::writePNG(httr::content(res), file.path(env$path, fname)),
+    `text/tab-separated-values;charset=UTF-8` = {
+      writeLines(httr::content(res, "text"), file.path(env$path, fname))
+    },
+    `application/zip` = {
+      path <- file(file.path(env$path, fname), "wb")
+      writeBin(res$content, path)
+      close(path)
+    }
+  )
 }
 
-process_pg <- function(x){
-  lapply(x, function(m){
-    file <- file.path(env$path, rdoi(m))
-    list(
-      doi = m,
-      citation = pg_citation(m),
-      meta = get_meta(file),
-      data = {
-        dat <- read_csv(file)
-        as_data_frame(dat, validate = FALSE)
-      }
-    )
+process_pg <- function(x, doi, citation) {
+  lapply(x, function(m) {
+    file <- list.files(env$path, pattern = gsub("/|\\.", "_", m),
+                       full.names = TRUE)
+    if (length(file) == 0) {
+      list(
+        parent_doi = doi,
+        doi = m,
+        citation = citation,
+        url = paste0("https://doi.org/", m),
+        path = NA,
+        data = NA
+      )
+    } else {
+      list(
+        parent_doi = doi,
+        doi = m,
+        citation = citation,
+        url = paste0("https://doi.org/", m),
+        path = file,
+        data = {
+          ext <- strsplit(basename(file), "\\.")[[1]][2]
+          switch(
+            ext,
+            zip = utils::unzip(file, list = TRUE),
+            txt = {
+              dat <- read_csv(file)
+              tibble::as_data_frame(dat, validate = FALSE)
+            },
+            png = "png; read with png::readPNG()"
+          )
+        }
+      )
+    }
   })
 }
 
-pg_citation <- function(x){
-  structure(list(
-    citation = sprintf('See https://doi.pangaea.de/%s for the citation', x)),
-            class = "citation")
-}
-
 is_pangaea <- function(x, doi){
-  if ( identical(list.files(x), character(0)) ) { FALSE } else {
-    if ( any(rdoi(doi) %in% list.files(x)) ) TRUE else FALSE
+  lf <- list.files(x)
+  if ( identical(lf, character(0)) ) { FALSE } else {
+    doipaths <- unname(vapply(lf, function(z) strsplit(z, "\\.")[[1]][1], ""))
+    any(strsplit(rdoi(doi), "\\.")[[1]][1] %in% doipaths)
   }
-}
-
-get_meta <- function(x){
-  lns <- readLines(x, n = 1000)
-  ln_no <- grep("\\*/", lns) - 1
-  use <- lns[2:ln_no]
-  structure(list(meta = use), class = "meta")
 }
 
 rdoi <- function(x, ext = ".txt") paste0(gsub("/|\\.", "_", x), ext)
@@ -142,16 +196,38 @@ rdoi <- function(x, ext = ".txt") paste0(gsub("/|\\.", "_", x), ext)
 check_many <- function(x){
   res <- httr::GET(fix_doi(x))
   txt <- xml2::read_html(cuf8(res))
-  if (!grepl(
-    "zip",
-    xml_attr(xml_find_first(txt, "//meta[@name=\"DC.format\"]"), "content")
-  )) {
-    x
+  dc_format <- xml2::xml_attr(
+    xml2::xml_find_first(txt, "//meta[@name=\"DC.format\"]"), "content")
+  cit <- xml2::xml_text(
+    xml2::xml_find_first(txt, "//h1[@class=\"MetaHeaderItem citation\"]"))
+  attr(x, "citation") <- cit
+
+  if (grepl("zip", dc_format) && !grepl("datasets", dc_format)) {
+    # zip files
+    return(x)
+  } else if (
+    # single dataset
+    unique(xml2::xml_length(
+      xml2::xml_find_all(
+        txt,
+        ".//div[@class=\"MetaHeaderItem\"]//a[@rel=\"follow\"]"
+      )
+    )) == 0
+  ) {
+    return(x)
   } else {
-    gsub("https://doi.pangaea.de/", "", xml_attr(
-    xml_find_all(txt, ".//div[@class=\"MetaHeaderItem\"]//a[@rel=\"follow\"]"),
-      "href"
-    ))
+    # many datasets
+    tmp <- gsub(
+      "https://doi.pangaea.de/", "",
+      xml2::xml_attr(
+        xml2::xml_find_all(txt,
+            ".//div[@class=\"MetaHeaderItem\"]//a[@rel=\"follow\"]"
+        ),
+        "href"
+      )
+    )
+    attr(tmp, "citation") <- cit
+    return(tmp)
   }
 }
 

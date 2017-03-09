@@ -28,9 +28,12 @@ used when DOIs assed in. Default: \code{TRUE}}
 \item{...}{Curl options passed on to \code{\link[httr:GET]{httr::GET()}}}
 }
 \value{
-One or more items of class pangaea, each with a citation object,
-metadata object, and data object. Each data object is printed as a
-\code{tbl_df} object, but the actual object is simply a \code{data.frame}.
+One or more items of class pangaea, each with the doi, parent doi
+(if many dois within a parent doi), url, citation, path, and data object.
+Data object depends on what kind of file it is. For tabular data, we print
+the first 10 columns or so; for a zip file we list the files in the zip
+(but leave it up to the user to dig unzip and get files from the zip file);
+for png files, we point the user to read the file in with \code{\link[png:readPNG]{png::readPNG()}}
 }
 \description{
 Grabs data as a dataframe or list of dataframes from a Pangaea data
@@ -40,15 +43,16 @@ repository URI; see: \url{https://www.pangaea.de/}
 Data files are stored in an operating system appropriate location.
 Run \code{rappdirs::user_cache_dir("pangaear")} to get the storage location
 on your machine.
+
+Some files/datasets require the user to be logged in. For now we
+just pass on these - that is, give back nothing other than metadata.
 }
 \examples{
 \dontrun{
 # a single file
-res <- pg_data(doi='10.1594/PANGAEA.807580')
-res
+(res <- pg_data(doi='10.1594/PANGAEA.807580'))
 res[[1]]$doi
 res[[1]]$citation
-res[[1]]$meta
 res[[1]]$data
 
 # another single file
@@ -80,16 +84,27 @@ pg_cache_clear(doi=c('10.1594/PANGAEA.746398','10.1594/PANGAEA.746400'))
 pg_cache_list()
 
 # search for datasets, then pass in DOIs
-res <- pg_search(query='water', count=20)
-pg_data(res$doi[1])
-pg_data(res$doi[2])
-pg_data(res$doi[3])
-pg_data(res$doi[4])
+(searchres <- pg_search(query = 'birds', count = 20))
+pg_data(searchres$doi[1])
+pg_data(searchres$doi[2])
+pg_data(searchres$doi[3])
+pg_data(searchres$doi[4])
+pg_data(searchres$doi[7])
+
+# png file
+pg_data(doi = "10.1594/PANGAEA.825428")
+
+# zip file
+pg_data(doi = "10.1594/PANGAEA.860500")
+
+# login required
+## we skip file download
+pg_data("10.1594/PANGAEA.788547")
 }
 }
 \references{
 \url{https://www.pangaea.de}
 }
 \author{
-Naupaka Zimmerman
+Naupaka Zimmerman, Scott Chamberlain
 }
