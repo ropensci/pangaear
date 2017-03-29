@@ -9,7 +9,9 @@ pangaear
 [![rstudio mirror downloads](https://cranlogs.r-pkg.org/badges/pangaear)](https://github.com/metacran/cranlogs.app)
 [![cran version](https://www.r-pkg.org/badges/version/pangaear)](https://cran.r-project.org/package=pangaear)
 
-An R client to interact with the [Pangaea database](https://www.pangaea.de/).
+Pangaear is a data retrieval interface for the World Data Center PANGAEA (https://www.pangaea.de/). PANGAEA archieves published Earth & Environmental Science data under the following subjects: agriculture, atmosphere, biological classification, biosphere, chemistry, cryosphere, ecology, fisheries, geophysics, human dimensions, lakes & rives, land surface, lithosphere, oceans, and paleontology.
+
+This package offers tools to interact with the PANGAEA Database, including functions for searching for data, fetching datasets by dataset ID, and working with the PANGAEA OAI-PMH service.
 
 ## Info
 
@@ -117,7 +119,7 @@ pg_data(res$doi[3])[1:3]
 #>   `Depth [m]` `SOD [mmol/m**2/day]` `SOD [mmol/m**2/day]` `O2 [µmol/l]`
 #>         <int>                 <dbl>                 <dbl>         <dbl>
 #> 1           0                  1.51                  0.74            25
-#> 
+#>
 #> [[2]]
 #> <Pangaea data> 10.1594/PANGAEA.77397
 #>   parent doi: 10.1594/PANGAEA.736010
@@ -139,7 +141,7 @@ pg_data(res$doi[3])[1:3]
 #> 9        0.005           0.0          0.8            NA            NA
 #> 10       0.006           0.4          0.7            NA            NA
 #> # ... with 17 more rows, and 1 more variables: `TOC [%]` <dbl>
-#> 
+#>
 #> [[3]]
 #> <Pangaea data> 10.1594/PANGAEA.77398
 #>   parent doi: 10.1594/PANGAEA.736010
@@ -284,7 +286,7 @@ pg_get_record(identifier = "oai:pangaea.de:doi:10.1594/PANGAEA.788382")
 #>                                  identifier            datestamp                              setSpec
 #>                                       <chr>                <chr>                                <chr>
 #> 1 oai:pangaea.de:doi:10.1594/PANGAEA.788382 2016-06-25T14:58:45Z citable;citableWithChilds;supplement
-#> 
+#>
 #> $`oai:pangaea.de:doi:10.1594/PANGAEA.788382`$metadata
 #> # A tibble: 1 × 13
 #>                                                                                                                                title                                      creator
