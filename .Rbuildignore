@@ -10,4 +10,4 @@ man-roxygen
 Makefile
 ^cran-comments\.md$
 docs
-
+.github
