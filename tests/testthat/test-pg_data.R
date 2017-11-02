@@ -42,24 +42,21 @@ test_that("png files work", {
   skip_on_cran()
   skip_on_travis()
 
-  ## FIXME: fails due to libpng problem
-  expect_error(pg_data(doi = "10.1594/PANGAEA.825428", verbose = FALSE))
+  aa <- pg_data(doi = "10.1594/PANGAEA.825428")
 
-  #aa <- pg_data(doi = "10.1594/PANGAEA.825428")
+  expect_is(aa, "list")
+  expect_is(aa[[1]], "pangaea")
+  expect_is(unclass(aa[[1]]), "list")
+  expect_named(unclass(aa[[1]]), c('parent_doi', 'doi',
+                                   'citation', 'url', 'path', 'data'))
 
-  # expect_is(aa, "list")
-  # expect_is(aa[[1]], "pangaea")
-  # expect_is(unclass(aa[[1]]), "list")
-  # expect_named(unclass(aa[[1]]), c('parent_doi', 'doi',
-  #                                  'citation', 'url', 'path', 'data'))
-  #
-  # # first result is a png
-  # expect_is(unclass(aa[[1]])$data, "character")
-  # expect_match(unclass(aa[[1]])$data, "readPNG")
-  #
-  # # other results are data.frames
-  # expect_is(unclass(aa[[2]])$data, "data.frame")
-  # expect_is(unclass(aa[[3]])$data, "data.frame")
-  # expect_is(unclass(aa[[4]])$data, "data.frame")
-  # expect_is(unclass(aa[[5]])$data, "data.frame")
+  # first result is a png
+  expect_is(unclass(aa[[1]])$data, "character")
+  expect_match(unclass(aa[[1]])$data, "readPNG")
+
+  # other results are data.frames
+  expect_is(unclass(aa[[2]])$data, "data.frame")
+  expect_is(unclass(aa[[3]])$data, "data.frame")
+  expect_is(unclass(aa[[4]])$data, "data.frame")
+  expect_is(unclass(aa[[5]])$data, "data.frame")
 })
