@@ -9,8 +9,8 @@
 #' the URL part in front, like
 #' <https://doi.pangaea.de/10.1594/PANGAEA.746398>
 #' @param overwrite (logical) Ovewrite a file if one is found with the same name
-#' @param verbose (logical) print information messages. Default: `TRUE`
-#' @param ... Curl options passed on to [httr::GET()]
+#' @param mssgs (logical) print information messages. Default: `TRUE`
+#' @param ... Curl options passed on to [crul::HttpClient]
 #' @param prompt (logical) Prompt before clearing all files in cache? No prompt
 #' used when DOIs assed in. Default: `TRUE`
 #' @return One or more items of class pangaea, each with the doi, parent doi
@@ -81,16 +81,16 @@
 #' pg_data("10.1594/PANGAEA.788547")
 #' }
 
-pg_data <- function(doi, overwrite = TRUE, verbose = TRUE, ...) {
+pg_data <- function(doi, overwrite = TRUE, mssgs = TRUE, ...) {
   dois <- check_many(doi)
   citation <- attr(dois, "citation")
-  if (verbose) message("Downloading ", length(dois), " datasets from ", doi)
+  if (mssgs) message("Downloading ", length(dois), " datasets from ", doi)
   invisible(lapply(dois, function(x) {
     if ( !is_pangaea(env$path, x) ) {
       pang_GET(url = paste0(base(), x), doi = x, overwrite, ...)
     }
   }))
-  if (verbose) message("Processing ", length(dois), " files")
+  if (mssgs) message("Processing ", length(dois), " files")
   out <- process_pg(dois, doi, citation)
   lapply(out, structure, class = "pangaea")
 }
@@ -108,15 +108,18 @@ print.pangaea <- function(x, ...) {
 
 pang_GET <- function(url, doi, overwrite, ...){
   dir.create(env$path, showWarnings = FALSE, recursive = TRUE)
-  res <- httr::GET(url, query = list(format = "textfile"),
-                   httr::config(followlocation = TRUE), ...)
-  httr::stop_for_status(res)
+
+  cli <- crul::HttpClient$new(url = url, 
+    opts = list(followlocation = TRUE, ...))
+  res <- cli$get(query = list(format = "textfile"))
+  res$raise_for_status()
+
   # if login required, stop with just metadata
-  if (grepl("text/html", res$headers$`content-type`)) {
+  if (grepl("text/html", res$response_headers$`content-type`)) {
     if (
       grepl("Log in",
             xml2::xml_text(
-              xml2::xml_find_first(xml2::read_html(cuf8(res)), "//title")))
+              xml2::xml_find_first(xml2::read_html(res$parse("UTF-8")), "//title")))
     ) {
       warning("Log in required, skipping file download", call. = FALSE)
       return()
@@ -126,17 +129,17 @@ pang_GET <- function(url, doi, overwrite, ...){
   fname <- rdoi(
     doi,
     switch(
-      res$headers$`content-type`,
+      res$response_headers$`content-type`,
       `image/png` = ".png",
       `text/tab-separated-values;charset=UTF-8` = ".txt",
       `application/zip` = ".zip"
     )
   )
   switch(
-    res$headers$`content-type`,
-    `image/png` = png::writePNG(httr::content(res), file.path(env$path, fname)),
+    res$response_headers$`content-type`,
+    `image/png` = png::writePNG(png::readPNG(res$content), file.path(env$path, fname)),
     `text/tab-separated-values;charset=UTF-8` = {
-      writeLines(httr::content(res, "text"), file.path(env$path, fname))
+      writeLines(res$parse("UTF-8"), file.path(env$path, fname))
     },
     `application/zip` = {
       path <- file(file.path(env$path, fname), "wb")
@@ -194,8 +197,8 @@ is_pangaea <- function(x, doi){
 rdoi <- function(x, ext = ".txt") paste0(gsub("/|\\.", "_", x), ext)
 
 check_many <- function(x){
-  res <- httr::GET(fix_doi(x))
-  txt <- xml2::read_html(cuf8(res))
+  res <- crul::HttpClient$new(url = fix_doi(x))$get()
+  txt <- xml2::read_html(res$parse("UTF-8"))
   dc_format <- xml2::xml_attr(
     xml2::xml_find_first(txt, "//meta[@name=\"DC.format\"]"), "content")
   cit <- xml2::xml_text(

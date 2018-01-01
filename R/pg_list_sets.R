@@ -7,7 +7,7 @@
 #' asked for.
 #' @param as (character) What to return. One of "df" (for data.frame; default),
 #' "list", or "raw" (raw text)
-#' @param ... Curl debugging options passed on to [httr::GET()]
+#' @param ... Curl debugging options passed on to [oai::list_sets()]
 #' @return XML character string, data.frame, or list, depending on what
 #' requested with the `as` parameter
 #' @references [OAI-PMH documentation](https://www.openarchives.org/pmh/)
@@ -17,8 +17,6 @@
 #' pg_list_sets()
 #' pg_list_sets(as = "list")
 #' pg_list_sets(as = "raw")
-#' library('httr')
-#' res <- pg_list_sets(config = verbose())
 #' }
 
 pg_list_sets <- function(token = NULL, as = "df", ...) {

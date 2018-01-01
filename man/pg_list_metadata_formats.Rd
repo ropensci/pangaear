@@ -7,7 +7,7 @@
 pg_list_metadata_formats(...)
 }
 \arguments{
-\item{...}{Curl debugging options passed on to \code{\link[httr:GET]{httr::GET()}}}
+\item{...}{Curl debugging options passed on to \code{\link[oai:list_metadataformats]{oai::list_metadataformats()}}}
 }
 \value{
 data.frame

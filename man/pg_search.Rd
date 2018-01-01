@@ -28,7 +28,7 @@ maxlat}
 \item{mindate, maxdate}{(character) Dates to search for, of the form
 "2014-10-28"}
 
-\item{...}{Curl options passed on to \code{\link[httr:GET]{httr::GET()}}}
+\item{...}{Curl options passed on to \code{\link[crul:HttpClient]{crul::HttpClient()}}}
 }
 \value{
 tibble/data.frame with the structure:
@@ -79,8 +79,7 @@ attr(res, "totalCount")
 attr(res, "offset")
 
 # curl options
-library(httr)
-pg_search(query='citation:Archer', config = verbose())
+pg_search(query='citation:Archer', verbose = TRUE)
 }
 }
 \seealso{

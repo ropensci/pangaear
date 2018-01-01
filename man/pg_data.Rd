@@ -10,7 +10,7 @@ pg_cache_clear(doi = NULL, prompt = TRUE)
 
 pg_cache_list()
 
-pg_data(doi, overwrite = TRUE, verbose = TRUE, ...)
+pg_data(doi, overwrite = TRUE, mssgs = TRUE, ...)
 }
 \arguments{
 \item{doi}{DOI of Pangaeae single dataset, or of a collection of datasets.
@@ -23,9 +23,9 @@ used when DOIs assed in. Default: \code{TRUE}}
 
 \item{overwrite}{(logical) Ovewrite a file if one is found with the same name}
 
-\item{verbose}{(logical) print information messages. Default: \code{TRUE}}
+\item{mssgs}{(logical) print information messages. Default: \code{TRUE}}
 
-\item{...}{Curl options passed on to \code{\link[httr:GET]{httr::GET()}}}
+\item{...}{Curl options passed on to \link[crul:HttpClient]{crul::HttpClient}}
 }
 \value{
 One or more items of class pangaea, each with the doi, parent doi

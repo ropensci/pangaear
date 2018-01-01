@@ -20,7 +20,7 @@
 #' asked for.
 #' @param as (character) What to return. One of "df" (for data.frame; default),
 #' "list", or "raw" (raw text)
-#' @param ... Curl debugging options passed on to [httr::GET()]
+#' @param ... Curl debugging options passed on to [oai::list_records()]
 #' @return XML character string, data.frame, or list, depending on what
 #' requested witht the `as` parameter
 #' @references [OAI-PMH documentation](https://www.openarchives.org/pmh/)

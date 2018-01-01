@@ -7,7 +7,7 @@
 #' to the mandatory OAI unqualified Dublin Core metadata schema.
 #' @param as (character) What to return. One of "df" (for data.frame; default),
 #' "list", or "raw" (raw text)
-#' @param ... Curl debugging options passed on to [httr::GET()]
+#' @param ... Curl debugging options passed on to [oai::get_records()]
 #' @return XML character string, data.frame, or list, depending on what
 #' requested with the `as` parameter
 #' @references [OAI-PMH documentation](https://www.openarchives.org/pmh/)
@@ -19,11 +19,6 @@
 #' prefix="iso19139")
 #' pg_get_record(identifier = "oai:pangaea.de:doi:10.1594/PANGAEA.269656",
 #' prefix="dif")
-#'
-#' # curl options
-#' library('httr')
-#' pg_get_record(identifier = "oai:pangaea.de:doi:10.1594/PANGAEA.788382",
-#'   config=verbose())
 #'
 #' # invalid record id
 #' # pg_get_record(identifier = "oai:pangaea.de:doi:10.1594/PANGAEA.11111")

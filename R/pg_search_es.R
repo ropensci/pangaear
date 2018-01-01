@@ -44,7 +44,7 @@
 #' @param analyze_wildcard (logical) Should wildcard and prefix queries be
 #' analyzed or not. Default: `FALSE`
 #' @param version (logical) Print the document version with each document.
-#' @param ... Curl options passed on to [httr::GET()]
+#' @param ... Curl options passed on to [crul::HttpClient]
 #' @return tibble/data.frame, empty if no results
 #' @seealso [pg_search()]
 #' @details An interface to Pangaea's Elasticsearch query interface.
@@ -101,9 +101,10 @@ pg_search_es <- function(query = NULL, size = 10, from = NULL, source = NULL,
     )
   )
 
-  res <- httr::GET(esbase(), query = args, ...)
-  httr::stop_for_status(res)
-  out <- jsonlite::fromJSON(cuf8(res), flatten = TRUE)
+  cli <- crul::HttpClient$new(url = esbase())
+  res <- cli$get(query = args, ...)
+  res$raise_for_status()
+  out <- jsonlite::fromJSON(res$parse("UTF-8"), flatten = TRUE)
   df <- tibble::as_data_frame(out$hits$hits)
   message("total hits: ", out$hits$total)
   structure(df, total = out$hits$total, max_score = out$hits$max_score)

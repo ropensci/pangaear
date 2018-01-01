@@ -71,7 +71,7 @@ analyzed or not. Default: \code{FALSE}}
 
 \item{version}{(logical) Print the document version with each document.}
 
-\item{...}{Curl options passed on to \code{\link[httr:GET]{httr::GET()}}}
+\item{...}{Curl options passed on to \link[crul:HttpClient]{crul::HttpClient}}
 }
 \value{
 tibble/data.frame, empty if no results

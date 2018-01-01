@@ -31,8 +31,6 @@ read_csv <- function(x){
 
 strextract <- function(str, pattern) regmatches(str, regexpr(pattern, str))
 
-cuf8 <- function(x) httr::content(x, "text", encoding = "UTF-8")
-
 cl <- function(x) if (is.null(x)) NULL else paste0(x, collapse = ",")
 
 cn <- function(x) {

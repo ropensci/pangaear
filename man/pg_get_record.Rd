@@ -16,7 +16,7 @@ to the mandatory OAI unqualified Dublin Core metadata schema.}
 \item{as}{(character) What to return. One of "df" (for data.frame; default),
 "list", or "raw" (raw text)}
 
-\item{...}{Curl debugging options passed on to \code{\link[httr:GET]{httr::GET()}}}
+\item{...}{Curl debugging options passed on to \code{\link[oai:get_records]{oai::get_records()}}}
 }
 \value{
 XML character string, data.frame, or list, depending on what
@@ -32,11 +32,6 @@ pg_get_record(identifier = "oai:pangaea.de:doi:10.1594/PANGAEA.269656",
 prefix="iso19139")
 pg_get_record(identifier = "oai:pangaea.de:doi:10.1594/PANGAEA.269656",
 prefix="dif")
-
-# curl options
-library('httr')
-pg_get_record(identifier = "oai:pangaea.de:doi:10.1594/PANGAEA.788382",
-  config=verbose())
 
 # invalid record id
 # pg_get_record(identifier = "oai:pangaea.de:doi:10.1594/PANGAEA.11111")

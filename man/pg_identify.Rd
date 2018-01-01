@@ -7,7 +7,7 @@
 pg_identify(...)
 }
 \arguments{
-\item{...}{Curl debugging options passed on to \code{\link[httr:GET]{httr::GET()}}}
+\item{...}{Curl debugging options passed on to \code{\link[oai:id]{oai::id()}}}
 }
 \value{
 list

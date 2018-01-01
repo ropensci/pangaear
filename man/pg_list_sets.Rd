@@ -15,7 +15,7 @@ asked for.}
 \item{as}{(character) What to return. One of "df" (for data.frame; default),
 "list", or "raw" (raw text)}
 
-\item{...}{Curl debugging options passed on to \code{\link[httr:GET]{httr::GET()}}}
+\item{...}{Curl debugging options passed on to \code{\link[oai:list_sets]{oai::list_sets()}}}
 }
 \value{
 XML character string, data.frame, or list, depending on what
@@ -29,8 +29,6 @@ List the set structure of the Pangaea repository
 pg_list_sets()
 pg_list_sets(as = "list")
 pg_list_sets(as = "raw")
-library('httr')
-res <- pg_list_sets(config = verbose())
 }
 }
 \references{

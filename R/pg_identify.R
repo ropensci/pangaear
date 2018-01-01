@@ -1,7 +1,7 @@
 #' Identify information about the Pangaea repository
 #'
 #' @export
-#' @param ... Curl debugging options passed on to [httr::GET()]
+#' @param ... Curl debugging options passed on to [oai::id()]
 #' @return list
 #' @references [OAI-PMH documentation](https://www.openarchives.org/pmh/)
 #' @seealso wraps [oai::id()]

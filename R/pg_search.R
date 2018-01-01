@@ -15,7 +15,7 @@
 #' maxlat
 #' @param mindate,maxdate (character) Dates to search for, of the form
 #' "2014-10-28"
-#' @param ... Curl options passed on to [httr::GET()]
+#' @param ... Curl options passed on to [crul::HttpClient()]
 #' @return tibble/data.frame with the structure:
 #' \itemize{
 #'  \item score - match score, higher is a better match
@@ -58,8 +58,7 @@
 #' attr(res, "offset")
 #'
 #' # curl options
-#' library(httr)
-#' pg_search(query='citation:Archer', config = verbose())
+#' pg_search(query='citation:Archer', verbose = TRUE)
 #' }
 
 pg_search <- function(query, count = 10, offset = 0, topic = NULL, bbox = NULL,
@@ -80,9 +79,11 @@ pg_search <- function(query, count = 10, offset = 0, topic = NULL, bbox = NULL,
   if (!is.null(bbox)) args <- c(
     args, as.list(stats::setNames(bbox,
                                   c('minlon', 'minlat', 'maxlon', 'maxlat'))))
-  res <- GET(sbase(), query = args, ...)
-  stop_for_status(res)
-  results <- jsonlite::fromJSON(content(res, "text", encoding = "UTF-8"), FALSE)
+  
+  cli <- crul::HttpClient$new(url = sbase())
+  res <- cli$get(query = args, ...)
+  res$raise_for_status()
+  results <- jsonlite::fromJSON(res$parse("UTF-8"), FALSE)
   parsed <- lapply(results$results, function(x) {
     x <- utils::modifyList(x, list(doi = gsub("doi:", "", x$URI)))
     xx <- parse_res(x)

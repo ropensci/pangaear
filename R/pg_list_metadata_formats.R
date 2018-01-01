@@ -1,7 +1,7 @@
 #' Get metadata formats from the Pangaea repository
 #'
 #' @export
-#' @param ... Curl debugging options passed on to [httr::GET()]
+#' @param ... Curl debugging options passed on to [oai::list_metadataformats()]
 #' @return data.frame
 #' @references [OAI-PMH documentation](https://www.openarchives.org/pmh/)
 #' @seealso wraps [oai::list_metadataformats()]
