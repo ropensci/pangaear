@@ -1,3 +1,13 @@
+pangaear 0.6.0
+==============
+
+## MINOR IMPROVEMENTS
+
+* Added a vignette (#62)
+* replaced `httr` pkg with `crul` for HTTP requests (#55)
+* Some datasets require login on the Pangaea platform - we now detect this in `pg_data` and skip the file download with a message saying so. Eventually we hope to fix this to allow uesrs to input credentials to get the file(s) (#59)
+
+
 pangaear 0.3.0
 ==============
 

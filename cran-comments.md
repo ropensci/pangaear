@@ -1,7 +1,7 @@
 ## Test environments
 
-* local OS X install, R 3.3.3 RC
-* ubuntu 12.04 (on travis-ci), R 3.3.3 RC
+* local OS X install, R 3.4.3 Patched
+* ubuntu 12.04 (on travis-ci), R 3.4.3
 * win-builder (devel and release)
 
 ## R CMD check results
@@ -11,8 +11,8 @@
    License components with restrictions and base license permitting such:
      MIT + file LICENSE
    File 'LICENSE':
-     YEAR: 2017
-     COPYRIGHT HOLDER: Scott Chamberlai
+     YEAR: 2018
+     COPYRIGHT HOLDER: Scott Chamberlain
 
 ## Reverse dependencies
 
@@ -20,6 +20,8 @@ There are no reverse dependencies.
 
 ---
 
-This release adds a new function, includes two bug fixes, and adds more tests.
+This release adds a vignette, swaps out a package dependency, 
+and makes a fix.
 
-Thanks. Scott Chamberlain
+Thanks! 
+Scott Chamberlain
