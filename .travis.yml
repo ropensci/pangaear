@@ -8,6 +8,11 @@ r_github_packages:
 after_success:
   - Rscript -e 'covr::codecov()'
 
+r:
+  - oldrel
+  - release
+  - devel
+
 r_check_args: "--as-cran --run-dontrun"
 
 notifications:
