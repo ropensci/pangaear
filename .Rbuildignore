@@ -3,7 +3,7 @@
 ^\.travis\.yml$
 appveyor\.yml$
 README.Rmd
-^CONDUCT\.md$
+^CODE_OF_CONDUCT\.md$
 cran-comments.md
 man-roxygen
 .travis.yml
