@@ -11,4 +11,4 @@ Makefile
 ^cran-comments\.md$
 docs
 .github
-Makefile
+^codemeta\.json$
