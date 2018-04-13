@@ -19,7 +19,7 @@ the URL part in front, like
 \url{https://doi.pangaea.de/10.1594/PANGAEA.746398}}
 
 \item{prompt}{(logical) Prompt before clearing all files in cache? No prompt
-used when DOIs assed in. Default: \code{TRUE}}
+used when DOIs passed in. Default: \code{TRUE}}
 
 \item{overwrite}{(logical) Ovewrite a file if one is found with the same name}
 
