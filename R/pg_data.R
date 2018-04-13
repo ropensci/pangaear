@@ -12,7 +12,7 @@
 #' @param mssgs (logical) print information messages. Default: `TRUE`
 #' @param ... Curl options passed on to [crul::HttpClient]
 #' @param prompt (logical) Prompt before clearing all files in cache? No prompt
-#' used when DOIs assed in. Default: `TRUE`
+#' used when DOIs passed in. Default: `TRUE`
 #' @return One or more items of class pangaea, each with the doi, parent doi
 #' (if many dois within a parent doi), url, citation, path, and data object.
 #' Data object depends on what kind of file it is. For tabular data, we print
