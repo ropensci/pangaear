@@ -65,10 +65,6 @@
 #' # search for datasets, then pass in DOIs
 #' (searchres <- pg_search(query = 'birds', count = 20))
 #' pg_data(searchres$doi[1])
-#' pg_data(searchres$doi[2])
-#' pg_data(searchres$doi[3])
-#' pg_data(searchres$doi[4])
-#' pg_data(searchres$doi[7])
 #'
 #' # png file
 #' pg_data(doi = "10.1594/PANGAEA.825428")
@@ -196,13 +192,13 @@ is_pangaea <- function(x, doi){
 
 rdoi <- function(x, ext = ".txt") paste0(gsub("/|\\.", "_", x), ext)
 
-check_many <- function(x){
+check_many <- function(x) {
   res <- crul::HttpClient$new(url = fix_doi(x))$get()
   txt <- xml2::read_html(res$parse("UTF-8"))
   dc_format <- xml2::xml_attr(
     xml2::xml_find_first(txt, "//meta[@name=\"DC.format\"]"), "content")
-  cit <- xml2::xml_text(
-    xml2::xml_find_first(txt, "//h1[@class=\"MetaHeaderItem citation\"]"))
+  cit <- xml2::xml_attr(
+    xml2::xml_find_first(txt, "//meta[@name=\"description\"]"), "content")
   attr(x, "citation") <- cit
 
   if (grepl("zip", dc_format) && !grepl("datasets", dc_format)) {
@@ -213,7 +209,7 @@ check_many <- function(x){
     unique(xml2::xml_length(
       xml2::xml_find_all(
         txt,
-        ".//div[@class=\"MetaHeaderItem\"]//a[@rel=\"follow\"]"
+        ".//a[@rel=\"follow\"]"
       )
     )) == 0
   ) {
@@ -224,7 +220,7 @@ check_many <- function(x){
       "https://doi.pangaea.de/", "",
       xml2::xml_attr(
         xml2::xml_find_all(txt,
-            ".//div[@class=\"MetaHeaderItem\"]//a[@rel=\"follow\"]"
+          ".//a[@rel=\"follow\"]"
         ),
         "href"
       )

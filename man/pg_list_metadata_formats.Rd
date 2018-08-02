@@ -31,3 +31,4 @@ Other oai methods: \code{\link{pg_get_record}},
   \code{\link{pg_list_identifiers}},
   \code{\link{pg_list_records}}, \code{\link{pg_list_sets}}
 }
+\concept{oai methods}

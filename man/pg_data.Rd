@@ -86,10 +86,6 @@ pg_cache_list()
 # search for datasets, then pass in DOIs
 (searchres <- pg_search(query = 'birds', count = 20))
 pg_data(searchres$doi[1])
-pg_data(searchres$doi[2])
-pg_data(searchres$doi[3])
-pg_data(searchres$doi[4])
-pg_data(searchres$doi[7])
 
 # png file
 pg_data(doi = "10.1594/PANGAEA.825428")

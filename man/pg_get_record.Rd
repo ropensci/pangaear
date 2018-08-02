@@ -50,3 +50,4 @@ Other oai methods: \code{\link{pg_identify}},
   \code{\link{pg_list_metadata_formats}},
   \code{\link{pg_list_records}}, \code{\link{pg_list_sets}}
 }
+\concept{oai methods}
