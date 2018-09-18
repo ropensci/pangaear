@@ -13,7 +13,7 @@
 #' @importFrom xml2 read_html xml_find_all xml_attr xml_text xml_find_first
 #' xml_parent
 #' @importFrom tibble as_data_frame
-#' @importFrom rappdirs user_cache_dir
+#' @importFrom hoardr hoard
 #' @name pangaear-package
 #' @aliases pangaear
 #' @docType package

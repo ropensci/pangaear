@@ -3,7 +3,7 @@ context("pg_data")
 test_that("works well", {
   skip_on_cran()
 
-  pg_cache_clear(prompt = FALSE)
+  pg_cache$delete_all()
 
   aa <- pg_data(doi = '10.1594/PANGAEA.807580')
 
@@ -14,7 +14,7 @@ test_that("works well", {
                                    'citation', 'url', 'path', 'data'))
   expect_is(unclass(aa[[1]])$data, "tbl_df")
 
-  expect_equal(pg_cache_list(), '10_1594_PANGAEA_807580.txt')
+  expect_equal(basename(pg_cache$list()), '10_1594_PANGAEA_807580.txt')
 })
 
 test_that("fails well", {

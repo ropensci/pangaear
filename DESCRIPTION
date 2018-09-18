@@ -4,7 +4,7 @@ Description: Tools to interact with the 'Pangaea' Database
     (<https://www.pangaea.de>), including functions for searching for data,
     fetching 'datasets' by 'dataset' 'ID', and working with the 'Pangaea'
     'OAI-PMH' service.
-Version: 0.6.1.9100
+Version: 0.6.2.9100
 Authors@R: c(person("Scott", "Chamberlain",
 		email = "myrmecocystus@gmail.com", role = c("aut","cre")),
     person("Kara", "Woo", email = "woo.kara@gmail.com", role = "aut"),
@@ -22,10 +22,10 @@ Language: en-US
 Imports:
     crul (>= 0.4.0),
     jsonlite (>= 1.5),
-    rappdirs (>= 0.3.1),
     xml2 (>= 1.1.1),
     oai (>= 0.2.2),
     tibble (>= 1.1),
+    hoardr (>= 0.2.0),
     png
 Suggests:
     knitr,
