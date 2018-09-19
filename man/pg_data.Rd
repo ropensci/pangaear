@@ -66,13 +66,8 @@ pg_cache$list()
 ## clear a single dataset by DOI
 pg_data(doi='10.1594/PANGAEA.812093')
 pg_cache$list()
-pg_cache_clear(doi='10.1594/PANGAEA.812093')
-pg_cache$list()
-
-## clear more than 1 dataset by DOI
-lapply(c('10.1594/PANGAEA.746398','10.1594/PANGAEA.746400'), pg_data)
-pg_cache$list()
-pg_cache_clear(doi=c('10.1594/PANGAEA.746398','10.1594/PANGAEA.746400'))
+path <- grep("PANGAEA.812093", pg_cache$list(), value = TRUE)
+pg_cache$delete(path)
 pg_cache$list()
 
 # search for datasets, then pass in DOIs
