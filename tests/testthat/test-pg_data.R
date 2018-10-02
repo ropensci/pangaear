@@ -11,7 +11,7 @@ test_that("works well", {
   expect_is(aa[[1]], "pangaea")
   expect_is(unclass(aa[[1]]), "list")
   expect_named(unclass(aa[[1]]), c('parent_doi', 'doi',
-                                   'citation', 'url', 'path', 'data'))
+                                   'citation', 'url', 'path', 'metadata', 'data'))
   expect_is(unclass(aa[[1]])$data, "tbl_df")
 
   expect_equal(basename(pg_cache$list()), '10_1594_PANGAEA_807580.txt')
@@ -33,8 +33,9 @@ test_that("zip files work", {
   expect_is(aa[[1]], "pangaea")
   expect_is(unclass(aa[[1]]), "list")
   expect_named(unclass(aa[[1]]), c('parent_doi', 'doi',
-                                   'citation', 'url', 'path', 'data'))
+                                   'citation', 'url', 'path', 'metadata', 'data'))
   expect_is(unclass(aa[[1]])$data, "data.frame")
+  expect_identical(unclass(aa[[1]])$metadata, list())
   expect_named(unclass(aa[[1]])$data, c('Name', 'Length', 'Date'))
 })
 
@@ -48,7 +49,7 @@ test_that("png files work", {
   expect_is(aa[[1]], "pangaea")
   expect_is(unclass(aa[[1]]), "list")
   expect_named(unclass(aa[[1]]), c('parent_doi', 'doi',
-                                   'citation', 'url', 'path', 'data'))
+                                   'citation', 'url', 'path', 'metadata', 'data'))
 
   # first result is a png
   expect_is(unclass(aa[[1]])$data, "character")
@@ -59,4 +60,7 @@ test_that("png files work", {
   expect_is(unclass(aa[[3]])$data, "data.frame")
   expect_is(unclass(aa[[4]])$data, "data.frame")
   expect_is(unclass(aa[[5]])$data, "data.frame")
+
+  # metadata
+  expect_identical(aa[[1]]$metadata, list())
 })

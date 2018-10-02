@@ -13,20 +13,59 @@ pluck <- function(x, name, type) {
   }
 }
 
-check <- function(x){
+check <- function(x) {
   if (is.character(x)) {
     if ( grepl("does not exist|unknown", x))
       stop(x, call. = FALSE)
   }
 }
 
-read_csv <- function(x){
+read_csv <- function(x) {
   lns <- readLines(x, n = 1000)
   ln_no <- grep("\\*/", lns)
   tmp <- utils::read.csv(x, header = FALSE, sep = "\t",
                   skip = ln_no + 1, stringsAsFactors = FALSE)
   nn <- strsplit(lns[ln_no + 1], "\t")[[1]]
   stats::setNames(tmp, nn)
+}
+
+read_meta <- function(x) {
+  # return NA if not a .txt file
+  if (!grepl("\\.txt", x)) return(list())
+
+  lns <- readLines(x, n = 1000)
+  ln_no <- grep("\\*/", lns)
+  all_lns <- seq_len(ln_no)
+  txt <- lns[all_lns[-c(1, length(all_lns))]]
+  starts <- grep(":\\\t", txt)
+  ext <- list()
+  for (i in seq_along(starts)) {
+    end <- starts[i + 1] - 1
+    if (is.na(end)) {
+      gt <- starts[i]
+    } else {
+      gt <- if (starts[i] == end) {
+        starts[i]
+      } else {
+        starts[i]:end
+      }
+    }
+    ext[[i]] <- txt[gt]
+  }
+  ext2 <- list()
+  for (i in seq_along(ext)) {
+    sp <- strsplit(ext[[i]], "\\\t")
+    nm <- tolower(gsub("\\s", "_", gsub(":|\\(|\\)", "", sp[[1]][1])))
+    if (length(sp) > 1) {
+      tmp <- unlist(c(sp[[1]][-1], sp[-1]))
+      tmp <- tmp[nzchar(tmp)]
+      dat <- paste0(tmp, collapse = "; ")
+    } else {
+      dat <- sp[[1]][-1]
+    }
+    ext2[[i]] <- as.list(stats::setNames(dat, nm))
+  }
+  return(unlist(ext2, FALSE))
 }
 
 strextract <- function(str, pattern) regmatches(str, regexpr(pattern, str))

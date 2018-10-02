@@ -46,6 +46,7 @@ just pass on these - that is, give back nothing other than metadata.
 res[[1]]$doi
 res[[1]]$citation
 res[[1]]$data
+res[[1]]$metadata
 
 # another single file
 pg_data(doi='10.1594/PANGAEA.807584')

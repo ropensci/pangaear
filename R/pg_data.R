@@ -32,6 +32,7 @@
 #' res[[1]]$doi
 #' res[[1]]$citation
 #' res[[1]]$data
+#' res[[1]]$metadata
 #'
 #' # another single file
 #' pg_data(doi='10.1594/PANGAEA.807584')
@@ -151,6 +152,7 @@ process_pg <- function(x, doi, citation) {
         citation = citation,
         url = paste0("https://doi.org/", m),
         path = NA,
+        metadata = NA,
         data = NA
       )
     } else {
@@ -160,6 +162,7 @@ process_pg <- function(x, doi, citation) {
         citation = citation,
         url = paste0("https://doi.org/", m),
         path = file,
+        metadata = read_meta(file),
         data = {
           ext <- strsplit(basename(file), "\\.")[[1]][2]
           switch(
