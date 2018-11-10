@@ -62,6 +62,14 @@ read_meta <- function(x) {
       dat <- paste0(tmp, collapse = "; ")
     } else {
       dat <- sp[[1]][-1]
+      if (nm == "events") {
+        dat <- sapply(strsplit(dat, "\\s\\*\\s")[[1]], function(z) {
+          zz <- strsplit(z, ":\\s")[[1]]
+          zz <- gsub("^\\s|\\s$", "", zz)
+          as.list(stats::setNames(zz[2], zz[1]))
+        }, USE.NAMES = FALSE)
+        dat <- list(dat)
+      }
     }
     ext2[[i]] <- as.list(stats::setNames(dat, nm))
   }

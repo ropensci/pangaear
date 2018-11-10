@@ -21,7 +21,7 @@
 #' @references <https://www.pangaea.de>
 #' @details Data files are stored in an operating system appropriate location.
 #' Run `pg_cache$cache_path_get()` to get the storage location
-#' on your machine. See [pg_cache] for more information, including how to 
+#' on your machine. See [pg_cache] for more information, including how to
 #' set a different base path for downloaded files.
 #'
 #' Some files/datasets require the user to be logged in. For now we
@@ -101,7 +101,7 @@ pang_GET <- function(url, doi, overwrite, ...){
   bpath <- pg_cache$cache_path_get()
   dir.create(bpath, showWarnings = FALSE, recursive = TRUE)
 
-  cli <- crul::HttpClient$new(url = url, 
+  cli <- crul::HttpClient$new(url = url,
     opts = list(followlocation = TRUE, ...))
   res <- cli$get(query = list(format = "textfile"))
   res$raise_for_status()
