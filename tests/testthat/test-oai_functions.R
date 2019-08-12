@@ -67,9 +67,13 @@ test_that("pg_get_record() works", {
 test_that("fails well", {
   skip_on_cran()
 
-  expect_error(pg_list_sets(as = "adsff"), "not in acceptable")
-  expect_error(pg_list_records(prefix = "adsfadf"), "unknown")
-  expect_error(pg_list_identifiers(from = 3), "badArgument")
+  expect_error(pg_list_sets(as = "adsff"), "not in acceptable",
+    class = "error")
+  expect_error(pg_list_records(prefix = "adsfadf"), "unknown",
+    class = "error")
+  expect_error(pg_list_identifiers(from = 3), "badArgument",
+    class = "error")
   expect_error(pg_get_record(identifier = 4444),
-               "Identifier is not a valid OAI")
+    "Identifier is not a valid OAI",
+    class = "error")
 })
