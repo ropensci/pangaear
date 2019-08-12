@@ -31,3 +31,6 @@ Suggests:
     knitr,
     testthat
 RoxygenNote: 6.1.1
+X-schema.org-applicationCategory: Biodiversity
+X-schema.org-keywords: Pangaea, environmental science, earth science, archive, paleontology, ecology, chemistry, atmosphere
+X-schema.org-isPartOf: https://ropensci.org
