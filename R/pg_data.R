@@ -177,7 +177,7 @@ process_pg <- function(x, doi, citation) {
             zip = utils::unzip(file, list = TRUE),
             txt = {
               dat <- read_csv(file)
-              tibble::as_data_frame(dat, validate = FALSE)
+              tibble::as_tibble(dat, validate = FALSE)
             },
             png = "png; read with png::readPNG()"
           )

@@ -105,7 +105,7 @@ pg_search_es <- function(query = NULL, size = 10, from = NULL, source = NULL,
   res <- cli$get(query = args, ...)
   res$raise_for_status()
   out <- jsonlite::fromJSON(res$parse("UTF-8"), flatten = TRUE)
-  df <- tibble::as_data_frame(out$hits$hits)
+  df <- tibble::as_tibble(out$hits$hits)
   message("total hits: ", out$hits$total)
   structure(df, total = out$hits$total, max_score = out$hits$max_score)
 }
