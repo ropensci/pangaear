@@ -46,5 +46,6 @@ pg_cache$list()
 # pg_cache$list()
 
 # set a different cache path from the default
+# pg_cache$cache_path_set(full_path = "/Foo/Bar")
 }
 }

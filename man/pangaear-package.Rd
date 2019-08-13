@@ -14,3 +14,10 @@ including functions for searching for data, fetching datasets by
 dataset ID, working with the Pangaea OAI-PMH service, and
 Elasticsearch service.
 }
+\section{Getting data}{
+
+The main workhorse function for getting data is \code{\link[=pg_data]{pg_data()}}.
+One thing you may want to do is set a different path for caching
+the data you download: see \link{pg_cache} for details
+}
+
