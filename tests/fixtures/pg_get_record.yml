@@ -1,0 +1,73 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://ws.pangaea.de/oai/provider?verb=GetRecord&metadataPrefix=oai_dc&identifier=oai%3Apangaea.de%3Adoi%3A10.1594%2FPANGAEA.788382
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      date: Tue, 13 Aug 2019 22:55:35 GMT
+      content-type: text/xml;charset=utf-8
+      content-length: '1856'
+      content-encoding: deflate
+      vary: Accept-Encoding
+      x-powered-by: Jetty(9.4.19.v20190610)
+      server: PANGAEA/2.0
+      x-ua-compatible: IE=Edge
+      x-content-type-options: nosniff
+      x-frame-options: SAMEORIGIN
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl"
+        href="oai2.xsl"?><OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/
+        http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><responseDate>2019-08-13T22:55:35Z</responseDate><request
+        identifier="oai:pangaea.de:doi:10.1594/PANGAEA.788382" metadataPrefix="oai_dc"
+        verb="GetRecord">https://ws.pangaea.de/oai/provider</request><GetRecord><record><header><identifier>oai:pangaea.de:doi:10.1594/PANGAEA.788382</identifier><datestamp>2019-02-13T10:51:02Z</datestamp><setSpec>citable</setSpec><setSpec>supplement</setSpec><setSpec>topicChemistry</setSpec><setSpec>topicLithosphere</setSpec></header><metadata><oai_dc:dc
+        xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/
+        http://www.openarchives.org/OAI/2.0/oai_dc.xsd"><dc:title>Trace metals in
+        shells of mussels and clams from deep-sea hydrothermal vent fields of the
+        Mid-Atlantic Ridge and East Pacific Rise</dc:title><dc:creator>Demina, Lyudmila
+        L</dc:creator><dc:creator>Galkin, Sergey V</dc:creator><dc:creator>Dara, O
+        M</dc:creator><dc:source>P.P. Shirshov Institute of Oceanology, Russian Academy
+        of Sciences, Moscow</dc:source><dc:source>Supplement to: Demina, Lyudmila
+        L; Galkin, Sergey V; Dara, O M (2012): Trace metal bioaccumulation in the
+        shells of mussels and clams at deep-sea hydrothermal vent fields. Translated
+        from Geokhimiya, 2012, 50(2), 147-163, Geochemistry International, 50(2),
+        133-147, https://doi.org/10.1134/S0016702911120056</dc:source><dc:publisher>PANGAEA</dc:publisher><dc:date>2012-09-07</dc:date><dc:type>Dataset</dc:type><dc:format>application/zip,
+        5 datasets</dc:format><dc:identifier>https://doi.pangaea.de/10.1594/PANGAEA.788382</dc:identifier><dc:identifier>https://doi.org/10.1594/PANGAEA.788382</dc:identifier><dc:description>Bioaccumulation
+        of trace metals in carbonate shells of mussels and clams was investigated
+        at seven hydrothermal vent fields of the Mid-Atlantic Ridge (Menez Gwen, Snake
+        Pit, Rainbow, and Broken Spur) and the Eastern Pacific (9°N and 21°N at the
+        East Pacific Rise and the southern trough of Guaymas Basin, Gulf of California).
+        Mineralogical analysis showed that carbonate skeletons of mytilid mussel Bathymodiolus
+        sp. and vesicomyid clam Calyptogena m. are composed mainly of calcite and
+        aragonite, respectively. The first data were obtained for contents of a variety
+        of chemical elements in bivalve carbonate shells from various hydrothermal
+        vent sites. Analyses of chemical compositions (including Fe, Mn, Zn, Cu, Cd,
+        Pb, Ag, Ni, Cr, Co, As, Se, Sb, and Hg) of 35 shell samples and 14 water samples
+        from mollusk biotopes revealed influences of environmental conditions and
+        some biological parameters on bioaccumulation of metals. Bivalve shells from
+        hydrothermal fields with black smokers are enriched in Fe and Mn by factor
+        of 20-30 relative to the same species from the Menez Gwen low-temperature
+        vent site. It was shown that essential elements (Fe, Mn, Ni, and Cu) more
+        actively accumulated during early ontogeny of the shells. High enrichment
+        factors of most metals (n x 100 - n x 10000) indicate efficient accumulation
+        function of bivalve carbonate shells. Passive metal accumulation owing to
+        adsorption on shell surfaces was estimated to be no higher than 50% of total
+        amount and varied from 14% for Fe to 46% for Mn.</dc:description><dc:language>en</dc:language><dc:rights>CC-BY-3.0:
+        Creative Commons Attribution 3.0 Unported</dc:rights><dc:rights>Access constraints:
+        unrestricted</dc:rights><dc:coverage>MEDIAN LATITUDE: 29.154888 * MEDIAN LONGITUDE:
+        -62.164078 * SOUTH-BOUND LATITUDE: 9.833000 * WEST-BOUND LONGITUDE: -111.400000
+        * NORTH-BOUND LATITUDE: 37.840000 * EAST-BOUND LONGITUDE: -31.516667</dc:coverage><dc:subject>Archive
+        of Ocean Data; ARCOD</dc:subject></oai_dc:dc></metadata></record></GetRecord></OAI-PMH>'
+  recorded_at: 2019-08-13 22:55:35 GMT
+  recorded_with: vcr/0.2.6, webmockr/0.4.0

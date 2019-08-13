@@ -1,9 +1,9 @@
 context("pg_search_es")
 
 test_that("pg_search_es works and stuff, and stuff and things, also, it works", {
-  skip_on_cran()
-
-  aa <- pg_search_es()
+  vcr::use_cassette("pg_search_es", {
+    aa <- pg_search_es()
+  })
 
   expect_is(aa, "tbl_df")
   expect_is(aa, "data.frame")
@@ -17,12 +17,11 @@ test_that("pg_search_es works and stuff, and stuff and things, also, it works", 
 })
 
 test_that("pg_search_es parameters work", {
-  skip_on_cran()
-
-  aa <- pg_search_es(size = 3)
+  vcr::use_cassette("pg_search_es_pagination", {
+    aa <- pg_search_es(size = 3)
+  })
 
   expect_is(aa, "tbl_df")
-
   expect_equal(NROW(aa), 3)
 })
 

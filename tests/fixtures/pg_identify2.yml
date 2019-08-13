@@ -1,0 +1,50 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://ws.pangaea.de/oai/provider?verb=Identify
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      date: Tue, 13 Aug 2019 22:58:33 GMT
+      content-type: text/xml;charset=utf-8
+      content-length: '597'
+      content-encoding: deflate
+      vary: Accept-Encoding
+      x-powered-by: Jetty(9.4.19.v20190610)
+      server: PANGAEA/2.0
+      x-ua-compatible: IE=Edge
+      x-content-type-options: nosniff
+      x-frame-options: SAMEORIGIN
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="oai2.xsl"?><OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><responseDate>2019-08-13T22:58:33Z</responseDate><request verb="Identify">https://ws.pangaea.de/oai/provider</request><Identify xmlns="http://www.openarchives.org/OAI/2.0/">
+        <repositoryName>PANGAEA - Data Publisher for Earth &amp; Environmental Science</repositoryName>
+        <baseURL>https://ws.pangaea.de/oai/provider</baseURL>
+        <protocolVersion>2.0</protocolVersion>
+        <adminEmail>tech@pangaea.de</adminEmail>
+        <earliestDatestamp>2015-01-01T00:00:00Z</earliestDatestamp>
+        <deletedRecord>transient</deletedRecord>
+        <granularity>YYYY-MM-DDThh:mm:ssZ</granularity>
+        <compression>gzip</compression>
+        <compression>deflate</compression>
+        <description>
+        <oai-identifier xmlns="http://www.openarchives.org/OAI/2.0/oai-identifier" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai-identifier http://www.openarchives.org/OAI/2.0/oai-identifier.xsd">
+        <scheme>oai</scheme>
+        <repositoryIdentifier>pangaea.de</repositoryIdentifier>
+        <delimiter>:</delimiter>
+        <sampleIdentifier>oai:pangaea.de:doi:10.1594/PANGAEA.999999</sampleIdentifier>
+        </oai-identifier>
+        </description>
+        </Identify></OAI-PMH>
+  recorded_at: 2019-08-13 22:58:33 GMT
+  recorded_with: vcr/0.2.6, webmockr/0.4.0

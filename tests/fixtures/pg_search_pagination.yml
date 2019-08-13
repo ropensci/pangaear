@@ -1,0 +1,578 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://www.pangaea.de/advanced/search.php?count=10&offset=0&q=florisphaera
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.54.0 r-curl/4.0 crul/0.8.4
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      cache-control: private, max-age=10800, pre-check=10800
+      content-encoding: gzip
+      content-type: application/json; charset=UTF-8
+      date: Tue, 13 Aug 2019 21:55:34 GMT
+      last-modified: Fri, 15 Apr 2016 11:55:50 GMT
+      server: PANGAEA/2.0
+      status: 'HTTP/2 200 '
+      strict-transport-security: max-age=31536000
+      vary:
+      - Accept-Encoding
+      - Cookie, X-PanLoginID
+      x-content-type-options: nosniff
+      x-frame-options: SAMEORIGIN
+      x-ua-compatible: IE=Edge
+    body:
+      encoding: UTF-8
+      string: '{"results":[{"URI":"doi:10.1594\/PANGAEA.805696","score":55.7834,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.805696\"
+        target=\"_self\" class=\"dataset-link\"><strong>Grelaud, M; Marino, G; Ziveri,
+        P et al. (2012):<\/strong> Distribution of Florisphaera profunda and Helicosphaera
+        carteri in down core and surface sediments<\/a><\/div><table class=\"result\"
+        summary=\"Dataset reference and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td
+        class=\"title\">Supplement to:<\/td><td class=\"content\"><strong>Grelaud,
+        M; Marino, G; Ziveri, P et al. (2012):<\/strong> Abrupt shoaling of the nutricline
+        in response to massive freshwater flooding at the onset of the last interglacial
+        sapropel event. <em>Paleoceanography<\/em><\/td><\/tr><tr><td class=\"title\">Size:<\/td><td
+        class=\"content\">2 datasets<\/td><\/tr><\/table><div class=\"datasetid\"><a
+        href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.805696\" target=\"_self\"
+        class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.805696<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 55.78<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.895679","score":38.10345,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.895679\"
+        target=\"_self\" class=\"dataset-link\"><strong>Ausín, B; Flores, JA; Sierro,
+        FJ et al. (2018):<\/strong> Nannofossil, alkenone and oxygen isotopic data
+        from sediment core HER-GC-T1<\/a><\/div><table class=\"result\" summary=\"Dataset
+        reference and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"title\">Supplement
+        to:<\/td><td class=\"content\"><strong>Ausín, B; Flores, JA; Sierro, FJ et
+        al. (2015):<\/strong> Atmospheric patterns driving Holocene productivity in
+        the Alboran Sea (Western Mediterranean): A multiproxy approach. <em>The Holocene<\/em><\/td><\/tr><tr><td
+        class=\"title\">Size:<\/td><td class=\"content\">3 datasets<\/td><\/tr><\/table><div
+        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.895679\"
+        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.895679<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 38.1<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.787957","score":32.4718,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.787957\"
+        target=\"_self\" class=\"dataset-link\"><strong>Rühlemann, C; Diekmann, B;
+        Mulitza, S et al. (2001):<\/strong> Stable isotopes of foraminifers, mineralogy
+        and ages of sediment core GeoB1523-1<\/a><\/div><table class=\"result\" summary=\"Dataset
+        reference and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"title\">Supplement
+        to:<\/td><td class=\"content\"><strong>Rühlemann, C; Diekmann, B; Mulitza,
+        S et al. (2001):<\/strong> Late Quaternary changes of western equatorial Atlantic
+        surface circulation and Amazon lowland climate recorded in Ceara Rise deep-sea
+        sediments. <em>Paleoceanography<\/em><\/td><\/tr><tr><td class=\"title\">Size:<\/td><td
+        class=\"content\">4 datasets<\/td><\/tr><\/table><div class=\"datasetid\"><a
+        href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.787957\" target=\"_self\"
+        class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.787957<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 32.47<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.832127","score":30.270115,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.832127\"
+        target=\"_self\" class=\"dataset-link\"><strong>Incarbona, A; Di Stefano,
+        E; Patti, B et al. (2008):<\/strong> Holocene millenial-scale productivity
+        record in the Mediterranean Sea<\/a><\/div><table class=\"result\" summary=\"Dataset
+        reference and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"title\">Supplement
+        to:<\/td><td class=\"content\"><strong>Incarbona, A; Di Stefano, E; Patti,
+        B et al. (2008):<\/strong> Holocene millennial-scale productivity variations
+        in the Sicily Channel (Mediterranean Sea). <em>Paleoceanography<\/em><\/td><\/tr><tr><td
+        class=\"title\">Size:<\/td><td class=\"content\">3 datasets<\/td><\/tr><\/table><div
+        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.832127\"
+        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.832127<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 30.27<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.811189","score":30.188143,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.811189\"
+        target=\"_self\" class=\"dataset-link\"><strong>Chiyonobu, S; Mori, Y; Oda,
+        M (2012):<\/strong> Calcareous nannofossils and planktic foraminiferal assemblages
+        of ODP Hole 198-1210A<\/a><\/div><table class=\"result\" summary=\"Dataset
+        reference and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"title\">Supplement
+        to:<\/td><td class=\"content\"><strong>Chiyonobu, S; Mori, Y; Oda, M (2012):<\/strong>
+        Reconstruction of paleoceanographic conditions in the northwestern Pacific
+        Ocean over the last 500kyr based on calcareous nannofossil and planktic foraminiferal
+        assemblages. <em>Marine Micropaleontology<\/em><\/td><\/tr><tr><td class=\"title\">Size:<\/td><td
+        class=\"content\">3 datasets<\/td><\/tr><\/table><div class=\"datasetid\"><a
+        href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.811189\" target=\"_self\"
+        class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.811189<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 30.19<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.864106","score":29.870703,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.864106\"
+        target=\"_self\" class=\"dataset-link\"><strong>Jin, X; Liu, C; Poulton, AJ
+        et al. (2016):<\/strong> Coccolithophore abundance and biometry in the South
+        China Sea, 2014<\/a><\/div><table class=\"result\" summary=\"Dataset reference
+        and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"title\">Supplement
+        to:<\/td><td class=\"content\"><strong>Jin, X; Liu, C; Poulton, AJ et al.
+        (2016):<\/strong> Coccolithophore responses to environmental variability in
+        the South China Sea: species composition and calcite content. <em>Biogeosciences<\/em><\/td><\/tr><tr><td
+        class=\"title\">Size:<\/td><td class=\"content\">4 datasets<\/td><\/tr><\/table><div
+        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.864106\"
+        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.864106<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 29.87<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.676965","score":29.844744,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.676965\"
+        target=\"_self\" class=\"dataset-link\"><strong>Shackleton, NJ; Gibbs, SJ;
+        Young, J (2004):<\/strong> Nannofossil assemblages of mid-Pliocene sediments
+        from the equatorial Atlantic<\/a><\/div><table class=\"result\" summary=\"Dataset
+        reference and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"title\">Supplement
+        to:<\/td><td class=\"content\"><strong>Gibbs, SJ; Shackleton, NJ; Young, J
+        (2004):<\/strong> Orbitally forced climate signals in mid-Pliocene nannofossil
+        assemblages. <em>Marine Micropaleontology<\/em><\/td><\/tr><tr><td class=\"title\">Size:<\/td><td
+        class=\"content\">4 datasets<\/td><\/tr><\/table><div class=\"datasetid\"><a
+        href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.676965\" target=\"_self\"
+        class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.676965<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 29.84<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.844527","score":29.46526,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.844527\"
+        target=\"_self\" class=\"dataset-link\"><strong>Corselli, C; Principato, MS;
+        Maffioli, P et al. (2002):<\/strong> Planktonic assemblages during sapropel
+        S5 deposits in the Urania Basin<\/a><\/div><table class=\"result\" summary=\"Dataset
+        reference and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"title\">Supplement
+        to:<\/td><td class=\"content\"><strong>Corselli, C; Principato, MS; Maffioli,
+        P et al. (2002):<\/strong> Changes in planktonic assemblages during sapropel
+        S5 deposition: Evidence from Urania Basin area, eastern Mediterranean. <em>Paleoceanography<\/em><\/td><\/tr><tr><td
+        class=\"title\">Size:<\/td><td class=\"content\">7 datasets<\/td><\/tr><\/table><div
+        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.844527\"
+        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.844527<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 29.47<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.804469","score":27.340393,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.804469\"
+        target=\"_self\" class=\"dataset-link\"><strong>Okada, H (2000):<\/strong>
+        Nannofossil datums and abundance in sediments from ODP Leg 164 sites<\/a><\/div><table
+        class=\"result\" summary=\"Dataset reference and size\" cellspacing=\"0\"
+        cellpadding=\"0\"><tr><td class=\"title\">Supplement to:<\/td><td class=\"content\"><strong>Okada,
+        H (2000):<\/strong> Neogene and Quaternary calcareous nannofossils from the
+        Blake Ridge, Sites 994, 995, and 997. <em>In: Paull, CK; Matsumoto, R; Wallace,
+        PJ; Dillon, WP (eds.) Proceedings of the Ocean Drilling Program, Scientific
+        Results, College Station, TX (Ocean Drilling Program)<\/em><\/td><\/tr><tr><td
+        class=\"title\">Size:<\/td><td class=\"content\">2 datasets<\/td><\/tr><\/table><div
+        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.804469\"
+        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.804469<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 27.34<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.890710","score":27.150688,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.890710\"
+        target=\"_self\" class=\"dataset-link\"><strong>Tangunan, DN (2018):<\/strong>
+        Nannofossil abundance from IODP site 361-U1476 (2.85-1.85 Ma)<\/a><\/div><table
+        class=\"result\" summary=\"Dataset reference and size\" cellspacing=\"0\"
+        cellpadding=\"0\"><tr><td class=\"title\">Supplement to:<\/td><td class=\"content\"><strong>Tangunan,
+        DN; Baumann, K-H; Just, J et al. (2018):<\/strong> The last 1 million years
+        of the extinct genus Discoaster: Plio-Pleistocene environment and productivity
+        at Site U1476 (Mozambique Channel). <em>Palaeogeography, Palaeoclimatology,
+        Palaeoecology<\/em><\/td><\/tr><tr><td class=\"title\">Size:<\/td><td class=\"content\">2
+        datasets<\/td><\/tr><\/table><div class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.890710\"
+        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.890710<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 27.15<\/span><\/div><\/li>"}],"facets":null,"maxScore":55.7834,"offset":0,"queryIdentifier":"32057d7d-5157-3abb-85b8-1ff9793486c6","session":"2pnq19ptpb6vec72uik7s1a4m2","timeInDatabase":10,"totalCount":1279,"htmlSummary":"<strong>1279
+        datasets<\/strong> found on search for <strong title=\"Query: &raquo;florisphaera&laquo;\">&raquo;florisphaera&laquo;<\/strong>","htmlSnippetRSS":"<link
+        rel=\"alternate\" title=\"PANGAEA latest datasets about &quot;florisphaera&quot;\"
+        type=\"application\/rss+xml\" href=\"\/tools\/latest-datasets.rss?q=florisphaera&amp;count=10\">"}'
+  recorded_at: 2019-08-13 21:55:34 GMT
+  recorded_with: vcr/0.2.6, webmockr/0.4.0
+- request:
+    method: get
+    uri: https://www.pangaea.de/advanced/search.php?count=10&offset=10&q=florisphaera
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.54.0 r-curl/4.0 crul/0.8.4
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      cache-control: private, max-age=10800, pre-check=10800
+      content-encoding: gzip
+      content-type: application/json; charset=UTF-8
+      date: Tue, 13 Aug 2019 21:55:35 GMT
+      last-modified: Fri, 15 Apr 2016 11:55:50 GMT
+      server: PANGAEA/2.0
+      status: 'HTTP/2 200 '
+      strict-transport-security: max-age=31536000
+      vary:
+      - Accept-Encoding
+      - Cookie, X-PanLoginID
+      x-content-type-options: nosniff
+      x-frame-options: SAMEORIGIN
+      x-ua-compatible: IE=Edge
+    body:
+      encoding: UTF-8
+      string: '{"results":[{"URI":"doi:10.1594\/PANGAEA.831559","score":27.067963,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.831559\"
+        target=\"_self\" class=\"dataset-link\"><strong>Incarbona, A; Martrat, B;
+        Di Stefano, E et al. (2010):<\/strong> Coccolithosphores and fossil organic
+        compounds of sediment core MD01-2444<\/a><\/div><table class=\"result\" summary=\"Dataset
+        reference and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"title\">Supplement
+        to:<\/td><td class=\"content\"><strong>Incarbona, A; Martrat, B; Di Stefano,
+        E et al. (2010):<\/strong> Primary productivity variability on the Atlantic
+        Iberian Margin over the last 70,000 years: Evidence from coccolithophores
+        and fossil organic compounds. <em>Paleoceanography<\/em><\/td><\/tr><tr><td
+        class=\"title\">Size:<\/td><td class=\"content\">3 datasets<\/td><\/tr><\/table><div
+        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.831559\"
+        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.831559<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 27.07<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.736805","score":26.64656,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.736805\"
+        target=\"_self\" class=\"dataset-link\"><strong>Schiebel, R; Zeltner, A; Treppke,
+        UF et al. (2004):<\/strong> Distribution of diatoms, coccolithophores and
+        planktic foraminifera in the Arabian Sea<\/a><\/div><table class=\"result\"
+        summary=\"Dataset reference and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td
+        class=\"title\">Supplement to:<\/td><td class=\"content\"><strong>Schiebel,
+        R; Zeltner, A; Treppke, UF et al. (2004):<\/strong> Distribution of diatoms,
+        coccolithophores and planktic foraminifers along a trophic gradient during
+        SW monsoon in the Arabian Sea. <em>Marine Micropaleontology<\/em><\/td><\/tr><tr><td
+        class=\"title\">Size:<\/td><td class=\"content\">20 datasets<\/td><\/tr><\/table><div
+        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.736805\"
+        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.736805<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 26.65<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.733516","score":25.354942,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.733516\"
+        target=\"_self\" class=\"dataset-link\"><strong>Rostek, F; Bard, É; Beaufort,
+        L et al. (1997):<\/strong> Alkenones and sea surface reconstruction of sediments
+        from, the Arabian Sea<\/a><\/div><table class=\"result\" summary=\"Dataset
+        reference and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"title\">Supplement
+        to:<\/td><td class=\"content\"><strong>Rostek, F; Bard, É; Beaufort, L et
+        al. (1997):<\/strong> Sea surface temperature and productivity records for
+        the past 240 kyr in the Arabian Sea. <em>Deep Sea Research Part II: Topical
+        Studies in Oceanography<\/em><\/td><\/tr><tr><td class=\"title\">Size:<\/td><td
+        class=\"content\">2 datasets<\/td><\/tr><\/table><div class=\"datasetid\"><a
+        href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.733516\" target=\"_self\"
+        class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.733516<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 25.35<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.902173","score":23.818962,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.902173\"
+        target=\"_self\" class=\"dataset-link\"><strong>Ausín, B; Zuñiga, O; Flores,
+        JA et al. (2019):<\/strong> Extant coccolithophores in the water column of
+        the NW Iberian margin<\/a><\/div><table class=\"result\" summary=\"Dataset
+        reference and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"title\">Supplement
+        to:<\/td><td class=\"content\"><strong>Ausín, B; Zuñiga, O; Flores, JA et
+        al. (2018):<\/strong> Spatial and temporal variability in coccolithophore
+        abundance and distribution in the NW Iberian coastal upwelling system. <em>Biogeosciences<\/em><\/td><\/tr><tr><td
+        class=\"title\">Size:<\/td><td class=\"content\">2 datasets<\/td><\/tr><\/table><div
+        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.902173\"
+        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.902173<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 23.82<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.881485","score":23.816505,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.881485\"
+        target=\"_self\" class=\"dataset-link\"><strong>Guerreiro, CV; Baumann, K-H;
+        Brummer, G-JA et al. (2017):<\/strong> Coccolithophore fluxes in the open
+        tropical North Atlantic<\/a><\/div><table class=\"result\" summary=\"Dataset
+        reference and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"title\">Related
+        to:<\/td><td class=\"content\"><strong>Guerreiro, CV; Baumann, K-H; Brummer,
+        G-JA et al. (2017):<\/strong> Coccolithophore fluxes in the open tropical
+        North Atlantic: influence of thermocline depth, Amazon water, and Saharan
+        dust. <em>Biogeosciences<\/em><\/td><\/tr><tr><td class=\"title\">Size:<\/td><td
+        class=\"content\">4 datasets<\/td><\/tr><\/table><div class=\"datasetid\"><a
+        href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.881485\" target=\"_self\"
+        class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.881485<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 23.82<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.867726","score":23.714146,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.867726\"
+        target=\"_self\" class=\"dataset-link\"><strong>Andruleit, H (2016):<\/strong>
+        Coccolithophores from the Java upwelling system during Sonne cruise SO139
+        (core SO139-74KL)<\/a><\/div><table class=\"result\" summary=\"Dataset reference
+        and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"title\">Supplement
+        to:<\/td><td class=\"content\"><strong>Andruleit, H; Lückge, A; Wiedicke,
+        M et al. (2008):<\/strong> Late Quaternary development of the Java upwelling
+        system (eastern Indian Ocean) as revealed by coccolithophores. <em>Marine
+        Micropaleontology<\/em><\/td><\/tr><tr><td class=\"title\">Size:<\/td><td
+        class=\"content\">2 datasets<\/td><\/tr><\/table><div class=\"datasetid\"><a
+        href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.867726\" target=\"_self\"
+        class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.867726<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 23.71<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.811363","score":23.671675,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.811363\"
+        target=\"_self\" class=\"dataset-link\"><strong>Incarbona, A; Ziveri, P; Sabatino,
+        N et al. (2011):<\/strong> Coccolithophora and geochemistry of sapropel S1
+        in ODP Hole 160-964B<\/a><\/div><table class=\"result\" summary=\"Dataset
+        reference and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"title\">Supplement
+        to:<\/td><td class=\"content\"><strong>Incarbona, A; Ziveri, P; Sabatino,
+        N et al. (2011):<\/strong> Conflicting coccolithophore and geochemical evidence
+        for productivity levels in the Eastern Mediterranean sapropel S1. <em>Marine
+        Micropaleontology<\/em><\/td><\/tr><tr><td class=\"title\">Size:<\/td><td
+        class=\"content\">5 datasets<\/td><\/tr><\/table><div class=\"datasetid\"><a
+        href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.811363\" target=\"_self\"
+        class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.811363<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 23.67<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.131433","score":20.84119,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.131433\"
+        target=\"_self\" class=\"dataset-link\"><strong>Boeckel, B (2003):<\/strong>
+        Coccolith percentage, relative abundance of sediment core GeoB1710-3<\/a><\/div><table
+        class=\"result\" summary=\"Dataset reference and size\" cellspacing=\"0\"
+        cellpadding=\"0\"><tr><td class=\"title\">Related to:<\/td><td class=\"content\"><strong>Boeckel,
+        B (2003):<\/strong> Present and past coccolith assemblages in the South Atlantic:
+        implications for species ecology, carbonate contribution and palaeoceanographic
+        applicability. <em>Berichte aus dem Fachbereich Geowissenschaften der Universität
+        Bremen<\/em><br\/><strong>Boeckel, B; Baumann, K-H; Henrich, R (2003):<\/strong>
+        Late Quaternary coccolith assemblages from the south-eastern South Atlantic
+        Ocean: implications for the palaeoceanographic evolution of the Benguela and
+        Agulhas Current systems during the past 250 kyr.<\/td><\/tr><tr><td class=\"title\">Size:<\/td><td
+        class=\"content\">900 data points<\/td><\/tr><\/table><div class=\"datasetid\"><a
+        href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.131433\" target=\"_self\"
+        class=\"dataset-link\">https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.131433<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 20.84<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.131438","score":20.74292,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.131438\"
+        target=\"_self\" class=\"dataset-link\"><strong>Boeckel, B (2003):<\/strong>
+        Coccolith percentage, relative abundance of sediment core GeoB3603-2<\/a><\/div><table
+        class=\"result\" summary=\"Dataset reference and size\" cellspacing=\"0\"
+        cellpadding=\"0\"><tr><td class=\"title\">Related to:<\/td><td class=\"content\"><strong>Boeckel,
+        B (2003):<\/strong> Present and past coccolith assemblages in the South Atlantic:
+        implications for species ecology, carbonate contribution and palaeoceanographic
+        applicability. <em>Berichte aus dem Fachbereich Geowissenschaften der Universität
+        Bremen<\/em><br\/><strong>Boeckel, B; Baumann, K-H; Henrich, R (2003):<\/strong>
+        Late Quaternary coccolith assemblages from the south-eastern South Atlantic
+        Ocean: implications for the palaeoceanographic evolution of the Benguela and
+        Agulhas Current systems during the past 250 kyr.<\/td><\/tr><tr><td class=\"title\">Size:<\/td><td
+        class=\"content\">1350 data points<\/td><\/tr><\/table><div class=\"datasetid\"><a
+        href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.131438\" target=\"_self\"
+        class=\"dataset-link\">https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.131438<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 20.74<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.131545","score":20.157188,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.131545\"
+        target=\"_self\" class=\"dataset-link\"><strong>Boeckel, B (2003):<\/strong>
+        Absolute abundance of coccoliths of sediment core GeoB3603-2<\/a><\/div><table
+        class=\"result\" summary=\"Dataset reference and size\" cellspacing=\"0\"
+        cellpadding=\"0\"><tr><td class=\"title\">Related to:<\/td><td class=\"content\"><strong>Boeckel,
+        B (2003):<\/strong> Present and past coccolith assemblages in the South Atlantic:
+        implications for species ecology, carbonate contribution and palaeoceanographic
+        applicability. <em>Berichte aus dem Fachbereich Geowissenschaften der Universität
+        Bremen<\/em><br\/><strong>Boeckel, B; Baumann, K-H; Henrich, R (2003):<\/strong>
+        Late Quaternary coccolith assemblages from the south-eastern South Atlantic
+        Ocean: implications for the palaeoceanographic evolution of the Benguela and
+        Agulhas Current systems during the past 250 kyr.<\/td><\/tr><tr><td class=\"title\">Size:<\/td><td
+        class=\"content\">1350 data points<\/td><\/tr><\/table><div class=\"datasetid\"><a
+        href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.131545\" target=\"_self\"
+        class=\"dataset-link\">https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.131545<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 20.16<\/span><\/div><\/li>"}],"facets":null,"maxScore":55.7834,"offset":10,"queryIdentifier":"32057d7d-5157-3abb-85b8-1ff9793486c6","session":"el7m0slcn3usdukrg8kdcji3c2","timeInDatabase":6,"totalCount":1279,"htmlSummary":"<strong>1279
+        datasets<\/strong> found on search for <strong title=\"Query: &raquo;florisphaera&laquo;\">&raquo;florisphaera&laquo;<\/strong>","htmlSnippetRSS":"<link
+        rel=\"alternate\" title=\"PANGAEA latest datasets about &quot;florisphaera&quot;\"
+        type=\"application\/rss+xml\" href=\"\/tools\/latest-datasets.rss?q=florisphaera&amp;count=10\">"}'
+  recorded_at: 2019-08-13 21:55:34 GMT
+  recorded_with: vcr/0.2.6, webmockr/0.4.0
+- request:
+    method: get
+    uri: https://www.pangaea.de/advanced/search.php?count=10&offset=20&q=florisphaera
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.54.0 r-curl/4.0 crul/0.8.4
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      cache-control: private, max-age=10800, pre-check=10800
+      content-encoding: gzip
+      content-type: application/json; charset=UTF-8
+      date: Tue, 13 Aug 2019 21:55:35 GMT
+      last-modified: Fri, 15 Apr 2016 11:55:50 GMT
+      server: PANGAEA/2.0
+      status: 'HTTP/2 200 '
+      strict-transport-security: max-age=31536000
+      vary:
+      - Accept-Encoding
+      - Cookie, X-PanLoginID
+      x-content-type-options: nosniff
+      x-frame-options: SAMEORIGIN
+      x-ua-compatible: IE=Edge
+    body:
+      encoding: UTF-8
+      string: '{"results":[{"URI":"doi:10.1594\/PANGAEA.131439","score":19.585583,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.131439\"
+        target=\"_self\" class=\"dataset-link\"><strong>Boeckel, B (2003):<\/strong>
+        Mean coccoliths lengths of sediment core GeoB3603-2<\/a><\/div><table class=\"result\"
+        summary=\"Dataset reference and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td
+        class=\"title\">Related to:<\/td><td class=\"content\"><strong>Boeckel, B
+        (2003):<\/strong> Present and past coccolith assemblages in the South Atlantic:
+        implications for species ecology, carbonate contribution and palaeoceanographic
+        applicability. <em>Berichte aus dem Fachbereich Geowissenschaften der Universität
+        Bremen<\/em><br\/><strong>Boeckel, B; Baumann, K-H; Henrich, R (2003):<\/strong>
+        Late Quaternary coccolith assemblages from the south-eastern South Atlantic
+        Ocean: implications for the palaeoceanographic evolution of the Benguela and
+        Agulhas Current systems during the past 250 kyr.<\/td><\/tr><tr><td class=\"title\">Size:<\/td><td
+        class=\"content\">98 data points<\/td><\/tr><\/table><div class=\"datasetid\"><a
+        href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.131439\" target=\"_self\"
+        class=\"dataset-link\">https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.131439<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 19.59<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.131544","score":19.576077,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.131544\"
+        target=\"_self\" class=\"dataset-link\"><strong>Boeckel, B (2003):<\/strong>
+        Absolute abundance of coccoliths of sediment core GeoB1710-3<\/a><\/div><table
+        class=\"result\" summary=\"Dataset reference and size\" cellspacing=\"0\"
+        cellpadding=\"0\"><tr><td class=\"title\">Related to:<\/td><td class=\"content\"><strong>Boeckel,
+        B (2003):<\/strong> Present and past coccolith assemblages in the South Atlantic:
+        implications for species ecology, carbonate contribution and palaeoceanographic
+        applicability. <em>Berichte aus dem Fachbereich Geowissenschaften der Universität
+        Bremen<\/em><br\/><strong>Boeckel, B; Baumann, K-H; Henrich, R (2003):<\/strong>
+        Late Quaternary coccolith assemblages from the south-eastern South Atlantic
+        Ocean: implications for the palaeoceanographic evolution of the Benguela and
+        Agulhas Current systems during the past 250 kyr.<\/td><\/tr><tr><td class=\"title\">Size:<\/td><td
+        class=\"content\">900 data points<\/td><\/tr><\/table><div class=\"datasetid\"><a
+        href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.131544\" target=\"_self\"
+        class=\"dataset-link\">https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.131544<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 19.58<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.131435","score":19.576077,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.131435\"
+        target=\"_self\" class=\"dataset-link\"><strong>Boeckel, B (2003):<\/strong>
+        Mean coccoliths lengths of sediment core GeoB1710-3<\/a><\/div><table class=\"result\"
+        summary=\"Dataset reference and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td
+        class=\"title\">Related to:<\/td><td class=\"content\"><strong>Boeckel, B
+        (2003):<\/strong> Present and past coccolith assemblages in the South Atlantic:
+        implications for species ecology, carbonate contribution and palaeoceanographic
+        applicability. <em>Berichte aus dem Fachbereich Geowissenschaften der Universität
+        Bremen<\/em><br\/><strong>Boeckel, B; Baumann, K-H; Henrich, R (2003):<\/strong>
+        Late Quaternary coccolith assemblages from the south-eastern South Atlantic
+        Ocean: implications for the palaeoceanographic evolution of the Benguela and
+        Agulhas Current systems during the past 250 kyr.<\/td><\/tr><tr><td class=\"title\">Size:<\/td><td
+        class=\"content\">50 data points<\/td><\/tr><\/table><div class=\"datasetid\"><a
+        href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.131435\" target=\"_self\"
+        class=\"dataset-link\">https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.131435<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 19.58<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.757616","score":19.55796,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.757616\"
+        target=\"_self\" class=\"dataset-link\"><strong>Zhao, M; Eglinton, G; Haslett,
+        SK et al. (2000):<\/strong> Averages and ranges of paleoenvironmental proxy
+        records of ODP Hole 108-658C (Table 1)<\/a><\/div><table class=\"result\"
+        summary=\"Dataset reference and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td
+        class=\"title\">Supplement to:<\/td><td class=\"content\"><strong>Zhao, M;
+        Eglinton, G; Haslett, SK et al. (2000):<\/strong> Marine and terrestrial biomarker
+        records for the last 35,000 years at ODP site 658C off NW Africa. <em>Organic
+        Geochemistry<\/em><\/td><\/tr><tr><td class=\"title\">Size:<\/td><td class=\"content\">150
+        data points<\/td><\/tr><\/table><div class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.757616\"
+        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.757616<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 19.56<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.867495","score":19.336151,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.867495\"
+        target=\"_self\" class=\"dataset-link\"><strong>Weiser, J; Baumann, K-H; Hahn,
+        A et al. (2016):<\/strong> Late Holocene coccolith assemblage data of sediment
+        core GeoB8323-2 from the Benguela Upwelling System<\/a><\/div><table class=\"result\"
+        summary=\"Dataset reference and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td
+        class=\"title\">Supplement to:<\/td><td class=\"content\"><strong>Weiser,
+        J; Baumann, K-H; Hahn, A et al. (2016):<\/strong> Late Holocene paleoceanographic
+        changes off south-western Africa as inferred from coccolithophore assemblages,
+        Proc. 15th INA Conf., Bohol, Philippines. <em>Journal of Nannoplankton Research<\/em><\/td><\/tr><tr><td
+        class=\"title\">Size:<\/td><td class=\"content\">416 data points<\/td><\/tr><\/table><div
+        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.867495\"
+        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.867495<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 19.34<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.122790","score":19.336151,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.122790\"
+        target=\"_self\" class=\"dataset-link\"><strong>Andruleit, H; Stäger, S; Rogalla,
+        U et al. (2003):<\/strong> Abundance of living coccolithophores in the northern
+        Arabian Sea (Table 2)<\/a><\/div><table class=\"result\" summary=\"Dataset
+        reference and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"title\">Supplement
+        to:<\/td><td class=\"content\"><strong>Andruleit, H; Stäger, S; Rogalla, U
+        et al. (2003):<\/strong> Living coccolithophores in the northern Arabian Sea:
+        ecological tolerances and environmental control. <em>Marine Micropaleontology<\/em><\/td><\/tr><tr><td
+        class=\"title\">Size:<\/td><td class=\"content\">852 data points<\/td><\/tr><\/table><div
+        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.122790\"
+        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.122790<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 19.34<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.836238","score":19.336151,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.836238\"
+        target=\"_self\" class=\"dataset-link\"><strong>Palumbo, E; Flores, J-A; Perugia,
+        C et al. (2013):<\/strong> Nannoplankton abundances and accumulation rates
+        of the last 24 ka BP of sediment core MD03-2699<\/a><\/div><table class=\"result\"
+        summary=\"Dataset reference and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td
+        class=\"title\">Supplement to:<\/td><td class=\"content\"><strong>Palumbo,
+        E; Flores, J-A; Perugia, C et al. (2013):<\/strong> Abrupt variability of
+        the last 24 ka BP recorded by coccolithophore assemblages off the Iberian
+        Margin (core MD03-2699). <em>Journal of Quaternary Science<\/em><\/td><\/tr><tr><td
+        class=\"title\">Size:<\/td><td class=\"content\">1946 data points<\/td><\/tr><\/table><div
+        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.836238\"
+        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.836238<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 19.34<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.314931","score":19.213333,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.314931\"
+        target=\"_self\" class=\"dataset-link\"><strong>Raffi, I; Keigwin, LD; Rio,
+        D et al. (2005):<\/strong> Range table from nannofossils in ODP Hole 172-1056C<\/a><\/div><table
+        class=\"result\" summary=\"Dataset reference and size\" cellspacing=\"0\"
+        cellpadding=\"0\"><tr><td class=\"title\">Related to:<\/td><td class=\"content\"><strong>Keigwin,
+        LD; Rio, D; Acton, GD et al. (1998):<\/strong> Proceedings of the Ocean Drilling
+        Program 172 Initial Reports. <em>Proceedings of the Ocean Drilling Program,
+        Ocean Drilling Program<\/em><br\/><strong>ODP\/TAMU (2005):<\/strong> JANUS
+        Database. <em>Ocean Drilling Program, Texas A&amp;M University, College Station
+        TX 77845-9547, USA; (data copied from Janus 2005-02 to 2005-06)<\/em><\/td><\/tr><tr><td
+        class=\"title\">Size:<\/td><td class=\"content\">11 data points<\/td><\/tr><\/table><div
+        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.314931\"
+        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.314931<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 19.21<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.315027","score":18.660614,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.315027\"
+        target=\"_self\" class=\"dataset-link\"><strong>Boeckel, B; Moore, GF; Taira,
+        A et al. (2005):<\/strong> Range table from nannofossils in ODP Hole 190-1174A<\/a><\/div><table
+        class=\"result\" summary=\"Dataset reference and size\" cellspacing=\"0\"
+        cellpadding=\"0\"><tr><td class=\"title\">Related to:<\/td><td class=\"content\"><strong>Moore,
+        GF; Taira, A; Klaus, A et al. (2001):<\/strong> Proceedings of the Ocean Drilling
+        Program, 190 Initial Reports. <em>Proceedings of the Ocean Drilling Program,
+        Ocean Drilling Program<\/em><br\/><strong>ODP\/TAMU (2005):<\/strong> JANUS
+        Database. <em>Ocean Drilling Program, Texas A&amp;M University, College Station
+        TX 77845-9547, USA; (data copied from Janus 2005-02 to 2005-06)<\/em><\/td><\/tr><tr><td
+        class=\"title\">Size:<\/td><td class=\"content\">10 data points<\/td><\/tr><\/table><div
+        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.315027\"
+        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.315027<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 18.66<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.314845","score":17.731682,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.314845\"
+        target=\"_self\" class=\"dataset-link\"><strong>Castradori, D; Emeis, K-C;
+        Robertson, AHF et al. (2005):<\/strong> Range table from nannofossils in ODP
+        Hole 160-967A<\/a><\/div><table class=\"result\" summary=\"Dataset reference
+        and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"title\">Related
+        to:<\/td><td class=\"content\"><strong>ODP\/TAMU (2005):<\/strong> JANUS Database.
+        <em>Ocean Drilling Program, Texas A&amp;M University, College Station TX 77845-9547,
+        USA; (data copied from Janus 2005-02 to 2005-06)<\/em><br\/><strong>Robertson,
+        AHF; Shipboard Scientific Party (1996):<\/strong> Proceedings of the Ocean
+        Drilling Program, 160 Initial Reports. <em>Proceedings of the Ocean Drilling
+        Program, Ocean Drilling Program<\/em><\/td><\/tr><tr><td class=\"title\">Size:<\/td><td
+        class=\"content\">423 data points<\/td><\/tr><\/table><div class=\"datasetid\"><a
+        href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.314845\" target=\"_self\"
+        class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.314845<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 17.73<\/span><\/div><\/li>"}],"facets":null,"maxScore":55.7834,"offset":20,"queryIdentifier":"32057d7d-5157-3abb-85b8-1ff9793486c6","session":"dcjld9vji8sv3s052cdouog344","timeInDatabase":7,"totalCount":1279,"htmlSummary":"<strong>1279
+        datasets<\/strong> found on search for <strong title=\"Query: &raquo;florisphaera&laquo;\">&raquo;florisphaera&laquo;<\/strong>","htmlSnippetRSS":"<link
+        rel=\"alternate\" title=\"PANGAEA latest datasets about &quot;florisphaera&quot;\"
+        type=\"application\/rss+xml\" href=\"\/tools\/latest-datasets.rss?q=florisphaera&amp;count=10\">"}'
+  recorded_at: 2019-08-13 21:55:34 GMT
+  recorded_with: vcr/0.2.6, webmockr/0.4.0

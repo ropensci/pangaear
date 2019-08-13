@@ -1,0 +1,357 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://ws.pangaea.de/es/pangaea/panmd/_search?size=3&version=false
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.54.0 r-curl/4.0 crul/0.8.4
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: 'HTTP/2 200 '
+      date: Tue, 13 Aug 2019 21:56:35 GMT
+      content-type: application/json; charset=UTF-8
+      content-length: '7961'
+      content-encoding: gzip
+      server: PANGAEA/2.0
+      x-ua-compatible: IE=Edge
+      x-content-type-options: nosniff
+      x-frame-options: SAMEORIGIN
+    body:
+      encoding: UTF-8
+      string: '{"took":3,"timed_out":false,"_shards":{"total":5,"successful":5,"skipped":0,"failed":0},"hits":{"total":386066,"max_score":1.0,"hits":[{"_index":"pangaea_v2","_type":"panmd","_id":"838718","_score":1.0,"_source":{"internal-datestamp":"2018-09-27T17:18:23.000Z","minElevation":0.35,"sf-authortitle":"Volkova
+        V S$Lithology of sediment core NIZVAR, Russia","meanPosition":{"lat":61.25,"lon":77.0},"techKeyword":["citable","author11008","author24053","author34028","author34201","author46439","author53076","author53117","author53132","author53153","author53171","event2752252","geocode1","geocode1600","geocode1601","geocode8128","license101","param2834","param3","param4","pi34201","ref65801","ref65833","ref65853","ref65865","term23889","topotype3"],"geocodes":["geocode1","geocode1600","geocode1601","geocode8128","event"],"sp-loginOption":1,"agg-author":"Volkova,
+        V S","eastBoundLongitude":77.0,"URI":"https://doi.org/10.1594/PANGAEA.838718","agg-pubYear":2014,"agg-geometry":"point","xml-thumb":"<md:SearchResult
+        xmlns:md=\"http://www.pangaea.de/MetaData\" version=\"2018-09-26\"><md:citation
+        id=\"dataset838718\"><md:author>Volkova, VS</md:author><md:year>2014</md:year><md:title>Lithology
+        of sediment core NIZVAR, Russia</md:title><md:URI>https://doi.org/10.1594/PANGAEA.838718</md:URI><md:dateTime>2014-11-12T09:22:07</md:dateTime></md:citation><md:reference
+        id=\"ref65833\" relationType=\"Related to\" relationTypeId=\"12\"><md:author>Anderson,
+        PM; Lozhkin, AV</md:author><md:year>2002</md:year><md:title>Late Quaternary
+        vegetation and climate of Siberia and the Russian far east (Palynological
+        and Radiocarbon Database)</md:title><md:source>North East Science Center,
+        Far East Branch, Russian Academy of Sciences, Magadan, Russia</md:source></md:reference><md:reference
+        id=\"ref65853\" relationType=\"Related to\" relationTypeId=\"12\"><md:author>Firsov,
+        FV; Panychev, VA; Orlova, LA</md:author><md:year>1985</md:year><md:title>Catalog
+        of radiocarbon dates [in Russian]</md:title><md:source>Novosibirsk Geological
+        Institute, Siberian Branch, USSR Academy of Sciences, Novosibirsk</md:source></md:reference><md:reference
+        id=\"ref65865\" relationType=\"Related to\" relationTypeId=\"12\"><md:author>Il''ina,
+        NS; Lapshina, EI; Lavrenko, NI</md:author><md:year>1985</md:year><md:title>The
+        vegetation cover of the western Siberia continental plateau [in Russian]</md:title><md:source>Nauka,
+        Novosibirsk</md:source></md:reference><md:reference id=\"ref65801\" relationType=\"Related
+        to\" relationTypeId=\"12\"><md:author>Neishtadt, MI</md:author><md:year>1976</md:year><md:title>Holocene
+        processes in western Siberia and associated problems [in Russian]</md:title><md:source>In:
+        M.I. Neishtadt (ed.) Studying and mastering the environment. USSR Academy
+        of Sciences, Institute of Geography, Moscow</md:source><md:pages>90-99</md:pages></md:reference><md:extent><md:geographic>\n<md:westBoundLongitude>77.0</md:westBoundLongitude>\n<md:eastBoundLongitude>77.0</md:eastBoundLongitude>\n<md:southBoundLatitude>61.25</md:southBoundLatitude>\n<md:northBoundLatitude>61.25</md:northBoundLatitude>\n<md:meanLongitude>77.0</md:meanLongitude>\n<md:meanLatitude>61.25</md:meanLatitude>\n</md:geographic></md:extent><md:size
+        unit=\"data points\">18</md:size><md:technicalInfo>\n<md:entry key=\"xmlLastModified\"
+        value=\"2018-09-27T17:18:23Z\"/>\n<md:entry key=\"filename\" value=\"NIZVAR_lithology\"/>\n<md:entry
+        key=\"mimeType\" value=\"text/tab-separated-values\"/>\n<md:entry key=\"status\"
+        value=\"published\"/>\n<md:entry key=\"status_num\" value=\"4\"/>\n<md:entry
+        key=\"DOIRegistryStatus\" value=\"registered\"/>\n<md:entry key=\"DOIRegistryStatus_num\"
+        value=\"4\"/>\n<md:entry key=\"loginOption\" value=\"unrestricted\"/>\n<md:entry
+        key=\"loginOption_num\" value=\"1\"/>\n</md:technicalInfo></md:SearchResult>","xml":"<md:MetaData
+        xmlns:md=\"http://www.pangaea.de/MetaData\" version=\"2018-09-26\">\n<md:citation
+        id=\"dataset838718\">\n<md:author id=\"dataset.author34201\">\n<md:lastName>Volkova</md:lastName>\n<md:firstName>V
+        S</md:firstName>\n</md:author>\n<md:year>2014</md:year>\n<md:title>Lithology
+        of sediment core NIZVAR, Russia</md:title>\n<md:URI>https://doi.org/10.1594/PANGAEA.838718</md:URI>\n<md:dateTime>2014-11-12T09:22:07</md:dateTime>\n</md:citation>\n<md:reference
+        id=\"ref65833\" relationType=\"Related to\" relationTypeId=\"12\">\n<md:author
+        id=\"ref65833.author11008\">\n<md:lastName>Anderson</md:lastName>\n<md:firstName>Patricia
+        M</md:firstName>\n<md:eMail>pata@uw.edu</md:eMail>\n<md:URI>https://www.ess.washington.edu/people/profile.php?pid=anderson--patricia</md:URI>\n</md:author>\n<md:author
+        id=\"ref65833.author24053\">\n<md:lastName>Lozhkin</md:lastName>\n<md:firstName>Anatoly
+        V</md:firstName>\n</md:author>\n<md:year>2002</md:year>\n<md:title>Late Quaternary
+        vegetation and climate of Siberia and the Russian far east (Palynological
+        and Radiocarbon Database)</md:title>\n<md:source>North East Science Center,
+        Far East Branch, Russian Academy of Sciences, Magadan, Russia</md:source>\n</md:reference>\n<md:reference
+        id=\"ref65853\" relationType=\"Related to\" relationTypeId=\"12\">\n<md:author
+        id=\"ref65853.author46439\">\n<md:lastName>Firsov</md:lastName>\n<md:firstName>F
+        V</md:firstName>\n</md:author>\n<md:author id=\"ref65853.author53076\">\n<md:lastName>Panychev</md:lastName>\n<md:firstName>V
+        A</md:firstName>\n</md:author>\n<md:author id=\"ref65853.author53153\">\n<md:lastName>Orlova</md:lastName>\n<md:firstName>L
+        A</md:firstName>\n</md:author>\n<md:year>1985</md:year>\n<md:title>Catalog
+        of radiocarbon dates [in Russian]</md:title>\n<md:source>Novosibirsk Geological
+        Institute, Siberian Branch, USSR Academy of Sciences, Novosibirsk</md:source>\n</md:reference>\n<md:reference
+        id=\"ref65865\" relationType=\"Related to\" relationTypeId=\"12\">\n<md:author
+        id=\"ref65865.author53132\">\n<md:lastName>Il''ina</md:lastName>\n<md:firstName>N
+        S</md:firstName>\n</md:author>\n<md:author id=\"ref65865.author53117\">\n<md:lastName>Lapshina</md:lastName>\n<md:firstName>E
+        I</md:firstName>\n</md:author>\n<md:author id=\"ref65865.author53171\">\n<md:lastName>Lavrenko</md:lastName>\n<md:firstName>N
+        I</md:firstName>\n</md:author>\n<md:year>1985</md:year>\n<md:title>The vegetation
+        cover of the western Siberia continental plateau [in Russian]</md:title>\n<md:source>Nauka,
+        Novosibirsk</md:source>\n</md:reference>\n<md:reference id=\"ref65801\" relationType=\"Related
+        to\" relationTypeId=\"12\">\n<md:author id=\"ref65801.author34028\">\n<md:lastName>Neishtadt</md:lastName>\n<md:firstName>Mark
+        Ilich</md:firstName>\n</md:author>\n<md:year>1976</md:year>\n<md:title>Holocene
+        processes in western Siberia and associated problems [in Russian]</md:title>\n<md:source>In:
+        M.I. Neishtadt (ed.) Studying and mastering the environment. USSR Academy
+        of Sciences, Institute of Geography, Moscow</md:source>\n<md:pages>90-99</md:pages>\n</md:reference>\n<md:extent>\n<md:geographic>\n<md:westBoundLongitude>77.0</md:westBoundLongitude>\n<md:eastBoundLongitude>77.0</md:eastBoundLongitude>\n<md:southBoundLatitude>61.25</md:southBoundLatitude>\n<md:northBoundLatitude>61.25</md:northBoundLatitude>\n<md:meanLongitude>77.0</md:meanLongitude>\n<md:meanLatitude>61.25</md:meanLatitude>\n</md:geographic>\n<md:elevation
+        geocodeId=\"geocode1\" name=\"DEPTH, sediment/rock\" unit=\"m\">\n<md:min>0.35</md:min>\n<md:max>4.4</md:max>\n</md:elevation>\n<md:topoType
+        id=\"topotype3\">vertical profile</md:topoType>\n</md:extent>\n<md:event id=\"event2752252\">\n<md:label>NIZVAR</md:label>\n<md:optionalLabel>Nizhnevartovskoye</md:optionalLabel>\n<md:latitude>61.25</md:latitude>\n<md:longitude>77.0</md:longitude>\n<md:elevation>55.0</md:elevation>\n<md:location
+        id=\"event2752252.term23889\">\n<md:name>Russia</md:name>\n</md:location>\n<md:comment>peat
+        overlying 1st river terrace; Physiography: river valley; Vegetation: Picea,
+        Abies, Pinus; Formation: Picea-Abies Pinus sibirica taiga; site is located
+        near Nizhnevartovsk village near mouth of Vakh River, tributary to the Ob
+        River</md:comment>\n</md:event>\n<md:size unit=\"data points\">18</md:size>\n<md:license
+        id=\"license101\">\n<md:label>CC-BY-3.0</md:label>\n<md:name>Creative Commons
+        Attribution 3.0 Unported</md:name>\n<md:URI>https://creativecommons.org/licenses/by/3.0/</md:URI>\n</md:license>\n<md:comment>This
+        dataset was archived on 2014-11-03 from the EPD database (http://www.europeanpollendatabase.net).</md:comment>\n<md:matrixColumn
+        behaviour=\"1\" col=\"0\" format=\"#0.0000\" id=\"col0.ds1499810\" label=\"NIZVAR.a\"
+        source=\"geocode\" type=\"numeric\">\n<md:parameter id=\"col0.ds1499810.geocode1\">\n<md:name>DEPTH,
+        sediment/rock</md:name>\n<md:shortName>Depth</md:shortName>\n<md:unit>m</md:unit>\n</md:parameter>\n<md:caption>Depth
+        [m]</md:caption>\n</md:matrixColumn>\n<md:matrixColumn col=\"1\" format=\"#0.000\"
+        id=\"col1.ds12557067\" label=\"NIZVAR.23\" source=\"data\" type=\"numeric\">\n<md:parameter
+        id=\"col1.ds12557067.param3\">\n<md:name>Depth, top/min</md:name>\n<md:shortName>Depth
+        top</md:shortName>\n<md:unit>m</md:unit>\n</md:parameter>\n<md:PI id=\"col1.ds12557067.pi34201\">\n<md:lastName>Volkova</md:lastName>\n<md:firstName>V
+        S</md:firstName>\n</md:PI>\n<md:comment>of the lithological unit</md:comment>\n<md:caption>Depth
+        top [m]</md:caption>\n</md:matrixColumn>\n<md:matrixColumn col=\"2\" format=\"#0.000\"
+        id=\"col2.ds12557068\" label=\"NIZVAR.24\" source=\"data\" type=\"numeric\">\n<md:parameter
+        id=\"col2.ds12557068.param4\">\n<md:name>Depth, bottom/max</md:name>\n<md:shortName>Depth
+        bot</md:shortName>\n<md:unit>m</md:unit>\n</md:parameter>\n<md:PI id=\"col2.ds12557068.pi34201\">\n<md:lastName>Volkova</md:lastName>\n<md:firstName>V
+        S</md:firstName>\n</md:PI>\n<md:comment>of the lithological unit</md:comment>\n<md:caption>Depth
+        bot [m]</md:caption>\n</md:matrixColumn>\n<md:matrixColumn col=\"3\" id=\"col3.ds12557069\"
+        label=\"NIZVAR.25\" source=\"data\" type=\"string\">\n<md:parameter id=\"col3.ds12557069.param2834\">\n<md:name>Lithology/composition/facies</md:name>\n<md:shortName>Lithology</md:shortName>\n</md:parameter>\n<md:PI
+        id=\"col3.ds12557069.pi34201\">\n<md:lastName>Volkova</md:lastName>\n<md:firstName>V
+        S</md:firstName>\n</md:PI>\n<md:caption>Lithology</md:caption>\n</md:matrixColumn>\n<md:keywords>\n<md:techKeyword
+        type=\"autoGenerated\">citable</md:techKeyword>\n<md:techKeyword type=\"autoGenerated\">author11008</md:techKeyword>\n<md:techKeyword
+        type=\"autoGenerated\">author24053</md:techKeyword>\n<md:techKeyword type=\"autoGenerated\">author34028</md:techKeyword>\n<md:techKeyword
+        type=\"autoGenerated\">author34201</md:techKeyword>\n<md:techKeyword type=\"autoGenerated\">author46439</md:techKeyword>\n<md:techKeyword
+        type=\"autoGenerated\">author53076</md:techKeyword>\n<md:techKeyword type=\"autoGenerated\">author53117</md:techKeyword>\n<md:techKeyword
+        type=\"autoGenerated\">author53132</md:techKeyword>\n<md:techKeyword type=\"autoGenerated\">author53153</md:techKeyword>\n<md:techKeyword
+        type=\"autoGenerated\">author53171</md:techKeyword>\n<md:techKeyword type=\"autoGenerated\">event2752252</md:techKeyword>\n<md:techKeyword
+        type=\"autoGenerated\">geocode1</md:techKeyword>\n<md:techKeyword type=\"autoGenerated\">geocode1600</md:techKeyword>\n<md:techKeyword
+        type=\"autoGenerated\">geocode1601</md:techKeyword>\n<md:techKeyword type=\"autoGenerated\">geocode8128</md:techKeyword>\n<md:techKeyword
+        type=\"autoGenerated\">license101</md:techKeyword>\n<md:techKeyword type=\"autoGenerated\">param2834</md:techKeyword>\n<md:techKeyword
+        type=\"autoGenerated\">param3</md:techKeyword>\n<md:techKeyword type=\"autoGenerated\">param4</md:techKeyword>\n<md:techKeyword
+        type=\"autoGenerated\">pi34201</md:techKeyword>\n<md:techKeyword type=\"autoGenerated\">ref65801</md:techKeyword>\n<md:techKeyword
+        type=\"autoGenerated\">ref65833</md:techKeyword>\n<md:techKeyword type=\"autoGenerated\">ref65853</md:techKeyword>\n<md:techKeyword
+        type=\"autoGenerated\">ref65865</md:techKeyword>\n<md:techKeyword type=\"autoGenerated\">term23889</md:techKeyword>\n<md:techKeyword
+        type=\"autoGenerated\">topotype3</md:techKeyword>\n</md:keywords>\n<md:technicalInfo>\n<md:entry
+        key=\"xmlLastModified\" value=\"2018-09-27T17:18:23Z\"/>\n<md:entry key=\"filename\"
+        value=\"NIZVAR_lithology\"/>\n<md:entry key=\"mimeType\" value=\"text/tab-separated-values\"/>\n<md:entry
+        key=\"status\" value=\"published\"/>\n<md:entry key=\"status_num\" value=\"4\"/>\n<md:entry
+        key=\"DOIRegistryStatus\" value=\"registered\"/>\n<md:entry key=\"DOIRegistryStatus_num\"
+        value=\"4\"/>\n<md:entry key=\"loginOption\" value=\"unrestricted\"/>\n<md:entry
+        key=\"loginOption_num\" value=\"1\"/>\n</md:technicalInfo>\n</md:MetaData>","sf-idDataSet":838718,"elevationGeocode":"geocode1","xml-sitemap":"<url><loc>https://doi.pangaea.de/10.1594/PANGAEA.838718</loc><lastmod>2018-09-27</lastmod></url>","westBoundLongitude":77.0,"northBoundLatitude":61.25,"sp-dataStatus":4,"nDataPoints":18,"sp-hidden":false,"agg-location":["Arctic
+        Ocean","Asia","Russia"],"internal-source":"standard","southBoundLatitude":61.25,"boost":1.0,"oaiSet":"citable","maxElevation":4.4}},{"_index":"pangaea_v2","_type":"panmd","_id":"717974","_score":1.0,"_source":{"internal-datestamp":"2018-10-29T17:51:23.000Z","minElevation":2.0,"sf-authortitle":"Augustine
+        John$Basic measurements of radiation at station Boulder, SURFRAD (2005-12)","meanPosition":{"lat":40.125,"lon":-105.237},"techKeyword":["citable","author31651","campaign32853","event2536892","geocode1599","geocode1600","geocode1601","geocode56349","geocode8128","method359","method5792","method5900","method6007","method6461","param31460","param45293","param45294","param45298","param48823","param55905","param55908","param55961","param55962","pi31651","project4094","ref46889","sourceinst2887","term19810","term26749","topotype8"],"geocodes":["geocode1599","geocode1600","geocode1601","geocode56349","geocode8128","event"],"sp-loginOption":3,"agg-campaign":"WCRP/GEWEX","agg-author":"Augustine,
+        John","eastBoundLongitude":-105.237,"URI":"https://doi.org/10.1594/PANGAEA.717974","agg-pubYear":2009,"minDateTime":"2005-12-01T00:00:00.000Z","agg-geometry":"point","xml-thumb":"<md:SearchResult
+        xmlns:md=\"http://www.pangaea.de/MetaData\" version=\"2018-09-26\"><md:citation
+        id=\"dataset717974\"><md:author>Augustine, J</md:author><md:year>2009</md:year><md:title>Basic
+        measurements of radiation at station Boulder, SURFRAD (2005-12)</md:title><md:source>NOAA
+        - Air Resources Laboratory, Boulder</md:source><md:URI>https://doi.org/10.1594/PANGAEA.717974</md:URI><md:dateTime>2009-06-10T17:34:52</md:dateTime></md:citation><md:extent><md:geographic>\n<md:westBoundLongitude>-105.237</md:westBoundLongitude>\n<md:eastBoundLongitude>-105.237</md:eastBoundLongitude>\n<md:southBoundLatitude>40.125</md:southBoundLatitude>\n<md:northBoundLatitude>40.125</md:northBoundLatitude>\n<md:meanLongitude>-105.237</md:meanLongitude>\n<md:meanLatitude>40.125</md:meanLatitude>\n</md:geographic></md:extent><md:size
+        unit=\"data points\">133860</md:size><md:technicalInfo>\n<md:entry key=\"xmlLastModified\"
+        value=\"2018-10-29T17:51:23Z\"/>\n<md:entry key=\"filename\" value=\"BOS_radiation_2005-12\"/>\n<md:entry
+        key=\"mimeType\" value=\"text/tab-separated-values\"/>\n<md:entry key=\"status\"
+        value=\"published\"/>\n<md:entry key=\"status_num\" value=\"4\"/>\n<md:entry
+        key=\"DOIRegistryStatus\" value=\"registered\"/>\n<md:entry key=\"DOIRegistryStatus_num\"
+        value=\"4\"/>\n<md:entry key=\"loginOption\" value=\"access rights needed\"/>\n<md:entry
+        key=\"loginOption_num\" value=\"3\"/>\n</md:technicalInfo></md:SearchResult>","agg-mainTopic":"Atmosphere","xml":"<md:MetaData
+        xmlns:md=\"http://www.pangaea.de/MetaData\" version=\"2018-09-26\">\n<md:citation
+        id=\"dataset717974\">\n<md:author id=\"dataset.author31651\">\n<md:lastName>Augustine</md:lastName>\n<md:firstName>John</md:firstName>\n<md:eMail>john.a.augustine@noaa.gov</md:eMail>\n</md:author>\n<md:year>2009</md:year>\n<md:title>Basic
+        measurements of radiation at station Boulder, SURFRAD (2005-12)</md:title>\n<md:source
+        id=\"dataset.sourceinst2887\">NOAA - Air Resources Laboratory, Boulder</md:source>\n<md:URI>https://doi.org/10.1594/PANGAEA.717974</md:URI>\n<md:dateTime>2009-06-10T17:34:52</md:dateTime>\n</md:citation>\n<md:reference
+        id=\"ref46889\" relationType=\"Other version\" relationTypeId=\"13\">\n<md:author
+        id=\"ref46889.author31651\">\n<md:lastName>Augustine</md:lastName>\n<md:firstName>John</md:firstName>\n<md:eMail>john.a.augustine@noaa.gov</md:eMail>\n</md:author>\n<md:year>2009</md:year>\n<md:title>BSRN
+        Station-to-archive file for station Boulder (2005-12)</md:title>\n<md:URI>ftp://ftp.bsrn.awi.de/bos/bos1205.dat.gz</md:URI>\n</md:reference>\n<md:extent>\n<md:geographic>\n<md:westBoundLongitude>-105.237</md:westBoundLongitude>\n<md:eastBoundLongitude>-105.237</md:eastBoundLongitude>\n<md:southBoundLatitude>40.125</md:southBoundLatitude>\n<md:northBoundLatitude>40.125</md:northBoundLatitude>\n<md:meanLongitude>-105.237</md:meanLongitude>\n<md:meanLatitude>40.125</md:meanLatitude>\n</md:geographic>\n<md:temporal>\n<md:minDateTime>2005-12-01T00:00:00</md:minDateTime>\n<md:maxDateTime>2005-12-31T23:57:00</md:maxDateTime>\n</md:temporal>\n<md:elevation
+        geocodeId=\"geocode56349\" name=\"HEIGHT above ground\" unit=\"m\">\n<md:min>2.0</md:min>\n<md:max>2.0</md:max>\n</md:elevation>\n<md:topoType
+        id=\"topotype8\">time series</md:topoType>\n</md:extent>\n<md:project id=\"project4094\"
+        type=\"International\">\n<md:label>BSRN</md:label>\n<md:name>Baseline Surface
+        Radiation Network</md:name>\n<md:URI>http://bsrn.awi.de</md:URI>\n</md:project>\n<md:event
+        id=\"event2536892\">\n<md:label>BOS</md:label>\n<md:optionalLabel>Boulder</md:optionalLabel>\n<md:URI>http://www.srrb.noaa.gov/surfrad/tablemt.html</md:URI>\n<md:latitude>40.125</md:latitude>\n<md:longitude>-105.237</md:longitude>\n<md:elevation>1689.0</md:elevation>\n<md:dateTime>1995-07-01T00:00:00</md:dateTime>\n<md:location
+        id=\"event2536892.term26749\">\n<md:name>Colorado, United States of America</md:name>\n</md:location>\n<md:campaign
+        id=\"event2536892.campaign32853\">\n<md:name>WCRP/GEWEX</md:name>\n</md:campaign>\n<md:device
+        id=\"event2536892.term19810\">\n<md:name>Monitoring station</md:name>\n<md:optionalName>MONS</md:optionalName>\n</md:device>\n<md:comment>BSRN
+        station no: 34; Surface type: grass; Topography type: hilly, rural; Station
+        scientist: John A. Augustine (john.a.augustine@noaa.gov)</md:comment>\n</md:event>\n<md:size
+        unit=\"data points\">133860</md:size>\n<md:matrixColumn behaviour=\"4\" col=\"0\"
+        format=\"yyyy-MM-dd''T''HH:mm\" id=\"col0.ds1367289\" label=\"BOS.b\" source=\"geocode\"
+        type=\"datetime\">\n<md:parameter id=\"col0.ds1367289.geocode1599\">\n<md:name>DATE/TIME</md:name>\n<md:shortName>Date/Time</md:shortName>\n<md:URI>http://en.wikipedia.org/wiki/ISO_8601</md:URI>\n</md:parameter>\n<md:caption>Date/Time</md:caption>\n</md:matrixColumn>\n<md:matrixColumn
+        behaviour=\"1\" col=\"1\" format=\"#0\" id=\"col1.ds1367288\" label=\"BOS.a\"
+        source=\"geocode\" type=\"numeric\">\n<md:parameter id=\"col1.ds1367288.geocode56349\">\n<md:name>HEIGHT
+        above ground</md:name>\n<md:shortName>Height</md:shortName>\n<md:unit>m</md:unit>\n<md:URI>http://en.wikipedia.org/wiki/Height</md:URI>\n</md:parameter>\n<md:caption>Height
+        [m]</md:caption>\n</md:matrixColumn>\n<md:matrixColumn col=\"2\" format=\"###0\"
+        id=\"col2.ds10789870\" label=\"BOS.2611\" source=\"data\" type=\"numeric\">\n<md:parameter
+        id=\"col2.ds10789870.param31460\">\n<md:name>Short-wave downward (GLOBAL)
+        radiation</md:name>\n<md:shortName>SWD</md:shortName>\n<md:unit>W/m**2</md:unit>\n</md:parameter>\n<md:method
+        id=\"col2.ds10789870.method6461\">\n<md:name>Pyranometer, Spectrosun, SR-75,
+        SN 73-57, WRMC No. 31141</md:name>\n</md:method>\n<md:PI id=\"col2.ds10789870.pi31651\">\n<md:lastName>Augustine</md:lastName>\n<md:firstName>John</md:firstName>\n<md:eMail>john.a.augustine@noaa.gov</md:eMail>\n</md:PI>\n<md:caption>SWD
+        [W/m**2]</md:caption>\n</md:matrixColumn>\n<md:matrixColumn col=\"3\" format=\"###0.0\"
+        id=\"col3.ds10789871\" label=\"BOS.2610\" source=\"data\" type=\"numeric\">\n<md:parameter
+        id=\"col3.ds10789871.param55905\" relatedTermIds=\"37764\">\n<md:name>Short-wave
+        downward (GLOBAL) radiation, standard deviation</md:name>\n<md:shortName>SWD
+        std dev</md:shortName>\n<md:unit>W/m**2</md:unit>\n</md:parameter>\n<md:method
+        id=\"col3.ds10789871.method6461\">\n<md:name>Pyranometer, Spectrosun, SR-75,
+        SN 73-57, WRMC No. 31141</md:name>\n</md:method>\n<md:PI id=\"col3.ds10789871.pi31651\">\n<md:lastName>Augustine</md:lastName>\n<md:firstName>John</md:firstName>\n<md:eMail>john.a.augustine@noaa.gov</md:eMail>\n</md:PI>\n<md:caption>SWD
+        std dev [W/m**2]</md:caption>\n</md:matrixColumn>\n<md:matrixColumn col=\"4\"
+        format=\"###0\" id=\"col4.ds10789872\" label=\"BOS.2607\" source=\"data\"
+        type=\"numeric\">\n<md:parameter id=\"col4.ds10789872.param45294\">\n<md:name>Direct
+        radiation</md:name>\n<md:shortName>DIR</md:shortName>\n<md:unit>W/m**2</md:unit>\n</md:parameter>\n<md:method
+        id=\"col4.ds10789872.method5900\">\n<md:name>Pyrheliometer, Eppley, NIP, SN
+        30727E6, WRMC No. 31269</md:name>\n</md:method>\n<md:PI id=\"col4.ds10789872.pi31651\">\n<md:lastName>Augustine</md:lastName>\n<md:firstName>John</md:firstName>\n<md:eMail>john.a.augustine@noaa.gov</md:eMail>\n</md:PI>\n<md:caption>DIR
+        [W/m**2]</md:caption>\n</md:matrixColumn>\n<md:matrixColumn col=\"5\" format=\"###0.0\"
+        id=\"col5.ds10789873\" label=\"BOS.2606\" source=\"data\" type=\"numeric\">\n<md:parameter
+        id=\"col5.ds10789873.param55962\" relatedTermIds=\"37764\">\n<md:name>Direct
+        radiation, standard deviation</md:name>\n<md:shortName>DIR std dev</md:shortName>\n<md:unit>W/m**2</md:unit>\n</md:parameter>\n<md:method
+        id=\"col5.ds10789873.method5900\">\n<md:name>Pyrheliometer, Eppley, NIP, SN
+        30727E6, WRMC No. 31269</md:name>\n</md:method>\n<md:PI id=\"col5.ds10789873.pi31651\">\n<md:lastName>Augustine</md:lastName>\n<md:firstName>John</md:firstName>\n<md:eMail>john.a.augustine@noaa.gov</md:eMail>\n</md:PI>\n<md:caption>DIR
+        std dev [W/m**2]</md:caption>\n</md:matrixColumn>\n<md:matrixColumn col=\"6\"
+        format=\"###0\" id=\"col6.ds10789874\" label=\"BOS.2609\" source=\"data\"
+        type=\"numeric\">\n<md:parameter id=\"col6.ds10789874.param45293\">\n<md:name>Diffuse
+        radiation</md:name>\n<md:shortName>DIF</md:shortName>\n<md:unit>W/m**2</md:unit>\n</md:parameter>\n<md:method
+        id=\"col6.ds10789874.method6007\">\n<md:name>Pyranometer, Eppley, 8-48, SN
+        32864, WRMC No. 31304</md:name>\n</md:method>\n<md:PI id=\"col6.ds10789874.pi31651\">\n<md:lastName>Augustine</md:lastName>\n<md:firstName>John</md:firstName>\n<md:eMail>john.a.augustine@noaa.gov</md:eMail>\n</md:PI>\n<md:caption>DIF
+        [W/m**2]</md:caption>\n</md:matrixColumn>\n<md:matrixColumn col=\"7\" format=\"###0.0\"
+        id=\"col7.ds10789875\" label=\"BOS.2608\" source=\"data\" type=\"numeric\">\n<md:parameter
+        id=\"col7.ds10789875.param55961\" relatedTermIds=\"37764\">\n<md:name>Diffuse
+        radiation, standard deviation</md:name>\n<md:shortName>DIF std dev</md:shortName>\n<md:unit>W/m**2</md:unit>\n</md:parameter>\n<md:method
+        id=\"col7.ds10789875.method6007\">\n<md:name>Pyranometer, Eppley, 8-48, SN
+        32864, WRMC No. 31304</md:name>\n</md:method>\n<md:PI id=\"col7.ds10789875.pi31651\">\n<md:lastName>Augustine</md:lastName>\n<md:firstName>John</md:firstName>\n<md:eMail>john.a.augustine@noaa.gov</md:eMail>\n</md:PI>\n<md:caption>DIF
+        std dev [W/m**2]</md:caption>\n</md:matrixColumn>\n<md:matrixColumn col=\"8\"
+        format=\"###0\" id=\"col8.ds10789876\" label=\"BOS.2604\" source=\"data\"
+        type=\"numeric\">\n<md:parameter id=\"col8.ds10789876.param45298\">\n<md:name>Long-wave
+        downward radiation</md:name>\n<md:shortName>LWD</md:shortName>\n<md:unit>W/m**2</md:unit>\n</md:parameter>\n<md:method
+        id=\"col8.ds10789876.method5792\">\n<md:name>Pyrgeometer, Eppley, PIR, SN
+        31610F3, WRMC No. 31184</md:name>\n</md:method>\n<md:PI id=\"col8.ds10789876.pi31651\">\n<md:lastName>Augustine</md:lastName>\n<md:firstName>John</md:firstName>\n<md:eMail>john.a.augustine@noaa.gov</md:eMail>\n</md:PI>\n<md:caption>LWD
+        [W/m**2]</md:caption>\n</md:matrixColumn>\n<md:matrixColumn col=\"9\" format=\"###0.0\"
+        id=\"col9.ds10789877\" label=\"BOS.2605\" source=\"data\" type=\"numeric\">\n<md:parameter
+        id=\"col9.ds10789877.param55908\" relatedTermIds=\"37764\">\n<md:name>Long-wave
+        downward radiation, standard deviation</md:name>\n<md:shortName>LWD std dev</md:shortName>\n<md:unit>W/m**2</md:unit>\n</md:parameter>\n<md:method
+        id=\"col9.ds10789877.method5792\">\n<md:name>Pyrgeometer, Eppley, PIR, SN
+        31610F3, WRMC No. 31184</md:name>\n</md:method>\n<md:PI id=\"col9.ds10789877.pi31651\">\n<md:lastName>Augustine</md:lastName>\n<md:firstName>John</md:firstName>\n<md:eMail>john.a.augustine@noaa.gov</md:eMail>\n</md:PI>\n<md:caption>LWD
+        std dev [W/m**2]</md:caption>\n</md:matrixColumn>\n<md:matrixColumn col=\"10\"
+        format=\"###0\" id=\"col10.ds10789878\" label=\"BOS.2603\" source=\"data\"
+        type=\"numeric\">\n<md:parameter id=\"col10.ds10789878.param48823\">\n<md:name>Station
+        pressure</md:name>\n<md:shortName>PoPoPoPo</md:shortName>\n<md:unit>hPa</md:unit>\n</md:parameter>\n<md:method
+        id=\"col10.ds10789878.method359\">\n<md:name>Barometer</md:name>\n</md:method>\n<md:PI
+        id=\"col10.ds10789878.pi31651\">\n<md:lastName>Augustine</md:lastName>\n<md:firstName>John</md:firstName>\n<md:eMail>john.a.augustine@noaa.gov</md:eMail>\n</md:PI>\n<md:caption>PoPoPoPo
+        [hPa]</md:caption>\n</md:matrixColumn>\n<md:keywords>\n<md:techKeyword type=\"autoGenerated\">citable</md:techKeyword>\n<md:techKeyword
+        type=\"autoGenerated\">author31651</md:techKeyword>\n<md:techKeyword type=\"autoGenerated\">campaign32853</md:techKeyword>\n<md:techKeyword
+        type=\"autoGenerated\">event2536892</md:techKeyword>\n<md:techKeyword type=\"autoGenerated\">geocode1599</md:techKeyword>\n<md:techKeyword
+        type=\"autoGenerated\">geocode1600</md:techKeyword>\n<md:techKeyword type=\"autoGenerated\">geocode1601</md:techKeyword>\n<md:techKeyword
+        type=\"autoGenerated\">geocode56349</md:techKeyword>\n<md:techKeyword type=\"autoGenerated\">geocode8128</md:techKeyword>\n<md:techKeyword
+        type=\"autoGenerated\">method359</md:techKeyword>\n<md:techKeyword type=\"autoGenerated\">method5792</md:techKeyword>\n<md:techKeyword
+        type=\"autoGenerated\">method5900</md:techKeyword>\n<md:techKeyword type=\"autoGenerated\">method6007</md:techKeyword>\n<md:techKeyword
+        type=\"autoGenerated\">method6461</md:techKeyword>\n<md:techKeyword type=\"autoGenerated\">param31460</md:techKeyword>\n<md:techKeyword
+        type=\"autoGenerated\">param45293</md:techKeyword>\n<md:techKeyword type=\"autoGenerated\">param45294</md:techKeyword>\n<md:techKeyword
+        type=\"autoGenerated\">param45298</md:techKeyword>\n<md:techKeyword type=\"autoGenerated\">param48823</md:techKeyword>\n<md:techKeyword
+        type=\"autoGenerated\">param55905</md:techKeyword>\n<md:techKeyword type=\"autoGenerated\">param55908</md:techKeyword>\n<md:techKeyword
+        type=\"autoGenerated\">param55961</md:techKeyword>\n<md:techKeyword type=\"autoGenerated\">param55962</md:techKeyword>\n<md:techKeyword
+        type=\"autoGenerated\">pi31651</md:techKeyword>\n<md:techKeyword type=\"autoGenerated\">project4094</md:techKeyword>\n<md:techKeyword
+        type=\"autoGenerated\">ref46889</md:techKeyword>\n<md:techKeyword type=\"autoGenerated\">sourceinst2887</md:techKeyword>\n<md:techKeyword
+        type=\"autoGenerated\">term19810</md:techKeyword>\n<md:techKeyword type=\"autoGenerated\">term26749</md:techKeyword>\n<md:techKeyword
+        type=\"autoGenerated\">topotype8</md:techKeyword>\n</md:keywords>\n<md:technicalInfo>\n<md:entry
+        key=\"xmlLastModified\" value=\"2018-10-29T17:51:23Z\"/>\n<md:entry key=\"filename\"
+        value=\"BOS_radiation_2005-12\"/>\n<md:entry key=\"mimeType\" value=\"text/tab-separated-values\"/>\n<md:entry
+        key=\"status\" value=\"published\"/>\n<md:entry key=\"status_num\" value=\"4\"/>\n<md:entry
+        key=\"DOIRegistryStatus\" value=\"registered\"/>\n<md:entry key=\"DOIRegistryStatus_num\"
+        value=\"4\"/>\n<md:entry key=\"loginOption\" value=\"access rights needed\"/>\n<md:entry
+        key=\"loginOption_num\" value=\"3\"/>\n</md:technicalInfo>\n</md:MetaData>","sf-idDataSet":717974,"elevationGeocode":"geocode56349","maxDateTime":"2005-12-31T23:57:00.000Z","xml-sitemap":"<url><loc>https://doi.pangaea.de/10.1594/PANGAEA.717974</loc><lastmod>2018-10-29</lastmod></url>","agg-topic":"Atmosphere","westBoundLongitude":-105.237,"agg-project":"BSRN","northBoundLatitude":40.125,"sp-dataStatus":4,"nDataPoints":133860,"sp-hidden":false,"agg-location":["North
+        America","Colorado, United States of America"],"internal-source":"standard","southBoundLatitude":40.125,"boost":1.0,"oaiSet":["citable","topicAtmosphere"],"agg-device":"Monitoring
+        station","maxElevation":2.0}},{"_index":"pangaea_v2","_type":"panmd","_id":"791357","_score":1.0,"_source":{"internal-datestamp":"2018-09-27T19:35:27.000Z","minElevation":197.97,"sf-authortitle":"Taira
+        Asahiko#Hill Ian Ashley#Shipboard Scientific Party $Shear strength of ODP
+        Hole 131-808B","meanPosition":{"lat":32.3514,"lon":134.9436},"techKeyword":["citable","author20111","author20358","author25082","author27272","author294","author325","author428","author53889","basis5","campaign103","event31151","geocode1","geocode1599","geocode1600","geocode1601","geocode8128","license101","method5059","method5238","param1570","param35","param45396","param790","pi20111","project3","ref183","ref22526","ref51119","term19457","term20641","topotype3"],"geocodes":["geocode1","geocode1599","geocode1600","geocode1601","geocode8128","event"],"sp-loginOption":1,"agg-campaign":"Leg131","agg-author":["Taira,
+        Asahiko","Hill, Ian Ashley","Shipboard Scientific Party"],"eastBoundLongitude":134.9436,"URI":"https://doi.org/10.1594/PANGAEA.791357","agg-pubYear":2005,"minDateTime":"1990-04-06T15:45:00.000Z","agg-geometry":"point","xml-thumb":"<md:SearchResult
+        xmlns:md=\"http://www.pangaea.de/MetaData\" version=\"2018-09-26\"><md:citation
+        id=\"dataset791357\"><md:author>Taira, A; Hill, IA; Shipboard Scientific Party</md:author><md:year>2005</md:year><md:title>Shear
+        strength of ODP Hole 131-808B</md:title><md:URI>https://doi.org/10.1594/PANGAEA.791357</md:URI><md:dateTime>2005-10-12T15:31:01</md:dateTime></md:citation><md:reference
+        id=\"ref22526\" relationType=\"Related to\" relationTypeId=\"12\"><md:author>ODP/TAMU</md:author><md:year>2005</md:year><md:title>JANUS
+        Database</md:title><md:source>Ocean Drilling Program, Texas A&amp;M University,
+        College Station TX 77845-9547, USA; (data copied from Janus 2005-02 to 2005-06)</md:source><md:URI>http://www-odp.tamu.edu/database/</md:URI></md:reference><md:reference
+        id=\"ref183\" relationType=\"Related to\" relationTypeId=\"12\"><md:author>Taira,
+        A; Hill, IA; Firth, JV et al.</md:author><md:year>1991</md:year><md:title>Proceedings
+        of the Ocean Drilling Program, 131 Initial Reports</md:title><md:source>Proceedings
+        of the Ocean Drilling Program, Ocean Drilling Program</md:source><md:URI>https://doi.org/10.2973/odp.proc.ir.131.1991</md:URI><md:volume>131</md:volume><md:pages>740
+        pp</md:pages></md:reference><md:extent><md:geographic>\n<md:westBoundLongitude>134.9436</md:westBoundLongitude>\n<md:eastBoundLongitude>134.9436</md:eastBoundLongitude>\n<md:southBoundLatitude>32.3514</md:southBoundLatitude>\n<md:northBoundLatitude>32.3514</md:northBoundLatitude>\n<md:meanLongitude>134.9436</md:meanLongitude>\n<md:meanLatitude>32.3514</md:meanLatitude>\n</md:geographic></md:extent><md:size
+        unit=\"data points\">48</md:size><md:technicalInfo>\n<md:entry key=\"xmlLastModified\"
+        value=\"2018-09-27T19:35:27Z\"/>\n<md:entry key=\"filename\" value=\"131-808B_shearstrength_tor\"/>\n<md:entry
+        key=\"mimeType\" value=\"text/tab-separated-values\"/>\n<md:entry key=\"status\"
+        value=\"published\"/>\n<md:entry key=\"status_num\" value=\"4\"/>\n<md:entry
+        key=\"DOIRegistryStatus\" value=\"registered\"/>\n<md:entry key=\"DOIRegistryStatus_num\"
+        value=\"4\"/>\n<md:entry key=\"loginOption\" value=\"unrestricted\"/>\n<md:entry
+        key=\"loginOption_num\" value=\"1\"/>\n</md:technicalInfo></md:SearchResult>","xml":"<md:MetaData
+        xmlns:md=\"http://www.pangaea.de/MetaData\" version=\"2018-09-26\">\n<md:citation
+        id=\"dataset791357\">\n<md:author id=\"dataset.author325\">\n<md:lastName>Taira</md:lastName>\n<md:firstName>Asahiko</md:firstName>\n</md:author>\n<md:author
+        id=\"dataset.author294\">\n<md:lastName>Hill</md:lastName>\n<md:firstName>Ian
+        Ashley</md:firstName>\n</md:author>\n<md:author id=\"dataset.author20111\">\n<md:lastName>Shipboard
+        Scientific Party</md:lastName>\n</md:author>\n<md:year>2005</md:year>\n<md:title>Shear
+        strength of ODP Hole 131-808B</md:title>\n<md:URI>https://doi.org/10.1594/PANGAEA.791357</md:URI>\n<md:dateTime>2005-10-12T15:31:01</md:dateTime>\n</md:citation>\n<md:reference
+        id=\"ref22526\" relationType=\"Related to\" relationTypeId=\"12\">\n<md:author
+        id=\"ref22526.author25082\">\n<md:lastName>ODP/TAMU</md:lastName>\n</md:author>\n<md:year>2005</md:year>\n<md:title>JANUS
+        Database</md:title>\n<md:source>Ocean Drilling Program, Texas A&amp;M University,
+        College Station TX 77845-9547, USA; (data copied from Janus 2005-02 to 2005-06)</md:source>\n<md:URI>http://www-odp.tamu.edu/database/</md:URI>\n</md:reference>\n<md:reference
+        id=\"ref183\" relationType=\"Related to\" relationTypeId=\"12\">\n<md:author
+        id=\"ref183.author53889\">\n<md:lastName>Taira</md:lastName>\n<md:firstName>A</md:firstName>\n</md:author>\n<md:author
+        id=\"ref183.author294\">\n<md:lastName>Hill</md:lastName>\n<md:firstName>Ian
+        Ashley</md:firstName>\n</md:author>\n<md:author id=\"ref183.author428\">\n<md:lastName>Firth</md:lastName>\n<md:firstName>John
+        V</md:firstName>\n<md:eMail>john_frith@odp.tamu.edu</md:eMail>\n</md:author>\n<md:author
+        id=\"ref183.author27272\">\n<md:lastName>et al.</md:lastName>\n</md:author>\n<md:year>1991</md:year>\n<md:title>Proceedings
+        of the Ocean Drilling Program, 131 Initial Reports</md:title>\n<md:source>Proceedings
+        of the Ocean Drilling Program, Ocean Drilling Program</md:source>\n<md:URI>https://doi.org/10.2973/odp.proc.ir.131.1991</md:URI>\n<md:volume>131</md:volume>\n<md:pages>740
+        pp</md:pages>\n</md:reference>\n<md:reference id=\"ref51119\" relationType=\"Further
+        details\" relationTypeId=\"17\">\n<md:author id=\"ref51119.author20358\">\n<md:lastName>Blum</md:lastName>\n<md:firstName>Peter</md:firstName>\n</md:author>\n<md:year>1997</md:year>\n<md:title>Strength</md:title>\n<md:source>Physical
+        properties handbook: a guide to the shipboard measurement of physical properties
+        of deep-sea cores</md:source>\n<md:URI>hdl:10013/epic.40058.d009</md:URI>\n</md:reference>\n<md:extent>\n<md:geographic>\n<md:westBoundLongitude>134.9436</md:westBoundLongitude>\n<md:eastBoundLongitude>134.9436</md:eastBoundLongitude>\n<md:southBoundLatitude>32.3514</md:southBoundLatitude>\n<md:northBoundLatitude>32.3514</md:northBoundLatitude>\n<md:meanLongitude>134.9436</md:meanLongitude>\n<md:meanLatitude>32.3514</md:meanLatitude>\n</md:geographic>\n<md:temporal>\n<md:minDateTime>1990-04-06T15:45:00</md:minDateTime>\n<md:maxDateTime>1990-04-16T04:00:00</md:maxDateTime>\n</md:temporal>\n<md:elevation
+        geocodeId=\"geocode1\" name=\"DEPTH, sediment/rock\" unit=\"m\">\n<md:min>197.97</md:min>\n<md:max>202.79</md:max>\n</md:elevation>\n<md:topoType
+        id=\"topotype3\">vertical profile</md:topoType>\n</md:extent>\n<md:project
+        id=\"project3\" type=\"International\">\n<md:label>ODP</md:label>\n<md:name>Ocean
+        Drilling Program</md:name>\n<md:URI>http://www-odp.tamu.edu/</md:URI>\n</md:project>\n<md:event
+        id=\"event31151\">\n<md:label>131-808B</md:label>\n<md:latitude>32.3514</md:latitude>\n<md:longitude>134.9436</md:longitude>\n<md:elevation>-4685.0</md:elevation>\n<md:dateTime>1990-04-06T15:45:00</md:dateTime>\n<md:dateTime2>1990-04-16T04:00:00</md:dateTime2>\n<md:attribute
+        attid=\"19162\" name=\"Penetration\">358.8 m</md:attribute>\n<md:attribute
+        attid=\"19163\" name=\"Recovery\">59.71 m</md:attribute>\n<md:location id=\"event31151.term20641\">\n<md:name>Philippine
+        Sea</md:name>\n</md:location>\n<md:campaign id=\"event31151.campaign103\">\n<md:name>Leg131</md:name>\n<md:URI>https://doi.org/10.2973/odp.proc.ir.131.1991</md:URI>\n</md:campaign>\n<md:basis
+        id=\"event31151.basis5\">\n<md:name>Joides Resolution</md:name>\n<md:URI>http://www-odp.tamu.edu/resolutn.html</md:URI>\n</md:basis>\n<md:device
+        id=\"event31151.term19457\">\n<md:name>Drilling/drill rig</md:name>\n<md:optionalName>DRILL</md:optionalName>\n</md:device>\n<md:comment>28
+        cores; 247.8 m cored; 0 m drilled; 24.1 % recovery</md:comment>\n</md:event>\n<md:size
+        unit=\"data points\">48</md:size>\n<md:license id=\"license101\">\n<md:label>CC-BY-3.0</md:label>\n<md:name>Creative
+        Commons Attribution 3.0 Unported</md:name>\n<md:URI>https://creativecommons.org/licenses/by/3.0/</md:URI>\n</md:license>\n<md:matrixColumn
+        col=\"0\" id=\"col0.ds11865501\" label=\"131-808B.72\" source=\"data\" type=\"string\">\n<md:parameter
+        id=\"col0.ds11865501.param790\">\n<md:name>Sample code/label</md:name>\n<md:shortName>Sample
+        label</md:shortName>\n</md:parameter>\n<md:method id=\"col0.ds11865501.method5059\">\n<md:name>ODP
+        sample designation</md:name>\n<md:URI>hdl:10013/epic.27914.d001</md:URI>\n</md:method>\n<md:PI
+        id=\"col0.ds11865501.pi20111\">\n<md:lastName>Shipboard Scientific Party</md:lastName>\n</md:PI>\n<md:caption>Sample
+        label</md:caption>\n</md:matrixColumn>\n<md:matrixColumn behaviour=\"1\" col=\"1\"
+        format=\"##0.000\" id=\"col1.ds1442093\" label=\"131-808B.a\" source=\"geocode\"
+        type=\"numeric\">\n<md:parameter id=\"col1.ds1442093.geocode1\">\n<md:name>DEPTH,
+        sediment/rock</md:name>\n<md:shortName>Depth</md:shortName>\n<md:unit>m</md:unit>\n</md:parameter>\n<md:comment>mbsf</md:comment>\n<md:caption>Depth
+        [m]</md:caption>\n</md:matrixColumn>\n<md:matrixColumn col=\"2\" format=\"##0.0\"
+        id=\"col2.ds11865503\" label=\"131-808B.73\" source=\"data\" type=\"numeric\">\n<md:parameter
+        id=\"col2.ds11865503.param35\">\n<md:name>Shear strength, primary</md:name>\n<md:shortName>Shear
+        str</md:shortName>\n<md:unit>kPa</md:unit>\n</md:parameter>\n<md:method id=\"col2.ds11865503.method5238\">\n<md:name>Torvane</md:name>\n</md:method>\n<md:PI
+        id=\"col2.ds11865503.pi20111\">\n<md:lastName>Shipboard Scientific Party</md:lastName>\n</md:PI>\n<md:caption>Shear
+        str [kPa]</md:caption>\n</md:matrixColumn>\n<md:matrixColumn col=\"3\" format=\"###0\"
+        id=\"col3.ds11865504\" label=\"131-808B.74\" source=\"data\" type=\"numeric\">\n<md:parameter
+        id=\"col3.ds11865504.param45396\">\n<md:name>Range</md:name>\n<md:shortName>Range</md:shortName>\n</md:parameter>\n<md:method
+        id=\"col3.ds11865504.method5238\">\n<md:name>Torvane</md:name>\n</md:method>\n<md:PI
+        id=\"col3.ds11865504.pi20111\">\n<md:lastName>Shipboard Scientific Party</md:lastName>\n</md:PI>\n<md:caption>Range</md:caption>\n</md:matrixColumn>\n<md:matrixColumn
+        col=\"4\" id=\"col4.ds11865505\" label=\"131-808B.75\" source=\"data\" type=\"string\">\n<md:parameter
+        id=\"col4.ds11865505.param1570\">\n<md:name>Comment</md:name>\n<md:shortName>Comment</md:shortName>\n</md:parameter>\n<md:PI
+        id=\"col4.ds11865505.pi20111\">\n<md:lastName>Shipboard Scientific Party</md:lastName>\n</md:PI>\n<md:caption>Comment</md:caption>\n</md:matrixColumn>\n<md:keywords>\n<md:techKeyword
+        type=\"autoGenerated\">citable</md:techKeyword>\n<md:techKeyword type=\"autoGenerated\">author20111</md:techKeyword>\n<md:techKeyword
+        type=\"autoGenerated\">author20358</md:techKeyword>\n<md:techKeyword type=\"autoGenerated\">author25082</md:techKeyword>\n<md:techKeyword
+        type=\"autoGenerated\">author27272</md:techKeyword>\n<md:techKeyword type=\"autoGenerated\">author294</md:techKeyword>\n<md:techKeyword
+        type=\"autoGenerated\">author325</md:techKeyword>\n<md:techKeyword type=\"autoGenerated\">author428</md:techKeyword>\n<md:techKeyword
+        type=\"autoGenerated\">author53889</md:techKeyword>\n<md:techKeyword type=\"autoGenerated\">basis5</md:techKeyword>\n<md:techKeyword
+        type=\"autoGenerated\">campaign103</md:techKeyword>\n<md:techKeyword type=\"autoGenerated\">event31151</md:techKeyword>\n<md:techKeyword
+        type=\"autoGenerated\">geocode1</md:techKeyword>\n<md:techKeyword type=\"autoGenerated\">geocode1599</md:techKeyword>\n<md:techKeyword
+        type=\"autoGenerated\">geocode1600</md:techKeyword>\n<md:techKeyword type=\"autoGenerated\">geocode1601</md:techKeyword>\n<md:techKeyword
+        type=\"autoGenerated\">geocode8128</md:techKeyword>\n<md:techKeyword type=\"autoGenerated\">license101</md:techKeyword>\n<md:techKeyword
+        type=\"autoGenerated\">method5059</md:techKeyword>\n<md:techKeyword type=\"autoGenerated\">method5238</md:techKeyword>\n<md:techKeyword
+        type=\"autoGenerated\">param1570</md:techKeyword>\n<md:techKeyword type=\"autoGenerated\">param35</md:techKeyword>\n<md:techKeyword
+        type=\"autoGenerated\">param45396</md:techKeyword>\n<md:techKeyword type=\"autoGenerated\">param790</md:techKeyword>\n<md:techKeyword
+        type=\"autoGenerated\">pi20111</md:techKeyword>\n<md:techKeyword type=\"autoGenerated\">project3</md:techKeyword>\n<md:techKeyword
+        type=\"autoGenerated\">ref183</md:techKeyword>\n<md:techKeyword type=\"autoGenerated\">ref22526</md:techKeyword>\n<md:techKeyword
+        type=\"autoGenerated\">ref51119</md:techKeyword>\n<md:techKeyword type=\"autoGenerated\">term19457</md:techKeyword>\n<md:techKeyword
+        type=\"autoGenerated\">term20641</md:techKeyword>\n<md:techKeyword type=\"autoGenerated\">topotype3</md:techKeyword>\n</md:keywords>\n<md:technicalInfo>\n<md:entry
+        key=\"xmlLastModified\" value=\"2018-09-27T19:35:27Z\"/>\n<md:entry key=\"filename\"
+        value=\"131-808B_shearstrength_tor\"/>\n<md:entry key=\"mimeType\" value=\"text/tab-separated-values\"/>\n<md:entry
+        key=\"status\" value=\"published\"/>\n<md:entry key=\"status_num\" value=\"4\"/>\n<md:entry
+        key=\"DOIRegistryStatus\" value=\"registered\"/>\n<md:entry key=\"DOIRegistryStatus_num\"
+        value=\"4\"/>\n<md:entry key=\"loginOption\" value=\"unrestricted\"/>\n<md:entry
+        key=\"loginOption_num\" value=\"1\"/>\n</md:technicalInfo>\n</md:MetaData>","sf-idDataSet":791357,"elevationGeocode":"geocode1","maxDateTime":"1990-04-16T04:00:00.000Z","xml-sitemap":"<url><loc>https://doi.pangaea.de/10.1594/PANGAEA.791357</loc><lastmod>2018-09-27</lastmod></url>","westBoundLongitude":134.9436,"agg-project":"ODP","northBoundLatitude":32.3514,"sp-dataStatus":4,"nDataPoints":48,"sp-hidden":false,"agg-location":["Philippine
+        Sea","North Pacific Ocean","Pacific Ocean"],"internal-source":"standard","agg-basis":"Joides
+        Resolution","southBoundLatitude":32.3514,"boost":1.0,"oaiSet":"citable","agg-device":"Drilling/drill
+        rig","maxElevation":202.79}}]}}'
+  recorded_at: 2019-08-13 21:56:33 GMT
+  recorded_with: vcr/0.2.6, webmockr/0.4.0

@@ -29,7 +29,8 @@ Imports:
     png
 Suggests:
     knitr,
-    testthat
+    testthat,
+    vcr
 RoxygenNote: 6.1.1
 X-schema.org-applicationCategory: Biodiversity
 X-schema.org-keywords: Pangaea, environmental science, earth science, archive, paleontology, ecology, chemistry, atmosphere

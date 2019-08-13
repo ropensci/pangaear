@@ -1,0 +1,991 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://www.pangaea.de/advanced/search.php?count=10&offset=0&q=water
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.54.0 r-curl/4.0 crul/0.8.4
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      cache-control: private, max-age=10800, pre-check=10800
+      content-encoding: gzip
+      content-type: application/json; charset=UTF-8
+      date: Tue, 13 Aug 2019 21:53:52 GMT
+      last-modified: Fri, 15 Apr 2016 11:55:50 GMT
+      server: PANGAEA/2.0
+      status: 'HTTP/2 200 '
+      strict-transport-security: max-age=31536000
+      vary:
+      - Accept-Encoding
+      - Cookie, X-PanLoginID
+      x-content-type-options: nosniff
+      x-frame-options: SAMEORIGIN
+      x-ua-compatible: IE=Edge
+    body:
+      encoding: UTF-8
+      string: '{"results":[{"URI":"doi:10.1594\/PANGAEA.892812","score":21.095936,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.892812\"
+        target=\"_self\" class=\"dataset-link\"><strong>Quade, M; Brüggemann, N; Graf,
+        A et al. (2018):<\/strong> Data for kinetic isotopic fractionation of water
+        during bare soil evaporation<\/a><\/div><table class=\"result\" summary=\"Dataset
+        reference and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"title\">Supplement
+        to:<\/td><td class=\"content\"><strong>Quade, M; Brüggemann, N; Graf, A et
+        al. (2018):<\/strong> Investigation of Kinetic Isotopic Fractionation of Water
+        during Bare Soil Evaporation. <em>Water Resources Research<\/em><\/td><\/tr><tr><td
+        class=\"title\">Size:<\/td><td class=\"content\">5 datasets<\/td><\/tr><\/table><div
+        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.892812\"
+        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.892812<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 21.1<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.895383","score":19.425049,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.895383\"
+        target=\"_self\" class=\"dataset-link\"><strong>Korman, B (2018):<\/strong>
+        Lake water analysis from the Rappbode dam in Saxony-Anhalt during the Inland
+        Water Remote Sensing Validation Campaign 2017<\/a><\/div><table class=\"result\"
+        summary=\"Dataset reference and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td
+        class=\"title\">Size:<\/td><td class=\"content\">1 datasets<\/td><\/tr><\/table><div
+        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.895383\"
+        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.895383<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 19.43<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.896486","score":19.14632,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.896486\"
+        target=\"_self\" class=\"dataset-link\"><strong>Kulla, BS; Ritter, C (2018):<\/strong>
+        Water vapour mixing ratio over Ny-Alesund from LiDAR measurements 2015-2018<\/a><\/div><table
+        class=\"result\" summary=\"Dataset reference and size\" cellspacing=\"0\"
+        cellpadding=\"0\"><tr><td class=\"title\">Supplement to:<\/td><td class=\"content\"><strong>Kulla,
+        BS; Ritter, C (2019):<\/strong> Water vapor calibration: Using a Raman lidar
+        and radiosoundings to obtain highly resolved water vapor profiles. <em>Remote
+        Sensing<\/em><\/td><\/tr><tr><td class=\"title\">Size:<\/td><td class=\"content\">5
+        datasets<\/td><\/tr><\/table><div class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.896486\"
+        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.896486<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 19.15<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.862525","score":18.622866,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.862525\"
+        target=\"_self\" class=\"dataset-link\"><strong>Wang, X; Zhang, K; Wu, S et
+        al. (2016):<\/strong> Long-term global GPS-derived precipitable water vapor
+        data set<\/a><\/div><table class=\"result\" summary=\"Dataset reference and
+        size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"title\">Supplement
+        to:<\/td><td class=\"content\"><strong>Wang, X; Zhang, K; Wu, S et al. (2016):<\/strong>
+        Water vapor-weighted mean temperature and its impact on the determination
+        of precipitable water vapor and its linear trend. <em>Journal of Geophysical
+        Research-Atmospheres<\/em><\/td><\/tr><tr><td class=\"title\">Size:<\/td><td
+        class=\"content\">372 datasets<\/td><\/tr><\/table><div class=\"datasetid\"><a
+        href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.862525\" target=\"_self\"
+        class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.862525<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 18.62<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.894908","score":18.485245,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.894908\"
+        target=\"_self\" class=\"dataset-link\"><strong>Martinez, A; Awad, AM; Herkert,
+        NJ et al. (2018):<\/strong> PCB congener data of gas-phase, freely-dissolved
+        water, air-water fugacity ratios and air-water fluxes in Indiana Harbor and
+        Ship Canal, IN, USA<\/a><\/div><table class=\"result\" summary=\"Dataset reference
+        and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"title\">Supplement
+        to:<\/td><td class=\"content\"><strong>Martinez, A; Awad, AM; Herkert, NJ
+        et al. (2019):<\/strong> Determination of PCB fluxes from Indiana Harbor and
+        Ship Canal using dual-deployed air and water passive samplers. <em>Environmental
+        Pollution<\/em><\/td><\/tr><tr><td class=\"title\">Size:<\/td><td class=\"content\">15
+        datasets<\/td><\/tr><\/table><div class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.894908\"
+        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.894908<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 18.49<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.881731","score":18.367435,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.881731\"
+        target=\"_self\" class=\"dataset-link\"><strong>Makarieva, O; Nesterova, N;
+        Lebedeva, L et al. (2017):<\/strong> Water-balance and hydrology database
+        for a mountainous permafrost watershed in the up-streams of the Kolyma River,
+        Russia - the Kolyma Water-Balance Station, 1948-1997<\/a><\/div><table class=\"result\"
+        summary=\"Dataset reference and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td
+        class=\"title\">Supplement to:<\/td><td class=\"content\"><strong>Makarieva,
+        O; Nesterova, N; Lebedeva, L et al. (2018):<\/strong> Water balance and hydrology
+        research in a mountainous permafrost watershed in upland streams of the Kolyma
+        River, Russia: a database from the Kolyma Water-Balance Station, 1948-1997.
+        <em>Earth System Science Data<\/em><\/td><\/tr><tr><td class=\"title\">Size:<\/td><td
+        class=\"content\">12 datasets<\/td><\/tr><\/table><div class=\"datasetid\"><a
+        href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.881731\" target=\"_self\"
+        class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.881731<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 18.37<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.897545","score":18.214436,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.897545\"
+        target=\"_self\" class=\"dataset-link\"><strong>Boesen, AC; Martinez, A; Hornbuckle,
+        KC (2019):<\/strong> PCB congener data of gas-phase, dissolved water, air-water
+        fluxes in southern Lake Michigan, 2010<\/a><\/div><table class=\"result\"
+        summary=\"Dataset reference and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td
+        class=\"title\">Supplement to:<\/td><td class=\"content\"><strong>Boesen,
+        AC; Martinez, A; Hornbuckle, KC (2019):<\/strong> Air-water PCB fluxes from
+        southwestern Lake Michigan revisited. <em>Environmental Science and Pollution
+        Research<\/em><\/td><\/tr><tr><td class=\"title\">Size:<\/td><td class=\"content\">9
+        datasets<\/td><\/tr><\/table><div class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.897545\"
+        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.897545<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 18.21<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.843740","score":18.091997,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.843740\"
+        target=\"_self\" class=\"dataset-link\"><strong>Holinde, L; Badewien, TH;
+        Freund, JA et al. (2015):<\/strong> Pressure and processed water levels from
+        the Time Series Station Spiekeroog, 2005-2011<\/a><\/div><table class=\"result\"
+        summary=\"Dataset reference and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td
+        class=\"title\">Supplement to:<\/td><td class=\"content\"><strong>Holinde,
+        L; Badewien, TH; Freund, JA et al. (2015):<\/strong> Processing of water level
+        derived from water pressure data at the Time Series Station Spiekeroog. <em>Earth
+        System Science Data<\/em><\/td><\/tr><tr><td class=\"title\">Size:<\/td><td
+        class=\"content\">7 datasets<\/td><\/tr><\/table><div class=\"datasetid\"><a
+        href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.843740\" target=\"_self\"
+        class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.843740<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 18.09<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.824826","score":17.945074,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.824826\"
+        target=\"_self\" class=\"dataset-link\"><strong>Macke, A; Zoll, Y; Wassmann,
+        A et al. (2013):<\/strong> Continuous liquid water path (LWP) and integrated
+        water vapour (IWV) measurements during POLARSTERN cruise ANT-XXIV\/1<\/a><\/div><table
+        class=\"result\" summary=\"Dataset reference and size\" cellspacing=\"0\"
+        cellpadding=\"0\"><tr><td class=\"title\">Related to:<\/td><td class=\"content\"><strong>Macke,
+        A; Kalisch, J (2013):<\/strong> Total Sky Imager observations and continuous
+        radiation measurements during POLARSTERN cruise ANT-XXVI\/1 with links to
+        images. <em>Leibniz-Institut für Troposphärenforschung e.V., Leipzig<\/em><\/td><\/tr><tr><td
+        class=\"title\">Size:<\/td><td class=\"content\">24 datasets<\/td><\/tr><\/table><div
+        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.824826\"
+        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.824826<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 17.95<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.823971","score":17.945074,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.823971\"
+        target=\"_self\" class=\"dataset-link\"><strong>Macke, A; Zoll, Y; Pospichal,
+        B (2013):<\/strong> Continuous liquid water path (LWP) and integrated water
+        vapour (IWV) measurements during POLARSTERN cruise ANT-XXVI\/1<\/a><\/div><table
+        class=\"result\" summary=\"Dataset reference and size\" cellspacing=\"0\"
+        cellpadding=\"0\"><tr><td class=\"title\">Related to:<\/td><td class=\"content\"><strong>Macke,
+        A; Kalisch, J (2013):<\/strong> Total Sky Imager observations and continuous
+        radiation measurements during POLARSTERN cruise ANT-XXVI\/1 with links to
+        images. <em>Leibniz-Institut für Troposphärenforschung e.V., Leipzig<\/em><\/td><\/tr><tr><td
+        class=\"title\">Size:<\/td><td class=\"content\">37 datasets<\/td><\/tr><\/table><div
+        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.823971\"
+        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.823971<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 17.95<\/span><\/div><\/li>"}],"facets":null,"maxScore":21.095936,"offset":0,"queryIdentifier":"6ff559e9-48b9-3969-bff9-c4481a2005ad","session":"o3magprf6vnanvefq7v6fvqtq3","timeInDatabase":26,"totalCount":176006,"htmlSummary":"<strong>176006
+        datasets<\/strong> found on search for <strong title=\"Query: &raquo;water&laquo;\">&raquo;water&laquo;<\/strong>","htmlSnippetRSS":"<link
+        rel=\"alternate\" title=\"PANGAEA latest datasets about &quot;water&quot;\"
+        type=\"application\/rss+xml\" href=\"\/tools\/latest-datasets.rss?q=water&amp;count=10\">"}'
+  recorded_at: 2019-08-13 21:53:54 GMT
+  recorded_with: vcr/0.2.6, webmockr/0.4.0
+- request:
+    method: get
+    uri: https://www.pangaea.de/advanced/search.php?count=2&offset=0&q=water
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.54.0 r-curl/4.0 crul/0.8.4
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      cache-control: private, max-age=10800, pre-check=10800
+      content-encoding: gzip
+      content-type: application/json; charset=UTF-8
+      date: Tue, 13 Aug 2019 21:53:52 GMT
+      last-modified: Fri, 15 Apr 2016 11:55:50 GMT
+      server: PANGAEA/2.0
+      status: 'HTTP/2 200 '
+      strict-transport-security: max-age=31536000
+      vary:
+      - Accept-Encoding
+      - Cookie, X-PanLoginID
+      x-content-type-options: nosniff
+      x-frame-options: SAMEORIGIN
+      x-ua-compatible: IE=Edge
+    body:
+      encoding: UTF-8
+      string: '{"results":[{"URI":"doi:10.1594\/PANGAEA.892812","score":21.095936,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.892812\"
+        target=\"_self\" class=\"dataset-link\"><strong>Quade, M; Brüggemann, N; Graf,
+        A et al. (2018):<\/strong> Data for kinetic isotopic fractionation of water
+        during bare soil evaporation<\/a><\/div><table class=\"result\" summary=\"Dataset
+        reference and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"title\">Supplement
+        to:<\/td><td class=\"content\"><strong>Quade, M; Brüggemann, N; Graf, A et
+        al. (2018):<\/strong> Investigation of Kinetic Isotopic Fractionation of Water
+        during Bare Soil Evaporation. <em>Water Resources Research<\/em><\/td><\/tr><tr><td
+        class=\"title\">Size:<\/td><td class=\"content\">5 datasets<\/td><\/tr><\/table><div
+        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.892812\"
+        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.892812<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 21.1<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.895383","score":19.425049,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.895383\"
+        target=\"_self\" class=\"dataset-link\"><strong>Korman, B (2018):<\/strong>
+        Lake water analysis from the Rappbode dam in Saxony-Anhalt during the Inland
+        Water Remote Sensing Validation Campaign 2017<\/a><\/div><table class=\"result\"
+        summary=\"Dataset reference and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td
+        class=\"title\">Size:<\/td><td class=\"content\">1 datasets<\/td><\/tr><\/table><div
+        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.895383\"
+        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.895383<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 19.43<\/span><\/div><\/li>"}],"facets":null,"maxScore":21.095936,"offset":0,"queryIdentifier":"6ff559e9-48b9-3969-bff9-c4481a2005ad","session":"ig3shgdhg0v8e0lccilhpo1jd2","timeInDatabase":19,"totalCount":176006,"htmlSummary":"<strong>176006
+        datasets<\/strong> found on search for <strong title=\"Query: &raquo;water&laquo;\">&raquo;water&laquo;<\/strong>","htmlSnippetRSS":"<link
+        rel=\"alternate\" title=\"PANGAEA latest datasets about &quot;water&quot;\"
+        type=\"application\/rss+xml\" href=\"\/tools\/latest-datasets.rss?q=water&amp;count=2\">"}'
+  recorded_at: 2019-08-13 21:53:54 GMT
+  recorded_with: vcr/0.2.6, webmockr/0.4.0
+- request:
+    method: get
+    uri: https://www.pangaea.de/advanced/search.php?t=Oceans&count=10&offset=0&q=water
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.54.0 r-curl/4.0 crul/0.8.4
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      cache-control: private, max-age=10800, pre-check=10800
+      content-encoding: gzip
+      content-type: application/json; charset=UTF-8
+      date: Tue, 13 Aug 2019 21:53:53 GMT
+      last-modified: Fri, 15 Apr 2016 11:55:50 GMT
+      server: PANGAEA/2.0
+      status: 'HTTP/2 200 '
+      strict-transport-security: max-age=31536000
+      vary:
+      - Accept-Encoding
+      - Cookie, X-PanLoginID
+      x-content-type-options: nosniff
+      x-frame-options: SAMEORIGIN
+      x-ua-compatible: IE=Edge
+    body:
+      encoding: UTF-8
+      string: '{"results":[{"URI":"doi:10.1594\/PANGAEA.882613","score":17.035387,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.882613\"
+        target=\"_self\" class=\"dataset-link\"><strong>Antico, A; Aguiar, RO; Amsler,
+        ML (2017):<\/strong> Paraná River hydrometric data from Rosario City, Argentina:
+        1875 to 2017<\/a><\/div><table class=\"result\" summary=\"Dataset reference
+        and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"title\">Supplement
+        to:<\/td><td class=\"content\"><strong>Antico, A; Aguiar, RO; Amsler, ML (2018):<\/strong>
+        Hydrometric data rescue in the Paraná River Basin. <em>Water Resources Research<\/em><\/td><\/tr><tr><td
+        class=\"title\">Size:<\/td><td class=\"content\">2 datasets<\/td><\/tr><\/table><div
+        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.882613\"
+        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.882613<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 17.04<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.873075","score":16.982094,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.873075\"
+        target=\"_self\" class=\"dataset-link\"><strong>Anand, P; Jung, S (2017):<\/strong>
+        Geochemistry of a sediment record from intermediate water off Somalia<\/a><\/div><table
+        class=\"result\" summary=\"Dataset reference and size\" cellspacing=\"0\"
+        cellpadding=\"0\"><tr><td class=\"title\">Supplement to:<\/td><td class=\"content\"><strong>Anand,
+        P; Jung, S:<\/strong> Remarkably warm and saline glacial intermediate water
+        off Somalia. <em>Paleoceanography<\/em><\/td><\/tr><tr><td class=\"title\">Size:<\/td><td
+        class=\"content\">2 datasets<\/td><\/tr><\/table><div class=\"datasetid\"><a
+        href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.873075\" target=\"_self\"
+        class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.873075<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 16.98<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.773526","score":16.539062,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.773526\"
+        target=\"_self\" class=\"dataset-link\"><strong>De Mol, L; Van Rooij, D; Pirlet,
+        H et al. (2011):<\/strong> Sedimentology and age determination of sediment
+        cores from the Penmarch''h and Guilvinec Canyons (Bay of Biscay)<\/a><\/div><table
+        class=\"result\" summary=\"Dataset reference and size\" cellspacing=\"0\"
+        cellpadding=\"0\"><tr><td class=\"title\">Supplement to:<\/td><td class=\"content\"><strong>De
+        Mol, L; Van Rooij, D; Pirlet, H et al. (2011):<\/strong> Cold-water coral
+        habitats in the Penmarc''h and Guilvinec Canyons (Bay of Biscay): Deep-water
+        versus shallow-water settings. <em>Marine Geology<\/em><\/td><\/tr><tr><td
+        class=\"title\">Size:<\/td><td class=\"content\">6 datasets<\/td><\/tr><\/table><div
+        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.773526\"
+        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.773526<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 16.54<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.857390","score":16.246155,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.857390\"
+        target=\"_self\" class=\"dataset-link\"><strong>Martin, PA; Lea, DW (1998):<\/strong>
+        Trace elements in benthic foraminifera of sediment core V30-49<\/a><\/div><table
+        class=\"result\" summary=\"Dataset reference and size\" cellspacing=\"0\"
+        cellpadding=\"0\"><tr><td class=\"title\">Supplement to:<\/td><td class=\"content\"><strong>Martin,
+        PA; Lea, DW (1998):<\/strong> Comparison of water mass changes in the deep
+        tropical Atlantic derived from Cd\/Ca and carbon isotope records: Implications
+        for changing Ba composition of Deep Atlantic Water Masses. <em>Paleoceanography<\/em><\/td><\/tr><tr><td
+        class=\"title\">Size:<\/td><td class=\"content\">2 datasets<\/td><\/tr><\/table><div
+        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.857390\"
+        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.857390<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 16.25<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.738279","score":16.170635,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.738279\"
+        target=\"_self\" class=\"dataset-link\"><strong>Kiriakoulakis, K; Fisher,
+        E; Wolff, GA et al. (2005):<\/strong> Lipids and nitrogen isotopes of deep-water
+        corals<\/a><\/div><table class=\"result\" summary=\"Dataset reference and
+        size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"title\">Supplement
+        to:<\/td><td class=\"content\"><strong>Kiriakoulakis, K; Fisher, E; Wolff,
+        GA et al. (2005):<\/strong> Lipids and nitrogen isotopes of two deep-water
+        corals from the North-East Atlantic: initial results and implications for
+        their nutrition. <em>In: Freiwald, A &amp; Roberts, JM (eds.), 2005, Cold-water
+        Corals and Ecosystems, Springer-Verlag, Berlin, Heidelberg<\/em><\/td><\/tr><tr><td
+        class=\"title\">Size:<\/td><td class=\"content\">4 datasets<\/td><\/tr><\/table><div
+        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.738279\"
+        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.738279<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 16.17<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.876180","score":15.487663,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.876180\"
+        target=\"_self\" class=\"dataset-link\"><strong>Knudson, KP; Ravelo, AC (2017):<\/strong>
+        Evidence for enhanced North Pacific Intermediate Water in the Bering Sea during
+        extreme glacials over the past 1.2 Ma from records of stable isotopes analyzed
+        at IODP Site 323-U1342 Holes A, C, and D<\/a><\/div><table class=\"result\"
+        summary=\"Dataset reference and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td
+        class=\"title\">Supplement to:<\/td><td class=\"content\"><strong>Knudson,
+        KP; Ravelo, AC (2015):<\/strong> North Pacific Intermediate Water circulation
+        enhanced by the closure of the Bering Strait. <em>Paleoceanography<\/em><\/td><\/tr><tr><td
+        class=\"title\">Related to:<\/td><td class=\"content\"><strong>Knudson, KP;
+        Ravelo, AC (2015):<\/strong> Enhanced subarctic Pacific stratification and
+        nutrient utilization during glacials over the last 1.2 Myr. <em>Geophysical
+        Research Letters<\/em><\/td><\/tr><tr><td class=\"title\">Size:<\/td><td class=\"content\">6
+        datasets<\/td><\/tr><\/table><div class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.876180\"
+        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.876180<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 15.49<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.730373","score":15.336869,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.730373\"
+        target=\"_self\" class=\"dataset-link\"><strong>van Donk, J; Mathieu, G (1969):<\/strong>
+        Stable oxygen and carbon isotopic composition of foraminifera and sea water
+        from the Arctic Ocean<\/a><\/div><table class=\"result\" summary=\"Dataset
+        reference and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"title\">Supplement
+        to:<\/td><td class=\"content\"><strong>van Donk, J; Mathieu, G (1969):<\/strong>
+        Oxygen isotope composition of foraminifera and water samples from the Arctic
+        Ocean. <em>Journal of Geophysical Research: Oceans<\/em><\/td><\/tr><tr><td
+        class=\"title\">Size:<\/td><td class=\"content\">2 datasets<\/td><\/tr><\/table><div
+        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.730373\"
+        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.730373<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 15.34<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.884833","score":15.230637,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.884833\"
+        target=\"_self\" class=\"dataset-link\"><strong>Matos, L; Wienberg, C; Titschack,
+        J et al. (2017):<\/strong> Sediment core studies at the Campeche cold-water
+        coral province, southern Gulf of Mexico<\/a><\/div><table class=\"result\"
+        summary=\"Dataset reference and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td
+        class=\"title\">Supplement to:<\/td><td class=\"content\"><strong>Matos, L;
+        Wienberg, C; Titschack, J et al. (2017):<\/strong> Coral mound development
+        at the Campeche cold-water coral province, southern Gulf of Mexico: Implications
+        of Antarctic Intermediate Water increased influence during interglacials.
+        <em>Marine Geology<\/em><\/td><\/tr><tr><td class=\"title\">Size:<\/td><td
+        class=\"content\">5 datasets<\/td><\/tr><\/table><div class=\"datasetid\"><a
+        href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.884833\" target=\"_self\"
+        class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.884833<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 15.23<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.762116","score":15.17571,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.762116\"
+        target=\"_self\" class=\"dataset-link\"><strong>Dmitriev, FA; Gudkov, AN (1987):<\/strong>
+        Concentrations of aliphatic hydrocarbons and hexachlorocyclohexane isomers
+        in under-ice water, snow, and sea ice from the Greenland Sea<\/a><\/div><table
+        class=\"result\" summary=\"Dataset reference and size\" cellspacing=\"0\"
+        cellpadding=\"0\"><tr><td class=\"title\">Supplement to:<\/td><td class=\"content\"><strong>Dmitriev,
+        FA; Gudkov, AN (1987):<\/strong> Aliphatic hydrocarbons and isomers of hexachlorocyclohexane
+        in specimens of water, ice and snow from the Greenland Sea. <em>Oceanology<\/em><\/td><\/tr><tr><td
+        class=\"title\">Size:<\/td><td class=\"content\">2 datasets<\/td><\/tr><\/table><div
+        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.762116\"
+        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.762116<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 15.18<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.548415","score":15.059639,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.548415\"
+        target=\"_self\" class=\"dataset-link\"><strong>Hartmann, M; Müller, PJ; Suess,
+        E et al. (1973):<\/strong> Geochemistry of recent marine sediments, interstitial
+        water, and sea water from the West African continental margin<\/a><\/div><table
+        class=\"result\" summary=\"Dataset reference and size\" cellspacing=\"0\"
+        cellpadding=\"0\"><tr><td class=\"title\">Supplement to:<\/td><td class=\"content\"><strong>Hartmann,
+        M; Müller, PJ; Suess, E et al. (1973):<\/strong> Oxidation of organic matter
+        in recent marine sediments. <em>Meteor Forschungsergebnisse, Deutsche Forschungsgemeinschaft,
+        Reihe C Geologie und Geophysik, Gebrüder Bornträger, Berlin, Stuttgart<\/em><\/td><\/tr><tr><td
+        class=\"title\">Size:<\/td><td class=\"content\">5 datasets<\/td><\/tr><\/table><div
+        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.548415\"
+        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.548415<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 15.06<\/span><\/div><\/li>"}],"facets":null,"maxScore":17.035387,"offset":0,"queryIdentifier":"49ace6ec-0772-3dc0-850d-64fb3903cd65","session":"60gq4ghgk86kvl99svkoil3q05","timeInDatabase":31,"totalCount":84576,"htmlSummary":"<strong>84576
+        datasets<\/strong> found on search for <strong title=\"Query: &raquo;water&laquo;\">&raquo;water&laquo;<\/strong>
+        in topic <strong>Oceans<\/strong>","htmlSnippetRSS":"<link rel=\"alternate\"
+        title=\"PANGAEA latest datasets about &quot;water&quot; in topic Oceans\"
+        type=\"application\/rss+xml\" href=\"\/tools\/latest-datasets.rss?t=Oceans&amp;q=water&amp;count=10\">"}'
+  recorded_at: 2019-08-13 21:53:54 GMT
+  recorded_with: vcr/0.2.6, webmockr/0.4.0
+- request:
+    method: get
+    uri: https://www.pangaea.de/advanced/search.php?count=10&offset=0&q=water&mindate=2013-06-01&maxdate=2013-07-01
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.54.0 r-curl/4.0 crul/0.8.4
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      cache-control: private, max-age=10800, pre-check=10800
+      content-encoding: gzip
+      content-type: application/json; charset=UTF-8
+      date: Tue, 13 Aug 2019 21:53:53 GMT
+      last-modified: Fri, 15 Apr 2016 11:55:50 GMT
+      server: PANGAEA/2.0
+      status: 'HTTP/2 200 '
+      strict-transport-security: max-age=31536000
+      vary:
+      - Accept-Encoding
+      - Cookie, X-PanLoginID
+      x-content-type-options: nosniff
+      x-frame-options: SAMEORIGIN
+      x-ua-compatible: IE=Edge
+    body:
+      encoding: UTF-8
+      string: '{"results":[{"URI":"doi:10.1594\/PANGAEA.862525","score":18.622866,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.862525\"
+        target=\"_self\" class=\"dataset-link\"><strong>Wang, X; Zhang, K; Wu, S et
+        al. (2016):<\/strong> Long-term global GPS-derived precipitable water vapor
+        data set<\/a><\/div><table class=\"result\" summary=\"Dataset reference and
+        size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"title\">Supplement
+        to:<\/td><td class=\"content\"><strong>Wang, X; Zhang, K; Wu, S et al. (2016):<\/strong>
+        Water vapor-weighted mean temperature and its impact on the determination
+        of precipitable water vapor and its linear trend. <em>Journal of Geophysical
+        Research-Atmospheres<\/em><\/td><\/tr><tr><td class=\"title\">Size:<\/td><td
+        class=\"content\">372 datasets<\/td><\/tr><\/table><div class=\"datasetid\"><a
+        href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.862525\" target=\"_self\"
+        class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.862525<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 18.62<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.882613","score":17.035387,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.882613\"
+        target=\"_self\" class=\"dataset-link\"><strong>Antico, A; Aguiar, RO; Amsler,
+        ML (2017):<\/strong> Paraná River hydrometric data from Rosario City, Argentina:
+        1875 to 2017<\/a><\/div><table class=\"result\" summary=\"Dataset reference
+        and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"title\">Supplement
+        to:<\/td><td class=\"content\"><strong>Antico, A; Aguiar, RO; Amsler, ML (2018):<\/strong>
+        Hydrometric data rescue in the Paraná River Basin. <em>Water Resources Research<\/em><\/td><\/tr><tr><td
+        class=\"title\">Size:<\/td><td class=\"content\">2 datasets<\/td><\/tr><\/table><div
+        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.882613\"
+        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.882613<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 17.04<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.859527","score":15.868127,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.859527\"
+        target=\"_self\" class=\"dataset-link\"><strong>Martellucci, R; Pierattini,
+        A (2016):<\/strong> Physical water column observations during summer breeze
+        winds<\/a><\/div><table class=\"result\" summary=\"Dataset reference and size\"
+        cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"title\">Related to:<\/td><td
+        class=\"content\"><strong>Martellucci, R; Paladini de Mendoza, F; Piazzolla,
+        D et al. (2013):<\/strong> High resolution coastal monitoring during sea breeze
+        events. <em>SISC First annual conference Lecce, Italy, 23-24 Settember 2013<\/em><br\/><strong>Martellucci,
+        R; Pierattini, A; Madonia, A et al. (2014):<\/strong> Phytoplankton biomass
+        distribution in water column and sediments in the northern Latium coastal
+        area. <em>7th EuroGOOS Conference, Lisbon, Portugal, 28-30 October 2014<\/em><br\/><strong>Martellucci,
+        R; Pierattini, A; Paladini de Mendoza, F et al.:<\/strong> Physical and biological
+        water column observations during summer breeze winds.<\/td><\/tr><tr><td class=\"title\">Size:<\/td><td
+        class=\"content\">20 datasets<\/td><\/tr><\/table><div class=\"datasetid\"><a
+        href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.859527\" target=\"_self\"
+        class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.859527<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 15.87<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.875120","score":15.553296,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.875120\"
+        target=\"_self\" class=\"dataset-link\"><strong>Ayers, JC; George, G; Fry,
+        D et al. (2017):<\/strong> Surface water chemistry and tidal channel time
+        series in southwest Bangladesh<\/a><\/div><table class=\"result\" summary=\"Dataset
+        reference and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"title\">Supplement
+        to:<\/td><td class=\"content\"><strong>Ayers, JC; George, G; Fry, D et al.
+        (2017):<\/strong> Salinization and arsenic contamination of surface water
+        in southwest Bangladesh. <em>Geochemical Transactions<\/em><\/td><\/tr><tr><td
+        class=\"title\">Size:<\/td><td class=\"content\">2 datasets<\/td><\/tr><\/table><div
+        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.875120\"
+        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.875120<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 15.55<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.854921","score":15.081347,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.854921\"
+        target=\"_self\" class=\"dataset-link\"><strong>Preußer, A; Heinemann, G;
+        Willmes, S et al. (2015):<\/strong> Daily polynya area and ice production
+        in the North Water polynya region<\/a><\/div><table class=\"result\" summary=\"Dataset
+        reference and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"title\">Supplement
+        to:<\/td><td class=\"content\"><strong>Preußer, A; Heinemann, G; Willmes,
+        S et al. (2015):<\/strong> Multi-Decadal variability of polynya characteristics
+        and ice production in the North Water Polynya by means of passive microwave
+        and thermal infrared satellite imagery. <em>Remote Sensing<\/em><\/td><\/tr><tr><td
+        class=\"title\">Size:<\/td><td class=\"content\">62 datasets<\/td><\/tr><\/table><div
+        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.854921\"
+        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.854921<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 15.08<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.883604","score":14.769367,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.883604\"
+        target=\"_self\" class=\"dataset-link\"><strong>Lee, S; Ford, A; Mangubai,
+        S et al. (2017):<\/strong> Effects of sandfish (Holothuria scabra) removal
+        on shallow-water sediments in Fijiby sea<\/a><\/div><table class=\"result\"
+        summary=\"Dataset reference and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td
+        class=\"title\">Supplement to:<\/td><td class=\"content\"><strong>Lee, S;
+        Ford, A; Mangubai, S et al.:<\/strong> Effects of sandfish (Holothuria scabra)
+        removal on shallow-water sediments in Fiji. <em>PeerJ<\/em><\/td><\/tr><tr><td
+        class=\"title\">Size:<\/td><td class=\"content\">4 datasets<\/td><\/tr><\/table><div
+        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.883604\"
+        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.883604<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 14.77<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.886792","score":13.922331,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.886792\"
+        target=\"_self\" class=\"dataset-link\"><strong>Jilbert, T; Asmala, E; Schröder,
+        C et al. (2018):<\/strong> Water column, sediment and pore water data from
+        Mustionjoki estuary, Finland, 2014-2015<\/a><\/div><table class=\"result\"
+        summary=\"Dataset reference and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td
+        class=\"title\">Supplement to:<\/td><td class=\"content\"><strong>Jilbert,
+        T; Asmala, E; Schröder, C et al. (2018):<\/strong> Impacts of flocculation
+        on the distribution and diagenesis of iron in boreal estuarine sediments.
+        <em>Biogeosciences<\/em><\/td><\/tr><tr><td class=\"title\">Size:<\/td><td
+        class=\"content\">15 datasets<\/td><\/tr><\/table><div class=\"datasetid\"><a
+        href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.886792\" target=\"_self\"
+        class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.886792<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 13.92<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.831007","score":13.425766,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.831007\"
+        target=\"_self\" class=\"dataset-link\"><strong>Riffler, M; Lieberherr, G-D;
+        Wunderle, S (2015):<\/strong> Lake surface water temperatures of European
+        Alpine lakes (1989-2013) based on the Advanced Very High Resolution Radiometer
+        (AVHRR) 1-km data set<\/a><\/div><table class=\"result\" summary=\"Dataset
+        reference and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"title\">Supplement
+        to:<\/td><td class=\"content\"><strong>Riffler, M; Lieberherr, G-D; Wunderle,
+        S (2015):<\/strong> Lake surface water temperatures of European Alpine lakes
+        (1989–2013) based on the Advanced Very High Resolution Radiometer (AVHRR)
+        1 km data set. <em>Earth System Science Data<\/em><\/td><\/tr><tr><td class=\"title\">Size:<\/td><td
+        class=\"content\">54 datasets<\/td><\/tr><\/table><div class=\"datasetid\"><a
+        href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.831007\" target=\"_self\"
+        class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.831007<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 13.43<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.903093","score":13.393605,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.903093\"
+        target=\"_self\" class=\"dataset-link\"><strong>Büscher, J; Wisshak, M; Form,
+        A et al. (2019):<\/strong> In Situ Growth and Bioerosion Rates of Lophelia
+        pertusa in a Norwegian Fjord and Open Shelf Cold-water Coral Habitat<\/a><\/div><table
+        class=\"result\" summary=\"Dataset reference and size\" cellspacing=\"0\"
+        cellpadding=\"0\"><tr><td class=\"title\">Supplement to:<\/td><td class=\"content\"><strong>Büscher,
+        J; Wisshak, M; Form, A et al.:<\/strong> In Situ Growth and Bioerosion Rates
+        of Lophelia pertusa in a\nNorwegian Fjord and Open Shelf Cold-water Coral
+        Habitat. <em>PeerJ<\/em><\/td><\/tr><tr><td class=\"title\">Size:<\/td><td
+        class=\"content\">2 datasets<\/td><\/tr><\/table><div class=\"datasetid\"><a
+        href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.903093\" target=\"_self\"
+        class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.903093<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 13.39<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.883898","score":12.792697,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.883898\"
+        target=\"_self\" class=\"dataset-link\"><strong>Boergens, E; Dettmering, D;
+        Schwatke, C et al. (2017):<\/strong> Water level, areal extent and volume
+        change of Lake Tanganyika, Lake Turkana, Lake Tonle Sap and Lake Constance:
+        Multi-year time series from satellite altimetry and remote sensing<\/a><\/div><table
+        class=\"result\" summary=\"Dataset reference and size\" cellspacing=\"0\"
+        cellpadding=\"0\"><tr><td class=\"title\">Related to:<\/td><td class=\"content\"><strong>Schwatke,
+        C; Dettmering, D; Bosch, W et al. (2015):<\/strong> DAHITI - an innovative
+        approach for estimating water level time series over inland waters using multi-mission
+        satellite altimetry. <em>Hydrology and Earth System Sciences<\/em><\/td><\/tr><tr><td
+        class=\"title\">Size:<\/td><td class=\"content\">4 datasets<\/td><\/tr><\/table><div
+        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.883898\"
+        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.883898<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 12.79<\/span><\/div><\/li>"}],"facets":null,"maxScore":18.622866,"offset":0,"queryIdentifier":"31b11700-da93-3dc8-b2ff-4ab2aa0537f9","session":"b2eefe38alfak73vlq0rmk1hp2","timeInDatabase":9,"totalCount":1370,"htmlSummary":"<strong>1370
+        datasets<\/strong> found on search for <strong title=\"Query: &raquo;water&laquo;\">&raquo;water&laquo;<\/strong>
+        with <strong title=\"Start: 2013-06-01, End: 2013-07-01\">temporal coverage<\/strong>","htmlSnippetRSS":"<link
+        rel=\"alternate\" title=\"PANGAEA latest datasets about &quot;water&quot;
+        with temporal coverage\" type=\"application\/rss+xml\" href=\"\/tools\/latest-datasets.rss?q=water&amp;mindate=2013-06-01&amp;maxdate=2013-07-01&amp;count=10\">"}'
+  recorded_at: 2019-08-13 21:53:54 GMT
+  recorded_with: vcr/0.2.6, webmockr/0.4.0
+- request:
+    method: get
+    uri: https://www.pangaea.de/advanced/search.php?count=10&offset=0&q=water&minlon=-124.2&minlat=41.8&maxlon=-116.8&maxlat=46.1
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.54.0 r-curl/4.0 crul/0.8.4
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      cache-control: private, max-age=10800, pre-check=10800
+      content-encoding: gzip
+      content-type: application/json; charset=UTF-8
+      date: Tue, 13 Aug 2019 21:53:55 GMT
+      last-modified: Fri, 15 Apr 2016 11:55:50 GMT
+      server: PANGAEA/2.0
+      status: 'HTTP/2 200 '
+      strict-transport-security: max-age=31536000
+      vary:
+      - Accept-Encoding
+      - Cookie, X-PanLoginID
+      x-content-type-options: nosniff
+      x-frame-options: SAMEORIGIN
+      x-ua-compatible: IE=Edge
+    body:
+      encoding: UTF-8
+      string: '{"results":[{"URI":"doi:10.1594\/PANGAEA.812094","score":12.7565155,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.812094\"
+        target=\"_self\" class=\"dataset-link\"><strong>Simonyan, AV; Dultz, S; Behrens,
+        H (2012):<\/strong> Diffusion transport of water in basalts<\/a><\/div><table
+        class=\"result\" summary=\"Dataset reference and size\" cellspacing=\"0\"
+        cellpadding=\"0\"><tr><td class=\"title\">Supplement to:<\/td><td class=\"content\"><strong>Simonyan,
+        AV; Dultz, S; Behrens, H (2012):<\/strong> Diffusive transport of water in
+        porous fresh to altered mid-ocean ridge basalts. <em>Chemical Geology<\/em><\/td><\/tr><tr><td
+        class=\"title\">Size:<\/td><td class=\"content\">2 datasets<\/td><\/tr><\/table><div
+        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.812094\"
+        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.812094<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 12.76<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.406110","score":8.703503,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.406110\"
+        target=\"_self\" class=\"dataset-link\"><strong>WOCE Surface Velocity Program,
+        SVP (2006):<\/strong> Water temperature and current velocity from surface
+        drifter SVP_9616641<\/a><\/div><table class=\"result\" summary=\"Dataset reference
+        and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"title\">Related
+        to:<\/td><td class=\"content\"><strong>WOCE (2002):<\/strong> World Ocean
+        Circulation Experiment, Global Data, Version 3.0. <em>WOCE International Project
+        Office, WOCE Report, Southampton, UK; published by U.S. National Oceanographic
+        Data Center, Silver Spring<\/em><\/td><\/tr><tr><td class=\"title\">Size:<\/td><td
+        class=\"content\">598 data points<\/td><\/tr><\/table><div class=\"datasetid\"><a
+        href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.406110\" target=\"_self\"
+        class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.406110<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 8.7<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.325191","score":8.69695,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.325191\"
+        target=\"_self\" class=\"dataset-link\"><strong>WOCE Upper Ocean Thermal,
+        UOT (2005):<\/strong> Water temperature XBT profiles from cruise 181991002
+        (DCQC)<\/a><\/div><table class=\"result\" summary=\"Dataset reference and
+        size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"title\">Related
+        to:<\/td><td class=\"content\"><strong>WOCE (2002):<\/strong> World Ocean
+        Circulation Experiment, Global Data, Version 3.0. <em>WOCE International Project
+        Office, WOCE Report, Southampton, UK; published by U.S. National Oceanographic
+        Data Center, Silver Spring<\/em><\/td><\/tr><tr><td class=\"title\">Size:<\/td><td
+        class=\"content\">11390 data points<\/td><\/tr><\/table><div class=\"datasetid\"><a
+        href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.325191\" target=\"_self\"
+        class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.325191<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 8.7<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.325209","score":8.694084,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.325209\"
+        target=\"_self\" class=\"dataset-link\"><strong>WOCE Upper Ocean Thermal,
+        UOT (2005):<\/strong> Water temperature XBT profiles from cruise 181991021
+        (DCQC)<\/a><\/div><table class=\"result\" summary=\"Dataset reference and
+        size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"title\">Related
+        to:<\/td><td class=\"content\"><strong>WOCE (2002):<\/strong> World Ocean
+        Circulation Experiment, Global Data, Version 3.0. <em>WOCE International Project
+        Office, WOCE Report, Southampton, UK; published by U.S. National Oceanographic
+        Data Center, Silver Spring<\/em><\/td><\/tr><tr><td class=\"title\">Size:<\/td><td
+        class=\"content\">10280 data points<\/td><\/tr><\/table><div class=\"datasetid\"><a
+        href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.325209\" target=\"_self\"
+        class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.325209<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 8.69<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.402042","score":8.691407,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.402042\"
+        target=\"_self\" class=\"dataset-link\"><strong>WOCE Surface Velocity Program,
+        SVP (2006):<\/strong> Water temperature and current velocity from surface
+        drifter SVP_23184<\/a><\/div><table class=\"result\" summary=\"Dataset reference
+        and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"title\">Related
+        to:<\/td><td class=\"content\"><strong>WOCE (2002):<\/strong> World Ocean
+        Circulation Experiment, Global Data, Version 3.0. <em>WOCE International Project
+        Office, WOCE Report, Southampton, UK; published by U.S. National Oceanographic
+        Data Center, Silver Spring<\/em><\/td><\/tr><tr><td class=\"title\">Size:<\/td><td
+        class=\"content\">392 data points<\/td><\/tr><\/table><div class=\"datasetid\"><a
+        href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.402042\" target=\"_self\"
+        class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.402042<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 8.69<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.401390","score":8.68546,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.401390\"
+        target=\"_self\" class=\"dataset-link\"><strong>WOCE Surface Velocity Program,
+        SVP (2006):<\/strong> Water temperature and current velocity from surface
+        drifter SVP_15899<\/a><\/div><table class=\"result\" summary=\"Dataset reference
+        and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"title\">Related
+        to:<\/td><td class=\"content\"><strong>WOCE (2002):<\/strong> World Ocean
+        Circulation Experiment, Global Data, Version 3.0. <em>WOCE International Project
+        Office, WOCE Report, Southampton, UK; published by U.S. National Oceanographic
+        Data Center, Silver Spring<\/em><\/td><\/tr><tr><td class=\"title\">Size:<\/td><td
+        class=\"content\">500 data points<\/td><\/tr><\/table><div class=\"datasetid\"><a
+        href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.401390\" target=\"_self\"
+        class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.401390<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 8.69<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.359344","score":8.678344,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.359344\"
+        target=\"_self\" class=\"dataset-link\"><strong>WOCE Upper Ocean Thermal,
+        UOT (2006):<\/strong> Water temperature real-time profiles from cruise NLBP90
+        (SCQC)<\/a><\/div><table class=\"result\" summary=\"Dataset reference and
+        size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"title\">Related
+        to:<\/td><td class=\"content\"><strong>WOCE (2002):<\/strong> World Ocean
+        Circulation Experiment, Global Data, Version 3.0. <em>WOCE International Project
+        Office, WOCE Report, Southampton, UK; published by U.S. National Oceanographic
+        Data Center, Silver Spring<\/em><\/td><\/tr><tr><td class=\"title\">Size:<\/td><td
+        class=\"content\">62 data points<\/td><\/tr><\/table><div class=\"datasetid\"><a
+        href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.359344\" target=\"_self\"
+        class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.359344<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 8.68<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.405682","score":8.676027,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.405682\"
+        target=\"_self\" class=\"dataset-link\"><strong>WOCE Surface Velocity Program,
+        SVP (2006):<\/strong> Water temperature and current velocity from surface
+        drifter SVP_9524457<\/a><\/div><table class=\"result\" summary=\"Dataset reference
+        and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"title\">Related
+        to:<\/td><td class=\"content\"><strong>WOCE (2002):<\/strong> World Ocean
+        Circulation Experiment, Global Data, Version 3.0. <em>WOCE International Project
+        Office, WOCE Report, Southampton, UK; published by U.S. National Oceanographic
+        Data Center, Silver Spring<\/em><\/td><\/tr><tr><td class=\"title\">Size:<\/td><td
+        class=\"content\">817 data points<\/td><\/tr><\/table><div class=\"datasetid\"><a
+        href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.405682\" target=\"_self\"
+        class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.405682<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 8.68<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.325200","score":8.675622,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.325200\"
+        target=\"_self\" class=\"dataset-link\"><strong>WOCE Upper Ocean Thermal,
+        UOT (2005):<\/strong> Water temperature XBT profiles from cruise 181991011
+        (DCQC)<\/a><\/div><table class=\"result\" summary=\"Dataset reference and
+        size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"title\">Related
+        to:<\/td><td class=\"content\"><strong>WOCE (2002):<\/strong> World Ocean
+        Circulation Experiment, Global Data, Version 3.0. <em>WOCE International Project
+        Office, WOCE Report, Southampton, UK; published by U.S. National Oceanographic
+        Data Center, Silver Spring<\/em><\/td><\/tr><tr><td class=\"title\">Size:<\/td><td
+        class=\"content\">35456 data points<\/td><\/tr><\/table><div class=\"datasetid\"><a
+        href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.325200\" target=\"_self\"
+        class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.325200<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 8.68<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.406701","score":8.668704,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.406701\"
+        target=\"_self\" class=\"dataset-link\"><strong>WOCE Surface Velocity Program,
+        SVP (2006):<\/strong> Water temperature and current velocity from surface
+        drifter SVP_9730560<\/a><\/div><table class=\"result\" summary=\"Dataset reference
+        and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"title\">Related
+        to:<\/td><td class=\"content\"><strong>WOCE (2002):<\/strong> World Ocean
+        Circulation Experiment, Global Data, Version 3.0. <em>WOCE International Project
+        Office, WOCE Report, Southampton, UK; published by U.S. National Oceanographic
+        Data Center, Silver Spring<\/em><\/td><\/tr><tr><td class=\"title\">Size:<\/td><td
+        class=\"content\">1446 data points<\/td><\/tr><\/table><div class=\"datasetid\"><a
+        href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.406701\" target=\"_self\"
+        class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.406701<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 8.67<\/span><\/div><\/li>"}],"facets":null,"maxScore":12.7565155,"offset":0,"queryIdentifier":"c340561b-4260-3bdd-8b1c-f44f03b6670f","session":"vsd6dgu1c54tga4hqo4gmae9h5","timeInDatabase":15,"totalCount":645,"htmlSummary":"<strong>645
+        datasets<\/strong> found on search for <strong title=\"Query: &raquo;water&laquo;\">&raquo;water&laquo;<\/strong>
+        with <strong title=\"West-bound Longitude: -124.2, East-bound Longitude: -116.8,
+        South-bound Latitude: 41.8, North-bound Latitude: 46.1\">geographic bounding
+        box<\/strong>","htmlSnippetRSS":"<link rel=\"alternate\" title=\"PANGAEA latest
+        datasets about &quot;water&quot; with geographic bounding box\" type=\"application\/rss+xml\"
+        href=\"\/tools\/latest-datasets.rss?q=water&amp;minlon=-124.2&amp;minlat=41.8&amp;maxlon=-116.8&amp;maxlat=46.1&amp;count=10\">"}'
+  recorded_at: 2019-08-13 21:53:54 GMT
+  recorded_with: vcr/0.2.6, webmockr/0.4.0
+- request:
+    method: get
+    uri: https://www.pangaea.de/advanced/search.php?count=10&offset=0&q=citation%3AArcher
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.54.0 r-curl/4.0 crul/0.8.4
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      cache-control: private, max-age=10800, pre-check=10800
+      content-encoding: gzip
+      content-type: application/json; charset=UTF-8
+      date: Tue, 13 Aug 2019 21:53:55 GMT
+      last-modified: Fri, 15 Apr 2016 11:55:50 GMT
+      server: PANGAEA/2.0
+      status: 'HTTP/2 200 '
+      strict-transport-security: max-age=31536000
+      vary:
+      - Accept-Encoding
+      - Cookie, X-PanLoginID
+      x-content-type-options: nosniff
+      x-frame-options: SAMEORIGIN
+      x-ua-compatible: IE=Edge
+    body:
+      encoding: UTF-8
+      string: '{"results":[{"URI":"doi:10.1594\/PANGAEA.715051","score":20.181524,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.715051\"
+        target=\"_self\" class=\"dataset-link\"><strong>Stoll, HM; Shimizu, N; Archer,
+        DE et al. (2007):<\/strong> Sr\/Ca ratios of coccoliths from the Paleocene-Eocene
+        Thermal Maximum<\/a><\/div><table class=\"result\" summary=\"Dataset reference
+        and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"title\">Supplement
+        to:<\/td><td class=\"content\"><strong>Stoll, HM; Shimizu, N; Archer, DE et
+        al. (2007):<\/strong> Coccolithophore productivity response to greenhouse
+        event of the Paleocene-Eocene Thermal Maximum. <em>Earth and Planetary Science
+        Letters<\/em><\/td><\/tr><tr><td class=\"title\">Size:<\/td><td class=\"content\">5
+        datasets<\/td><\/tr><\/table><div class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.715051\"
+        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.715051<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 20.18<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.726364","score":20.181524,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.726364\"
+        target=\"_self\" class=\"dataset-link\"><strong>Catubig, NR; Archer, DE; Francois,
+        R et al. (1998):<\/strong> Calcium carbonate global LGM Burial rate data<\/a><\/div><table
+        class=\"result\" summary=\"Dataset reference and size\" cellspacing=\"0\"
+        cellpadding=\"0\"><tr><td class=\"title\">Supplement to:<\/td><td class=\"content\"><strong>Catubig,
+        NR; Archer, DE; Francois, R et al. (1998):<\/strong> Global deep-sea burial
+        rate of calcium carbonate during the last glacial maximum. <em>Paleoceanography<\/em><\/td><\/tr><tr><td
+        class=\"title\">Size:<\/td><td class=\"content\">4 datasets<\/td><\/tr><\/table><div
+        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.726364\"
+        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.726364<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 20.18<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.730527","score":19.526766,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.730527\"
+        target=\"_self\" class=\"dataset-link\"><strong>Jahnke, RA; Emerson, SR; Reimers,
+        C et al. (1989):<\/strong> Chemistry of eastern tropical Atlantic porewater<\/a><\/div><table
+        class=\"result\" summary=\"Dataset reference and size\" cellspacing=\"0\"
+        cellpadding=\"0\"><tr><td class=\"title\">Supplement to:<\/td><td class=\"content\"><strong>Jahnke,
+        RA; Emerson, SR; Reimers, C et al. (1989):<\/strong> Benthic recycling of
+        biogenic debris in the eastern tropical Atlantic Ocean. <em>Geochimica et
+        Cosmochimica Acta<\/em><\/td><\/tr><tr><td class=\"title\">Size:<\/td><td
+        class=\"content\">21 datasets<\/td><\/tr><\/table><div class=\"datasetid\"><a
+        href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.730527\" target=\"_self\"
+        class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.730527<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 19.53<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.736010","score":19.526766,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.736010\"
+        target=\"_self\" class=\"dataset-link\"><strong>Archer, DE; Devol, AH (1992):<\/strong>
+        Benthic oxygen flixes on the Washington shelf and slope<\/a><\/div><table
+        class=\"result\" summary=\"Dataset reference and size\" cellspacing=\"0\"
+        cellpadding=\"0\"><tr><td class=\"title\">Supplement to:<\/td><td class=\"content\"><strong>Archer,
+        DE; Devol, AH (1992):<\/strong> Benthic oxygen fluxes on the Washington shelf
+        and slope: A comparison of in situ microelectrode and chamber flux measurements.
+        <em>Limnology and Oceanography<\/em><\/td><\/tr><tr><td class=\"title\">Size:<\/td><td
+        class=\"content\">9 datasets<\/td><\/tr><\/table><div class=\"datasetid\"><a
+        href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.736010\" target=\"_self\"
+        class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.736010<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 19.53<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.730420","score":17.66477,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.730420\"
+        target=\"_self\" class=\"dataset-link\"><strong>Hales, B; Emerson, SR; Archer,
+        DE (1994):<\/strong> Respiration and dissolution in sediments of the western
+        Atlantic<\/a><\/div><table class=\"result\" summary=\"Dataset reference and
+        size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"title\">Supplement
+        to:<\/td><td class=\"content\"><strong>Hales, B; Emerson, SR; Archer, DE (1994):<\/strong>
+        Respiration and dissolution in the sediments of the western North Atlantic:
+        estimates from models of in situ microelectrode measurements of porewater
+        oxygen and pH. <em>Deep Sea Research Part I: Oceanographic Research Papers<\/em><\/td><\/tr><tr><td
+        class=\"title\">Size:<\/td><td class=\"content\">33 datasets<\/td><\/tr><\/table><div
+        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.730420\"
+        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.730420<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 17.66<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.121144","score":15.3039055,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.121144\"
+        target=\"_self\" class=\"dataset-link\"><strong>Archer, DE (2003):<\/strong>
+        Total carbon dioxide and alkalinity at station TT011_1-CTD6<\/a><\/div><table
+        class=\"result\" summary=\"Dataset reference and size\" cellspacing=\"0\"
+        cellpadding=\"0\"><tr><td class=\"title\">Related to:<\/td><td class=\"content\"><strong>Archer,
+        DE (2003):<\/strong> Total carbon dioxide and alkalinity. <em>United States
+        JGOFS Process Study Data 1989-1998; CD-ROM volume 1, version 2, Woods Hole
+        Oceanographic Institution, USA: U.S. JGOFS Data Management Office<\/em><\/td><\/tr><tr><td
+        class=\"title\">Size:<\/td><td class=\"content\">135 data points<\/td><\/tr><\/table><div
+        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.121144\"
+        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.121144<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 15.3<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.121167","score":15.3039055,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.121167\"
+        target=\"_self\" class=\"dataset-link\"><strong>Archer, DE (2003):<\/strong>
+        Total carbon dioxide and alkalinity at station TT011_12-CTD158<\/a><\/div><table
+        class=\"result\" summary=\"Dataset reference and size\" cellspacing=\"0\"
+        cellpadding=\"0\"><tr><td class=\"title\">Related to:<\/td><td class=\"content\"><strong>Archer,
+        DE (2003):<\/strong> Total carbon dioxide and alkalinity. <em>United States
+        JGOFS Process Study Data 1989-1998; CD-ROM volume 1, version 2, Woods Hole
+        Oceanographic Institution, USA: U.S. JGOFS Data Management Office<\/em><\/td><\/tr><tr><td
+        class=\"title\">Size:<\/td><td class=\"content\">28 data points<\/td><\/tr><\/table><div
+        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.121167\"
+        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.121167<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 15.3<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.121233","score":15.3039055,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.121233\"
+        target=\"_self\" class=\"dataset-link\"><strong>Archer, DE (2003):<\/strong>
+        Total carbon dioxide and alkalinity at station TT011_9-CTD110<\/a><\/div><table
+        class=\"result\" summary=\"Dataset reference and size\" cellspacing=\"0\"
+        cellpadding=\"0\"><tr><td class=\"title\">Related to:<\/td><td class=\"content\"><strong>Archer,
+        DE (2003):<\/strong> Total carbon dioxide and alkalinity. <em>United States
+        JGOFS Process Study Data 1989-1998; CD-ROM volume 1, version 2, Woods Hole
+        Oceanographic Institution, USA: U.S. JGOFS Data Management Office<\/em><\/td><\/tr><tr><td
+        class=\"title\">Size:<\/td><td class=\"content\">32 data points<\/td><\/tr><\/table><div
+        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.121233\"
+        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.121233<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 15.3<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.121208","score":15.3039055,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.121208\"
+        target=\"_self\" class=\"dataset-link\"><strong>Archer, DE (2003):<\/strong>
+        Total carbon dioxide and alkalinity at station TT011_5-CTD67<\/a><\/div><table
+        class=\"result\" summary=\"Dataset reference and size\" cellspacing=\"0\"
+        cellpadding=\"0\"><tr><td class=\"title\">Related to:<\/td><td class=\"content\"><strong>Archer,
+        DE (2003):<\/strong> Total carbon dioxide and alkalinity. <em>United States
+        JGOFS Process Study Data 1989-1998; CD-ROM volume 1, version 2, Woods Hole
+        Oceanographic Institution, USA: U.S. JGOFS Data Management Office<\/em><\/td><\/tr><tr><td
+        class=\"title\">Size:<\/td><td class=\"content\">40 data points<\/td><\/tr><\/table><div
+        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.121208\"
+        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.121208<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 15.3<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.121111","score":15.3039055,"html":"<li><div
+        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.121111\"
+        target=\"_self\" class=\"dataset-link\"><strong>Archer, DE (2003):<\/strong>
+        Total carbon dioxide and alkalinity at station TT007_6-CTD66<\/a><\/div><table
+        class=\"result\" summary=\"Dataset reference and size\" cellspacing=\"0\"
+        cellpadding=\"0\"><tr><td class=\"title\">Related to:<\/td><td class=\"content\"><strong>Archer,
+        DE (2003):<\/strong> Total carbon dioxide and alkalinity. <em>United States
+        JGOFS Process Study Data 1989-1998; CD-ROM volume 1, version 2, Woods Hole
+        Oceanographic Institution, USA: U.S. JGOFS Data Management Office<\/em><\/td><\/tr><tr><td
+        class=\"title\">Size:<\/td><td class=\"content\">68 data points<\/td><\/tr><\/table><div
+        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.121111\"
+        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.121111<\/a>
+        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
+        The value is not absolute and only suitable to compare hits from the same
+        result set.\">Score: 15.3<\/span><\/div><\/li>"}],"facets":null,"maxScore":20.181524,"offset":0,"queryIdentifier":"394a4b5b-e9b5-3c51-ae11-d5906daf9ee2","session":"foilv4i52inrkbltgndpj8sgo2","timeInDatabase":6,"totalCount":274,"htmlSummary":"<strong>274
+        datasets<\/strong> found on search for <strong title=\"Query: &raquo;citation:Archer&laquo;\">&raquo;citation:Archer&laquo;<\/strong>","htmlSnippetRSS":"<link
+        rel=\"alternate\" title=\"PANGAEA latest datasets about &quot;citation:Archer&quot;\"
+        type=\"application\/rss+xml\" href=\"\/tools\/latest-datasets.rss?q=citation%3AArcher&amp;count=10\">"}'
+  recorded_at: 2019-08-13 21:53:54 GMT
+  recorded_with: vcr/0.2.6, webmockr/0.4.0
