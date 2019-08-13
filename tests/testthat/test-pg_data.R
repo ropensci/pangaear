@@ -77,4 +77,12 @@ test_that("text data file with metadata", {
   expect_is(aa[[1]]$metadata$citation, "character")
   expect_is(aa[[1]]$metadata$coverage, "character")
   expect_is(aa[[1]]$metadata$license, "character")
+
+  # parameters has extra parsing
+  ## its a list
+  expect_is(aa[[1]]$metadata$parameters, "list")
+  ## not named
+  expect_named(aa[[1]]$metadata$parameters, NULL)
+  ## length of the list of parameters should equal columns of data
+  expect_equal(length(aa[[1]]$metadata$parameters), NCOL(aa[[1]]$data))
 })

@@ -73,8 +73,19 @@ read_meta <- function(x) {
     }
     ext2[[i]] <- as.list(stats::setNames(dat, nm))
   }
-  return(unlist(ext2, FALSE))
+  ext2 <- unlist(ext2, FALSE)
+  # attempt to handle parameters
+  if ("parameters" %in% names(ext2)) {
+    parm <- ext2$parameters
+    parm <- strw(strsplit(parm, ";")[[1]])
+    ext2$parameters <- lapply(parm, function(w) {
+      strw(strsplit(w, "\\*")[[1]])
+    })
+  }
+  return(ext2)
 }
+
+strw <- function(x) gsub("^\\s|\\s$", "", x)
 
 strextract <- function(str, pattern) regmatches(str, regexpr(pattern, str))
 
