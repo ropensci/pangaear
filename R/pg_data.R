@@ -106,6 +106,11 @@ pang_GET <- function(url, doi, overwrite, ...){
   res <- cli$get(query = list(format = "textfile"))
   res$raise_for_status()
 
+  # remove spaces in content type header, if present
+  # so we can keep the below code the same
+  res$response_headers$`content-type` <- 
+    gsub("\\s", "", res$response_headers$`content-type`)
+
   # if login required, stop with just metadata
   if (grepl("text/html", res$response_headers$`content-type`)) {
     if (
@@ -170,7 +175,7 @@ process_pg <- function(x, doi, citation) {
             zip = utils::unzip(file, list = TRUE),
             txt = {
               dat <- read_csv(file)
-              tibble::as_data_frame(dat, validate = FALSE)
+              tibble::as_tibble(dat, validate = FALSE)
             },
             png = "png; read with png::readPNG()"
           )

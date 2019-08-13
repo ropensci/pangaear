@@ -1,7 +1,0 @@
-machine:
-  services:
-    - docker
-
-test:
-  post:
-    - docker run -ti -v $(pwd):/data -w /data rocker/ropensci Rscript build.R

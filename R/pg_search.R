@@ -90,7 +90,7 @@ pg_search <- function(query, count = 10, offset = 0, topic = NULL, bbox = NULL,
     x$URI <- x$html <- NULL
     c(x, xx)
   })
-  df <- do.call("rbind.data.frame", lapply(parsed, tibble::as_data_frame))
+  df <- do.call("rbind.data.frame", lapply(parsed, tibble::as_tibble))
   atts <- results[c('maxScore', 'offset', 'totalCount')]
   for (i in seq_along(atts)) {
     attr(df, names(atts)[i]) <- atts[[i]]

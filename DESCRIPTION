@@ -4,7 +4,7 @@ Description: Tools to interact with the 'Pangaea' Database
     (<https://www.pangaea.de>), including functions for searching for data,
     fetching 'datasets' by 'dataset' 'ID', and working with the 'Pangaea'
     'OAI-PMH' service.
-Version: 0.6.2.9136
+Version: 0.6.4.9100
 Authors@R: c(person("Scott", "Chamberlain",
 		email = "myrmecocystus@gmail.com", role = c("aut","cre")),
     person("Kara", "Woo", email = "woo.kara@gmail.com", role = "aut"),
@@ -31,3 +31,6 @@ Suggests:
     knitr,
     testthat
 RoxygenNote: 6.1.1
+X-schema.org-applicationCategory: Biodiversity
+X-schema.org-keywords: Pangaea, environmental science, earth science, archive, paleontology, ecology, chemistry, atmosphere
+X-schema.org-isPartOf: https://ropensci.org
