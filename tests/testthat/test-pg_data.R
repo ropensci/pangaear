@@ -64,3 +64,17 @@ test_that("png files work", {
   # metadata
   expect_identical(aa[[1]]$metadata, list())
 })
+
+test_that("text data file with metadata", {
+  skip_on_cran()
+  skip_on_travis()
+
+  aa <- pg_data(doi = "10.1594/PANGAEA.807580")
+
+  expect_is(aa, "list")
+  expect_is(aa[[1]], "pangaea")
+  expect_is(aa[[1]]$metadata, "list")
+  expect_is(aa[[1]]$metadata$citation, "character")
+  expect_is(aa[[1]]$metadata$coverage, "character")
+  expect_is(aa[[1]]$metadata$license, "character")
+})
