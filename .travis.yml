@@ -3,16 +3,19 @@ sudo: false
 cache: packages
 dist: trusty
 
-r_github_packages:
-  - jimhester/covr
+r_binary_packages:
+  - covr
+
+matrix:
+  include:
+    - os: linux
+      r: oldrel
+    - os: linux
+      r: release
+      env: R_CODECOV=true
 
 after_success:
-  - Rscript -e 'covr::codecov()'
-
-r:
-  - oldrel
-  - release
-  - devel
+  - if [[ "${R_CODECOV}" ]]; then R -e 'covr::codecov()'; fi
 
 r_check_args: "--as-cran --run-dontrun"
 

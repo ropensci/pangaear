@@ -22,10 +22,10 @@ Language: en-US
 Imports:
     crul (>= 0.4.0),
     jsonlite (>= 1.5),
-    rappdirs (>= 0.3.1),
     xml2 (>= 1.1.1),
     oai (>= 0.2.2),
     tibble (>= 1.1),
+    hoardr (>= 0.2.0),
     png
 Suggests:
     knitr,
