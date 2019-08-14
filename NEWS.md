@@ -1,3 +1,21 @@
+pangaear 0.8.0
+==============
+
+## NEW FEATURES
+
+* now using package `hoardr` for managing caching, replacing package `rappdirs`; new object `pg_cache`, an R6 class, with methods for managing where you cache files, deleting them, listing them, etc. Importantly, you can set the full cache path now, not just the folder within a set directory (#66) (#69)
+
+## MINOR IMPROVEMENTS
+
+* most tests using `vcr` now for http reqeust caching (#70)
+* output of `pg_data()` now includes a `metadata` slot with parsed metadata from text files (only included when the file is a txt file); `parameters` slot that's part of the metadata is partially parsed into an unnamed list (#67)
+
+## BUG FIXES
+
+* fix in `pg_data()`: Pangaea changed how links are organized for datasets, fixed now (#65)
+* fix in `pg_data()`: response content type header changed - a space was added, breaking the content type check; now not sensitive to the space (#68)
+
+
 pangaear 0.6.0
 ==============
 
