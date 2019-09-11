@@ -14,7 +14,7 @@ There are no reverse dependencies.
 
 ---
 
-This release includes new caching features and some bug fixes.
+This release includes a fix for a test fixture so that yaml package does not fail on loading the fixture.
 
 Thanks! 
 Scott Chamberlain

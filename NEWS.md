@@ -1,3 +1,11 @@
+pangaear 0.8.2
+==============
+
+## BUG FIXES
+
+* detected from cran checks, only failing on debian clang r-devel: change `pg_search` tests to use `preserve_exact_body_bytes = TRUE` in the `vcr::use_cassette()` call so `yaml` package doesn't fail on loading it (#72)
+
+
 pangaear 0.8.0
 ==============
 

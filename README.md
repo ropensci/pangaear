@@ -30,6 +30,7 @@ This package offers tools to interact with the PANGAEA Database, including funct
  - pg_list_identifiers
  - pg_search
  - pg_get_record
+ - pg_cache
  - pg_search_es
  - pg_cache_list
  - pg_cache_clear
@@ -66,9 +67,9 @@ pg_search(query = 'water', bbox = c(-124.2, 41.8, -116.8, 46.1), count = 3)
 #> # A tibble: 3 x 6
 #>   score doi       size size_measure citation          supplement_to        
 #>   <dbl> <chr>    <dbl> <chr>        <chr>             <chr>                
-#> 1 12.7  10.1594…     2 datasets     Simonyan, AV; Du… Simonyan, AV; Dultz,…
-#> 2  8.70 10.1594…   598 data points  WOCE Surface Vel… <NA>                 
-#> 3  8.69 10.1594… 10280 data points  WOCE Upper Ocean… <NA>
+#> 1 12.8  10.1594…     2 datasets     Simonyan, AV; Du… Simonyan, AV; Dultz,…
+#> 2  8.71 10.1594…   598 data points  WOCE Surface Vel… <NA>                 
+#> 3  8.70 10.1594… 11390 data points  WOCE Upper Ocean… <NA>
 ```
 
 ## Get data
@@ -81,7 +82,7 @@ res[[1]]
 #>   parent doi: 10.1594/PANGAEA.807580
 #>   url:        https://doi.org/10.1594/PANGAEA.807580
 #>   citation:   Schiebel, Ralf; Waniek, Joanna J; Bork, Matthias; Hemleben, Christoph (2001): Physical oceanography during METEOR cruise M36/6. PANGAEA, https://doi.org/10.1594/PANGAEA.807580, In supplement to: Schiebel, R et al. (2001): Planktic foraminiferal production stimulated by chlorophyll redistribution and entrainment of nutrients. Deep Sea Research Part I: Oceanographic Research Papers, 48(3), 721-740, https://doi.org/10.1016/S0967-0637(00)00065-0
-#>   path:       /Users/sckott/Library/Caches/pangaear/10_1594_PANGAEA_807580.txt
+#>   path:       /Users/sckott/Library/Caches/R/pangaear/10_1594_PANGAEA_807580.txt
 #>   data:
 #> # A tibble: 32,179 x 13
 #>    Event `Date/Time` Latitude Longitude `Elevation [m]` `Depth water [m…
@@ -109,26 +110,26 @@ Search for data then pass DOI to data function.
 res <- pg_search(query = 'water', bbox = c(-124.2, 41.8, -116.8, 46.1), count = 3)
 pg_data(res$doi[3])[1:3]
 #> [[1]]
-#> <Pangaea data> 10.1594/PANGAEA.325209
-#>   parent doi: 10.1594/PANGAEA.325209
-#>   url:        https://doi.org/10.1594/PANGAEA.325209
-#>   citation:   WOCE Upper Ocean Thermal, UOT (2005): Water temperature XBT profiles from cruise 181991021 (DCQC). Marine Environmental Data Services Branch, Ontario, PANGAEA, https://doi.org/10.1594/PANGAEA.325209
-#>   path:       /Users/sckott/Library/Caches/pangaear/10_1594_PANGAEA_325209.txt
+#> <Pangaea data> 10.1594/PANGAEA.325191
+#>   parent doi: 10.1594/PANGAEA.325191
+#>   url:        https://doi.org/10.1594/PANGAEA.325191
+#>   citation:   WOCE Upper Ocean Thermal, UOT (2005): Water temperature XBT profiles from cruise 181991002 (DCQC). Marine Environmental Data Services Branch, Ontario, PANGAEA, https://doi.org/10.1594/PANGAEA.325191
+#>   path:       /Users/sckott/Library/Caches/R/pangaear/10_1594_PANGAEA_325191.txt
 #>   data:
-#> # A tibble: 5,140 x 6
+#> # A tibble: 5,695 x 6
 #>    `Date/Time` Latitude Longitude `Depth water [m… `Temp [°C]`
 #>    <chr>          <dbl>     <dbl>            <int> <chr>      
-#>  1 1991-06-04…     47.8     -126.                1 11.27      
-#>  2 1991-06-04…     47.8     -126.                2 10.86      
-#>  3 1991-06-04…     47.8     -126.                3 10.62      
-#>  4 1991-06-04…     47.8     -126.                4 10.29      
-#>  5 1991-06-04…     47.8     -126.                5 10.40      
-#>  6 1991-06-04…     47.8     -126.                6 10.53      
-#>  7 1991-06-04…     47.8     -126.                7 10.60      
-#>  8 1991-06-04…     47.8     -126.                8 10.64      
-#>  9 1991-06-04…     47.8     -126.                9 10.67      
-#> 10 1991-06-04…     47.8     -126.               10 10.69      
-#> # … with 5,130 more rows, and 1 more variable: `Sample label` <chr>
+#>  1 1991-03-26…     38.6     -124.                1 10.57      
+#>  2 1991-03-26…     38.6     -124.                2 10.75      
+#>  3 1991-03-26…     38.6     -124.                3 10.89      
+#>  4 1991-03-26…     38.6     -124.                4 10.96      
+#>  5 1991-03-26…     38.6     -124.                5 11.04      
+#>  6 1991-03-26…     38.6     -124.                6 11.09      
+#>  7 1991-03-26…     38.6     -124.                7 11.12      
+#>  8 1991-03-26…     38.6     -124.                8 11.13      
+#>  9 1991-03-26…     38.6     -124.                9 11.15      
+#> 10 1991-03-26…     38.6     -124.               10 11.15      
+#> # … with 5,685 more rows, and 1 more variable: `Sample label` <chr>
 #> 
 #> [[2]]
 #> NULL
@@ -185,20 +186,20 @@ pg_list_metadata_formats()
 
 ```r
 pg_list_identifiers(from = Sys.Date() - 2, until = Sys.Date())
-#> # A tibble: 504 x 10
+#> # A tibble: 893 x 10
 #>    identifier datestamp setSpec setSpec.1 setSpec.2 setSpec.3 setSpec.4
 #>    <chr>      <chr>     <chr>   <chr>     <chr>     <chr>     <chr>    
-#>  1 oai:panga… 2019-08-… citable hmmv      suppleme… topicOce… <NA>     
-#>  2 oai:panga… 2019-08-… citable suppleme… <NA>      <NA>      <NA>     
-#>  3 oai:panga… 2019-08-… citable suppleme… topicLan… topicLit… topicPal…
-#>  4 oai:panga… 2019-08-… citable suppleme… <NA>      <NA>      <NA>     
-#>  5 oai:panga… 2019-08-… citable topicEco… topicLit… <NA>      <NA>     
-#>  6 oai:panga… 2019-08-… citable suppleme… topicLan… topicLit… topicPal…
-#>  7 oai:panga… 2019-08-… citable suppleme… <NA>      <NA>      <NA>     
-#>  8 oai:panga… 2019-08-… citable suppleme… topicLit… <NA>      <NA>     
-#>  9 oai:panga… 2019-08-… citable suppleme… topicChe… topicLit… <NA>     
-#> 10 oai:panga… 2019-08-… citable suppleme… <NA>      <NA>      <NA>     
-#> # … with 494 more rows, and 3 more variables: setSpec.5 <chr>,
+#>  1 oai:panga… 2019-09-… citable suppleme… topicBio… topicPal… <NA>     
+#>  2 oai:panga… 2019-09-… citable suppleme… <NA>      <NA>      <NA>     
+#>  3 oai:panga… 2019-09-… citable suppleme… topicOce… <NA>      <NA>     
+#>  4 oai:panga… 2019-09-… citable suppleme… topicChe… topicLit… <NA>     
+#>  5 oai:panga… 2019-09-… citable suppleme… topicChe… topicLit… <NA>     
+#>  6 oai:panga… 2019-09-… citable suppleme… topicGeo… <NA>      <NA>     
+#>  7 oai:panga… 2019-09-… citable suppleme… topicLit… topicOce… <NA>     
+#>  8 oai:panga… 2019-09-… citable topicEco… topicLit… <NA>      <NA>     
+#>  9 oai:panga… 2019-09-… citable suppleme… topicLan… topicLit… <NA>     
+#> 10 oai:panga… 2019-09-… citable suppleme… topicBio… topicEco… topicOce…
+#> # … with 883 more rows, and 3 more variables: setSpec.5 <chr>,
 #> #   setSpec.6 <chr>, setSpec.7 <chr>
 ```
 
@@ -228,31 +229,51 @@ pg_list_sets()
 
 ```r
 pg_list_records(from = Sys.Date() - 1, until = Sys.Date())
-#> # A tibble: 219 x 49
+#> # A tibble: 670 x 121
 #>    identifier datestamp setSpec setSpec.1 setSpec.2 setSpec.3 title creator
 #>    <chr>      <chr>     <chr>   <chr>     <chr>     <chr>     <chr> <chr>  
-#>  1 oai:panga… 2019-08-… citable hmmv      suppleme… topicOce… Biog… Lichts…
-#>  2 oai:panga… 2019-08-… citable suppleme… <NA>      <NA>      Geoc… Frey, …
-#>  3 oai:panga… 2019-08-… citable suppleme… <NA>      <NA>      Accu… Lyle, …
-#>  4 oai:panga… 2019-08-… citable suppleme… <NA>      <NA>      Carb… Lyle, …
-#>  5 oai:panga… 2019-08-… citable suppleme… topicChe… topicGeo… U-Pb… O'Sull…
-#>  6 oai:panga… 2019-08-… citable suppleme… topicLan… topicLit… Pala… Descha…
-#>  7 oai:panga… 2019-08-… citable suppleme… <NA>      <NA>      Heav… Deng, …
-#>  8 oai:panga… 2019-08-… BCCR    suppleme… topicLan… topicLit… High… Risebr…
-#>  9 oai:panga… 2019-08-… citable suppleme… <NA>      <NA>      Detr… Kenny,…
-#> 10 oai:panga… 2019-08-… citable suppleme… <NA>      <NA>      Seaf… Rybako…
-#> # … with 209 more rows, and 41 more variables: creator.1 <chr>,
-#> #   creator.2 <chr>, creator.3 <chr>, creator.4 <chr>, source <chr>,
-#> #   publisher <chr>, date <chr>, type <chr>, format <chr>,
-#> #   identifier.2 <chr>, identifier.1 <chr>, description <chr>,
-#> #   language <chr>, rights <chr>, rights.1 <chr>, coverage <chr>,
-#> #   subject <chr>, setSpec.4 <chr>, creator.5 <chr>, creator.6 <chr>,
-#> #   relation <chr>, relation.1 <chr>, relation.2 <chr>, relation.3 <chr>,
-#> #   relation.4 <chr>, creator.7 <chr>, creator.8 <chr>, creator.9 <chr>,
-#> #   creator.10 <chr>, creator.11 <chr>, creator.12 <chr>,
-#> #   creator.13 <chr>, creator.14 <chr>, creator.15 <chr>,
-#> #   creator.16 <chr>, setSpec.5 <chr>, source.1 <chr>, relation.5 <chr>,
-#> #   relation.6 <chr>, relation.7 <chr>, relation.8 <chr>
+#>  1 oai:panga… 2019-09-… citable suppleme… topicBio… topicPal… Calc… Hildeb…
+#>  2 oai:panga… 2019-09-… citable suppleme… <NA>      <NA>      Mari… Schefu…
+#>  3 oai:panga… 2019-09-… citable suppleme… topicOce… <NA>      Lipi… Schefu…
+#>  4 oai:panga… 2019-09-… citable suppleme… topicChe… topicLit… Age … Verste…
+#>  5 oai:panga… 2019-09-… citable suppleme… topicChe… topicLit… Comp… Liu, X…
+#>  6 oai:panga… 2019-09-… citable suppleme… topicGeo… <NA>      Alke… Leider…
+#>  7 oai:panga… 2019-09-… citable suppleme… topicLit… topicOce… Sedi… Verste…
+#>  8 oai:panga… 2019-09-… citable suppleme… topicLan… topicLit… Radi… Chen, …
+#>  9 oai:panga… 2019-09-… citable suppleme… topicBio… topicEco… Dino… Zonnev…
+#> 10 oai:panga… 2019-09-… citable suppleme… <NA>      <NA>      Paly… Averdi…
+#> # … with 660 more rows, and 113 more variables: creator.1 <chr>,
+#> #   creator.2 <chr>, source <chr>, publisher <chr>, date <chr>,
+#> #   type <chr>, format <chr>, identifier.2 <chr>, identifier.1 <chr>,
+#> #   description <chr>, language <chr>, rights <chr>, rights.1 <chr>,
+#> #   relation <chr>, coverage <chr>, subject <chr>, creator.3 <chr>,
+#> #   creator.4 <chr>, creator.5 <chr>, setSpec.4 <chr>, creator.6 <chr>,
+#> #   creator.7 <chr>, creator.8 <chr>, creator.9 <chr>, creator.10 <chr>,
+#> #   relation.1 <chr>, creator.11 <chr>, creator.12 <chr>,
+#> #   creator.13 <chr>, relation.2 <chr>, relation.3 <chr>,
+#> #   relation.4 <chr>, setSpec.5 <chr>, setSpec.6 <chr>, setSpec.7 <chr>,
+#> #   creator.14 <chr>, creator.15 <chr>, creator.16 <chr>,
+#> #   creator.17 <chr>, creator.18 <chr>, creator.19 <chr>,
+#> #   creator.20 <chr>, creator.21 <chr>, creator.22 <chr>,
+#> #   creator.23 <chr>, creator.24 <chr>, creator.25 <chr>,
+#> #   creator.26 <chr>, creator.27 <chr>, creator.28 <chr>,
+#> #   creator.29 <chr>, creator.30 <chr>, creator.31 <chr>,
+#> #   creator.32 <chr>, creator.33 <chr>, creator.34 <chr>,
+#> #   creator.35 <chr>, creator.36 <chr>, creator.37 <chr>,
+#> #   creator.38 <chr>, creator.39 <chr>, creator.40 <chr>,
+#> #   creator.41 <chr>, relation.5 <chr>, relation.6 <chr>,
+#> #   relation.7 <chr>, relation.8 <chr>, relation.9 <chr>,
+#> #   relation.10 <chr>, relation.11 <chr>, relation.12 <chr>,
+#> #   relation.13 <chr>, relation.14 <chr>, relation.15 <chr>,
+#> #   relation.16 <chr>, relation.17 <chr>, relation.18 <chr>,
+#> #   relation.19 <chr>, relation.20 <chr>, relation.21 <chr>,
+#> #   relation.22 <chr>, relation.23 <chr>, relation.24 <chr>,
+#> #   relation.25 <chr>, relation.26 <chr>, relation.27 <chr>,
+#> #   relation.28 <chr>, relation.29 <chr>, relation.30 <chr>,
+#> #   relation.31 <chr>, relation.32 <chr>, relation.33 <chr>,
+#> #   relation.34 <chr>, relation.35 <chr>, relation.36 <chr>,
+#> #   relation.37 <chr>, relation.38 <chr>, relation.39 <chr>,
+#> #   relation.40 <chr>, relation.41 <chr>, …
 ```
 
 ### Get a record
