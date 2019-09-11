@@ -6,7 +6,7 @@ http_interactions:
       encoding: ''
       string: ''
     headers:
-      User-Agent: libcurl/7.54.0 r-curl/4.0 crul/0.8.4
+      User-Agent: libcurl/7.54.0 r-curl/4.0 crul/0.8.4.9100
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
   response:
@@ -18,7 +18,7 @@ http_interactions:
       cache-control: private, max-age=10800, pre-check=10800
       content-encoding: gzip
       content-type: application/json; charset=UTF-8
-      date: Tue, 13 Aug 2019 21:53:52 GMT
+      date: Wed, 11 Sep 2019 20:33:04 GMT
       last-modified: Fri, 15 Apr 2016 11:55:50 GMT
       server: PANGAEA/2.0
       status: 'HTTP/2 200 '
@@ -30,157 +30,10 @@ http_interactions:
       x-frame-options: SAMEORIGIN
       x-ua-compatible: IE=Edge
     body:
-      encoding: UTF-8
-      string: '{"results":[{"URI":"doi:10.1594\/PANGAEA.892812","score":21.095936,"html":"<li><div
-        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.892812\"
-        target=\"_self\" class=\"dataset-link\"><strong>Quade, M; Brüggemann, N; Graf,
-        A et al. (2018):<\/strong> Data for kinetic isotopic fractionation of water
-        during bare soil evaporation<\/a><\/div><table class=\"result\" summary=\"Dataset
-        reference and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"title\">Supplement
-        to:<\/td><td class=\"content\"><strong>Quade, M; Brüggemann, N; Graf, A et
-        al. (2018):<\/strong> Investigation of Kinetic Isotopic Fractionation of Water
-        during Bare Soil Evaporation. <em>Water Resources Research<\/em><\/td><\/tr><tr><td
-        class=\"title\">Size:<\/td><td class=\"content\">5 datasets<\/td><\/tr><\/table><div
-        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.892812\"
-        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.892812<\/a>
-        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
-        The value is not absolute and only suitable to compare hits from the same
-        result set.\">Score: 21.1<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.895383","score":19.425049,"html":"<li><div
-        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.895383\"
-        target=\"_self\" class=\"dataset-link\"><strong>Korman, B (2018):<\/strong>
-        Lake water analysis from the Rappbode dam in Saxony-Anhalt during the Inland
-        Water Remote Sensing Validation Campaign 2017<\/a><\/div><table class=\"result\"
-        summary=\"Dataset reference and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td
-        class=\"title\">Size:<\/td><td class=\"content\">1 datasets<\/td><\/tr><\/table><div
-        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.895383\"
-        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.895383<\/a>
-        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
-        The value is not absolute and only suitable to compare hits from the same
-        result set.\">Score: 19.43<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.896486","score":19.14632,"html":"<li><div
-        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.896486\"
-        target=\"_self\" class=\"dataset-link\"><strong>Kulla, BS; Ritter, C (2018):<\/strong>
-        Water vapour mixing ratio over Ny-Alesund from LiDAR measurements 2015-2018<\/a><\/div><table
-        class=\"result\" summary=\"Dataset reference and size\" cellspacing=\"0\"
-        cellpadding=\"0\"><tr><td class=\"title\">Supplement to:<\/td><td class=\"content\"><strong>Kulla,
-        BS; Ritter, C (2019):<\/strong> Water vapor calibration: Using a Raman lidar
-        and radiosoundings to obtain highly resolved water vapor profiles. <em>Remote
-        Sensing<\/em><\/td><\/tr><tr><td class=\"title\">Size:<\/td><td class=\"content\">5
-        datasets<\/td><\/tr><\/table><div class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.896486\"
-        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.896486<\/a>
-        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
-        The value is not absolute and only suitable to compare hits from the same
-        result set.\">Score: 19.15<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.862525","score":18.622866,"html":"<li><div
-        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.862525\"
-        target=\"_self\" class=\"dataset-link\"><strong>Wang, X; Zhang, K; Wu, S et
-        al. (2016):<\/strong> Long-term global GPS-derived precipitable water vapor
-        data set<\/a><\/div><table class=\"result\" summary=\"Dataset reference and
-        size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"title\">Supplement
-        to:<\/td><td class=\"content\"><strong>Wang, X; Zhang, K; Wu, S et al. (2016):<\/strong>
-        Water vapor-weighted mean temperature and its impact on the determination
-        of precipitable water vapor and its linear trend. <em>Journal of Geophysical
-        Research-Atmospheres<\/em><\/td><\/tr><tr><td class=\"title\">Size:<\/td><td
-        class=\"content\">372 datasets<\/td><\/tr><\/table><div class=\"datasetid\"><a
-        href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.862525\" target=\"_self\"
-        class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.862525<\/a>
-        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
-        The value is not absolute and only suitable to compare hits from the same
-        result set.\">Score: 18.62<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.894908","score":18.485245,"html":"<li><div
-        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.894908\"
-        target=\"_self\" class=\"dataset-link\"><strong>Martinez, A; Awad, AM; Herkert,
-        NJ et al. (2018):<\/strong> PCB congener data of gas-phase, freely-dissolved
-        water, air-water fugacity ratios and air-water fluxes in Indiana Harbor and
-        Ship Canal, IN, USA<\/a><\/div><table class=\"result\" summary=\"Dataset reference
-        and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"title\">Supplement
-        to:<\/td><td class=\"content\"><strong>Martinez, A; Awad, AM; Herkert, NJ
-        et al. (2019):<\/strong> Determination of PCB fluxes from Indiana Harbor and
-        Ship Canal using dual-deployed air and water passive samplers. <em>Environmental
-        Pollution<\/em><\/td><\/tr><tr><td class=\"title\">Size:<\/td><td class=\"content\">15
-        datasets<\/td><\/tr><\/table><div class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.894908\"
-        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.894908<\/a>
-        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
-        The value is not absolute and only suitable to compare hits from the same
-        result set.\">Score: 18.49<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.881731","score":18.367435,"html":"<li><div
-        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.881731\"
-        target=\"_self\" class=\"dataset-link\"><strong>Makarieva, O; Nesterova, N;
-        Lebedeva, L et al. (2017):<\/strong> Water-balance and hydrology database
-        for a mountainous permafrost watershed in the up-streams of the Kolyma River,
-        Russia - the Kolyma Water-Balance Station, 1948-1997<\/a><\/div><table class=\"result\"
-        summary=\"Dataset reference and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td
-        class=\"title\">Supplement to:<\/td><td class=\"content\"><strong>Makarieva,
-        O; Nesterova, N; Lebedeva, L et al. (2018):<\/strong> Water balance and hydrology
-        research in a mountainous permafrost watershed in upland streams of the Kolyma
-        River, Russia: a database from the Kolyma Water-Balance Station, 1948-1997.
-        <em>Earth System Science Data<\/em><\/td><\/tr><tr><td class=\"title\">Size:<\/td><td
-        class=\"content\">12 datasets<\/td><\/tr><\/table><div class=\"datasetid\"><a
-        href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.881731\" target=\"_self\"
-        class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.881731<\/a>
-        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
-        The value is not absolute and only suitable to compare hits from the same
-        result set.\">Score: 18.37<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.897545","score":18.214436,"html":"<li><div
-        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.897545\"
-        target=\"_self\" class=\"dataset-link\"><strong>Boesen, AC; Martinez, A; Hornbuckle,
-        KC (2019):<\/strong> PCB congener data of gas-phase, dissolved water, air-water
-        fluxes in southern Lake Michigan, 2010<\/a><\/div><table class=\"result\"
-        summary=\"Dataset reference and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td
-        class=\"title\">Supplement to:<\/td><td class=\"content\"><strong>Boesen,
-        AC; Martinez, A; Hornbuckle, KC (2019):<\/strong> Air-water PCB fluxes from
-        southwestern Lake Michigan revisited. <em>Environmental Science and Pollution
-        Research<\/em><\/td><\/tr><tr><td class=\"title\">Size:<\/td><td class=\"content\">9
-        datasets<\/td><\/tr><\/table><div class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.897545\"
-        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.897545<\/a>
-        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
-        The value is not absolute and only suitable to compare hits from the same
-        result set.\">Score: 18.21<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.843740","score":18.091997,"html":"<li><div
-        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.843740\"
-        target=\"_self\" class=\"dataset-link\"><strong>Holinde, L; Badewien, TH;
-        Freund, JA et al. (2015):<\/strong> Pressure and processed water levels from
-        the Time Series Station Spiekeroog, 2005-2011<\/a><\/div><table class=\"result\"
-        summary=\"Dataset reference and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td
-        class=\"title\">Supplement to:<\/td><td class=\"content\"><strong>Holinde,
-        L; Badewien, TH; Freund, JA et al. (2015):<\/strong> Processing of water level
-        derived from water pressure data at the Time Series Station Spiekeroog. <em>Earth
-        System Science Data<\/em><\/td><\/tr><tr><td class=\"title\">Size:<\/td><td
-        class=\"content\">7 datasets<\/td><\/tr><\/table><div class=\"datasetid\"><a
-        href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.843740\" target=\"_self\"
-        class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.843740<\/a>
-        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
-        The value is not absolute and only suitable to compare hits from the same
-        result set.\">Score: 18.09<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.824826","score":17.945074,"html":"<li><div
-        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.824826\"
-        target=\"_self\" class=\"dataset-link\"><strong>Macke, A; Zoll, Y; Wassmann,
-        A et al. (2013):<\/strong> Continuous liquid water path (LWP) and integrated
-        water vapour (IWV) measurements during POLARSTERN cruise ANT-XXIV\/1<\/a><\/div><table
-        class=\"result\" summary=\"Dataset reference and size\" cellspacing=\"0\"
-        cellpadding=\"0\"><tr><td class=\"title\">Related to:<\/td><td class=\"content\"><strong>Macke,
-        A; Kalisch, J (2013):<\/strong> Total Sky Imager observations and continuous
-        radiation measurements during POLARSTERN cruise ANT-XXVI\/1 with links to
-        images. <em>Leibniz-Institut für Troposphärenforschung e.V., Leipzig<\/em><\/td><\/tr><tr><td
-        class=\"title\">Size:<\/td><td class=\"content\">24 datasets<\/td><\/tr><\/table><div
-        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.824826\"
-        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.824826<\/a>
-        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
-        The value is not absolute and only suitable to compare hits from the same
-        result set.\">Score: 17.95<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.823971","score":17.945074,"html":"<li><div
-        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.823971\"
-        target=\"_self\" class=\"dataset-link\"><strong>Macke, A; Zoll, Y; Pospichal,
-        B (2013):<\/strong> Continuous liquid water path (LWP) and integrated water
-        vapour (IWV) measurements during POLARSTERN cruise ANT-XXVI\/1<\/a><\/div><table
-        class=\"result\" summary=\"Dataset reference and size\" cellspacing=\"0\"
-        cellpadding=\"0\"><tr><td class=\"title\">Related to:<\/td><td class=\"content\"><strong>Macke,
-        A; Kalisch, J (2013):<\/strong> Total Sky Imager observations and continuous
-        radiation measurements during POLARSTERN cruise ANT-XXVI\/1 with links to
-        images. <em>Leibniz-Institut für Troposphärenforschung e.V., Leipzig<\/em><\/td><\/tr><tr><td
-        class=\"title\">Size:<\/td><td class=\"content\">37 datasets<\/td><\/tr><\/table><div
-        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.823971\"
-        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.823971<\/a>
-        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
-        The value is not absolute and only suitable to compare hits from the same
-        result set.\">Score: 17.95<\/span><\/div><\/li>"}],"facets":null,"maxScore":21.095936,"offset":0,"queryIdentifier":"6ff559e9-48b9-3969-bff9-c4481a2005ad","session":"o3magprf6vnanvefq7v6fvqtq3","timeInDatabase":26,"totalCount":176006,"htmlSummary":"<strong>176006
-        datasets<\/strong> found on search for <strong title=\"Query: &raquo;water&laquo;\">&raquo;water&laquo;<\/strong>","htmlSnippetRSS":"<link
-        rel=\"alternate\" title=\"PANGAEA latest datasets about &quot;water&quot;\"
-        type=\"application\/rss+xml\" href=\"\/tools\/latest-datasets.rss?q=water&amp;count=10\">"}'
-  recorded_at: 2019-08-13 21:53:54 GMT
-  recorded_with: vcr/0.2.6, webmockr/0.4.0
+      encoding: ASCII-8BIT
+      string: eyJyZXN1bHRzIjpbeyJVUkkiOiJkb2k6MTAuMTU5NFwvUEFOR0FFQS44OTI4MTIiLCJzY29yZSI6MjEuMTE4ODM0LCJodG1sIjoiPGxpPjxkaXYgY2xhc3M9XCJjaXRhdGlvblwiPjxhIGhyZWY9XCJodHRwczpcL1wvZG9pLnBhbmdhZWEuZGVcLzEwLjE1OTRcL1BBTkdBRUEuODkyODEyXCIgdGFyZ2V0PVwiX3NlbGZcIiBjbGFzcz1cImRhdGFzZXQtbGlua1wiPjxzdHJvbmc+UXVhZGUsIE07IEJyw7xnZ2VtYW5uLCBOOyBHcmFmLCBBIGV0IGFsLiAoMjAxOCk6PFwvc3Ryb25nPiBEYXRhIGZvciBraW5ldGljIGlzb3RvcGljIGZyYWN0aW9uYXRpb24gb2Ygd2F0ZXIgZHVyaW5nIGJhcmUgc29pbCBldmFwb3JhdGlvbjxcL2E+PFwvZGl2Pjx0YWJsZSBjbGFzcz1cInJlc3VsdFwiIHN1bW1hcnk9XCJEYXRhc2V0IHJlZmVyZW5jZSBhbmQgc2l6ZVwiIGNlbGxzcGFjaW5nPVwiMFwiIGNlbGxwYWRkaW5nPVwiMFwiPjx0cj48dGQgY2xhc3M9XCJ0aXRsZVwiPlN1cHBsZW1lbnQgdG86PFwvdGQ+PHRkIGNsYXNzPVwiY29udGVudFwiPjxzdHJvbmc+UXVhZGUsIE07IEJyw7xnZ2VtYW5uLCBOOyBHcmFmLCBBIGV0IGFsLiAoMjAxOCk6PFwvc3Ryb25nPiBJbnZlc3RpZ2F0aW9uIG9mIEtpbmV0aWMgSXNvdG9waWMgRnJhY3Rpb25hdGlvbiBvZiBXYXRlciBkdXJpbmcgQmFyZSBTb2lsIEV2YXBvcmF0aW9uLiA8ZW0+V2F0ZXIgUmVzb3VyY2VzIFJlc2VhcmNoPFwvZW0+PFwvdGQ+PFwvdHI+PHRyPjx0ZCBjbGFzcz1cInRpdGxlXCI+U2l6ZTo8XC90ZD48dGQgY2xhc3M9XCJjb250ZW50XCI+NSBkYXRhc2V0czxcL3RkPjxcL3RyPjxcL3RhYmxlPjxkaXYgY2xhc3M9XCJkYXRhc2V0aWRcIj48YSBocmVmPVwiaHR0cHM6XC9cL2RvaS5wYW5nYWVhLmRlXC8xMC4xNTk0XC9QQU5HQUVBLjg5MjgxMlwiIHRhcmdldD1cIl9zZWxmXCIgY2xhc3M9XCJkYXRhc2V0LWxpbmsgZG9pLWxpbmtcIj5odHRwczpcL1wvZG9pLm9yZ1wvMTAuMTU5NFwvUEFOR0FFQS44OTI4MTI8XC9hPiAtIDxzcGFuIHRpdGxlPVwiVGhlIHNjb3JlIGlzIGEgbWVhc3VyZW1lbnQgb2YgcmVsZXZhbmN5IChzZWUgVEYtSURGIGFsZ29yaXRobSkuIFRoZSB2YWx1ZSBpcyBub3QgYWJzb2x1dGUgYW5kIG9ubHkgc3VpdGFibGUgdG8gY29tcGFyZSBoaXRzIGZyb20gdGhlIHNhbWUgcmVzdWx0IHNldC5cIj5TY29yZTogMjEuMTI8XC9zcGFuPjxcL2Rpdj48XC9saT4ifSx7IlVSSSI6ImRvaToxMC4xNTk0XC9QQU5HQUVBLjg5NTM4MyIsInNjb3JlIjoxOS40NDE4MSwiaHRtbCI6IjxsaT48ZGl2IGNsYXNzPVwiY2l0YXRpb25cIj48YSBocmVmPVwiaHR0cHM6XC9cL2RvaS5wYW5nYWVhLmRlXC8xMC4xNTk0XC9QQU5HQUVBLjg5NTM4M1wiIHRhcmdldD1cIl9zZWxmXCIgY2xhc3M9XCJkYXRhc2V0LWxpbmtcIj48c3Ryb25nPktvcm1hbiwgQiAoMjAxOCk6PFwvc3Ryb25nPiBMYWtlIHdhdGVyIGFuYWx5c2lzIGZyb20gdGhlIFJhcHBib2RlIGRhbSBpbiBTYXhvbnktQW5oYWx0IGR1cmluZyB0aGUgSW5sYW5kIFdhdGVyIFJlbW90ZSBTZW5zaW5nIFZhbGlkYXRpb24gQ2FtcGFpZ24gMjAxNzxcL2E+PFwvZGl2Pjx0YWJsZSBjbGFzcz1cInJlc3VsdFwiIHN1bW1hcnk9XCJEYXRhc2V0IHJlZmVyZW5jZSBhbmQgc2l6ZVwiIGNlbGxzcGFjaW5nPVwiMFwiIGNlbGxwYWRkaW5nPVwiMFwiPjx0cj48dGQgY2xhc3M9XCJ0aXRsZVwiPlNpemU6PFwvdGQ+PHRkIGNsYXNzPVwiY29udGVudFwiPjEgZGF0YXNldHM8XC90ZD48XC90cj48XC90YWJsZT48ZGl2IGNsYXNzPVwiZGF0YXNldGlkXCI+PGEgaHJlZj1cImh0dHBzOlwvXC9kb2kucGFuZ2FlYS5kZVwvMTAuMTU5NFwvUEFOR0FFQS44OTUzODNcIiB0YXJnZXQ9XCJfc2VsZlwiIGNsYXNzPVwiZGF0YXNldC1saW5rIGRvaS1saW5rXCI+aHR0cHM6XC9cL2RvaS5vcmdcLzEwLjE1OTRcL1BBTkdBRUEuODk1MzgzPFwvYT4gLSA8c3BhbiB0aXRsZT1cIlRoZSBzY29yZSBpcyBhIG1lYXN1cmVtZW50IG9mIHJlbGV2YW5jeSAoc2VlIFRGLUlERiBhbGdvcml0aG0pLiBUaGUgdmFsdWUgaXMgbm90IGFic29sdXRlIGFuZCBvbmx5IHN1aXRhYmxlIHRvIGNvbXBhcmUgaGl0cyBmcm9tIHRoZSBzYW1lIHJlc3VsdCBzZXQuXCI+U2NvcmU6IDE5LjQ0PFwvc3Bhbj48XC9kaXY+PFwvbGk+In0seyJVUkkiOiJkb2k6MTAuMTU5NFwvUEFOR0FFQS44OTY0ODYiLCJzY29yZSI6MTkuMTY3NjA2LCJodG1sIjoiPGxpPjxkaXYgY2xhc3M9XCJjaXRhdGlvblwiPjxhIGhyZWY9XCJodHRwczpcL1wvZG9pLnBhbmdhZWEuZGVcLzEwLjE1OTRcL1BBTkdBRUEuODk2NDg2XCIgdGFyZ2V0PVwiX3NlbGZcIiBjbGFzcz1cImRhdGFzZXQtbGlua1wiPjxzdHJvbmc+S3VsbGEsIEJTOyBSaXR0ZXIsIEMgKDIwMTgpOjxcL3N0cm9uZz4gV2F0ZXIgdmFwb3VyIG1peGluZyByYXRpbyBvdmVyIE55LUFsZXN1bmQgZnJvbSBMaURBUiBtZWFzdXJlbWVudHMgMjAxNS0yMDE4PFwvYT48XC9kaXY+PHRhYmxlIGNsYXNzPVwicmVzdWx0XCIgc3VtbWFyeT1cIkRhdGFzZXQgcmVmZXJlbmNlIGFuZCBzaXplXCIgY2VsbHNwYWNpbmc9XCIwXCIgY2VsbHBhZGRpbmc9XCIwXCI+PHRyPjx0ZCBjbGFzcz1cInRpdGxlXCI+U3VwcGxlbWVudCB0bzo8XC90ZD48dGQgY2xhc3M9XCJjb250ZW50XCI+PHN0cm9uZz5LdWxsYSwgQlM7IFJpdHRlciwgQyAoMjAxOSk6PFwvc3Ryb25nPiBXYXRlciB2YXBvciBjYWxpYnJhdGlvbjogVXNpbmcgYSBSYW1hbiBsaWRhciBhbmQgcmFkaW9zb3VuZGluZ3MgdG8gb2J0YWluIGhpZ2hseSByZXNvbHZlZCB3YXRlciB2YXBvciBwcm9maWxlcy4gPGVtPlJlbW90ZSBTZW5zaW5nPFwvZW0+PFwvdGQ+PFwvdHI+PHRyPjx0ZCBjbGFzcz1cInRpdGxlXCI+U2l6ZTo8XC90ZD48dGQgY2xhc3M9XCJjb250ZW50XCI+NSBkYXRhc2V0czxcL3RkPjxcL3RyPjxcL3RhYmxlPjxkaXYgY2xhc3M9XCJkYXRhc2V0aWRcIj48YSBocmVmPVwiaHR0cHM6XC9cL2RvaS5wYW5nYWVhLmRlXC8xMC4xNTk0XC9QQU5HQUVBLjg5NjQ4NlwiIHRhcmdldD1cIl9zZWxmXCIgY2xhc3M9XCJkYXRhc2V0LWxpbmsgZG9pLWxpbmtcIj5odHRwczpcL1wvZG9pLm9yZ1wvMTAuMTU5NFwvUEFOR0FFQS44OTY0ODY8XC9hPiAtIDxzcGFuIHRpdGxlPVwiVGhlIHNjb3JlIGlzIGEgbWVhc3VyZW1lbnQgb2YgcmVsZXZhbmN5IChzZWUgVEYtSURGIGFsZ29yaXRobSkuIFRoZSB2YWx1ZSBpcyBub3QgYWJzb2x1dGUgYW5kIG9ubHkgc3VpdGFibGUgdG8gY29tcGFyZSBoaXRzIGZyb20gdGhlIHNhbWUgcmVzdWx0IHNldC5cIj5TY29yZTogMTkuMTc8XC9zcGFuPjxcL2Rpdj48XC9saT4ifSx7IlVSSSI6ImRvaToxMC4xNTk0XC9QQU5HQUVBLjg2MjUyNSIsInNjb3JlIjoxOC42Mzc4MDgsImh0bWwiOiI8bGk+PGRpdiBjbGFzcz1cImNpdGF0aW9uXCI+PGEgaHJlZj1cImh0dHBzOlwvXC9kb2kucGFuZ2FlYS5kZVwvMTAuMTU5NFwvUEFOR0FFQS44NjI1MjVcIiB0YXJnZXQ9XCJfc2VsZlwiIGNsYXNzPVwiZGF0YXNldC1saW5rXCI+PHN0cm9uZz5XYW5nLCBYOyBaaGFuZywgSzsgV3UsIFMgZXQgYWwuICgyMDE2KTo8XC9zdHJvbmc+IExvbmctdGVybSBnbG9iYWwgR1BTLWRlcml2ZWQgcHJlY2lwaXRhYmxlIHdhdGVyIHZhcG9yIGRhdGEgc2V0PFwvYT48XC9kaXY+PHRhYmxlIGNsYXNzPVwicmVzdWx0XCIgc3VtbWFyeT1cIkRhdGFzZXQgcmVmZXJlbmNlIGFuZCBzaXplXCIgY2VsbHNwYWNpbmc9XCIwXCIgY2VsbHBhZGRpbmc9XCIwXCI+PHRyPjx0ZCBjbGFzcz1cInRpdGxlXCI+U3VwcGxlbWVudCB0bzo8XC90ZD48dGQgY2xhc3M9XCJjb250ZW50XCI+PHN0cm9uZz5XYW5nLCBYOyBaaGFuZywgSzsgV3UsIFMgZXQgYWwuICgyMDE2KTo8XC9zdHJvbmc+IFdhdGVyIHZhcG9yLXdlaWdodGVkIG1lYW4gdGVtcGVyYXR1cmUgYW5kIGl0cyBpbXBhY3Qgb24gdGhlIGRldGVybWluYXRpb24gb2YgcHJlY2lwaXRhYmxlIHdhdGVyIHZhcG9yIGFuZCBpdHMgbGluZWFyIHRyZW5kLiA8ZW0+Sm91cm5hbCBvZiBHZW9waHlzaWNhbCBSZXNlYXJjaC1BdG1vc3BoZXJlczxcL2VtPjxcL3RkPjxcL3RyPjx0cj48dGQgY2xhc3M9XCJ0aXRsZVwiPlNpemU6PFwvdGQ+PHRkIGNsYXNzPVwiY29udGVudFwiPjM3MiBkYXRhc2V0czxcL3RkPjxcL3RyPjxcL3RhYmxlPjxkaXYgY2xhc3M9XCJkYXRhc2V0aWRcIj48YSBocmVmPVwiaHR0cHM6XC9cL2RvaS5wYW5nYWVhLmRlXC8xMC4xNTk0XC9QQU5HQUVBLjg2MjUyNVwiIHRhcmdldD1cIl9zZWxmXCIgY2xhc3M9XCJkYXRhc2V0LWxpbmsgZG9pLWxpbmtcIj5odHRwczpcL1wvZG9pLm9yZ1wvMTAuMTU5NFwvUEFOR0FFQS44NjI1MjU8XC9hPiAtIDxzcGFuIHRpdGxlPVwiVGhlIHNjb3JlIGlzIGEgbWVhc3VyZW1lbnQgb2YgcmVsZXZhbmN5IChzZWUgVEYtSURGIGFsZ29yaXRobSkuIFRoZSB2YWx1ZSBpcyBub3QgYWJzb2x1dGUgYW5kIG9ubHkgc3VpdGFibGUgdG8gY29tcGFyZSBoaXRzIGZyb20gdGhlIHNhbWUgcmVzdWx0IHNldC5cIj5TY29yZTogMTguNjQ8XC9zcGFuPjxcL2Rpdj48XC9saT4ifSx7IlVSSSI6ImRvaToxMC4xNTk0XC9QQU5HQUVBLjg5NDkwOCIsInNjb3JlIjoxOC41MTE0MjEsImh0bWwiOiI8bGk+PGRpdiBjbGFzcz1cImNpdGF0aW9uXCI+PGEgaHJlZj1cImh0dHBzOlwvXC9kb2kucGFuZ2FlYS5kZVwvMTAuMTU5NFwvUEFOR0FFQS44OTQ5MDhcIiB0YXJnZXQ9XCJfc2VsZlwiIGNsYXNzPVwiZGF0YXNldC1saW5rXCI+PHN0cm9uZz5NYXJ0aW5leiwgQTsgQXdhZCwgQU07IEhlcmtlcnQsIE5KIGV0IGFsLiAoMjAxOCk6PFwvc3Ryb25nPiBQQ0IgY29uZ2VuZXIgZGF0YSBvZiBnYXMtcGhhc2UsIGZyZWVseS1kaXNzb2x2ZWQgd2F0ZXIsIGFpci13YXRlciBmdWdhY2l0eSByYXRpb3MgYW5kIGFpci13YXRlciBmbHV4ZXMgaW4gSW5kaWFuYSBIYXJib3IgYW5kIFNoaXAgQ2FuYWwsIElOLCBVU0E8XC9hPjxcL2Rpdj48dGFibGUgY2xhc3M9XCJyZXN1bHRcIiBzdW1tYXJ5PVwiRGF0YXNldCByZWZlcmVuY2UgYW5kIHNpemVcIiBjZWxsc3BhY2luZz1cIjBcIiBjZWxscGFkZGluZz1cIjBcIj48dHI+PHRkIGNsYXNzPVwidGl0bGVcIj5TdXBwbGVtZW50IHRvOjxcL3RkPjx0ZCBjbGFzcz1cImNvbnRlbnRcIj48c3Ryb25nPk1hcnRpbmV6LCBBOyBBd2FkLCBBTTsgSGVya2VydCwgTkogZXQgYWwuICgyMDE5KTo8XC9zdHJvbmc+IERldGVybWluYXRpb24gb2YgUENCIGZsdXhlcyBmcm9tIEluZGlhbmEgSGFyYm9yIGFuZCBTaGlwIENhbmFsIHVzaW5nIGR1YWwtZGVwbG95ZWQgYWlyIGFuZCB3YXRlciBwYXNzaXZlIHNhbXBsZXJzLiA8ZW0+RW52aXJvbm1lbnRhbCBQb2xsdXRpb248XC9lbT48XC90ZD48XC90cj48dHI+PHRkIGNsYXNzPVwidGl0bGVcIj5TaXplOjxcL3RkPjx0ZCBjbGFzcz1cImNvbnRlbnRcIj4xNSBkYXRhc2V0czxcL3RkPjxcL3RyPjxcL3RhYmxlPjxkaXYgY2xhc3M9XCJkYXRhc2V0aWRcIj48YSBocmVmPVwiaHR0cHM6XC9cL2RvaS5wYW5nYWVhLmRlXC8xMC4xNTk0XC9QQU5HQUVBLjg5NDkwOFwiIHRhcmdldD1cIl9zZWxmXCIgY2xhc3M9XCJkYXRhc2V0LWxpbmsgZG9pLWxpbmtcIj5odHRwczpcL1wvZG9pLm9yZ1wvMTAuMTU5NFwvUEFOR0FFQS44OTQ5MDg8XC9hPiAtIDxzcGFuIHRpdGxlPVwiVGhlIHNjb3JlIGlzIGEgbWVhc3VyZW1lbnQgb2YgcmVsZXZhbmN5IChzZWUgVEYtSURGIGFsZ29yaXRobSkuIFRoZSB2YWx1ZSBpcyBub3QgYWJzb2x1dGUgYW5kIG9ubHkgc3VpdGFibGUgdG8gY29tcGFyZSBoaXRzIGZyb20gdGhlIHNhbWUgcmVzdWx0IHNldC5cIj5TY29yZTogMTguNTE8XC9zcGFuPjxcL2Rpdj48XC9saT4ifSx7IlVSSSI6ImRvaToxMC4xNTk0XC9QQU5HQUVBLjg4MTczMSIsInNjb3JlIjoxOC4zNzkxOTYsImh0bWwiOiI8bGk+PGRpdiBjbGFzcz1cImNpdGF0aW9uXCI+PGEgaHJlZj1cImh0dHBzOlwvXC9kb2kucGFuZ2FlYS5kZVwvMTAuMTU5NFwvUEFOR0FFQS44ODE3MzFcIiB0YXJnZXQ9XCJfc2VsZlwiIGNsYXNzPVwiZGF0YXNldC1saW5rXCI+PHN0cm9uZz5NYWthcmlldmEsIE87IE5lc3Rlcm92YSwgTjsgTGViZWRldmEsIEwgZXQgYWwuICgyMDE3KTo8XC9zdHJvbmc+IFdhdGVyLWJhbGFuY2UgYW5kIGh5ZHJvbG9neSBkYXRhYmFzZSBmb3IgYSBtb3VudGFpbm91cyBwZXJtYWZyb3N0IHdhdGVyc2hlZCBpbiB0aGUgdXAtc3RyZWFtcyBvZiB0aGUgS29seW1hIFJpdmVyLCBSdXNzaWEgLSB0aGUgS29seW1hIFdhdGVyLUJhbGFuY2UgU3RhdGlvbiwgMTk0OC0xOTk3PFwvYT48XC9kaXY+PHRhYmxlIGNsYXNzPVwicmVzdWx0XCIgc3VtbWFyeT1cIkRhdGFzZXQgcmVmZXJlbmNlIGFuZCBzaXplXCIgY2VsbHNwYWNpbmc9XCIwXCIgY2VsbHBhZGRpbmc9XCIwXCI+PHRyPjx0ZCBjbGFzcz1cInRpdGxlXCI+U3VwcGxlbWVudCB0bzo8XC90ZD48dGQgY2xhc3M9XCJjb250ZW50XCI+PHN0cm9uZz5NYWthcmlldmEsIE87IE5lc3Rlcm92YSwgTjsgTGViZWRldmEsIEwgZXQgYWwuICgyMDE4KTo8XC9zdHJvbmc+IFdhdGVyIGJhbGFuY2UgYW5kIGh5ZHJvbG9neSByZXNlYXJjaCBpbiBhIG1vdW50YWlub3VzIHBlcm1hZnJvc3Qgd2F0ZXJzaGVkIGluIHVwbGFuZCBzdHJlYW1zIG9mIHRoZSBLb2x5bWEgUml2ZXIsIFJ1c3NpYTogYSBkYXRhYmFzZSBmcm9tIHRoZSBLb2x5bWEgV2F0ZXItQmFsYW5jZSBTdGF0aW9uLCAxOTQ4LTE5OTcuIDxlbT5FYXJ0aCBTeXN0ZW0gU2NpZW5jZSBEYXRhPFwvZW0+PFwvdGQ+PFwvdHI+PHRyPjx0ZCBjbGFzcz1cInRpdGxlXCI+U2l6ZTo8XC90ZD48dGQgY2xhc3M9XCJjb250ZW50XCI+MTIgZGF0YXNldHM8XC90ZD48XC90cj48XC90YWJsZT48ZGl2IGNsYXNzPVwiZGF0YXNldGlkXCI+PGEgaHJlZj1cImh0dHBzOlwvXC9kb2kucGFuZ2FlYS5kZVwvMTAuMTU5NFwvUEFOR0FFQS44ODE3MzFcIiB0YXJnZXQ9XCJfc2VsZlwiIGNsYXNzPVwiZGF0YXNldC1saW5rIGRvaS1saW5rXCI+aHR0cHM6XC9cL2RvaS5vcmdcLzEwLjE1OTRcL1BBTkdBRUEuODgxNzMxPFwvYT4gLSA8c3BhbiB0aXRsZT1cIlRoZSBzY29yZSBpcyBhIG1lYXN1cmVtZW50IG9mIHJlbGV2YW5jeSAoc2VlIFRGLUlERiBhbGdvcml0aG0pLiBUaGUgdmFsdWUgaXMgbm90IGFic29sdXRlIGFuZCBvbmx5IHN1aXRhYmxlIHRvIGNvbXBhcmUgaGl0cyBmcm9tIHRoZSBzYW1lIHJlc3VsdCBzZXQuXCI+U2NvcmU6IDE4LjM4PFwvc3Bhbj48XC9kaXY+PFwvbGk+In0seyJVUkkiOiJkb2k6MTAuMTU5NFwvUEFOR0FFQS44OTc1NDUiLCJzY29yZSI6MTguMjI2NjIsImh0bWwiOiI8bGk+PGRpdiBjbGFzcz1cImNpdGF0aW9uXCI+PGEgaHJlZj1cImh0dHBzOlwvXC9kb2kucGFuZ2FlYS5kZVwvMTAuMTU5NFwvUEFOR0FFQS44OTc1NDVcIiB0YXJnZXQ9XCJfc2VsZlwiIGNsYXNzPVwiZGF0YXNldC1saW5rXCI+PHN0cm9uZz5Cb2VzZW4sIEFDOyBNYXJ0aW5leiwgQTsgSG9ybmJ1Y2tsZSwgS0MgKDIwMTkpOjxcL3N0cm9uZz4gUENCIGNvbmdlbmVyIGRhdGEgb2YgZ2FzLXBoYXNlLCBkaXNzb2x2ZWQgd2F0ZXIsIGFpci13YXRlciBmbHV4ZXMgaW4gc291dGhlcm4gTGFrZSBNaWNoaWdhbiwgMjAxMDxcL2E+PFwvZGl2Pjx0YWJsZSBjbGFzcz1cInJlc3VsdFwiIHN1bW1hcnk9XCJEYXRhc2V0IHJlZmVyZW5jZSBhbmQgc2l6ZVwiIGNlbGxzcGFjaW5nPVwiMFwiIGNlbGxwYWRkaW5nPVwiMFwiPjx0cj48dGQgY2xhc3M9XCJ0aXRsZVwiPlN1cHBsZW1lbnQgdG86PFwvdGQ+PHRkIGNsYXNzPVwiY29udGVudFwiPjxzdHJvbmc+Qm9lc2VuLCBBQzsgTWFydGluZXosIEE7IEhvcm5idWNrbGUsIEtDICgyMDE5KTo8XC9zdHJvbmc+IEFpci13YXRlciBQQ0IgZmx1eGVzIGZyb20gc291dGh3ZXN0ZXJuIExha2UgTWljaGlnYW4gcmV2aXNpdGVkLiA8ZW0+RW52aXJvbm1lbnRhbCBTY2llbmNlIGFuZCBQb2xsdXRpb24gUmVzZWFyY2g8XC9lbT48XC90ZD48XC90cj48dHI+PHRkIGNsYXNzPVwidGl0bGVcIj5TaXplOjxcL3RkPjx0ZCBjbGFzcz1cImNvbnRlbnRcIj45IGRhdGFzZXRzPFwvdGQ+PFwvdHI+PFwvdGFibGU+PGRpdiBjbGFzcz1cImRhdGFzZXRpZFwiPjxhIGhyZWY9XCJodHRwczpcL1wvZG9pLnBhbmdhZWEuZGVcLzEwLjE1OTRcL1BBTkdBRUEuODk3NTQ1XCIgdGFyZ2V0PVwiX3NlbGZcIiBjbGFzcz1cImRhdGFzZXQtbGluayBkb2ktbGlua1wiPmh0dHBzOlwvXC9kb2kub3JnXC8xMC4xNTk0XC9QQU5HQUVBLjg5NzU0NTxcL2E+IC0gPHNwYW4gdGl0bGU9XCJUaGUgc2NvcmUgaXMgYSBtZWFzdXJlbWVudCBvZiByZWxldmFuY3kgKHNlZSBURi1JREYgYWxnb3JpdGhtKS4gVGhlIHZhbHVlIGlzIG5vdCBhYnNvbHV0ZSBhbmQgb25seSBzdWl0YWJsZSB0byBjb21wYXJlIGhpdHMgZnJvbSB0aGUgc2FtZSByZXN1bHQgc2V0LlwiPlNjb3JlOiAxOC4yMzxcL3NwYW4+PFwvZGl2PjxcL2xpPiJ9LHsiVVJJIjoiZG9pOjEwLjE1OTRcL1BBTkdBRUEuODQzNzQwIiwic2NvcmUiOjE4LjExMTk3LCJodG1sIjoiPGxpPjxkaXYgY2xhc3M9XCJjaXRhdGlvblwiPjxhIGhyZWY9XCJodHRwczpcL1wvZG9pLnBhbmdhZWEuZGVcLzEwLjE1OTRcL1BBTkdBRUEuODQzNzQwXCIgdGFyZ2V0PVwiX3NlbGZcIiBjbGFzcz1cImRhdGFzZXQtbGlua1wiPjxzdHJvbmc+SG9saW5kZSwgTDsgQmFkZXdpZW4sIFRIOyBGcmV1bmQsIEpBIGV0IGFsLiAoMjAxNSk6PFwvc3Ryb25nPiBQcmVzc3VyZSBhbmQgcHJvY2Vzc2VkIHdhdGVyIGxldmVscyBmcm9tIHRoZSBUaW1lIFNlcmllcyBTdGF0aW9uIFNwaWVrZXJvb2csIDIwMDUtMjAxMTxcL2E+PFwvZGl2Pjx0YWJsZSBjbGFzcz1cInJlc3VsdFwiIHN1bW1hcnk9XCJEYXRhc2V0IHJlZmVyZW5jZSBhbmQgc2l6ZVwiIGNlbGxzcGFjaW5nPVwiMFwiIGNlbGxwYWRkaW5nPVwiMFwiPjx0cj48dGQgY2xhc3M9XCJ0aXRsZVwiPlN1cHBsZW1lbnQgdG86PFwvdGQ+PHRkIGNsYXNzPVwiY29udGVudFwiPjxzdHJvbmc+SG9saW5kZSwgTDsgQmFkZXdpZW4sIFRIOyBGcmV1bmQsIEpBIGV0IGFsLiAoMjAxNSk6PFwvc3Ryb25nPiBQcm9jZXNzaW5nIG9mIHdhdGVyIGxldmVsIGRlcml2ZWQgZnJvbSB3YXRlciBwcmVzc3VyZSBkYXRhIGF0IHRoZSBUaW1lIFNlcmllcyBTdGF0aW9uIFNwaWVrZXJvb2cuIDxlbT5FYXJ0aCBTeXN0ZW0gU2NpZW5jZSBEYXRhPFwvZW0+PFwvdGQ+PFwvdHI+PHRyPjx0ZCBjbGFzcz1cInRpdGxlXCI+U2l6ZTo8XC90ZD48dGQgY2xhc3M9XCJjb250ZW50XCI+NyBkYXRhc2V0czxcL3RkPjxcL3RyPjxcL3RhYmxlPjxkaXYgY2xhc3M9XCJkYXRhc2V0aWRcIj48YSBocmVmPVwiaHR0cHM6XC9cL2RvaS5wYW5nYWVhLmRlXC8xMC4xNTk0XC9QQU5HQUVBLjg0Mzc0MFwiIHRhcmdldD1cIl9zZWxmXCIgY2xhc3M9XCJkYXRhc2V0LWxpbmsgZG9pLWxpbmtcIj5odHRwczpcL1wvZG9pLm9yZ1wvMTAuMTU5NFwvUEFOR0FFQS44NDM3NDA8XC9hPiAtIDxzcGFuIHRpdGxlPVwiVGhlIHNjb3JlIGlzIGEgbWVhc3VyZW1lbnQgb2YgcmVsZXZhbmN5IChzZWUgVEYtSURGIGFsZ29yaXRobSkuIFRoZSB2YWx1ZSBpcyBub3QgYWJzb2x1dGUgYW5kIG9ubHkgc3VpdGFibGUgdG8gY29tcGFyZSBoaXRzIGZyb20gdGhlIHNhbWUgcmVzdWx0IHNldC5cIj5TY29yZTogMTguMTE8XC9zcGFuPjxcL2Rpdj48XC9saT4ifSx7IlVSSSI6ImRvaToxMC4xNTk0XC9QQU5HQUVBLjgyNDgyNiIsInNjb3JlIjoxNy45NTc1MywiaHRtbCI6IjxsaT48ZGl2IGNsYXNzPVwiY2l0YXRpb25cIj48YSBocmVmPVwiaHR0cHM6XC9cL2RvaS5wYW5nYWVhLmRlXC8xMC4xNTk0XC9QQU5HQUVBLjgyNDgyNlwiIHRhcmdldD1cIl9zZWxmXCIgY2xhc3M9XCJkYXRhc2V0LWxpbmtcIj48c3Ryb25nPk1hY2tlLCBBOyBab2xsLCBZOyBXYXNzbWFubiwgQSBldCBhbC4gKDIwMTMpOjxcL3N0cm9uZz4gQ29udGludW91cyBsaXF1aWQgd2F0ZXIgcGF0aCAoTFdQKSBhbmQgaW50ZWdyYXRlZCB3YXRlciB2YXBvdXIgKElXVikgbWVhc3VyZW1lbnRzIGR1cmluZyBQT0xBUlNURVJOIGNydWlzZSBBTlQtWFhJVlwvMTxcL2E+PFwvZGl2Pjx0YWJsZSBjbGFzcz1cInJlc3VsdFwiIHN1bW1hcnk9XCJEYXRhc2V0IHJlZmVyZW5jZSBhbmQgc2l6ZVwiIGNlbGxzcGFjaW5nPVwiMFwiIGNlbGxwYWRkaW5nPVwiMFwiPjx0cj48dGQgY2xhc3M9XCJ0aXRsZVwiPlJlbGF0ZWQgdG86PFwvdGQ+PHRkIGNsYXNzPVwiY29udGVudFwiPjxzdHJvbmc+TWFja2UsIEE7IEthbGlzY2gsIEogKDIwMTMpOjxcL3N0cm9uZz4gVG90YWwgU2t5IEltYWdlciBvYnNlcnZhdGlvbnMgYW5kIGNvbnRpbnVvdXMgcmFkaWF0aW9uIG1lYXN1cmVtZW50cyBkdXJpbmcgUE9MQVJTVEVSTiBjcnVpc2UgQU5ULVhYVklcLzEgd2l0aCBsaW5rcyB0byBpbWFnZXMuIDxlbT5MZWlibml6LUluc3RpdHV0IGbDvHIgVHJvcG9zcGjDpHJlbmZvcnNjaHVuZyBlLlYuLCBMZWlwemlnPFwvZW0+PFwvdGQ+PFwvdHI+PHRyPjx0ZCBjbGFzcz1cInRpdGxlXCI+U2l6ZTo8XC90ZD48dGQgY2xhc3M9XCJjb250ZW50XCI+MjQgZGF0YXNldHM8XC90ZD48XC90cj48XC90YWJsZT48ZGl2IGNsYXNzPVwiZGF0YXNldGlkXCI+PGEgaHJlZj1cImh0dHBzOlwvXC9kb2kucGFuZ2FlYS5kZVwvMTAuMTU5NFwvUEFOR0FFQS44MjQ4MjZcIiB0YXJnZXQ9XCJfc2VsZlwiIGNsYXNzPVwiZGF0YXNldC1saW5rIGRvaS1saW5rXCI+aHR0cHM6XC9cL2RvaS5vcmdcLzEwLjE1OTRcL1BBTkdBRUEuODI0ODI2PFwvYT4gLSA8c3BhbiB0aXRsZT1cIlRoZSBzY29yZSBpcyBhIG1lYXN1cmVtZW50IG9mIHJlbGV2YW5jeSAoc2VlIFRGLUlERiBhbGdvcml0aG0pLiBUaGUgdmFsdWUgaXMgbm90IGFic29sdXRlIGFuZCBvbmx5IHN1aXRhYmxlIHRvIGNvbXBhcmUgaGl0cyBmcm9tIHRoZSBzYW1lIHJlc3VsdCBzZXQuXCI+U2NvcmU6IDE3Ljk2PFwvc3Bhbj48XC9kaXY+PFwvbGk+In0seyJVUkkiOiJkb2k6MTAuMTU5NFwvUEFOR0FFQS44MjM5NzEiLCJzY29yZSI6MTcuOTU3NTMsImh0bWwiOiI8bGk+PGRpdiBjbGFzcz1cImNpdGF0aW9uXCI+PGEgaHJlZj1cImh0dHBzOlwvXC9kb2kucGFuZ2FlYS5kZVwvMTAuMTU5NFwvUEFOR0FFQS44MjM5NzFcIiB0YXJnZXQ9XCJfc2VsZlwiIGNsYXNzPVwiZGF0YXNldC1saW5rXCI+PHN0cm9uZz5NYWNrZSwgQTsgWm9sbCwgWTsgUG9zcGljaGFsLCBCICgyMDEzKTo8XC9zdHJvbmc+IENvbnRpbnVvdXMgbGlxdWlkIHdhdGVyIHBhdGggKExXUCkgYW5kIGludGVncmF0ZWQgd2F0ZXIgdmFwb3VyIChJV1YpIG1lYXN1cmVtZW50cyBkdXJpbmcgUE9MQVJTVEVSTiBjcnVpc2UgQU5ULVhYVklcLzE8XC9hPjxcL2Rpdj48dGFibGUgY2xhc3M9XCJyZXN1bHRcIiBzdW1tYXJ5PVwiRGF0YXNldCByZWZlcmVuY2UgYW5kIHNpemVcIiBjZWxsc3BhY2luZz1cIjBcIiBjZWxscGFkZGluZz1cIjBcIj48dHI+PHRkIGNsYXNzPVwidGl0bGVcIj5SZWxhdGVkIHRvOjxcL3RkPjx0ZCBjbGFzcz1cImNvbnRlbnRcIj48c3Ryb25nPk1hY2tlLCBBOyBLYWxpc2NoLCBKICgyMDEzKTo8XC9zdHJvbmc+IFRvdGFsIFNreSBJbWFnZXIgb2JzZXJ2YXRpb25zIGFuZCBjb250aW51b3VzIHJhZGlhdGlvbiBtZWFzdXJlbWVudHMgZHVyaW5nIFBPTEFSU1RFUk4gY3J1aXNlIEFOVC1YWFZJXC8xIHdpdGggbGlua3MgdG8gaW1hZ2VzLiA8ZW0+TGVpYm5pei1JbnN0aXR1dCBmw7xyIFRyb3Bvc3Bow6RyZW5mb3JzY2h1bmcgZS5WLiwgTGVpcHppZzxcL2VtPjxcL3RkPjxcL3RyPjx0cj48dGQgY2xhc3M9XCJ0aXRsZVwiPlNpemU6PFwvdGQ+PHRkIGNsYXNzPVwiY29udGVudFwiPjM3IGRhdGFzZXRzPFwvdGQ+PFwvdHI+PFwvdGFibGU+PGRpdiBjbGFzcz1cImRhdGFzZXRpZFwiPjxhIGhyZWY9XCJodHRwczpcL1wvZG9pLnBhbmdhZWEuZGVcLzEwLjE1OTRcL1BBTkdBRUEuODIzOTcxXCIgdGFyZ2V0PVwiX3NlbGZcIiBjbGFzcz1cImRhdGFzZXQtbGluayBkb2ktbGlua1wiPmh0dHBzOlwvXC9kb2kub3JnXC8xMC4xNTk0XC9QQU5HQUVBLjgyMzk3MTxcL2E+IC0gPHNwYW4gdGl0bGU9XCJUaGUgc2NvcmUgaXMgYSBtZWFzdXJlbWVudCBvZiByZWxldmFuY3kgKHNlZSBURi1JREYgYWxnb3JpdGhtKS4gVGhlIHZhbHVlIGlzIG5vdCBhYnNvbHV0ZSBhbmQgb25seSBzdWl0YWJsZSB0byBjb21wYXJlIGhpdHMgZnJvbSB0aGUgc2FtZSByZXN1bHQgc2V0LlwiPlNjb3JlOiAxNy45NjxcL3NwYW4+PFwvZGl2PjxcL2xpPiJ9XSwiZmFjZXRzIjpudWxsLCJtYXhTY29yZSI6MjEuMTE4ODM0LCJvZmZzZXQiOjAsInF1ZXJ5SWRlbnRpZmllciI6IjZmZjU1OWU5LTQ4YjktMzk2OS1iZmY5LWM0NDgxYTIwMDVhZCIsInNlc3Npb24iOiI2dnYydXRxbDRycHZkdmJlcmZ1cnJvc3JoMyIsInRpbWVJbkRhdGFiYXNlIjoyNCwidG90YWxDb3VudCI6MTc2MTM3LCJodG1sU3VtbWFyeSI6IjxzdHJvbmc+MTc2MTM3IGRhdGFzZXRzPFwvc3Ryb25nPiBmb3VuZCBvbiBzZWFyY2ggZm9yIDxzdHJvbmcgdGl0bGU9XCJRdWVyeTogJnJhcXVvO3dhdGVyJmxhcXVvO1wiPiZyYXF1bzt3YXRlciZsYXF1bzs8XC9zdHJvbmc+IiwiaHRtbFNuaXBwZXRSU1MiOiI8bGluayByZWw9XCJhbHRlcm5hdGVcIiB0aXRsZT1cIlBBTkdBRUEgbGF0ZXN0IGRhdGFzZXRzIGFib3V0ICZxdW90O3dhdGVyJnF1b3Q7XCIgdHlwZT1cImFwcGxpY2F0aW9uXC9yc3MreG1sXCIgaHJlZj1cIlwvdG9vbHNcL2xhdGVzdC1kYXRhc2V0cy5yc3M/cT13YXRlciZhbXA7Y291bnQ9MTBcIj4ifQ==
+  recorded_at: 2019-09-11 20:33:07 GMT
+  recorded_with: vcr/0.3.0.9100, webmockr/0.4.0
 - request:
     method: get
     uri: https://www.pangaea.de/advanced/search.php?count=2&offset=0&q=water
@@ -188,7 +41,7 @@ http_interactions:
       encoding: ''
       string: ''
     headers:
-      User-Agent: libcurl/7.54.0 r-curl/4.0 crul/0.8.4
+      User-Agent: libcurl/7.54.0 r-curl/4.0 crul/0.8.4.9100
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
   response:
@@ -200,7 +53,7 @@ http_interactions:
       cache-control: private, max-age=10800, pre-check=10800
       content-encoding: gzip
       content-type: application/json; charset=UTF-8
-      date: Tue, 13 Aug 2019 21:53:52 GMT
+      date: Wed, 11 Sep 2019 20:33:05 GMT
       last-modified: Fri, 15 Apr 2016 11:55:50 GMT
       server: PANGAEA/2.0
       status: 'HTTP/2 200 '
@@ -212,38 +65,10 @@ http_interactions:
       x-frame-options: SAMEORIGIN
       x-ua-compatible: IE=Edge
     body:
-      encoding: UTF-8
-      string: '{"results":[{"URI":"doi:10.1594\/PANGAEA.892812","score":21.095936,"html":"<li><div
-        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.892812\"
-        target=\"_self\" class=\"dataset-link\"><strong>Quade, M; Brüggemann, N; Graf,
-        A et al. (2018):<\/strong> Data for kinetic isotopic fractionation of water
-        during bare soil evaporation<\/a><\/div><table class=\"result\" summary=\"Dataset
-        reference and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"title\">Supplement
-        to:<\/td><td class=\"content\"><strong>Quade, M; Brüggemann, N; Graf, A et
-        al. (2018):<\/strong> Investigation of Kinetic Isotopic Fractionation of Water
-        during Bare Soil Evaporation. <em>Water Resources Research<\/em><\/td><\/tr><tr><td
-        class=\"title\">Size:<\/td><td class=\"content\">5 datasets<\/td><\/tr><\/table><div
-        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.892812\"
-        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.892812<\/a>
-        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
-        The value is not absolute and only suitable to compare hits from the same
-        result set.\">Score: 21.1<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.895383","score":19.425049,"html":"<li><div
-        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.895383\"
-        target=\"_self\" class=\"dataset-link\"><strong>Korman, B (2018):<\/strong>
-        Lake water analysis from the Rappbode dam in Saxony-Anhalt during the Inland
-        Water Remote Sensing Validation Campaign 2017<\/a><\/div><table class=\"result\"
-        summary=\"Dataset reference and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td
-        class=\"title\">Size:<\/td><td class=\"content\">1 datasets<\/td><\/tr><\/table><div
-        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.895383\"
-        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.895383<\/a>
-        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
-        The value is not absolute and only suitable to compare hits from the same
-        result set.\">Score: 19.43<\/span><\/div><\/li>"}],"facets":null,"maxScore":21.095936,"offset":0,"queryIdentifier":"6ff559e9-48b9-3969-bff9-c4481a2005ad","session":"ig3shgdhg0v8e0lccilhpo1jd2","timeInDatabase":19,"totalCount":176006,"htmlSummary":"<strong>176006
-        datasets<\/strong> found on search for <strong title=\"Query: &raquo;water&laquo;\">&raquo;water&laquo;<\/strong>","htmlSnippetRSS":"<link
-        rel=\"alternate\" title=\"PANGAEA latest datasets about &quot;water&quot;\"
-        type=\"application\/rss+xml\" href=\"\/tools\/latest-datasets.rss?q=water&amp;count=2\">"}'
-  recorded_at: 2019-08-13 21:53:54 GMT
-  recorded_with: vcr/0.2.6, webmockr/0.4.0
+      encoding: ASCII-8BIT
+      string: eyJyZXN1bHRzIjpbeyJVUkkiOiJkb2k6MTAuMTU5NFwvUEFOR0FFQS44OTI4MTIiLCJzY29yZSI6MjEuMTE4ODM0LCJodG1sIjoiPGxpPjxkaXYgY2xhc3M9XCJjaXRhdGlvblwiPjxhIGhyZWY9XCJodHRwczpcL1wvZG9pLnBhbmdhZWEuZGVcLzEwLjE1OTRcL1BBTkdBRUEuODkyODEyXCIgdGFyZ2V0PVwiX3NlbGZcIiBjbGFzcz1cImRhdGFzZXQtbGlua1wiPjxzdHJvbmc+UXVhZGUsIE07IEJyw7xnZ2VtYW5uLCBOOyBHcmFmLCBBIGV0IGFsLiAoMjAxOCk6PFwvc3Ryb25nPiBEYXRhIGZvciBraW5ldGljIGlzb3RvcGljIGZyYWN0aW9uYXRpb24gb2Ygd2F0ZXIgZHVyaW5nIGJhcmUgc29pbCBldmFwb3JhdGlvbjxcL2E+PFwvZGl2Pjx0YWJsZSBjbGFzcz1cInJlc3VsdFwiIHN1bW1hcnk9XCJEYXRhc2V0IHJlZmVyZW5jZSBhbmQgc2l6ZVwiIGNlbGxzcGFjaW5nPVwiMFwiIGNlbGxwYWRkaW5nPVwiMFwiPjx0cj48dGQgY2xhc3M9XCJ0aXRsZVwiPlN1cHBsZW1lbnQgdG86PFwvdGQ+PHRkIGNsYXNzPVwiY29udGVudFwiPjxzdHJvbmc+UXVhZGUsIE07IEJyw7xnZ2VtYW5uLCBOOyBHcmFmLCBBIGV0IGFsLiAoMjAxOCk6PFwvc3Ryb25nPiBJbnZlc3RpZ2F0aW9uIG9mIEtpbmV0aWMgSXNvdG9waWMgRnJhY3Rpb25hdGlvbiBvZiBXYXRlciBkdXJpbmcgQmFyZSBTb2lsIEV2YXBvcmF0aW9uLiA8ZW0+V2F0ZXIgUmVzb3VyY2VzIFJlc2VhcmNoPFwvZW0+PFwvdGQ+PFwvdHI+PHRyPjx0ZCBjbGFzcz1cInRpdGxlXCI+U2l6ZTo8XC90ZD48dGQgY2xhc3M9XCJjb250ZW50XCI+NSBkYXRhc2V0czxcL3RkPjxcL3RyPjxcL3RhYmxlPjxkaXYgY2xhc3M9XCJkYXRhc2V0aWRcIj48YSBocmVmPVwiaHR0cHM6XC9cL2RvaS5wYW5nYWVhLmRlXC8xMC4xNTk0XC9QQU5HQUVBLjg5MjgxMlwiIHRhcmdldD1cIl9zZWxmXCIgY2xhc3M9XCJkYXRhc2V0LWxpbmsgZG9pLWxpbmtcIj5odHRwczpcL1wvZG9pLm9yZ1wvMTAuMTU5NFwvUEFOR0FFQS44OTI4MTI8XC9hPiAtIDxzcGFuIHRpdGxlPVwiVGhlIHNjb3JlIGlzIGEgbWVhc3VyZW1lbnQgb2YgcmVsZXZhbmN5IChzZWUgVEYtSURGIGFsZ29yaXRobSkuIFRoZSB2YWx1ZSBpcyBub3QgYWJzb2x1dGUgYW5kIG9ubHkgc3VpdGFibGUgdG8gY29tcGFyZSBoaXRzIGZyb20gdGhlIHNhbWUgcmVzdWx0IHNldC5cIj5TY29yZTogMjEuMTI8XC9zcGFuPjxcL2Rpdj48XC9saT4ifSx7IlVSSSI6ImRvaToxMC4xNTk0XC9QQU5HQUVBLjg5NTM4MyIsInNjb3JlIjoxOS40NDE4MSwiaHRtbCI6IjxsaT48ZGl2IGNsYXNzPVwiY2l0YXRpb25cIj48YSBocmVmPVwiaHR0cHM6XC9cL2RvaS5wYW5nYWVhLmRlXC8xMC4xNTk0XC9QQU5HQUVBLjg5NTM4M1wiIHRhcmdldD1cIl9zZWxmXCIgY2xhc3M9XCJkYXRhc2V0LWxpbmtcIj48c3Ryb25nPktvcm1hbiwgQiAoMjAxOCk6PFwvc3Ryb25nPiBMYWtlIHdhdGVyIGFuYWx5c2lzIGZyb20gdGhlIFJhcHBib2RlIGRhbSBpbiBTYXhvbnktQW5oYWx0IGR1cmluZyB0aGUgSW5sYW5kIFdhdGVyIFJlbW90ZSBTZW5zaW5nIFZhbGlkYXRpb24gQ2FtcGFpZ24gMjAxNzxcL2E+PFwvZGl2Pjx0YWJsZSBjbGFzcz1cInJlc3VsdFwiIHN1bW1hcnk9XCJEYXRhc2V0IHJlZmVyZW5jZSBhbmQgc2l6ZVwiIGNlbGxzcGFjaW5nPVwiMFwiIGNlbGxwYWRkaW5nPVwiMFwiPjx0cj48dGQgY2xhc3M9XCJ0aXRsZVwiPlNpemU6PFwvdGQ+PHRkIGNsYXNzPVwiY29udGVudFwiPjEgZGF0YXNldHM8XC90ZD48XC90cj48XC90YWJsZT48ZGl2IGNsYXNzPVwiZGF0YXNldGlkXCI+PGEgaHJlZj1cImh0dHBzOlwvXC9kb2kucGFuZ2FlYS5kZVwvMTAuMTU5NFwvUEFOR0FFQS44OTUzODNcIiB0YXJnZXQ9XCJfc2VsZlwiIGNsYXNzPVwiZGF0YXNldC1saW5rIGRvaS1saW5rXCI+aHR0cHM6XC9cL2RvaS5vcmdcLzEwLjE1OTRcL1BBTkdBRUEuODk1MzgzPFwvYT4gLSA8c3BhbiB0aXRsZT1cIlRoZSBzY29yZSBpcyBhIG1lYXN1cmVtZW50IG9mIHJlbGV2YW5jeSAoc2VlIFRGLUlERiBhbGdvcml0aG0pLiBUaGUgdmFsdWUgaXMgbm90IGFic29sdXRlIGFuZCBvbmx5IHN1aXRhYmxlIHRvIGNvbXBhcmUgaGl0cyBmcm9tIHRoZSBzYW1lIHJlc3VsdCBzZXQuXCI+U2NvcmU6IDE5LjQ0PFwvc3Bhbj48XC9kaXY+PFwvbGk+In1dLCJmYWNldHMiOm51bGwsIm1heFNjb3JlIjoyMS4xMTg4MzQsIm9mZnNldCI6MCwicXVlcnlJZGVudGlmaWVyIjoiNmZmNTU5ZTktNDhiOS0zOTY5LWJmZjktYzQ0ODFhMjAwNWFkIiwic2Vzc2lvbiI6ImIyYmN0cW4yY3NuNTd2ajcycTlxbDZpa2E2IiwidGltZUluRGF0YWJhc2UiOjE1LCJ0b3RhbENvdW50IjoxNzYxMzcsImh0bWxTdW1tYXJ5IjoiPHN0cm9uZz4xNzYxMzcgZGF0YXNldHM8XC9zdHJvbmc+IGZvdW5kIG9uIHNlYXJjaCBmb3IgPHN0cm9uZyB0aXRsZT1cIlF1ZXJ5OiAmcmFxdW87d2F0ZXImbGFxdW87XCI+JnJhcXVvO3dhdGVyJmxhcXVvOzxcL3N0cm9uZz4iLCJodG1sU25pcHBldFJTUyI6IjxsaW5rIHJlbD1cImFsdGVybmF0ZVwiIHRpdGxlPVwiUEFOR0FFQSBsYXRlc3QgZGF0YXNldHMgYWJvdXQgJnF1b3Q7d2F0ZXImcXVvdDtcIiB0eXBlPVwiYXBwbGljYXRpb25cL3Jzcyt4bWxcIiBocmVmPVwiXC90b29sc1wvbGF0ZXN0LWRhdGFzZXRzLnJzcz9xPXdhdGVyJmFtcDtjb3VudD0yXCI+In0=
+  recorded_at: 2019-09-11 20:33:07 GMT
+  recorded_with: vcr/0.3.0.9100, webmockr/0.4.0
 - request:
     method: get
     uri: https://www.pangaea.de/advanced/search.php?t=Oceans&count=10&offset=0&q=water
@@ -251,7 +76,7 @@ http_interactions:
       encoding: ''
       string: ''
     headers:
-      User-Agent: libcurl/7.54.0 r-curl/4.0 crul/0.8.4
+      User-Agent: libcurl/7.54.0 r-curl/4.0 crul/0.8.4.9100
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
   response:
@@ -263,7 +88,7 @@ http_interactions:
       cache-control: private, max-age=10800, pre-check=10800
       content-encoding: gzip
       content-type: application/json; charset=UTF-8
-      date: Tue, 13 Aug 2019 21:53:53 GMT
+      date: Wed, 11 Sep 2019 20:33:05 GMT
       last-modified: Fri, 15 Apr 2016 11:55:50 GMT
       server: PANGAEA/2.0
       status: 'HTTP/2 200 '
@@ -275,162 +100,10 @@ http_interactions:
       x-frame-options: SAMEORIGIN
       x-ua-compatible: IE=Edge
     body:
-      encoding: UTF-8
-      string: '{"results":[{"URI":"doi:10.1594\/PANGAEA.882613","score":17.035387,"html":"<li><div
-        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.882613\"
-        target=\"_self\" class=\"dataset-link\"><strong>Antico, A; Aguiar, RO; Amsler,
-        ML (2017):<\/strong> Paraná River hydrometric data from Rosario City, Argentina:
-        1875 to 2017<\/a><\/div><table class=\"result\" summary=\"Dataset reference
-        and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"title\">Supplement
-        to:<\/td><td class=\"content\"><strong>Antico, A; Aguiar, RO; Amsler, ML (2018):<\/strong>
-        Hydrometric data rescue in the Paraná River Basin. <em>Water Resources Research<\/em><\/td><\/tr><tr><td
-        class=\"title\">Size:<\/td><td class=\"content\">2 datasets<\/td><\/tr><\/table><div
-        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.882613\"
-        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.882613<\/a>
-        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
-        The value is not absolute and only suitable to compare hits from the same
-        result set.\">Score: 17.04<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.873075","score":16.982094,"html":"<li><div
-        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.873075\"
-        target=\"_self\" class=\"dataset-link\"><strong>Anand, P; Jung, S (2017):<\/strong>
-        Geochemistry of a sediment record from intermediate water off Somalia<\/a><\/div><table
-        class=\"result\" summary=\"Dataset reference and size\" cellspacing=\"0\"
-        cellpadding=\"0\"><tr><td class=\"title\">Supplement to:<\/td><td class=\"content\"><strong>Anand,
-        P; Jung, S:<\/strong> Remarkably warm and saline glacial intermediate water
-        off Somalia. <em>Paleoceanography<\/em><\/td><\/tr><tr><td class=\"title\">Size:<\/td><td
-        class=\"content\">2 datasets<\/td><\/tr><\/table><div class=\"datasetid\"><a
-        href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.873075\" target=\"_self\"
-        class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.873075<\/a>
-        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
-        The value is not absolute and only suitable to compare hits from the same
-        result set.\">Score: 16.98<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.773526","score":16.539062,"html":"<li><div
-        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.773526\"
-        target=\"_self\" class=\"dataset-link\"><strong>De Mol, L; Van Rooij, D; Pirlet,
-        H et al. (2011):<\/strong> Sedimentology and age determination of sediment
-        cores from the Penmarch''h and Guilvinec Canyons (Bay of Biscay)<\/a><\/div><table
-        class=\"result\" summary=\"Dataset reference and size\" cellspacing=\"0\"
-        cellpadding=\"0\"><tr><td class=\"title\">Supplement to:<\/td><td class=\"content\"><strong>De
-        Mol, L; Van Rooij, D; Pirlet, H et al. (2011):<\/strong> Cold-water coral
-        habitats in the Penmarc''h and Guilvinec Canyons (Bay of Biscay): Deep-water
-        versus shallow-water settings. <em>Marine Geology<\/em><\/td><\/tr><tr><td
-        class=\"title\">Size:<\/td><td class=\"content\">6 datasets<\/td><\/tr><\/table><div
-        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.773526\"
-        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.773526<\/a>
-        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
-        The value is not absolute and only suitable to compare hits from the same
-        result set.\">Score: 16.54<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.857390","score":16.246155,"html":"<li><div
-        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.857390\"
-        target=\"_self\" class=\"dataset-link\"><strong>Martin, PA; Lea, DW (1998):<\/strong>
-        Trace elements in benthic foraminifera of sediment core V30-49<\/a><\/div><table
-        class=\"result\" summary=\"Dataset reference and size\" cellspacing=\"0\"
-        cellpadding=\"0\"><tr><td class=\"title\">Supplement to:<\/td><td class=\"content\"><strong>Martin,
-        PA; Lea, DW (1998):<\/strong> Comparison of water mass changes in the deep
-        tropical Atlantic derived from Cd\/Ca and carbon isotope records: Implications
-        for changing Ba composition of Deep Atlantic Water Masses. <em>Paleoceanography<\/em><\/td><\/tr><tr><td
-        class=\"title\">Size:<\/td><td class=\"content\">2 datasets<\/td><\/tr><\/table><div
-        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.857390\"
-        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.857390<\/a>
-        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
-        The value is not absolute and only suitable to compare hits from the same
-        result set.\">Score: 16.25<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.738279","score":16.170635,"html":"<li><div
-        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.738279\"
-        target=\"_self\" class=\"dataset-link\"><strong>Kiriakoulakis, K; Fisher,
-        E; Wolff, GA et al. (2005):<\/strong> Lipids and nitrogen isotopes of deep-water
-        corals<\/a><\/div><table class=\"result\" summary=\"Dataset reference and
-        size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"title\">Supplement
-        to:<\/td><td class=\"content\"><strong>Kiriakoulakis, K; Fisher, E; Wolff,
-        GA et al. (2005):<\/strong> Lipids and nitrogen isotopes of two deep-water
-        corals from the North-East Atlantic: initial results and implications for
-        their nutrition. <em>In: Freiwald, A &amp; Roberts, JM (eds.), 2005, Cold-water
-        Corals and Ecosystems, Springer-Verlag, Berlin, Heidelberg<\/em><\/td><\/tr><tr><td
-        class=\"title\">Size:<\/td><td class=\"content\">4 datasets<\/td><\/tr><\/table><div
-        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.738279\"
-        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.738279<\/a>
-        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
-        The value is not absolute and only suitable to compare hits from the same
-        result set.\">Score: 16.17<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.876180","score":15.487663,"html":"<li><div
-        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.876180\"
-        target=\"_self\" class=\"dataset-link\"><strong>Knudson, KP; Ravelo, AC (2017):<\/strong>
-        Evidence for enhanced North Pacific Intermediate Water in the Bering Sea during
-        extreme glacials over the past 1.2 Ma from records of stable isotopes analyzed
-        at IODP Site 323-U1342 Holes A, C, and D<\/a><\/div><table class=\"result\"
-        summary=\"Dataset reference and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td
-        class=\"title\">Supplement to:<\/td><td class=\"content\"><strong>Knudson,
-        KP; Ravelo, AC (2015):<\/strong> North Pacific Intermediate Water circulation
-        enhanced by the closure of the Bering Strait. <em>Paleoceanography<\/em><\/td><\/tr><tr><td
-        class=\"title\">Related to:<\/td><td class=\"content\"><strong>Knudson, KP;
-        Ravelo, AC (2015):<\/strong> Enhanced subarctic Pacific stratification and
-        nutrient utilization during glacials over the last 1.2 Myr. <em>Geophysical
-        Research Letters<\/em><\/td><\/tr><tr><td class=\"title\">Size:<\/td><td class=\"content\">6
-        datasets<\/td><\/tr><\/table><div class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.876180\"
-        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.876180<\/a>
-        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
-        The value is not absolute and only suitable to compare hits from the same
-        result set.\">Score: 15.49<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.730373","score":15.336869,"html":"<li><div
-        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.730373\"
-        target=\"_self\" class=\"dataset-link\"><strong>van Donk, J; Mathieu, G (1969):<\/strong>
-        Stable oxygen and carbon isotopic composition of foraminifera and sea water
-        from the Arctic Ocean<\/a><\/div><table class=\"result\" summary=\"Dataset
-        reference and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"title\">Supplement
-        to:<\/td><td class=\"content\"><strong>van Donk, J; Mathieu, G (1969):<\/strong>
-        Oxygen isotope composition of foraminifera and water samples from the Arctic
-        Ocean. <em>Journal of Geophysical Research: Oceans<\/em><\/td><\/tr><tr><td
-        class=\"title\">Size:<\/td><td class=\"content\">2 datasets<\/td><\/tr><\/table><div
-        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.730373\"
-        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.730373<\/a>
-        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
-        The value is not absolute and only suitable to compare hits from the same
-        result set.\">Score: 15.34<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.884833","score":15.230637,"html":"<li><div
-        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.884833\"
-        target=\"_self\" class=\"dataset-link\"><strong>Matos, L; Wienberg, C; Titschack,
-        J et al. (2017):<\/strong> Sediment core studies at the Campeche cold-water
-        coral province, southern Gulf of Mexico<\/a><\/div><table class=\"result\"
-        summary=\"Dataset reference and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td
-        class=\"title\">Supplement to:<\/td><td class=\"content\"><strong>Matos, L;
-        Wienberg, C; Titschack, J et al. (2017):<\/strong> Coral mound development
-        at the Campeche cold-water coral province, southern Gulf of Mexico: Implications
-        of Antarctic Intermediate Water increased influence during interglacials.
-        <em>Marine Geology<\/em><\/td><\/tr><tr><td class=\"title\">Size:<\/td><td
-        class=\"content\">5 datasets<\/td><\/tr><\/table><div class=\"datasetid\"><a
-        href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.884833\" target=\"_self\"
-        class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.884833<\/a>
-        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
-        The value is not absolute and only suitable to compare hits from the same
-        result set.\">Score: 15.23<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.762116","score":15.17571,"html":"<li><div
-        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.762116\"
-        target=\"_self\" class=\"dataset-link\"><strong>Dmitriev, FA; Gudkov, AN (1987):<\/strong>
-        Concentrations of aliphatic hydrocarbons and hexachlorocyclohexane isomers
-        in under-ice water, snow, and sea ice from the Greenland Sea<\/a><\/div><table
-        class=\"result\" summary=\"Dataset reference and size\" cellspacing=\"0\"
-        cellpadding=\"0\"><tr><td class=\"title\">Supplement to:<\/td><td class=\"content\"><strong>Dmitriev,
-        FA; Gudkov, AN (1987):<\/strong> Aliphatic hydrocarbons and isomers of hexachlorocyclohexane
-        in specimens of water, ice and snow from the Greenland Sea. <em>Oceanology<\/em><\/td><\/tr><tr><td
-        class=\"title\">Size:<\/td><td class=\"content\">2 datasets<\/td><\/tr><\/table><div
-        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.762116\"
-        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.762116<\/a>
-        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
-        The value is not absolute and only suitable to compare hits from the same
-        result set.\">Score: 15.18<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.548415","score":15.059639,"html":"<li><div
-        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.548415\"
-        target=\"_self\" class=\"dataset-link\"><strong>Hartmann, M; Müller, PJ; Suess,
-        E et al. (1973):<\/strong> Geochemistry of recent marine sediments, interstitial
-        water, and sea water from the West African continental margin<\/a><\/div><table
-        class=\"result\" summary=\"Dataset reference and size\" cellspacing=\"0\"
-        cellpadding=\"0\"><tr><td class=\"title\">Supplement to:<\/td><td class=\"content\"><strong>Hartmann,
-        M; Müller, PJ; Suess, E et al. (1973):<\/strong> Oxidation of organic matter
-        in recent marine sediments. <em>Meteor Forschungsergebnisse, Deutsche Forschungsgemeinschaft,
-        Reihe C Geologie und Geophysik, Gebrüder Bornträger, Berlin, Stuttgart<\/em><\/td><\/tr><tr><td
-        class=\"title\">Size:<\/td><td class=\"content\">5 datasets<\/td><\/tr><\/table><div
-        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.548415\"
-        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.548415<\/a>
-        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
-        The value is not absolute and only suitable to compare hits from the same
-        result set.\">Score: 15.06<\/span><\/div><\/li>"}],"facets":null,"maxScore":17.035387,"offset":0,"queryIdentifier":"49ace6ec-0772-3dc0-850d-64fb3903cd65","session":"60gq4ghgk86kvl99svkoil3q05","timeInDatabase":31,"totalCount":84576,"htmlSummary":"<strong>84576
-        datasets<\/strong> found on search for <strong title=\"Query: &raquo;water&laquo;\">&raquo;water&laquo;<\/strong>
-        in topic <strong>Oceans<\/strong>","htmlSnippetRSS":"<link rel=\"alternate\"
-        title=\"PANGAEA latest datasets about &quot;water&quot; in topic Oceans\"
-        type=\"application\/rss+xml\" href=\"\/tools\/latest-datasets.rss?t=Oceans&amp;q=water&amp;count=10\">"}'
-  recorded_at: 2019-08-13 21:53:54 GMT
-  recorded_with: vcr/0.2.6, webmockr/0.4.0
+      encoding: ASCII-8BIT
+      string: eyJyZXN1bHRzIjpbeyJVUkkiOiJkb2k6MTAuMTU5NFwvUEFOR0FFQS44ODI2MTMiLCJzY29yZSI6MTcuMDU5MjMsImh0bWwiOiI8bGk+PGRpdiBjbGFzcz1cImNpdGF0aW9uXCI+PGEgaHJlZj1cImh0dHBzOlwvXC9kb2kucGFuZ2FlYS5kZVwvMTAuMTU5NFwvUEFOR0FFQS44ODI2MTNcIiB0YXJnZXQ9XCJfc2VsZlwiIGNsYXNzPVwiZGF0YXNldC1saW5rXCI+PHN0cm9uZz5BbnRpY28sIEE7IEFndWlhciwgUk87IEFtc2xlciwgTUwgKDIwMTcpOjxcL3N0cm9uZz4gUGFyYW7DoSBSaXZlciBoeWRyb21ldHJpYyBkYXRhIGZyb20gUm9zYXJpbyBDaXR5LCBBcmdlbnRpbmE6IDE4NzUgdG8gMjAxNzxcL2E+PFwvZGl2Pjx0YWJsZSBjbGFzcz1cInJlc3VsdFwiIHN1bW1hcnk9XCJEYXRhc2V0IHJlZmVyZW5jZSBhbmQgc2l6ZVwiIGNlbGxzcGFjaW5nPVwiMFwiIGNlbGxwYWRkaW5nPVwiMFwiPjx0cj48dGQgY2xhc3M9XCJ0aXRsZVwiPlN1cHBsZW1lbnQgdG86PFwvdGQ+PHRkIGNsYXNzPVwiY29udGVudFwiPjxzdHJvbmc+QW50aWNvLCBBOyBBZ3VpYXIsIFJPOyBBbXNsZXIsIE1MICgyMDE4KTo8XC9zdHJvbmc+IEh5ZHJvbWV0cmljIGRhdGEgcmVzY3VlIGluIHRoZSBQYXJhbsOhIFJpdmVyIEJhc2luLiA8ZW0+V2F0ZXIgUmVzb3VyY2VzIFJlc2VhcmNoPFwvZW0+PFwvdGQ+PFwvdHI+PHRyPjx0ZCBjbGFzcz1cInRpdGxlXCI+U2l6ZTo8XC90ZD48dGQgY2xhc3M9XCJjb250ZW50XCI+MiBkYXRhc2V0czxcL3RkPjxcL3RyPjxcL3RhYmxlPjxkaXYgY2xhc3M9XCJkYXRhc2V0aWRcIj48YSBocmVmPVwiaHR0cHM6XC9cL2RvaS5wYW5nYWVhLmRlXC8xMC4xNTk0XC9QQU5HQUVBLjg4MjYxM1wiIHRhcmdldD1cIl9zZWxmXCIgY2xhc3M9XCJkYXRhc2V0LWxpbmsgZG9pLWxpbmtcIj5odHRwczpcL1wvZG9pLm9yZ1wvMTAuMTU5NFwvUEFOR0FFQS44ODI2MTM8XC9hPiAtIDxzcGFuIHRpdGxlPVwiVGhlIHNjb3JlIGlzIGEgbWVhc3VyZW1lbnQgb2YgcmVsZXZhbmN5IChzZWUgVEYtSURGIGFsZ29yaXRobSkuIFRoZSB2YWx1ZSBpcyBub3QgYWJzb2x1dGUgYW5kIG9ubHkgc3VpdGFibGUgdG8gY29tcGFyZSBoaXRzIGZyb20gdGhlIHNhbWUgcmVzdWx0IHNldC5cIj5TY29yZTogMTcuMDY8XC9zcGFuPjxcL2Rpdj48XC9saT4ifSx7IlVSSSI6ImRvaToxMC4xNTk0XC9QQU5HQUVBLjg3MzA3NSIsInNjb3JlIjoxNy4wMDQxOCwiaHRtbCI6IjxsaT48ZGl2IGNsYXNzPVwiY2l0YXRpb25cIj48YSBocmVmPVwiaHR0cHM6XC9cL2RvaS5wYW5nYWVhLmRlXC8xMC4xNTk0XC9QQU5HQUVBLjg3MzA3NVwiIHRhcmdldD1cIl9zZWxmXCIgY2xhc3M9XCJkYXRhc2V0LWxpbmtcIj48c3Ryb25nPkFuYW5kLCBQOyBKdW5nLCBTICgyMDE3KTo8XC9zdHJvbmc+IEdlb2NoZW1pc3RyeSBvZiBhIHNlZGltZW50IHJlY29yZCBmcm9tIGludGVybWVkaWF0ZSB3YXRlciBvZmYgU29tYWxpYTxcL2E+PFwvZGl2Pjx0YWJsZSBjbGFzcz1cInJlc3VsdFwiIHN1bW1hcnk9XCJEYXRhc2V0IHJlZmVyZW5jZSBhbmQgc2l6ZVwiIGNlbGxzcGFjaW5nPVwiMFwiIGNlbGxwYWRkaW5nPVwiMFwiPjx0cj48dGQgY2xhc3M9XCJ0aXRsZVwiPlN1cHBsZW1lbnQgdG86PFwvdGQ+PHRkIGNsYXNzPVwiY29udGVudFwiPjxzdHJvbmc+QW5hbmQsIFA7IEp1bmcsIFM6PFwvc3Ryb25nPiBSZW1hcmthYmx5IHdhcm0gYW5kIHNhbGluZSBnbGFjaWFsIGludGVybWVkaWF0ZSB3YXRlciBvZmYgU29tYWxpYS4gPGVtPlBhbGVvY2Vhbm9ncmFwaHk8XC9lbT48XC90ZD48XC90cj48dHI+PHRkIGNsYXNzPVwidGl0bGVcIj5TaXplOjxcL3RkPjx0ZCBjbGFzcz1cImNvbnRlbnRcIj4yIGRhdGFzZXRzPFwvdGQ+PFwvdHI+PFwvdGFibGU+PGRpdiBjbGFzcz1cImRhdGFzZXRpZFwiPjxhIGhyZWY9XCJodHRwczpcL1wvZG9pLnBhbmdhZWEuZGVcLzEwLjE1OTRcL1BBTkdBRUEuODczMDc1XCIgdGFyZ2V0PVwiX3NlbGZcIiBjbGFzcz1cImRhdGFzZXQtbGluayBkb2ktbGlua1wiPmh0dHBzOlwvXC9kb2kub3JnXC8xMC4xNTk0XC9QQU5HQUVBLjg3MzA3NTxcL2E+IC0gPHNwYW4gdGl0bGU9XCJUaGUgc2NvcmUgaXMgYSBtZWFzdXJlbWVudCBvZiByZWxldmFuY3kgKHNlZSBURi1JREYgYWxnb3JpdGhtKS4gVGhlIHZhbHVlIGlzIG5vdCBhYnNvbHV0ZSBhbmQgb25seSBzdWl0YWJsZSB0byBjb21wYXJlIGhpdHMgZnJvbSB0aGUgc2FtZSByZXN1bHQgc2V0LlwiPlNjb3JlOiAxNy4wPFwvc3Bhbj48XC9kaXY+PFwvbGk+In0seyJVUkkiOiJkb2k6MTAuMTU5NFwvUEFOR0FFQS43NzM1MjYiLCJzY29yZSI6MTYuNTUzNzM4LCJodG1sIjoiPGxpPjxkaXYgY2xhc3M9XCJjaXRhdGlvblwiPjxhIGhyZWY9XCJodHRwczpcL1wvZG9pLnBhbmdhZWEuZGVcLzEwLjE1OTRcL1BBTkdBRUEuNzczNTI2XCIgdGFyZ2V0PVwiX3NlbGZcIiBjbGFzcz1cImRhdGFzZXQtbGlua1wiPjxzdHJvbmc+RGUgTW9sLCBMOyBWYW4gUm9vaWosIEQ7IFBpcmxldCwgSCBldCBhbC4gKDIwMTEpOjxcL3N0cm9uZz4gU2VkaW1lbnRvbG9neSBhbmQgYWdlIGRldGVybWluYXRpb24gb2Ygc2VkaW1lbnQgY29yZXMgZnJvbSB0aGUgUGVubWFyY2gnaCBhbmQgR3VpbHZpbmVjIENhbnlvbnMgKEJheSBvZiBCaXNjYXkpPFwvYT48XC9kaXY+PHRhYmxlIGNsYXNzPVwicmVzdWx0XCIgc3VtbWFyeT1cIkRhdGFzZXQgcmVmZXJlbmNlIGFuZCBzaXplXCIgY2VsbHNwYWNpbmc9XCIwXCIgY2VsbHBhZGRpbmc9XCIwXCI+PHRyPjx0ZCBjbGFzcz1cInRpdGxlXCI+U3VwcGxlbWVudCB0bzo8XC90ZD48dGQgY2xhc3M9XCJjb250ZW50XCI+PHN0cm9uZz5EZSBNb2wsIEw7IFZhbiBSb29paiwgRDsgUGlybGV0LCBIIGV0IGFsLiAoMjAxMSk6PFwvc3Ryb25nPiBDb2xkLXdhdGVyIGNvcmFsIGhhYml0YXRzIGluIHRoZSBQZW5tYXJjJ2ggYW5kIEd1aWx2aW5lYyBDYW55b25zIChCYXkgb2YgQmlzY2F5KTogRGVlcC13YXRlciB2ZXJzdXMgc2hhbGxvdy13YXRlciBzZXR0aW5ncy4gPGVtPk1hcmluZSBHZW9sb2d5PFwvZW0+PFwvdGQ+PFwvdHI+PHRyPjx0ZCBjbGFzcz1cInRpdGxlXCI+U2l6ZTo8XC90ZD48dGQgY2xhc3M9XCJjb250ZW50XCI+NiBkYXRhc2V0czxcL3RkPjxcL3RyPjxcL3RhYmxlPjxkaXYgY2xhc3M9XCJkYXRhc2V0aWRcIj48YSBocmVmPVwiaHR0cHM6XC9cL2RvaS5wYW5nYWVhLmRlXC8xMC4xNTk0XC9QQU5HQUVBLjc3MzUyNlwiIHRhcmdldD1cIl9zZWxmXCIgY2xhc3M9XCJkYXRhc2V0LWxpbmsgZG9pLWxpbmtcIj5odHRwczpcL1wvZG9pLm9yZ1wvMTAuMTU5NFwvUEFOR0FFQS43NzM1MjY8XC9hPiAtIDxzcGFuIHRpdGxlPVwiVGhlIHNjb3JlIGlzIGEgbWVhc3VyZW1lbnQgb2YgcmVsZXZhbmN5IChzZWUgVEYtSURGIGFsZ29yaXRobSkuIFRoZSB2YWx1ZSBpcyBub3QgYWJzb2x1dGUgYW5kIG9ubHkgc3VpdGFibGUgdG8gY29tcGFyZSBoaXRzIGZyb20gdGhlIHNhbWUgcmVzdWx0IHNldC5cIj5TY29yZTogMTYuNTU8XC9zcGFuPjxcL2Rpdj48XC9saT4ifSx7IlVSSSI6ImRvaToxMC4xNTk0XC9QQU5HQUVBLjg1NzM5MCIsInNjb3JlIjoxNi4yNjk3NzcsImh0bWwiOiI8bGk+PGRpdiBjbGFzcz1cImNpdGF0aW9uXCI+PGEgaHJlZj1cImh0dHBzOlwvXC9kb2kucGFuZ2FlYS5kZVwvMTAuMTU5NFwvUEFOR0FFQS44NTczOTBcIiB0YXJnZXQ9XCJfc2VsZlwiIGNsYXNzPVwiZGF0YXNldC1saW5rXCI+PHN0cm9uZz5NYXJ0aW4sIFBBOyBMZWEsIERXICgxOTk4KTo8XC9zdHJvbmc+IFRyYWNlIGVsZW1lbnRzIGluIGJlbnRoaWMgZm9yYW1pbmlmZXJhIG9mIHNlZGltZW50IGNvcmUgVjMwLTQ5PFwvYT48XC9kaXY+PHRhYmxlIGNsYXNzPVwicmVzdWx0XCIgc3VtbWFyeT1cIkRhdGFzZXQgcmVmZXJlbmNlIGFuZCBzaXplXCIgY2VsbHNwYWNpbmc9XCIwXCIgY2VsbHBhZGRpbmc9XCIwXCI+PHRyPjx0ZCBjbGFzcz1cInRpdGxlXCI+U3VwcGxlbWVudCB0bzo8XC90ZD48dGQgY2xhc3M9XCJjb250ZW50XCI+PHN0cm9uZz5NYXJ0aW4sIFBBOyBMZWEsIERXICgxOTk4KTo8XC9zdHJvbmc+IENvbXBhcmlzb24gb2Ygd2F0ZXIgbWFzcyBjaGFuZ2VzIGluIHRoZSBkZWVwIHRyb3BpY2FsIEF0bGFudGljIGRlcml2ZWQgZnJvbSBDZFwvQ2EgYW5kIGNhcmJvbiBpc290b3BlIHJlY29yZHM6IEltcGxpY2F0aW9ucyBmb3IgY2hhbmdpbmcgQmEgY29tcG9zaXRpb24gb2YgRGVlcCBBdGxhbnRpYyBXYXRlciBNYXNzZXMuIDxlbT5QYWxlb2NlYW5vZ3JhcGh5PFwvZW0+PFwvdGQ+PFwvdHI+PHRyPjx0ZCBjbGFzcz1cInRpdGxlXCI+U2l6ZTo8XC90ZD48dGQgY2xhc3M9XCJjb250ZW50XCI+MiBkYXRhc2V0czxcL3RkPjxcL3RyPjxcL3RhYmxlPjxkaXYgY2xhc3M9XCJkYXRhc2V0aWRcIj48YSBocmVmPVwiaHR0cHM6XC9cL2RvaS5wYW5nYWVhLmRlXC8xMC4xNTk0XC9QQU5HQUVBLjg1NzM5MFwiIHRhcmdldD1cIl9zZWxmXCIgY2xhc3M9XCJkYXRhc2V0LWxpbmsgZG9pLWxpbmtcIj5odHRwczpcL1wvZG9pLm9yZ1wvMTAuMTU5NFwvUEFOR0FFQS44NTczOTA8XC9hPiAtIDxzcGFuIHRpdGxlPVwiVGhlIHNjb3JlIGlzIGEgbWVhc3VyZW1lbnQgb2YgcmVsZXZhbmN5IChzZWUgVEYtSURGIGFsZ29yaXRobSkuIFRoZSB2YWx1ZSBpcyBub3QgYWJzb2x1dGUgYW5kIG9ubHkgc3VpdGFibGUgdG8gY29tcGFyZSBoaXRzIGZyb20gdGhlIHNhbWUgcmVzdWx0IHNldC5cIj5TY29yZTogMTYuMjc8XC9zcGFuPjxcL2Rpdj48XC9saT4ifSx7IlVSSSI6ImRvaToxMC4xNTk0XC9QQU5HQUVBLjczODI3OSIsInNjb3JlIjoxNi4xODIwMzcsImh0bWwiOiI8bGk+PGRpdiBjbGFzcz1cImNpdGF0aW9uXCI+PGEgaHJlZj1cImh0dHBzOlwvXC9kb2kucGFuZ2FlYS5kZVwvMTAuMTU5NFwvUEFOR0FFQS43MzgyNzlcIiB0YXJnZXQ9XCJfc2VsZlwiIGNsYXNzPVwiZGF0YXNldC1saW5rXCI+PHN0cm9uZz5LaXJpYWtvdWxha2lzLCBLOyBGaXNoZXIsIEU7IFdvbGZmLCBHQSBldCBhbC4gKDIwMDUpOjxcL3N0cm9uZz4gTGlwaWRzIGFuZCBuaXRyb2dlbiBpc290b3BlcyBvZiBkZWVwLXdhdGVyIGNvcmFsczxcL2E+PFwvZGl2Pjx0YWJsZSBjbGFzcz1cInJlc3VsdFwiIHN1bW1hcnk9XCJEYXRhc2V0IHJlZmVyZW5jZSBhbmQgc2l6ZVwiIGNlbGxzcGFjaW5nPVwiMFwiIGNlbGxwYWRkaW5nPVwiMFwiPjx0cj48dGQgY2xhc3M9XCJ0aXRsZVwiPlN1cHBsZW1lbnQgdG86PFwvdGQ+PHRkIGNsYXNzPVwiY29udGVudFwiPjxzdHJvbmc+S2lyaWFrb3VsYWtpcywgSzsgRmlzaGVyLCBFOyBXb2xmZiwgR0EgZXQgYWwuICgyMDA1KTo8XC9zdHJvbmc+IExpcGlkcyBhbmQgbml0cm9nZW4gaXNvdG9wZXMgb2YgdHdvIGRlZXAtd2F0ZXIgY29yYWxzIGZyb20gdGhlIE5vcnRoLUVhc3QgQXRsYW50aWM6IGluaXRpYWwgcmVzdWx0cyBhbmQgaW1wbGljYXRpb25zIGZvciB0aGVpciBudXRyaXRpb24uIDxlbT5JbjogRnJlaXdhbGQsIEEgJmFtcDsgUm9iZXJ0cywgSk0gKGVkcy4pLCAyMDA1LCBDb2xkLXdhdGVyIENvcmFscyBhbmQgRWNvc3lzdGVtcywgU3ByaW5nZXItVmVybGFnLCBCZXJsaW4sIEhlaWRlbGJlcmc8XC9lbT48XC90ZD48XC90cj48dHI+PHRkIGNsYXNzPVwidGl0bGVcIj5TaXplOjxcL3RkPjx0ZCBjbGFzcz1cImNvbnRlbnRcIj40IGRhdGFzZXRzPFwvdGQ+PFwvdHI+PFwvdGFibGU+PGRpdiBjbGFzcz1cImRhdGFzZXRpZFwiPjxhIGhyZWY9XCJodHRwczpcL1wvZG9pLnBhbmdhZWEuZGVcLzEwLjE1OTRcL1BBTkdBRUEuNzM4Mjc5XCIgdGFyZ2V0PVwiX3NlbGZcIiBjbGFzcz1cImRhdGFzZXQtbGluayBkb2ktbGlua1wiPmh0dHBzOlwvXC9kb2kub3JnXC8xMC4xNTk0XC9QQU5HQUVBLjczODI3OTxcL2E+IC0gPHNwYW4gdGl0bGU9XCJUaGUgc2NvcmUgaXMgYSBtZWFzdXJlbWVudCBvZiByZWxldmFuY3kgKHNlZSBURi1JREYgYWxnb3JpdGhtKS4gVGhlIHZhbHVlIGlzIG5vdCBhYnNvbHV0ZSBhbmQgb25seSBzdWl0YWJsZSB0byBjb21wYXJlIGhpdHMgZnJvbSB0aGUgc2FtZSByZXN1bHQgc2V0LlwiPlNjb3JlOiAxNi4xODxcL3NwYW4+PFwvZGl2PjxcL2xpPiJ9LHsiVVJJIjoiZG9pOjEwLjE1OTRcL1BBTkdBRUEuODc2MTgwIiwic2NvcmUiOjE1LjUxMjc5OSwiaHRtbCI6IjxsaT48ZGl2IGNsYXNzPVwiY2l0YXRpb25cIj48YSBocmVmPVwiaHR0cHM6XC9cL2RvaS5wYW5nYWVhLmRlXC8xMC4xNTk0XC9QQU5HQUVBLjg3NjE4MFwiIHRhcmdldD1cIl9zZWxmXCIgY2xhc3M9XCJkYXRhc2V0LWxpbmtcIj48c3Ryb25nPktudWRzb24sIEtQOyBSYXZlbG8sIEFDICgyMDE3KTo8XC9zdHJvbmc+IEV2aWRlbmNlIGZvciBlbmhhbmNlZCBOb3J0aCBQYWNpZmljIEludGVybWVkaWF0ZSBXYXRlciBpbiB0aGUgQmVyaW5nIFNlYSBkdXJpbmcgZXh0cmVtZSBnbGFjaWFscyBvdmVyIHRoZSBwYXN0IDEuMiBNYSBmcm9tIHJlY29yZHMgb2Ygc3RhYmxlIGlzb3RvcGVzIGFuYWx5emVkIGF0IElPRFAgU2l0ZSAzMjMtVTEzNDIgSG9sZXMgQSwgQywgYW5kIEQ8XC9hPjxcL2Rpdj48dGFibGUgY2xhc3M9XCJyZXN1bHRcIiBzdW1tYXJ5PVwiRGF0YXNldCByZWZlcmVuY2UgYW5kIHNpemVcIiBjZWxsc3BhY2luZz1cIjBcIiBjZWxscGFkZGluZz1cIjBcIj48dHI+PHRkIGNsYXNzPVwidGl0bGVcIj5TdXBwbGVtZW50IHRvOjxcL3RkPjx0ZCBjbGFzcz1cImNvbnRlbnRcIj48c3Ryb25nPktudWRzb24sIEtQOyBSYXZlbG8sIEFDICgyMDE1KTo8XC9zdHJvbmc+IE5vcnRoIFBhY2lmaWMgSW50ZXJtZWRpYXRlIFdhdGVyIGNpcmN1bGF0aW9uIGVuaGFuY2VkIGJ5IHRoZSBjbG9zdXJlIG9mIHRoZSBCZXJpbmcgU3RyYWl0LiA8ZW0+UGFsZW9jZWFub2dyYXBoeTxcL2VtPjxcL3RkPjxcL3RyPjx0cj48dGQgY2xhc3M9XCJ0aXRsZVwiPlJlbGF0ZWQgdG86PFwvdGQ+PHRkIGNsYXNzPVwiY29udGVudFwiPjxzdHJvbmc+S251ZHNvbiwgS1A7IFJhdmVsbywgQUMgKDIwMTUpOjxcL3N0cm9uZz4gRW5oYW5jZWQgc3ViYXJjdGljIFBhY2lmaWMgc3RyYXRpZmljYXRpb24gYW5kIG51dHJpZW50IHV0aWxpemF0aW9uIGR1cmluZyBnbGFjaWFscyBvdmVyIHRoZSBsYXN0IDEuMiBNeXIuIDxlbT5HZW9waHlzaWNhbCBSZXNlYXJjaCBMZXR0ZXJzPFwvZW0+PFwvdGQ+PFwvdHI+PHRyPjx0ZCBjbGFzcz1cInRpdGxlXCI+U2l6ZTo8XC90ZD48dGQgY2xhc3M9XCJjb250ZW50XCI+NiBkYXRhc2V0czxcL3RkPjxcL3RyPjxcL3RhYmxlPjxkaXYgY2xhc3M9XCJkYXRhc2V0aWRcIj48YSBocmVmPVwiaHR0cHM6XC9cL2RvaS5wYW5nYWVhLmRlXC8xMC4xNTk0XC9QQU5HQUVBLjg3NjE4MFwiIHRhcmdldD1cIl9zZWxmXCIgY2xhc3M9XCJkYXRhc2V0LWxpbmsgZG9pLWxpbmtcIj5odHRwczpcL1wvZG9pLm9yZ1wvMTAuMTU5NFwvUEFOR0FFQS44NzYxODA8XC9hPiAtIDxzcGFuIHRpdGxlPVwiVGhlIHNjb3JlIGlzIGEgbWVhc3VyZW1lbnQgb2YgcmVsZXZhbmN5IChzZWUgVEYtSURGIGFsZ29yaXRobSkuIFRoZSB2YWx1ZSBpcyBub3QgYWJzb2x1dGUgYW5kIG9ubHkgc3VpdGFibGUgdG8gY29tcGFyZSBoaXRzIGZyb20gdGhlIHNhbWUgcmVzdWx0IHNldC5cIj5TY29yZTogMTUuNTE8XC9zcGFuPjxcL2Rpdj48XC9saT4ifSx7IlVSSSI6ImRvaToxMC4xNTk0XC9QQU5HQUVBLjczMDM3MyIsInNjb3JlIjoxNS4zNTM5MzIsImh0bWwiOiI8bGk+PGRpdiBjbGFzcz1cImNpdGF0aW9uXCI+PGEgaHJlZj1cImh0dHBzOlwvXC9kb2kucGFuZ2FlYS5kZVwvMTAuMTU5NFwvUEFOR0FFQS43MzAzNzNcIiB0YXJnZXQ9XCJfc2VsZlwiIGNsYXNzPVwiZGF0YXNldC1saW5rXCI+PHN0cm9uZz52YW4gRG9uaywgSjsgTWF0aGlldSwgRyAoMTk2OSk6PFwvc3Ryb25nPiBTdGFibGUgb3h5Z2VuIGFuZCBjYXJib24gaXNvdG9waWMgY29tcG9zaXRpb24gb2YgZm9yYW1pbmlmZXJhIGFuZCBzZWEgd2F0ZXIgZnJvbSB0aGUgQXJjdGljIE9jZWFuPFwvYT48XC9kaXY+PHRhYmxlIGNsYXNzPVwicmVzdWx0XCIgc3VtbWFyeT1cIkRhdGFzZXQgcmVmZXJlbmNlIGFuZCBzaXplXCIgY2VsbHNwYWNpbmc9XCIwXCIgY2VsbHBhZGRpbmc9XCIwXCI+PHRyPjx0ZCBjbGFzcz1cInRpdGxlXCI+U3VwcGxlbWVudCB0bzo8XC90ZD48dGQgY2xhc3M9XCJjb250ZW50XCI+PHN0cm9uZz52YW4gRG9uaywgSjsgTWF0aGlldSwgRyAoMTk2OSk6PFwvc3Ryb25nPiBPeHlnZW4gaXNvdG9wZSBjb21wb3NpdGlvbiBvZiBmb3JhbWluaWZlcmEgYW5kIHdhdGVyIHNhbXBsZXMgZnJvbSB0aGUgQXJjdGljIE9jZWFuLiA8ZW0+Sm91cm5hbCBvZiBHZW9waHlzaWNhbCBSZXNlYXJjaDogT2NlYW5zPFwvZW0+PFwvdGQ+PFwvdHI+PHRyPjx0ZCBjbGFzcz1cInRpdGxlXCI+U2l6ZTo8XC90ZD48dGQgY2xhc3M9XCJjb250ZW50XCI+MiBkYXRhc2V0czxcL3RkPjxcL3RyPjxcL3RhYmxlPjxkaXYgY2xhc3M9XCJkYXRhc2V0aWRcIj48YSBocmVmPVwiaHR0cHM6XC9cL2RvaS5wYW5nYWVhLmRlXC8xMC4xNTk0XC9QQU5HQUVBLjczMDM3M1wiIHRhcmdldD1cIl9zZWxmXCIgY2xhc3M9XCJkYXRhc2V0LWxpbmsgZG9pLWxpbmtcIj5odHRwczpcL1wvZG9pLm9yZ1wvMTAuMTU5NFwvUEFOR0FFQS43MzAzNzM8XC9hPiAtIDxzcGFuIHRpdGxlPVwiVGhlIHNjb3JlIGlzIGEgbWVhc3VyZW1lbnQgb2YgcmVsZXZhbmN5IChzZWUgVEYtSURGIGFsZ29yaXRobSkuIFRoZSB2YWx1ZSBpcyBub3QgYWJzb2x1dGUgYW5kIG9ubHkgc3VpdGFibGUgdG8gY29tcGFyZSBoaXRzIGZyb20gdGhlIHNhbWUgcmVzdWx0IHNldC5cIj5TY29yZTogMTUuMzU8XC9zcGFuPjxcL2Rpdj48XC9saT4ifSx7IlVSSSI6ImRvaToxMC4xNTk0XC9QQU5HQUVBLjg4NDgzMyIsInNjb3JlIjoxNS4yNTM1MzksImh0bWwiOiI8bGk+PGRpdiBjbGFzcz1cImNpdGF0aW9uXCI+PGEgaHJlZj1cImh0dHBzOlwvXC9kb2kucGFuZ2FlYS5kZVwvMTAuMTU5NFwvUEFOR0FFQS44ODQ4MzNcIiB0YXJnZXQ9XCJfc2VsZlwiIGNsYXNzPVwiZGF0YXNldC1saW5rXCI+PHN0cm9uZz5NYXRvcywgTDsgV2llbmJlcmcsIEM7IFRpdHNjaGFjaywgSiBldCBhbC4gKDIwMTcpOjxcL3N0cm9uZz4gU2VkaW1lbnQgY29yZSBzdHVkaWVzIGF0IHRoZSBDYW1wZWNoZSBjb2xkLXdhdGVyIGNvcmFsIHByb3ZpbmNlLCBzb3V0aGVybiBHdWxmIG9mIE1leGljbzxcL2E+PFwvZGl2Pjx0YWJsZSBjbGFzcz1cInJlc3VsdFwiIHN1bW1hcnk9XCJEYXRhc2V0IHJlZmVyZW5jZSBhbmQgc2l6ZVwiIGNlbGxzcGFjaW5nPVwiMFwiIGNlbGxwYWRkaW5nPVwiMFwiPjx0cj48dGQgY2xhc3M9XCJ0aXRsZVwiPlN1cHBsZW1lbnQgdG86PFwvdGQ+PHRkIGNsYXNzPVwiY29udGVudFwiPjxzdHJvbmc+TWF0b3MsIEw7IFdpZW5iZXJnLCBDOyBUaXRzY2hhY2ssIEogZXQgYWwuICgyMDE3KTo8XC9zdHJvbmc+IENvcmFsIG1vdW5kIGRldmVsb3BtZW50IGF0IHRoZSBDYW1wZWNoZSBjb2xkLXdhdGVyIGNvcmFsIHByb3ZpbmNlLCBzb3V0aGVybiBHdWxmIG9mIE1leGljbzogSW1wbGljYXRpb25zIG9mIEFudGFyY3RpYyBJbnRlcm1lZGlhdGUgV2F0ZXIgaW5jcmVhc2VkIGluZmx1ZW5jZSBkdXJpbmcgaW50ZXJnbGFjaWFscy4gPGVtPk1hcmluZSBHZW9sb2d5PFwvZW0+PFwvdGQ+PFwvdHI+PHRyPjx0ZCBjbGFzcz1cInRpdGxlXCI+U2l6ZTo8XC90ZD48dGQgY2xhc3M9XCJjb250ZW50XCI+NSBkYXRhc2V0czxcL3RkPjxcL3RyPjxcL3RhYmxlPjxkaXYgY2xhc3M9XCJkYXRhc2V0aWRcIj48YSBocmVmPVwiaHR0cHM6XC9cL2RvaS5wYW5nYWVhLmRlXC8xMC4xNTk0XC9QQU5HQUVBLjg4NDgzM1wiIHRhcmdldD1cIl9zZWxmXCIgY2xhc3M9XCJkYXRhc2V0LWxpbmsgZG9pLWxpbmtcIj5odHRwczpcL1wvZG9pLm9yZ1wvMTAuMTU5NFwvUEFOR0FFQS44ODQ4MzM8XC9hPiAtIDxzcGFuIHRpdGxlPVwiVGhlIHNjb3JlIGlzIGEgbWVhc3VyZW1lbnQgb2YgcmVsZXZhbmN5IChzZWUgVEYtSURGIGFsZ29yaXRobSkuIFRoZSB2YWx1ZSBpcyBub3QgYWJzb2x1dGUgYW5kIG9ubHkgc3VpdGFibGUgdG8gY29tcGFyZSBoaXRzIGZyb20gdGhlIHNhbWUgcmVzdWx0IHNldC5cIj5TY29yZTogMTUuMjU8XC9zcGFuPjxcL2Rpdj48XC9saT4ifSx7IlVSSSI6ImRvaToxMC4xNTk0XC9QQU5HQUVBLjc2MjExNiIsInNjb3JlIjoxNS4xOTg1MSwiaHRtbCI6IjxsaT48ZGl2IGNsYXNzPVwiY2l0YXRpb25cIj48YSBocmVmPVwiaHR0cHM6XC9cL2RvaS5wYW5nYWVhLmRlXC8xMC4xNTk0XC9QQU5HQUVBLjc2MjExNlwiIHRhcmdldD1cIl9zZWxmXCIgY2xhc3M9XCJkYXRhc2V0LWxpbmtcIj48c3Ryb25nPkRtaXRyaWV2LCBGQTsgR3Vka292LCBBTiAoMTk4Nyk6PFwvc3Ryb25nPiBDb25jZW50cmF0aW9ucyBvZiBhbGlwaGF0aWMgaHlkcm9jYXJib25zIGFuZCBoZXhhY2hsb3JvY3ljbG9oZXhhbmUgaXNvbWVycyBpbiB1bmRlci1pY2Ugd2F0ZXIsIHNub3csIGFuZCBzZWEgaWNlIGZyb20gdGhlIEdyZWVubGFuZCBTZWE8XC9hPjxcL2Rpdj48dGFibGUgY2xhc3M9XCJyZXN1bHRcIiBzdW1tYXJ5PVwiRGF0YXNldCByZWZlcmVuY2UgYW5kIHNpemVcIiBjZWxsc3BhY2luZz1cIjBcIiBjZWxscGFkZGluZz1cIjBcIj48dHI+PHRkIGNsYXNzPVwidGl0bGVcIj5TdXBwbGVtZW50IHRvOjxcL3RkPjx0ZCBjbGFzcz1cImNvbnRlbnRcIj48c3Ryb25nPkRtaXRyaWV2LCBGQTsgR3Vka292LCBBTiAoMTk4Nyk6PFwvc3Ryb25nPiBBbGlwaGF0aWMgaHlkcm9jYXJib25zIGFuZCBpc29tZXJzIG9mIGhleGFjaGxvcm9jeWNsb2hleGFuZSBpbiBzcGVjaW1lbnMgb2Ygd2F0ZXIsIGljZSBhbmQgc25vdyBmcm9tIHRoZSBHcmVlbmxhbmQgU2VhLiA8ZW0+T2NlYW5vbG9neTxcL2VtPjxcL3RkPjxcL3RyPjx0cj48dGQgY2xhc3M9XCJ0aXRsZVwiPlNpemU6PFwvdGQ+PHRkIGNsYXNzPVwiY29udGVudFwiPjIgZGF0YXNldHM8XC90ZD48XC90cj48XC90YWJsZT48ZGl2IGNsYXNzPVwiZGF0YXNldGlkXCI+PGEgaHJlZj1cImh0dHBzOlwvXC9kb2kucGFuZ2FlYS5kZVwvMTAuMTU5NFwvUEFOR0FFQS43NjIxMTZcIiB0YXJnZXQ9XCJfc2VsZlwiIGNsYXNzPVwiZGF0YXNldC1saW5rIGRvaS1saW5rXCI+aHR0cHM6XC9cL2RvaS5vcmdcLzEwLjE1OTRcL1BBTkdBRUEuNzYyMTE2PFwvYT4gLSA8c3BhbiB0aXRsZT1cIlRoZSBzY29yZSBpcyBhIG1lYXN1cmVtZW50IG9mIHJlbGV2YW5jeSAoc2VlIFRGLUlERiBhbGdvcml0aG0pLiBUaGUgdmFsdWUgaXMgbm90IGFic29sdXRlIGFuZCBvbmx5IHN1aXRhYmxlIHRvIGNvbXBhcmUgaGl0cyBmcm9tIHRoZSBzYW1lIHJlc3VsdCBzZXQuXCI+U2NvcmU6IDE1LjI8XC9zcGFuPjxcL2Rpdj48XC9saT4ifSx7IlVSSSI6ImRvaToxMC4xNTk0XC9QQU5HQUVBLjU0ODQxNSIsInNjb3JlIjoxNS4wNzI2OTgsImh0bWwiOiI8bGk+PGRpdiBjbGFzcz1cImNpdGF0aW9uXCI+PGEgaHJlZj1cImh0dHBzOlwvXC9kb2kucGFuZ2FlYS5kZVwvMTAuMTU5NFwvUEFOR0FFQS41NDg0MTVcIiB0YXJnZXQ9XCJfc2VsZlwiIGNsYXNzPVwiZGF0YXNldC1saW5rXCI+PHN0cm9uZz5IYXJ0bWFubiwgTTsgTcO8bGxlciwgUEo7IFN1ZXNzLCBFIGV0IGFsLiAoMTk3Myk6PFwvc3Ryb25nPiBHZW9jaGVtaXN0cnkgb2YgcmVjZW50IG1hcmluZSBzZWRpbWVudHMsIGludGVyc3RpdGlhbCB3YXRlciwgYW5kIHNlYSB3YXRlciBmcm9tIHRoZSBXZXN0IEFmcmljYW4gY29udGluZW50YWwgbWFyZ2luPFwvYT48XC9kaXY+PHRhYmxlIGNsYXNzPVwicmVzdWx0XCIgc3VtbWFyeT1cIkRhdGFzZXQgcmVmZXJlbmNlIGFuZCBzaXplXCIgY2VsbHNwYWNpbmc9XCIwXCIgY2VsbHBhZGRpbmc9XCIwXCI+PHRyPjx0ZCBjbGFzcz1cInRpdGxlXCI+U3VwcGxlbWVudCB0bzo8XC90ZD48dGQgY2xhc3M9XCJjb250ZW50XCI+PHN0cm9uZz5IYXJ0bWFubiwgTTsgTcO8bGxlciwgUEo7IFN1ZXNzLCBFIGV0IGFsLiAoMTk3Myk6PFwvc3Ryb25nPiBPeGlkYXRpb24gb2Ygb3JnYW5pYyBtYXR0ZXIgaW4gcmVjZW50IG1hcmluZSBzZWRpbWVudHMuIDxlbT5NZXRlb3IgRm9yc2NodW5nc2VyZ2Vibmlzc2UsIERldXRzY2hlIEZvcnNjaHVuZ3NnZW1laW5zY2hhZnQsIFJlaWhlIEMgR2VvbG9naWUgdW5kIEdlb3BoeXNpaywgR2VicsO8ZGVyIEJvcm50csOkZ2VyLCBCZXJsaW4sIFN0dXR0Z2FydDxcL2VtPjxcL3RkPjxcL3RyPjx0cj48dGQgY2xhc3M9XCJ0aXRsZVwiPlNpemU6PFwvdGQ+PHRkIGNsYXNzPVwiY29udGVudFwiPjUgZGF0YXNldHM8XC90ZD48XC90cj48XC90YWJsZT48ZGl2IGNsYXNzPVwiZGF0YXNldGlkXCI+PGEgaHJlZj1cImh0dHBzOlwvXC9kb2kucGFuZ2FlYS5kZVwvMTAuMTU5NFwvUEFOR0FFQS41NDg0MTVcIiB0YXJnZXQ9XCJfc2VsZlwiIGNsYXNzPVwiZGF0YXNldC1saW5rIGRvaS1saW5rXCI+aHR0cHM6XC9cL2RvaS5vcmdcLzEwLjE1OTRcL1BBTkdBRUEuNTQ4NDE1PFwvYT4gLSA8c3BhbiB0aXRsZT1cIlRoZSBzY29yZSBpcyBhIG1lYXN1cmVtZW50IG9mIHJlbGV2YW5jeSAoc2VlIFRGLUlERiBhbGdvcml0aG0pLiBUaGUgdmFsdWUgaXMgbm90IGFic29sdXRlIGFuZCBvbmx5IHN1aXRhYmxlIHRvIGNvbXBhcmUgaGl0cyBmcm9tIHRoZSBzYW1lIHJlc3VsdCBzZXQuXCI+U2NvcmU6IDE1LjA3PFwvc3Bhbj48XC9kaXY+PFwvbGk+In1dLCJmYWNldHMiOm51bGwsIm1heFNjb3JlIjoxNy4wNTkyMywib2Zmc2V0IjowLCJxdWVyeUlkZW50aWZpZXIiOiI0OWFjZTZlYy0wNzcyLTNkYzAtODUwZC02NGZiMzkwM2NkNjUiLCJzZXNzaW9uIjoibGJ2amY4Nm1iczNxOW42cG0xczZob3UyZDciLCJ0aW1lSW5EYXRhYmFzZSI6MTMsInRvdGFsQ291bnQiOjg0NjEyLCJodG1sU3VtbWFyeSI6IjxzdHJvbmc+ODQ2MTIgZGF0YXNldHM8XC9zdHJvbmc+IGZvdW5kIG9uIHNlYXJjaCBmb3IgPHN0cm9uZyB0aXRsZT1cIlF1ZXJ5OiAmcmFxdW87d2F0ZXImbGFxdW87XCI+JnJhcXVvO3dhdGVyJmxhcXVvOzxcL3N0cm9uZz4gaW4gdG9waWMgPHN0cm9uZz5PY2VhbnM8XC9zdHJvbmc+IiwiaHRtbFNuaXBwZXRSU1MiOiI8bGluayByZWw9XCJhbHRlcm5hdGVcIiB0aXRsZT1cIlBBTkdBRUEgbGF0ZXN0IGRhdGFzZXRzIGFib3V0ICZxdW90O3dhdGVyJnF1b3Q7IGluIHRvcGljIE9jZWFuc1wiIHR5cGU9XCJhcHBsaWNhdGlvblwvcnNzK3htbFwiIGhyZWY9XCJcL3Rvb2xzXC9sYXRlc3QtZGF0YXNldHMucnNzP3Q9T2NlYW5zJmFtcDtxPXdhdGVyJmFtcDtjb3VudD0xMFwiPiJ9
+  recorded_at: 2019-09-11 20:33:07 GMT
+  recorded_with: vcr/0.3.0.9100, webmockr/0.4.0
 - request:
     method: get
     uri: https://www.pangaea.de/advanced/search.php?count=10&offset=0&q=water&mindate=2013-06-01&maxdate=2013-07-01
@@ -438,7 +111,7 @@ http_interactions:
       encoding: ''
       string: ''
     headers:
-      User-Agent: libcurl/7.54.0 r-curl/4.0 crul/0.8.4
+      User-Agent: libcurl/7.54.0 r-curl/4.0 crul/0.8.4.9100
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
   response:
@@ -450,7 +123,7 @@ http_interactions:
       cache-control: private, max-age=10800, pre-check=10800
       content-encoding: gzip
       content-type: application/json; charset=UTF-8
-      date: Tue, 13 Aug 2019 21:53:53 GMT
+      date: Wed, 11 Sep 2019 20:33:06 GMT
       last-modified: Fri, 15 Apr 2016 11:55:50 GMT
       server: PANGAEA/2.0
       status: 'HTTP/2 200 '
@@ -462,166 +135,10 @@ http_interactions:
       x-frame-options: SAMEORIGIN
       x-ua-compatible: IE=Edge
     body:
-      encoding: UTF-8
-      string: '{"results":[{"URI":"doi:10.1594\/PANGAEA.862525","score":18.622866,"html":"<li><div
-        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.862525\"
-        target=\"_self\" class=\"dataset-link\"><strong>Wang, X; Zhang, K; Wu, S et
-        al. (2016):<\/strong> Long-term global GPS-derived precipitable water vapor
-        data set<\/a><\/div><table class=\"result\" summary=\"Dataset reference and
-        size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"title\">Supplement
-        to:<\/td><td class=\"content\"><strong>Wang, X; Zhang, K; Wu, S et al. (2016):<\/strong>
-        Water vapor-weighted mean temperature and its impact on the determination
-        of precipitable water vapor and its linear trend. <em>Journal of Geophysical
-        Research-Atmospheres<\/em><\/td><\/tr><tr><td class=\"title\">Size:<\/td><td
-        class=\"content\">372 datasets<\/td><\/tr><\/table><div class=\"datasetid\"><a
-        href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.862525\" target=\"_self\"
-        class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.862525<\/a>
-        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
-        The value is not absolute and only suitable to compare hits from the same
-        result set.\">Score: 18.62<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.882613","score":17.035387,"html":"<li><div
-        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.882613\"
-        target=\"_self\" class=\"dataset-link\"><strong>Antico, A; Aguiar, RO; Amsler,
-        ML (2017):<\/strong> Paraná River hydrometric data from Rosario City, Argentina:
-        1875 to 2017<\/a><\/div><table class=\"result\" summary=\"Dataset reference
-        and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"title\">Supplement
-        to:<\/td><td class=\"content\"><strong>Antico, A; Aguiar, RO; Amsler, ML (2018):<\/strong>
-        Hydrometric data rescue in the Paraná River Basin. <em>Water Resources Research<\/em><\/td><\/tr><tr><td
-        class=\"title\">Size:<\/td><td class=\"content\">2 datasets<\/td><\/tr><\/table><div
-        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.882613\"
-        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.882613<\/a>
-        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
-        The value is not absolute and only suitable to compare hits from the same
-        result set.\">Score: 17.04<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.859527","score":15.868127,"html":"<li><div
-        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.859527\"
-        target=\"_self\" class=\"dataset-link\"><strong>Martellucci, R; Pierattini,
-        A (2016):<\/strong> Physical water column observations during summer breeze
-        winds<\/a><\/div><table class=\"result\" summary=\"Dataset reference and size\"
-        cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"title\">Related to:<\/td><td
-        class=\"content\"><strong>Martellucci, R; Paladini de Mendoza, F; Piazzolla,
-        D et al. (2013):<\/strong> High resolution coastal monitoring during sea breeze
-        events. <em>SISC First annual conference Lecce, Italy, 23-24 Settember 2013<\/em><br\/><strong>Martellucci,
-        R; Pierattini, A; Madonia, A et al. (2014):<\/strong> Phytoplankton biomass
-        distribution in water column and sediments in the northern Latium coastal
-        area. <em>7th EuroGOOS Conference, Lisbon, Portugal, 28-30 October 2014<\/em><br\/><strong>Martellucci,
-        R; Pierattini, A; Paladini de Mendoza, F et al.:<\/strong> Physical and biological
-        water column observations during summer breeze winds.<\/td><\/tr><tr><td class=\"title\">Size:<\/td><td
-        class=\"content\">20 datasets<\/td><\/tr><\/table><div class=\"datasetid\"><a
-        href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.859527\" target=\"_self\"
-        class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.859527<\/a>
-        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
-        The value is not absolute and only suitable to compare hits from the same
-        result set.\">Score: 15.87<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.875120","score":15.553296,"html":"<li><div
-        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.875120\"
-        target=\"_self\" class=\"dataset-link\"><strong>Ayers, JC; George, G; Fry,
-        D et al. (2017):<\/strong> Surface water chemistry and tidal channel time
-        series in southwest Bangladesh<\/a><\/div><table class=\"result\" summary=\"Dataset
-        reference and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"title\">Supplement
-        to:<\/td><td class=\"content\"><strong>Ayers, JC; George, G; Fry, D et al.
-        (2017):<\/strong> Salinization and arsenic contamination of surface water
-        in southwest Bangladesh. <em>Geochemical Transactions<\/em><\/td><\/tr><tr><td
-        class=\"title\">Size:<\/td><td class=\"content\">2 datasets<\/td><\/tr><\/table><div
-        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.875120\"
-        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.875120<\/a>
-        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
-        The value is not absolute and only suitable to compare hits from the same
-        result set.\">Score: 15.55<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.854921","score":15.081347,"html":"<li><div
-        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.854921\"
-        target=\"_self\" class=\"dataset-link\"><strong>Preußer, A; Heinemann, G;
-        Willmes, S et al. (2015):<\/strong> Daily polynya area and ice production
-        in the North Water polynya region<\/a><\/div><table class=\"result\" summary=\"Dataset
-        reference and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"title\">Supplement
-        to:<\/td><td class=\"content\"><strong>Preußer, A; Heinemann, G; Willmes,
-        S et al. (2015):<\/strong> Multi-Decadal variability of polynya characteristics
-        and ice production in the North Water Polynya by means of passive microwave
-        and thermal infrared satellite imagery. <em>Remote Sensing<\/em><\/td><\/tr><tr><td
-        class=\"title\">Size:<\/td><td class=\"content\">62 datasets<\/td><\/tr><\/table><div
-        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.854921\"
-        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.854921<\/a>
-        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
-        The value is not absolute and only suitable to compare hits from the same
-        result set.\">Score: 15.08<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.883604","score":14.769367,"html":"<li><div
-        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.883604\"
-        target=\"_self\" class=\"dataset-link\"><strong>Lee, S; Ford, A; Mangubai,
-        S et al. (2017):<\/strong> Effects of sandfish (Holothuria scabra) removal
-        on shallow-water sediments in Fijiby sea<\/a><\/div><table class=\"result\"
-        summary=\"Dataset reference and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td
-        class=\"title\">Supplement to:<\/td><td class=\"content\"><strong>Lee, S;
-        Ford, A; Mangubai, S et al.:<\/strong> Effects of sandfish (Holothuria scabra)
-        removal on shallow-water sediments in Fiji. <em>PeerJ<\/em><\/td><\/tr><tr><td
-        class=\"title\">Size:<\/td><td class=\"content\">4 datasets<\/td><\/tr><\/table><div
-        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.883604\"
-        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.883604<\/a>
-        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
-        The value is not absolute and only suitable to compare hits from the same
-        result set.\">Score: 14.77<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.886792","score":13.922331,"html":"<li><div
-        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.886792\"
-        target=\"_self\" class=\"dataset-link\"><strong>Jilbert, T; Asmala, E; Schröder,
-        C et al. (2018):<\/strong> Water column, sediment and pore water data from
-        Mustionjoki estuary, Finland, 2014-2015<\/a><\/div><table class=\"result\"
-        summary=\"Dataset reference and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td
-        class=\"title\">Supplement to:<\/td><td class=\"content\"><strong>Jilbert,
-        T; Asmala, E; Schröder, C et al. (2018):<\/strong> Impacts of flocculation
-        on the distribution and diagenesis of iron in boreal estuarine sediments.
-        <em>Biogeosciences<\/em><\/td><\/tr><tr><td class=\"title\">Size:<\/td><td
-        class=\"content\">15 datasets<\/td><\/tr><\/table><div class=\"datasetid\"><a
-        href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.886792\" target=\"_self\"
-        class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.886792<\/a>
-        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
-        The value is not absolute and only suitable to compare hits from the same
-        result set.\">Score: 13.92<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.831007","score":13.425766,"html":"<li><div
-        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.831007\"
-        target=\"_self\" class=\"dataset-link\"><strong>Riffler, M; Lieberherr, G-D;
-        Wunderle, S (2015):<\/strong> Lake surface water temperatures of European
-        Alpine lakes (1989-2013) based on the Advanced Very High Resolution Radiometer
-        (AVHRR) 1-km data set<\/a><\/div><table class=\"result\" summary=\"Dataset
-        reference and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"title\">Supplement
-        to:<\/td><td class=\"content\"><strong>Riffler, M; Lieberherr, G-D; Wunderle,
-        S (2015):<\/strong> Lake surface water temperatures of European Alpine lakes
-        (1989–2013) based on the Advanced Very High Resolution Radiometer (AVHRR)
-        1 km data set. <em>Earth System Science Data<\/em><\/td><\/tr><tr><td class=\"title\">Size:<\/td><td
-        class=\"content\">54 datasets<\/td><\/tr><\/table><div class=\"datasetid\"><a
-        href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.831007\" target=\"_self\"
-        class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.831007<\/a>
-        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
-        The value is not absolute and only suitable to compare hits from the same
-        result set.\">Score: 13.43<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.903093","score":13.393605,"html":"<li><div
-        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.903093\"
-        target=\"_self\" class=\"dataset-link\"><strong>Büscher, J; Wisshak, M; Form,
-        A et al. (2019):<\/strong> In Situ Growth and Bioerosion Rates of Lophelia
-        pertusa in a Norwegian Fjord and Open Shelf Cold-water Coral Habitat<\/a><\/div><table
-        class=\"result\" summary=\"Dataset reference and size\" cellspacing=\"0\"
-        cellpadding=\"0\"><tr><td class=\"title\">Supplement to:<\/td><td class=\"content\"><strong>Büscher,
-        J; Wisshak, M; Form, A et al.:<\/strong> In Situ Growth and Bioerosion Rates
-        of Lophelia pertusa in a\nNorwegian Fjord and Open Shelf Cold-water Coral
-        Habitat. <em>PeerJ<\/em><\/td><\/tr><tr><td class=\"title\">Size:<\/td><td
-        class=\"content\">2 datasets<\/td><\/tr><\/table><div class=\"datasetid\"><a
-        href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.903093\" target=\"_self\"
-        class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.903093<\/a>
-        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
-        The value is not absolute and only suitable to compare hits from the same
-        result set.\">Score: 13.39<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.883898","score":12.792697,"html":"<li><div
-        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.883898\"
-        target=\"_self\" class=\"dataset-link\"><strong>Boergens, E; Dettmering, D;
-        Schwatke, C et al. (2017):<\/strong> Water level, areal extent and volume
-        change of Lake Tanganyika, Lake Turkana, Lake Tonle Sap and Lake Constance:
-        Multi-year time series from satellite altimetry and remote sensing<\/a><\/div><table
-        class=\"result\" summary=\"Dataset reference and size\" cellspacing=\"0\"
-        cellpadding=\"0\"><tr><td class=\"title\">Related to:<\/td><td class=\"content\"><strong>Schwatke,
-        C; Dettmering, D; Bosch, W et al. (2015):<\/strong> DAHITI - an innovative
-        approach for estimating water level time series over inland waters using multi-mission
-        satellite altimetry. <em>Hydrology and Earth System Sciences<\/em><\/td><\/tr><tr><td
-        class=\"title\">Size:<\/td><td class=\"content\">4 datasets<\/td><\/tr><\/table><div
-        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.883898\"
-        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.883898<\/a>
-        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
-        The value is not absolute and only suitable to compare hits from the same
-        result set.\">Score: 12.79<\/span><\/div><\/li>"}],"facets":null,"maxScore":18.622866,"offset":0,"queryIdentifier":"31b11700-da93-3dc8-b2ff-4ab2aa0537f9","session":"b2eefe38alfak73vlq0rmk1hp2","timeInDatabase":9,"totalCount":1370,"htmlSummary":"<strong>1370
-        datasets<\/strong> found on search for <strong title=\"Query: &raquo;water&laquo;\">&raquo;water&laquo;<\/strong>
-        with <strong title=\"Start: 2013-06-01, End: 2013-07-01\">temporal coverage<\/strong>","htmlSnippetRSS":"<link
-        rel=\"alternate\" title=\"PANGAEA latest datasets about &quot;water&quot;
-        with temporal coverage\" type=\"application\/rss+xml\" href=\"\/tools\/latest-datasets.rss?q=water&amp;mindate=2013-06-01&amp;maxdate=2013-07-01&amp;count=10\">"}'
-  recorded_at: 2019-08-13 21:53:54 GMT
-  recorded_with: vcr/0.2.6, webmockr/0.4.0
+      encoding: ASCII-8BIT
+      string: eyJyZXN1bHRzIjpbeyJVUkkiOiJkb2k6MTAuMTU5NFwvUEFOR0FFQS44NjI1MjUiLCJzY29yZSI6MTguNjM3ODA4LCJodG1sIjoiPGxpPjxkaXYgY2xhc3M9XCJjaXRhdGlvblwiPjxhIGhyZWY9XCJodHRwczpcL1wvZG9pLnBhbmdhZWEuZGVcLzEwLjE1OTRcL1BBTkdBRUEuODYyNTI1XCIgdGFyZ2V0PVwiX3NlbGZcIiBjbGFzcz1cImRhdGFzZXQtbGlua1wiPjxzdHJvbmc+V2FuZywgWDsgWmhhbmcsIEs7IFd1LCBTIGV0IGFsLiAoMjAxNik6PFwvc3Ryb25nPiBMb25nLXRlcm0gZ2xvYmFsIEdQUy1kZXJpdmVkIHByZWNpcGl0YWJsZSB3YXRlciB2YXBvciBkYXRhIHNldDxcL2E+PFwvZGl2Pjx0YWJsZSBjbGFzcz1cInJlc3VsdFwiIHN1bW1hcnk9XCJEYXRhc2V0IHJlZmVyZW5jZSBhbmQgc2l6ZVwiIGNlbGxzcGFjaW5nPVwiMFwiIGNlbGxwYWRkaW5nPVwiMFwiPjx0cj48dGQgY2xhc3M9XCJ0aXRsZVwiPlN1cHBsZW1lbnQgdG86PFwvdGQ+PHRkIGNsYXNzPVwiY29udGVudFwiPjxzdHJvbmc+V2FuZywgWDsgWmhhbmcsIEs7IFd1LCBTIGV0IGFsLiAoMjAxNik6PFwvc3Ryb25nPiBXYXRlciB2YXBvci13ZWlnaHRlZCBtZWFuIHRlbXBlcmF0dXJlIGFuZCBpdHMgaW1wYWN0IG9uIHRoZSBkZXRlcm1pbmF0aW9uIG9mIHByZWNpcGl0YWJsZSB3YXRlciB2YXBvciBhbmQgaXRzIGxpbmVhciB0cmVuZC4gPGVtPkpvdXJuYWwgb2YgR2VvcGh5c2ljYWwgUmVzZWFyY2gtQXRtb3NwaGVyZXM8XC9lbT48XC90ZD48XC90cj48dHI+PHRkIGNsYXNzPVwidGl0bGVcIj5TaXplOjxcL3RkPjx0ZCBjbGFzcz1cImNvbnRlbnRcIj4zNzIgZGF0YXNldHM8XC90ZD48XC90cj48XC90YWJsZT48ZGl2IGNsYXNzPVwiZGF0YXNldGlkXCI+PGEgaHJlZj1cImh0dHBzOlwvXC9kb2kucGFuZ2FlYS5kZVwvMTAuMTU5NFwvUEFOR0FFQS44NjI1MjVcIiB0YXJnZXQ9XCJfc2VsZlwiIGNsYXNzPVwiZGF0YXNldC1saW5rIGRvaS1saW5rXCI+aHR0cHM6XC9cL2RvaS5vcmdcLzEwLjE1OTRcL1BBTkdBRUEuODYyNTI1PFwvYT4gLSA8c3BhbiB0aXRsZT1cIlRoZSBzY29yZSBpcyBhIG1lYXN1cmVtZW50IG9mIHJlbGV2YW5jeSAoc2VlIFRGLUlERiBhbGdvcml0aG0pLiBUaGUgdmFsdWUgaXMgbm90IGFic29sdXRlIGFuZCBvbmx5IHN1aXRhYmxlIHRvIGNvbXBhcmUgaGl0cyBmcm9tIHRoZSBzYW1lIHJlc3VsdCBzZXQuXCI+U2NvcmU6IDE4LjY0PFwvc3Bhbj48XC9kaXY+PFwvbGk+In0seyJVUkkiOiJkb2k6MTAuMTU5NFwvUEFOR0FFQS44ODI2MTMiLCJzY29yZSI6MTcuMDU5MjMsImh0bWwiOiI8bGk+PGRpdiBjbGFzcz1cImNpdGF0aW9uXCI+PGEgaHJlZj1cImh0dHBzOlwvXC9kb2kucGFuZ2FlYS5kZVwvMTAuMTU5NFwvUEFOR0FFQS44ODI2MTNcIiB0YXJnZXQ9XCJfc2VsZlwiIGNsYXNzPVwiZGF0YXNldC1saW5rXCI+PHN0cm9uZz5BbnRpY28sIEE7IEFndWlhciwgUk87IEFtc2xlciwgTUwgKDIwMTcpOjxcL3N0cm9uZz4gUGFyYW7DoSBSaXZlciBoeWRyb21ldHJpYyBkYXRhIGZyb20gUm9zYXJpbyBDaXR5LCBBcmdlbnRpbmE6IDE4NzUgdG8gMjAxNzxcL2E+PFwvZGl2Pjx0YWJsZSBjbGFzcz1cInJlc3VsdFwiIHN1bW1hcnk9XCJEYXRhc2V0IHJlZmVyZW5jZSBhbmQgc2l6ZVwiIGNlbGxzcGFjaW5nPVwiMFwiIGNlbGxwYWRkaW5nPVwiMFwiPjx0cj48dGQgY2xhc3M9XCJ0aXRsZVwiPlN1cHBsZW1lbnQgdG86PFwvdGQ+PHRkIGNsYXNzPVwiY29udGVudFwiPjxzdHJvbmc+QW50aWNvLCBBOyBBZ3VpYXIsIFJPOyBBbXNsZXIsIE1MICgyMDE4KTo8XC9zdHJvbmc+IEh5ZHJvbWV0cmljIGRhdGEgcmVzY3VlIGluIHRoZSBQYXJhbsOhIFJpdmVyIEJhc2luLiA8ZW0+V2F0ZXIgUmVzb3VyY2VzIFJlc2VhcmNoPFwvZW0+PFwvdGQ+PFwvdHI+PHRyPjx0ZCBjbGFzcz1cInRpdGxlXCI+U2l6ZTo8XC90ZD48dGQgY2xhc3M9XCJjb250ZW50XCI+MiBkYXRhc2V0czxcL3RkPjxcL3RyPjxcL3RhYmxlPjxkaXYgY2xhc3M9XCJkYXRhc2V0aWRcIj48YSBocmVmPVwiaHR0cHM6XC9cL2RvaS5wYW5nYWVhLmRlXC8xMC4xNTk0XC9QQU5HQUVBLjg4MjYxM1wiIHRhcmdldD1cIl9zZWxmXCIgY2xhc3M9XCJkYXRhc2V0LWxpbmsgZG9pLWxpbmtcIj5odHRwczpcL1wvZG9pLm9yZ1wvMTAuMTU5NFwvUEFOR0FFQS44ODI2MTM8XC9hPiAtIDxzcGFuIHRpdGxlPVwiVGhlIHNjb3JlIGlzIGEgbWVhc3VyZW1lbnQgb2YgcmVsZXZhbmN5IChzZWUgVEYtSURGIGFsZ29yaXRobSkuIFRoZSB2YWx1ZSBpcyBub3QgYWJzb2x1dGUgYW5kIG9ubHkgc3VpdGFibGUgdG8gY29tcGFyZSBoaXRzIGZyb20gdGhlIHNhbWUgcmVzdWx0IHNldC5cIj5TY29yZTogMTcuMDY8XC9zcGFuPjxcL2Rpdj48XC9saT4ifSx7IlVSSSI6ImRvaToxMC4xNTk0XC9QQU5HQUVBLjg1OTUyNyIsInNjb3JlIjoxNS44ODExNzYsImh0bWwiOiI8bGk+PGRpdiBjbGFzcz1cImNpdGF0aW9uXCI+PGEgaHJlZj1cImh0dHBzOlwvXC9kb2kucGFuZ2FlYS5kZVwvMTAuMTU5NFwvUEFOR0FFQS44NTk1MjdcIiB0YXJnZXQ9XCJfc2VsZlwiIGNsYXNzPVwiZGF0YXNldC1saW5rXCI+PHN0cm9uZz5NYXJ0ZWxsdWNjaSwgUjsgUGllcmF0dGluaSwgQSAoMjAxNik6PFwvc3Ryb25nPiBQaHlzaWNhbCB3YXRlciBjb2x1bW4gb2JzZXJ2YXRpb25zIGR1cmluZyBzdW1tZXIgYnJlZXplIHdpbmRzPFwvYT48XC9kaXY+PHRhYmxlIGNsYXNzPVwicmVzdWx0XCIgc3VtbWFyeT1cIkRhdGFzZXQgcmVmZXJlbmNlIGFuZCBzaXplXCIgY2VsbHNwYWNpbmc9XCIwXCIgY2VsbHBhZGRpbmc9XCIwXCI+PHRyPjx0ZCBjbGFzcz1cInRpdGxlXCI+UmVsYXRlZCB0bzo8XC90ZD48dGQgY2xhc3M9XCJjb250ZW50XCI+PHN0cm9uZz5NYXJ0ZWxsdWNjaSwgUjsgUGFsYWRpbmkgZGUgTWVuZG96YSwgRjsgUGlhenpvbGxhLCBEIGV0IGFsLiAoMjAxMyk6PFwvc3Ryb25nPiBIaWdoIHJlc29sdXRpb24gY29hc3RhbCBtb25pdG9yaW5nIGR1cmluZyBzZWEgYnJlZXplIGV2ZW50cy4gPGVtPlNJU0MgRmlyc3QgYW5udWFsIGNvbmZlcmVuY2UgTGVjY2UsIEl0YWx5LCAyMy0yNCBTZXR0ZW1iZXIgMjAxMzxcL2VtPjxiclwvPjxzdHJvbmc+TWFydGVsbHVjY2ksIFI7IFBpZXJhdHRpbmksIEE7IE1hZG9uaWEsIEEgZXQgYWwuICgyMDE0KTo8XC9zdHJvbmc+IFBoeXRvcGxhbmt0b24gYmlvbWFzcyBkaXN0cmlidXRpb24gaW4gd2F0ZXIgY29sdW1uIGFuZCBzZWRpbWVudHMgaW4gdGhlIG5vcnRoZXJuIExhdGl1bSBjb2FzdGFsIGFyZWEuIDxlbT43dGggRXVyb0dPT1MgQ29uZmVyZW5jZSwgTGlzYm9uLCBQb3J0dWdhbCwgMjgtMzAgT2N0b2JlciAyMDE0PFwvZW0+PGJyXC8+PHN0cm9uZz5NYXJ0ZWxsdWNjaSwgUjsgUGllcmF0dGluaSwgQTsgUGFsYWRpbmkgZGUgTWVuZG96YSwgRiBldCBhbC46PFwvc3Ryb25nPiBQaHlzaWNhbCBhbmQgYmlvbG9naWNhbCB3YXRlciBjb2x1bW4gb2JzZXJ2YXRpb25zIGR1cmluZyBzdW1tZXIgYnJlZXplIHdpbmRzLjxcL3RkPjxcL3RyPjx0cj48dGQgY2xhc3M9XCJ0aXRsZVwiPlNpemU6PFwvdGQ+PHRkIGNsYXNzPVwiY29udGVudFwiPjIwIGRhdGFzZXRzPFwvdGQ+PFwvdHI+PFwvdGFibGU+PGRpdiBjbGFzcz1cImRhdGFzZXRpZFwiPjxhIGhyZWY9XCJodHRwczpcL1wvZG9pLnBhbmdhZWEuZGVcLzEwLjE1OTRcL1BBTkdBRUEuODU5NTI3XCIgdGFyZ2V0PVwiX3NlbGZcIiBjbGFzcz1cImRhdGFzZXQtbGluayBkb2ktbGlua1wiPmh0dHBzOlwvXC9kb2kub3JnXC8xMC4xNTk0XC9QQU5HQUVBLjg1OTUyNzxcL2E+IC0gPHNwYW4gdGl0bGU9XCJUaGUgc2NvcmUgaXMgYSBtZWFzdXJlbWVudCBvZiByZWxldmFuY3kgKHNlZSBURi1JREYgYWxnb3JpdGhtKS4gVGhlIHZhbHVlIGlzIG5vdCBhYnNvbHV0ZSBhbmQgb25seSBzdWl0YWJsZSB0byBjb21wYXJlIGhpdHMgZnJvbSB0aGUgc2FtZSByZXN1bHQgc2V0LlwiPlNjb3JlOiAxNS44ODxcL3NwYW4+PFwvZGl2PjxcL2xpPiJ9LHsiVVJJIjoiZG9pOjEwLjE1OTRcL1BBTkdBRUEuODc1MTIwIiwic2NvcmUiOjE1LjU2NDc1OCwiaHRtbCI6IjxsaT48ZGl2IGNsYXNzPVwiY2l0YXRpb25cIj48YSBocmVmPVwiaHR0cHM6XC9cL2RvaS5wYW5nYWVhLmRlXC8xMC4xNTk0XC9QQU5HQUVBLjg3NTEyMFwiIHRhcmdldD1cIl9zZWxmXCIgY2xhc3M9XCJkYXRhc2V0LWxpbmtcIj48c3Ryb25nPkF5ZXJzLCBKQzsgR2VvcmdlLCBHOyBGcnksIEQgZXQgYWwuICgyMDE3KTo8XC9zdHJvbmc+IFN1cmZhY2Ugd2F0ZXIgY2hlbWlzdHJ5IGFuZCB0aWRhbCBjaGFubmVsIHRpbWUgc2VyaWVzIGluIHNvdXRod2VzdCBCYW5nbGFkZXNoPFwvYT48XC9kaXY+PHRhYmxlIGNsYXNzPVwicmVzdWx0XCIgc3VtbWFyeT1cIkRhdGFzZXQgcmVmZXJlbmNlIGFuZCBzaXplXCIgY2VsbHNwYWNpbmc9XCIwXCIgY2VsbHBhZGRpbmc9XCIwXCI+PHRyPjx0ZCBjbGFzcz1cInRpdGxlXCI+U3VwcGxlbWVudCB0bzo8XC90ZD48dGQgY2xhc3M9XCJjb250ZW50XCI+PHN0cm9uZz5BeWVycywgSkM7IEdlb3JnZSwgRzsgRnJ5LCBEIGV0IGFsLiAoMjAxNyk6PFwvc3Ryb25nPiBTYWxpbml6YXRpb24gYW5kIGFyc2VuaWMgY29udGFtaW5hdGlvbiBvZiBzdXJmYWNlIHdhdGVyIGluIHNvdXRod2VzdCBCYW5nbGFkZXNoLiA8ZW0+R2VvY2hlbWljYWwgVHJhbnNhY3Rpb25zPFwvZW0+PFwvdGQ+PFwvdHI+PHRyPjx0ZCBjbGFzcz1cInRpdGxlXCI+U2l6ZTo8XC90ZD48dGQgY2xhc3M9XCJjb250ZW50XCI+MiBkYXRhc2V0czxcL3RkPjxcL3RyPjxcL3RhYmxlPjxkaXYgY2xhc3M9XCJkYXRhc2V0aWRcIj48YSBocmVmPVwiaHR0cHM6XC9cL2RvaS5wYW5nYWVhLmRlXC8xMC4xNTk0XC9QQU5HQUVBLjg3NTEyMFwiIHRhcmdldD1cIl9zZWxmXCIgY2xhc3M9XCJkYXRhc2V0LWxpbmsgZG9pLWxpbmtcIj5odHRwczpcL1wvZG9pLm9yZ1wvMTAuMTU5NFwvUEFOR0FFQS44NzUxMjA8XC9hPiAtIDxzcGFuIHRpdGxlPVwiVGhlIHNjb3JlIGlzIGEgbWVhc3VyZW1lbnQgb2YgcmVsZXZhbmN5IChzZWUgVEYtSURGIGFsZ29yaXRobSkuIFRoZSB2YWx1ZSBpcyBub3QgYWJzb2x1dGUgYW5kIG9ubHkgc3VpdGFibGUgdG8gY29tcGFyZSBoaXRzIGZyb20gdGhlIHNhbWUgcmVzdWx0IHNldC5cIj5TY29yZTogMTUuNTY8XC9zcGFuPjxcL2Rpdj48XC9saT4ifSx7IlVSSSI6ImRvaToxMC4xNTk0XC9QQU5HQUVBLjg1NDkyMSIsInNjb3JlIjoxNS4wOTE3MDEsImh0bWwiOiI8bGk+PGRpdiBjbGFzcz1cImNpdGF0aW9uXCI+PGEgaHJlZj1cImh0dHBzOlwvXC9kb2kucGFuZ2FlYS5kZVwvMTAuMTU5NFwvUEFOR0FFQS44NTQ5MjFcIiB0YXJnZXQ9XCJfc2VsZlwiIGNsYXNzPVwiZGF0YXNldC1saW5rXCI+PHN0cm9uZz5QcmV1w59lciwgQTsgSGVpbmVtYW5uLCBHOyBXaWxsbWVzLCBTIGV0IGFsLiAoMjAxNSk6PFwvc3Ryb25nPiBEYWlseSBwb2x5bnlhIGFyZWEgYW5kIGljZSBwcm9kdWN0aW9uIGluIHRoZSBOb3J0aCBXYXRlciBwb2x5bnlhIHJlZ2lvbjxcL2E+PFwvZGl2Pjx0YWJsZSBjbGFzcz1cInJlc3VsdFwiIHN1bW1hcnk9XCJEYXRhc2V0IHJlZmVyZW5jZSBhbmQgc2l6ZVwiIGNlbGxzcGFjaW5nPVwiMFwiIGNlbGxwYWRkaW5nPVwiMFwiPjx0cj48dGQgY2xhc3M9XCJ0aXRsZVwiPlN1cHBsZW1lbnQgdG86PFwvdGQ+PHRkIGNsYXNzPVwiY29udGVudFwiPjxzdHJvbmc+UHJldcOfZXIsIEE7IEhlaW5lbWFubiwgRzsgV2lsbG1lcywgUyBldCBhbC4gKDIwMTUpOjxcL3N0cm9uZz4gTXVsdGktRGVjYWRhbCB2YXJpYWJpbGl0eSBvZiBwb2x5bnlhIGNoYXJhY3RlcmlzdGljcyBhbmQgaWNlIHByb2R1Y3Rpb24gaW4gdGhlIE5vcnRoIFdhdGVyIFBvbHlueWEgYnkgbWVhbnMgb2YgcGFzc2l2ZSBtaWNyb3dhdmUgYW5kIHRoZXJtYWwgaW5mcmFyZWQgc2F0ZWxsaXRlIGltYWdlcnkuIDxlbT5SZW1vdGUgU2Vuc2luZzxcL2VtPjxcL3RkPjxcL3RyPjx0cj48dGQgY2xhc3M9XCJ0aXRsZVwiPlNpemU6PFwvdGQ+PHRkIGNsYXNzPVwiY29udGVudFwiPjYyIGRhdGFzZXRzPFwvdGQ+PFwvdHI+PFwvdGFibGU+PGRpdiBjbGFzcz1cImRhdGFzZXRpZFwiPjxhIGhyZWY9XCJodHRwczpcL1wvZG9pLnBhbmdhZWEuZGVcLzEwLjE1OTRcL1BBTkdBRUEuODU0OTIxXCIgdGFyZ2V0PVwiX3NlbGZcIiBjbGFzcz1cImRhdGFzZXQtbGluayBkb2ktbGlua1wiPmh0dHBzOlwvXC9kb2kub3JnXC8xMC4xNTk0XC9QQU5HQUVBLjg1NDkyMTxcL2E+IC0gPHNwYW4gdGl0bGU9XCJUaGUgc2NvcmUgaXMgYSBtZWFzdXJlbWVudCBvZiByZWxldmFuY3kgKHNlZSBURi1JREYgYWxnb3JpdGhtKS4gVGhlIHZhbHVlIGlzIG5vdCBhYnNvbHV0ZSBhbmQgb25seSBzdWl0YWJsZSB0byBjb21wYXJlIGhpdHMgZnJvbSB0aGUgc2FtZSByZXN1bHQgc2V0LlwiPlNjb3JlOiAxNS4wOTxcL3NwYW4+PFwvZGl2PjxcL2xpPiJ9LHsiVVJJIjoiZG9pOjEwLjE1OTRcL1BBTkdBRUEuODgzNjA0Iiwic2NvcmUiOjE0Ljc4OTc3LCJodG1sIjoiPGxpPjxkaXYgY2xhc3M9XCJjaXRhdGlvblwiPjxhIGhyZWY9XCJodHRwczpcL1wvZG9pLnBhbmdhZWEuZGVcLzEwLjE1OTRcL1BBTkdBRUEuODgzNjA0XCIgdGFyZ2V0PVwiX3NlbGZcIiBjbGFzcz1cImRhdGFzZXQtbGlua1wiPjxzdHJvbmc+TGVlLCBTOyBGb3JkLCBBOyBNYW5ndWJhaSwgUyBldCBhbC4gKDIwMTcpOjxcL3N0cm9uZz4gRWZmZWN0cyBvZiBzYW5kZmlzaCAoSG9sb3RodXJpYSBzY2FicmEpIHJlbW92YWwgb24gc2hhbGxvdy13YXRlciBzZWRpbWVudHMgaW4gRmlqaWJ5IHNlYTxcL2E+PFwvZGl2Pjx0YWJsZSBjbGFzcz1cInJlc3VsdFwiIHN1bW1hcnk9XCJEYXRhc2V0IHJlZmVyZW5jZSBhbmQgc2l6ZVwiIGNlbGxzcGFjaW5nPVwiMFwiIGNlbGxwYWRkaW5nPVwiMFwiPjx0cj48dGQgY2xhc3M9XCJ0aXRsZVwiPlN1cHBsZW1lbnQgdG86PFwvdGQ+PHRkIGNsYXNzPVwiY29udGVudFwiPjxzdHJvbmc+TGVlLCBTOyBGb3JkLCBBOyBNYW5ndWJhaSwgUyBldCBhbC46PFwvc3Ryb25nPiBFZmZlY3RzIG9mIHNhbmRmaXNoIChIb2xvdGh1cmlhIHNjYWJyYSkgcmVtb3ZhbCBvbiBzaGFsbG93LXdhdGVyIHNlZGltZW50cyBpbiBGaWppLiA8ZW0+UGVlcko8XC9lbT48XC90ZD48XC90cj48dHI+PHRkIGNsYXNzPVwidGl0bGVcIj5TaXplOjxcL3RkPjx0ZCBjbGFzcz1cImNvbnRlbnRcIj40IGRhdGFzZXRzPFwvdGQ+PFwvdHI+PFwvdGFibGU+PGRpdiBjbGFzcz1cImRhdGFzZXRpZFwiPjxhIGhyZWY9XCJodHRwczpcL1wvZG9pLnBhbmdhZWEuZGVcLzEwLjE1OTRcL1BBTkdBRUEuODgzNjA0XCIgdGFyZ2V0PVwiX3NlbGZcIiBjbGFzcz1cImRhdGFzZXQtbGluayBkb2ktbGlua1wiPmh0dHBzOlwvXC9kb2kub3JnXC8xMC4xNTk0XC9QQU5HQUVBLjg4MzYwNDxcL2E+IC0gPHNwYW4gdGl0bGU9XCJUaGUgc2NvcmUgaXMgYSBtZWFzdXJlbWVudCBvZiByZWxldmFuY3kgKHNlZSBURi1JREYgYWxnb3JpdGhtKS4gVGhlIHZhbHVlIGlzIG5vdCBhYnNvbHV0ZSBhbmQgb25seSBzdWl0YWJsZSB0byBjb21wYXJlIGhpdHMgZnJvbSB0aGUgc2FtZSByZXN1bHQgc2V0LlwiPlNjb3JlOiAxNC43OTxcL3NwYW4+PFwvZGl2PjxcL2xpPiJ9LHsiVVJJIjoiZG9pOjEwLjE1OTRcL1BBTkdBRUEuODg2NzkyIiwic2NvcmUiOjEzLjkzMTQ2NywiaHRtbCI6IjxsaT48ZGl2IGNsYXNzPVwiY2l0YXRpb25cIj48YSBocmVmPVwiaHR0cHM6XC9cL2RvaS5wYW5nYWVhLmRlXC8xMC4xNTk0XC9QQU5HQUVBLjg4Njc5MlwiIHRhcmdldD1cIl9zZWxmXCIgY2xhc3M9XCJkYXRhc2V0LWxpbmtcIj48c3Ryb25nPkppbGJlcnQsIFQ7IEFzbWFsYSwgRTsgU2NocsO2ZGVyLCBDIGV0IGFsLiAoMjAxOCk6PFwvc3Ryb25nPiBXYXRlciBjb2x1bW4sIHNlZGltZW50IGFuZCBwb3JlIHdhdGVyIGRhdGEgZnJvbSBNdXN0aW9uam9raSBlc3R1YXJ5LCBGaW5sYW5kLCAyMDE0LTIwMTU8XC9hPjxcL2Rpdj48dGFibGUgY2xhc3M9XCJyZXN1bHRcIiBzdW1tYXJ5PVwiRGF0YXNldCByZWZlcmVuY2UgYW5kIHNpemVcIiBjZWxsc3BhY2luZz1cIjBcIiBjZWxscGFkZGluZz1cIjBcIj48dHI+PHRkIGNsYXNzPVwidGl0bGVcIj5TdXBwbGVtZW50IHRvOjxcL3RkPjx0ZCBjbGFzcz1cImNvbnRlbnRcIj48c3Ryb25nPkppbGJlcnQsIFQ7IEFzbWFsYSwgRTsgU2NocsO2ZGVyLCBDIGV0IGFsLiAoMjAxOCk6PFwvc3Ryb25nPiBJbXBhY3RzIG9mIGZsb2NjdWxhdGlvbiBvbiB0aGUgZGlzdHJpYnV0aW9uIGFuZCBkaWFnZW5lc2lzIG9mIGlyb24gaW4gYm9yZWFsIGVzdHVhcmluZSBzZWRpbWVudHMuIDxlbT5CaW9nZW9zY2llbmNlczxcL2VtPjxcL3RkPjxcL3RyPjx0cj48dGQgY2xhc3M9XCJ0aXRsZVwiPlNpemU6PFwvdGQ+PHRkIGNsYXNzPVwiY29udGVudFwiPjE1IGRhdGFzZXRzPFwvdGQ+PFwvdHI+PFwvdGFibGU+PGRpdiBjbGFzcz1cImRhdGFzZXRpZFwiPjxhIGhyZWY9XCJodHRwczpcL1wvZG9pLnBhbmdhZWEuZGVcLzEwLjE1OTRcL1BBTkdBRUEuODg2NzkyXCIgdGFyZ2V0PVwiX3NlbGZcIiBjbGFzcz1cImRhdGFzZXQtbGluayBkb2ktbGlua1wiPmh0dHBzOlwvXC9kb2kub3JnXC8xMC4xNTk0XC9QQU5HQUVBLjg4Njc5MjxcL2E+IC0gPHNwYW4gdGl0bGU9XCJUaGUgc2NvcmUgaXMgYSBtZWFzdXJlbWVudCBvZiByZWxldmFuY3kgKHNlZSBURi1JREYgYWxnb3JpdGhtKS4gVGhlIHZhbHVlIGlzIG5vdCBhYnNvbHV0ZSBhbmQgb25seSBzdWl0YWJsZSB0byBjb21wYXJlIGhpdHMgZnJvbSB0aGUgc2FtZSByZXN1bHQgc2V0LlwiPlNjb3JlOiAxMy45MzxcL3NwYW4+PFwvZGl2PjxcL2xpPiJ9LHsiVVJJIjoiZG9pOjEwLjE1OTRcL1BBTkdBRUEuODMxMDA3Iiwic2NvcmUiOjEzLjQzNzI0MiwiaHRtbCI6IjxsaT48ZGl2IGNsYXNzPVwiY2l0YXRpb25cIj48YSBocmVmPVwiaHR0cHM6XC9cL2RvaS5wYW5nYWVhLmRlXC8xMC4xNTk0XC9QQU5HQUVBLjgzMTAwN1wiIHRhcmdldD1cIl9zZWxmXCIgY2xhc3M9XCJkYXRhc2V0LWxpbmtcIj48c3Ryb25nPlJpZmZsZXIsIE07IExpZWJlcmhlcnIsIEctRDsgV3VuZGVybGUsIFMgKDIwMTUpOjxcL3N0cm9uZz4gTGFrZSBzdXJmYWNlIHdhdGVyIHRlbXBlcmF0dXJlcyBvZiBFdXJvcGVhbiBBbHBpbmUgbGFrZXMgKDE5ODktMjAxMykgYmFzZWQgb24gdGhlIEFkdmFuY2VkIFZlcnkgSGlnaCBSZXNvbHV0aW9uIFJhZGlvbWV0ZXIgKEFWSFJSKSAxLWttIGRhdGEgc2V0PFwvYT48XC9kaXY+PHRhYmxlIGNsYXNzPVwicmVzdWx0XCIgc3VtbWFyeT1cIkRhdGFzZXQgcmVmZXJlbmNlIGFuZCBzaXplXCIgY2VsbHNwYWNpbmc9XCIwXCIgY2VsbHBhZGRpbmc9XCIwXCI+PHRyPjx0ZCBjbGFzcz1cInRpdGxlXCI+U3VwcGxlbWVudCB0bzo8XC90ZD48dGQgY2xhc3M9XCJjb250ZW50XCI+PHN0cm9uZz5SaWZmbGVyLCBNOyBMaWViZXJoZXJyLCBHLUQ7IFd1bmRlcmxlLCBTICgyMDE1KTo8XC9zdHJvbmc+IExha2Ugc3VyZmFjZSB3YXRlciB0ZW1wZXJhdHVyZXMgb2YgRXVyb3BlYW4gQWxwaW5lIGxha2VzICgxOTg54oCTMjAxMykgYmFzZWQgb24gdGhlIEFkdmFuY2VkIFZlcnkgSGlnaCBSZXNvbHV0aW9uIFJhZGlvbWV0ZXIgKEFWSFJSKSAxIGttIGRhdGEgc2V0LiA8ZW0+RWFydGggU3lzdGVtIFNjaWVuY2UgRGF0YTxcL2VtPjxcL3RkPjxcL3RyPjx0cj48dGQgY2xhc3M9XCJ0aXRsZVwiPlNpemU6PFwvdGQ+PHRkIGNsYXNzPVwiY29udGVudFwiPjU0IGRhdGFzZXRzPFwvdGQ+PFwvdHI+PFwvdGFibGU+PGRpdiBjbGFzcz1cImRhdGFzZXRpZFwiPjxhIGhyZWY9XCJodHRwczpcL1wvZG9pLnBhbmdhZWEuZGVcLzEwLjE1OTRcL1BBTkdBRUEuODMxMDA3XCIgdGFyZ2V0PVwiX3NlbGZcIiBjbGFzcz1cImRhdGFzZXQtbGluayBkb2ktbGlua1wiPmh0dHBzOlwvXC9kb2kub3JnXC8xMC4xNTk0XC9QQU5HQUVBLjgzMTAwNzxcL2E+IC0gPHNwYW4gdGl0bGU9XCJUaGUgc2NvcmUgaXMgYSBtZWFzdXJlbWVudCBvZiByZWxldmFuY3kgKHNlZSBURi1JREYgYWxnb3JpdGhtKS4gVGhlIHZhbHVlIGlzIG5vdCBhYnNvbHV0ZSBhbmQgb25seSBzdWl0YWJsZSB0byBjb21wYXJlIGhpdHMgZnJvbSB0aGUgc2FtZSByZXN1bHQgc2V0LlwiPlNjb3JlOiAxMy40NDxcL3NwYW4+PFwvZGl2PjxcL2xpPiJ9LHsiVVJJIjoiZG9pOjEwLjE1OTRcL1BBTkdBRUEuODgzODk4Iiwic2NvcmUiOjEyLjgwNjU5OCwiaHRtbCI6IjxsaT48ZGl2IGNsYXNzPVwiY2l0YXRpb25cIj48YSBocmVmPVwiaHR0cHM6XC9cL2RvaS5wYW5nYWVhLmRlXC8xMC4xNTk0XC9QQU5HQUVBLjg4Mzg5OFwiIHRhcmdldD1cIl9zZWxmXCIgY2xhc3M9XCJkYXRhc2V0LWxpbmtcIj48c3Ryb25nPkJvZXJnZW5zLCBFOyBEZXR0bWVyaW5nLCBEOyBTY2h3YXRrZSwgQyBldCBhbC4gKDIwMTcpOjxcL3N0cm9uZz4gV2F0ZXIgbGV2ZWwsIGFyZWFsIGV4dGVudCBhbmQgdm9sdW1lIGNoYW5nZSBvZiBMYWtlIFRhbmdhbnlpa2EsIExha2UgVHVya2FuYSwgTGFrZSBUb25sZSBTYXAgYW5kIExha2UgQ29uc3RhbmNlOiBNdWx0aS15ZWFyIHRpbWUgc2VyaWVzIGZyb20gc2F0ZWxsaXRlIGFsdGltZXRyeSBhbmQgcmVtb3RlIHNlbnNpbmc8XC9hPjxcL2Rpdj48dGFibGUgY2xhc3M9XCJyZXN1bHRcIiBzdW1tYXJ5PVwiRGF0YXNldCByZWZlcmVuY2UgYW5kIHNpemVcIiBjZWxsc3BhY2luZz1cIjBcIiBjZWxscGFkZGluZz1cIjBcIj48dHI+PHRkIGNsYXNzPVwidGl0bGVcIj5SZWxhdGVkIHRvOjxcL3RkPjx0ZCBjbGFzcz1cImNvbnRlbnRcIj48c3Ryb25nPlNjaHdhdGtlLCBDOyBEZXR0bWVyaW5nLCBEOyBCb3NjaCwgVyBldCBhbC4gKDIwMTUpOjxcL3N0cm9uZz4gREFISVRJIC0gYW4gaW5ub3ZhdGl2ZSBhcHByb2FjaCBmb3IgZXN0aW1hdGluZyB3YXRlciBsZXZlbCB0aW1lIHNlcmllcyBvdmVyIGlubGFuZCB3YXRlcnMgdXNpbmcgbXVsdGktbWlzc2lvbiBzYXRlbGxpdGUgYWx0aW1ldHJ5LiA8ZW0+SHlkcm9sb2d5IGFuZCBFYXJ0aCBTeXN0ZW0gU2NpZW5jZXM8XC9lbT48XC90ZD48XC90cj48dHI+PHRkIGNsYXNzPVwidGl0bGVcIj5TaXplOjxcL3RkPjx0ZCBjbGFzcz1cImNvbnRlbnRcIj40IGRhdGFzZXRzPFwvdGQ+PFwvdHI+PFwvdGFibGU+PGRpdiBjbGFzcz1cImRhdGFzZXRpZFwiPjxhIGhyZWY9XCJodHRwczpcL1wvZG9pLnBhbmdhZWEuZGVcLzEwLjE1OTRcL1BBTkdBRUEuODgzODk4XCIgdGFyZ2V0PVwiX3NlbGZcIiBjbGFzcz1cImRhdGFzZXQtbGluayBkb2ktbGlua1wiPmh0dHBzOlwvXC9kb2kub3JnXC8xMC4xNTk0XC9QQU5HQUVBLjg4Mzg5ODxcL2E+IC0gPHNwYW4gdGl0bGU9XCJUaGUgc2NvcmUgaXMgYSBtZWFzdXJlbWVudCBvZiByZWxldmFuY3kgKHNlZSBURi1JREYgYWxnb3JpdGhtKS4gVGhlIHZhbHVlIGlzIG5vdCBhYnNvbHV0ZSBhbmQgb25seSBzdWl0YWJsZSB0byBjb21wYXJlIGhpdHMgZnJvbSB0aGUgc2FtZSByZXN1bHQgc2V0LlwiPlNjb3JlOiAxMi44MTxcL3NwYW4+PFwvZGl2PjxcL2xpPiJ9LHsiVVJJIjoiZG9pOjEwLjE1OTRcL1BBTkdBRUEuODgzOTA1Iiwic2NvcmUiOjEyLjUxMDUyNiwiaHRtbCI6IjxsaT48ZGl2IGNsYXNzPVwiY2l0YXRpb25cIj48YSBocmVmPVwiaHR0cHM6XC9cL2RvaS5wYW5nYWVhLmRlXC8xMC4xNTk0XC9QQU5HQUVBLjg4MzkwNVwiIHRhcmdldD1cIl9zZWxmXCIgY2xhc3M9XCJkYXRhc2V0LWxpbmtcIj48c3Ryb25nPkRhcmVsaXVzLCBFOyBGZXIsIEk7IFNhbGzDqWUsIEotQiAoMjAxNyk6PFwvc3Ryb25nPiBQaHlzaWNhbCBvY2Vhbm9ncmFwaHkgZnJvbSBtb29yaW5nIFNBIGluIHRoZSBXZWRkZWxsIFNlYTxcL2E+PFwvZGl2Pjx0YWJsZSBjbGFzcz1cInJlc3VsdFwiIHN1bW1hcnk9XCJEYXRhc2V0IHJlZmVyZW5jZSBhbmQgc2l6ZVwiIGNlbGxzcGFjaW5nPVwiMFwiIGNlbGxwYWRkaW5nPVwiMFwiPjx0cj48dGQgY2xhc3M9XCJ0aXRsZVwiPlN1cHBsZW1lbnQgdG86PFwvdGQ+PHRkIGNsYXNzPVwiY29udGVudFwiPjxzdHJvbmc+RGFyZWxpdXMsIEU7IFNhbGzDqWUsIEotQjo8XC9zdHJvbmc+IFNlYXNvbmFsIE91dGZsb3cgb2YgSWNlIFNoZWxmIFdhdGVyIEFjcm9zcyB0aGUgRnJvbnQgb2YgdGhlIEZpbGNobmVyIEljZSBTaGVsZiwgV2VkZGVsbCBTZWEsIEFudGFyY3RpY2EuIDxlbT5HZW9waHlzaWNhbCBSZXNlYXJjaCBMZXR0ZXJzPFwvZW0+PFwvdGQ+PFwvdHI+PHRyPjx0ZCBjbGFzcz1cInRpdGxlXCI+UmVsYXRlZCB0bzo8XC90ZD48dGQgY2xhc3M9XCJjb250ZW50XCI+PHN0cm9uZz5EYXJlbGl1cywgRTsgRmVyLCBJICgyMDE1KTo8XC9zdHJvbmc+IFBoeXNpY2FsIG9jZWFub2dyYXBoeSBhbmQgY3VycmVudCBtZWFzdXJlbWVudHMgaW4gdGhlIEZpbGNobmVyIERlcHJlc3Npb24gKFdlZGRlbGwgU2VhLCBBbnRhcmN0aWNhKSBkdXJpbmcgRXJuZXN0IFNoYWNrbGV0b24gY3J1aXNlIEVTMDYwLjxiclwvPjxzdHJvbmc+RGFyZWxpdXMsIEU7IEZlciwgSSAoMjAxNyk6PFwvc3Ryb25nPiBQaHlzaWNhbCBvY2Vhbm9ncmFwaHkgZnJvbSBtb29yaW5nIFNCLCBTQywgU0QgYW5kIFNFIGluIHRoZSBXZWRkZWxsIFNlYS48XC90ZD48XC90cj48dHI+PHRkIGNsYXNzPVwidGl0bGVcIj5TaXplOjxcL3RkPjx0ZCBjbGFzcz1cImNvbnRlbnRcIj41IGRhdGFzZXRzPFwvdGQ+PFwvdHI+PFwvdGFibGU+PGRpdiBjbGFzcz1cImRhdGFzZXRpZFwiPjxhIGhyZWY9XCJodHRwczpcL1wvZG9pLnBhbmdhZWEuZGVcLzEwLjE1OTRcL1BBTkdBRUEuODgzOTA1XCIgdGFyZ2V0PVwiX3NlbGZcIiBjbGFzcz1cImRhdGFzZXQtbGluayBkb2ktbGlua1wiPmh0dHBzOlwvXC9kb2kub3JnXC8xMC4xNTk0XC9QQU5HQUVBLjg4MzkwNTxcL2E+IC0gPHNwYW4gdGl0bGU9XCJUaGUgc2NvcmUgaXMgYSBtZWFzdXJlbWVudCBvZiByZWxldmFuY3kgKHNlZSBURi1JREYgYWxnb3JpdGhtKS4gVGhlIHZhbHVlIGlzIG5vdCBhYnNvbHV0ZSBhbmQgb25seSBzdWl0YWJsZSB0byBjb21wYXJlIGhpdHMgZnJvbSB0aGUgc2FtZSByZXN1bHQgc2V0LlwiPlNjb3JlOiAxMi41MTxcL3NwYW4+PFwvZGl2PjxcL2xpPiJ9XSwiZmFjZXRzIjpudWxsLCJtYXhTY29yZSI6MTguNjM3ODA4LCJvZmZzZXQiOjAsInF1ZXJ5SWRlbnRpZmllciI6IjMxYjExNzAwLWRhOTMtM2RjOC1iMmZmLTRhYjJhYTA1MzdmOSIsInNlc3Npb24iOiI3cTB2MzZpNzlhOWFzcm5vMjNkYWg4ZTV1MCIsInRpbWVJbkRhdGFiYXNlIjo4LCJ0b3RhbENvdW50IjoxMzc1LCJodG1sU3VtbWFyeSI6IjxzdHJvbmc+MTM3NSBkYXRhc2V0czxcL3N0cm9uZz4gZm91bmQgb24gc2VhcmNoIGZvciA8c3Ryb25nIHRpdGxlPVwiUXVlcnk6ICZyYXF1bzt3YXRlciZsYXF1bztcIj4mcmFxdW87d2F0ZXImbGFxdW87PFwvc3Ryb25nPiB3aXRoIDxzdHJvbmcgdGl0bGU9XCJTdGFydDogMjAxMy0wNi0wMSwgRW5kOiAyMDEzLTA3LTAxXCI+dGVtcG9yYWwgY292ZXJhZ2U8XC9zdHJvbmc+IiwiaHRtbFNuaXBwZXRSU1MiOiI8bGluayByZWw9XCJhbHRlcm5hdGVcIiB0aXRsZT1cIlBBTkdBRUEgbGF0ZXN0IGRhdGFzZXRzIGFib3V0ICZxdW90O3dhdGVyJnF1b3Q7IHdpdGggdGVtcG9yYWwgY292ZXJhZ2VcIiB0eXBlPVwiYXBwbGljYXRpb25cL3Jzcyt4bWxcIiBocmVmPVwiXC90b29sc1wvbGF0ZXN0LWRhdGFzZXRzLnJzcz9xPXdhdGVyJmFtcDttaW5kYXRlPTIwMTMtMDYtMDEmYW1wO21heGRhdGU9MjAxMy0wNy0wMSZhbXA7Y291bnQ9MTBcIj4ifQ==
+  recorded_at: 2019-09-11 20:33:07 GMT
+  recorded_with: vcr/0.3.0.9100, webmockr/0.4.0
 - request:
     method: get
     uri: https://www.pangaea.de/advanced/search.php?count=10&offset=0&q=water&minlon=-124.2&minlat=41.8&maxlon=-116.8&maxlat=46.1
@@ -629,7 +146,7 @@ http_interactions:
       encoding: ''
       string: ''
     headers:
-      User-Agent: libcurl/7.54.0 r-curl/4.0 crul/0.8.4
+      User-Agent: libcurl/7.54.0 r-curl/4.0 crul/0.8.4.9100
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
   response:
@@ -641,7 +158,7 @@ http_interactions:
       cache-control: private, max-age=10800, pre-check=10800
       content-encoding: gzip
       content-type: application/json; charset=UTF-8
-      date: Tue, 13 Aug 2019 21:53:55 GMT
+      date: Wed, 11 Sep 2019 20:33:06 GMT
       last-modified: Fri, 15 Apr 2016 11:55:50 GMT
       server: PANGAEA/2.0
       status: 'HTTP/2 200 '
@@ -653,164 +170,10 @@ http_interactions:
       x-frame-options: SAMEORIGIN
       x-ua-compatible: IE=Edge
     body:
-      encoding: UTF-8
-      string: '{"results":[{"URI":"doi:10.1594\/PANGAEA.812094","score":12.7565155,"html":"<li><div
-        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.812094\"
-        target=\"_self\" class=\"dataset-link\"><strong>Simonyan, AV; Dultz, S; Behrens,
-        H (2012):<\/strong> Diffusion transport of water in basalts<\/a><\/div><table
-        class=\"result\" summary=\"Dataset reference and size\" cellspacing=\"0\"
-        cellpadding=\"0\"><tr><td class=\"title\">Supplement to:<\/td><td class=\"content\"><strong>Simonyan,
-        AV; Dultz, S; Behrens, H (2012):<\/strong> Diffusive transport of water in
-        porous fresh to altered mid-ocean ridge basalts. <em>Chemical Geology<\/em><\/td><\/tr><tr><td
-        class=\"title\">Size:<\/td><td class=\"content\">2 datasets<\/td><\/tr><\/table><div
-        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.812094\"
-        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.812094<\/a>
-        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
-        The value is not absolute and only suitable to compare hits from the same
-        result set.\">Score: 12.76<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.406110","score":8.703503,"html":"<li><div
-        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.406110\"
-        target=\"_self\" class=\"dataset-link\"><strong>WOCE Surface Velocity Program,
-        SVP (2006):<\/strong> Water temperature and current velocity from surface
-        drifter SVP_9616641<\/a><\/div><table class=\"result\" summary=\"Dataset reference
-        and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"title\">Related
-        to:<\/td><td class=\"content\"><strong>WOCE (2002):<\/strong> World Ocean
-        Circulation Experiment, Global Data, Version 3.0. <em>WOCE International Project
-        Office, WOCE Report, Southampton, UK; published by U.S. National Oceanographic
-        Data Center, Silver Spring<\/em><\/td><\/tr><tr><td class=\"title\">Size:<\/td><td
-        class=\"content\">598 data points<\/td><\/tr><\/table><div class=\"datasetid\"><a
-        href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.406110\" target=\"_self\"
-        class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.406110<\/a>
-        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
-        The value is not absolute and only suitable to compare hits from the same
-        result set.\">Score: 8.7<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.325191","score":8.69695,"html":"<li><div
-        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.325191\"
-        target=\"_self\" class=\"dataset-link\"><strong>WOCE Upper Ocean Thermal,
-        UOT (2005):<\/strong> Water temperature XBT profiles from cruise 181991002
-        (DCQC)<\/a><\/div><table class=\"result\" summary=\"Dataset reference and
-        size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"title\">Related
-        to:<\/td><td class=\"content\"><strong>WOCE (2002):<\/strong> World Ocean
-        Circulation Experiment, Global Data, Version 3.0. <em>WOCE International Project
-        Office, WOCE Report, Southampton, UK; published by U.S. National Oceanographic
-        Data Center, Silver Spring<\/em><\/td><\/tr><tr><td class=\"title\">Size:<\/td><td
-        class=\"content\">11390 data points<\/td><\/tr><\/table><div class=\"datasetid\"><a
-        href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.325191\" target=\"_self\"
-        class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.325191<\/a>
-        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
-        The value is not absolute and only suitable to compare hits from the same
-        result set.\">Score: 8.7<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.325209","score":8.694084,"html":"<li><div
-        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.325209\"
-        target=\"_self\" class=\"dataset-link\"><strong>WOCE Upper Ocean Thermal,
-        UOT (2005):<\/strong> Water temperature XBT profiles from cruise 181991021
-        (DCQC)<\/a><\/div><table class=\"result\" summary=\"Dataset reference and
-        size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"title\">Related
-        to:<\/td><td class=\"content\"><strong>WOCE (2002):<\/strong> World Ocean
-        Circulation Experiment, Global Data, Version 3.0. <em>WOCE International Project
-        Office, WOCE Report, Southampton, UK; published by U.S. National Oceanographic
-        Data Center, Silver Spring<\/em><\/td><\/tr><tr><td class=\"title\">Size:<\/td><td
-        class=\"content\">10280 data points<\/td><\/tr><\/table><div class=\"datasetid\"><a
-        href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.325209\" target=\"_self\"
-        class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.325209<\/a>
-        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
-        The value is not absolute and only suitable to compare hits from the same
-        result set.\">Score: 8.69<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.402042","score":8.691407,"html":"<li><div
-        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.402042\"
-        target=\"_self\" class=\"dataset-link\"><strong>WOCE Surface Velocity Program,
-        SVP (2006):<\/strong> Water temperature and current velocity from surface
-        drifter SVP_23184<\/a><\/div><table class=\"result\" summary=\"Dataset reference
-        and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"title\">Related
-        to:<\/td><td class=\"content\"><strong>WOCE (2002):<\/strong> World Ocean
-        Circulation Experiment, Global Data, Version 3.0. <em>WOCE International Project
-        Office, WOCE Report, Southampton, UK; published by U.S. National Oceanographic
-        Data Center, Silver Spring<\/em><\/td><\/tr><tr><td class=\"title\">Size:<\/td><td
-        class=\"content\">392 data points<\/td><\/tr><\/table><div class=\"datasetid\"><a
-        href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.402042\" target=\"_self\"
-        class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.402042<\/a>
-        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
-        The value is not absolute and only suitable to compare hits from the same
-        result set.\">Score: 8.69<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.401390","score":8.68546,"html":"<li><div
-        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.401390\"
-        target=\"_self\" class=\"dataset-link\"><strong>WOCE Surface Velocity Program,
-        SVP (2006):<\/strong> Water temperature and current velocity from surface
-        drifter SVP_15899<\/a><\/div><table class=\"result\" summary=\"Dataset reference
-        and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"title\">Related
-        to:<\/td><td class=\"content\"><strong>WOCE (2002):<\/strong> World Ocean
-        Circulation Experiment, Global Data, Version 3.0. <em>WOCE International Project
-        Office, WOCE Report, Southampton, UK; published by U.S. National Oceanographic
-        Data Center, Silver Spring<\/em><\/td><\/tr><tr><td class=\"title\">Size:<\/td><td
-        class=\"content\">500 data points<\/td><\/tr><\/table><div class=\"datasetid\"><a
-        href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.401390\" target=\"_self\"
-        class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.401390<\/a>
-        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
-        The value is not absolute and only suitable to compare hits from the same
-        result set.\">Score: 8.69<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.359344","score":8.678344,"html":"<li><div
-        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.359344\"
-        target=\"_self\" class=\"dataset-link\"><strong>WOCE Upper Ocean Thermal,
-        UOT (2006):<\/strong> Water temperature real-time profiles from cruise NLBP90
-        (SCQC)<\/a><\/div><table class=\"result\" summary=\"Dataset reference and
-        size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"title\">Related
-        to:<\/td><td class=\"content\"><strong>WOCE (2002):<\/strong> World Ocean
-        Circulation Experiment, Global Data, Version 3.0. <em>WOCE International Project
-        Office, WOCE Report, Southampton, UK; published by U.S. National Oceanographic
-        Data Center, Silver Spring<\/em><\/td><\/tr><tr><td class=\"title\">Size:<\/td><td
-        class=\"content\">62 data points<\/td><\/tr><\/table><div class=\"datasetid\"><a
-        href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.359344\" target=\"_self\"
-        class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.359344<\/a>
-        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
-        The value is not absolute and only suitable to compare hits from the same
-        result set.\">Score: 8.68<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.405682","score":8.676027,"html":"<li><div
-        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.405682\"
-        target=\"_self\" class=\"dataset-link\"><strong>WOCE Surface Velocity Program,
-        SVP (2006):<\/strong> Water temperature and current velocity from surface
-        drifter SVP_9524457<\/a><\/div><table class=\"result\" summary=\"Dataset reference
-        and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"title\">Related
-        to:<\/td><td class=\"content\"><strong>WOCE (2002):<\/strong> World Ocean
-        Circulation Experiment, Global Data, Version 3.0. <em>WOCE International Project
-        Office, WOCE Report, Southampton, UK; published by U.S. National Oceanographic
-        Data Center, Silver Spring<\/em><\/td><\/tr><tr><td class=\"title\">Size:<\/td><td
-        class=\"content\">817 data points<\/td><\/tr><\/table><div class=\"datasetid\"><a
-        href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.405682\" target=\"_self\"
-        class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.405682<\/a>
-        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
-        The value is not absolute and only suitable to compare hits from the same
-        result set.\">Score: 8.68<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.325200","score":8.675622,"html":"<li><div
-        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.325200\"
-        target=\"_self\" class=\"dataset-link\"><strong>WOCE Upper Ocean Thermal,
-        UOT (2005):<\/strong> Water temperature XBT profiles from cruise 181991011
-        (DCQC)<\/a><\/div><table class=\"result\" summary=\"Dataset reference and
-        size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"title\">Related
-        to:<\/td><td class=\"content\"><strong>WOCE (2002):<\/strong> World Ocean
-        Circulation Experiment, Global Data, Version 3.0. <em>WOCE International Project
-        Office, WOCE Report, Southampton, UK; published by U.S. National Oceanographic
-        Data Center, Silver Spring<\/em><\/td><\/tr><tr><td class=\"title\">Size:<\/td><td
-        class=\"content\">35456 data points<\/td><\/tr><\/table><div class=\"datasetid\"><a
-        href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.325200\" target=\"_self\"
-        class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.325200<\/a>
-        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
-        The value is not absolute and only suitable to compare hits from the same
-        result set.\">Score: 8.68<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.406701","score":8.668704,"html":"<li><div
-        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.406701\"
-        target=\"_self\" class=\"dataset-link\"><strong>WOCE Surface Velocity Program,
-        SVP (2006):<\/strong> Water temperature and current velocity from surface
-        drifter SVP_9730560<\/a><\/div><table class=\"result\" summary=\"Dataset reference
-        and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"title\">Related
-        to:<\/td><td class=\"content\"><strong>WOCE (2002):<\/strong> World Ocean
-        Circulation Experiment, Global Data, Version 3.0. <em>WOCE International Project
-        Office, WOCE Report, Southampton, UK; published by U.S. National Oceanographic
-        Data Center, Silver Spring<\/em><\/td><\/tr><tr><td class=\"title\">Size:<\/td><td
-        class=\"content\">1446 data points<\/td><\/tr><\/table><div class=\"datasetid\"><a
-        href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.406701\" target=\"_self\"
-        class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.406701<\/a>
-        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
-        The value is not absolute and only suitable to compare hits from the same
-        result set.\">Score: 8.67<\/span><\/div><\/li>"}],"facets":null,"maxScore":12.7565155,"offset":0,"queryIdentifier":"c340561b-4260-3bdd-8b1c-f44f03b6670f","session":"vsd6dgu1c54tga4hqo4gmae9h5","timeInDatabase":15,"totalCount":645,"htmlSummary":"<strong>645
-        datasets<\/strong> found on search for <strong title=\"Query: &raquo;water&laquo;\">&raquo;water&laquo;<\/strong>
-        with <strong title=\"West-bound Longitude: -124.2, East-bound Longitude: -116.8,
-        South-bound Latitude: 41.8, North-bound Latitude: 46.1\">geographic bounding
-        box<\/strong>","htmlSnippetRSS":"<link rel=\"alternate\" title=\"PANGAEA latest
-        datasets about &quot;water&quot; with geographic bounding box\" type=\"application\/rss+xml\"
-        href=\"\/tools\/latest-datasets.rss?q=water&amp;minlon=-124.2&amp;minlat=41.8&amp;maxlon=-116.8&amp;maxlat=46.1&amp;count=10\">"}'
-  recorded_at: 2019-08-13 21:53:54 GMT
-  recorded_with: vcr/0.2.6, webmockr/0.4.0
+      encoding: ASCII-8BIT
+      string: eyJyZXN1bHRzIjpbeyJVUkkiOiJkb2k6MTAuMTU5NFwvUEFOR0FFQS44MTIwOTQiLCJzY29yZSI6MTIuNzY1NDYxLCJodG1sIjoiPGxpPjxkaXYgY2xhc3M9XCJjaXRhdGlvblwiPjxhIGhyZWY9XCJodHRwczpcL1wvZG9pLnBhbmdhZWEuZGVcLzEwLjE1OTRcL1BBTkdBRUEuODEyMDk0XCIgdGFyZ2V0PVwiX3NlbGZcIiBjbGFzcz1cImRhdGFzZXQtbGlua1wiPjxzdHJvbmc+U2ltb255YW4sIEFWOyBEdWx0eiwgUzsgQmVocmVucywgSCAoMjAxMik6PFwvc3Ryb25nPiBEaWZmdXNpb24gdHJhbnNwb3J0IG9mIHdhdGVyIGluIGJhc2FsdHM8XC9hPjxcL2Rpdj48dGFibGUgY2xhc3M9XCJyZXN1bHRcIiBzdW1tYXJ5PVwiRGF0YXNldCByZWZlcmVuY2UgYW5kIHNpemVcIiBjZWxsc3BhY2luZz1cIjBcIiBjZWxscGFkZGluZz1cIjBcIj48dHI+PHRkIGNsYXNzPVwidGl0bGVcIj5TdXBwbGVtZW50IHRvOjxcL3RkPjx0ZCBjbGFzcz1cImNvbnRlbnRcIj48c3Ryb25nPlNpbW9ueWFuLCBBVjsgRHVsdHosIFM7IEJlaHJlbnMsIEggKDIwMTIpOjxcL3N0cm9uZz4gRGlmZnVzaXZlIHRyYW5zcG9ydCBvZiB3YXRlciBpbiBwb3JvdXMgZnJlc2ggdG8gYWx0ZXJlZCBtaWQtb2NlYW4gcmlkZ2UgYmFzYWx0cy4gPGVtPkNoZW1pY2FsIEdlb2xvZ3k8XC9lbT48XC90ZD48XC90cj48dHI+PHRkIGNsYXNzPVwidGl0bGVcIj5TaXplOjxcL3RkPjx0ZCBjbGFzcz1cImNvbnRlbnRcIj4yIGRhdGFzZXRzPFwvdGQ+PFwvdHI+PFwvdGFibGU+PGRpdiBjbGFzcz1cImRhdGFzZXRpZFwiPjxhIGhyZWY9XCJodHRwczpcL1wvZG9pLnBhbmdhZWEuZGVcLzEwLjE1OTRcL1BBTkdBRUEuODEyMDk0XCIgdGFyZ2V0PVwiX3NlbGZcIiBjbGFzcz1cImRhdGFzZXQtbGluayBkb2ktbGlua1wiPmh0dHBzOlwvXC9kb2kub3JnXC8xMC4xNTk0XC9QQU5HQUVBLjgxMjA5NDxcL2E+IC0gPHNwYW4gdGl0bGU9XCJUaGUgc2NvcmUgaXMgYSBtZWFzdXJlbWVudCBvZiByZWxldmFuY3kgKHNlZSBURi1JREYgYWxnb3JpdGhtKS4gVGhlIHZhbHVlIGlzIG5vdCBhYnNvbHV0ZSBhbmQgb25seSBzdWl0YWJsZSB0byBjb21wYXJlIGhpdHMgZnJvbSB0aGUgc2FtZSByZXN1bHQgc2V0LlwiPlNjb3JlOiAxMi43NzxcL3NwYW4+PFwvZGl2PjxcL2xpPiJ9LHsiVVJJIjoiZG9pOjEwLjE1OTRcL1BBTkdBRUEuNDA2MTEwIiwic2NvcmUiOjguNzA5MDg4LCJodG1sIjoiPGxpPjxkaXYgY2xhc3M9XCJjaXRhdGlvblwiPjxhIGhyZWY9XCJodHRwczpcL1wvZG9pLnBhbmdhZWEuZGVcLzEwLjE1OTRcL1BBTkdBRUEuNDA2MTEwXCIgdGFyZ2V0PVwiX3NlbGZcIiBjbGFzcz1cImRhdGFzZXQtbGlua1wiPjxzdHJvbmc+V09DRSBTdXJmYWNlIFZlbG9jaXR5IFByb2dyYW0sIFNWUCAoMjAwNik6PFwvc3Ryb25nPiBXYXRlciB0ZW1wZXJhdHVyZSBhbmQgY3VycmVudCB2ZWxvY2l0eSBmcm9tIHN1cmZhY2UgZHJpZnRlciBTVlBfOTYxNjY0MTxcL2E+PFwvZGl2Pjx0YWJsZSBjbGFzcz1cInJlc3VsdFwiIHN1bW1hcnk9XCJEYXRhc2V0IHJlZmVyZW5jZSBhbmQgc2l6ZVwiIGNlbGxzcGFjaW5nPVwiMFwiIGNlbGxwYWRkaW5nPVwiMFwiPjx0cj48dGQgY2xhc3M9XCJ0aXRsZVwiPlJlbGF0ZWQgdG86PFwvdGQ+PHRkIGNsYXNzPVwiY29udGVudFwiPjxzdHJvbmc+V09DRSAoMjAwMik6PFwvc3Ryb25nPiBXb3JsZCBPY2VhbiBDaXJjdWxhdGlvbiBFeHBlcmltZW50LCBHbG9iYWwgRGF0YSwgVmVyc2lvbiAzLjAuIDxlbT5XT0NFIEludGVybmF0aW9uYWwgUHJvamVjdCBPZmZpY2UsIFdPQ0UgUmVwb3J0LCBTb3V0aGFtcHRvbiwgVUs7IHB1Ymxpc2hlZCBieSBVLlMuIE5hdGlvbmFsIE9jZWFub2dyYXBoaWMgRGF0YSBDZW50ZXIsIFNpbHZlciBTcHJpbmc8XC9lbT48XC90ZD48XC90cj48dHI+PHRkIGNsYXNzPVwidGl0bGVcIj5TaXplOjxcL3RkPjx0ZCBjbGFzcz1cImNvbnRlbnRcIj41OTggZGF0YSBwb2ludHM8XC90ZD48XC90cj48XC90YWJsZT48ZGl2IGNsYXNzPVwiZGF0YXNldGlkXCI+PGEgaHJlZj1cImh0dHBzOlwvXC9kb2kucGFuZ2FlYS5kZVwvMTAuMTU5NFwvUEFOR0FFQS40MDYxMTBcIiB0YXJnZXQ9XCJfc2VsZlwiIGNsYXNzPVwiZGF0YXNldC1saW5rIGRvaS1saW5rXCI+aHR0cHM6XC9cL2RvaS5vcmdcLzEwLjE1OTRcL1BBTkdBRUEuNDA2MTEwPFwvYT4gLSA8c3BhbiB0aXRsZT1cIlRoZSBzY29yZSBpcyBhIG1lYXN1cmVtZW50IG9mIHJlbGV2YW5jeSAoc2VlIFRGLUlERiBhbGdvcml0aG0pLiBUaGUgdmFsdWUgaXMgbm90IGFic29sdXRlIGFuZCBvbmx5IHN1aXRhYmxlIHRvIGNvbXBhcmUgaGl0cyBmcm9tIHRoZSBzYW1lIHJlc3VsdCBzZXQuXCI+U2NvcmU6IDguNzE8XC9zcGFuPjxcL2Rpdj48XC9saT4ifSx7IlVSSSI6ImRvaToxMC4xNTk0XC9QQU5HQUVBLjMyNTE5MSIsInNjb3JlIjo4LjcwMjU0NSwiaHRtbCI6IjxsaT48ZGl2IGNsYXNzPVwiY2l0YXRpb25cIj48YSBocmVmPVwiaHR0cHM6XC9cL2RvaS5wYW5nYWVhLmRlXC8xMC4xNTk0XC9QQU5HQUVBLjMyNTE5MVwiIHRhcmdldD1cIl9zZWxmXCIgY2xhc3M9XCJkYXRhc2V0LWxpbmtcIj48c3Ryb25nPldPQ0UgVXBwZXIgT2NlYW4gVGhlcm1hbCwgVU9UICgyMDA1KTo8XC9zdHJvbmc+IFdhdGVyIHRlbXBlcmF0dXJlIFhCVCBwcm9maWxlcyBmcm9tIGNydWlzZSAxODE5OTEwMDIgKERDUUMpPFwvYT48XC9kaXY+PHRhYmxlIGNsYXNzPVwicmVzdWx0XCIgc3VtbWFyeT1cIkRhdGFzZXQgcmVmZXJlbmNlIGFuZCBzaXplXCIgY2VsbHNwYWNpbmc9XCIwXCIgY2VsbHBhZGRpbmc9XCIwXCI+PHRyPjx0ZCBjbGFzcz1cInRpdGxlXCI+UmVsYXRlZCB0bzo8XC90ZD48dGQgY2xhc3M9XCJjb250ZW50XCI+PHN0cm9uZz5XT0NFICgyMDAyKTo8XC9zdHJvbmc+IFdvcmxkIE9jZWFuIENpcmN1bGF0aW9uIEV4cGVyaW1lbnQsIEdsb2JhbCBEYXRhLCBWZXJzaW9uIDMuMC4gPGVtPldPQ0UgSW50ZXJuYXRpb25hbCBQcm9qZWN0IE9mZmljZSwgV09DRSBSZXBvcnQsIFNvdXRoYW1wdG9uLCBVSzsgcHVibGlzaGVkIGJ5IFUuUy4gTmF0aW9uYWwgT2NlYW5vZ3JhcGhpYyBEYXRhIENlbnRlciwgU2lsdmVyIFNwcmluZzxcL2VtPjxcL3RkPjxcL3RyPjx0cj48dGQgY2xhc3M9XCJ0aXRsZVwiPlNpemU6PFwvdGQ+PHRkIGNsYXNzPVwiY29udGVudFwiPjExMzkwIGRhdGEgcG9pbnRzPFwvdGQ+PFwvdHI+PFwvdGFibGU+PGRpdiBjbGFzcz1cImRhdGFzZXRpZFwiPjxhIGhyZWY9XCJodHRwczpcL1wvZG9pLnBhbmdhZWEuZGVcLzEwLjE1OTRcL1BBTkdBRUEuMzI1MTkxXCIgdGFyZ2V0PVwiX3NlbGZcIiBjbGFzcz1cImRhdGFzZXQtbGluayBkb2ktbGlua1wiPmh0dHBzOlwvXC9kb2kub3JnXC8xMC4xNTk0XC9QQU5HQUVBLjMyNTE5MTxcL2E+IC0gPHNwYW4gdGl0bGU9XCJUaGUgc2NvcmUgaXMgYSBtZWFzdXJlbWVudCBvZiByZWxldmFuY3kgKHNlZSBURi1JREYgYWxnb3JpdGhtKS4gVGhlIHZhbHVlIGlzIG5vdCBhYnNvbHV0ZSBhbmQgb25seSBzdWl0YWJsZSB0byBjb21wYXJlIGhpdHMgZnJvbSB0aGUgc2FtZSByZXN1bHQgc2V0LlwiPlNjb3JlOiA4Ljc8XC9zcGFuPjxcL2Rpdj48XC9saT4ifSx7IlVSSSI6ImRvaToxMC4xNTk0XC9QQU5HQUVBLjMyNTIwOSIsInNjb3JlIjo4LjcwMjE1MSwiaHRtbCI6IjxsaT48ZGl2IGNsYXNzPVwiY2l0YXRpb25cIj48YSBocmVmPVwiaHR0cHM6XC9cL2RvaS5wYW5nYWVhLmRlXC8xMC4xNTk0XC9QQU5HQUVBLjMyNTIwOVwiIHRhcmdldD1cIl9zZWxmXCIgY2xhc3M9XCJkYXRhc2V0LWxpbmtcIj48c3Ryb25nPldPQ0UgVXBwZXIgT2NlYW4gVGhlcm1hbCwgVU9UICgyMDA1KTo8XC9zdHJvbmc+IFdhdGVyIHRlbXBlcmF0dXJlIFhCVCBwcm9maWxlcyBmcm9tIGNydWlzZSAxODE5OTEwMjEgKERDUUMpPFwvYT48XC9kaXY+PHRhYmxlIGNsYXNzPVwicmVzdWx0XCIgc3VtbWFyeT1cIkRhdGFzZXQgcmVmZXJlbmNlIGFuZCBzaXplXCIgY2VsbHNwYWNpbmc9XCIwXCIgY2VsbHBhZGRpbmc9XCIwXCI+PHRyPjx0ZCBjbGFzcz1cInRpdGxlXCI+UmVsYXRlZCB0bzo8XC90ZD48dGQgY2xhc3M9XCJjb250ZW50XCI+PHN0cm9uZz5XT0NFICgyMDAyKTo8XC9zdHJvbmc+IFdvcmxkIE9jZWFuIENpcmN1bGF0aW9uIEV4cGVyaW1lbnQsIEdsb2JhbCBEYXRhLCBWZXJzaW9uIDMuMC4gPGVtPldPQ0UgSW50ZXJuYXRpb25hbCBQcm9qZWN0IE9mZmljZSwgV09DRSBSZXBvcnQsIFNvdXRoYW1wdG9uLCBVSzsgcHVibGlzaGVkIGJ5IFUuUy4gTmF0aW9uYWwgT2NlYW5vZ3JhcGhpYyBEYXRhIENlbnRlciwgU2lsdmVyIFNwcmluZzxcL2VtPjxcL3RkPjxcL3RyPjx0cj48dGQgY2xhc3M9XCJ0aXRsZVwiPlNpemU6PFwvdGQ+PHRkIGNsYXNzPVwiY29udGVudFwiPjEwMjgwIGRhdGEgcG9pbnRzPFwvdGQ+PFwvdHI+PFwvdGFibGU+PGRpdiBjbGFzcz1cImRhdGFzZXRpZFwiPjxhIGhyZWY9XCJodHRwczpcL1wvZG9pLnBhbmdhZWEuZGVcLzEwLjE1OTRcL1BBTkdBRUEuMzI1MjA5XCIgdGFyZ2V0PVwiX3NlbGZcIiBjbGFzcz1cImRhdGFzZXQtbGluayBkb2ktbGlua1wiPmh0dHBzOlwvXC9kb2kub3JnXC8xMC4xNTk0XC9QQU5HQUVBLjMyNTIwOTxcL2E+IC0gPHNwYW4gdGl0bGU9XCJUaGUgc2NvcmUgaXMgYSBtZWFzdXJlbWVudCBvZiByZWxldmFuY3kgKHNlZSBURi1JREYgYWxnb3JpdGhtKS4gVGhlIHZhbHVlIGlzIG5vdCBhYnNvbHV0ZSBhbmQgb25seSBzdWl0YWJsZSB0byBjb21wYXJlIGhpdHMgZnJvbSB0aGUgc2FtZSByZXN1bHQgc2V0LlwiPlNjb3JlOiA4Ljc8XC9zcGFuPjxcL2Rpdj48XC9saT4ifSx7IlVSSSI6ImRvaToxMC4xNTk0XC9QQU5HQUVBLjQwMjA0MiIsInNjb3JlIjo4LjY5OTQzMywiaHRtbCI6IjxsaT48ZGl2IGNsYXNzPVwiY2l0YXRpb25cIj48YSBocmVmPVwiaHR0cHM6XC9cL2RvaS5wYW5nYWVhLmRlXC8xMC4xNTk0XC9QQU5HQUVBLjQwMjA0MlwiIHRhcmdldD1cIl9zZWxmXCIgY2xhc3M9XCJkYXRhc2V0LWxpbmtcIj48c3Ryb25nPldPQ0UgU3VyZmFjZSBWZWxvY2l0eSBQcm9ncmFtLCBTVlAgKDIwMDYpOjxcL3N0cm9uZz4gV2F0ZXIgdGVtcGVyYXR1cmUgYW5kIGN1cnJlbnQgdmVsb2NpdHkgZnJvbSBzdXJmYWNlIGRyaWZ0ZXIgU1ZQXzIzMTg0PFwvYT48XC9kaXY+PHRhYmxlIGNsYXNzPVwicmVzdWx0XCIgc3VtbWFyeT1cIkRhdGFzZXQgcmVmZXJlbmNlIGFuZCBzaXplXCIgY2VsbHNwYWNpbmc9XCIwXCIgY2VsbHBhZGRpbmc9XCIwXCI+PHRyPjx0ZCBjbGFzcz1cInRpdGxlXCI+UmVsYXRlZCB0bzo8XC90ZD48dGQgY2xhc3M9XCJjb250ZW50XCI+PHN0cm9uZz5XT0NFICgyMDAyKTo8XC9zdHJvbmc+IFdvcmxkIE9jZWFuIENpcmN1bGF0aW9uIEV4cGVyaW1lbnQsIEdsb2JhbCBEYXRhLCBWZXJzaW9uIDMuMC4gPGVtPldPQ0UgSW50ZXJuYXRpb25hbCBQcm9qZWN0IE9mZmljZSwgV09DRSBSZXBvcnQsIFNvdXRoYW1wdG9uLCBVSzsgcHVibGlzaGVkIGJ5IFUuUy4gTmF0aW9uYWwgT2NlYW5vZ3JhcGhpYyBEYXRhIENlbnRlciwgU2lsdmVyIFNwcmluZzxcL2VtPjxcL3RkPjxcL3RyPjx0cj48dGQgY2xhc3M9XCJ0aXRsZVwiPlNpemU6PFwvdGQ+PHRkIGNsYXNzPVwiY29udGVudFwiPjM5MiBkYXRhIHBvaW50czxcL3RkPjxcL3RyPjxcL3RhYmxlPjxkaXYgY2xhc3M9XCJkYXRhc2V0aWRcIj48YSBocmVmPVwiaHR0cHM6XC9cL2RvaS5wYW5nYWVhLmRlXC8xMC4xNTk0XC9QQU5HQUVBLjQwMjA0MlwiIHRhcmdldD1cIl9zZWxmXCIgY2xhc3M9XCJkYXRhc2V0LWxpbmsgZG9pLWxpbmtcIj5odHRwczpcL1wvZG9pLm9yZ1wvMTAuMTU5NFwvUEFOR0FFQS40MDIwNDI8XC9hPiAtIDxzcGFuIHRpdGxlPVwiVGhlIHNjb3JlIGlzIGEgbWVhc3VyZW1lbnQgb2YgcmVsZXZhbmN5IChzZWUgVEYtSURGIGFsZ29yaXRobSkuIFRoZSB2YWx1ZSBpcyBub3QgYWJzb2x1dGUgYW5kIG9ubHkgc3VpdGFibGUgdG8gY29tcGFyZSBoaXRzIGZyb20gdGhlIHNhbWUgcmVzdWx0IHNldC5cIj5TY29yZTogOC43PFwvc3Bhbj48XC9kaXY+PFwvbGk+In0seyJVUkkiOiJkb2k6MTAuMTU5NFwvUEFOR0FFQS40MDEzOTAiLCJzY29yZSI6OC42OTg3NDIsImh0bWwiOiI8bGk+PGRpdiBjbGFzcz1cImNpdGF0aW9uXCI+PGEgaHJlZj1cImh0dHBzOlwvXC9kb2kucGFuZ2FlYS5kZVwvMTAuMTU5NFwvUEFOR0FFQS40MDEzOTBcIiB0YXJnZXQ9XCJfc2VsZlwiIGNsYXNzPVwiZGF0YXNldC1saW5rXCI+PHN0cm9uZz5XT0NFIFN1cmZhY2UgVmVsb2NpdHkgUHJvZ3JhbSwgU1ZQICgyMDA2KTo8XC9zdHJvbmc+IFdhdGVyIHRlbXBlcmF0dXJlIGFuZCBjdXJyZW50IHZlbG9jaXR5IGZyb20gc3VyZmFjZSBkcmlmdGVyIFNWUF8xNTg5OTxcL2E+PFwvZGl2Pjx0YWJsZSBjbGFzcz1cInJlc3VsdFwiIHN1bW1hcnk9XCJEYXRhc2V0IHJlZmVyZW5jZSBhbmQgc2l6ZVwiIGNlbGxzcGFjaW5nPVwiMFwiIGNlbGxwYWRkaW5nPVwiMFwiPjx0cj48dGQgY2xhc3M9XCJ0aXRsZVwiPlJlbGF0ZWQgdG86PFwvdGQ+PHRkIGNsYXNzPVwiY29udGVudFwiPjxzdHJvbmc+V09DRSAoMjAwMik6PFwvc3Ryb25nPiBXb3JsZCBPY2VhbiBDaXJjdWxhdGlvbiBFeHBlcmltZW50LCBHbG9iYWwgRGF0YSwgVmVyc2lvbiAzLjAuIDxlbT5XT0NFIEludGVybmF0aW9uYWwgUHJvamVjdCBPZmZpY2UsIFdPQ0UgUmVwb3J0LCBTb3V0aGFtcHRvbiwgVUs7IHB1Ymxpc2hlZCBieSBVLlMuIE5hdGlvbmFsIE9jZWFub2dyYXBoaWMgRGF0YSBDZW50ZXIsIFNpbHZlciBTcHJpbmc8XC9lbT48XC90ZD48XC90cj48dHI+PHRkIGNsYXNzPVwidGl0bGVcIj5TaXplOjxcL3RkPjx0ZCBjbGFzcz1cImNvbnRlbnRcIj41MDAgZGF0YSBwb2ludHM8XC90ZD48XC90cj48XC90YWJsZT48ZGl2IGNsYXNzPVwiZGF0YXNldGlkXCI+PGEgaHJlZj1cImh0dHBzOlwvXC9kb2kucGFuZ2FlYS5kZVwvMTAuMTU5NFwvUEFOR0FFQS40MDEzOTBcIiB0YXJnZXQ9XCJfc2VsZlwiIGNsYXNzPVwiZGF0YXNldC1saW5rIGRvaS1saW5rXCI+aHR0cHM6XC9cL2RvaS5vcmdcLzEwLjE1OTRcL1BBTkdBRUEuNDAxMzkwPFwvYT4gLSA8c3BhbiB0aXRsZT1cIlRoZSBzY29yZSBpcyBhIG1lYXN1cmVtZW50IG9mIHJlbGV2YW5jeSAoc2VlIFRGLUlERiBhbGdvcml0aG0pLiBUaGUgdmFsdWUgaXMgbm90IGFic29sdXRlIGFuZCBvbmx5IHN1aXRhYmxlIHRvIGNvbXBhcmUgaGl0cyBmcm9tIHRoZSBzYW1lIHJlc3VsdCBzZXQuXCI+U2NvcmU6IDguNzxcL3NwYW4+PFwvZGl2PjxcL2xpPiJ9LHsiVVJJIjoiZG9pOjEwLjE1OTRcL1BBTkdBRUEuMzU5MzQ0Iiwic2NvcmUiOjguNjg5MjkzLCJodG1sIjoiPGxpPjxkaXYgY2xhc3M9XCJjaXRhdGlvblwiPjxhIGhyZWY9XCJodHRwczpcL1wvZG9pLnBhbmdhZWEuZGVcLzEwLjE1OTRcL1BBTkdBRUEuMzU5MzQ0XCIgdGFyZ2V0PVwiX3NlbGZcIiBjbGFzcz1cImRhdGFzZXQtbGlua1wiPjxzdHJvbmc+V09DRSBVcHBlciBPY2VhbiBUaGVybWFsLCBVT1QgKDIwMDYpOjxcL3N0cm9uZz4gV2F0ZXIgdGVtcGVyYXR1cmUgcmVhbC10aW1lIHByb2ZpbGVzIGZyb20gY3J1aXNlIE5MQlA5MCAoU0NRQyk8XC9hPjxcL2Rpdj48dGFibGUgY2xhc3M9XCJyZXN1bHRcIiBzdW1tYXJ5PVwiRGF0YXNldCByZWZlcmVuY2UgYW5kIHNpemVcIiBjZWxsc3BhY2luZz1cIjBcIiBjZWxscGFkZGluZz1cIjBcIj48dHI+PHRkIGNsYXNzPVwidGl0bGVcIj5SZWxhdGVkIHRvOjxcL3RkPjx0ZCBjbGFzcz1cImNvbnRlbnRcIj48c3Ryb25nPldPQ0UgKDIwMDIpOjxcL3N0cm9uZz4gV29ybGQgT2NlYW4gQ2lyY3VsYXRpb24gRXhwZXJpbWVudCwgR2xvYmFsIERhdGEsIFZlcnNpb24gMy4wLiA8ZW0+V09DRSBJbnRlcm5hdGlvbmFsIFByb2plY3QgT2ZmaWNlLCBXT0NFIFJlcG9ydCwgU291dGhhbXB0b24sIFVLOyBwdWJsaXNoZWQgYnkgVS5TLiBOYXRpb25hbCBPY2Vhbm9ncmFwaGljIERhdGEgQ2VudGVyLCBTaWx2ZXIgU3ByaW5nPFwvZW0+PFwvdGQ+PFwvdHI+PHRyPjx0ZCBjbGFzcz1cInRpdGxlXCI+U2l6ZTo8XC90ZD48dGQgY2xhc3M9XCJjb250ZW50XCI+NjIgZGF0YSBwb2ludHM8XC90ZD48XC90cj48XC90YWJsZT48ZGl2IGNsYXNzPVwiZGF0YXNldGlkXCI+PGEgaHJlZj1cImh0dHBzOlwvXC9kb2kucGFuZ2FlYS5kZVwvMTAuMTU5NFwvUEFOR0FFQS4zNTkzNDRcIiB0YXJnZXQ9XCJfc2VsZlwiIGNsYXNzPVwiZGF0YXNldC1saW5rIGRvaS1saW5rXCI+aHR0cHM6XC9cL2RvaS5vcmdcLzEwLjE1OTRcL1BBTkdBRUEuMzU5MzQ0PFwvYT4gLSA8c3BhbiB0aXRsZT1cIlRoZSBzY29yZSBpcyBhIG1lYXN1cmVtZW50IG9mIHJlbGV2YW5jeSAoc2VlIFRGLUlERiBhbGdvcml0aG0pLiBUaGUgdmFsdWUgaXMgbm90IGFic29sdXRlIGFuZCBvbmx5IHN1aXRhYmxlIHRvIGNvbXBhcmUgaGl0cyBmcm9tIHRoZSBzYW1lIHJlc3VsdCBzZXQuXCI+U2NvcmU6IDguNjk8XC9zcGFuPjxcL2Rpdj48XC9saT4ifSx7IlVSSSI6ImRvaToxMC4xNTk0XC9QQU5HQUVBLjMyNTIwMCIsInNjb3JlIjo4LjY4MzY3MiwiaHRtbCI6IjxsaT48ZGl2IGNsYXNzPVwiY2l0YXRpb25cIj48YSBocmVmPVwiaHR0cHM6XC9cL2RvaS5wYW5nYWVhLmRlXC8xMC4xNTk0XC9QQU5HQUVBLjMyNTIwMFwiIHRhcmdldD1cIl9zZWxmXCIgY2xhc3M9XCJkYXRhc2V0LWxpbmtcIj48c3Ryb25nPldPQ0UgVXBwZXIgT2NlYW4gVGhlcm1hbCwgVU9UICgyMDA1KTo8XC9zdHJvbmc+IFdhdGVyIHRlbXBlcmF0dXJlIFhCVCBwcm9maWxlcyBmcm9tIGNydWlzZSAxODE5OTEwMTEgKERDUUMpPFwvYT48XC9kaXY+PHRhYmxlIGNsYXNzPVwicmVzdWx0XCIgc3VtbWFyeT1cIkRhdGFzZXQgcmVmZXJlbmNlIGFuZCBzaXplXCIgY2VsbHNwYWNpbmc9XCIwXCIgY2VsbHBhZGRpbmc9XCIwXCI+PHRyPjx0ZCBjbGFzcz1cInRpdGxlXCI+UmVsYXRlZCB0bzo8XC90ZD48dGQgY2xhc3M9XCJjb250ZW50XCI+PHN0cm9uZz5XT0NFICgyMDAyKTo8XC9zdHJvbmc+IFdvcmxkIE9jZWFuIENpcmN1bGF0aW9uIEV4cGVyaW1lbnQsIEdsb2JhbCBEYXRhLCBWZXJzaW9uIDMuMC4gPGVtPldPQ0UgSW50ZXJuYXRpb25hbCBQcm9qZWN0IE9mZmljZSwgV09DRSBSZXBvcnQsIFNvdXRoYW1wdG9uLCBVSzsgcHVibGlzaGVkIGJ5IFUuUy4gTmF0aW9uYWwgT2NlYW5vZ3JhcGhpYyBEYXRhIENlbnRlciwgU2lsdmVyIFNwcmluZzxcL2VtPjxcL3RkPjxcL3RyPjx0cj48dGQgY2xhc3M9XCJ0aXRsZVwiPlNpemU6PFwvdGQ+PHRkIGNsYXNzPVwiY29udGVudFwiPjM1NDU2IGRhdGEgcG9pbnRzPFwvdGQ+PFwvdHI+PFwvdGFibGU+PGRpdiBjbGFzcz1cImRhdGFzZXRpZFwiPjxhIGhyZWY9XCJodHRwczpcL1wvZG9pLnBhbmdhZWEuZGVcLzEwLjE1OTRcL1BBTkdBRUEuMzI1MjAwXCIgdGFyZ2V0PVwiX3NlbGZcIiBjbGFzcz1cImRhdGFzZXQtbGluayBkb2ktbGlua1wiPmh0dHBzOlwvXC9kb2kub3JnXC8xMC4xNTk0XC9QQU5HQUVBLjMyNTIwMDxcL2E+IC0gPHNwYW4gdGl0bGU9XCJUaGUgc2NvcmUgaXMgYSBtZWFzdXJlbWVudCBvZiByZWxldmFuY3kgKHNlZSBURi1JREYgYWxnb3JpdGhtKS4gVGhlIHZhbHVlIGlzIG5vdCBhYnNvbHV0ZSBhbmQgb25seSBzdWl0YWJsZSB0byBjb21wYXJlIGhpdHMgZnJvbSB0aGUgc2FtZSByZXN1bHQgc2V0LlwiPlNjb3JlOiA4LjY4PFwvc3Bhbj48XC9kaXY+PFwvbGk+In0seyJVUkkiOiJkb2k6MTAuMTU5NFwvUEFOR0FFQS40MDU2ODIiLCJzY29yZSI6OC42ODE1OTUsImh0bWwiOiI8bGk+PGRpdiBjbGFzcz1cImNpdGF0aW9uXCI+PGEgaHJlZj1cImh0dHBzOlwvXC9kb2kucGFuZ2FlYS5kZVwvMTAuMTU5NFwvUEFOR0FFQS40MDU2ODJcIiB0YXJnZXQ9XCJfc2VsZlwiIGNsYXNzPVwiZGF0YXNldC1saW5rXCI+PHN0cm9uZz5XT0NFIFN1cmZhY2UgVmVsb2NpdHkgUHJvZ3JhbSwgU1ZQICgyMDA2KTo8XC9zdHJvbmc+IFdhdGVyIHRlbXBlcmF0dXJlIGFuZCBjdXJyZW50IHZlbG9jaXR5IGZyb20gc3VyZmFjZSBkcmlmdGVyIFNWUF85NTI0NDU3PFwvYT48XC9kaXY+PHRhYmxlIGNsYXNzPVwicmVzdWx0XCIgc3VtbWFyeT1cIkRhdGFzZXQgcmVmZXJlbmNlIGFuZCBzaXplXCIgY2VsbHNwYWNpbmc9XCIwXCIgY2VsbHBhZGRpbmc9XCIwXCI+PHRyPjx0ZCBjbGFzcz1cInRpdGxlXCI+UmVsYXRlZCB0bzo8XC90ZD48dGQgY2xhc3M9XCJjb250ZW50XCI+PHN0cm9uZz5XT0NFICgyMDAyKTo8XC9zdHJvbmc+IFdvcmxkIE9jZWFuIENpcmN1bGF0aW9uIEV4cGVyaW1lbnQsIEdsb2JhbCBEYXRhLCBWZXJzaW9uIDMuMC4gPGVtPldPQ0UgSW50ZXJuYXRpb25hbCBQcm9qZWN0IE9mZmljZSwgV09DRSBSZXBvcnQsIFNvdXRoYW1wdG9uLCBVSzsgcHVibGlzaGVkIGJ5IFUuUy4gTmF0aW9uYWwgT2NlYW5vZ3JhcGhpYyBEYXRhIENlbnRlciwgU2lsdmVyIFNwcmluZzxcL2VtPjxcL3RkPjxcL3RyPjx0cj48dGQgY2xhc3M9XCJ0aXRsZVwiPlNpemU6PFwvdGQ+PHRkIGNsYXNzPVwiY29udGVudFwiPjgxNyBkYXRhIHBvaW50czxcL3RkPjxcL3RyPjxcL3RhYmxlPjxkaXYgY2xhc3M9XCJkYXRhc2V0aWRcIj48YSBocmVmPVwiaHR0cHM6XC9cL2RvaS5wYW5nYWVhLmRlXC8xMC4xNTk0XC9QQU5HQUVBLjQwNTY4MlwiIHRhcmdldD1cIl9zZWxmXCIgY2xhc3M9XCJkYXRhc2V0LWxpbmsgZG9pLWxpbmtcIj5odHRwczpcL1wvZG9pLm9yZ1wvMTAuMTU5NFwvUEFOR0FFQS40MDU2ODI8XC9hPiAtIDxzcGFuIHRpdGxlPVwiVGhlIHNjb3JlIGlzIGEgbWVhc3VyZW1lbnQgb2YgcmVsZXZhbmN5IChzZWUgVEYtSURGIGFsZ29yaXRobSkuIFRoZSB2YWx1ZSBpcyBub3QgYWJzb2x1dGUgYW5kIG9ubHkgc3VpdGFibGUgdG8gY29tcGFyZSBoaXRzIGZyb20gdGhlIHNhbWUgcmVzdWx0IHNldC5cIj5TY29yZTogOC42ODxcL3NwYW4+PFwvZGl2PjxcL2xpPiJ9LHsiVVJJIjoiZG9pOjEwLjE1OTRcL1BBTkdBRUEuMzIxODgwIiwic2NvcmUiOjguNjc4Mzc0LCJodG1sIjoiPGxpPjxkaXYgY2xhc3M9XCJjaXRhdGlvblwiPjxhIGhyZWY9XCJodHRwczpcL1wvZG9pLnBhbmdhZWEuZGVcLzEwLjE1OTRcL1BBTkdBRUEuMzIxODgwXCIgdGFyZ2V0PVwiX3NlbGZcIiBjbGFzcz1cImRhdGFzZXQtbGlua1wiPjxzdHJvbmc+V09DRSBVcHBlciBPY2VhbiBUaGVybWFsLCBVT1QgKDIwMDUpOjxcL3N0cm9uZz4gV2F0ZXIgdGVtcGVyYXR1cmUgcmVhbC10aW1lIHByb2ZpbGVzIGZyb20gY3J1aXNlIE5CVE05NSAoRENRQyk8XC9hPjxcL2Rpdj48dGFibGUgY2xhc3M9XCJyZXN1bHRcIiBzdW1tYXJ5PVwiRGF0YXNldCByZWZlcmVuY2UgYW5kIHNpemVcIiBjZWxsc3BhY2luZz1cIjBcIiBjZWxscGFkZGluZz1cIjBcIj48dHI+PHRkIGNsYXNzPVwidGl0bGVcIj5SZWxhdGVkIHRvOjxcL3RkPjx0ZCBjbGFzcz1cImNvbnRlbnRcIj48c3Ryb25nPldPQ0UgKDIwMDIpOjxcL3N0cm9uZz4gV29ybGQgT2NlYW4gQ2lyY3VsYXRpb24gRXhwZXJpbWVudCwgR2xvYmFsIERhdGEsIFZlcnNpb24gMy4wLiA8ZW0+V09DRSBJbnRlcm5hdGlvbmFsIFByb2plY3QgT2ZmaWNlLCBXT0NFIFJlcG9ydCwgU291dGhhbXB0b24sIFVLOyBwdWJsaXNoZWQgYnkgVS5TLiBOYXRpb25hbCBPY2Vhbm9ncmFwaGljIERhdGEgQ2VudGVyLCBTaWx2ZXIgU3ByaW5nPFwvZW0+PFwvdGQ+PFwvdHI+PHRyPjx0ZCBjbGFzcz1cInRpdGxlXCI+U2l6ZTo8XC90ZD48dGQgY2xhc3M9XCJjb250ZW50XCI+NiBkYXRhIHBvaW50czxcL3RkPjxcL3RyPjxcL3RhYmxlPjxkaXYgY2xhc3M9XCJkYXRhc2V0aWRcIj48YSBocmVmPVwiaHR0cHM6XC9cL2RvaS5wYW5nYWVhLmRlXC8xMC4xNTk0XC9QQU5HQUVBLjMyMTg4MFwiIHRhcmdldD1cIl9zZWxmXCIgY2xhc3M9XCJkYXRhc2V0LWxpbmsgZG9pLWxpbmtcIj5odHRwczpcL1wvZG9pLm9yZ1wvMTAuMTU5NFwvUEFOR0FFQS4zMjE4ODA8XC9hPiAtIDxzcGFuIHRpdGxlPVwiVGhlIHNjb3JlIGlzIGEgbWVhc3VyZW1lbnQgb2YgcmVsZXZhbmN5IChzZWUgVEYtSURGIGFsZ29yaXRobSkuIFRoZSB2YWx1ZSBpcyBub3QgYWJzb2x1dGUgYW5kIG9ubHkgc3VpdGFibGUgdG8gY29tcGFyZSBoaXRzIGZyb20gdGhlIHNhbWUgcmVzdWx0IHNldC5cIj5TY29yZTogOC42ODxcL3NwYW4+PFwvZGl2PjxcL2xpPiJ9XSwiZmFjZXRzIjpudWxsLCJtYXhTY29yZSI6MTIuNzY1NDYxLCJvZmZzZXQiOjAsInF1ZXJ5SWRlbnRpZmllciI6ImMzNDA1NjFiLTQyNjAtM2JkZC04YjFjLWY0NGYwM2I2NjcwZiIsInNlc3Npb24iOiJuY2Jha240cWdyOTlqbGJlMWdqdGozY2ZqMSIsInRpbWVJbkRhdGFiYXNlIjoxNCwidG90YWxDb3VudCI6NjQ2LCJodG1sU3VtbWFyeSI6IjxzdHJvbmc+NjQ2IGRhdGFzZXRzPFwvc3Ryb25nPiBmb3VuZCBvbiBzZWFyY2ggZm9yIDxzdHJvbmcgdGl0bGU9XCJRdWVyeTogJnJhcXVvO3dhdGVyJmxhcXVvO1wiPiZyYXF1bzt3YXRlciZsYXF1bzs8XC9zdHJvbmc+IHdpdGggPHN0cm9uZyB0aXRsZT1cIldlc3QtYm91bmQgTG9uZ2l0dWRlOiAtMTI0LjIsIEVhc3QtYm91bmQgTG9uZ2l0dWRlOiAtMTE2LjgsIFNvdXRoLWJvdW5kIExhdGl0dWRlOiA0MS44LCBOb3J0aC1ib3VuZCBMYXRpdHVkZTogNDYuMVwiPmdlb2dyYXBoaWMgYm91bmRpbmcgYm94PFwvc3Ryb25nPiIsImh0bWxTbmlwcGV0UlNTIjoiPGxpbmsgcmVsPVwiYWx0ZXJuYXRlXCIgdGl0bGU9XCJQQU5HQUVBIGxhdGVzdCBkYXRhc2V0cyBhYm91dCAmcXVvdDt3YXRlciZxdW90OyB3aXRoIGdlb2dyYXBoaWMgYm91bmRpbmcgYm94XCIgdHlwZT1cImFwcGxpY2F0aW9uXC9yc3MreG1sXCIgaHJlZj1cIlwvdG9vbHNcL2xhdGVzdC1kYXRhc2V0cy5yc3M/cT13YXRlciZhbXA7bWlubG9uPS0xMjQuMiZhbXA7bWlubGF0PTQxLjgmYW1wO21heGxvbj0tMTE2LjgmYW1wO21heGxhdD00Ni4xJmFtcDtjb3VudD0xMFwiPiJ9
+  recorded_at: 2019-09-11 20:33:07 GMT
+  recorded_with: vcr/0.3.0.9100, webmockr/0.4.0
 - request:
     method: get
     uri: https://www.pangaea.de/advanced/search.php?count=10&offset=0&q=citation%3AArcher
@@ -818,7 +181,7 @@ http_interactions:
       encoding: ''
       string: ''
     headers:
-      User-Agent: libcurl/7.54.0 r-curl/4.0 crul/0.8.4
+      User-Agent: libcurl/7.54.0 r-curl/4.0 crul/0.8.4.9100
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
   response:
@@ -830,7 +193,7 @@ http_interactions:
       cache-control: private, max-age=10800, pre-check=10800
       content-encoding: gzip
       content-type: application/json; charset=UTF-8
-      date: Tue, 13 Aug 2019 21:53:55 GMT
+      date: Wed, 11 Sep 2019 20:33:07 GMT
       last-modified: Fri, 15 Apr 2016 11:55:50 GMT
       server: PANGAEA/2.0
       status: 'HTTP/2 200 '
@@ -842,150 +205,7 @@ http_interactions:
       x-frame-options: SAMEORIGIN
       x-ua-compatible: IE=Edge
     body:
-      encoding: UTF-8
-      string: '{"results":[{"URI":"doi:10.1594\/PANGAEA.715051","score":20.181524,"html":"<li><div
-        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.715051\"
-        target=\"_self\" class=\"dataset-link\"><strong>Stoll, HM; Shimizu, N; Archer,
-        DE et al. (2007):<\/strong> Sr\/Ca ratios of coccoliths from the Paleocene-Eocene
-        Thermal Maximum<\/a><\/div><table class=\"result\" summary=\"Dataset reference
-        and size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"title\">Supplement
-        to:<\/td><td class=\"content\"><strong>Stoll, HM; Shimizu, N; Archer, DE et
-        al. (2007):<\/strong> Coccolithophore productivity response to greenhouse
-        event of the Paleocene-Eocene Thermal Maximum. <em>Earth and Planetary Science
-        Letters<\/em><\/td><\/tr><tr><td class=\"title\">Size:<\/td><td class=\"content\">5
-        datasets<\/td><\/tr><\/table><div class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.715051\"
-        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.715051<\/a>
-        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
-        The value is not absolute and only suitable to compare hits from the same
-        result set.\">Score: 20.18<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.726364","score":20.181524,"html":"<li><div
-        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.726364\"
-        target=\"_self\" class=\"dataset-link\"><strong>Catubig, NR; Archer, DE; Francois,
-        R et al. (1998):<\/strong> Calcium carbonate global LGM Burial rate data<\/a><\/div><table
-        class=\"result\" summary=\"Dataset reference and size\" cellspacing=\"0\"
-        cellpadding=\"0\"><tr><td class=\"title\">Supplement to:<\/td><td class=\"content\"><strong>Catubig,
-        NR; Archer, DE; Francois, R et al. (1998):<\/strong> Global deep-sea burial
-        rate of calcium carbonate during the last glacial maximum. <em>Paleoceanography<\/em><\/td><\/tr><tr><td
-        class=\"title\">Size:<\/td><td class=\"content\">4 datasets<\/td><\/tr><\/table><div
-        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.726364\"
-        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.726364<\/a>
-        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
-        The value is not absolute and only suitable to compare hits from the same
-        result set.\">Score: 20.18<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.730527","score":19.526766,"html":"<li><div
-        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.730527\"
-        target=\"_self\" class=\"dataset-link\"><strong>Jahnke, RA; Emerson, SR; Reimers,
-        C et al. (1989):<\/strong> Chemistry of eastern tropical Atlantic porewater<\/a><\/div><table
-        class=\"result\" summary=\"Dataset reference and size\" cellspacing=\"0\"
-        cellpadding=\"0\"><tr><td class=\"title\">Supplement to:<\/td><td class=\"content\"><strong>Jahnke,
-        RA; Emerson, SR; Reimers, C et al. (1989):<\/strong> Benthic recycling of
-        biogenic debris in the eastern tropical Atlantic Ocean. <em>Geochimica et
-        Cosmochimica Acta<\/em><\/td><\/tr><tr><td class=\"title\">Size:<\/td><td
-        class=\"content\">21 datasets<\/td><\/tr><\/table><div class=\"datasetid\"><a
-        href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.730527\" target=\"_self\"
-        class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.730527<\/a>
-        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
-        The value is not absolute and only suitable to compare hits from the same
-        result set.\">Score: 19.53<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.736010","score":19.526766,"html":"<li><div
-        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.736010\"
-        target=\"_self\" class=\"dataset-link\"><strong>Archer, DE; Devol, AH (1992):<\/strong>
-        Benthic oxygen flixes on the Washington shelf and slope<\/a><\/div><table
-        class=\"result\" summary=\"Dataset reference and size\" cellspacing=\"0\"
-        cellpadding=\"0\"><tr><td class=\"title\">Supplement to:<\/td><td class=\"content\"><strong>Archer,
-        DE; Devol, AH (1992):<\/strong> Benthic oxygen fluxes on the Washington shelf
-        and slope: A comparison of in situ microelectrode and chamber flux measurements.
-        <em>Limnology and Oceanography<\/em><\/td><\/tr><tr><td class=\"title\">Size:<\/td><td
-        class=\"content\">9 datasets<\/td><\/tr><\/table><div class=\"datasetid\"><a
-        href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.736010\" target=\"_self\"
-        class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.736010<\/a>
-        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
-        The value is not absolute and only suitable to compare hits from the same
-        result set.\">Score: 19.53<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.730420","score":17.66477,"html":"<li><div
-        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.730420\"
-        target=\"_self\" class=\"dataset-link\"><strong>Hales, B; Emerson, SR; Archer,
-        DE (1994):<\/strong> Respiration and dissolution in sediments of the western
-        Atlantic<\/a><\/div><table class=\"result\" summary=\"Dataset reference and
-        size\" cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"title\">Supplement
-        to:<\/td><td class=\"content\"><strong>Hales, B; Emerson, SR; Archer, DE (1994):<\/strong>
-        Respiration and dissolution in the sediments of the western North Atlantic:
-        estimates from models of in situ microelectrode measurements of porewater
-        oxygen and pH. <em>Deep Sea Research Part I: Oceanographic Research Papers<\/em><\/td><\/tr><tr><td
-        class=\"title\">Size:<\/td><td class=\"content\">33 datasets<\/td><\/tr><\/table><div
-        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.730420\"
-        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.730420<\/a>
-        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
-        The value is not absolute and only suitable to compare hits from the same
-        result set.\">Score: 17.66<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.121144","score":15.3039055,"html":"<li><div
-        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.121144\"
-        target=\"_self\" class=\"dataset-link\"><strong>Archer, DE (2003):<\/strong>
-        Total carbon dioxide and alkalinity at station TT011_1-CTD6<\/a><\/div><table
-        class=\"result\" summary=\"Dataset reference and size\" cellspacing=\"0\"
-        cellpadding=\"0\"><tr><td class=\"title\">Related to:<\/td><td class=\"content\"><strong>Archer,
-        DE (2003):<\/strong> Total carbon dioxide and alkalinity. <em>United States
-        JGOFS Process Study Data 1989-1998; CD-ROM volume 1, version 2, Woods Hole
-        Oceanographic Institution, USA: U.S. JGOFS Data Management Office<\/em><\/td><\/tr><tr><td
-        class=\"title\">Size:<\/td><td class=\"content\">135 data points<\/td><\/tr><\/table><div
-        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.121144\"
-        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.121144<\/a>
-        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
-        The value is not absolute and only suitable to compare hits from the same
-        result set.\">Score: 15.3<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.121167","score":15.3039055,"html":"<li><div
-        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.121167\"
-        target=\"_self\" class=\"dataset-link\"><strong>Archer, DE (2003):<\/strong>
-        Total carbon dioxide and alkalinity at station TT011_12-CTD158<\/a><\/div><table
-        class=\"result\" summary=\"Dataset reference and size\" cellspacing=\"0\"
-        cellpadding=\"0\"><tr><td class=\"title\">Related to:<\/td><td class=\"content\"><strong>Archer,
-        DE (2003):<\/strong> Total carbon dioxide and alkalinity. <em>United States
-        JGOFS Process Study Data 1989-1998; CD-ROM volume 1, version 2, Woods Hole
-        Oceanographic Institution, USA: U.S. JGOFS Data Management Office<\/em><\/td><\/tr><tr><td
-        class=\"title\">Size:<\/td><td class=\"content\">28 data points<\/td><\/tr><\/table><div
-        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.121167\"
-        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.121167<\/a>
-        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
-        The value is not absolute and only suitable to compare hits from the same
-        result set.\">Score: 15.3<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.121233","score":15.3039055,"html":"<li><div
-        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.121233\"
-        target=\"_self\" class=\"dataset-link\"><strong>Archer, DE (2003):<\/strong>
-        Total carbon dioxide and alkalinity at station TT011_9-CTD110<\/a><\/div><table
-        class=\"result\" summary=\"Dataset reference and size\" cellspacing=\"0\"
-        cellpadding=\"0\"><tr><td class=\"title\">Related to:<\/td><td class=\"content\"><strong>Archer,
-        DE (2003):<\/strong> Total carbon dioxide and alkalinity. <em>United States
-        JGOFS Process Study Data 1989-1998; CD-ROM volume 1, version 2, Woods Hole
-        Oceanographic Institution, USA: U.S. JGOFS Data Management Office<\/em><\/td><\/tr><tr><td
-        class=\"title\">Size:<\/td><td class=\"content\">32 data points<\/td><\/tr><\/table><div
-        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.121233\"
-        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.121233<\/a>
-        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
-        The value is not absolute and only suitable to compare hits from the same
-        result set.\">Score: 15.3<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.121208","score":15.3039055,"html":"<li><div
-        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.121208\"
-        target=\"_self\" class=\"dataset-link\"><strong>Archer, DE (2003):<\/strong>
-        Total carbon dioxide and alkalinity at station TT011_5-CTD67<\/a><\/div><table
-        class=\"result\" summary=\"Dataset reference and size\" cellspacing=\"0\"
-        cellpadding=\"0\"><tr><td class=\"title\">Related to:<\/td><td class=\"content\"><strong>Archer,
-        DE (2003):<\/strong> Total carbon dioxide and alkalinity. <em>United States
-        JGOFS Process Study Data 1989-1998; CD-ROM volume 1, version 2, Woods Hole
-        Oceanographic Institution, USA: U.S. JGOFS Data Management Office<\/em><\/td><\/tr><tr><td
-        class=\"title\">Size:<\/td><td class=\"content\">40 data points<\/td><\/tr><\/table><div
-        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.121208\"
-        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.121208<\/a>
-        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
-        The value is not absolute and only suitable to compare hits from the same
-        result set.\">Score: 15.3<\/span><\/div><\/li>"},{"URI":"doi:10.1594\/PANGAEA.121111","score":15.3039055,"html":"<li><div
-        class=\"citation\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.121111\"
-        target=\"_self\" class=\"dataset-link\"><strong>Archer, DE (2003):<\/strong>
-        Total carbon dioxide and alkalinity at station TT007_6-CTD66<\/a><\/div><table
-        class=\"result\" summary=\"Dataset reference and size\" cellspacing=\"0\"
-        cellpadding=\"0\"><tr><td class=\"title\">Related to:<\/td><td class=\"content\"><strong>Archer,
-        DE (2003):<\/strong> Total carbon dioxide and alkalinity. <em>United States
-        JGOFS Process Study Data 1989-1998; CD-ROM volume 1, version 2, Woods Hole
-        Oceanographic Institution, USA: U.S. JGOFS Data Management Office<\/em><\/td><\/tr><tr><td
-        class=\"title\">Size:<\/td><td class=\"content\">68 data points<\/td><\/tr><\/table><div
-        class=\"datasetid\"><a href=\"https:\/\/doi.pangaea.de\/10.1594\/PANGAEA.121111\"
-        target=\"_self\" class=\"dataset-link doi-link\">https:\/\/doi.org\/10.1594\/PANGAEA.121111<\/a>
-        - <span title=\"The score is a measurement of relevancy (see TF-IDF algorithm).
-        The value is not absolute and only suitable to compare hits from the same
-        result set.\">Score: 15.3<\/span><\/div><\/li>"}],"facets":null,"maxScore":20.181524,"offset":0,"queryIdentifier":"394a4b5b-e9b5-3c51-ae11-d5906daf9ee2","session":"foilv4i52inrkbltgndpj8sgo2","timeInDatabase":6,"totalCount":274,"htmlSummary":"<strong>274
-        datasets<\/strong> found on search for <strong title=\"Query: &raquo;citation:Archer&laquo;\">&raquo;citation:Archer&laquo;<\/strong>","htmlSnippetRSS":"<link
-        rel=\"alternate\" title=\"PANGAEA latest datasets about &quot;citation:Archer&quot;\"
-        type=\"application\/rss+xml\" href=\"\/tools\/latest-datasets.rss?q=citation%3AArcher&amp;count=10\">"}'
-  recorded_at: 2019-08-13 21:53:54 GMT
-  recorded_with: vcr/0.2.6, webmockr/0.4.0
+      encoding: ASCII-8BIT
+      string: eyJyZXN1bHRzIjpbeyJVUkkiOiJkb2k6MTAuMTU5NFwvUEFOR0FFQS43MTUwNTEiLCJzY29yZSI6MjAuMTg5MjAzLCJodG1sIjoiPGxpPjxkaXYgY2xhc3M9XCJjaXRhdGlvblwiPjxhIGhyZWY9XCJodHRwczpcL1wvZG9pLnBhbmdhZWEuZGVcLzEwLjE1OTRcL1BBTkdBRUEuNzE1MDUxXCIgdGFyZ2V0PVwiX3NlbGZcIiBjbGFzcz1cImRhdGFzZXQtbGlua1wiPjxzdHJvbmc+U3RvbGwsIEhNOyBTaGltaXp1LCBOOyBBcmNoZXIsIERFIGV0IGFsLiAoMjAwNyk6PFwvc3Ryb25nPiBTclwvQ2EgcmF0aW9zIG9mIGNvY2NvbGl0aHMgZnJvbSB0aGUgUGFsZW9jZW5lLUVvY2VuZSBUaGVybWFsIE1heGltdW08XC9hPjxcL2Rpdj48dGFibGUgY2xhc3M9XCJyZXN1bHRcIiBzdW1tYXJ5PVwiRGF0YXNldCByZWZlcmVuY2UgYW5kIHNpemVcIiBjZWxsc3BhY2luZz1cIjBcIiBjZWxscGFkZGluZz1cIjBcIj48dHI+PHRkIGNsYXNzPVwidGl0bGVcIj5TdXBwbGVtZW50IHRvOjxcL3RkPjx0ZCBjbGFzcz1cImNvbnRlbnRcIj48c3Ryb25nPlN0b2xsLCBITTsgU2hpbWl6dSwgTjsgQXJjaGVyLCBERSBldCBhbC4gKDIwMDcpOjxcL3N0cm9uZz4gQ29jY29saXRob3Bob3JlIHByb2R1Y3Rpdml0eSByZXNwb25zZSB0byBncmVlbmhvdXNlIGV2ZW50IG9mIHRoZSBQYWxlb2NlbmUtRW9jZW5lIFRoZXJtYWwgTWF4aW11bS4gPGVtPkVhcnRoIGFuZCBQbGFuZXRhcnkgU2NpZW5jZSBMZXR0ZXJzPFwvZW0+PFwvdGQ+PFwvdHI+PHRyPjx0ZCBjbGFzcz1cInRpdGxlXCI+U2l6ZTo8XC90ZD48dGQgY2xhc3M9XCJjb250ZW50XCI+NSBkYXRhc2V0czxcL3RkPjxcL3RyPjxcL3RhYmxlPjxkaXYgY2xhc3M9XCJkYXRhc2V0aWRcIj48YSBocmVmPVwiaHR0cHM6XC9cL2RvaS5wYW5nYWVhLmRlXC8xMC4xNTk0XC9QQU5HQUVBLjcxNTA1MVwiIHRhcmdldD1cIl9zZWxmXCIgY2xhc3M9XCJkYXRhc2V0LWxpbmsgZG9pLWxpbmtcIj5odHRwczpcL1wvZG9pLm9yZ1wvMTAuMTU5NFwvUEFOR0FFQS43MTUwNTE8XC9hPiAtIDxzcGFuIHRpdGxlPVwiVGhlIHNjb3JlIGlzIGEgbWVhc3VyZW1lbnQgb2YgcmVsZXZhbmN5IChzZWUgVEYtSURGIGFsZ29yaXRobSkuIFRoZSB2YWx1ZSBpcyBub3QgYWJzb2x1dGUgYW5kIG9ubHkgc3VpdGFibGUgdG8gY29tcGFyZSBoaXRzIGZyb20gdGhlIHNhbWUgcmVzdWx0IHNldC5cIj5TY29yZTogMjAuMTk8XC9zcGFuPjxcL2Rpdj48XC9saT4ifSx7IlVSSSI6ImRvaToxMC4xNTk0XC9QQU5HQUVBLjcyNjM2NCIsInNjb3JlIjoyMC4xODkyMDMsImh0bWwiOiI8bGk+PGRpdiBjbGFzcz1cImNpdGF0aW9uXCI+PGEgaHJlZj1cImh0dHBzOlwvXC9kb2kucGFuZ2FlYS5kZVwvMTAuMTU5NFwvUEFOR0FFQS43MjYzNjRcIiB0YXJnZXQ9XCJfc2VsZlwiIGNsYXNzPVwiZGF0YXNldC1saW5rXCI+PHN0cm9uZz5DYXR1YmlnLCBOUjsgQXJjaGVyLCBERTsgRnJhbmNvaXMsIFIgZXQgYWwuICgxOTk4KTo8XC9zdHJvbmc+IENhbGNpdW0gY2FyYm9uYXRlIGdsb2JhbCBMR00gQnVyaWFsIHJhdGUgZGF0YTxcL2E+PFwvZGl2Pjx0YWJsZSBjbGFzcz1cInJlc3VsdFwiIHN1bW1hcnk9XCJEYXRhc2V0IHJlZmVyZW5jZSBhbmQgc2l6ZVwiIGNlbGxzcGFjaW5nPVwiMFwiIGNlbGxwYWRkaW5nPVwiMFwiPjx0cj48dGQgY2xhc3M9XCJ0aXRsZVwiPlN1cHBsZW1lbnQgdG86PFwvdGQ+PHRkIGNsYXNzPVwiY29udGVudFwiPjxzdHJvbmc+Q2F0dWJpZywgTlI7IEFyY2hlciwgREU7IEZyYW5jb2lzLCBSIGV0IGFsLiAoMTk5OCk6PFwvc3Ryb25nPiBHbG9iYWwgZGVlcC1zZWEgYnVyaWFsIHJhdGUgb2YgY2FsY2l1bSBjYXJib25hdGUgZHVyaW5nIHRoZSBsYXN0IGdsYWNpYWwgbWF4aW11bS4gPGVtPlBhbGVvY2Vhbm9ncmFwaHk8XC9lbT48XC90ZD48XC90cj48dHI+PHRkIGNsYXNzPVwidGl0bGVcIj5TaXplOjxcL3RkPjx0ZCBjbGFzcz1cImNvbnRlbnRcIj40IGRhdGFzZXRzPFwvdGQ+PFwvdHI+PFwvdGFibGU+PGRpdiBjbGFzcz1cImRhdGFzZXRpZFwiPjxhIGhyZWY9XCJodHRwczpcL1wvZG9pLnBhbmdhZWEuZGVcLzEwLjE1OTRcL1BBTkdBRUEuNzI2MzY0XCIgdGFyZ2V0PVwiX3NlbGZcIiBjbGFzcz1cImRhdGFzZXQtbGluayBkb2ktbGlua1wiPmh0dHBzOlwvXC9kb2kub3JnXC8xMC4xNTk0XC9QQU5HQUVBLjcyNjM2NDxcL2E+IC0gPHNwYW4gdGl0bGU9XCJUaGUgc2NvcmUgaXMgYSBtZWFzdXJlbWVudCBvZiByZWxldmFuY3kgKHNlZSBURi1JREYgYWxnb3JpdGhtKS4gVGhlIHZhbHVlIGlzIG5vdCBhYnNvbHV0ZSBhbmQgb25seSBzdWl0YWJsZSB0byBjb21wYXJlIGhpdHMgZnJvbSB0aGUgc2FtZSByZXN1bHQgc2V0LlwiPlNjb3JlOiAyMC4xOTxcL3NwYW4+PFwvZGl2PjxcL2xpPiJ9LHsiVVJJIjoiZG9pOjEwLjE1OTRcL1BBTkdBRUEuNzMwNTI3Iiwic2NvcmUiOjE5LjUzODI1LCJodG1sIjoiPGxpPjxkaXYgY2xhc3M9XCJjaXRhdGlvblwiPjxhIGhyZWY9XCJodHRwczpcL1wvZG9pLnBhbmdhZWEuZGVcLzEwLjE1OTRcL1BBTkdBRUEuNzMwNTI3XCIgdGFyZ2V0PVwiX3NlbGZcIiBjbGFzcz1cImRhdGFzZXQtbGlua1wiPjxzdHJvbmc+SmFobmtlLCBSQTsgRW1lcnNvbiwgU1I7IFJlaW1lcnMsIEMgZXQgYWwuICgxOTg5KTo8XC9zdHJvbmc+IENoZW1pc3RyeSBvZiBlYXN0ZXJuIHRyb3BpY2FsIEF0bGFudGljIHBvcmV3YXRlcjxcL2E+PFwvZGl2Pjx0YWJsZSBjbGFzcz1cInJlc3VsdFwiIHN1bW1hcnk9XCJEYXRhc2V0IHJlZmVyZW5jZSBhbmQgc2l6ZVwiIGNlbGxzcGFjaW5nPVwiMFwiIGNlbGxwYWRkaW5nPVwiMFwiPjx0cj48dGQgY2xhc3M9XCJ0aXRsZVwiPlN1cHBsZW1lbnQgdG86PFwvdGQ+PHRkIGNsYXNzPVwiY29udGVudFwiPjxzdHJvbmc+SmFobmtlLCBSQTsgRW1lcnNvbiwgU1I7IFJlaW1lcnMsIEMgZXQgYWwuICgxOTg5KTo8XC9zdHJvbmc+IEJlbnRoaWMgcmVjeWNsaW5nIG9mIGJpb2dlbmljIGRlYnJpcyBpbiB0aGUgZWFzdGVybiB0cm9waWNhbCBBdGxhbnRpYyBPY2Vhbi4gPGVtPkdlb2NoaW1pY2EgZXQgQ29zbW9jaGltaWNhIEFjdGE8XC9lbT48XC90ZD48XC90cj48dHI+PHRkIGNsYXNzPVwidGl0bGVcIj5TaXplOjxcL3RkPjx0ZCBjbGFzcz1cImNvbnRlbnRcIj4yMSBkYXRhc2V0czxcL3RkPjxcL3RyPjxcL3RhYmxlPjxkaXYgY2xhc3M9XCJkYXRhc2V0aWRcIj48YSBocmVmPVwiaHR0cHM6XC9cL2RvaS5wYW5nYWVhLmRlXC8xMC4xNTk0XC9QQU5HQUVBLjczMDUyN1wiIHRhcmdldD1cIl9zZWxmXCIgY2xhc3M9XCJkYXRhc2V0LWxpbmsgZG9pLWxpbmtcIj5odHRwczpcL1wvZG9pLm9yZ1wvMTAuMTU5NFwvUEFOR0FFQS43MzA1Mjc8XC9hPiAtIDxzcGFuIHRpdGxlPVwiVGhlIHNjb3JlIGlzIGEgbWVhc3VyZW1lbnQgb2YgcmVsZXZhbmN5IChzZWUgVEYtSURGIGFsZ29yaXRobSkuIFRoZSB2YWx1ZSBpcyBub3QgYWJzb2x1dGUgYW5kIG9ubHkgc3VpdGFibGUgdG8gY29tcGFyZSBoaXRzIGZyb20gdGhlIHNhbWUgcmVzdWx0IHNldC5cIj5TY29yZTogMTkuNTQ8XC9zcGFuPjxcL2Rpdj48XC9saT4ifSx7IlVSSSI6ImRvaToxMC4xNTk0XC9QQU5HQUVBLjczNjAxMCIsInNjb3JlIjoxOS41MzgyNSwiaHRtbCI6IjxsaT48ZGl2IGNsYXNzPVwiY2l0YXRpb25cIj48YSBocmVmPVwiaHR0cHM6XC9cL2RvaS5wYW5nYWVhLmRlXC8xMC4xNTk0XC9QQU5HQUVBLjczNjAxMFwiIHRhcmdldD1cIl9zZWxmXCIgY2xhc3M9XCJkYXRhc2V0LWxpbmtcIj48c3Ryb25nPkFyY2hlciwgREU7IERldm9sLCBBSCAoMTk5Mik6PFwvc3Ryb25nPiBCZW50aGljIG94eWdlbiBmbGl4ZXMgb24gdGhlIFdhc2hpbmd0b24gc2hlbGYgYW5kIHNsb3BlPFwvYT48XC9kaXY+PHRhYmxlIGNsYXNzPVwicmVzdWx0XCIgc3VtbWFyeT1cIkRhdGFzZXQgcmVmZXJlbmNlIGFuZCBzaXplXCIgY2VsbHNwYWNpbmc9XCIwXCIgY2VsbHBhZGRpbmc9XCIwXCI+PHRyPjx0ZCBjbGFzcz1cInRpdGxlXCI+U3VwcGxlbWVudCB0bzo8XC90ZD48dGQgY2xhc3M9XCJjb250ZW50XCI+PHN0cm9uZz5BcmNoZXIsIERFOyBEZXZvbCwgQUggKDE5OTIpOjxcL3N0cm9uZz4gQmVudGhpYyBveHlnZW4gZmx1eGVzIG9uIHRoZSBXYXNoaW5ndG9uIHNoZWxmIGFuZCBzbG9wZTogQSBjb21wYXJpc29uIG9mIGluIHNpdHUgbWljcm9lbGVjdHJvZGUgYW5kIGNoYW1iZXIgZmx1eCBtZWFzdXJlbWVudHMuIDxlbT5MaW1ub2xvZ3kgYW5kIE9jZWFub2dyYXBoeTxcL2VtPjxcL3RkPjxcL3RyPjx0cj48dGQgY2xhc3M9XCJ0aXRsZVwiPlNpemU6PFwvdGQ+PHRkIGNsYXNzPVwiY29udGVudFwiPjkgZGF0YXNldHM8XC90ZD48XC90cj48XC90YWJsZT48ZGl2IGNsYXNzPVwiZGF0YXNldGlkXCI+PGEgaHJlZj1cImh0dHBzOlwvXC9kb2kucGFuZ2FlYS5kZVwvMTAuMTU5NFwvUEFOR0FFQS43MzYwMTBcIiB0YXJnZXQ9XCJfc2VsZlwiIGNsYXNzPVwiZGF0YXNldC1saW5rIGRvaS1saW5rXCI+aHR0cHM6XC9cL2RvaS5vcmdcLzEwLjE1OTRcL1BBTkdBRUEuNzM2MDEwPFwvYT4gLSA8c3BhbiB0aXRsZT1cIlRoZSBzY29yZSBpcyBhIG1lYXN1cmVtZW50IG9mIHJlbGV2YW5jeSAoc2VlIFRGLUlERiBhbGdvcml0aG0pLiBUaGUgdmFsdWUgaXMgbm90IGFic29sdXRlIGFuZCBvbmx5IHN1aXRhYmxlIHRvIGNvbXBhcmUgaGl0cyBmcm9tIHRoZSBzYW1lIHJlc3VsdCBzZXQuXCI+U2NvcmU6IDE5LjU0PFwvc3Bhbj48XC9kaXY+PFwvbGk+In0seyJVUkkiOiJkb2k6MTAuMTU5NFwvUEFOR0FFQS43MzA0MjAiLCJzY29yZSI6MTcuNjc4Mzk4LCJodG1sIjoiPGxpPjxkaXYgY2xhc3M9XCJjaXRhdGlvblwiPjxhIGhyZWY9XCJodHRwczpcL1wvZG9pLnBhbmdhZWEuZGVcLzEwLjE1OTRcL1BBTkdBRUEuNzMwNDIwXCIgdGFyZ2V0PVwiX3NlbGZcIiBjbGFzcz1cImRhdGFzZXQtbGlua1wiPjxzdHJvbmc+SGFsZXMsIEI7IEVtZXJzb24sIFNSOyBBcmNoZXIsIERFICgxOTk0KTo8XC9zdHJvbmc+IFJlc3BpcmF0aW9uIGFuZCBkaXNzb2x1dGlvbiBpbiBzZWRpbWVudHMgb2YgdGhlIHdlc3Rlcm4gQXRsYW50aWM8XC9hPjxcL2Rpdj48dGFibGUgY2xhc3M9XCJyZXN1bHRcIiBzdW1tYXJ5PVwiRGF0YXNldCByZWZlcmVuY2UgYW5kIHNpemVcIiBjZWxsc3BhY2luZz1cIjBcIiBjZWxscGFkZGluZz1cIjBcIj48dHI+PHRkIGNsYXNzPVwidGl0bGVcIj5TdXBwbGVtZW50IHRvOjxcL3RkPjx0ZCBjbGFzcz1cImNvbnRlbnRcIj48c3Ryb25nPkhhbGVzLCBCOyBFbWVyc29uLCBTUjsgQXJjaGVyLCBERSAoMTk5NCk6PFwvc3Ryb25nPiBSZXNwaXJhdGlvbiBhbmQgZGlzc29sdXRpb24gaW4gdGhlIHNlZGltZW50cyBvZiB0aGUgd2VzdGVybiBOb3J0aCBBdGxhbnRpYzogZXN0aW1hdGVzIGZyb20gbW9kZWxzIG9mIGluIHNpdHUgbWljcm9lbGVjdHJvZGUgbWVhc3VyZW1lbnRzIG9mIHBvcmV3YXRlciBveHlnZW4gYW5kIHBILiA8ZW0+RGVlcCBTZWEgUmVzZWFyY2ggUGFydCBJOiBPY2Vhbm9ncmFwaGljIFJlc2VhcmNoIFBhcGVyczxcL2VtPjxcL3RkPjxcL3RyPjx0cj48dGQgY2xhc3M9XCJ0aXRsZVwiPlNpemU6PFwvdGQ+PHRkIGNsYXNzPVwiY29udGVudFwiPjMzIGRhdGFzZXRzPFwvdGQ+PFwvdHI+PFwvdGFibGU+PGRpdiBjbGFzcz1cImRhdGFzZXRpZFwiPjxhIGhyZWY9XCJodHRwczpcL1wvZG9pLnBhbmdhZWEuZGVcLzEwLjE1OTRcL1BBTkdBRUEuNzMwNDIwXCIgdGFyZ2V0PVwiX3NlbGZcIiBjbGFzcz1cImRhdGFzZXQtbGluayBkb2ktbGlua1wiPmh0dHBzOlwvXC9kb2kub3JnXC8xMC4xNTk0XC9QQU5HQUVBLjczMDQyMDxcL2E+IC0gPHNwYW4gdGl0bGU9XCJUaGUgc2NvcmUgaXMgYSBtZWFzdXJlbWVudCBvZiByZWxldmFuY3kgKHNlZSBURi1JREYgYWxnb3JpdGhtKS4gVGhlIHZhbHVlIGlzIG5vdCBhYnNvbHV0ZSBhbmQgb25seSBzdWl0YWJsZSB0byBjb21wYXJlIGhpdHMgZnJvbSB0aGUgc2FtZSByZXN1bHQgc2V0LlwiPlNjb3JlOiAxNy42ODxcL3NwYW4+PFwvZGl2PjxcL2xpPiJ9LHsiVVJJIjoiZG9pOjEwLjE1OTRcL1BBTkdBRUEuMTIxMTMxIiwic2NvcmUiOjE1LjMxMjMyNTUsImh0bWwiOiI8bGk+PGRpdiBjbGFzcz1cImNpdGF0aW9uXCI+PGEgaHJlZj1cImh0dHBzOlwvXC9kb2kucGFuZ2FlYS5kZVwvMTAuMTU5NFwvUEFOR0FFQS4xMjExMzFcIiB0YXJnZXQ9XCJfc2VsZlwiIGNsYXNzPVwiZGF0YXNldC1saW5rXCI+PHN0cm9uZz5BcmNoZXIsIERFICgyMDAzKTo8XC9zdHJvbmc+IFRvdGFsIGNhcmJvbiBkaW94aWRlIGFuZCBhbGthbGluaXR5IGF0IHN0YXRpb24gVFQwMDdfOC1DVEQ5NTxcL2E+PFwvZGl2Pjx0YWJsZSBjbGFzcz1cInJlc3VsdFwiIHN1bW1hcnk9XCJEYXRhc2V0IHJlZmVyZW5jZSBhbmQgc2l6ZVwiIGNlbGxzcGFjaW5nPVwiMFwiIGNlbGxwYWRkaW5nPVwiMFwiPjx0cj48dGQgY2xhc3M9XCJ0aXRsZVwiPlJlbGF0ZWQgdG86PFwvdGQ+PHRkIGNsYXNzPVwiY29udGVudFwiPjxzdHJvbmc+QXJjaGVyLCBERSAoMjAwMyk6PFwvc3Ryb25nPiBUb3RhbCBjYXJib24gZGlveGlkZSBhbmQgYWxrYWxpbml0eS4gPGVtPlVuaXRlZCBTdGF0ZXMgSkdPRlMgUHJvY2VzcyBTdHVkeSBEYXRhIDE5ODktMTk5ODsgQ0QtUk9NIHZvbHVtZSAxLCB2ZXJzaW9uIDIsIFdvb2RzIEhvbGUgT2NlYW5vZ3JhcGhpYyBJbnN0aXR1dGlvbiwgVVNBOiBVLlMuIEpHT0ZTIERhdGEgTWFuYWdlbWVudCBPZmZpY2U8XC9lbT48XC90ZD48XC90cj48dHI+PHRkIGNsYXNzPVwidGl0bGVcIj5TaXplOjxcL3RkPjx0ZCBjbGFzcz1cImNvbnRlbnRcIj40NCBkYXRhIHBvaW50czxcL3RkPjxcL3RyPjxcL3RhYmxlPjxkaXYgY2xhc3M9XCJkYXRhc2V0aWRcIj48YSBocmVmPVwiaHR0cHM6XC9cL2RvaS5wYW5nYWVhLmRlXC8xMC4xNTk0XC9QQU5HQUVBLjEyMTEzMVwiIHRhcmdldD1cIl9zZWxmXCIgY2xhc3M9XCJkYXRhc2V0LWxpbmsgZG9pLWxpbmtcIj5odHRwczpcL1wvZG9pLm9yZ1wvMTAuMTU5NFwvUEFOR0FFQS4xMjExMzE8XC9hPiAtIDxzcGFuIHRpdGxlPVwiVGhlIHNjb3JlIGlzIGEgbWVhc3VyZW1lbnQgb2YgcmVsZXZhbmN5IChzZWUgVEYtSURGIGFsZ29yaXRobSkuIFRoZSB2YWx1ZSBpcyBub3QgYWJzb2x1dGUgYW5kIG9ubHkgc3VpdGFibGUgdG8gY29tcGFyZSBoaXRzIGZyb20gdGhlIHNhbWUgcmVzdWx0IHNldC5cIj5TY29yZTogMTUuMzE8XC9zcGFuPjxcL2Rpdj48XC9saT4ifSx7IlVSSSI6ImRvaToxMC4xNTk0XC9QQU5HQUVBLjEwNzI4NiIsInNjb3JlIjoxNS4zMTIzMjU1LCJodG1sIjoiPGxpPjxkaXYgY2xhc3M9XCJjaXRhdGlvblwiPjxhIGhyZWY9XCJodHRwczpcL1wvZG9pLnBhbmdhZWEuZGVcLzEwLjE1OTRcL1BBTkdBRUEuMTA3Mjg2XCIgdGFyZ2V0PVwiX3NlbGZcIiBjbGFzcz1cImRhdGFzZXQtbGlua1wiPjxzdHJvbmc+QXJjaGVyLCBERSAoMjAwMyk6PFwvc3Ryb25nPiBJbnRlcnBvbGF0ZWQgY2FsY2l1bSBjYXJib25hdGUgY29udGVudCBvZiB0aGUgc2VhIGZsb29yIHNlZGltZW50czxcL2E+PFwvZGl2Pjx0YWJsZSBjbGFzcz1cInJlc3VsdFwiIHN1bW1hcnk9XCJEYXRhc2V0IHJlZmVyZW5jZSBhbmQgc2l6ZVwiIGNlbGxzcGFjaW5nPVwiMFwiIGNlbGxwYWRkaW5nPVwiMFwiPjx0cj48dGQgY2xhc3M9XCJ0aXRsZVwiPlJlbGF0ZWQgdG86PFwvdGQ+PHRkIGNsYXNzPVwiY29udGVudFwiPjxzdHJvbmc+QXJjaGVyLCBERSAoMTk5Nik6PFwvc3Ryb25nPiBBbiBhdGxhcyBvZiB0aGUgZGlzdHJpYnV0aW9uIG9mIGNhbGNpdW0gY2FyYm9uYXRlIGluIHNlZGltZW50cyBvZiB0aGUgZGVlcCBzZWEuIDxlbT5HbG9iYWwgQmlvZ2VvY2hlbWljYWwgQ3ljbGVzPFwvZW0+PFwvdGQ+PFwvdHI+PHRyPjx0ZCBjbGFzcz1cInRpdGxlXCI+U2l6ZTo8XC90ZD48dGQgY2xhc3M9XCJjb250ZW50XCI+MTE2LjAga0J5dGVzPFwvdGQ+PFwvdHI+PFwvdGFibGU+PGRpdiBjbGFzcz1cImRhdGFzZXRpZFwiPjxhIGhyZWY9XCJodHRwczpcL1wvZG9pLnBhbmdhZWEuZGVcLzEwLjE1OTRcL1BBTkdBRUEuMTA3Mjg2XCIgdGFyZ2V0PVwiX3NlbGZcIiBjbGFzcz1cImRhdGFzZXQtbGluayBkb2ktbGlua1wiPmh0dHBzOlwvXC9kb2kub3JnXC8xMC4xNTk0XC9QQU5HQUVBLjEwNzI4NjxcL2E+IC0gPHNwYW4gdGl0bGU9XCJUaGUgc2NvcmUgaXMgYSBtZWFzdXJlbWVudCBvZiByZWxldmFuY3kgKHNlZSBURi1JREYgYWxnb3JpdGhtKS4gVGhlIHZhbHVlIGlzIG5vdCBhYnNvbHV0ZSBhbmQgb25seSBzdWl0YWJsZSB0byBjb21wYXJlIGhpdHMgZnJvbSB0aGUgc2FtZSByZXN1bHQgc2V0LlwiPlNjb3JlOiAxNS4zMTxcL3NwYW4+PFwvZGl2PjxcL2xpPiJ9LHsiVVJJIjoiZG9pOjEwLjE1OTRcL1BBTkdBRUEuMTIxMTYyIiwic2NvcmUiOjE1LjMxMjMyNTUsImh0bWwiOiI8bGk+PGRpdiBjbGFzcz1cImNpdGF0aW9uXCI+PGEgaHJlZj1cImh0dHBzOlwvXC9kb2kucGFuZ2FlYS5kZVwvMTAuMTU5NFwvUEFOR0FFQS4xMjExNjJcIiB0YXJnZXQ9XCJfc2VsZlwiIGNsYXNzPVwiZGF0YXNldC1saW5rXCI+PHN0cm9uZz5BcmNoZXIsIERFICgyMDAzKTo8XC9zdHJvbmc+IFRvdGFsIGNhcmJvbiBkaW94aWRlIGFuZCBhbGthbGluaXR5IGF0IHN0YXRpb24gVFQwMTFfMTItQ1REMTQ2PFwvYT48XC9kaXY+PHRhYmxlIGNsYXNzPVwicmVzdWx0XCIgc3VtbWFyeT1cIkRhdGFzZXQgcmVmZXJlbmNlIGFuZCBzaXplXCIgY2VsbHNwYWNpbmc9XCIwXCIgY2VsbHBhZGRpbmc9XCIwXCI+PHRyPjx0ZCBjbGFzcz1cInRpdGxlXCI+UmVsYXRlZCB0bzo8XC90ZD48dGQgY2xhc3M9XCJjb250ZW50XCI+PHN0cm9uZz5BcmNoZXIsIERFICgyMDAzKTo8XC9zdHJvbmc+IFRvdGFsIGNhcmJvbiBkaW94aWRlIGFuZCBhbGthbGluaXR5LiA8ZW0+VW5pdGVkIFN0YXRlcyBKR09GUyBQcm9jZXNzIFN0dWR5IERhdGEgMTk4OS0xOTk4OyBDRC1ST00gdm9sdW1lIDEsIHZlcnNpb24gMiwgV29vZHMgSG9sZSBPY2Vhbm9ncmFwaGljIEluc3RpdHV0aW9uLCBVU0E6IFUuUy4gSkdPRlMgRGF0YSBNYW5hZ2VtZW50IE9mZmljZTxcL2VtPjxcL3RkPjxcL3RyPjx0cj48dGQgY2xhc3M9XCJ0aXRsZVwiPlNpemU6PFwvdGQ+PHRkIGNsYXNzPVwiY29udGVudFwiPjgwIGRhdGEgcG9pbnRzPFwvdGQ+PFwvdHI+PFwvdGFibGU+PGRpdiBjbGFzcz1cImRhdGFzZXRpZFwiPjxhIGhyZWY9XCJodHRwczpcL1wvZG9pLnBhbmdhZWEuZGVcLzEwLjE1OTRcL1BBTkdBRUEuMTIxMTYyXCIgdGFyZ2V0PVwiX3NlbGZcIiBjbGFzcz1cImRhdGFzZXQtbGluayBkb2ktbGlua1wiPmh0dHBzOlwvXC9kb2kub3JnXC8xMC4xNTk0XC9QQU5HQUVBLjEyMTE2MjxcL2E+IC0gPHNwYW4gdGl0bGU9XCJUaGUgc2NvcmUgaXMgYSBtZWFzdXJlbWVudCBvZiByZWxldmFuY3kgKHNlZSBURi1JREYgYWxnb3JpdGhtKS4gVGhlIHZhbHVlIGlzIG5vdCBhYnNvbHV0ZSBhbmQgb25seSBzdWl0YWJsZSB0byBjb21wYXJlIGhpdHMgZnJvbSB0aGUgc2FtZSByZXN1bHQgc2V0LlwiPlNjb3JlOiAxNS4zMTxcL3NwYW4+PFwvZGl2PjxcL2xpPiJ9LHsiVVJJIjoiZG9pOjEwLjE1OTRcL1BBTkdBRUEuMTIxMTg0Iiwic2NvcmUiOjE1LjMxMjMyNTUsImh0bWwiOiI8bGk+PGRpdiBjbGFzcz1cImNpdGF0aW9uXCI+PGEgaHJlZj1cImh0dHBzOlwvXC9kb2kucGFuZ2FlYS5kZVwvMTAuMTU5NFwvUEFOR0FFQS4xMjExODRcIiB0YXJnZXQ9XCJfc2VsZlwiIGNsYXNzPVwiZGF0YXNldC1saW5rXCI+PHN0cm9uZz5BcmNoZXIsIERFICgyMDAzKTo8XC9zdHJvbmc+IFRvdGFsIGNhcmJvbiBkaW94aWRlIGFuZCBhbGthbGluaXR5IGF0IHN0YXRpb24gVFQwMTFfMi1DVEQyMzxcL2E+PFwvZGl2Pjx0YWJsZSBjbGFzcz1cInJlc3VsdFwiIHN1bW1hcnk9XCJEYXRhc2V0IHJlZmVyZW5jZSBhbmQgc2l6ZVwiIGNlbGxzcGFjaW5nPVwiMFwiIGNlbGxwYWRkaW5nPVwiMFwiPjx0cj48dGQgY2xhc3M9XCJ0aXRsZVwiPlJlbGF0ZWQgdG86PFwvdGQ+PHRkIGNsYXNzPVwiY29udGVudFwiPjxzdHJvbmc+QXJjaGVyLCBERSAoMjAwMyk6PFwvc3Ryb25nPiBUb3RhbCBjYXJib24gZGlveGlkZSBhbmQgYWxrYWxpbml0eS4gPGVtPlVuaXRlZCBTdGF0ZXMgSkdPRlMgUHJvY2VzcyBTdHVkeSBEYXRhIDE5ODktMTk5ODsgQ0QtUk9NIHZvbHVtZSAxLCB2ZXJzaW9uIDIsIFdvb2RzIEhvbGUgT2NlYW5vZ3JhcGhpYyBJbnN0aXR1dGlvbiwgVVNBOiBVLlMuIEpHT0ZTIERhdGEgTWFuYWdlbWVudCBPZmZpY2U8XC9lbT48XC90ZD48XC90cj48dHI+PHRkIGNsYXNzPVwidGl0bGVcIj5TaXplOjxcL3RkPjx0ZCBjbGFzcz1cImNvbnRlbnRcIj4yNCBkYXRhIHBvaW50czxcL3RkPjxcL3RyPjxcL3RhYmxlPjxkaXYgY2xhc3M9XCJkYXRhc2V0aWRcIj48YSBocmVmPVwiaHR0cHM6XC9cL2RvaS5wYW5nYWVhLmRlXC8xMC4xNTk0XC9QQU5HQUVBLjEyMTE4NFwiIHRhcmdldD1cIl9zZWxmXCIgY2xhc3M9XCJkYXRhc2V0LWxpbmsgZG9pLWxpbmtcIj5odHRwczpcL1wvZG9pLm9yZ1wvMTAuMTU5NFwvUEFOR0FFQS4xMjExODQ8XC9hPiAtIDxzcGFuIHRpdGxlPVwiVGhlIHNjb3JlIGlzIGEgbWVhc3VyZW1lbnQgb2YgcmVsZXZhbmN5IChzZWUgVEYtSURGIGFsZ29yaXRobSkuIFRoZSB2YWx1ZSBpcyBub3QgYWJzb2x1dGUgYW5kIG9ubHkgc3VpdGFibGUgdG8gY29tcGFyZSBoaXRzIGZyb20gdGhlIHNhbWUgcmVzdWx0IHNldC5cIj5TY29yZTogMTUuMzE8XC9zcGFuPjxcL2Rpdj48XC9saT4ifSx7IlVSSSI6ImRvaToxMC4xNTk0XC9QQU5HQUVBLjEyMTIyOCIsInNjb3JlIjoxNS4zMTIzMjU1LCJodG1sIjoiPGxpPjxkaXYgY2xhc3M9XCJjaXRhdGlvblwiPjxhIGhyZWY9XCJodHRwczpcL1wvZG9pLnBhbmdhZWEuZGVcLzEwLjE1OTRcL1BBTkdBRUEuMTIxMjI4XCIgdGFyZ2V0PVwiX3NlbGZcIiBjbGFzcz1cImRhdGFzZXQtbGlua1wiPjxzdHJvbmc+QXJjaGVyLCBERSAoMjAwMyk6PFwvc3Ryb25nPiBUb3RhbCBjYXJib24gZGlveGlkZSBhbmQgYWxrYWxpbml0eSBhdCBzdGF0aW9uIFRUMDExXzgtQ1REOTM8XC9hPjxcL2Rpdj48dGFibGUgY2xhc3M9XCJyZXN1bHRcIiBzdW1tYXJ5PVwiRGF0YXNldCByZWZlcmVuY2UgYW5kIHNpemVcIiBjZWxsc3BhY2luZz1cIjBcIiBjZWxscGFkZGluZz1cIjBcIj48dHI+PHRkIGNsYXNzPVwidGl0bGVcIj5SZWxhdGVkIHRvOjxcL3RkPjx0ZCBjbGFzcz1cImNvbnRlbnRcIj48c3Ryb25nPkFyY2hlciwgREUgKDIwMDMpOjxcL3N0cm9uZz4gVG90YWwgY2FyYm9uIGRpb3hpZGUgYW5kIGFsa2FsaW5pdHkuIDxlbT5Vbml0ZWQgU3RhdGVzIEpHT0ZTIFByb2Nlc3MgU3R1ZHkgRGF0YSAxOTg5LTE5OTg7IENELVJPTSB2b2x1bWUgMSwgdmVyc2lvbiAyLCBXb29kcyBIb2xlIE9jZWFub2dyYXBoaWMgSW5zdGl0dXRpb24sIFVTQTogVS5TLiBKR09GUyBEYXRhIE1hbmFnZW1lbnQgT2ZmaWNlPFwvZW0+PFwvdGQ+PFwvdHI+PHRyPjx0ZCBjbGFzcz1cInRpdGxlXCI+U2l6ZTo8XC90ZD48dGQgY2xhc3M9XCJjb250ZW50XCI+NDQgZGF0YSBwb2ludHM8XC90ZD48XC90cj48XC90YWJsZT48ZGl2IGNsYXNzPVwiZGF0YXNldGlkXCI+PGEgaHJlZj1cImh0dHBzOlwvXC9kb2kucGFuZ2FlYS5kZVwvMTAuMTU5NFwvUEFOR0FFQS4xMjEyMjhcIiB0YXJnZXQ9XCJfc2VsZlwiIGNsYXNzPVwiZGF0YXNldC1saW5rIGRvaS1saW5rXCI+aHR0cHM6XC9cL2RvaS5vcmdcLzEwLjE1OTRcL1BBTkdBRUEuMTIxMjI4PFwvYT4gLSA8c3BhbiB0aXRsZT1cIlRoZSBzY29yZSBpcyBhIG1lYXN1cmVtZW50IG9mIHJlbGV2YW5jeSAoc2VlIFRGLUlERiBhbGdvcml0aG0pLiBUaGUgdmFsdWUgaXMgbm90IGFic29sdXRlIGFuZCBvbmx5IHN1aXRhYmxlIHRvIGNvbXBhcmUgaGl0cyBmcm9tIHRoZSBzYW1lIHJlc3VsdCBzZXQuXCI+U2NvcmU6IDE1LjMxPFwvc3Bhbj48XC9kaXY+PFwvbGk+In1dLCJmYWNldHMiOm51bGwsIm1heFNjb3JlIjoyMC4xODkyMDMsIm9mZnNldCI6MCwicXVlcnlJZGVudGlmaWVyIjoiMzk0YTRiNWItZTliNS0zYzUxLWFlMTEtZDU5MDZkYWY5ZWUyIiwic2Vzc2lvbiI6ImtjMzhtZDkycDFpMG9tMXNpdWNiaTJ1Mm0xIiwidGltZUluRGF0YWJhc2UiOjQsInRvdGFsQ291bnQiOjI3NCwiaHRtbFN1bW1hcnkiOiI8c3Ryb25nPjI3NCBkYXRhc2V0czxcL3N0cm9uZz4gZm91bmQgb24gc2VhcmNoIGZvciA8c3Ryb25nIHRpdGxlPVwiUXVlcnk6ICZyYXF1bztjaXRhdGlvbjpBcmNoZXImbGFxdW87XCI+JnJhcXVvO2NpdGF0aW9uOkFyY2hlciZsYXF1bzs8XC9zdHJvbmc+IiwiaHRtbFNuaXBwZXRSU1MiOiI8bGluayByZWw9XCJhbHRlcm5hdGVcIiB0aXRsZT1cIlBBTkdBRUEgbGF0ZXN0IGRhdGFzZXRzIGFib3V0ICZxdW90O2NpdGF0aW9uOkFyY2hlciZxdW90O1wiIHR5cGU9XCJhcHBsaWNhdGlvblwvcnNzK3htbFwiIGhyZWY9XCJcL3Rvb2xzXC9sYXRlc3QtZGF0YXNldHMucnNzP3E9Y2l0YXRpb24lM0FBcmNoZXImYW1wO2NvdW50PTEwXCI+In0=
+  recorded_at: 2019-09-11 20:33:07 GMT
+  recorded_with: vcr/0.3.0.9100, webmockr/0.4.0

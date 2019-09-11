@@ -8,7 +8,7 @@ test_that("pg_search works and stuff, and stuff and things, also, it works", {
     dd <- pg_search(query='water', mindate="2013-06-01", maxdate="2013-07-01")
     ee <- pg_search(query='water', bbox=c(-124.2, 41.8, -116.8, 46.1))
     ff <- pg_search(query='citation:Archer')
-  })
+  }, preserve_exact_body_bytes = TRUE)
 
   expect_is(aa, "tbl_df")
   expect_equal(sort(names(aa)),
@@ -31,7 +31,7 @@ test_that("pg_search paging works", {
     res1 <- pg_search(query = "florisphaera", count = 10)
     res2 <- pg_search(query = "florisphaera", count = 10, offset = 10)
     res3 <- pg_search(query = "florisphaera", count = 10, offset = 20)
-  })
+  }, preserve_exact_body_bytes = TRUE)
 
   expect_is(res1, "tbl_df")
   expect_is(res2, "tbl_df")
