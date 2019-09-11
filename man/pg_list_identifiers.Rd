@@ -45,8 +45,8 @@ List identifiers of the Pangaea repository
 \examples{
 \dontrun{
 pg_list_identifiers(
-  from = paste0(Sys.Date() - 2, "T00:00:00Z"),
-  until = paste0(Sys.Date() - 1, "T18:00:00Z")
+  from = paste0(Sys.Date() - 4, "T00:00:00Z"),
+  until = paste0(Sys.Date() - 3, "T18:00:00Z")
 )
 pg_list_identifiers(set="geocode1", from=Sys.Date()-1, until=Sys.Date())
 pg_list_identifiers(prefix="iso19139", from=Sys.Date()-1, until=Sys.Date())
