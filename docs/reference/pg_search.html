@@ -8,11 +8,13 @@
 
 <title>Search the Pangaea database — pg_search • pangaear</title>
 
+
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
 
 <!-- Font Awesome icons -->
@@ -32,10 +34,11 @@
 
 
 
-<meta property="og:title" content="Search the Pangaea database — pg_search" />
 
+<meta property="og:title" content="Search the Pangaea database — pg_search" />
 <meta property="og:description" content="Search the Pangaea database" />
 <meta name="twitter:card" content="summary" />
+
 
 
 
@@ -66,7 +69,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">pangaear</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.6.4.9100</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.8.2</span>
       </span>
     </div>
 
@@ -97,7 +100,6 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/ropensci/pangaear">
@@ -124,14 +126,12 @@
     </div>
 
     <div class="ref-description">
-    
     <p>Search the Pangaea database</p>
-    
     </div>
 
     <pre class="usage"><span class='fu'>pg_search</span>(<span class='no'>query</span>, <span class='kw'>count</span> <span class='kw'>=</span> <span class='fl'>10</span>, <span class='kw'>offset</span> <span class='kw'>=</span> <span class='fl'>0</span>, <span class='kw'>topic</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>bbox</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
   <span class='kw'>mindate</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>maxdate</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='no'>...</span>)</pre>
-    
+
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
@@ -169,10 +169,10 @@ maxlat</p></td>
     </tr>
     <tr>
       <th>...</th>
-      <td><p>Curl options passed on to <code><a href='https://rdrr.io/pkg/crul/man/HttpClient.html'>crul::HttpClient()</a></code></p></td>
+      <td><p>Curl options passed on to <code><a href='https://docs.ropensci.org/crul/reference/HttpClient.html'>crul::HttpClient()</a></code></p></td>
     </tr>
     </table>
-    
+
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>tibble/data.frame with the structure:</p><ul>
@@ -185,19 +185,16 @@ maxlat</p></td>
 supplement to</p></li>
 </ul>
 
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>This is a thin wrapper around the GUI search interface on the page
 <a href='https://www.pangaea.de'>https://www.pangaea.de</a>. Everything you can do there, you can do here.</p>
-    
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p><code><a href='pg_search_es.html'>pg_search_es()</a></code></p></div>
-    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><span class='co'># NOT RUN {</span>
+    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
 <span class='fu'>pg_search</span>(<span class='kw'>query</span><span class='kw'>=</span><span class='st'>'water'</span>)
 <span class='fu'>pg_search</span>(<span class='kw'>query</span><span class='kw'>=</span><span class='st'>'water'</span>, <span class='kw'>count</span><span class='kw'>=</span><span class='fl'>2</span>)
 <span class='fu'>pg_search</span>(<span class='kw'>query</span><span class='kw'>=</span><span class='st'>'water'</span>, <span class='kw'>count</span><span class='kw'>=</span><span class='fl'>20</span>)
@@ -227,19 +224,15 @@ supplement to</p></li>
 
 <span class='co'># curl options</span>
 <span class='fu'>pg_search</span>(<span class='kw'>query</span><span class='kw'>=</span><span class='st'>'citation:Archer'</span>, <span class='kw'>verbose</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)
-<span class='co'># }</span></pre>
+}</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
-      
       <li><a href="#value">Value</a></li>
-
       <li><a href="#details">Details</a></li>
-
       <li><a href="#see-also">See also</a></li>
-      
       <li><a href="#examples">Examples</a></li>
     </ul>
 
@@ -253,7 +246,7 @@ supplement to</p></li>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.0.</p>
 </div>
 
       </footer>

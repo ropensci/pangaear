@@ -6,13 +6,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Download data from Pangaea. — pg_cache_clear • pangaear</title>
+<title>Download data from Pangaea. — pg_data • pangaear</title>
+
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
 
 <!-- Font Awesome icons -->
@@ -32,11 +34,12 @@
 
 
 
-<meta property="og:title" content="Download data from Pangaea. — pg_cache_clear" />
 
+<meta property="og:title" content="Download data from Pangaea. — pg_data" />
 <meta property="og:description" content="Grabs data as a dataframe or list of dataframes from a Pangaea data
 repository URI; see: https://www.pangaea.de/" />
 <meta name="twitter:card" content="summary" />
+
 
 
 
@@ -67,7 +70,7 @@ repository URI; see: https://www.pangaea.de/" />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">pangaear</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.6.4.9100</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.8.2</span>
       </span>
     </div>
 
@@ -98,7 +101,6 @@ repository URI; see: https://www.pangaea.de/" />
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/ropensci/pangaear">
@@ -120,23 +122,17 @@ repository URI; see: https://www.pangaea.de/" />
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Download data from Pangaea.</h1>
-    <small class="dont-index">Source: <a href='https://github.com/ropensci/pangaear/blob/master/R/pg_cache.R'><code>R/pg_cache.R</code></a>, <a href='https://github.com/ropensci/pangaear/blob/master/R/pg_data.R'><code>R/pg_data.R</code></a></small>
+    <small class="dont-index">Source: <a href='https://github.com/ropensci/pangaear/blob/master/R/pg_data.R'><code>R/pg_data.R</code></a></small>
     <div class="hidden name"><code>pg_data.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    
     <p>Grabs data as a dataframe or list of dataframes from a Pangaea data
 repository URI; see: <a href='https://www.pangaea.de/'>https://www.pangaea.de/</a></p>
-    
     </div>
 
-    <pre class="usage"><span class='fu'>pg_cache_clear</span>(<span class='kw'>doi</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>prompt</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)
+    <pre class="usage"><span class='fu'>pg_data</span>(<span class='no'>doi</span>, <span class='kw'>overwrite</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>mssgs</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='no'>...</span>)</pre>
 
-<span class='fu'>pg_cache_list</span>()
-
-<span class='fu'>pg_data</span>(<span class='no'>doi</span>, <span class='kw'>overwrite</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>mssgs</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='no'>...</span>)</pre>
-    
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
@@ -148,11 +144,6 @@ the URL part in front, like
 <a href='https://doi.pangaea.de/10.1594/PANGAEA.746398'>https://doi.pangaea.de/10.1594/PANGAEA.746398</a></p></td>
     </tr>
     <tr>
-      <th>prompt</th>
-      <td><p>(logical) Prompt before clearing all files in cache? No prompt
-used when DOIs passed in. Default: <code>TRUE</code></p></td>
-    </tr>
-    <tr>
       <th>overwrite</th>
       <td><p>(logical) Ovewrite a file if one is found with the same name</p></td>
     </tr>
@@ -162,10 +153,10 @@ used when DOIs passed in. Default: <code>TRUE</code></p></td>
     </tr>
     <tr>
       <th>...</th>
-      <td><p>Curl options passed on to <a href='https://rdrr.io/pkg/crul/man/HttpClient.html'>crul::HttpClient</a></p></td>
+      <td><p>Curl options passed on to <a href='https://docs.ropensci.org/crul/reference/HttpClient.html'>crul::HttpClient</a></p></td>
     </tr>
     </table>
-    
+
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>One or more items of class pangaea, each with the doi, parent doi
@@ -174,27 +165,26 @@ Data object depends on what kind of file it is. For tabular data, we print
 the first 10 columns or so; for a zip file we list the files in the zip
 (but leave it up to the user to dig unzip and get files from the zip file);
 for png files, we point the user to read the file in with <code><a href='https://rdrr.io/pkg/png/man/readPNG.html'>png::readPNG()</a></code></p>
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>Data files are stored in an operating system appropriate location.
-Run <code><a href='https://rdrr.io/pkg/rappdirs/man/user_cache_dir.html'>rappdirs::user_cache_dir("pangaear")</a></code> to get the storage location
-on your machine.</p>
+Run <code>pg_cache$cache_path_get()</code> to get the storage location
+on your machine. See <a href='pg_cache.html'>pg_cache</a> for more information, including how to
+set a different base path for downloaded files.</p>
 <p>Some files/datasets require the user to be logged in. For now we
 just pass on these - that is, give back nothing other than metadata.</p>
-    
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p><a href='https://www.pangaea.de'>https://www.pangaea.de</a></p>
-    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><span class='co'># NOT RUN {</span>
+    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
 <span class='co'># a single file</span>
 (<span class='no'>res</span> <span class='kw'>&lt;-</span> <span class='fu'>pg_data</span>(<span class='kw'>doi</span><span class='kw'>=</span><span class='st'>'10.1594/PANGAEA.807580'</span>))
 <span class='no'>res</span><span class='kw'>[[</span><span class='fl'>1</span>]]$<span class='no'>doi</span>
 <span class='no'>res</span><span class='kw'>[[</span><span class='fl'>1</span>]]$<span class='no'>citation</span>
 <span class='no'>res</span><span class='kw'>[[</span><span class='fl'>1</span>]]$<span class='no'>data</span>
+<span class='no'>res</span><span class='kw'>[[</span><span class='fl'>1</span>]]$<span class='no'>metadata</span>
 
 <span class='co'># another single file</span>
 <span class='fu'>pg_data</span>(<span class='kw'>doi</span><span class='kw'>=</span><span class='st'>'10.1594/PANGAEA.807584'</span>)
@@ -206,23 +196,18 @@ just pass on these - that is, give back nothing other than metadata.</p>
 
 <span class='co'># Manipulating the cache</span>
 <span class='co'>## list files in the cache</span>
-<span class='fu'>pg_cache_list</span>()
+<span class='no'>pg_cache</span>$<span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>()
 
 <span class='co'>## clear all data</span>
-<span class='co'># pg_cache_clear()</span>
-<span class='fu'>pg_cache_list</span>()
+<span class='co'># pg_cache$delete_all()</span>
+<span class='no'>pg_cache</span>$<span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>()
 
 <span class='co'>## clear a single dataset by DOI</span>
 <span class='fu'>pg_data</span>(<span class='kw'>doi</span><span class='kw'>=</span><span class='st'>'10.1594/PANGAEA.812093'</span>)
-<span class='fu'>pg_cache_list</span>()
-<span class='fu'>pg_cache_clear</span>(<span class='kw'>doi</span><span class='kw'>=</span><span class='st'>'10.1594/PANGAEA.812093'</span>)
-<span class='fu'>pg_cache_list</span>()
-
-<span class='co'>## clear more than 1 dataset by DOI</span>
-<span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>lapply</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'10.1594/PANGAEA.746398'</span>,<span class='st'>'10.1594/PANGAEA.746400'</span>), <span class='no'>pg_data</span>)
-<span class='fu'>pg_cache_list</span>()
-<span class='fu'>pg_cache_clear</span>(<span class='kw'>doi</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'10.1594/PANGAEA.746398'</span>,<span class='st'>'10.1594/PANGAEA.746400'</span>))
-<span class='fu'>pg_cache_list</span>()
+<span class='no'>pg_cache</span>$<span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>()
+<span class='no'>path</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/grep.html'>grep</a></span>(<span class='st'>"PANGAEA.812093"</span>, <span class='no'>pg_cache</span>$<span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(), <span class='kw'>value</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)
+<span class='no'>pg_cache</span>$<span class='fu'>delete</span>(<span class='no'>path</span>)
+<span class='no'>pg_cache</span>$<span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>()
 
 <span class='co'># search for datasets, then pass in DOIs</span>
 (<span class='no'>searchres</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='pg_search.html'>pg_search</a></span>(<span class='kw'>query</span> <span class='kw'>=</span> <span class='st'>'birds'</span>, <span class='kw'>count</span> <span class='kw'>=</span> <span class='fl'>20</span>))
@@ -237,19 +222,15 @@ just pass on these - that is, give back nothing other than metadata.</p>
 <span class='co'># login required</span>
 <span class='co'>## we skip file download</span>
 <span class='fu'>pg_data</span>(<span class='st'>"10.1594/PANGAEA.788547"</span>)
-<span class='co'># }</span></pre>
+}</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
-      
       <li><a href="#value">Value</a></li>
-
       <li><a href="#details">Details</a></li>
-
       <li><a href="#references">References</a></li>
-      
       <li><a href="#examples">Examples</a></li>
     </ul>
 
@@ -265,7 +246,7 @@ just pass on these - that is, give back nothing other than metadata.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.0.</p>
 </div>
 
       </footer>

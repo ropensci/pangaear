@@ -31,7 +31,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">pangaear</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.6.4.9100</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.8.2</span>
       </span>
     </div>
 
@@ -107,7 +107,7 @@
 <p>If you’ve not installed it yet, install from CRAN:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"pangaear"</span>)</a></code></pre></div>
 <p>Or the development version:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1">devtools<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/devtools/man/reexports.html">install_github</a></span>(<span class="st">"ropensci/pangaear"</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1">devtools<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/devtools/man/remote-reexports.html">install_github</a></span>(<span class="st">"ropensci/pangaear"</span>)</a></code></pre></div>
 </div>
 <div id="load-pangaear" class="section level2">
 <h2 class="hasAnchor">
@@ -121,45 +121,47 @@
 <p>For example, query for the term ‘water’, with a bounding box, and return only three results.</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw"><a href="../reference/pg_search.html">pg_search</a></span>(<span class="dt">query =</span> <span class="st">'water'</span>, <span class="dt">bbox =</span> <span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="op">-</span><span class="fl">124.2</span>, <span class="fl">41.8</span>, <span class="fl">-116.8</span>, <span class="fl">46.1</span>), <span class="dt">count =</span> <span class="dv">3</span>)</a></code></pre></div>
 <pre><code>#&gt; # A tibble: 3 x 6
-#&gt;   score doi                       size size_measure citation  supplement_…
-#&gt;   &lt;dbl&gt; &lt;chr&gt;                    &lt;dbl&gt; &lt;chr&gt;        &lt;chr&gt;     &lt;chr&gt;       
-#&gt; 1  20.0 10.1594/PANGAEA.812094    2.00 datasets     Simonyan… Simonyan, A…
-#&gt; 2  11.0 10.1594/PANGAEA.736010    9.00 datasets     Archer, … Archer, DE;…
-#&gt; 3  10.9 10.1594/PANGAEA.874893 4152    data points  Uhlig, C… Uhlig, C; L…</code></pre>
+#&gt;   score doi       size size_measure citation          supplement_to        
+#&gt;   &lt;dbl&gt; &lt;chr&gt;    &lt;dbl&gt; &lt;chr&gt;        &lt;chr&gt;             &lt;chr&gt;                
+#&gt; 1 12.8  10.1594…     2 datasets     Simonyan, AV; Du… Simonyan, AV; Dultz,…
+#&gt; 2  8.70 10.1594…   598 data points  WOCE Surface Vel… &lt;NA&gt;                 
+#&gt; 3  8.70 10.1594… 11390 data points  WOCE Upper Ocean… &lt;NA&gt;</code></pre>
 <p>The resulting <code>data.frame</code> has details about different studies, and you can use the DOIs (Digital Object Identifiers) to get data and metadata for any studies you’re interested in.</p>
 <div id="another-search-option" class="section level3">
 <h3 class="hasAnchor">
 <a href="#another-search-option" class="anchor"></a>Another search option</h3>
 <p>There’s another search option with the <code>pg_search_es</code> function. It is an interface to the Pangaea Elasticsearch interface. This provides a very flexible interface for search Pangaea data - though it is different from what you’re used to with the Pangaea website.</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1">(res &lt;-<span class="st"> </span><span class="kw"><a href="../reference/pg_search_es.html">pg_search_es</a></span>())</a></code></pre></div>
-<pre><code>#&gt; # A tibble: 10 x 42
-#&gt;    `_ind… `_typ… `_id` `_sc… `_so… `_sour… `_sour… `_so… `_so… `_so… `_so…
-#&gt;  * &lt;chr&gt;  &lt;chr&gt;  &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt;   &lt;dbl&gt; &lt;chr&gt;   &lt;lis&gt; &lt;lis&gt; &lt;int&gt; &lt;chr&gt;
-#&gt;  1 panga… panmd  7847…  1.00 2017… 5.00e⁻¹ Owens … &lt;chr… &lt;chr…     1 D203A
-#&gt;  2 panga… panmd  8453…  1.00 2017… 1.10e⁺¹ Maturi… &lt;chr… &lt;chr…     3 WCRP…
-#&gt;  3 panga… panmd  3806…  1.00 2017… 1.00e⁺¹ König-… &lt;chr… &lt;chr…     1 ANT-…
-#&gt;  4 panga… panmd  8467…  1.00 2017… 2.00e⁺⁰ Colle … &lt;chr… &lt;chr…     3 WCRP…
-#&gt;  5 panga… panmd  8467…  1.00 2017… 2.00e⁺⁰ Denn F… &lt;chr… &lt;chr…     3 WCRP…
-#&gt;  6 panga… panmd  7077…  1.00 2017… 4.91e⁺² Vuille… &lt;chr… &lt;chr…     3 WCRP…
-#&gt;  7 panga… panmd  67642  1.00 2017… 1.00e⁻² Hebbel… &lt;chr… &lt;chr…     1 SO15…
-#&gt;  8 panga… panmd  8373…  1.00 2017… 1.39e⁺⁰ WOCE H… &lt;chr… &lt;chr…     1 33KM…
-#&gt;  9 panga… panmd  8469…  1.00 2017… 2.00e⁺⁰ Long C… &lt;chr… &lt;chr…     3 WCRP…
-#&gt; 10 panga… panmd  8469…  1.00 2017… 2.00e⁺⁰ Tamlyn… &lt;chr… &lt;chr…     3 WCRP…
-#&gt; # ... with 31 more variables: `_source.agg-author` &lt;list&gt;,
+<pre><code>#&gt; # A tibble: 10 x 41
+#&gt;    `_index` `_type` `_id` `_score` `_source.intern… `_source.minEle…
+#&gt;  * &lt;chr&gt;    &lt;chr&gt;   &lt;chr&gt;    &lt;dbl&gt; &lt;chr&gt;                       &lt;dbl&gt;
+#&gt;  1 pangaea… panmd   8387…        1 2018-09-27T17:1…             0.35
+#&gt;  2 pangaea… panmd   7179…        1 2018-10-29T17:5…             2   
+#&gt;  3 pangaea… panmd   7913…        1 2018-09-27T19:3…           198.  
+#&gt;  4 pangaea… panmd   7791…        1 2018-09-27T20:0…            65.0 
+#&gt;  5 pangaea… panmd   7198…        1 2018-10-29T17:4…             2   
+#&gt;  6 pangaea… panmd   8363…        1 2018-09-27T17:2…             2.85
+#&gt;  7 pangaea… panmd   8255…        1 2018-09-27T17:5…             3.72
+#&gt;  8 pangaea… panmd   7950…        1 2018-09-27T19:2…             0   
+#&gt;  9 pangaea… panmd   7993…        1 2018-09-27T19:1…           318.  
+#&gt; 10 pangaea… panmd   8289…        1 2018-09-27T17:4…             0   
+#&gt; # … with 35 more variables: `_source.sf-authortitle` &lt;chr&gt;,
+#&gt; #   `_source.techKeyword` &lt;list&gt;, `_source.geocodes` &lt;list&gt;,
+#&gt; #   `_source.sp-loginOption` &lt;int&gt;, `_source.agg-author` &lt;list&gt;,
 #&gt; #   `_source.eastBoundLongitude` &lt;dbl&gt;, `_source.URI` &lt;chr&gt;,
-#&gt; #   `_source.agg-pubYear` &lt;int&gt;, `_source.minDateTime` &lt;chr&gt;,
-#&gt; #   `_source.agg-geometry` &lt;chr&gt;, `_source.xml-thumb` &lt;chr&gt;,
-#&gt; #   `_source.agg-mainTopic` &lt;list&gt;, `_source.xml` &lt;chr&gt;,
-#&gt; #   `_source.elevationGeocode` &lt;chr&gt;, `_source.maxDateTime` &lt;chr&gt;,
-#&gt; #   `_source.xml-sitemap` &lt;chr&gt;, `_source.agg-topic` &lt;list&gt;,
-#&gt; #   `_source.westBoundLongitude` &lt;dbl&gt;, `_source.agg-project` &lt;chr&gt;,
+#&gt; #   `_source.agg-pubYear` &lt;int&gt;, `_source.agg-geometry` &lt;chr&gt;,
+#&gt; #   `_source.xml-thumb` &lt;chr&gt;, `_source.xml` &lt;chr&gt;,
+#&gt; #   `_source.sf-idDataSet` &lt;int&gt;, `_source.elevationGeocode` &lt;chr&gt;,
+#&gt; #   `_source.xml-sitemap` &lt;chr&gt;, `_source.westBoundLongitude` &lt;dbl&gt;,
 #&gt; #   `_source.northBoundLatitude` &lt;dbl&gt;, `_source.sp-dataStatus` &lt;int&gt;,
-#&gt; #   `_source.sp-hidden` &lt;lgl&gt;, `_source.agg-location` &lt;list&gt;,
-#&gt; #   `_source.internal-source` &lt;chr&gt;, `_source.agg-basis` &lt;chr&gt;,
-#&gt; #   `_source.southBoundLatitude` &lt;dbl&gt;, `_source.idDataSet` &lt;int&gt;,
-#&gt; #   `_source.boost` &lt;dbl&gt;, `_source.agg-device` &lt;chr&gt;,
-#&gt; #   `_source.maxElevation` &lt;dbl&gt;, `_source.parentURI` &lt;chr&gt;,
-#&gt; #   `_source.parentIdDataSet` &lt;int&gt;, `_source.oaiSet` &lt;chr&gt;,
+#&gt; #   `_source.nDataPoints` &lt;int&gt;, `_source.sp-hidden` &lt;lgl&gt;,
+#&gt; #   `_source.agg-location` &lt;list&gt;, `_source.internal-source` &lt;chr&gt;,
+#&gt; #   `_source.southBoundLatitude` &lt;dbl&gt;, `_source.boost` &lt;dbl&gt;,
+#&gt; #   `_source.oaiSet` &lt;list&gt;, `_source.maxElevation` &lt;dbl&gt;,
+#&gt; #   `_source.agg-campaign` &lt;chr&gt;, `_source.minDateTime` &lt;chr&gt;,
+#&gt; #   `_source.agg-mainTopic` &lt;list&gt;, `_source.maxDateTime` &lt;chr&gt;,
+#&gt; #   `_source.agg-topic` &lt;list&gt;, `_source.agg-project` &lt;list&gt;,
+#&gt; #   `_source.agg-device` &lt;chr&gt;, `_source.agg-basis` &lt;chr&gt;,
 #&gt; #   `_source.meanPosition.lat` &lt;dbl&gt;, `_source.meanPosition.lon` &lt;dbl&gt;</code></pre>
 <p>The returned data.frame has a lot of columns. You can limit columns returned with the <code>source</code> parameter.</p>
 <p>There are attributes on the data.frame that give you the total number of results found as well as the max score found.</p>
@@ -170,22 +172,22 @@
 #&gt;  [5] "_source.internal-datestamp" "_source.minElevation"      
 #&gt;  [7] "_source.sf-authortitle"     "_source.techKeyword"       
 #&gt;  [9] "_source.geocodes"           "_source.sp-loginOption"    
-#&gt; [11] "_source.agg-campaign"       "_source.agg-author"        
-#&gt; [13] "_source.eastBoundLongitude" "_source.URI"               
-#&gt; [15] "_source.agg-pubYear"        "_source.minDateTime"       
-#&gt; [17] "_source.agg-geometry"       "_source.xml-thumb"         
-#&gt; [19] "_source.agg-mainTopic"      "_source.xml"               
-#&gt; [21] "_source.elevationGeocode"   "_source.maxDateTime"       
-#&gt; [23] "_source.xml-sitemap"        "_source.agg-topic"         
-#&gt; [25] "_source.westBoundLongitude" "_source.agg-project"       
-#&gt; [27] "_source.northBoundLatitude" "_source.sp-dataStatus"     
-#&gt; [29] "_source.sp-hidden"          "_source.agg-location"      
-#&gt; [31] "_source.internal-source"    "_source.agg-basis"         
-#&gt; [33] "_source.southBoundLatitude" "_source.idDataSet"         
-#&gt; [35] "_source.boost"              "_source.agg-device"        
-#&gt; [37] "_source.maxElevation"       "_source.parentURI"         
-#&gt; [39] "_source.parentIdDataSet"    "_source.oaiSet"            
-#&gt; [41] "_source.meanPosition.lat"   "_source.meanPosition.lon"  
+#&gt; [11] "_source.agg-author"         "_source.eastBoundLongitude"
+#&gt; [13] "_source.URI"                "_source.agg-pubYear"       
+#&gt; [15] "_source.agg-geometry"       "_source.xml-thumb"         
+#&gt; [17] "_source.xml"                "_source.sf-idDataSet"      
+#&gt; [19] "_source.elevationGeocode"   "_source.xml-sitemap"       
+#&gt; [21] "_source.westBoundLongitude" "_source.northBoundLatitude"
+#&gt; [23] "_source.sp-dataStatus"      "_source.nDataPoints"       
+#&gt; [25] "_source.sp-hidden"          "_source.agg-location"      
+#&gt; [27] "_source.internal-source"    "_source.southBoundLatitude"
+#&gt; [29] "_source.boost"              "_source.oaiSet"            
+#&gt; [31] "_source.maxElevation"       "_source.agg-campaign"      
+#&gt; [33] "_source.minDateTime"        "_source.agg-mainTopic"     
+#&gt; [35] "_source.maxDateTime"        "_source.agg-topic"         
+#&gt; [37] "_source.agg-project"        "_source.agg-device"        
+#&gt; [39] "_source.agg-basis"          "_source.meanPosition.lat"  
+#&gt; [41] "_source.meanPosition.lon"  
 #&gt; 
 #&gt; $row.names
 #&gt;  [1]  1  2  3  4  5  6  7  8  9 10
@@ -194,21 +196,21 @@
 #&gt; [1] "tbl_df"     "tbl"        "data.frame"
 #&gt; 
 #&gt; $total
-#&gt; [1] 370634
+#&gt; [1] 386124
 #&gt; 
 #&gt; $max_score
 #&gt; [1] 1</code></pre>
 <div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/r/base/attr.html">attr</a></span>(res, <span class="st">"total"</span>)</a></code></pre></div>
-<pre><code>#&gt; [1] 370634</code></pre>
+<pre><code>#&gt; [1] 386124</code></pre>
 <div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/r/base/attr.html">attr</a></span>(res, <span class="st">"max_score"</span>)</a></code></pre></div>
 <pre><code>#&gt; [1] 1</code></pre>
 <p>To get to the DOIs for each study, use</p>
 <div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/r/base/grep.html">gsub</a></span>(<span class="st">"https://doi.org/"</span>, <span class="st">""</span>, res<span class="op">$</span><span class="st">`</span><span class="dt">_source.URI</span><span class="st">`</span>)</a></code></pre></div>
-<pre><code>#&gt;  [1] "10.1594/PANGAEA.784764" "10.1594/PANGAEA.845354"
-#&gt;  [3] "10.1594/PANGAEA.380654" "10.1594/PANGAEA.846724"
-#&gt;  [5] "10.1594/PANGAEA.846729" "10.1594/PANGAEA.707787"
-#&gt;  [7] "10.1594/PANGAEA.67642"  "10.1594/PANGAEA.837347"
-#&gt;  [9] "10.1594/PANGAEA.846977" "10.1594/PANGAEA.846979"</code></pre>
+<pre><code>#&gt;  [1] "10.1594/PANGAEA.838718" "10.1594/PANGAEA.717974"
+#&gt;  [3] "10.1594/PANGAEA.791357" "10.1594/PANGAEA.779192"
+#&gt;  [5] "10.1594/PANGAEA.719864" "10.1594/PANGAEA.836369"
+#&gt;  [7] "10.1594/PANGAEA.825583" "10.1594/PANGAEA.795004"
+#&gt;  [9] "10.1594/PANGAEA.799338" "10.1594/PANGAEA.828908"</code></pre>
 </div>
 </div>
 <div id="get-data" class="section level2">
@@ -220,52 +222,50 @@
 <pre><code>#&gt; &lt;Pangaea data&gt; 10.1594/PANGAEA.807580
 #&gt;   parent doi: 10.1594/PANGAEA.807580
 #&gt;   url:        https://doi.org/10.1594/PANGAEA.807580
-#&gt;   citation:   Schiebel, Ralf; Waniek, Joanna J; Bork, Matthias; Hemleben, Christoph (2001): Physical oceanography during METEOR cruise M36/6. PANGAEA, https://doi.org/10.1594/PANGAEA.807580,In supplement to: Schiebel, R et al. (2001): Planktic foraminiferal production stimulated by chlorophyll redistribution and entrainment of nutrients. Deep Sea Research Part I: Oceanographic Research Papers, 48(3), 721-740, https://doi.org/10.1016/S0967-0637(00)00065-0
-#&gt;   path:       /Users/sckott/Library/Caches/pangaear/10_1594_PANGAEA_807580.txt
+#&gt;   citation:   Schiebel, Ralf; Waniek, Joanna J; Bork, Matthias; Hemleben, Christoph (2001): Physical oceanography during METEOR cruise M36/6. PANGAEA, https://doi.org/10.1594/PANGAEA.807580, In supplement to: Schiebel, R et al. (2001): Planktic foraminiferal production stimulated by chlorophyll redistribution and entrainment of nutrients. Deep Sea Research Part I: Oceanographic Research Papers, 48(3), 721-740, https://doi.org/10.1016/S0967-0637(00)00065-0
+#&gt;   path:       /Users/sckott/Library/Caches/R/pangaear/10_1594_PANGAEA_807580.txt
 #&gt;   data:
 #&gt; # A tibble: 32,179 x 13
-#&gt;    Event `Dat… Lati… Long… `Ele… `Dep… `Pre… `Tem…   Sal `Tpo… `Sig… `Sig…
-#&gt;    &lt;chr&gt; &lt;chr&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
-#&gt;  1 M36/… 1996…  49.0 -16.5 -4802 0         0  15.7  35.7  15.7  26.4  26.4
-#&gt;  2 M36/… 1996…  49.0 -16.5 -4802 0.990     1  15.7  35.7  15.7  26.4  26.4
-#&gt;  3 M36/… 1996…  49.0 -16.5 -4802 1.98      2  15.7  35.7  15.7  26.4  26.4
-#&gt;  4 M36/… 1996…  49.0 -16.5 -4802 2.97      3  15.7  35.7  15.7  26.4  26.4
-#&gt;  5 M36/… 1996…  49.0 -16.5 -4802 3.96      4  15.7  35.7  15.7  26.4  26.4
-#&gt;  6 M36/… 1996…  49.0 -16.5 -4802 4.96      5  15.7  35.7  15.7  26.4  26.4
-#&gt;  7 M36/… 1996…  49.0 -16.5 -4802 5.95      6  15.7  35.7  15.7  26.4  26.4
-#&gt;  8 M36/… 1996…  49.0 -16.5 -4802 6.94      7  15.7  35.7  15.7  26.4  26.4
-#&gt;  9 M36/… 1996…  49.0 -16.5 -4802 7.93      8  15.7  35.7  15.7  26.4  26.4
-#&gt; 10 M36/… 1996…  49.0 -16.5 -4802 8.92      9  15.7  35.7  15.7  26.4  26.4
-#&gt; # ... with 32,169 more rows, and 1 more variable: `Cond [mS/cm]` &lt;dbl&gt;</code></pre>
+#&gt;    Event `Date/Time` Latitude Longitude `Elevation [m]` `Depth water [m…
+#&gt;    &lt;chr&gt; &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;           &lt;int&gt;            &lt;dbl&gt;
+#&gt;  1 M36/… 1996-10-14…     49.0     -16.5           -4802             0   
+#&gt;  2 M36/… 1996-10-14…     49.0     -16.5           -4802             0.99
+#&gt;  3 M36/… 1996-10-14…     49.0     -16.5           -4802             1.98
+#&gt;  4 M36/… 1996-10-14…     49.0     -16.5           -4802             2.97
+#&gt;  5 M36/… 1996-10-14…     49.0     -16.5           -4802             3.96
+#&gt;  6 M36/… 1996-10-14…     49.0     -16.5           -4802             4.96
+#&gt;  7 M36/… 1996-10-14…     49.0     -16.5           -4802             5.95
+#&gt;  8 M36/… 1996-10-14…     49.0     -16.5           -4802             6.94
+#&gt;  9 M36/… 1996-10-14…     49.0     -16.5           -4802             7.93
+#&gt; 10 M36/… 1996-10-14…     49.0     -16.5           -4802             8.92
+#&gt; # … with 32,169 more rows, and 7 more variables: `Press [dbar]` &lt;int&gt;,
+#&gt; #   `Temp [°C]` &lt;dbl&gt;, Sal &lt;dbl&gt;, `Tpot [°C]` &lt;dbl&gt;, `Sigma-theta
+#&gt; #   [kg/m**3]` &lt;dbl&gt;, `Sigma in situ [kg/m**3]` &lt;dbl&gt;, `Cond
+#&gt; #   [mS/cm]` &lt;dbl&gt;</code></pre>
 <p>Search for data then pass one or more DOIs to the <code>pg_data</code> function.</p>
 <div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb18-1" data-line-number="1">res &lt;-<span class="st"> </span><span class="kw"><a href="../reference/pg_search.html">pg_search</a></span>(<span class="dt">query =</span> <span class="st">'water'</span>, <span class="dt">bbox =</span> <span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="op">-</span><span class="fl">124.2</span>, <span class="fl">41.8</span>, <span class="fl">-116.8</span>, <span class="fl">46.1</span>), <span class="dt">count =</span> <span class="dv">3</span>)</a>
 <a class="sourceLine" id="cb18-2" data-line-number="2"><span class="kw"><a href="../reference/pg_data.html">pg_data</a></span>(res<span class="op">$</span>doi[<span class="dv">3</span>])[<span class="dv">1</span><span class="op">:</span><span class="dv">3</span>]</a></code></pre></div>
 <pre><code>#&gt; [[1]]
-#&gt; &lt;Pangaea data&gt; 10.1594/PANGAEA.874893
-#&gt;   parent doi: 10.1594/PANGAEA.874893
-#&gt;   url:        https://doi.org/10.1594/PANGAEA.874893
-#&gt;   citation:   Uhlig, Christiane; Loose, Brice (2017): Methane oxidation in Arctic seawater, Utqiagvik, Alaska. PANGAEA, https://doi.org/10.1594/PANGAEA.874893,Supplement to: Uhlig, C; Loose, B (2017): Using stable isotopes and gas concentrations for independent constraints on microbial methane oxidation at Arctic Ocean temperatures. Limnology and Oceanography-Methods, 15 pp, https://doi.org/10.1002/lom3.10199
-#&gt;   path:       /Users/sckott/Library/Caches/pangaear/10_1594_PANGAEA_874893.txt
+#&gt; &lt;Pangaea data&gt; 10.1594/PANGAEA.325191
+#&gt;   parent doi: 10.1594/PANGAEA.325191
+#&gt;   url:        https://doi.org/10.1594/PANGAEA.325191
+#&gt;   citation:   WOCE Upper Ocean Thermal, UOT (2005): Water temperature XBT profiles from cruise 181991002 (DCQC). Marine Environmental Data Services Branch, Ontario, PANGAEA, https://doi.org/10.1594/PANGAEA.325191
+#&gt;   path:       /Users/sckott/Library/Caches/R/pangaear/10_1594_PANGAEA_325191.txt
 #&gt;   data:
-#&gt; # A tibble: 270 x 22
-#&gt;    Event  `Date… Latit… Longi… `Dep… `Dep… `Dep… `Sam… Treat `N [… `Durat…
-#&gt;    &lt;chr&gt;  &lt;chr&gt;   &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt; &lt;int&gt;   &lt;dbl&gt;
-#&gt;  1 Elson… 2016-…   71.3   -156  1.50    NA    NA     7 0.2x…     2  0.0100
-#&gt;  2 Elson… 2016-…   71.3   -156  1.50    NA    NA     7 0.2x…     3  6.03  
-#&gt;  3 Elson… 2016-…   71.3   -156  1.50    NA    NA     7 0.2x…     2  8.88  
-#&gt;  4 Elson… 2016-…   71.3   -156  1.50    NA    NA     7 0.2x…     4 10.8   
-#&gt;  5 Utqia… 2016-…   71.4   -157  6.50    NA    NA    10 0.2x      2  0.0100
-#&gt;  6 Utqia… 2016-…   71.4   -157  6.50    NA    NA    10 0.2x      2  6.15  
-#&gt;  7 Utqia… 2016-…   71.4   -157  6.50    NA    NA    10 0.2x      2  8.99  
-#&gt;  8 Utqia… 2016-…   71.4   -157  6.50    NA    NA    10 0.2x      2 10.8   
-#&gt;  9 Utqia… 2016-…   71.4   -157  5.00    NA    NA    13 0.2x      2  0.0100
-#&gt; 10 Utqia… 2016-…   71.4   -157  5.00    NA    NA    13 0.2x      2  6.15  
-#&gt; # ... with 260 more rows, and 11 more variables: `Duration std dev [±]`
-#&gt; #   &lt;dbl&gt;, `CH4 [nmol/l]` &lt;dbl&gt;, `CH4 std dev [±]` &lt;dbl&gt;, `ln(CH4) [nmol]`
-#&gt; #   &lt;dbl&gt;, `ln(CH4) std dev [±]` &lt;dbl&gt;, `d13C CH4 [per mil PDB]` &lt;dbl&gt;,
-#&gt; #   `d13C CH4 std dev [±]` &lt;dbl&gt;, `Y-axis high mean` &lt;dbl&gt;, `Y-axis high
-#&gt; #   std dev [±]` &lt;dbl&gt;, `Y-axis low mean` &lt;dbl&gt;, `Y-axis low std dev [±]`
-#&gt; #   &lt;dbl&gt;
+#&gt; # A tibble: 5,695 x 6
+#&gt;    `Date/Time` Latitude Longitude `Depth water [m… `Temp [°C]`
+#&gt;    &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;            &lt;int&gt; &lt;chr&gt;      
+#&gt;  1 1991-03-26…     38.6     -124.                1 10.57      
+#&gt;  2 1991-03-26…     38.6     -124.                2 10.75      
+#&gt;  3 1991-03-26…     38.6     -124.                3 10.89      
+#&gt;  4 1991-03-26…     38.6     -124.                4 10.96      
+#&gt;  5 1991-03-26…     38.6     -124.                5 11.04      
+#&gt;  6 1991-03-26…     38.6     -124.                6 11.09      
+#&gt;  7 1991-03-26…     38.6     -124.                7 11.12      
+#&gt;  8 1991-03-26…     38.6     -124.                8 11.13      
+#&gt;  9 1991-03-26…     38.6     -124.                9 11.15      
+#&gt; 10 1991-03-26…     38.6     -124.               10 11.15      
+#&gt; # … with 5,685 more rows, and 1 more variable: `Sample label` &lt;chr&gt;
 #&gt; 
 #&gt; [[2]]
 #&gt; NULL
@@ -298,83 +298,111 @@
 <h3 class="hasAnchor">
 <a href="#list-metadata-formats" class="anchor"></a>List metadata formats</h3>
 <div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb22-1" data-line-number="1"><span class="kw"><a href="../reference/pg_list_metadata_formats.html">pg_list_metadata_formats</a></span>()</a></code></pre></div>
-<pre><code>#&gt;   metadataPrefix                                                 schema
-#&gt; 1         oai_dc         http://www.openarchives.org/OAI/2.0/oai_dc.xsd
-#&gt; 2         pan_md      http://ws.pangaea.de/schemas/pangaea/MetaData.xsd
-#&gt; 3            dif http://gcmd.gsfc.nasa.gov/Aboutus/xml/dif/dif_v9.4.xsd
-#&gt; 4       iso19139               http://www.isotc211.org/2005/gmd/gmd.xsd
-#&gt; 5  iso19139.iodp               http://www.isotc211.org/2005/gmd/gmd.xsd
-#&gt; 6      datacite3  http://schema.datacite.org/meta/kernel-3/metadata.xsd
+<pre><code>#&gt;   metadataPrefix                                                  schema
+#&gt; 1         oai_dc          http://www.openarchives.org/OAI/2.0/oai_dc.xsd
+#&gt; 2         pan_md       http://ws.pangaea.de/schemas/pangaea/MetaData.xsd
+#&gt; 3            dif  http://gcmd.gsfc.nasa.gov/Aboutus/xml/dif/dif_v9.4.xsd
+#&gt; 4       iso19139                http://www.isotc211.org/2005/gmd/gmd.xsd
+#&gt; 5  iso19139.iodp                http://www.isotc211.org/2005/gmd/gmd.xsd
+#&gt; 6      datacite3   http://schema.datacite.org/meta/kernel-3/metadata.xsd
+#&gt; 7      datacite4 http://schema.datacite.org/meta/kernel-4.1/metadata.xsd
 #&gt;                             metadataNamespace
 #&gt; 1 http://www.openarchives.org/OAI/2.0/oai_dc/
 #&gt; 2              http://www.pangaea.de/MetaData
 #&gt; 3  http://gcmd.gsfc.nasa.gov/Aboutus/xml/dif/
 #&gt; 4            http://www.isotc211.org/2005/gmd
 #&gt; 5            http://www.isotc211.org/2005/gmd
-#&gt; 6         http://datacite.org/schema/kernel-3</code></pre>
+#&gt; 6         http://datacite.org/schema/kernel-3
+#&gt; 7         http://datacite.org/schema/kernel-4</code></pre>
 </div>
 <div id="list-identifiers" class="section level3">
 <h3 class="hasAnchor">
 <a href="#list-identifiers" class="anchor"></a>List identifiers</h3>
 <div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb24-1" data-line-number="1"><span class="kw"><a href="../reference/pg_list_identifiers.html">pg_list_identifiers</a></span>(<span class="dt">from =</span> <span class="kw"><a href="https://rdrr.io/r/base/Sys.time.html">Sys.Date</a></span>() <span class="op">-</span><span class="st"> </span><span class="dv">2</span>, <span class="dt">until =</span> <span class="kw"><a href="https://rdrr.io/r/base/Sys.time.html">Sys.Date</a></span>())</a></code></pre></div>
-<pre><code>#&gt; # A tibble: 390 x 6
-#&gt;    identifier                                date… setS… setS… setS… setS…
-#&gt;    &lt;chr&gt;                                     &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;
-#&gt;  1 oai:pangaea.de:doi:10.1594/PANGAEA.870867 2017… cita… cita… supp… &lt;NA&gt; 
-#&gt;  2 oai:pangaea.de:doi:10.1594/PANGAEA.724540 2017… cita… cita… supp… &lt;NA&gt; 
-#&gt;  3 oai:pangaea.de:doi:10.1594/PANGAEA.149999 2017… cita… cita… supp… &lt;NA&gt; 
-#&gt;  4 oai:pangaea.de:doi:10.1594/PANGAEA.816714 2017… cita… cita… deNB… supp…
-#&gt;  5 oai:pangaea.de:doi:10.1594/PANGAEA.817715 2017… cita… cita… deNB… supp…
-#&gt;  6 oai:pangaea.de:doi:10.1594/PANGAEA.819855 2017… cita… cita… &lt;NA&gt;  &lt;NA&gt; 
-#&gt;  7 oai:pangaea.de:doi:10.1594/PANGAEA.820004 2017… cita… cita… supp… &lt;NA&gt; 
-#&gt;  8 oai:pangaea.de:doi:10.1594/PANGAEA.858878 2017… cita… cita… deNB… supp…
-#&gt;  9 oai:pangaea.de:doi:10.1594/PANGAEA.880113 2017… cita… cita… supp… &lt;NA&gt; 
-#&gt; 10 oai:pangaea.de:doi:10.1594/PANGAEA.884462 2017… cita… cita… supp… &lt;NA&gt; 
-#&gt; # ... with 380 more rows</code></pre>
+<pre><code>#&gt; # A tibble: 514 x 11
+#&gt;    identifier datestamp setSpec setSpec.1 setSpec.2 setSpec.3 setSpec.4
+#&gt;    &lt;chr&gt;      &lt;chr&gt;     &lt;chr&gt;   &lt;chr&gt;     &lt;chr&gt;     &lt;chr&gt;     &lt;chr&gt;    
+#&gt;  1 oai:panga… 2019-08-… citable hmmv      suppleme… topicOce… &lt;NA&gt;     
+#&gt;  2 oai:panga… 2019-08-… citable suppleme… &lt;NA&gt;      &lt;NA&gt;      &lt;NA&gt;     
+#&gt;  3 oai:panga… 2019-08-… citable suppleme… &lt;NA&gt;      &lt;NA&gt;      &lt;NA&gt;     
+#&gt;  4 oai:panga… 2019-08-… citable suppleme… topicBio… topicEco… topicOce…
+#&gt;  5 oai:panga… 2019-08-… citable suppleme… &lt;NA&gt;      &lt;NA&gt;      &lt;NA&gt;     
+#&gt;  6 oai:panga… 2019-08-… citable suppleme… &lt;NA&gt;      &lt;NA&gt;      &lt;NA&gt;     
+#&gt;  7 oai:panga… 2019-08-… citable suppleme… topicLit… topicOce… topicPal…
+#&gt;  8 oai:panga… 2019-08-… citable suppleme… topicLan… topicLit… topicPal…
+#&gt;  9 oai:panga… 2019-08-… citable suppleme… topicChe… topicGeo… topicLit…
+#&gt; 10 oai:panga… 2019-08-… citable suppleme… topicLan… topicLit… &lt;NA&gt;     
+#&gt; # … with 504 more rows, and 4 more variables: setSpec.5 &lt;chr&gt;,
+#&gt; #   setSpec.6 &lt;chr&gt;, setSpec.7 &lt;chr&gt;, setSpec.8 &lt;chr&gt;</code></pre>
 </div>
 <div id="list-sets" class="section level3">
 <h3 class="hasAnchor">
 <a href="#list-sets" class="anchor"></a>List sets</h3>
 <div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb26-1" data-line-number="1"><span class="kw"><a href="../reference/pg_list_sets.html">pg_list_sets</a></span>()</a></code></pre></div>
-<pre><code>#&gt; # A tibble: 262 x 2
-#&gt;    setSpec   setName                                       
-#&gt;    &lt;chr&gt;     &lt;chr&gt;                                         
-#&gt;  1 ACD       PANGAEA tech-keyword 'ACD' (2 data sets)      
-#&gt;  2 ASPS      PANGAEA tech-keyword 'ASPS' (59 data sets)    
-#&gt;  3 AWIXRFraw PANGAEA tech-keyword 'AWIXRFraw' (1 data sets)
-#&gt;  4 BAH1960   PANGAEA tech-keyword 'BAH1960' (2 data sets)  
-#&gt;  5 BAH1961   PANGAEA tech-keyword 'BAH1961' (2 data sets)  
-#&gt;  6 BAH1962   PANGAEA tech-keyword 'BAH1962' (7 data sets)  
-#&gt;  7 BAH1963   PANGAEA tech-keyword 'BAH1963' (7 data sets)  
-#&gt;  8 BAH1964   PANGAEA tech-keyword 'BAH1964' (7 data sets)  
-#&gt;  9 BAH1965   PANGAEA tech-keyword 'BAH1965' (7 data sets)  
-#&gt; 10 BAH1966   PANGAEA tech-keyword 'BAH1966' (6 data sets)  
-#&gt; # ... with 252 more rows</code></pre>
+<pre><code>#&gt; # A tibble: 282 x 2
+#&gt;    setSpec   setName                                        
+#&gt;    &lt;chr&gt;     &lt;chr&gt;                                          
+#&gt;  1 ACD       PANGAEA set / keyword 'ACD' (2 data sets)      
+#&gt;  2 ASPS      PANGAEA set / keyword 'ASPS' (59 data sets)    
+#&gt;  3 AWIXRFraw PANGAEA set / keyword 'AWIXRFraw' (1 data sets)
+#&gt;  4 BAH1960   PANGAEA set / keyword 'BAH1960' (2 data sets)  
+#&gt;  5 BAH1961   PANGAEA set / keyword 'BAH1961' (2 data sets)  
+#&gt;  6 BAH1962   PANGAEA set / keyword 'BAH1962' (7 data sets)  
+#&gt;  7 BAH1963   PANGAEA set / keyword 'BAH1963' (7 data sets)  
+#&gt;  8 BAH1964   PANGAEA set / keyword 'BAH1964' (7 data sets)  
+#&gt;  9 BAH1965   PANGAEA set / keyword 'BAH1965' (7 data sets)  
+#&gt; 10 BAH1966   PANGAEA set / keyword 'BAH1966' (6 data sets)  
+#&gt; # … with 272 more rows</code></pre>
 </div>
 <div id="list-records" class="section level3">
 <h3 class="hasAnchor">
 <a href="#list-records" class="anchor"></a>List records</h3>
 <div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb28-1" data-line-number="1"><span class="kw"><a href="../reference/pg_list_records.html">pg_list_records</a></span>(<span class="dt">from =</span> <span class="kw"><a href="https://rdrr.io/r/base/Sys.time.html">Sys.Date</a></span>() <span class="op">-</span><span class="st"> </span><span class="dv">1</span>, <span class="dt">until =</span> <span class="kw"><a href="https://rdrr.io/r/base/Sys.time.html">Sys.Date</a></span>())</a></code></pre></div>
-<pre><code>#&gt; # A tibble: 44 x 37
-#&gt;    iden… date… setS… setS… setS… setS… title crea… crea… crea… crea… crea…
-#&gt;    &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;
-#&gt;  1 oai:… 2017… cita… cita… deNB… supp… Geoc… Pirr… Händ… Mert… Enge… Pudl…
-#&gt;  2 oai:… 2018… cita… cita… supp… &lt;NA&gt;  Mult… Bart… Tits… Fahl… Stei… Seid…
-#&gt;  3 oai:… 2018… supp… &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;  Hous… Teys… Rouf… Sale… Stru… Matt…
-#&gt;  4 oai:… 2017… deNB… supp… &lt;NA&gt;  &lt;NA&gt;  Biom… Rama… Marb… Prad… Pero… Lard…
-#&gt;  5 oai:… 2017… supp… &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;  Cont… Welc… Mund… &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt; 
-#&gt;  6 oai:… 2018… &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;  Pore… Paul… Kosc… &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt; 
-#&gt;  7 oai:… 2018… &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;  Mete… Olef… &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt; 
-#&gt;  8 oai:… 2018… &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;  Mete… Olef… &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt; 
-#&gt;  9 oai:… 2018… &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;  Basi… Olef… &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt; 
-#&gt; 10 oai:… 2018… &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;  Mete… Olef… &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt; 
-#&gt; # ... with 34 more rows, and 25 more variables: creator.5 &lt;chr&gt;, creator.6
-#&gt; #   &lt;chr&gt;, source &lt;chr&gt;, publisher &lt;chr&gt;, date &lt;chr&gt;, type &lt;chr&gt;, format
-#&gt; #   &lt;chr&gt;, identifier.2 &lt;chr&gt;, identifier.1 &lt;chr&gt;, description &lt;chr&gt;,
-#&gt; #   language &lt;chr&gt;, rights &lt;chr&gt;, rights.1 &lt;chr&gt;, coverage &lt;chr&gt;, subject
-#&gt; #   &lt;chr&gt;, creator.7 &lt;chr&gt;, creator.8 &lt;chr&gt;, relation &lt;chr&gt;, creator.9
-#&gt; #   &lt;chr&gt;, creator.10 &lt;chr&gt;, creator.11 &lt;chr&gt;, relation.1 &lt;chr&gt;,
-#&gt; #   relation.2 &lt;chr&gt;, relation.3 &lt;chr&gt;, relation.4 &lt;chr&gt;</code></pre>
+<pre><code>#&gt; # A tibble: 331 x 586
+#&gt;    identifier datestamp setSpec setSpec.1 setSpec.2 setSpec.3 setSpec.4
+#&gt;    &lt;chr&gt;      &lt;chr&gt;     &lt;chr&gt;   &lt;chr&gt;     &lt;chr&gt;     &lt;chr&gt;     &lt;chr&gt;    
+#&gt;  1 oai:panga… 2019-08-… citable suppleme… topicBio… topicEco… topicOce…
+#&gt;  2 oai:panga… 2019-08-… citable suppleme… &lt;NA&gt;      &lt;NA&gt;      &lt;NA&gt;     
+#&gt;  3 oai:panga… 2019-08-… citable suppleme… topicLit… topicOce… topicPal…
+#&gt;  4 oai:panga… 2019-08-… citable suppleme… topicLan… topicLit… topicPal…
+#&gt;  5 oai:panga… 2019-08-… citable &lt;NA&gt;      &lt;NA&gt;      &lt;NA&gt;      &lt;NA&gt;     
+#&gt;  6 oai:panga… 2019-08-… citable suppleme… topicLit… &lt;NA&gt;      &lt;NA&gt;     
+#&gt;  7 oai:panga… 2019-08-… BCCR    suppleme… topicLan… topicLit… &lt;NA&gt;     
+#&gt;  8 oai:panga… 2019-08-… citable suppleme… &lt;NA&gt;      &lt;NA&gt;      &lt;NA&gt;     
+#&gt;  9 oai:panga… 2019-08-… citable &lt;NA&gt;      &lt;NA&gt;      &lt;NA&gt;      &lt;NA&gt;     
+#&gt; 10 oai:panga… 2019-08-… citable suppleme… topicLit… &lt;NA&gt;      &lt;NA&gt;     
+#&gt; # … with 321 more rows, and 579 more variables: title &lt;chr&gt;,
+#&gt; #   creator &lt;chr&gt;, creator.1 &lt;chr&gt;, creator.2 &lt;chr&gt;, creator.3 &lt;chr&gt;,
+#&gt; #   source &lt;chr&gt;, publisher &lt;chr&gt;, date &lt;chr&gt;, type &lt;chr&gt;, format &lt;chr&gt;,
+#&gt; #   identifier.2 &lt;chr&gt;, identifier.1 &lt;chr&gt;, description &lt;chr&gt;,
+#&gt; #   language &lt;chr&gt;, rights &lt;chr&gt;, rights.1 &lt;chr&gt;, coverage &lt;chr&gt;,
+#&gt; #   subject &lt;chr&gt;, creator.4 &lt;chr&gt;, relation &lt;chr&gt;, creator.5 &lt;chr&gt;,
+#&gt; #   creator.6 &lt;chr&gt;, creator.7 &lt;chr&gt;, creator.8 &lt;chr&gt;, creator.9 &lt;chr&gt;,
+#&gt; #   creator.10 &lt;chr&gt;, creator.11 &lt;chr&gt;, relation.1 &lt;chr&gt;,
+#&gt; #   relation.2 &lt;chr&gt;, relation.3 &lt;chr&gt;, relation.4 &lt;chr&gt;,
+#&gt; #   relation.5 &lt;chr&gt;, relation.6 &lt;chr&gt;, relation.7 &lt;chr&gt;,
+#&gt; #   relation.8 &lt;chr&gt;, relation.9 &lt;chr&gt;, relation.10 &lt;chr&gt;,
+#&gt; #   relation.11 &lt;chr&gt;, relation.12 &lt;chr&gt;, relation.13 &lt;chr&gt;,
+#&gt; #   relation.14 &lt;chr&gt;, relation.15 &lt;chr&gt;, relation.16 &lt;chr&gt;,
+#&gt; #   relation.17 &lt;chr&gt;, relation.18 &lt;chr&gt;, relation.19 &lt;chr&gt;,
+#&gt; #   relation.20 &lt;chr&gt;, relation.21 &lt;chr&gt;, relation.22 &lt;chr&gt;,
+#&gt; #   relation.23 &lt;chr&gt;, relation.24 &lt;chr&gt;, relation.25 &lt;chr&gt;,
+#&gt; #   relation.26 &lt;chr&gt;, relation.27 &lt;chr&gt;, relation.28 &lt;chr&gt;,
+#&gt; #   relation.29 &lt;chr&gt;, relation.30 &lt;chr&gt;, relation.31 &lt;chr&gt;,
+#&gt; #   relation.32 &lt;chr&gt;, relation.33 &lt;chr&gt;, relation.34 &lt;chr&gt;,
+#&gt; #   relation.35 &lt;chr&gt;, relation.36 &lt;chr&gt;, relation.37 &lt;chr&gt;,
+#&gt; #   relation.38 &lt;chr&gt;, relation.39 &lt;chr&gt;, relation.40 &lt;chr&gt;,
+#&gt; #   relation.41 &lt;chr&gt;, relation.42 &lt;chr&gt;, relation.43 &lt;chr&gt;,
+#&gt; #   relation.44 &lt;chr&gt;, relation.45 &lt;chr&gt;, relation.46 &lt;chr&gt;,
+#&gt; #   relation.47 &lt;chr&gt;, relation.48 &lt;chr&gt;, relation.49 &lt;chr&gt;,
+#&gt; #   relation.50 &lt;chr&gt;, relation.51 &lt;chr&gt;, relation.52 &lt;chr&gt;,
+#&gt; #   relation.53 &lt;chr&gt;, relation.54 &lt;chr&gt;, relation.55 &lt;chr&gt;,
+#&gt; #   relation.56 &lt;chr&gt;, relation.57 &lt;chr&gt;, relation.58 &lt;chr&gt;,
+#&gt; #   relation.59 &lt;chr&gt;, relation.60 &lt;chr&gt;, relation.61 &lt;chr&gt;,
+#&gt; #   relation.62 &lt;chr&gt;, relation.63 &lt;chr&gt;, relation.64 &lt;chr&gt;,
+#&gt; #   relation.65 &lt;chr&gt;, relation.66 &lt;chr&gt;, relation.67 &lt;chr&gt;,
+#&gt; #   relation.68 &lt;chr&gt;, relation.69 &lt;chr&gt;, relation.70 &lt;chr&gt;,
+#&gt; #   relation.71 &lt;chr&gt;, relation.72 &lt;chr&gt;, relation.73 &lt;chr&gt;, …</code></pre>
 </div>
 <div id="get-a-record" class="section level3">
 <h3 class="hasAnchor">
@@ -383,22 +411,24 @@
 <pre><code>#&gt; $`oai:pangaea.de:doi:10.1594/PANGAEA.788382`
 #&gt; $`oai:pangaea.de:doi:10.1594/PANGAEA.788382`$header
 #&gt; # A tibble: 1 x 3
-#&gt;   identifier                                datestamp            setSpec  
-#&gt;   &lt;chr&gt;                                     &lt;chr&gt;                &lt;chr&gt;    
-#&gt; 1 oai:pangaea.de:doi:10.1594/PANGAEA.788382 2017-08-08T17:50:18Z citable;…
+#&gt;   identifier                  datestamp       setSpec                      
+#&gt;   &lt;chr&gt;                       &lt;chr&gt;           &lt;chr&gt;                        
+#&gt; 1 oai:pangaea.de:doi:10.1594… 2019-02-13T10:… citable;supplement;topicChem…
 #&gt; 
 #&gt; $`oai:pangaea.de:doi:10.1594/PANGAEA.788382`$metadata
 #&gt; # A tibble: 1 x 13
-#&gt;   title  crea… sour… publ… date  type  form… iden… desc… lang… righ… cove…
-#&gt;   &lt;chr&gt;  &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;
-#&gt; 1 Trace… Demi… P.P.… PANG… 2012… Data… appl… http… Bioa… en    CC-B… MEDI…
-#&gt; # ... with 1 more variable: subject &lt;chr&gt;</code></pre>
+#&gt;   title creator source publisher date  type  format identifier description
+#&gt;   &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;      &lt;chr&gt;      
+#&gt; 1 Trac… Demina… P.P. … PANGAEA   2012… Data… appli… https://d… Bioaccumul…
+#&gt; # … with 4 more variables: language &lt;chr&gt;, rights &lt;chr&gt;, coverage &lt;chr&gt;,
+#&gt; #   subject &lt;chr&gt;</code></pre>
 </div>
 </div>
 </div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+
         <div id="tocnav">
       <h2 class="hasAnchor">
 <a href="#tocnav" class="anchor"></a>Contents</h2>
@@ -425,7 +455,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.0.</p>
 </div>
 
       </footer>

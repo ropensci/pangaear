@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Client for the Pangaea Database — pangaear-package • pangaear</title>
+<title>Caching — pg_cache • pangaear</title>
 
 
 <!-- jquery -->
@@ -35,8 +35,8 @@
 
 
 
-<meta property="og:title" content="Client for the Pangaea Database — pangaear-package" />
-<meta property="og:description" content="Pangaea database" />
+<meta property="og:title" content="Caching — pg_cache" />
+<meta property="og:description" content="Manage cached pangaear files with hoardr" />
 <meta name="twitter:card" content="summary" />
 
 
@@ -120,37 +120,67 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Client for the Pangaea Database</h1>
-    <small class="dont-index">Source: <a href='https://github.com/ropensci/pangaear/blob/master/R/pangaear-package.R'><code>R/pangaear-package.R</code></a></small>
-    <div class="hidden name"><code>pangaear-package.Rd</code></div>
+    <h1>Caching</h1>
+    <small class="dont-index">Source: <a href='https://github.com/ropensci/pangaear/blob/master/R/caching.R'><code>R/caching.R</code></a></small>
+    <div class="hidden name"><code>pg_cache.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p><a href='https://www.pangaea.de/'>Pangaea database</a></p>
+    <p>Manage cached <code>pangaear</code> files with <span class="pkg">hoardr</span></p>
     </div>
 
 
 
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p>Package includes tools to interact with the Pangaea Database,
-including functions for searching for data, fetching datasets by
-dataset ID, working with the Pangaea OAI-PMH service, and
-Elasticsearch service.</p>
-    <h2 class="hasAnchor" id="getting-data"><a class="anchor" href="#getting-data"></a>Getting data</h2>
+    <p>The dafault cache directory is
+<code><a href='https://rdrr.io/r/base/paste.html'>paste0(rappdirs::user_cache_dir(), "/R/pangaear")</a></code>, but you can set
+your own path using <code>cache_path_set()</code></p>
+<p><code>cache_delete</code> only accepts 1 file name, while
+<code>cache_delete_all</code> doesn't accept any names, but deletes all files.
+For deleting many specific files, use <code>cache_delete</code> in a <code><a href='https://rdrr.io/r/base/lapply.html'>lapply()</a></code>
+type call</p>
+    <h2 class="hasAnchor" id="useful-user-functions"><a class="anchor" href="#useful-user-functions"></a>Useful user functions</h2>
 
     
 
-<p>The main workhorse function for getting data is <code><a href='pg_data.html'>pg_data()</a></code>.
-One thing you may want to do is set a different path for caching
-the data you download: see <a href='pg_cache.html'>pg_cache</a> for details</p>
+<ul>
+<li><p><code>pg_cache$cache_path_get()</code> get cache path</p></li>
+<li><p><code>pg_cache$cache_path_set()</code> set cache path</p></li>
+<li><p><code>pg_cache$list()</code> returns a character vector of full
+path file names</p></li>
+<li><p><code>pg_cache$files()</code> returns file objects with metadata</p></li>
+<li><p><code>pg_cache$details()</code> returns files with details</p></li>
+<li><p><code>pg_cache$delete()</code> delete specific files</p></li>
+<li><p><code>pg_cache$delete_all()</code> delete all files, returns nothing</p></li>
+</ul>
 
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
+<span class='no'>pg_cache</span>
+
+<span class='co'># list files in cache</span>
+<span class='no'>pg_cache</span>$<span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>()
+
+<span class='co'># delete certain database files</span>
+<span class='co'># pg_cache$delete("file path")</span>
+<span class='co'># pg_cache$list()</span>
+
+<span class='co'># delete all files in cache</span>
+<span class='co'># pg_cache$delete_all()</span>
+<span class='co'># pg_cache$list()</span>
+
+<span class='co'># set a different cache path from the default</span>
+<span class='co'># pg_cache$cache_path_set(full_path = "/Foo/Bar")</span>
+}</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#details">Details</a></li>
-      <li><a href="#getting-data">Getting data</a></li>
+      <li><a href="#useful-user-functions">Useful user functions</a></li>
+      <li><a href="#examples">Examples</a></li>
     </ul>
 
   </div>

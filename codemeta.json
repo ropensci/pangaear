@@ -10,14 +10,14 @@
   "codeRepository": "https://github.com/ropensci/pangaear",
   "issueTracker": "https://github.com/ropensci/pangaear/issues",
   "license": "https://spdx.org/licenses/MIT",
-  "version": "0.8.0.9100",
+  "version": "0.8.2",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
     "version": "3.6.1",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 3.6.1 Patched (2019-07-17 r76848)",
+  "runtimePlatform": "R version 3.6.1 Patched (2019-09-05 r77154)",
   "provider": {
     "@id": "https://cran.r-project.org",
     "@type": "Organization",
@@ -197,7 +197,7 @@
   "contIntegration": "https://travis-ci.org/ropensci/pangaear",
   "releaseNotes": "https://github.com/ropensci/pangaear/blob/master/NEWS.md",
   "readme": "https://github.com/ropensci/pangaear/blob/master/README.md",
-  "fileSize": "89.735KB",
+  "fileSize": "102.178KB",
   "contributor": {},
   "copyrightHolder": {},
   "funder": {},

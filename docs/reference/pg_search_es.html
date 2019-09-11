@@ -8,11 +8,13 @@
 
 <title>Search the Pangaea database with Elasticsearch — pg_search_es • pangaear</title>
 
+
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
 
 <!-- Font Awesome icons -->
@@ -32,10 +34,11 @@
 
 
 
-<meta property="og:title" content="Search the Pangaea database with Elasticsearch — pg_search_es" />
 
+<meta property="og:title" content="Search the Pangaea database with Elasticsearch — pg_search_es" />
 <meta property="og:description" content="Search the Pangaea database with Elasticsearch" />
 <meta name="twitter:card" content="summary" />
+
 
 
 
@@ -66,7 +69,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">pangaear</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.6.4.9100</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.8.2</span>
       </span>
     </div>
 
@@ -97,7 +100,6 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/ropensci/pangaear">
@@ -124,9 +126,7 @@
     </div>
 
     <div class="ref-description">
-    
     <p>Search the Pangaea database with Elasticsearch</p>
-    
     </div>
 
     <pre class="usage"><span class='fu'>pg_search_es</span>(<span class='kw'>query</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>size</span> <span class='kw'>=</span> <span class='fl'>10</span>, <span class='kw'>from</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>source</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
@@ -135,7 +135,7 @@
   <span class='kw'>terminate_after</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>search_type</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
   <span class='kw'>lowercase_expanded_terms</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>analyze_wildcard</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
   <span class='kw'>version</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='no'>...</span>)</pre>
-    
+
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
@@ -232,28 +232,25 @@ analyzed or not. Default: <code>FALSE</code></p></td>
     </tr>
     <tr>
       <th>...</th>
-      <td><p>Curl options passed on to <a href='https://rdrr.io/pkg/crul/man/HttpClient.html'>crul::HttpClient</a></p></td>
+      <td><p>Curl options passed on to <a href='https://docs.ropensci.org/crul/reference/HttpClient.html'>crul::HttpClient</a></p></td>
     </tr>
     </table>
-    
+
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>tibble/data.frame, empty if no results</p>
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>An interface to Pangaea's Elasticsearch query interface.
 You can also just use <a href='https://github.com/ropensci/elastic'>elastic</a>
 package to interact with it. The base URL is
 https://ws.pangaea.de/es/pangaea/panmd/_search</p>
-    
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p><code><a href='pg_search.html'>pg_search()</a></code></p></div>
-    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><span class='co'># NOT RUN {</span>
+    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
 (<span class='no'>res</span> <span class='kw'>&lt;-</span> <span class='fu'>pg_search_es</span>())
 <span class='fu'><a href='https://rdrr.io/r/base/attributes.html'>attributes</a></span>(<span class='no'>res</span>)
 <span class='fu'><a href='https://rdrr.io/r/base/attr.html'>attr</a></span>(<span class='no'>res</span>, <span class='st'>"total"</span>)
@@ -268,19 +265,15 @@ https://ws.pangaea.de/es/pangaea/panmd/_search</p>
 
 <span class='fu'>pg_search_es</span>(<span class='kw'>query</span> <span class='kw'>=</span> <span class='st'>'water'</span>, <span class='kw'>sort</span> <span class='kw'>=</span> <span class='st'>"minElevation"</span>)
 <span class='fu'>pg_search_es</span>(<span class='kw'>query</span> <span class='kw'>=</span> <span class='st'>'water'</span>, <span class='kw'>sort</span> <span class='kw'>=</span> <span class='st'>"minElevation:desc"</span>)
-<span class='co'># }</span></pre>
+}</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
-      
       <li><a href="#value">Value</a></li>
-
       <li><a href="#details">Details</a></li>
-
       <li><a href="#see-also">See also</a></li>
-      
       <li><a href="#examples">Examples</a></li>
     </ul>
 
@@ -294,7 +287,7 @@ https://ws.pangaea.de/es/pangaea/panmd/_search</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.0.</p>
 </div>
 
       </footer>
