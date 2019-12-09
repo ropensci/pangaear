@@ -13,7 +13,7 @@ Authors@R: c(person("Scott", "Chamberlain",
     person("Gavin", "Simpson", email = "ucfagls@gmail.com", role = "aut"))
 License: MIT + file LICENSE
 LazyData: true
-URL: https://github.com/ropensci/pangaear
+URL: https://docs.ropensci.org/pangaear, https://github.com/ropensci/pangaear
 BugReports: https://github.com/ropensci/pangaear/issues
 Roxygen: list(markdown = TRUE)
 VignetteBuilder: knitr
