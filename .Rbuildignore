@@ -13,3 +13,5 @@ docs
 .github
 ^codemeta\.json$
 inst/vign/
+tests/fixtures/pg_data*
+tests/files/

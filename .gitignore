@@ -2,3 +2,5 @@
 .Rproj.user
 *.Rproj
 .Rhistory
+tests/fixtures/pg_data*
+tests/files/
