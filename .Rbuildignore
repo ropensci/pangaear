@@ -12,3 +12,4 @@ Makefile
 docs
 .github
 ^codemeta\.json$
+inst/vign/
