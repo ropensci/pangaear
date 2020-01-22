@@ -199,7 +199,7 @@
   "contIntegration": ["https://travis-ci.org/ropensci/pangaear", "https://ci.appveyor.com/project/sckott/pangaear", "https://codecov.io/gh/ropensci/pangaear"],
   "releaseNotes": "https://github.com/ropensci/pangaear/blob/master/NEWS.md",
   "readme": "https://github.com/ropensci/pangaear/blob/master/README.md",
-  "fileSize": "307.893KB",
+  "fileSize": "312.232KB",
   "contributor": {},
   "copyrightHolder": {},
   "funder": {},
