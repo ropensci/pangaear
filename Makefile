@@ -4,11 +4,11 @@ RSCRIPT = Rscript --no-init-file
 all: move rmd2md
 
 move:
-		cp inst/vign/pangaear_vignette.md vignettes
+		cp inst/vign/pangaear.md vignettes
 
 rmd2md:
 		cd vignettes;\
-		mv pangaear_vignette.md pangaear_vignette.Rmd
+		mv pangaear.md pangaear.Rmd
 
 install: doc build
 	R CMD INSTALL . && rm *.tar.gz
