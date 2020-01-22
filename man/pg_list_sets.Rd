@@ -37,10 +37,11 @@ pg_list_sets(as = "raw")
 \seealso{
 wraps \code{\link[oai:list_sets]{oai::list_sets()}}
 
-Other oai methods: \code{\link{pg_get_record}},
-  \code{\link{pg_identify}},
-  \code{\link{pg_list_identifiers}},
-  \code{\link{pg_list_metadata_formats}},
-  \code{\link{pg_list_records}}
+Other oai methods: 
+\code{\link{pg_get_record}()},
+\code{\link{pg_identify}()},
+\code{\link{pg_list_identifiers}()},
+\code{\link{pg_list_metadata_formats}()},
+\code{\link{pg_list_records}()}
 }
 \concept{oai methods}

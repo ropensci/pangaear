@@ -4,8 +4,15 @@
 \alias{pg_list_records}
 \title{List records from Pangaea}
 \usage{
-pg_list_records(prefix = "oai_dc", from = NULL, until = NULL,
-  set = NULL, token = NULL, as = "df", ...)
+pg_list_records(
+  prefix = "oai_dc",
+  from = NULL,
+  until = NULL,
+  set = NULL,
+  token = NULL,
+  as = "df",
+  ...
+)
 }
 \arguments{
 \item{prefix}{A character string to specify the metadata format in OAI-PMH
@@ -65,10 +72,11 @@ pg_list_records(prefix="iso19139", set='citable', from=Sys.Date()-1,
 \seealso{
 wraps \code{\link[oai:list_records]{oai::list_records()}}
 
-Other oai methods: \code{\link{pg_get_record}},
-  \code{\link{pg_identify}},
-  \code{\link{pg_list_identifiers}},
-  \code{\link{pg_list_metadata_formats}},
-  \code{\link{pg_list_sets}}
+Other oai methods: 
+\code{\link{pg_get_record}()},
+\code{\link{pg_identify}()},
+\code{\link{pg_list_identifiers}()},
+\code{\link{pg_list_metadata_formats}()},
+\code{\link{pg_list_sets}()}
 }
 \concept{oai methods}

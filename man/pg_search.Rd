@@ -4,8 +4,16 @@
 \alias{pg_search}
 \title{Search the Pangaea database}
 \usage{
-pg_search(query, count = 10, offset = 0, topic = NULL, bbox = NULL,
-  mindate = NULL, maxdate = NULL, ...)
+pg_search(
+  query,
+  count = 10,
+  offset = 0,
+  topic = NULL,
+  bbox = NULL,
+  mindate = NULL,
+  maxdate = NULL,
+  ...
+)
 }
 \arguments{
 \item{query}{(character) Query terms. You can refine a search by prefixing

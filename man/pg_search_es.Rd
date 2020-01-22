@@ -4,12 +4,25 @@
 \alias{pg_search_es}
 \title{Search the Pangaea database with Elasticsearch}
 \usage{
-pg_search_es(query = NULL, size = 10, from = NULL, source = NULL,
-  df = NULL, analyzer = NULL, default_operator = NULL,
-  explain = NULL, sort = NULL, track_scores = NULL, timeout = NULL,
-  terminate_after = NULL, search_type = NULL,
-  lowercase_expanded_terms = NULL, analyze_wildcard = NULL,
-  version = FALSE, ...)
+pg_search_es(
+  query = NULL,
+  size = 10,
+  from = NULL,
+  source = NULL,
+  df = NULL,
+  analyzer = NULL,
+  default_operator = NULL,
+  explain = NULL,
+  sort = NULL,
+  track_scores = NULL,
+  timeout = NULL,
+  terminate_after = NULL,
+  search_type = NULL,
+  lowercase_expanded_terms = NULL,
+  analyze_wildcard = NULL,
+  version = FALSE,
+  ...
+)
 }
 \arguments{
 \item{query}{(character) Query terms..}
