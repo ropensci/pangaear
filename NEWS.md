@@ -1,3 +1,12 @@
+pangaear 1.0.0
+==============
+
+## MINOR IMPROVEMENTS
+
+* vcr caching for pg_data tests, local only as files are too big (#74)
+* vignette title fix (#73)
+* `pg_search` fix for searching with a bounding box that crosses 180/-180 longitude: not a fix in this package, but the remote data source fixed a problem reported from a user of this package (#71)
+
 pangaear 0.8.2
 ==============
 

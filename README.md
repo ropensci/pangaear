@@ -48,8 +48,7 @@ Dev version
 
 
 ```r
-install.packages("devtools")
-devtools::install_github('ropensci/pangaear')
+remotes::install_github('ropensci/pangaear')
 ```
 
 

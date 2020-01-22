@@ -4,7 +4,7 @@ Description: Tools to interact with the 'Pangaea' Database
     (<https://www.pangaea.de>), including functions for searching for data,
     fetching 'datasets' by 'dataset' 'ID', and working with the 'Pangaea'
     'OAI-PMH' service.
-Version: 0.8.2.92
+Version: 1.0.0
 Authors@R: c(person("Scott", "Chamberlain",
 		email = "myrmecocystus@gmail.com", role = c("aut","cre"),
         comment = c(ORCID="0000-0003-1444-9135")),
