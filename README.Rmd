@@ -76,39 +76,23 @@ pg_data(res$doi[3])[1:3]
 
 ## OAI-PMH metadata
 
-### Identify the service
-
-```{r}
+```{r eval=FALSE}
+# Identify the service
 pg_identify()
-```
 
-### List metadata formats
-
-```{r}
+# List metadata formats
 pg_list_metadata_formats()
-```
 
-### List identifiers
-
-```{r}
+# List identifiers
 pg_list_identifiers(from = Sys.Date() - 2, until = Sys.Date())
-```
 
-### List sets
-
-```{r}
+# List sets
 pg_list_sets()
-```
 
-### List records
-
-```{r}
+# List records
 pg_list_records(from = Sys.Date() - 1, until = Sys.Date())
-```
 
-### Get a record
-
-```{r}
+# Get a record
 pg_get_record(identifier = "oai:pangaea.de:doi:10.1594/PANGAEA.788382")
 ```
 
