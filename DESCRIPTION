@@ -4,7 +4,7 @@ Description: Tools to interact with the 'Pangaea' Database
     (<https://www.pangaea.de>), including functions for searching for data,
     fetching 'datasets' by 'dataset' 'ID', and working with the 'Pangaea'
     'OAI-PMH' service.
-Version: 0.8.2
+Version: 0.8.2.92
 Authors@R: c(person("Scott", "Chamberlain",
 		email = "myrmecocystus@gmail.com", role = c("aut","cre")),
     person("Kara", "Woo", email = "woo.kara@gmail.com", role = "aut"),
@@ -13,7 +13,8 @@ Authors@R: c(person("Scott", "Chamberlain",
     person("Gavin", "Simpson", email = "ucfagls@gmail.com", role = "aut"))
 License: MIT + file LICENSE
 LazyData: true
-URL: https://docs.ropensci.org/pangaear, https://github.com/ropensci/pangaear
+URL: https://github.com/ropensci/pangaear (devel),
+    https://docs.ropensci.org/pangaear (documentation)
 BugReports: https://github.com/ropensci/pangaear/issues
 Roxygen: list(markdown = TRUE)
 VignetteBuilder: knitr
