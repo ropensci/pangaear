@@ -4,7 +4,7 @@ http_interactions:
     uri: https://ws.pangaea.de/oai/provider?verb=GetRecord&metadataPrefix=oai_dc&identifier=oai%3Apangaea.de%3Adoi%3A10.1594%2FPANGAEA.788382
     body:
       encoding: ''
-      string: ''
+      string: no
     headers:
       Accept: application/json, text/xml, application/xml, */*
   response:
@@ -14,23 +14,25 @@ http_interactions:
       reason: OK
       message: 'Success: (200) OK'
     headers:
-      date: Tue, 13 Aug 2019 22:55:35 GMT
+      date: Wed, 22 Jan 2020 17:17:26 GMT
       content-type: text/xml;charset=utf-8
-      content-length: '1856'
+      content-length: '1855'
+      connection: keep-alive
       content-encoding: deflate
       vary: Accept-Encoding
-      x-powered-by: Jetty(9.4.19.v20190610)
+      x-powered-by: Jetty(9.4.21.v20190926)
       server: PANGAEA/2.0
       x-ua-compatible: IE=Edge
       x-content-type-options: nosniff
       x-frame-options: SAMEORIGIN
     body:
       encoding: UTF-8
+      file: no
       string: '<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl"
         href="oai2.xsl"?><OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/
-        http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><responseDate>2019-08-13T22:55:35Z</responseDate><request
+        http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><responseDate>2020-01-22T17:17:26Z</responseDate><request
         identifier="oai:pangaea.de:doi:10.1594/PANGAEA.788382" metadataPrefix="oai_dc"
-        verb="GetRecord">https://ws.pangaea.de/oai/provider</request><GetRecord><record><header><identifier>oai:pangaea.de:doi:10.1594/PANGAEA.788382</identifier><datestamp>2019-02-13T10:51:02Z</datestamp><setSpec>citable</setSpec><setSpec>supplement</setSpec><setSpec>topicChemistry</setSpec><setSpec>topicLithosphere</setSpec></header><metadata><oai_dc:dc
+        verb="GetRecord">https://ws.pangaea.de/oai/provider</request><GetRecord><record><header><identifier>oai:pangaea.de:doi:10.1594/PANGAEA.788382</identifier><datestamp>2020-01-18T03:11:42Z</datestamp><setSpec>citable</setSpec><setSpec>supplement</setSpec><setSpec>topicChemistry</setSpec><setSpec>topicLithosphere</setSpec></header><metadata><oai_dc:dc
         xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/
         http://www.openarchives.org/OAI/2.0/oai_dc.xsd"><dc:title>Trace metals in
@@ -69,5 +71,5 @@ http_interactions:
         -62.164078 * SOUTH-BOUND LATITUDE: 9.833000 * WEST-BOUND LONGITUDE: -111.400000
         * NORTH-BOUND LATITUDE: 37.840000 * EAST-BOUND LONGITUDE: -31.516667</dc:coverage><dc:subject>Archive
         of Ocean Data; ARCOD</dc:subject></oai_dc:dc></metadata></record></GetRecord></OAI-PMH>'
-  recorded_at: 2019-08-13 22:55:35 GMT
-  recorded_with: vcr/0.2.6, webmockr/0.4.0
+  recorded_at: 2020-01-22 17:17:27 GMT
+  recorded_with: vcr/0.4.0, webmockr/0.5.0
