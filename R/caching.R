@@ -15,16 +15,14 @@
 #' type call
 #'
 #' @section Useful user functions:
-#' \itemize{
-#'  \item `pg_cache$cache_path_get()` get cache path
-#'  \item `pg_cache$cache_path_set()` set cache path
-#'  \item `pg_cache$list()` returns a character vector of full
-#'  path file names
-#'  \item `pg_cache$files()` returns file objects with metadata
-#'  \item `pg_cache$details()` returns files with details
-#'  \item `pg_cache$delete()` delete specific files
-#'  \item `pg_cache$delete_all()` delete all files, returns nothing
-#' }
+#'
+#' - `pg_cache$cache_path_get()` get cache path
+#' - `pg_cache$cache_path_set()` set cache path
+#' - `pg_cache$list()` returns a character vector of full path file names
+#' - `pg_cache$files()` returns file objects with metadata
+#' - `pg_cache$details()` returns files with details
+#' - `pg_cache$delete()` delete specific files
+#' - `pg_cache$delete_all()` delete all files, returns nothing
 #'
 #' @examples \dontrun{
 #' pg_cache

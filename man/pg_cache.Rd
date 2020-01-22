@@ -21,8 +21,7 @@ type call
 \itemize{
 \item \code{pg_cache$cache_path_get()} get cache path
 \item \code{pg_cache$cache_path_set()} set cache path
-\item \code{pg_cache$list()} returns a character vector of full
-path file names
+\item \code{pg_cache$list()} returns a character vector of full path file names
 \item \code{pg_cache$files()} returns file objects with metadata
 \item \code{pg_cache$details()} returns files with details
 \item \code{pg_cache$delete()} delete specific files

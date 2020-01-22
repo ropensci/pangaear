@@ -6,7 +6,7 @@
 #' character string to avoid problems with large number conversion to
 #' scientific notation. Default: 10. The default maximum is 10,000 - however,
 #' you can change this default maximum by changing the
-#' \code{index.max_result_window} index level parameter.
+#' `index.max_result_window` index level parameter.
 #' @param from (character) The starting from index of the hits to return.
 #' Pass in as a character string to avoid problems with large number
 #' conversion to scientific notation. Default: 0
@@ -16,13 +16,13 @@
 #' @param analyzer (character) The analyzer name to be used when analyzing the
 #' query string.
 #' @param default_operator (character) The default operator to be used, can be
-#' \code{AND} or \code{OR}. Default: \code{OR}
+#' `AND` or `OR`. Default: `OR`
 #' @param explain (logical) For each hit, contain an explanation of how
 #' scoring of the hits was computed. Default: `FALSE`
 #' @param sort (character) Sorting to perform. Can either be in the form of
-#' fieldName, or \code{fieldName:asc}/\code{fieldName:desc}. The fieldName
+#' fieldName, or `fieldName:asc`/`fieldName:desc`. The fieldName
 #' can either be an actual field within the document, or the special
-#' \code{_score} name to indicate sorting based on scores. There can be several
+#' `_score` name to indicate sorting based on scores. There can be several
 #' sort parameters (order is important).
 #' @param track_scores (logical) When sorting, set to `TRUE` in order to
 #' still track scores and return them as part of each hit.
@@ -44,7 +44,7 @@
 #' @param analyze_wildcard (logical) Should wildcard and prefix queries be
 #' analyzed or not. Default: `FALSE`
 #' @param version (logical) Print the document version with each document.
-#' @param ... Curl options passed on to [crul::HttpClient]
+#' @param ... Curl options passed on to [crul::verb-GET]
 #' @return tibble/data.frame, empty if no results
 #' @seealso [pg_search()]
 #' @details An interface to Pangaea's Elasticsearch query interface.

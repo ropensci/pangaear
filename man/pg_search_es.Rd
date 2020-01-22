@@ -54,7 +54,7 @@ scoring of the hits was computed. Default: \code{FALSE}}
 \item{sort}{(character) Sorting to perform. Can either be in the form of
 fieldName, or \code{fieldName:asc}/\code{fieldName:desc}. The fieldName
 can either be an actual field within the document, or the special
-\code{_score} name to indicate sorting based on scores. There can be several
+\verb{_score} name to indicate sorting based on scores. There can be several
 sort parameters (order is important).}
 
 \item{track_scores}{(logical) When sorting, set to \code{TRUE} in order to
@@ -84,7 +84,7 @@ analyzed or not. Default: \code{FALSE}}
 
 \item{version}{(logical) Print the document version with each document.}
 
-\item{...}{Curl options passed on to \link[crul:HttpClient]{crul::HttpClient}}
+\item{...}{Curl options passed on to \link[crul:verb-GET]{crul::verb-GET}}
 }
 \value{
 tibble/data.frame, empty if no results

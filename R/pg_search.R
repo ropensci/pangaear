@@ -15,17 +15,16 @@
 #' maxlat
 #' @param mindate,maxdate (character) Dates to search for, of the form
 #' "2014-10-28"
-#' @param ... Curl options passed on to [crul::HttpClient()]
+#' @param ... Curl options passed on to [crul::verb-GET]
 #' @return tibble/data.frame with the structure:
-#' \itemize{
-#'  \item score - match score, higher is a better match
-#'  \item doi - the DOI for the data package
-#'  \item size - size number
-#'  \item size_measure - size measure, one of "data points" or "datasets"
-#'  \item citation - citation for the data package
-#'  \item supplement_to - citation for what the data package is a
-#'  supplement to
-#' }
+#' 
+#' - score: match score, higher is a better match
+#' - doi: the DOI for the data package
+#' - size: size number
+#' - size_measure: size measure, one of "data points" or "datasets"
+#' - citation: citation for the data package
+#' - supplement_to: citation for what the data package is a supplement to
+#' 
 #' @details This is a thin wrapper around the GUI search interface on the page
 #' <https://www.pangaea.de>. Everything you can do there, you can do here.
 #' @seealso [pg_search_es()]

@@ -36,18 +36,17 @@ maxlat}
 \item{mindate, maxdate}{(character) Dates to search for, of the form
 "2014-10-28"}
 
-\item{...}{Curl options passed on to \code{\link[crul:HttpClient]{crul::HttpClient()}}}
+\item{...}{Curl options passed on to \link[crul:verb-GET]{crul::verb-GET}}
 }
 \value{
 tibble/data.frame with the structure:
 \itemize{
-\item score - match score, higher is a better match
-\item doi - the DOI for the data package
-\item size - size number
-\item size_measure - size measure, one of "data points" or "datasets"
-\item citation - citation for the data package
-\item supplement_to - citation for what the data package is a
-supplement to
+\item score: match score, higher is a better match
+\item doi: the DOI for the data package
+\item size: size number
+\item size_measure: size measure, one of "data points" or "datasets"
+\item citation: citation for the data package
+\item supplement_to: citation for what the data package is a supplement to
 }
 }
 \description{

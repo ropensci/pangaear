@@ -10,7 +10,7 @@
 #' <https://doi.pangaea.de/10.1594/PANGAEA.746398>
 #' @param overwrite (logical) Ovewrite a file if one is found with the same name
 #' @param mssgs (logical) print information messages. Default: `TRUE`
-#' @param ... Curl options passed on to [crul::HttpClient]
+#' @param ... Curl options passed on to [crul::verb-GET]
 #' @return One or more items of class pangaea, each with the doi, parent doi
 #' (if many dois within a parent doi), url, citation, path, and data object.
 #' Data object depends on what kind of file it is. For tabular data, we print

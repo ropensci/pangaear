@@ -16,7 +16,7 @@ the URL part in front, like
 
 \item{mssgs}{(logical) print information messages. Default: \code{TRUE}}
 
-\item{...}{Curl options passed on to \link[crul:HttpClient]{crul::HttpClient}}
+\item{...}{Curl options passed on to \link[crul:verb-GET]{crul::verb-GET}}
 }
 \value{
 One or more items of class pangaea, each with the doi, parent doi
