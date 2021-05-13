@@ -1,3 +1,11 @@
+pangaear 1.1.0
+==============
+
+## MINOR IMPROVEMENTS
+
+* add markdown pkg to Suggests for vignette
+
+
 pangaear 1.0.0
 ==============
 

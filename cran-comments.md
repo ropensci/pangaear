@@ -1,7 +1,7 @@
 ## Test environments
 
-* local OS X install, R 3.6.2 Patched
-* ubuntu 14.04 (on travis-ci), R 3.6.2
+* local macOS install, R 4.0.5 patched
+* ubuntu 14.04 (on GitHub Actions), R 4.0.5
 * win-builder (devel and release)
 
 ## R CMD check results
@@ -14,7 +14,7 @@ There are no reverse dependencies.
 
 ---
 
-This release includes minor fixes for tests, and vignette title.
+This version fixes the rmarkdown/markdown dependency issue for vignettes that Kurt emailed maintainers about.
 
 Thanks! 
 Scott Chamberlain

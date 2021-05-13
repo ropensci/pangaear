@@ -10,14 +10,13 @@
   "codeRepository": "https://github.com/ropensci/pangaear",
   "issueTracker": "https://github.com/ropensci/pangaear/issues",
   "license": "https://spdx.org/licenses/MIT",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
-    "version": "3.6.2",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 3.6.2 Patched (2019-12-12 r77564)",
+  "runtimePlatform": "R version 4.0.5 Patched (2021-03-31 r80136)",
   "provider": {
     "@id": "https://cran.r-project.org",
     "@type": "Organization",
@@ -102,6 +101,18 @@
         "url": "https://cran.r-project.org"
       },
       "sameAs": "https://CRAN.R-project.org/package=vcr"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "markdown",
+      "name": "markdown",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=markdown"
     }
   ],
   "softwareRequirements": [
@@ -196,15 +207,15 @@
       "sameAs": "https://CRAN.R-project.org/package=png"
     }
   ],
-  "contIntegration": ["https://travis-ci.org/ropensci/pangaear", "https://ci.appveyor.com/project/sckott/pangaear", "https://codecov.io/gh/ropensci/pangaear"],
+  "contIntegration": "https://codecov.io/gh/ropensci/pangaear",
   "releaseNotes": "https://github.com/ropensci/pangaear/blob/master/NEWS.md",
   "readme": "https://github.com/ropensci/pangaear/blob/master/README.md",
-  "fileSize": "312.232KB",
+  "fileSize": "4470.156KB",
   "contributor": {},
   "copyrightHolder": {},
   "funder": {},
   "applicationCategory": "Biodiversity",
   "isPartOf": "https://ropensci.org",
   "keywords": ["Pangaea", "environmentalscience", "earthscience", "archive", "paleontology", "ecology", "chemistry", "atmosphere", "paleobiology", "scientific", "data", "rstats", "r", "r-package", "api-client", "webservice-client"],
-  "relatedLink": "https://docs.ropensci.org/pangaear"
+  "relatedLink": ["https://docs.ropensci.org/pangaear", "https://docs.ropensci.org/pangaear/"]
 }
