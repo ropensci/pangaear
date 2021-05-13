@@ -97,3 +97,27 @@ test_that("text data file with metadata", {
   ## length of the list of parameters should equal columns of data
   expect_equal(length(aa[[1]]$metadata$parameters), NCOL(aa[[1]]$data))
 })
+
+test_that("events parsing is consistent", {
+  skip_on_cran()
+  skip_on_travis()
+
+  vcr::use_cassette("pg_data_events_consistently_parsed", {
+    a <- pg_data("10.1594/PANGAEA.785228", mssgs=FALSE)
+    b <- pg_data("10.1594/PANGAEA.860950", mssgs=FALSE)
+    d <- pg_data("10.1594/PANGAEA.863978", mssgs=FALSE)
+    e <- pg_data("10.1594/PANGAEA.881731", mssgs=FALSE) # new one
+    f <- pg_data("10.1594/PANGAEA.896852", mssgs=FALSE) # new one
+    g <- pg_data("10.1594/PANGAEA.896852", mssgs=FALSE) # new one
+  })
+
+  expect_length(a, 13)
+  expect_length(b, 1)
+  expect_length(d, 1)
+
+  for (i in a) expect_is(i$metadata$events, "list")
+  expect_is(b[[1]]$metadata$events, "list")
+  expect_is(d[[1]]$metadata$events, "list")
+
+
+})

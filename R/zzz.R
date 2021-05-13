@@ -56,6 +56,12 @@ read_meta <- function(x) {
   for (i in seq_along(ext)) {
     sp <- strsplit(ext[[i]], "\\\t")
     nm <- tolower(gsub("\\s", "_", gsub(":|\\(|\\)", "", sp[[1]][1])))
+    if (nm == "events") {
+      sp <- unlist(sp)
+      sp <- sp[nzchar(sp)]
+      sp <- c(sp[1], paste(sp[2:length(sp)], collapse=" "))
+      sp <- list(sp)
+    }
     if (length(sp) > 1) {
       tmp <- unlist(c(sp[[1]][-1], sp[-1]))
       tmp <- tmp[nzchar(tmp)]
