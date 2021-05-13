@@ -15,3 +15,4 @@ docs
 inst/vign/
 tests/fixtures/pg_data*
 tests/files/
+^LICENSE\.md$
