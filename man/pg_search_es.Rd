@@ -72,9 +72,7 @@ Default: no terminate_after}
 
 \item{search_type}{(character) The type of the search operation to perform.
 Can be \code{query_then_fetch} (default) or \code{dfs_query_then_fetch}.
-Types \code{scan} and \code{count} are deprecated.
-See \url{http://bit.ly/19Am9xP} for more details on the different types of
-search that can be performed.}
+Types \code{scan} and \code{count} are deprecated.}
 
 \item{lowercase_expanded_terms}{(logical) Should terms be automatically
 lowercased or not. Default: \code{TRUE}.}

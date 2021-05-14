@@ -13,7 +13,6 @@ Authors@R: c(person("Scott", "Chamberlain",
     person("Naupaka ", "Zimmerman", email = "naupaka@gmail.com", role = "aut"),
     person("Gavin", "Simpson", email = "ucfagls@gmail.com", role = "aut"))
 License: MIT + file LICENSE
-LazyData: true
 URL: https://github.com/ropensci/pangaear (devel),
     https://docs.ropensci.org/pangaear/ (documentation)
 BugReports: https://github.com/ropensci/pangaear/issues

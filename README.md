@@ -57,7 +57,7 @@ library('pangaear')
 
 ## Search for data
 
-This is a thin wrapper around the GUI search interface on the page [http://www.pangaea.de/](http://www.pangaea.de/). Everything you can do there, you can do here.
+This is a thin wrapper around the GUI search interface on the page <https://www.pangaea.de/>. Everything you can do there, you can do here.
 
 
 ```r

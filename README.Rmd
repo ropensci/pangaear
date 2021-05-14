@@ -52,7 +52,7 @@ library('pangaear')
 
 ## Search for data
 
-This is a thin wrapper around the GUI search interface on the page [http://www.pangaea.de/](http://www.pangaea.de/). Everything you can do there, you can do here.
+This is a thin wrapper around the GUI search interface on the page <https://www.pangaea.de/>. Everything you can do there, you can do here.
 
 ```{r}
 pg_search(query = 'water', bbox = c(-124.2, 41.8, -116.8, 46.1), count = 3)

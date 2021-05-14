@@ -37,8 +37,6 @@
 #' @param search_type (character) The type of the search operation to perform.
 #' Can be `query_then_fetch` (default) or `dfs_query_then_fetch`.
 #' Types `scan` and `count` are deprecated.
-#' See <http://bit.ly/19Am9xP> for more details on the different types of
-#' search that can be performed.
 #' @param lowercase_expanded_terms (logical) Should terms be automatically
 #' lowercased or not. Default: `TRUE`.
 #' @param analyze_wildcard (logical) Should wildcard and prefix queries be
