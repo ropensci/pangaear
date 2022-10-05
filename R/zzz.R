@@ -94,7 +94,7 @@ read_meta <- function(x) {
     Comment <- sapply(parm, function(x) x[grep('COMMENT:', x)])
     Comment <-   sapply(Comment, function(x) ifelse(length(x) == 0, yes = NA, no = gsub('COMMENT: ', '', x)))
     
-    ext2$parameters <- tibble(longName,
+    ext2$parameters <- tibble::tibble(longName,
                               shortName,
                               Unit,
                               PI,
