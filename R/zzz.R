@@ -82,17 +82,17 @@ read_meta <- function(x) {
     parm <- lapply(parm, function(w) {
       strw(strsplit(w, " \\*")[[1]])
     })
-    # parse parameters
+    # parse parameters, omits GEOCODE in Comment
     longName <- sapply(parm, function(x) trimws(gsub('\\[.*|\\*.*|\\(.*', '', x[1])))
     shortName <- sapply(parm, function(x) regmatches(x[1], gregexpr("(?<=\\().*?(?=\\))", x[1], perl = TRUE))[[1]])
     Unit <- sapply(parm, function(x) regmatches(x[1], gregexpr("(?<=\\[).*?(?=\\])", x[1], perl = TRUE))[[1]])
-    Unit <- sapply(Unit, function(x) ifelse(length(x) == 0, yes = NA, no = x))
+    Unit <- sapply(Unit, function(x) ifelse(length(x) == 0, yes = NA_character_, no = x))
     PI <- sapply(parm, function(x) x[grep('PI:', x)])
-    PI <- sapply(PI, function(x) ifelse(length(x) == 0, yes = NA, no = gsub('PI: ', '', x)))
+    PI <- sapply(PI, function(x) ifelse(length(x) == 0, yes = NA_character_, no = gsub('PI: ', '', x)))
     Method_Device <- sapply(parm, function(x) x[grep('METHOD/DEVICE:', x)])
-    Method_Device <- sapply(Method_Device, function(x) ifelse(length(x) == 0, yes = NA, no = gsub('METHOD/DEVICE: ', '', x)))
+    Method_Device <- sapply(Method_Device, function(x) ifelse(length(x) == 0, yes = NA_character_, no = gsub('METHOD/DEVICE: ', '', x)))
     Comment <- sapply(parm, function(x) x[grep('COMMENT:', x)])
-    Comment <-   sapply(Comment, function(x) ifelse(length(x) == 0, yes = NA, no = gsub('COMMENT: ', '', x)))
+    Comment <-   sapply(Comment, function(x) ifelse(length(x) == 0, yes = NA_character_, no = gsub('COMMENT: ', '', x)))
     
     ext2$parameters <- tibble::tibble(longName,
                               shortName,
