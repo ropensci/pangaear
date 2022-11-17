@@ -1,12 +1,10 @@
 {
-  "@context": [
-    "http://purl.org/codemeta/2.0",
-    "http://schema.org"
-  ],
+  "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
   "@type": "SoftwareSourceCode",
   "identifier": "pangaear",
-  "description": "Tools to interact with the 'Pangaea' Database\n    (<https://www.pangaea.de>), including functions for searching for data,\n    fetching 'datasets' by 'dataset' 'ID', and working with the 'Pangaea'\n    'OAI-PMH' service.",
+  "description": "Tools to interact with the 'Pangaea' Database (<https://www.pangaea.de>), including functions for searching for data, fetching 'datasets' by 'dataset' 'ID', and working with the 'Pangaea' 'OAI-PMH' service.",
   "name": "pangaear: Client for the 'Pangaea' Database",
+  "relatedLink": "https://docs.ropensci.org/pangaear/",
   "codeRepository": "https://github.com/ropensci/pangaear",
   "issueTracker": "https://github.com/ropensci/pangaear/issues",
   "license": "https://spdx.org/licenses/MIT",
@@ -16,11 +14,11 @@
     "name": "R",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 4.0.5 Patched (2021-03-31 r80136)",
+  "runtimePlatform": "R version 4.2.2 (2022-10-31)",
   "provider": {
     "@id": "https://cran.r-project.org",
     "@type": "Organization",
-    "name": "Central R Archive Network (CRAN)",
+    "name": "Comprehensive R Archive Network (CRAN)",
     "url": "https://cran.r-project.org"
   },
   "author": [
@@ -115,8 +113,8 @@
       "sameAs": "https://CRAN.R-project.org/package=markdown"
     }
   ],
-  "softwareRequirements": [
-    {
+  "softwareRequirements": {
+    "1": {
       "@type": "SoftwareApplication",
       "identifier": "crul",
       "name": "crul",
@@ -129,7 +127,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=crul"
     },
-    {
+    "2": {
       "@type": "SoftwareApplication",
       "identifier": "jsonlite",
       "name": "jsonlite",
@@ -142,7 +140,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=jsonlite"
     },
-    {
+    "3": {
       "@type": "SoftwareApplication",
       "identifier": "xml2",
       "name": "xml2",
@@ -155,7 +153,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=xml2"
     },
-    {
+    "4": {
       "@type": "SoftwareApplication",
       "identifier": "oai",
       "name": "oai",
@@ -168,7 +166,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=oai"
     },
-    {
+    "5": {
       "@type": "SoftwareApplication",
       "identifier": "tibble",
       "name": "tibble",
@@ -181,7 +179,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=tibble"
     },
-    {
+    "6": {
       "@type": "SoftwareApplication",
       "identifier": "hoardr",
       "name": "hoardr",
@@ -194,7 +192,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=hoardr"
     },
-    {
+    "7": {
       "@type": "SoftwareApplication",
       "identifier": "png",
       "name": "png",
@@ -205,17 +203,11 @@
         "url": "https://cran.r-project.org"
       },
       "sameAs": "https://CRAN.R-project.org/package=png"
-    }
-  ],
-  "contIntegration": "https://codecov.io/gh/ropensci/pangaear",
-  "releaseNotes": "https://github.com/ropensci/pangaear/blob/master/NEWS.md",
-  "readme": "https://github.com/ropensci/pangaear/blob/master/README.md",
-  "fileSize": "4470.156KB",
-  "contributor": {},
-  "copyrightHolder": {},
-  "funder": {},
+    },
+    "SystemRequirements": null
+  },
   "applicationCategory": "Biodiversity",
   "isPartOf": "https://ropensci.org",
-  "keywords": ["Pangaea", "environmentalscience", "earthscience", "archive", "paleontology", "ecology", "chemistry", "atmosphere", "paleobiology", "scientific", "data", "rstats", "r", "r-package", "api-client", "webservice-client"],
-  "relatedLink": ["https://docs.ropensci.org/pangaear", "https://docs.ropensci.org/pangaear/"]
+  "keywords": ["Pangaea", "environmentalscience", "earthscience", "archive", "paleontology", "ecology", "chemistry", "atmosphere"],
+  "fileSize": "4470.334KB"
 }
