@@ -21,3 +21,24 @@ One thing you may want to do is set a different path for caching
 the data you download: see \link{pg_cache} for details
 }
 
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/ropensci/pangaear (devel)}
+  \item \url{https://docs.ropensci.org/pangaear/ (documentation)}
+  \item Report bugs at \url{https://github.com/ropensci/pangaear/issues}
+}
+
+}
+\author{
+\strong{Maintainer}: Scott Chamberlain \email{myrmecocystus@gmail.com} (\href{https://orcid.org/0000-0003-1444-9135}{ORCID})
+
+Authors:
+\itemize{
+  \item Kara Woo \email{woo.kara@gmail.com}
+  \item Andrew MacDonald \email{a.a.m.macdonald@gmail.com}
+  \item Naupaka Zimmerman \email{naupaka@gmail.com}
+  \item Gavin Simpson \email{ucfagls@gmail.com}
+}
+
+}

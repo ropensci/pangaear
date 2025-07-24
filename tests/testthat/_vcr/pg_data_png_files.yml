@@ -1,0 +1,455 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://doi.pangaea.de/10.1594/PANGAEA.825428
+  response:
+    status: 200
+    headers:
+      status: 'HTTP/2 200 '
+      server: nginx/1.29.0
+      date: Thu, 24 Jul 2025 03:41:50 GMT
+      content-type: text/html;charset=utf-8
+      x-powered-by: Jetty(12.0.23)
+      vary: Origin, Cookie, Authorization, Accept, Accept-Encoding
+      set-cookie: pansessid=84a74f86d4b02c7d7a4c30c7734d07dd; Path=/; Domain=.pangaea.de;
+        Secure; HttpOnly; SameSite=Lax
+      cache-control: public
+      x-cid: 84a74f86d4b02c7d7a4c30c7734d07dd
+      content-encoding: gzip
+      link: <https://doi.org/10.1594/PANGAEA.825428>;rel="cite-as", <https://doi.pangaea.de/10.1594/PANGAEA.825428?format=metadata_panmd>;rel="describedby";type="application/vnd.pangaea.metadata+xml",
+        <https://doi.pangaea.de/10.1594/PANGAEA.825428?format=metadata_jsonld>;rel="describedby";type="application/ld+json",
+        <https://doi.pangaea.de/10.1594/PANGAEA.825428?format=metadata_datacite4>;rel="describedby";type="application/vnd.datacite.datacite+xml",
+        <https://doi.pangaea.de/10.1594/PANGAEA.825428?format=metadata_iso19139>;rel="describedby";type="application/vnd.iso19139.metadata+xml",
+        <https://doi.pangaea.de/10.1594/PANGAEA.825428?format=metadata_dif>;rel="describedby";type="application/vnd.nasa.dif-metadata+xml",
+        <https://doi.pangaea.de/10.1594/PANGAEA.825428?format=citation_text>;rel="describedby";type="text/x-bibliography",
+        <https://doi.pangaea.de/10.1594/PANGAEA.825428?format=citation_ris>;rel="describedby";type="application/x-research-info-systems",
+        <https://doi.pangaea.de/10.1594/PANGAEA.825428?format=citation_bibtex>;rel="describedby";type="application/x-bibtex",
+        <https://doi.pangaea.de/10.1594/PANGAEA.825428?format=zip>;rel="item";type="application/zip",
+        <https://creativecommons.org/licenses/by/3.0/>;rel="license", <https://schema.org/Dataset>;rel="type",
+        <https://schema.org/AboutPage>;rel="type", <https://doi.pangaea.de/10.1594/PANGAEA.825428?format=linkset>;rel="linkset";type="application/linkset",
+        <https://doi.pangaea.de/10.1594/PANGAEA.825428?format=linkset_json>;rel="linkset";type="application/linkset+json"
+      x-robots-tag: index,follow,archive
+      alt-svc: h3=":443"; ma=2592000
+      strict-transport-security: max-age=31536000
+      x-ua-compatible: IE=Edge
+      x-content-type-options: nosniff
+      x-frame-options: SAMEORIGIN
+    body:
+      string: "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\n<meta charset=\"UTF-8\">\r\n<meta
+        name=\"viewport\" content=\"width=device-width, initial-scale=1, minimum-scale=1,
+        maximum-scale=1, user-scalable=no\">\r\n<link rel=\"stylesheet\" href=\"//fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,700,700italic,600italic,300,300italic,800,800italic\">\n<link
+        rel=\"stylesheet\" href=\"//www.pangaea.de/assets/v.6b7105a5fd061af46552d8c6ee53c11c/bootstrap-24col/css/bootstrap.min.css\">\n<link
+        rel=\"stylesheet\" href=\"//www.pangaea.de/assets/v.6b7105a5fd061af46552d8c6ee53c11c/css/pangaea.css\">\n<link
+        rel=\"stylesheet\" href=\"//cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css\">\n<!--[if
+        lte IE 9]>\r\n<style>#topics-pulldown-wrapper label:after { display:none;
+        }</style>\r\n<![endif]-->\r\n<link rel=\"shortcut icon\" href=\"//www.pangaea.de/assets/v.6b7105a5fd061af46552d8c6ee53c11c/favicon.ico\">\r\n<link
+        rel=\"icon\" href=\"//www.pangaea.de/assets/v.6b7105a5fd061af46552d8c6ee53c11c/favicon.ico\"
+        type=\"image/vnd.microsoft.icon\">\r\n<link rel=\"image_src\" type=\"image/png\"
+        href=\"https://www.pangaea.de/assets/social-icons/pangaea-share.png\">\r\n<meta
+        property=\"og:image\" content=\"https://www.pangaea.de/assets/social-icons/pangaea-share.png\">\r\n<script
+        type=\"text/javascript\" src=\"//cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js\"></script>\n<script
+        type=\"text/javascript\" src=\"//cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.0/jquery.matchHeight-min.js\"></script>\n<script
+        type=\"text/javascript\" src=\"//cdnjs.cloudflare.com/ajax/libs/jquery.appear/0.4.1/jquery.appear.min.js\"></script>\n<script
+        type=\"text/javascript\" src=\"//cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js\"></script>\n<script
+        type=\"text/javascript\" src=\"//www.pangaea.de/assets/v.6b7105a5fd061af46552d8c6ee53c11c/bootstrap-24col/js/bootstrap.min.js\"></script>\n<script
+        type=\"text/javascript\" src=\"//cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js\"></script>\n<script
+        type=\"text/javascript\" src=\"//www.pangaea.de/assets/v.6b7105a5fd061af46552d8c6ee53c11c/js/datacombo-min.js\"></script>\n<title>Kharanzhevskaya,
+        YA (2014): Mire water balance within the River Klyuch basin, Western Siberia</title>\n<meta
+        name=\"title\" content=\"Mire water balance within the River Klyuch basin,
+        Western Siberia\" />\n<meta name=\"author\" content=\"Kharanzhevskaya, Yulia
+        Alexsandrovna\" />\n<meta name=\"date\" content=\"2014\" />\n<meta name=\"robots\"
+        content=\"index,follow,archive\" />\n<meta name=\"description\" content=\"Kharanzhevskaya,
+        Yulia Alexsandrovna (2014): Mire water balance within the River Klyuch basin,
+        Western Siberia [dataset publication series]. PANGAEA, https://doi.org/10.1594/PANGAEA.825428,
+        Supplement to: Kharanzhevskaya, YA (2014): Estimation of peculiarities and
+        long-term dynamics of mire water balance in Western Siberia. Siberian Research
+        Institute of Agriculture and Peat, 13 pp\" />\n<meta name=\"geo.position\"
+        content=\"56.971840;82.621920\" />\n<meta name=\"ICBM\" content=\"56.971840,
+        82.621920\" />\n<!--BEGIN: Dublin Core description-->\n<link rel=\"schema.DC\"
+        href=\"http://purl.org/dc/elements/1.1/\" />\n<link rel=\"schema.DCTERMS\"
+        href=\"http://purl.org/dc/terms/\" />\n<meta name=\"DC.title\" content=\"Mire
+        water balance within the River Klyuch basin, Western Siberia\" />\n<meta name=\"DC.creator\"
+        content=\"Kharanzhevskaya, Yulia Alexsandrovna\" />\n<meta name=\"DC.publisher\"
+        content=\"PANGAEA\" />\n<meta name=\"DC.source\" content=\"Supplement to:
+        Kharanzhevskaya, YA (2014): Estimation of peculiarities and long-term dynamics
+        of mire water balance in Western Siberia. Siberian Research Institute of Agriculture
+        and Peat, 13 pp\" />\n<meta name=\"DC.date\" content=\"2014\" scheme=\"DCTERMS.W3CDTF\"
+        />\n<meta name=\"DC.type\" content=\"dataset publication series\" />\n<meta
+        name=\"DC.language\" content=\"en\" scheme=\"DCTERMS.RFC3066\" />\n<meta name=\"DCTERMS.license\"
+        scheme=\"DCTERMS.URI\" content=\"https://creativecommons.org/licenses/by/3.0/\"
+        />\n<meta name=\"DC.identifier\" content=\"https://doi.org/10.1594/PANGAEA.825428\"
+        scheme=\"DCTERMS.URI\" />\n<meta name=\"DC.rights\" scheme=\"DCTERMS.URI\"
+        content=\"info:eu-repo/semantics/openAccess\" />\n<meta name=\"DC.format\"
+        content=\"application/zip, 5 datasets\" />\n<!--END: Dublin Core description-->\n<script
+        type=\"text/javascript\" src=\"//d1bxh8uas1mnw7.cloudfront.net/assets/embed.js\"></script>\n<link
+        rel=\"cite-as\" href=\"https://doi.org/10.1594/PANGAEA.825428\">\n<link rel=\"describedby\"
+        href=\"https://doi.pangaea.de/10.1594/PANGAEA.825428?format=metadata_panmd\"
+        type=\"application/vnd.pangaea.metadata+xml\">\n<link rel=\"describedby\"
+        href=\"https://doi.pangaea.de/10.1594/PANGAEA.825428?format=metadata_jsonld\"
+        type=\"application/ld+json\">\n<link rel=\"describedby\" href=\"https://doi.pangaea.de/10.1594/PANGAEA.825428?format=metadata_datacite4\"
+        type=\"application/vnd.datacite.datacite+xml\">\n<link rel=\"describedby\"
+        href=\"https://doi.pangaea.de/10.1594/PANGAEA.825428?format=metadata_iso19139\"
+        type=\"application/vnd.iso19139.metadata+xml\">\n<link rel=\"describedby\"
+        href=\"https://doi.pangaea.de/10.1594/PANGAEA.825428?format=metadata_dif\"
+        type=\"application/vnd.nasa.dif-metadata+xml\">\n<link rel=\"describedby\"
+        href=\"https://doi.pangaea.de/10.1594/PANGAEA.825428?format=citation_text\"
+        type=\"text/x-bibliography\">\n<link rel=\"describedby\" href=\"https://doi.pangaea.de/10.1594/PANGAEA.825428?format=citation_ris\"
+        type=\"application/x-research-info-systems\">\n<link rel=\"describedby\" href=\"https://doi.pangaea.de/10.1594/PANGAEA.825428?format=citation_bibtex\"
+        type=\"application/x-bibtex\">\n<link rel=\"item\" href=\"https://doi.pangaea.de/10.1594/PANGAEA.825428?format=zip\"
+        type=\"application/zip\">\n<link rel=\"license\" href=\"https://creativecommons.org/licenses/by/3.0/\">\n<link
+        rel=\"type\" href=\"https://schema.org/Dataset\">\n<link rel=\"type\" href=\"https://schema.org/AboutPage\">\n<link
+        rel=\"linkset\" href=\"https://doi.pangaea.de/10.1594/PANGAEA.825428?format=linkset\"
+        type=\"application/linkset\">\n<link rel=\"linkset\" href=\"https://doi.pangaea.de/10.1594/PANGAEA.825428?format=linkset_json\"
+        type=\"application/linkset+json\">\n<script type=\"application/ld+json\">{\"@context\":\"http://schema.org/\",\"@id\":\"https://doi.org/10.1594/PANGAEA.825428\",\"@type\":\"Dataset\",\"identifier\":\"https://doi.org/10.1594/PANGAEA.825428\",\"url\":\"https://doi.pangaea.de/10.1594/PANGAEA.825428\",\"creator\":{\"@type\":\"Person\",\"name\":\"Yulia
+        Alexsandrovna Kharanzhevskaya\",\"familyName\":\"Kharanzhevskaya\",\"givenName\":\"Yulia
+        Alexsandrovna\",\"email\":\"kharan@yandex.ru\"},\"name\":\"Mire water balance
+        within the River Klyuch basin, Western Siberia\",\"publisher\":{\"@type\":\"Organization\",\"name\":\"PANGAEA\",\"disambiguatingDescription\":\"Data
+        Publisher for Earth \\u0026 Environmental Science\",\"url\":\"https://www.pangaea.de/\"},\"includedInDataCatalog\":{\"@type\":\"DataCatalog\",\"name\":\"PANGAEA\",\"disambiguatingDescription\":\"Data
+        Publisher for Earth \\u0026 Environmental Science\",\"url\":\"https://www.pangaea.de/\"},\"datePublished\":\"2014-01-07\",\"additionalType\":\"dataset
+        publication series\",\"description\":\"Examinations of water balance were
+        carried out in the north-eastern part of the Vasyugan mire within the area
+        of the small basin of the River Klyuch. The determination of annual precipitation,
+        snow cover water equivalent, evaporation amount and discharge were conducted
+        separately for every dominant type of the raised bog biogeocenoses, and a
+        monthly water balance model was used. As a result of this research it was
+        noted that differences in the water balance of biogeocenoses are defined by
+        the vegetation structure, which defines the process of moisture accumulation
+        in the bog peat deposit. Statistical analysis of long-term changes in water
+        balance elements allowed us to identify a decrease of overall moistening in
+        April-May, a gradual increase of evaporation in the autumn period, the growing
+        duration of the transitional autumn-winter period and a corresponding reduction
+        of moisture content in snow cover in November-December. As a result, redistribution
+        of the hydrological regime, which is characterized by a definite flow decrease
+        in November, December and April-June, and an increase in August-September
+        is observed in the region. Nevertheless, the annual characteristics of the
+        water balance remain statistically unchanged. Generally, conditions for the
+        development of mire formation and peat accumulation processes owing to excessive
+        moistening in the warm period of year will remain favourable in the nearest
+        and medium term prospect.\",\"abstract\":\"Examinations of water balance were
+        carried out in the north-eastern part of the Vasyugan mire within the area
+        of the small basin of the River Klyuch. The determination of annual precipitation,
+        snow cover water equivalent, evaporation amount and discharge were conducted
+        separately for every dominant type of the raised bog biogeocenoses, and a
+        monthly water balance model was used. As a result of this research it was
+        noted that differences in the water balance of biogeocenoses are defined by
+        the vegetation structure, which defines the process of moisture accumulation
+        in the bog peat deposit. Statistical analysis of long-term changes in water
+        balance elements allowed us to identify a decrease of overall moistening in
+        April-May, a gradual increase of evaporation in the autumn period, the growing
+        duration of the transitional autumn-winter period and a corresponding reduction
+        of moisture content in snow cover in November-December. As a result, redistribution
+        of the hydrological regime, which is characterized by a definite flow decrease
+        in November, December and April-June, and an increase in August-September
+        is observed in the region. Nevertheless, the annual characteristics of the
+        water balance remain statistically unchanged. Generally, conditions for the
+        development of mire formation and peat accumulation processes owing to excessive
+        moistening in the warm period of year will remain favourable in the nearest
+        and medium term prospect.\",\"@reverse\":{\"isBasedOn\":{\"@type\":[\"CreativeWork\",\"Article\"],\"creator\":{\"@type\":\"Person\",\"name\":\"Yulia
+        Alexsandrovna Kharanzhevskaya\",\"familyName\":\"Kharanzhevskaya\",\"givenName\":\"Yulia
+        Alexsandrovna\",\"email\":\"kharan@yandex.ru\"},\"name\":\"Estimation of peculiarities
+        and long-term dynamics of mire water balance in Western Siberia\",\"datePublished\":\"2014\",\"pagination\":\"13
+        pp\",\"sourceOrganization\":{\"@type\":\"Organization\",\"name\":\"Siberian
+        Research Institute of Agriculture and Peat\"}}},\"spatialCoverage\":{\"@type\":\"Place\",\"geo\":{\"@type\":\"GeoCoordinates\",\"latitude\":56.97183999999999,\"longitude\":82.62192000000003}},\"temporalCoverage\":\"1970-10-15T00:00:00/2010-11-15T00:00:00\",\"size\":{\"@type\":\"QuantitativeValue\",\"value\":5.0,\"unitText\":\"datasets\"},\"license\":\"https://creativecommons.org/licenses/by/3.0/\",\"conditionsOfAccess\":\"unrestricted\",\"isAccessibleForFree\":true,\"inLanguage\":\"en\",\"distribution\":[{\"@type\":\"DataDownload\",\"contentUrl\":\"https://doi.pangaea.de/10.1594/PANGAEA.825428?format\\u003dzip\",\"encodingFormat\":\"application/zip\"}]}</script>\n<script
+        type=\"text/javascript\">/*<![CDATA[*/\r\nvar _paq=window._paq=window._paq||[];(function(){\r\nvar
+        u=\"https://analytics.pangaea.de/\";_paq.push(['setTrackerUrl',u+'matomo.php']);_paq.push(['setCookieDomain','pangaea.de']);_paq.push(['setDomains',['pangaea.de','www.pangaea.de','doi.pangaea.de']]);_paq.push(['setSiteId',1]);\r\n_paq.push(['enableLinkTracking']);_paq.push(['setDownloadClasses',['dl-link']]);_paq.push(['setDownloadExtensions',[]]);_paq.push(['setIgnoreClasses',['notrack']]);_paq.push(['trackPageView']);\r\nvar
+        d=document,g=d.createElement('script'),s=d.getElementsByTagName('script')[0];g.async=true;g.src=u+'matomo.js';s.parentNode.insertBefore(g,s);\r\n})();\r\n/*]]>*/</script>\r\n</head>\r\n<body
+        class=\"homepage-layout\">\r\n<div id=\"header-wrapper\">\r\n  <div class=\"container-fluid\">\r\n
+        \   <header class=\"row\"><!-- volle Screen-Breite -->\r\n      <div class=\"content-wrapper\"><!--
+        max. Breite -->\r\n        <div id=\"login-area-wrapper\" class=\"hidden-print\"><div
+        id=\"login-area\"><span id=\"user-name\">Not logged in</span><a id=\"signup-button\"
+        class=\"glyphicon glyphicon-plus-sign self-referer-link\" title=\"Sign Up
+        / Create Account\" aria-label=\"Sign up\" target=\"_self\" rel=\"nofollow\"
+        href=\"https://www.pangaea.de/user/signup.php?referer=https%3A%2F%2Fdoi.pangaea.de%2F\"
+        data-template=\"https://www.pangaea.de/user/signup.php?referer=#u#\"></a><a
+        id=\"login-button\" class=\"glyphicon glyphicon-log-in self-referer-link\"
+        title=\"Log In\" aria-label=\"Log in\" target=\"_self\" rel=\"nofollow\" href=\"https://www.pangaea.de/user/login.php?referer=https%3A%2F%2Fdoi.pangaea.de%2F\"
+        data-template=\"https://www.pangaea.de/user/login.php?referer=#u#\"></a></div></div>\r\n
+        \       <div class=\"blindspalte header-block col-lg-3 col-md-4\"></div>\r\n
+        \       \r\n        <div id=\"header-logo-block\" class=\"header-block col-lg-3
+        col-md-4 col-sm-4 col-xs-8\">\r\n          <div id=\"pangaea-logo\">\r\n            <a
+        title=\"PANGAEA home\" href=\"//www.pangaea.de/\" class=\"home-link\"><img
+        src=\"//www.pangaea.de/assets/v.6b7105a5fd061af46552d8c6ee53c11c/layout-images/pangaea-logo.png\"
+        alt=\"PANGAEA home\"></a>\r\n          </div>\r\n        </div>\r\n        \r\n
+        \       <div id=\"header-mid-block\" class=\"header-block col-lg-12 col-md-9
+        col-sm-20 col-xs-16\">\r\n          <div id=\"pangaea-logo-headline\">\r\n
+        \           PANGAEA<span class=\"punkt\">.</span>\r\n          </div>\r\n
+        \         <div id=\"pangaea-logo-slogan\">\r\n            <span>Data Publisher
+        for Earth &amp; </span><span class=\"nowrap\">Environmental Science</span>\r\n
+        \         </div>\r\n          <div id=\"search-area-header\" class=\"row\"></div>\r\n
+        \       </div>\r\n        \r\n        <div id=\"header-main-menu-block\" class=\"header-block
+        hidden-print col-lg-6 col-md-7 col-sm-24 col-xs-24\">\r\n          <nav id=\"main-nav\">\r\n
+        \           <ul>\r\n              <li id=\"menu-search\">\r\n                <!--
+        class on link is important, don't change!!! -->\r\n                <a href=\"//www.pangaea.de/\"
+        class=\"home-link\">Search</a>\r\n              </li>\r\n              <li
+        id=\"menu-submit\">\r\n                <a href=\"//www.pangaea.de/submit/\">Submit</a>\r\n
+        \             </li>\r\n              <li id=\"menu-help\">\r\n                <a
+        href=\"//wiki.pangaea.de/\">Help</a>\r\n              </li>\r\n              <li
+        id=\"menu-about\">\r\n                <a href=\"//www.pangaea.de/about/\">About</a>\r\n
+        \             </li>\r\n              <li id=\"menu-contact\">\r\n                <a
+        href=\"//www.pangaea.de/contact/\">Contact</a>\r\n              </li>\r\n
+        \           </ul>\r\n          </nav>\r\n          <div class=\"clearfix\"></div>\r\n
+        \       </div>\r\n      </div>\r\n    </header>\r\n  </div>\r\n</div>\r\n<div
+        id=\"flex-wrapper\">\r\n<div id=\"main-container\" class=\"container-fluid\">\r\n<div
+        id=\"main-row\" class=\"row main-row\">\r\n<div id=\"main\" class=\"col-lg-24
+        col-md-24 col-sm-24 col-xs-24\">\r\n<div id=\"dataset\">\n<div class=\"row\"><div
+        class=\"col-lg-3 col-md-4 col-sm-24 col-xs-24 hidden-xs hidden-sm\"><div class=\"title
+        citation invisible-top-border\">Citation:</div>\n</div>\n<div class=\"col-lg-21
+        col-md-20 col-sm-24 col-xs-24\"><div class=\"descr top-border\"><div id=\"map-dataset-wrapper\"
+        class=\"map-wrapper hidden-print hidden-xs hidden-sm col-lg-8 col-md-8 col-sm-24
+        col-xs-24\"><div class=\"embed-responsive embed-responsive-4by3\"><div id=\"map-dataset\"
+        class=\"embed-responsive-item\" data-maptype=\"collection\" data-id-dataset=\"825428\"
+        data-viewport-bbox=\"[82.62192000000003,56.97183999999999,82.62192000000003,56.97183999999999]\"></div>\n</div>\n</div>\n<h1
+        class=\"hanging citation\"><strong><a class=\"popover-link link-unstyled\"
+        href=\"#\" data-title=\"&lt;span&gt;Kharanzhevskaya, Yulia Alexsandrovna&lt;a
+        class=&quot;searchlink glyphicon glyphicon-search&quot; target=&quot;_blank&quot;
+        rel=&quot;nofollow&quot; title=&quot;Search PANGAEA for other datasets related
+        to 'Kharanzhevskaya, Yulia Alexsandrovna'...&quot; aria-label=&quot;Search
+        PANGAEA for other datasets related to 'Kharanzhevskaya, Yulia Alexsandrovna'&quot;
+        href=&quot;//www.pangaea.de/?q=author:email:kharan@yandex.ru&quot;&gt;&lt;/a&gt;&lt;/span&gt;\"
+        data-content=\"&lt;div&gt;&lt;div&gt;&lt;a class=&quot;mail-link text-nowrap
+        wide-icon-link&quot; href=&quot;mailto:kharan@yandex.ru&quot;&gt;kharan@yandex.ru&lt;/a&gt;&lt;/div&gt;&#10;&lt;/div&gt;&#10;\">Kharanzhevskaya,
+        Yulia Alexsandrovna</a> (2014):</strong> Mire water balance within the River
+        Klyuch basin, Western Siberia [dataset publication series]. <em>PANGAEA</em>,
+        <a id=\"citation-doi-link\" rel=\"nofollow bookmark\" href=\"https://doi.org/10.1594/PANGAEA.825428\"
+        data-pubstatus=\"4\" class=\"text-linkwrap popover-link doi-link\">https://doi.org/10.1594/PANGAEA.825428</a>,<hr
+        class=\"spacer\" aria-hidden=\"true\" />\n<em>Supplement to:</em> Kharanzhevskaya,
+        YA (2014): Estimation of peculiarities and long-term dynamics of mire water
+        balance in Western Siberia. <em>Siberian Research Institute of Agriculture
+        and Peat</em>, 13 pp</h1>\n<p class=\"howtocite\"><small><span class=\"glyphicon
+        glyphicon-bullhorn\" aria-hidden=\"true\"></span> <strong>Always quote citation
+        above when using data!</strong> You can download the citation in several formats
+        below.</small></p>\n<p class=\"data-maintenance-dates\"><small><span class=\"glyphicon
+        glyphicon-calendar\" aria-hidden=\"true\"></span> <span title=\"Published:
+        2014-01-07T08:23:05\"><strong>Published:</strong> 2014-01-07</span> • <span
+        title=\"DOI registered: 2014-02-04T03:04:59\"><strong>DOI registered:</strong>
+        2014-02-04</span></small></p>\n<p class=\"data-buttons\"><a rel=\"nofollow
+        describedby\" title=\"Export citation to Reference Manager, EndNote, ProCite\"
+        href=\"?format=citation_ris\" class=\"actionbuttonlink\"><span class=\"actionbutton\">RIS
+        Citation</span></a><a rel=\"nofollow describedby\" title=\"Export citation
+        to BibTeX\" href=\"?format=citation_bibtex\" class=\"actionbuttonlink\"><span
+        class=\"actionbutton\"><span style=\"font-variant:small-caps;\">BibTeX</span>
+        Citation</span></a><a id=\"text-citation-link\" rel=\"nofollow\" title=\"Export
+        citation as plain text\" href=\"?format=citation_text\" target=\"_blank\"
+        class=\"actionbuttonlink share-link\"><span class=\"actionbutton\">Text Citation</span></a><span
+        class=\"separator\"></span><a id=\"share-button\" rel=\"nofollow\" class=\"popover-link
+        actionbuttonlink\" href=\"//www.pangaea.de/nojs.php\" data-title=\"Share Dataset
+        on Social Media\"><span class=\"actionbutton\" title=\"Share Dataset on Social
+        Media\"><span class=\"glyphicon glyphicon-share\"></span> Share</span></a><span
+        class=\"separator\"></span><a rel=\"nofollow\" target=\"_blank\" title=\"Display
+        child datasets in map\" href=\"//www.pangaea.de/advanced/map-query.php?q=incollection:825428&amp;viewportBBOX=82.62192000000003,56.97183999999999,82.62192000000003,56.97183999999999\"
+        class=\"actionbuttonlink\"><span class=\"actionbutton\">Show Map</span></a><a
+        rel=\"nofollow\" title=\"Display child datasets in Google Earth\" href=\"//www.pangaea.de/advanced/kml.php?q=incollection:825428&amp;viewportBBOX=82.62192000000003,56.97183999999999,82.62192000000003,56.97183999999999\"
+        class=\"actionbuttonlink\"><span class=\"actionbutton\">Google Earth</span></a><span
+        data-badge-type=\"1\" data-doi=\"10.1594/PANGAEA.825428\" data-badge-popover=\"right\"
+        data-hide-no-mentions=\"true\" class=\"altmetric-embed sep-before\"></span><span
+        class=\"sep-before\" id=\"usage-stats\"></span></p>\n<div class=\"clearfix\"></div>\n</div>\n</div>\n</div>\n<div
+        class=\"row\"><div class=\"col-lg-3 col-md-4 col-sm-24 col-xs-24\"><div class=\"title\">Abstract:</div>\n</div>\n<div
+        class=\"col-lg-21 col-md-20 col-sm-24 col-xs-24\"><div class=\"descr\"><div
+        class=\"abstract\">Examinations of water balance were carried out in the north-eastern
+        part of the Vasyugan mire within the area of the small basin of the River
+        Klyuch. The determination of annual precipitation, snow cover water equivalent,
+        evaporation amount and discharge were conducted separately for every dominant
+        type of the raised bog biogeocenoses, and a monthly water balance model was
+        used. As a result of this research it was noted that differences in the water
+        balance of biogeocenoses are defined by the vegetation structure, which defines
+        the process of moisture accumulation in the bog peat deposit. Statistical
+        analysis of long-term changes in water balance elements allowed us to identify
+        a decrease of overall moistening in April-May, a gradual increase of evaporation
+        in the autumn period, the growing duration of the transitional autumn-winter
+        period and a corresponding reduction of moisture content in snow cover in
+        November-December. As a result, redistribution of the hydrological regime,
+        which is characterized by a definite flow decrease in November, December and
+        April-June, and an increase in August-September is observed in the region.
+        Nevertheless, the annual characteristics of the water balance remain statistically
+        unchanged. Generally, conditions for the development of mire formation and
+        peat accumulation processes owing to excessive moistening in the warm period
+        of year will remain favourable in the nearest and medium term prospect.</div>\n</div>\n</div>\n</div>\n<div
+        class=\"row\"><div class=\"col-lg-3 col-md-4 col-sm-24 col-xs-24\"><div class=\"title\">Coverage:</div>\n</div>\n<div
+        class=\"col-lg-21 col-md-20 col-sm-24 col-xs-24\"><div class=\"descr\"><div
+        class=\"hanging geo\"><em class=\"unfarbe\">Latitude: </em><span class=\"latitude\">56.971840</span><em
+        class=\"unfarbe\"> * Longitude: </em><span class=\"longitude\">82.621920</span></div>\n<div
+        class=\"hanging\"><em class=\"unfarbe\">Date/Time Start: </em>1970-10-15T00:00:00<em
+        class=\"unfarbe\"> * Date/Time End: </em>2010-11-15T00:00:00</div>\n</div>\n</div>\n</div>\n<div
+        class=\"row\"><div class=\"col-lg-3 col-md-4 col-sm-24 col-xs-24\"><div class=\"title\">License:</div>\n</div>\n<div
+        class=\"col-lg-21 col-md-20 col-sm-24 col-xs-24\"><div class=\"descr\"><div
+        class=\"hanging\"><span><a href=\"https://creativecommons.org/licenses/by/3.0/\"
+        class=\"license-icon-CC-BY\" rel=\"license\" target=\"_blank\">Creative Commons
+        Attribution 3.0 Unported</a> (CC-BY-3.0)</span></div>\n</div>\n</div>\n</div>\n<div
+        class=\"row\"><div class=\"col-lg-3 col-md-4 col-sm-24 col-xs-24\"><div class=\"title\">Size:</div>\n</div>\n<div
+        class=\"col-lg-21 col-md-20 col-sm-24 col-xs-24\"><div class=\"descr\"><div
+        class=\"hanging\">5 datasets</div>\n</div>\n</div>\n</div>\n<div class=\"row\"><div
+        class=\"col-lg-21 col-md-20 col-sm-24 col-xs-24 col-lg-offset-3 col-md-offset-4\"><div
+        class=\"text-block top-border\">\n<h2 id=\"download\">Download Data</h2>\n<form
+        name=\"dd\" action=\"/10.1594/PANGAEA.825428\" method=\"get\" target=\"_self\"><p><a
+        rel=\"nofollow\" id=\"download-link\" class=\"dl-link\" href=\"?format=zip\">Download
+        <strong>ZIP</strong> file containing all datasets as tab-delimited text</a>
+        <small><em>&mdash; use the following character encoding:</em> <input type=\"hidden\"
+        name=\"format\" value=\"zip\" /><select id=\"contr_charset\" name=\"charset\"
+        size=\"1\" onchange=\"setCharsetCookie(this.options[this.selectedIndex].value)\"
+        style=\"font-size: 8pt\"><optgroup label=\"most used\"><option selected=\"selected\"
+        value=\"UTF-8\">UTF-8: Unicode (PANGAEA default)</option><option value=\"ISO-8859-1\">ISO-8859-1:
+        ISO Western</option><option value=\"windows-1252\">windows-1252: Windows Western</option><option
+        value=\"x-MacRoman\">x-MacRoman: Macintosh Roman</option><option value=\"IBM437\">IBM437:
+        MS-DOS compatible, United States</option><option value=\"IBM850\">IBM850:
+        MS-DOS compatible, Western</option></optgroup><optgroup label=\"others (warning:
+        missing characters may get replaced by ?)\"><option value=\"Big5\">Big5</option><option
+        value=\"Big5-HKSCS\">Big5-HKSCS</option><option value=\"CESU-8\">CESU-8</option><option
+        value=\"EUC-JP\">EUC-JP</option><option value=\"EUC-KR\">EUC-KR</option><option
+        value=\"GB18030\">GB18030</option><option value=\"GB2312\">GB2312</option><option
+        value=\"GBK\">GBK</option><option value=\"IBM-Thai\">IBM-Thai</option><option
+        value=\"IBM00858\">IBM00858</option><option value=\"IBM01140\">IBM01140</option><option
+        value=\"IBM01141\">IBM01141</option><option value=\"IBM01142\">IBM01142</option><option
+        value=\"IBM01143\">IBM01143</option><option value=\"IBM01144\">IBM01144</option><option
+        value=\"IBM01145\">IBM01145</option><option value=\"IBM01146\">IBM01146</option><option
+        value=\"IBM01147\">IBM01147</option><option value=\"IBM01148\">IBM01148</option><option
+        value=\"IBM01149\">IBM01149</option><option value=\"IBM037\">IBM037</option><option
+        value=\"IBM1026\">IBM1026</option><option value=\"IBM1047\">IBM1047</option><option
+        value=\"IBM273\">IBM273</option><option value=\"IBM277\">IBM277</option><option
+        value=\"IBM278\">IBM278</option><option value=\"IBM280\">IBM280</option><option
+        value=\"IBM284\">IBM284</option><option value=\"IBM285\">IBM285</option><option
+        value=\"IBM290\">IBM290</option><option value=\"IBM297\">IBM297</option><option
+        value=\"IBM420\">IBM420</option><option value=\"IBM424\">IBM424</option><option
+        value=\"IBM500\">IBM500</option><option value=\"IBM775\">IBM775</option><option
+        value=\"IBM852\">IBM852</option><option value=\"IBM855\">IBM855</option><option
+        value=\"IBM857\">IBM857</option><option value=\"IBM860\">IBM860</option><option
+        value=\"IBM861\">IBM861</option><option value=\"IBM862\">IBM862</option><option
+        value=\"IBM863\">IBM863</option><option value=\"IBM864\">IBM864</option><option
+        value=\"IBM865\">IBM865</option><option value=\"IBM866\">IBM866</option><option
+        value=\"IBM868\">IBM868</option><option value=\"IBM869\">IBM869</option><option
+        value=\"IBM870\">IBM870</option><option value=\"IBM871\">IBM871</option><option
+        value=\"IBM918\">IBM918</option><option value=\"ISO-2022-JP\">ISO-2022-JP</option><option
+        value=\"ISO-2022-JP-2\">ISO-2022-JP-2</option><option value=\"ISO-2022-KR\">ISO-2022-KR</option><option
+        value=\"ISO-8859-13\">ISO-8859-13</option><option value=\"ISO-8859-15\">ISO-8859-15</option><option
+        value=\"ISO-8859-16\">ISO-8859-16</option><option value=\"ISO-8859-2\">ISO-8859-2</option><option
+        value=\"ISO-8859-3\">ISO-8859-3</option><option value=\"ISO-8859-4\">ISO-8859-4</option><option
+        value=\"ISO-8859-5\">ISO-8859-5</option><option value=\"ISO-8859-6\">ISO-8859-6</option><option
+        value=\"ISO-8859-7\">ISO-8859-7</option><option value=\"ISO-8859-8\">ISO-8859-8</option><option
+        value=\"ISO-8859-9\">ISO-8859-9</option><option value=\"JIS_X0201\">JIS_X0201</option><option
+        value=\"JIS_X0212-1990\">JIS_X0212-1990</option><option value=\"KOI8-R\">KOI8-R</option><option
+        value=\"KOI8-U\">KOI8-U</option><option value=\"Shift_JIS\">Shift_JIS</option><option
+        value=\"TIS-620\">TIS-620</option><option value=\"US-ASCII\">US-ASCII</option><option
+        value=\"UTF-16\">UTF-16</option><option value=\"UTF-16BE\">UTF-16BE</option><option
+        value=\"UTF-16LE\">UTF-16LE</option><option value=\"UTF-32\">UTF-32</option><option
+        value=\"UTF-32BE\">UTF-32BE</option><option value=\"UTF-32LE\">UTF-32LE</option><option
+        value=\"windows-1250\">windows-1250</option><option value=\"windows-1251\">windows-1251</option><option
+        value=\"windows-1253\">windows-1253</option><option value=\"windows-1254\">windows-1254</option><option
+        value=\"windows-1255\">windows-1255</option><option value=\"windows-1256\">windows-1256</option><option
+        value=\"windows-1257\">windows-1257</option><option value=\"windows-1258\">windows-1258</option><option
+        value=\"windows-31j\">windows-31j</option><option value=\"x-Big5-HKSCS-2001\">x-Big5-HKSCS-2001</option><option
+        value=\"x-Big5-Solaris\">x-Big5-Solaris</option><option value=\"x-euc-jp-linux\">x-euc-jp-linux</option><option
+        value=\"x-EUC-TW\">x-EUC-TW</option><option value=\"x-eucJP-Open\">x-eucJP-Open</option><option
+        value=\"x-IBM1006\">x-IBM1006</option><option value=\"x-IBM1025\">x-IBM1025</option><option
+        value=\"x-IBM1046\">x-IBM1046</option><option value=\"x-IBM1097\">x-IBM1097</option><option
+        value=\"x-IBM1098\">x-IBM1098</option><option value=\"x-IBM1112\">x-IBM1112</option><option
+        value=\"x-IBM1122\">x-IBM1122</option><option value=\"x-IBM1123\">x-IBM1123</option><option
+        value=\"x-IBM1124\">x-IBM1124</option><option value=\"x-IBM1129\">x-IBM1129</option><option
+        value=\"x-IBM1166\">x-IBM1166</option><option value=\"x-IBM1364\">x-IBM1364</option><option
+        value=\"x-IBM1381\">x-IBM1381</option><option value=\"x-IBM1383\">x-IBM1383</option><option
+        value=\"x-IBM29626C\">x-IBM29626C</option><option value=\"x-IBM300\">x-IBM300</option><option
+        value=\"x-IBM33722\">x-IBM33722</option><option value=\"x-IBM737\">x-IBM737</option><option
+        value=\"x-IBM833\">x-IBM833</option><option value=\"x-IBM834\">x-IBM834</option><option
+        value=\"x-IBM856\">x-IBM856</option><option value=\"x-IBM874\">x-IBM874</option><option
+        value=\"x-IBM875\">x-IBM875</option><option value=\"x-IBM921\">x-IBM921</option><option
+        value=\"x-IBM922\">x-IBM922</option><option value=\"x-IBM930\">x-IBM930</option><option
+        value=\"x-IBM933\">x-IBM933</option><option value=\"x-IBM935\">x-IBM935</option><option
+        value=\"x-IBM937\">x-IBM937</option><option value=\"x-IBM939\">x-IBM939</option><option
+        value=\"x-IBM942\">x-IBM942</option><option value=\"x-IBM942C\">x-IBM942C</option><option
+        value=\"x-IBM943\">x-IBM943</option><option value=\"x-IBM943C\">x-IBM943C</option><option
+        value=\"x-IBM948\">x-IBM948</option><option value=\"x-IBM949\">x-IBM949</option><option
+        value=\"x-IBM949C\">x-IBM949C</option><option value=\"x-IBM950\">x-IBM950</option><option
+        value=\"x-IBM964\">x-IBM964</option><option value=\"x-IBM970\">x-IBM970</option><option
+        value=\"x-ISCII91\">x-ISCII91</option><option value=\"x-ISO-2022-CN-CNS\">x-ISO-2022-CN-CNS</option><option
+        value=\"x-ISO-2022-CN-GB\">x-ISO-2022-CN-GB</option><option value=\"x-iso-8859-11\">x-iso-8859-11</option><option
+        value=\"x-JIS0208\">x-JIS0208</option><option value=\"x-Johab\">x-Johab</option><option
+        value=\"x-MacArabic\">x-MacArabic</option><option value=\"x-MacCentralEurope\">x-MacCentralEurope</option><option
+        value=\"x-MacCroatian\">x-MacCroatian</option><option value=\"x-MacCyrillic\">x-MacCyrillic</option><option
+        value=\"x-MacDingbat\">x-MacDingbat</option><option value=\"x-MacGreek\">x-MacGreek</option><option
+        value=\"x-MacHebrew\">x-MacHebrew</option><option value=\"x-MacIceland\">x-MacIceland</option><option
+        value=\"x-MacRomania\">x-MacRomania</option><option value=\"x-MacSymbol\">x-MacSymbol</option><option
+        value=\"x-MacThai\">x-MacThai</option><option value=\"x-MacTurkish\">x-MacTurkish</option><option
+        value=\"x-MacUkraine\">x-MacUkraine</option><option value=\"x-MS932_0213\">x-MS932_0213</option><option
+        value=\"x-MS950-HKSCS\">x-MS950-HKSCS</option><option value=\"x-MS950-HKSCS-XP\">x-MS950-HKSCS-XP</option><option
+        value=\"x-mswin-936\">x-mswin-936</option><option value=\"x-PCK\">x-PCK</option><option
+        value=\"x-SJIS_0213\">x-SJIS_0213</option><option value=\"x-UTF-16LE-BOM\">x-UTF-16LE-BOM</option><option
+        value=\"X-UTF-32BE-BOM\">X-UTF-32BE-BOM</option><option value=\"X-UTF-32LE-BOM\">X-UTF-32LE-BOM</option><option
+        value=\"x-windows-50220\">x-windows-50220</option><option value=\"x-windows-50221\">x-windows-50221</option><option
+        value=\"x-windows-874\">x-windows-874</option><option value=\"x-windows-949\">x-windows-949</option><option
+        value=\"x-windows-950\">x-windows-950</option><option value=\"x-windows-iso2022jp\">x-windows-iso2022jp</option></optgroup></select>\n</small></p></form>\n\n</div></div></div><div
+        class=\"row\"><div class=\"col-lg-21 col-md-20 col-sm-24 col-xs-24 col-lg-offset-3
+        col-md-offset-4\"><div class=\"text-block top-border\">\n<h2 id=\"dslist\">Datasets
+        listed in this publication series</h2>\n<ol start=\"1\">\n<li class=\"hanging\"><a
+        rel=\"follow\" href=\"https://doi.pangaea.de/10.1594/PANGAEA.825427\"><strong>Kharanzhevskaya,
+        YA (2014): </strong>(Fig. 1) Investigation site Klyuch River basin.</a> <small
+        class=\"text-linkwrap doi-link\">https://doi.org/10.1594/PANGAEA.825427</small></li>\n\n<li
+        class=\"hanging\"><a rel=\"follow\" href=\"https://doi.pangaea.de/10.1594/PANGAEA.825423\"><strong>Kharanzhevskaya,
+        YA (2014): </strong>(Fig. 2) Combined schedule of mire water level (pine-shrub-sphagnum
+        biogeocenosis) and river water in an average water year in the Klyuch River
+        basin (2007).</a> <small class=\"text-linkwrap doi-link\">https://doi.org/10.1594/PANGAEA.825423</small></li>\n\n<li
+        class=\"hanging\"><a rel=\"follow\" href=\"https://doi.pangaea.de/10.1594/PANGAEA.825424\"><strong>Kharanzhevskaya,
+        YA (2014): </strong>(Fig. 3) Long-term dynamics of runoff from Vasyugan mire
+        (2006-2010).</a> <small class=\"text-linkwrap doi-link\">https://doi.org/10.1594/PANGAEA.825424</small></li>\n\n<li
+        class=\"hanging\"><a rel=\"follow\" href=\"https://doi.pangaea.de/10.1594/PANGAEA.825425\"><strong>Kharanzhevskaya,
+        YA (2014): </strong>(Fig. 4) Long-term dynamics of the mean value of mire
+        water level (May-September) in the sedge-sphagnum swamp.</a> <small class=\"text-linkwrap
+        doi-link\">https://doi.org/10.1594/PANGAEA.825425</small></li>\n\n<li class=\"hanging\"><a
+        rel=\"follow\" href=\"https://doi.pangaea.de/10.1594/PANGAEA.825426\"><strong>Kharanzhevskaya,
+        YA (2014): </strong>(Fig. 5) Dynamics of the evaporation of the Klyuch River
+        basin in October over a long-term period.</a> <small class=\"text-linkwrap
+        doi-link\">https://doi.org/10.1594/PANGAEA.825426</small></li>\n\n</ol>\n</div></div></div><div
+        id=\"recommendations\"></div>\n</div>\r\n</div>\r\n</div>\r\n</div>\r\n</div>\r\n<div
+        id=\"footer-wrapper\" class=\"top-border hidden-print\">\r\n  <div class=\"container-fluid\">\r\n
+        \   <footer class=\"row\"><!-- volle Screen-Breite -->\r\n      <div class=\"content-wrapper\"><!--
+        max. Breite -->\r\n        <div class=\"blindspalte col-lg-3 col-md-4 col-sm-4
+        col-xs-4\"></div>\r\n        <div id=\"footer-hosted-by-area\" class=\"col-lg-21
+        col-md-9 col-sm-24 col-xs-24\">\r\n          <div class=\"col-lg-12 col-md-24
+        col-sm-24 col-xs-24\">\r\n            <div class=\"headline underlined\">\r\n
+        \             PANGAEA is hosted by\r\n            </div>\r\n            \r\n
+        \           <div>\r\n              <p>\r\n                Alfred Wegener Institute,
+        Helmholtz Center for Polar and Marine Research (AWI)<br/>\r\n                Center
+        for Marine Environmental Sciences, University of Bremen (MARUM)\r\n              </p>\r\n
+        \           </div>\r\n\r\n            <div class=\"headline underlined\">\r\n
+        \             The System is supported by\r\n            </div>\r\n            \r\n
+        \           <div>\r\n              <p>\r\n                The European Commission,
+        Research<br/>\r\n                Federal Ministry of Research, Technology
+        and Space (BMFTR)<br/>\r\n                Deutsche Forschungsgemeinschaft
+        (DFG)<br/>\r\n                International Ocean Discovery Program (IODP)\r\n
+        \             </p>\r\n            </div>\r\n\r\n            <div class=\"headline
+        underlined\">\r\n              Citation\r\n            </div>\r\n\r\n            <div>\r\n
+        \             <p>\r\n                <strong>Felden, J; Möller, L; Schindler,
+        U; Huber, R; Schumacher, S; Koppe, R; Diepenbroek, M; Glöckner, FO (2023):</strong>\r\n
+        \               PANGAEA &ndash; Data Publisher for Earth &amp; Environmental
+        Science. <em>Scientific Data</em>, <strong>10(1)</strong>, 347,\r\n                <a
+        class=\"text-linkwrap doi-link\" href=\"https://doi.org/10.1038/s41597-023-02269-x\"
+        target=\"_blank\">https://doi.org/10.1038/s41597-023-02269-x</a>\r\n              </p>\r\n
+        \           </div>\r\n          </div>\r\n\r\n          <div class=\"col-lg-12
+        col-md-24 col-sm-24 col-xs-24\">\r\n            <div class=\"headline underlined\">\r\n
+        \             PANGAEA is certified by\r\n            </div>\r\n            \r\n
+        \           <div>\r\n              <a href=\"//www.worlddatasystem.org/\"
+        target=\"_blank\" title=\"World Data System\">\r\n                <img class=\"col-lg-6
+        col-md-6 col-sm-6 col-xs-6\" src=\"//www.pangaea.de/assets/v.6b7105a5fd061af46552d8c6ee53c11c/logos/logo-wds-block.png\"
+        alt=\"World Data System\">\r\n              </a>\r\n              <a href=\"//www.wmo.int/\"
+        target=\"_blank\" title=\"World Meteorological Organization\">\r\n                <img
+        class=\"col-lg-6 col-md-6 col-sm-6 col-xs-6\" src=\"//www.pangaea.de/assets/v.6b7105a5fd061af46552d8c6ee53c11c/logos/logo-wmo-block.png\"
+        alt=\"World Meteorological Organization\">\r\n              </a>\r\n              <a
+        href=\"//www.coretrustseal.org/\" target=\"_blank\" title=\"CoreTrustSeal\">\r\n
+        \               <img class=\"col-lg-6 col-md-6 col-sm-6 col-xs-6\" src=\"//www.pangaea.de/assets/v.6b7105a5fd061af46552d8c6ee53c11c/logos/logo-coretrustseal-block.png\"
+        alt=\"CoreTrustSeal\">\r\n              </a>\r\n            </div>\r\n          </div>\r\n
+        \       </div>\r\n                \r\n        <div id=\"footer-menu-area\"
+        class=\"col-lg-24 col-md-24 col-sm-24 col-xs-24\">\r\n          <div class=\"blindspalte
+        col-lg-3 col-md-4 col-sm-4 col-xs-4\"></div>\r\n          <div id=\"footer-menu-wrapper\"
+        class=\"col-lg-21 col-md-20 col-sm-24 col-xs-24\">\r\n            <nav id=\"footer-nav\">\r\n
+        \             <ul>\r\n                <li id=\"about-legal-notice\">\r\n                  <a
+        href=\"//www.pangaea.de/about/legal.php\">Legal notice</a>\r\n                </li>\r\n
+        \               <li id=\"about-term\">\r\n                  <a href=\"//www.pangaea.de/about/terms.php\">Terms
+        of use</a>\r\n                </li>\r\n                <li id=\"about-privacy-policy\">\r\n
+        \                 <a href=\"//www.pangaea.de/about/privacypolicy.php\">Privacy
+        policy</a>\r\n                </li>\r\n                <li id=\"about-cookies\">\r\n
+        \                 <a href=\"//www.pangaea.de/about/cookies.php\">Cookies</a>\r\n
+        \               </li>\r\n                <li id=\"about-jobs\">\r\n                  <a
+        href=\"//www.pangaea.de/about/jobs.php\">Jobs</a>\r\n                </li>\r\n
+        \               <li id=\"about-contact\">\r\n                  <a href=\"//www.pangaea.de/contact/\">Contact</a>\r\n
+        \               </li>\r\n              </ul>\r\n            </nav>\r\n            <div
+        class=\"clearfix\"></div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n
+        \   </footer>\r\n  </div>\r\n</div>\r\n</body>\n</html>\n"
+  recorded_at: 2025-07-24 03:41:50
+recorded_with: VCR-vcr/2.0.0

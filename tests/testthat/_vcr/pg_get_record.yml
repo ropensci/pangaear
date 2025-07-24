@@ -1,38 +1,26 @@
 http_interactions:
 - request:
-    method: get
+    method: GET
     uri: https://ws.pangaea.de/oai/provider?verb=GetRecord&metadataPrefix=oai_dc&identifier=oai%3Apangaea.de%3Adoi%3A10.1594%2FPANGAEA.788382
-    body:
-      encoding: ''
-      string: no
-    headers:
-      Accept: application/json, text/xml, application/xml, */*
   response:
-    status:
-      status_code: 200
-      category: Success
-      reason: OK
-      message: 'Success: (200) OK'
+    status: 200
     headers:
-      date: Wed, 22 Jan 2020 17:17:26 GMT
+      server: nginx/1.29.0
+      date: Thu, 24 Jul 2025 03:41:48 GMT
       content-type: text/xml;charset=utf-8
-      content-length: '1855'
-      connection: keep-alive
+      content-length: '1883'
+      x-powered-by: Jetty(12.0.23)
+      vary: Origin, Accept-Encoding
       content-encoding: deflate
-      vary: Accept-Encoding
-      x-powered-by: Jetty(9.4.21.v20190926)
-      server: PANGAEA/2.0
+      alt-svc: h3=":443"; ma=2592000
       x-ua-compatible: IE=Edge
       x-content-type-options: nosniff
       x-frame-options: SAMEORIGIN
     body:
-      encoding: UTF-8
-      file: no
       string: '<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl"
         href="oai2.xsl"?><OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/
-        http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><responseDate>2020-01-22T17:17:26Z</responseDate><request
-        identifier="oai:pangaea.de:doi:10.1594/PANGAEA.788382" metadataPrefix="oai_dc"
-        verb="GetRecord">https://ws.pangaea.de/oai/provider</request><GetRecord><record><header><identifier>oai:pangaea.de:doi:10.1594/PANGAEA.788382</identifier><datestamp>2020-01-18T03:11:42Z</datestamp><setSpec>citable</setSpec><setSpec>supplement</setSpec><setSpec>topicChemistry</setSpec><setSpec>topicLithosphere</setSpec></header><metadata><oai_dc:dc
+        http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><responseDate>2025-07-24T03:41:48Z</responseDate><request
+        verb="GetRecord" metadataPrefix="oai_dc" identifier="oai:pangaea.de:doi:10.1594/PANGAEA.788382">https://ws.pangaea.de/oai/provider</request><GetRecord><record><header><identifier>oai:pangaea.de:doi:10.1594/PANGAEA.788382</identifier><datestamp>2024-07-19T19:51:50Z</datestamp><setSpec>citable</setSpec><setSpec>supplement</setSpec><setSpec>topicChemistry</setSpec><setSpec>topicLithosphere</setSpec></header><metadata><oai_dc:dc
         xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/
         http://www.openarchives.org/OAI/2.0/oai_dc.xsd"><dc:title>Trace metals in
@@ -44,8 +32,8 @@ http_interactions:
         L; Galkin, Sergey V; Dara, O M (2012): Trace metal bioaccumulation in the
         shells of mussels and clams at deep-sea hydrothermal vent fields. Translated
         from Geokhimiya, 2012, 50(2), 147-163, Geochemistry International, 50(2),
-        133-147, https://doi.org/10.1134/S0016702911120056</dc:source><dc:publisher>PANGAEA</dc:publisher><dc:date>2012-09-07</dc:date><dc:type>Dataset</dc:type><dc:format>application/zip,
-        5 datasets</dc:format><dc:identifier>https://doi.pangaea.de/10.1594/PANGAEA.788382</dc:identifier><dc:identifier>https://doi.org/10.1594/PANGAEA.788382</dc:identifier><dc:description>Bioaccumulation
+        133-147, https://doi.org/10.1134/S0016702911120056</dc:source><dc:publisher>PANGAEA</dc:publisher><dc:date>2012</dc:date><dc:type>dataset
+        publication series</dc:type><dc:format>application/zip, 5 datasets</dc:format><dc:identifier>https://doi.pangaea.de/10.1594/PANGAEA.788382</dc:identifier><dc:identifier>https://doi.org/10.1594/PANGAEA.788382</dc:identifier><dc:description>Bioaccumulation
         of trace metals in carbonate shells of mussels and clams was investigated
         at seven hydrothermal vent fields of the Mid-Atlantic Ridge (Menez Gwen, Snake
         Pit, Rainbow, and Broken Spur) and the Eastern Pacific (9°N and 21°N at the
@@ -67,9 +55,10 @@ http_interactions:
         adsorption on shell surfaces was estimated to be no higher than 50% of total
         amount and varied from 14% for Fe to 46% for Mn.</dc:description><dc:language>en</dc:language><dc:rights>CC-BY-3.0:
         Creative Commons Attribution 3.0 Unported</dc:rights><dc:rights>Access constraints:
-        unrestricted</dc:rights><dc:coverage>MEDIAN LATITUDE: 29.154888 * MEDIAN LONGITUDE:
-        -62.164078 * SOUTH-BOUND LATITUDE: 9.833000 * WEST-BOUND LONGITUDE: -111.400000
-        * NORTH-BOUND LATITUDE: 37.840000 * EAST-BOUND LONGITUDE: -31.516667</dc:coverage><dc:subject>Archive
-        of Ocean Data; ARCOD</dc:subject></oai_dc:dc></metadata></record></GetRecord></OAI-PMH>'
-  recorded_at: 2020-01-22 17:17:27 GMT
-  recorded_with: vcr/0.4.0, webmockr/0.5.0
+        unrestricted</dc:rights><dc:rights>info:eu-repo/semantics/openAccess</dc:rights><dc:coverage>MEDIAN
+        LATITUDE: 29.154888 * MEDIAN LONGITUDE: -62.164078 * SOUTH-BOUND LATITUDE:
+        9.833000 * WEST-BOUND LONGITUDE: -111.400000 * NORTH-BOUND LATITUDE: 37.840000
+        * EAST-BOUND LONGITUDE: -31.516667</dc:coverage><dc:subject>Archive of Ocean
+        Data; ARCOD</dc:subject></oai_dc:dc></metadata></record></GetRecord></OAI-PMH>'
+  recorded_at: 2025-07-24 03:41:48
+recorded_with: VCR-vcr/2.0.0

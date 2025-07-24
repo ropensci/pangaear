@@ -33,7 +33,8 @@ Suggests:
     testthat,
     vcr,
     markdown
-RoxygenNote: 7.1.1
+Remotes: ropensci/vcr
+RoxygenNote: 7.3.2
 X-schema.org-applicationCategory: Biodiversity
 X-schema.org-keywords: Pangaea, environmental science, earth science, archive, paleontology, ecology, chemistry, atmosphere
 X-schema.org-isPartOf: https://ropensci.org

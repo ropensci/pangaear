@@ -1,0 +1,496 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://doi.pangaea.de/10.1594/PANGAEA.860500
+  response:
+    status: 200
+    headers:
+      status: 'HTTP/2 200 '
+      server: nginx/1.29.0
+      date: Thu, 24 Jul 2025 03:41:50 GMT
+      content-type: text/html;charset=utf-8
+      x-powered-by: Jetty(12.0.23)
+      vary: Origin, Cookie, Authorization, Accept, Accept-Encoding
+      set-cookie: pansessid=44c95a0e0c3a97dfa16a515b9d21322f; Path=/; Domain=.pangaea.de;
+        Secure; HttpOnly; SameSite=Lax
+      cache-control: public
+      x-cid: 44c95a0e0c3a97dfa16a515b9d21322f
+      content-encoding: gzip
+      link: <https://doi.org/10.1594/PANGAEA.860500>;rel="cite-as", <https://doi.pangaea.de/10.1594/PANGAEA.860500?format=metadata_panmd>;rel="describedby";type="application/vnd.pangaea.metadata+xml",
+        <https://doi.pangaea.de/10.1594/PANGAEA.860500?format=metadata_jsonld>;rel="describedby";type="application/ld+json",
+        <https://doi.pangaea.de/10.1594/PANGAEA.860500?format=metadata_datacite4>;rel="describedby";type="application/vnd.datacite.datacite+xml",
+        <https://doi.pangaea.de/10.1594/PANGAEA.860500?format=metadata_iso19139>;rel="describedby";type="application/vnd.iso19139.metadata+xml",
+        <https://doi.pangaea.de/10.1594/PANGAEA.860500?format=metadata_dif>;rel="describedby";type="application/vnd.nasa.dif-metadata+xml",
+        <https://doi.pangaea.de/10.1594/PANGAEA.860500?format=citation_text>;rel="describedby";type="text/x-bibliography",
+        <https://doi.pangaea.de/10.1594/PANGAEA.860500?format=citation_ris>;rel="describedby";type="application/x-research-info-systems",
+        <https://doi.pangaea.de/10.1594/PANGAEA.860500?format=citation_bibtex>;rel="describedby";type="application/x-bibtex",
+        <https://store.pangaea.de/Publications/Bartsch-etal_2008/open_water_central_siberia_ASAR_WS_2003.zip>;rel="item";type="application/zip",
+        <https://orcid.org/0000-0002-3737-7931>;rel="author", <https://orcid.org/0000-0001-7704-6857>;rel="author",
+        <https://creativecommons.org/licenses/by/3.0/>;rel="license", <https://schema.org/Dataset>;rel="type",
+        <https://schema.org/AboutPage>;rel="type", <https://doi.pangaea.de/10.1594/PANGAEA.860500?format=linkset>;rel="linkset";type="application/linkset",
+        <https://doi.pangaea.de/10.1594/PANGAEA.860500?format=linkset_json>;rel="linkset";type="application/linkset+json"
+      x-robots-tag: index,follow,archive
+      alt-svc: h3=":443"; ma=2592000
+      strict-transport-security: max-age=31536000
+      x-ua-compatible: IE=Edge
+      x-content-type-options: nosniff
+      x-frame-options: SAMEORIGIN
+    body:
+      string: "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\n<meta charset=\"UTF-8\">\r\n<meta
+        name=\"viewport\" content=\"width=device-width, initial-scale=1, minimum-scale=1,
+        maximum-scale=1, user-scalable=no\">\r\n<link rel=\"stylesheet\" href=\"//fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,700,700italic,600italic,300,300italic,800,800italic\">\n<link
+        rel=\"stylesheet\" href=\"//www.pangaea.de/assets/v.6b7105a5fd061af46552d8c6ee53c11c/bootstrap-24col/css/bootstrap.min.css\">\n<link
+        rel=\"stylesheet\" href=\"//www.pangaea.de/assets/v.6b7105a5fd061af46552d8c6ee53c11c/css/pangaea.css\">\n<link
+        rel=\"stylesheet\" href=\"//cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css\">\n<!--[if
+        lte IE 9]>\r\n<style>#topics-pulldown-wrapper label:after { display:none;
+        }</style>\r\n<![endif]-->\r\n<link rel=\"shortcut icon\" href=\"//www.pangaea.de/assets/v.6b7105a5fd061af46552d8c6ee53c11c/favicon.ico\">\r\n<link
+        rel=\"icon\" href=\"//www.pangaea.de/assets/v.6b7105a5fd061af46552d8c6ee53c11c/favicon.ico\"
+        type=\"image/vnd.microsoft.icon\">\r\n<link rel=\"image_src\" type=\"image/png\"
+        href=\"https://www.pangaea.de/assets/social-icons/pangaea-share.png\">\r\n<meta
+        property=\"og:image\" content=\"https://www.pangaea.de/assets/social-icons/pangaea-share.png\">\r\n<script
+        type=\"text/javascript\" src=\"//cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js\"></script>\n<script
+        type=\"text/javascript\" src=\"//cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.0/jquery.matchHeight-min.js\"></script>\n<script
+        type=\"text/javascript\" src=\"//cdnjs.cloudflare.com/ajax/libs/jquery.appear/0.4.1/jquery.appear.min.js\"></script>\n<script
+        type=\"text/javascript\" src=\"//cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js\"></script>\n<script
+        type=\"text/javascript\" src=\"//www.pangaea.de/assets/v.6b7105a5fd061af46552d8c6ee53c11c/bootstrap-24col/js/bootstrap.min.js\"></script>\n<script
+        type=\"text/javascript\" src=\"//cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js\"></script>\n<script
+        type=\"text/javascript\" src=\"//www.pangaea.de/assets/v.6b7105a5fd061af46552d8c6ee53c11c/js/datacombo-min.js\"></script>\n<title>Bartsch,
+        A et al. (2008): Permanent open water surfaces in central Siberia from ENVISAT
+        ASAR wide swath data 2003/2004, link to shapefile</title>\n<meta name=\"title\"
+        content=\"Permanent open water surfaces in central Siberia from ENVISAT ASAR
+        wide swath data 2003/2004, link to shapefile\" />\n<meta name=\"author\" content=\"Bartsch,
+        Annett; Pathe, Carsten; Wagner, Wolfgang; Scipal, Klaus\" />\n<meta name=\"date\"
+        content=\"2008\" />\n<meta name=\"robots\" content=\"index,follow,archive\"
+        />\n<meta name=\"description\" content=\"Bartsch, Annett; Pathe, Carsten;
+        Wagner, Wolfgang; Scipal, Klaus (2008): Permanent open water surfaces in central
+        Siberia from ENVISAT ASAR wide swath data 2003/2004, link to shapefile [dataset].
+        PANGAEA, https://doi.org/10.1594/PANGAEA.860500, Supplement to: Bartsch, A
+        et al. (2008): Detection of permanent open water surfaces in central Siberia
+        with ENVISAT ASAR wide swath data with special emphasis on the estimation
+        of methane fluxes from tundra wetlands. Hydrology Research, 39(2), 89-100,
+        https://doi.org/10.2166/nh.2008.041\" />\n<meta name=\"geo.position\" content=\"63.472600;90.343200\"
+        />\n<meta name=\"ICBM\" content=\"63.472600, 90.343200\" />\n<!--BEGIN: Dublin
+        Core description-->\n<link rel=\"schema.DC\" href=\"http://purl.org/dc/elements/1.1/\"
+        />\n<link rel=\"schema.DCTERMS\" href=\"http://purl.org/dc/terms/\" />\n<meta
+        name=\"DC.title\" content=\"Permanent open water surfaces in central Siberia
+        from ENVISAT ASAR wide swath data 2003/2004, link to shapefile\" />\n<meta
+        name=\"DC.creator\" content=\"Bartsch, Annett\" />\n<meta name=\"DC.creator\"
+        content=\"Pathe, Carsten\" />\n<meta name=\"DC.creator\" content=\"Wagner,
+        Wolfgang\" />\n<meta name=\"DC.creator\" content=\"Scipal, Klaus\" />\n<meta
+        name=\"DC.publisher\" content=\"PANGAEA\" />\n<meta name=\"DC.source\" content=\"Supplement
+        to: Bartsch, A et al. (2008): Detection of permanent open water surfaces in
+        central Siberia with ENVISAT ASAR wide swath data with special emphasis on
+        the estimation of methane fluxes from tundra wetlands. Hydrology Research,
+        39(2), 89-100, https://doi.org/10.2166/nh.2008.041\" />\n<meta name=\"DC.date\"
+        content=\"2008\" scheme=\"DCTERMS.W3CDTF\" />\n<meta name=\"DC.type\" content=\"dataset\"
+        />\n<meta name=\"DC.language\" content=\"en\" scheme=\"DCTERMS.RFC3066\" />\n<meta
+        name=\"DCTERMS.license\" scheme=\"DCTERMS.URI\" content=\"https://creativecommons.org/licenses/by/3.0/\"
+        />\n<meta name=\"DC.identifier\" content=\"https://doi.org/10.1594/PANGAEA.860500\"
+        scheme=\"DCTERMS.URI\" />\n<meta name=\"DC.rights\" scheme=\"DCTERMS.URI\"
+        content=\"info:eu-repo/semantics/openAccess\" />\n<meta name=\"DC.format\"
+        content=\"application/zip, 4 MBytes\" />\n<meta name=\"DC.relation\" content=\"Bartsch,
+        Annett; Kidd, Richard A; Pathe, Carsten; Scipal, Klaus; Wagner, Wolfgang (2007):
+        Satellite radar imagery for monitoring inland wetlands in boreal and sub-arctic
+        environments. Aquatic Conservation-Marine and Freshwater Ecosystems, 17(3),
+        305-317, https://doi.org/10.1002/aqc.836\" />\n<meta name=\"DC.relation\"
+        content=\"Reschke, Julia; Bartsch, Annett; Schlaffer, Stefan; Schepaschenko,
+        Dmitry (2012): Wetland maps including open water extent dynamics based on
+        ENVISAT ASAR WS for Siberia, 2007 and 2008, links to GeoTIFFs [dataset]. PANGAEA,
+        https://doi.org/10.1594/PANGAEA.834502\" />\n<meta name=\"DC.relation\" content=\"Schlaffer,
+        Stefan; Sabel, Daniel; Bartsch, Annett; Wagner, Wolfgang (2012): Regional
+        water bodies remote sensing products with links to geotiff images [dataset].
+        PANGAEA, https://doi.org/10.1594/PANGAEA.779754\" />\n<!--END: Dublin Core
+        description-->\n<script type=\"text/javascript\" src=\"//d1bxh8uas1mnw7.cloudfront.net/assets/embed.js\"></script>\n<link
+        rel=\"cite-as\" href=\"https://doi.org/10.1594/PANGAEA.860500\">\n<link rel=\"describedby\"
+        href=\"https://doi.pangaea.de/10.1594/PANGAEA.860500?format=metadata_panmd\"
+        type=\"application/vnd.pangaea.metadata+xml\">\n<link rel=\"describedby\"
+        href=\"https://doi.pangaea.de/10.1594/PANGAEA.860500?format=metadata_jsonld\"
+        type=\"application/ld+json\">\n<link rel=\"describedby\" href=\"https://doi.pangaea.de/10.1594/PANGAEA.860500?format=metadata_datacite4\"
+        type=\"application/vnd.datacite.datacite+xml\">\n<link rel=\"describedby\"
+        href=\"https://doi.pangaea.de/10.1594/PANGAEA.860500?format=metadata_iso19139\"
+        type=\"application/vnd.iso19139.metadata+xml\">\n<link rel=\"describedby\"
+        href=\"https://doi.pangaea.de/10.1594/PANGAEA.860500?format=metadata_dif\"
+        type=\"application/vnd.nasa.dif-metadata+xml\">\n<link rel=\"describedby\"
+        href=\"https://doi.pangaea.de/10.1594/PANGAEA.860500?format=citation_text\"
+        type=\"text/x-bibliography\">\n<link rel=\"describedby\" href=\"https://doi.pangaea.de/10.1594/PANGAEA.860500?format=citation_ris\"
+        type=\"application/x-research-info-systems\">\n<link rel=\"describedby\" href=\"https://doi.pangaea.de/10.1594/PANGAEA.860500?format=citation_bibtex\"
+        type=\"application/x-bibtex\">\n<link rel=\"item\" href=\"https://store.pangaea.de/Publications/Bartsch-etal_2008/open_water_central_siberia_ASAR_WS_2003.zip\"
+        type=\"application/zip\">\n<link rel=\"author\" href=\"https://orcid.org/0000-0002-3737-7931\">\n<link
+        rel=\"author\" href=\"https://orcid.org/0000-0001-7704-6857\">\n<link rel=\"license\"
+        href=\"https://creativecommons.org/licenses/by/3.0/\">\n<link rel=\"type\"
+        href=\"https://schema.org/Dataset\">\n<link rel=\"type\" href=\"https://schema.org/AboutPage\">\n<link
+        rel=\"linkset\" href=\"https://doi.pangaea.de/10.1594/PANGAEA.860500?format=linkset\"
+        type=\"application/linkset\">\n<link rel=\"linkset\" href=\"https://doi.pangaea.de/10.1594/PANGAEA.860500?format=linkset_json\"
+        type=\"application/linkset+json\">\n<script type=\"application/ld+json\">{\"@context\":\"http://schema.org/\",\"@id\":\"https://doi.org/10.1594/PANGAEA.860500\",\"@type\":\"Dataset\",\"identifier\":\"https://doi.org/10.1594/PANGAEA.860500\",\"url\":\"https://doi.pangaea.de/10.1594/PANGAEA.860500\",\"creator\":[{\"@id\":\"https://orcid.org/0000-0002-3737-7931\",\"@type\":\"Person\",\"name\":\"Annett
+        Bartsch\",\"familyName\":\"Bartsch\",\"givenName\":\"Annett\",\"identifier\":\"https://orcid.org/0000-0002-3737-7931\",\"email\":\"annett.bartsch@bgeos.com\"},{\"@type\":\"Person\",\"name\":\"Carsten
+        Pathe\",\"familyName\":\"Pathe\",\"givenName\":\"Carsten\"},{\"@id\":\"https://orcid.org/0000-0001-7704-6857\",\"@type\":\"Person\",\"name\":\"Wolfgang
+        Wagner\",\"familyName\":\"Wagner\",\"givenName\":\"Wolfgang\",\"identifier\":\"https://orcid.org/0000-0001-7704-6857\",\"url\":\"http://www.ipf.tuwien.ac.at/index.php/staff/58-wagner-wolfgang.html\",\"email\":\"ww@ipf.tuwien.ac.at\"},{\"@type\":\"Person\",\"name\":\"Klaus
+        Scipal\",\"familyName\":\"Scipal\",\"givenName\":\"Klaus\"}],\"name\":\"Permanent
+        open water surfaces in central Siberia from ENVISAT ASAR wide swath data 2003/2004,
+        link to shapefile\",\"publisher\":{\"@type\":\"Organization\",\"name\":\"PANGAEA\",\"disambiguatingDescription\":\"Data
+        Publisher for Earth \\u0026 Environmental Science\",\"url\":\"https://www.pangaea.de/\"},\"includedInDataCatalog\":{\"@type\":\"DataCatalog\",\"name\":\"PANGAEA\",\"disambiguatingDescription\":\"Data
+        Publisher for Earth \\u0026 Environmental Science\",\"url\":\"https://www.pangaea.de/\"},\"datePublished\":\"2008\",\"additionalType\":\"dataset\",\"description\":\"Permanent
+        water bodies not only store dissolved CO2 but are essential for the maintenance
+        of wetlands in their proximity. From the viewpoint of greenhouse gas (GHG)
+        accounting wetland functions comprise sequestration of carbon under anaerobic
+        conditions and methane release. The investigated area in central Siberia covers
+        boreal and sub-arctic environments. Small inundated basins are abundant on
+        the sub-arctic Taymir lowlands but also in parts of severe boreal climate
+        where permafrost ice content is high and feature important freshwater ecosystems.
+        Satellite radar imagery (ENVISAT ScanSAR), acquired in summer 2003 and 2004,
+        has been used to derive open water surfaces with 150 m resolution, covering
+        an area of approximately 3 Mkm**2. The open water surface maps were derived
+        using a simple threshold-based classification method. The results were assessed
+        with Russian forest inventory data, which includes detailed information about
+        water bodies. The resulting classification has been further used to estimate
+        the extent of tundra wetlands and to determine their importance for methane
+        emissions. Tundra wetlands cover 7% (400,000 km**2) of the study region and
+        methane emissions from hydromorphic soils are estimated to be 45,000 t/d for
+        the Taymir peninsula.\",\"abstract\":\"Permanent water bodies not only store
+        dissolved CO2 but are essential for the maintenance of wetlands in their proximity.
+        From the viewpoint of greenhouse gas (GHG) accounting wetland functions comprise
+        sequestration of carbon under anaerobic conditions and methane release. The
+        investigated area in central Siberia covers boreal and sub-arctic environments.
+        Small inundated basins are abundant on the sub-arctic Taymir lowlands but
+        also in parts of severe boreal climate where permafrost ice content is high
+        and feature important freshwater ecosystems. Satellite radar imagery (ENVISAT
+        ScanSAR), acquired in summer 2003 and 2004, has been used to derive open water
+        surfaces with 150 m resolution, covering an area of approximately 3 Mkm**2.
+        The open water surface maps were derived using a simple threshold-based classification
+        method. The results were assessed with Russian forest inventory data, which
+        includes detailed information about water bodies. The resulting classification
+        has been further used to estimate the extent of tundra wetlands and to determine
+        their importance for methane emissions. Tundra wetlands cover 7% (400,000
+        km**2) of the study region and methane emissions from hydromorphic soils are
+        estimated to be 45,000 t/d for the Taymir peninsula.\",\"citation\":[{\"@id\":\"https://doi.org/10.1002/aqc.836\",\"@type\":[\"CreativeWork\",\"ScholarlyArticle\"],\"identifier\":\"https://doi.org/10.1002/aqc.836\",\"url\":\"https://doi.org/10.1002/aqc.836\",\"creator\":[{\"@id\":\"https://orcid.org/0000-0002-3737-7931\",\"@type\":\"Person\",\"name\":\"Annett
+        Bartsch\",\"familyName\":\"Bartsch\",\"givenName\":\"Annett\",\"identifier\":\"https://orcid.org/0000-0002-3737-7931\",\"email\":\"annett.bartsch@bgeos.com\"},{\"@type\":\"Person\",\"name\":\"Richard
+        A Kidd\",\"familyName\":\"Kidd\",\"givenName\":\"Richard A\"},{\"@type\":\"Person\",\"name\":\"Carsten
+        Pathe\",\"familyName\":\"Pathe\",\"givenName\":\"Carsten\"},{\"@type\":\"Person\",\"name\":\"Klaus
+        Scipal\",\"familyName\":\"Scipal\",\"givenName\":\"Klaus\"},{\"@id\":\"https://orcid.org/0000-0001-7704-6857\",\"@type\":\"Person\",\"name\":\"Wolfgang
+        Wagner\",\"familyName\":\"Wagner\",\"givenName\":\"Wolfgang\",\"identifier\":\"https://orcid.org/0000-0001-7704-6857\",\"url\":\"http://www.ipf.tuwien.ac.at/index.php/staff/58-wagner-wolfgang.html\",\"email\":\"ww@ipf.tuwien.ac.at\"}],\"name\":\"Satellite
+        radar imagery for monitoring inland wetlands in boreal and sub-arctic environments\",\"datePublished\":\"2007\",\"pagination\":\"305-317\",\"isPartOf\":{\"@type\":[\"Periodical\",\"PublicationVolume\"],\"volumeNumber\":\"17(3)\",\"name\":\"Aquatic
+        Conservation-Marine and Freshwater Ecosystems\"},\"additionalType\":\"journal
+        article\"},{\"@id\":\"https://doi.org/10.1594/PANGAEA.834502\",\"@type\":[\"CreativeWork\",\"Dataset\"],\"identifier\":\"https://doi.org/10.1594/PANGAEA.834502\",\"url\":\"https://doi.pangaea.de/10.1594/PANGAEA.834502\",\"creator\":[{\"@type\":\"Person\",\"name\":\"Julia
+        Reschke\",\"familyName\":\"Reschke\",\"givenName\":\"Julia\"},{\"@id\":\"https://orcid.org/0000-0002-3737-7931\",\"@type\":\"Person\",\"name\":\"Annett
+        Bartsch\",\"familyName\":\"Bartsch\",\"givenName\":\"Annett\",\"identifier\":\"https://orcid.org/0000-0002-3737-7931\",\"email\":\"annett.bartsch@bgeos.com\"},{\"@id\":\"https://orcid.org/0000-0003-4742-8648\",\"@type\":\"Person\",\"name\":\"Stefan
+        Schlaffer\",\"familyName\":\"Schlaffer\",\"givenName\":\"Stefan\",\"identifier\":\"https://orcid.org/0000-0003-4742-8648\"},{\"@id\":\"https://orcid.org/0000-0002-7814-4990\",\"@type\":\"Person\",\"name\":\"Dmitry
+        Schepaschenko\",\"familyName\":\"Schepaschenko\",\"givenName\":\"Dmitry\",\"identifier\":\"https://orcid.org/0000-0002-7814-4990\",\"email\":\"schepd@iiasa.ac.at\"}],\"name\":\"Wetland
+        maps including open water extent dynamics based on ENVISAT ASAR WS for Siberia,
+        2007 and 2008, links to GeoTIFFs\",\"datePublished\":\"2012\",\"additionalType\":\"dataset\"},{\"@id\":\"https://doi.org/10.1594/PANGAEA.779754\",\"@type\":[\"CreativeWork\",\"Dataset\"],\"identifier\":\"https://doi.org/10.1594/PANGAEA.779754\",\"url\":\"https://doi.pangaea.de/10.1594/PANGAEA.779754\",\"creator\":[{\"@id\":\"https://orcid.org/0000-0003-4742-8648\",\"@type\":\"Person\",\"name\":\"Stefan
+        Schlaffer\",\"familyName\":\"Schlaffer\",\"givenName\":\"Stefan\",\"identifier\":\"https://orcid.org/0000-0003-4742-8648\"},{\"@type\":\"Person\",\"name\":\"Daniel
+        Sabel\",\"familyName\":\"Sabel\",\"givenName\":\"Daniel\"},{\"@id\":\"https://orcid.org/0000-0002-3737-7931\",\"@type\":\"Person\",\"name\":\"Annett
+        Bartsch\",\"familyName\":\"Bartsch\",\"givenName\":\"Annett\",\"identifier\":\"https://orcid.org/0000-0002-3737-7931\",\"email\":\"annett.bartsch@bgeos.com\"},{\"@id\":\"https://orcid.org/0000-0001-7704-6857\",\"@type\":\"Person\",\"name\":\"Wolfgang
+        Wagner\",\"familyName\":\"Wagner\",\"givenName\":\"Wolfgang\",\"identifier\":\"https://orcid.org/0000-0001-7704-6857\",\"url\":\"http://www.ipf.tuwien.ac.at/index.php/staff/58-wagner-wolfgang.html\",\"email\":\"ww@ipf.tuwien.ac.at\"}],\"name\":\"Regional
+        water bodies remote sensing products with links to geotiff images\",\"datePublished\":\"2012\",\"additionalType\":\"dataset\"}],\"@reverse\":{\"isBasedOn\":{\"@id\":\"https://doi.org/10.2166/nh.2008.041\",\"@type\":[\"CreativeWork\",\"ScholarlyArticle\"],\"identifier\":\"https://doi.org/10.2166/nh.2008.041\",\"url\":\"https://doi.org/10.2166/nh.2008.041\",\"creator\":[{\"@id\":\"https://orcid.org/0000-0002-3737-7931\",\"@type\":\"Person\",\"name\":\"Annett
+        Bartsch\",\"familyName\":\"Bartsch\",\"givenName\":\"Annett\",\"identifier\":\"https://orcid.org/0000-0002-3737-7931\",\"email\":\"annett.bartsch@bgeos.com\"},{\"@type\":\"Person\",\"name\":\"Carsten
+        Pathe\",\"familyName\":\"Pathe\",\"givenName\":\"Carsten\"},{\"@id\":\"https://orcid.org/0000-0001-7704-6857\",\"@type\":\"Person\",\"name\":\"Wolfgang
+        Wagner\",\"familyName\":\"Wagner\",\"givenName\":\"Wolfgang\",\"identifier\":\"https://orcid.org/0000-0001-7704-6857\",\"url\":\"http://www.ipf.tuwien.ac.at/index.php/staff/58-wagner-wolfgang.html\",\"email\":\"ww@ipf.tuwien.ac.at\"},{\"@type\":\"Person\",\"name\":\"Klaus
+        Scipal\",\"familyName\":\"Scipal\",\"givenName\":\"Klaus\"}],\"name\":\"Detection
+        of permanent open water surfaces in central Siberia with ENVISAT ASAR wide
+        swath data with special emphasis on the estimation of methane fluxes from
+        tundra wetlands\",\"datePublished\":\"2008\",\"pagination\":\"89-100\",\"isPartOf\":{\"@type\":[\"Periodical\",\"PublicationVolume\"],\"volumeNumber\":\"39(2)\",\"name\":\"Hydrology
+        Research\"},\"additionalType\":\"journal article\"}},\"spatialCoverage\":{\"@type\":\"Place\",\"geo\":{\"@type\":\"GeoShape\",\"box\":\"51.7669
+        88.4039 75.1783 92.2825\"}},\"size\":{\"@type\":\"QuantitativeValue\",\"value\":4.0,\"unitText\":\"MBytes\"},\"license\":\"https://creativecommons.org/licenses/by/3.0/\",\"conditionsOfAccess\":\"unrestricted\",\"isAccessibleForFree\":true,\"inLanguage\":\"en\",\"distribution\":[{\"@type\":\"DataDownload\",\"contentUrl\":\"https://store.pangaea.de/Publications/Bartsch-etal_2008/open_water_central_siberia_ASAR_WS_2003.zip\",\"encodingFormat\":\"application/zip\"}]}</script>\n<script
+        type=\"text/javascript\">/*<![CDATA[*/\r\nvar _paq=window._paq=window._paq||[];(function(){\r\nvar
+        u=\"https://analytics.pangaea.de/\";_paq.push(['setTrackerUrl',u+'matomo.php']);_paq.push(['setCookieDomain','pangaea.de']);_paq.push(['setDomains',['pangaea.de','www.pangaea.de','doi.pangaea.de']]);_paq.push(['setSiteId',1]);\r\n_paq.push(['enableLinkTracking']);_paq.push(['setDownloadClasses',['dl-link']]);_paq.push(['setDownloadExtensions',[]]);_paq.push(['setIgnoreClasses',['notrack']]);_paq.push(['trackPageView']);\r\nvar
+        d=document,g=d.createElement('script'),s=d.getElementsByTagName('script')[0];g.async=true;g.src=u+'matomo.js';s.parentNode.insertBefore(g,s);\r\n})();\r\n/*]]>*/</script>\r\n</head>\r\n<body
+        class=\"homepage-layout\">\r\n<div id=\"header-wrapper\">\r\n  <div class=\"container-fluid\">\r\n
+        \   <header class=\"row\"><!-- volle Screen-Breite -->\r\n      <div class=\"content-wrapper\"><!--
+        max. Breite -->\r\n        <div id=\"login-area-wrapper\" class=\"hidden-print\"><div
+        id=\"login-area\"><span id=\"user-name\">Not logged in</span><a id=\"signup-button\"
+        class=\"glyphicon glyphicon-plus-sign self-referer-link\" title=\"Sign Up
+        / Create Account\" aria-label=\"Sign up\" target=\"_self\" rel=\"nofollow\"
+        href=\"https://www.pangaea.de/user/signup.php?referer=https%3A%2F%2Fdoi.pangaea.de%2F\"
+        data-template=\"https://www.pangaea.de/user/signup.php?referer=#u#\"></a><a
+        id=\"login-button\" class=\"glyphicon glyphicon-log-in self-referer-link\"
+        title=\"Log In\" aria-label=\"Log in\" target=\"_self\" rel=\"nofollow\" href=\"https://www.pangaea.de/user/login.php?referer=https%3A%2F%2Fdoi.pangaea.de%2F\"
+        data-template=\"https://www.pangaea.de/user/login.php?referer=#u#\"></a></div></div>\r\n
+        \       <div class=\"blindspalte header-block col-lg-3 col-md-4\"></div>\r\n
+        \       \r\n        <div id=\"header-logo-block\" class=\"header-block col-lg-3
+        col-md-4 col-sm-4 col-xs-8\">\r\n          <div id=\"pangaea-logo\">\r\n            <a
+        title=\"PANGAEA home\" href=\"//www.pangaea.de/\" class=\"home-link\"><img
+        src=\"//www.pangaea.de/assets/v.6b7105a5fd061af46552d8c6ee53c11c/layout-images/pangaea-logo.png\"
+        alt=\"PANGAEA home\"></a>\r\n          </div>\r\n        </div>\r\n        \r\n
+        \       <div id=\"header-mid-block\" class=\"header-block col-lg-12 col-md-9
+        col-sm-20 col-xs-16\">\r\n          <div id=\"pangaea-logo-headline\">\r\n
+        \           PANGAEA<span class=\"punkt\">.</span>\r\n          </div>\r\n
+        \         <div id=\"pangaea-logo-slogan\">\r\n            <span>Data Publisher
+        for Earth &amp; </span><span class=\"nowrap\">Environmental Science</span>\r\n
+        \         </div>\r\n          <div id=\"search-area-header\" class=\"row\"></div>\r\n
+        \       </div>\r\n        \r\n        <div id=\"header-main-menu-block\" class=\"header-block
+        hidden-print col-lg-6 col-md-7 col-sm-24 col-xs-24\">\r\n          <nav id=\"main-nav\">\r\n
+        \           <ul>\r\n              <li id=\"menu-search\">\r\n                <!--
+        class on link is important, don't change!!! -->\r\n                <a href=\"//www.pangaea.de/\"
+        class=\"home-link\">Search</a>\r\n              </li>\r\n              <li
+        id=\"menu-submit\">\r\n                <a href=\"//www.pangaea.de/submit/\">Submit</a>\r\n
+        \             </li>\r\n              <li id=\"menu-help\">\r\n                <a
+        href=\"//wiki.pangaea.de/\">Help</a>\r\n              </li>\r\n              <li
+        id=\"menu-about\">\r\n                <a href=\"//www.pangaea.de/about/\">About</a>\r\n
+        \             </li>\r\n              <li id=\"menu-contact\">\r\n                <a
+        href=\"//www.pangaea.de/contact/\">Contact</a>\r\n              </li>\r\n
+        \           </ul>\r\n          </nav>\r\n          <div class=\"clearfix\"></div>\r\n
+        \       </div>\r\n      </div>\r\n    </header>\r\n  </div>\r\n</div>\r\n<div
+        id=\"flex-wrapper\">\r\n<div id=\"main-container\" class=\"container-fluid\">\r\n<div
+        id=\"main-row\" class=\"row main-row\">\r\n<div id=\"main\" class=\"col-lg-24
+        col-md-24 col-sm-24 col-xs-24\">\r\n<div id=\"dataset\">\n<div class=\"row\"><div
+        class=\"col-lg-3 col-md-4 col-sm-24 col-xs-24 hidden-xs hidden-sm\"><div class=\"title
+        citation invisible-top-border\">Citation:</div>\n</div>\n<div class=\"col-lg-21
+        col-md-20 col-sm-24 col-xs-24\"><div class=\"descr top-border\"><div id=\"map-dataset-wrapper\"
+        class=\"map-wrapper hidden-print hidden-xs hidden-sm col-lg-8 col-md-8 col-sm-24
+        col-xs-24\"><div class=\"embed-responsive embed-responsive-4by3\"><div id=\"map-dataset\"
+        class=\"embed-responsive-item\" data-maptype=\"event\" data-id-dataset=\"860500\"
+        data-viewport-bbox=\"[88.4039,51.7669,92.2825,75.1783]\"></div>\n</div>\n</div>\n<h1
+        class=\"hanging citation\"><strong><a class=\"popover-link link-unstyled\"
+        href=\"#\" data-title=\"&lt;span&gt;Bartsch, Annett&lt;a class=&quot;searchlink
+        glyphicon glyphicon-search&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;
+        title=&quot;Search PANGAEA for other datasets related to 'Bartsch, Annett'...&quot;
+        aria-label=&quot;Search PANGAEA for other datasets related to 'Bartsch, Annett'&quot;
+        href=&quot;//www.pangaea.de/?q=author:orcid:0000-0002-3737-7931&quot;&gt;&lt;/a&gt;&lt;/span&gt;\"
+        data-content=\"&lt;div&gt;&lt;div&gt;&lt;a class=&quot;orcid-link text-nowrap
+        wide-icon-link&quot; target=&quot;_blank&quot; href=&quot;https://orcid.org/0000-0002-3737-7931&quot;&gt;https://orcid.org/0000-0002-3737-7931&lt;/a&gt;&lt;/div&gt;&#10;&lt;div&gt;&lt;a
+        class=&quot;mail-link text-nowrap wide-icon-link&quot; href=&quot;mailto:annett.bartsch@bgeos.com&quot;&gt;annett.bartsch@bgeos.com&lt;/a&gt;&lt;/div&gt;&#10;&lt;/div&gt;&#10;\">Bartsch,
+        Annett</a>; Pathe, Carsten; <a class=\"popover-link link-unstyled\" href=\"#\"
+        data-title=\"&lt;span&gt;Wagner, Wolfgang&lt;a class=&quot;searchlink glyphicon
+        glyphicon-search&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;
+        title=&quot;Search PANGAEA for other datasets related to 'Wagner, Wolfgang'...&quot;
+        aria-label=&quot;Search PANGAEA for other datasets related to 'Wagner, Wolfgang'&quot;
+        href=&quot;//www.pangaea.de/?q=author:orcid:0000-0001-7704-6857&quot;&gt;&lt;/a&gt;&lt;/span&gt;\"
+        data-content=\"&lt;div&gt;&lt;div&gt;&lt;a class=&quot;orcid-link text-nowrap
+        wide-icon-link&quot; target=&quot;_blank&quot; href=&quot;https://orcid.org/0000-0001-7704-6857&quot;&gt;https://orcid.org/0000-0001-7704-6857&lt;/a&gt;&lt;/div&gt;&#10;&lt;div&gt;&lt;a
+        class=&quot;mail-link text-nowrap wide-icon-link&quot; href=&quot;mailto:ww@ipf.tuwien.ac.at&quot;&gt;ww@ipf.tuwien.ac.at&lt;/a&gt;&lt;/div&gt;&#10;&lt;div&gt;&lt;a
+        class=&quot;web-link text-nowrap wide-icon-link&quot; target=&quot;_blank&quot;
+        href=&quot;http://www.ipf.tuwien.ac.at/index.php/staff/58-wagner-wolfgang.html&quot;&gt;Web
+        Page&lt;/a&gt;&lt;/div&gt;&#10;&lt;/div&gt;&#10;\">Wagner, Wolfgang</a>; Scipal,
+        Klaus (2008):</strong> Permanent open water surfaces in central Siberia from
+        ENVISAT ASAR wide swath data 2003/2004, link to shapefile [dataset]. <em>PANGAEA</em>,
+        <a id=\"citation-doi-link\" rel=\"nofollow bookmark\" href=\"https://doi.org/10.1594/PANGAEA.860500\"
+        data-pubstatus=\"4\" class=\"text-linkwrap popover-link doi-link\">https://doi.org/10.1594/PANGAEA.860500</a>,<hr
+        class=\"spacer\" aria-hidden=\"true\" />\n<em>Supplement to:</em> Bartsch,
+        A et al. (2008): Detection of permanent open water surfaces in central Siberia
+        with ENVISAT ASAR wide swath data with special emphasis on the estimation
+        of methane fluxes from tundra wetlands. <em>Hydrology Research</em>, <strong>39(2)</strong>,
+        89-100, <a class=\"text-linkwrap doi-link\" href=\"https://doi.org/10.2166/nh.2008.041\"
+        target=\"_blank\">https://doi.org/10.2166/nh.2008.041</a></h1>\n<p class=\"howtocite\"><small><span
+        class=\"glyphicon glyphicon-bullhorn\" aria-hidden=\"true\"></span> <strong>Always
+        quote citation above when using data!</strong> You can download the citation
+        in several formats below.</small></p>\n<p class=\"data-maintenance-dates\"><small><span
+        class=\"glyphicon glyphicon-calendar\" aria-hidden=\"true\"></span> <span
+        title=\"Published: 2008 (exact date unknown)\"><strong>Published:</strong>
+        2008 <em>(exact date unknown)</em></span> • <span title=\"DOI registered:
+        2016-05-17T14:34:18\"><strong>DOI registered:</strong> 2016-05-17</span></small></p>\n<p
+        class=\"data-buttons\"><a rel=\"nofollow describedby\" title=\"Export citation
+        to Reference Manager, EndNote, ProCite\" href=\"?format=citation_ris\" class=\"actionbuttonlink\"><span
+        class=\"actionbutton\">RIS Citation</span></a><a rel=\"nofollow describedby\"
+        title=\"Export citation to BibTeX\" href=\"?format=citation_bibtex\" class=\"actionbuttonlink\"><span
+        class=\"actionbutton\"><span style=\"font-variant:small-caps;\">BibTeX</span>
+        Citation</span></a><a id=\"text-citation-link\" rel=\"nofollow\" title=\"Export
+        citation as plain text\" href=\"?format=citation_text\" target=\"_blank\"
+        class=\"actionbuttonlink share-link\"><span class=\"actionbutton\">Text Citation</span></a><span
+        class=\"separator\"></span><a id=\"share-button\" rel=\"nofollow\" class=\"popover-link
+        actionbuttonlink\" href=\"//www.pangaea.de/nojs.php\" data-title=\"Share Dataset
+        on Social Media\"><span class=\"actionbutton\" title=\"Share Dataset on Social
+        Media\"><span class=\"glyphicon glyphicon-share\"></span> Share</span></a><span
+        class=\"separator\"></span><a rel=\"nofollow\" target=\"_blank\" title=\"Display
+        events in map\" href=\"//www.pangaea.de/advanced/map-dataset-events.php?id=860500&amp;viewportBBOX=88.4039,51.7669,92.2825,75.1783\"
+        class=\"actionbuttonlink\"><span class=\"actionbutton\">Show Map</span></a><a
+        rel=\"nofollow\" title=\"Display events in Google Earth\" href=\"?format=events_kml\"
+        class=\"actionbuttonlink\"><span class=\"actionbutton\">Google Earth</span></a><span
+        data-badge-type=\"1\" data-doi=\"10.1594/PANGAEA.860500\" data-badge-popover=\"right\"
+        data-hide-no-mentions=\"true\" class=\"altmetric-embed sep-before\"></span><span
+        class=\"sep-before\" id=\"usage-stats\"></span></p>\n<div class=\"clearfix\"></div>\n</div>\n</div>\n</div>\n<div
+        class=\"row\"><div class=\"col-lg-3 col-md-4 col-sm-24 col-xs-24\"><div class=\"title\">Abstract:</div>\n</div>\n<div
+        class=\"col-lg-21 col-md-20 col-sm-24 col-xs-24\"><div class=\"descr\"><div
+        class=\"abstract\">Permanent water bodies not only store dissolved CO2 but
+        are essential for the maintenance of wetlands in their proximity. From the
+        viewpoint of greenhouse gas (GHG) accounting wetland functions comprise sequestration
+        of carbon under anaerobic conditions and methane release. The investigated
+        area in central Siberia covers boreal and sub-arctic environments. Small inundated
+        basins are abundant on the sub-arctic Taymir lowlands but also in parts of
+        severe boreal climate where permafrost ice content is high and feature important
+        freshwater ecosystems. Satellite radar imagery (ENVISAT ScanSAR), acquired
+        in summer 2003 and 2004, has been used to derive open water surfaces with
+        150 m resolution, covering an area of approximately 3 Mkm**2. The open water
+        surface maps were derived using a simple threshold-based classification method.
+        The results were assessed with Russian forest inventory data, which includes
+        detailed information about water bodies. The resulting classification has
+        been further used to estimate the extent of tundra wetlands and to determine
+        their importance for methane emissions. Tundra wetlands cover 7% (400,000
+        km**2) of the study region and methane emissions from hydromorphic soils are
+        estimated to be 45,000 t/d for the Taymir peninsula.</div>\n</div>\n</div>\n</div>\n<div
+        class=\"row\"><div class=\"col-lg-3 col-md-4 col-sm-24 col-xs-24\"><div class=\"title\">Related
+        to:</div>\n</div>\n<div class=\"col-lg-21 col-md-20 col-sm-24 col-xs-24\"><div
+        class=\"descr\"><div class=\"hanging\"><strong><a class=\"popover-link link-unstyled\"
+        href=\"#\" data-title=\"&lt;span&gt;Bartsch, Annett&lt;a class=&quot;searchlink
+        glyphicon glyphicon-search&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;
+        title=&quot;Search PANGAEA for other datasets related to 'Bartsch, Annett'...&quot;
+        aria-label=&quot;Search PANGAEA for other datasets related to 'Bartsch, Annett'&quot;
+        href=&quot;//www.pangaea.de/?q=author:orcid:0000-0002-3737-7931&quot;&gt;&lt;/a&gt;&lt;/span&gt;\"
+        data-content=\"&lt;div&gt;&lt;div&gt;&lt;a class=&quot;orcid-link text-nowrap
+        wide-icon-link&quot; target=&quot;_blank&quot; href=&quot;https://orcid.org/0000-0002-3737-7931&quot;&gt;https://orcid.org/0000-0002-3737-7931&lt;/a&gt;&lt;/div&gt;&#10;&lt;div&gt;&lt;a
+        class=&quot;mail-link text-nowrap wide-icon-link&quot; href=&quot;mailto:annett.bartsch@bgeos.com&quot;&gt;annett.bartsch@bgeos.com&lt;/a&gt;&lt;/div&gt;&#10;&lt;/div&gt;&#10;\">Bartsch,
+        Annett</a>; Kidd, Richard A; Pathe, Carsten; Scipal, Klaus; <a class=\"popover-link
+        link-unstyled\" href=\"#\" data-title=\"&lt;span&gt;Wagner, Wolfgang&lt;a
+        class=&quot;searchlink glyphicon glyphicon-search&quot; target=&quot;_blank&quot;
+        rel=&quot;nofollow&quot; title=&quot;Search PANGAEA for other datasets related
+        to 'Wagner, Wolfgang'...&quot; aria-label=&quot;Search PANGAEA for other datasets
+        related to 'Wagner, Wolfgang'&quot; href=&quot;//www.pangaea.de/?q=author:orcid:0000-0001-7704-6857&quot;&gt;&lt;/a&gt;&lt;/span&gt;\"
+        data-content=\"&lt;div&gt;&lt;div&gt;&lt;a class=&quot;orcid-link text-nowrap
+        wide-icon-link&quot; target=&quot;_blank&quot; href=&quot;https://orcid.org/0000-0001-7704-6857&quot;&gt;https://orcid.org/0000-0001-7704-6857&lt;/a&gt;&lt;/div&gt;&#10;&lt;div&gt;&lt;a
+        class=&quot;mail-link text-nowrap wide-icon-link&quot; href=&quot;mailto:ww@ipf.tuwien.ac.at&quot;&gt;ww@ipf.tuwien.ac.at&lt;/a&gt;&lt;/div&gt;&#10;&lt;div&gt;&lt;a
+        class=&quot;web-link text-nowrap wide-icon-link&quot; target=&quot;_blank&quot;
+        href=&quot;http://www.ipf.tuwien.ac.at/index.php/staff/58-wagner-wolfgang.html&quot;&gt;Web
+        Page&lt;/a&gt;&lt;/div&gt;&#10;&lt;/div&gt;&#10;\">Wagner, Wolfgang</a> (2007):</strong>
+        Satellite radar imagery for monitoring inland wetlands in boreal and sub-arctic
+        environments. <em>Aquatic Conservation-Marine and Freshwater Ecosystems</em>,
+        <strong>17(3)</strong>, 305-317, <a class=\"text-linkwrap doi-link\" href=\"https://doi.org/10.1002/aqc.836\"
+        target=\"_blank\">https://doi.org/10.1002/aqc.836</a><a class=\"searchlink
+        glyphicon glyphicon-search\" target=\"_blank\" rel=\"nofollow\" title=\"Search
+        PANGAEA for other datasets related to this publication...\" aria-label=\"Search
+        PANGAEA for other datasets related to this publication\" href=\"//www.pangaea.de/?q=@ref36247\"></a></div>\n<div
+        class=\"hanging\"><strong>Reschke, Julia; <a class=\"popover-link link-unstyled\"
+        href=\"#\" data-title=\"&lt;span&gt;Bartsch, Annett&lt;a class=&quot;searchlink
+        glyphicon glyphicon-search&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;
+        title=&quot;Search PANGAEA for other datasets related to 'Bartsch, Annett'...&quot;
+        aria-label=&quot;Search PANGAEA for other datasets related to 'Bartsch, Annett'&quot;
+        href=&quot;//www.pangaea.de/?q=author:orcid:0000-0002-3737-7931&quot;&gt;&lt;/a&gt;&lt;/span&gt;\"
+        data-content=\"&lt;div&gt;&lt;div&gt;&lt;a class=&quot;orcid-link text-nowrap
+        wide-icon-link&quot; target=&quot;_blank&quot; href=&quot;https://orcid.org/0000-0002-3737-7931&quot;&gt;https://orcid.org/0000-0002-3737-7931&lt;/a&gt;&lt;/div&gt;&#10;&lt;div&gt;&lt;a
+        class=&quot;mail-link text-nowrap wide-icon-link&quot; href=&quot;mailto:annett.bartsch@bgeos.com&quot;&gt;annett.bartsch@bgeos.com&lt;/a&gt;&lt;/div&gt;&#10;&lt;/div&gt;&#10;\">Bartsch,
+        Annett</a>; <a class=\"popover-link link-unstyled\" href=\"#\" data-title=\"&lt;span&gt;Schlaffer,
+        Stefan&lt;a class=&quot;searchlink glyphicon glyphicon-search&quot; target=&quot;_blank&quot;
+        rel=&quot;nofollow&quot; title=&quot;Search PANGAEA for other datasets related
+        to 'Schlaffer, Stefan'...&quot; aria-label=&quot;Search PANGAEA for other
+        datasets related to 'Schlaffer, Stefan'&quot; href=&quot;//www.pangaea.de/?q=author:orcid:0000-0003-4742-8648&quot;&gt;&lt;/a&gt;&lt;/span&gt;\"
+        data-content=\"&lt;div&gt;&lt;div&gt;&lt;a class=&quot;orcid-link text-nowrap
+        wide-icon-link&quot; target=&quot;_blank&quot; href=&quot;https://orcid.org/0000-0003-4742-8648&quot;&gt;https://orcid.org/0000-0003-4742-8648&lt;/a&gt;&lt;/div&gt;&#10;&lt;/div&gt;&#10;\">Schlaffer,
+        Stefan</a>; <a class=\"popover-link link-unstyled\" href=\"#\" data-title=\"&lt;span&gt;Schepaschenko,
+        Dmitry&lt;a class=&quot;searchlink glyphicon glyphicon-search&quot; target=&quot;_blank&quot;
+        rel=&quot;nofollow&quot; title=&quot;Search PANGAEA for other datasets related
+        to 'Schepaschenko, Dmitry'...&quot; aria-label=&quot;Search PANGAEA for other
+        datasets related to 'Schepaschenko, Dmitry'&quot; href=&quot;//www.pangaea.de/?q=author:orcid:0000-0002-7814-4990&quot;&gt;&lt;/a&gt;&lt;/span&gt;\"
+        data-content=\"&lt;div&gt;&lt;div&gt;&lt;a class=&quot;orcid-link text-nowrap
+        wide-icon-link&quot; target=&quot;_blank&quot; href=&quot;https://orcid.org/0000-0002-7814-4990&quot;&gt;https://orcid.org/0000-0002-7814-4990&lt;/a&gt;&lt;/div&gt;&#10;&lt;div&gt;&lt;a
+        class=&quot;mail-link text-nowrap wide-icon-link&quot; href=&quot;mailto:schepd@iiasa.ac.at&quot;&gt;schepd@iiasa.ac.at&lt;/a&gt;&lt;/div&gt;&#10;&lt;/div&gt;&#10;\">Schepaschenko,
+        Dmitry</a> (2012):</strong> Wetland maps including open water extent dynamics
+        based on ENVISAT ASAR WS for Siberia, 2007 and 2008, links to GeoTIFFs [dataset].
+        <em>PANGAEA</em>, <a class=\"text-linkwrap doi-link\" href=\"https://doi.pangaea.de/10.1594/PANGAEA.834502\"
+        target=\"_self\">https://doi.org/10.1594/PANGAEA.834502</a></div>\n<div class=\"hanging\"><strong><a
+        class=\"popover-link link-unstyled\" href=\"#\" data-title=\"&lt;span&gt;Schlaffer,
+        Stefan&lt;a class=&quot;searchlink glyphicon glyphicon-search&quot; target=&quot;_blank&quot;
+        rel=&quot;nofollow&quot; title=&quot;Search PANGAEA for other datasets related
+        to 'Schlaffer, Stefan'...&quot; aria-label=&quot;Search PANGAEA for other
+        datasets related to 'Schlaffer, Stefan'&quot; href=&quot;//www.pangaea.de/?q=author:orcid:0000-0003-4742-8648&quot;&gt;&lt;/a&gt;&lt;/span&gt;\"
+        data-content=\"&lt;div&gt;&lt;div&gt;&lt;a class=&quot;orcid-link text-nowrap
+        wide-icon-link&quot; target=&quot;_blank&quot; href=&quot;https://orcid.org/0000-0003-4742-8648&quot;&gt;https://orcid.org/0000-0003-4742-8648&lt;/a&gt;&lt;/div&gt;&#10;&lt;/div&gt;&#10;\">Schlaffer,
+        Stefan</a>; Sabel, Daniel; <a class=\"popover-link link-unstyled\" href=\"#\"
+        data-title=\"&lt;span&gt;Bartsch, Annett&lt;a class=&quot;searchlink glyphicon
+        glyphicon-search&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;
+        title=&quot;Search PANGAEA for other datasets related to 'Bartsch, Annett'...&quot;
+        aria-label=&quot;Search PANGAEA for other datasets related to 'Bartsch, Annett'&quot;
+        href=&quot;//www.pangaea.de/?q=author:orcid:0000-0002-3737-7931&quot;&gt;&lt;/a&gt;&lt;/span&gt;\"
+        data-content=\"&lt;div&gt;&lt;div&gt;&lt;a class=&quot;orcid-link text-nowrap
+        wide-icon-link&quot; target=&quot;_blank&quot; href=&quot;https://orcid.org/0000-0002-3737-7931&quot;&gt;https://orcid.org/0000-0002-3737-7931&lt;/a&gt;&lt;/div&gt;&#10;&lt;div&gt;&lt;a
+        class=&quot;mail-link text-nowrap wide-icon-link&quot; href=&quot;mailto:annett.bartsch@bgeos.com&quot;&gt;annett.bartsch@bgeos.com&lt;/a&gt;&lt;/div&gt;&#10;&lt;/div&gt;&#10;\">Bartsch,
+        Annett</a>; <a class=\"popover-link link-unstyled\" href=\"#\" data-title=\"&lt;span&gt;Wagner,
+        Wolfgang&lt;a class=&quot;searchlink glyphicon glyphicon-search&quot; target=&quot;_blank&quot;
+        rel=&quot;nofollow&quot; title=&quot;Search PANGAEA for other datasets related
+        to 'Wagner, Wolfgang'...&quot; aria-label=&quot;Search PANGAEA for other datasets
+        related to 'Wagner, Wolfgang'&quot; href=&quot;//www.pangaea.de/?q=author:orcid:0000-0001-7704-6857&quot;&gt;&lt;/a&gt;&lt;/span&gt;\"
+        data-content=\"&lt;div&gt;&lt;div&gt;&lt;a class=&quot;orcid-link text-nowrap
+        wide-icon-link&quot; target=&quot;_blank&quot; href=&quot;https://orcid.org/0000-0001-7704-6857&quot;&gt;https://orcid.org/0000-0001-7704-6857&lt;/a&gt;&lt;/div&gt;&#10;&lt;div&gt;&lt;a
+        class=&quot;mail-link text-nowrap wide-icon-link&quot; href=&quot;mailto:ww@ipf.tuwien.ac.at&quot;&gt;ww@ipf.tuwien.ac.at&lt;/a&gt;&lt;/div&gt;&#10;&lt;div&gt;&lt;a
+        class=&quot;web-link text-nowrap wide-icon-link&quot; target=&quot;_blank&quot;
+        href=&quot;http://www.ipf.tuwien.ac.at/index.php/staff/58-wagner-wolfgang.html&quot;&gt;Web
+        Page&lt;/a&gt;&lt;/div&gt;&#10;&lt;/div&gt;&#10;\">Wagner, Wolfgang</a> (2012):</strong>
+        Regional water bodies remote sensing products with links to geotiff images
+        [dataset]. <em>PANGAEA</em>, <a class=\"text-linkwrap doi-link\" href=\"https://doi.pangaea.de/10.1594/PANGAEA.779754\"
+        target=\"_self\">https://doi.org/10.1594/PANGAEA.779754</a></div>\n</div>\n</div>\n</div>\n<div
+        class=\"row\"><div class=\"col-lg-3 col-md-4 col-sm-24 col-xs-24\"><div class=\"title\">Coverage:</div>\n</div>\n<div
+        class=\"col-lg-21 col-md-20 col-sm-24 col-xs-24\"><div class=\"descr\"><div
+        class=\"hanging geo\"><em class=\"unfarbe\">Median Latitude: </em><span class=\"latitude\">63.472600</span><em
+        class=\"unfarbe\"> * Median Longitude: </em><span class=\"longitude\">90.343200</span><em
+        class=\"unfarbe\"> * South-bound Latitude: </em>51.766900<em class=\"unfarbe\">
+        * West-bound Longitude: </em>88.403900<em class=\"unfarbe\"> * North-bound
+        Latitude: </em>75.178300<em class=\"unfarbe\"> * East-bound Longitude: </em>92.282500</div>\n</div>\n</div>\n</div>\n<div
+        class=\"row\"><div class=\"col-lg-3 col-md-4 col-sm-24 col-xs-24\"><div class=\"title\">Event(s):</div>\n</div>\n<div
+        class=\"col-lg-21 col-md-20 col-sm-24 col-xs-24\"><div class=\"descr\"><div
+        class=\"hanging geo\"><strong>central_siberia</strong><a class=\"searchlink
+        glyphicon glyphicon-search\" target=\"_blank\" rel=\"nofollow\" title=\"Search
+        PANGAEA for other datasets related to 'central_siberia'...\" aria-label=\"Search
+        PANGAEA for other datasets related to 'central_siberia'\" href=\"//www.pangaea.de/?q=event:label:central_siberia\"></a><em
+        class=\"unfarbe\"> * Latitude Start: </em><span class=\"latitude\">75.178300</span><em
+        class=\"unfarbe\"> * Longitude Start: </em><span class=\"longitude\">88.403900</span><em
+        class=\"unfarbe\"> * Latitude End: </em>51.766900<em class=\"unfarbe\"> *
+        Longitude End: </em>92.282500<em class=\"unfarbe\"> * Location: </em><span>Siberia,
+        Russia</span><a class=\"searchlink glyphicon glyphicon-search\" target=\"_blank\"
+        rel=\"nofollow\" title=\"Search PANGAEA for other datasets related to 'Siberia,
+        Russia'...\" aria-label=\"Search PANGAEA for other datasets related to 'Siberia,
+        Russia'\" href=\"//www.pangaea.de/?q=location:%22Siberia,%20Russia%22\"></a></div>\n</div>\n</div>\n</div>\n<div
+        class=\"row\"><div class=\"col-lg-3 col-md-4 col-sm-24 col-xs-24\"><div class=\"title\">License:</div>\n</div>\n<div
+        class=\"col-lg-21 col-md-20 col-sm-24 col-xs-24\"><div class=\"descr\"><div
+        class=\"hanging\"><span><a href=\"https://creativecommons.org/licenses/by/3.0/\"
+        class=\"license-icon-CC-BY\" rel=\"license\" target=\"_blank\">Creative Commons
+        Attribution 3.0 Unported</a> (CC-BY-3.0)</span></div>\n</div>\n</div>\n</div>\n<div
+        class=\"row\"><div class=\"col-lg-3 col-md-4 col-sm-24 col-xs-24\"><div class=\"title\">Size:</div>\n</div>\n<div
+        class=\"col-lg-21 col-md-20 col-sm-24 col-xs-24\"><div class=\"descr\"><div
+        class=\"hanging\">4 MBytes</div>\n</div>\n</div>\n</div>\n<div class=\"row\"><div
+        class=\"col-lg-21 col-md-20 col-sm-24 col-xs-24 col-lg-offset-3 col-md-offset-4\"><div
+        class=\"text-block top-border\">\n<h2 id=\"download\">Download Data</h2>\n<p><a
+        rel=\"nofollow\" id=\"static-download-link\" class=\"dl-link notrack\" href=\"https://store.pangaea.de/Publications/Bartsch-etal_2008/open_water_central_siberia_ASAR_WS_2003.zip\"
+        target=\"_self\">Download dataset</a></p>\n</div></div></div><div id=\"recommendations\"></div>\n</div>\r\n</div>\r\n</div>\r\n</div>\r\n</div>\r\n<div
+        id=\"footer-wrapper\" class=\"top-border hidden-print\">\r\n  <div class=\"container-fluid\">\r\n
+        \   <footer class=\"row\"><!-- volle Screen-Breite -->\r\n      <div class=\"content-wrapper\"><!--
+        max. Breite -->\r\n        <div class=\"blindspalte col-lg-3 col-md-4 col-sm-4
+        col-xs-4\"></div>\r\n        <div id=\"footer-hosted-by-area\" class=\"col-lg-21
+        col-md-9 col-sm-24 col-xs-24\">\r\n          <div class=\"col-lg-12 col-md-24
+        col-sm-24 col-xs-24\">\r\n            <div class=\"headline underlined\">\r\n
+        \             PANGAEA is hosted by\r\n            </div>\r\n            \r\n
+        \           <div>\r\n              <p>\r\n                Alfred Wegener Institute,
+        Helmholtz Center for Polar and Marine Research (AWI)<br/>\r\n                Center
+        for Marine Environmental Sciences, University of Bremen (MARUM)\r\n              </p>\r\n
+        \           </div>\r\n\r\n            <div class=\"headline underlined\">\r\n
+        \             The System is supported by\r\n            </div>\r\n            \r\n
+        \           <div>\r\n              <p>\r\n                The European Commission,
+        Research<br/>\r\n                Federal Ministry of Research, Technology
+        and Space (BMFTR)<br/>\r\n                Deutsche Forschungsgemeinschaft
+        (DFG)<br/>\r\n                International Ocean Discovery Program (IODP)\r\n
+        \             </p>\r\n            </div>\r\n\r\n            <div class=\"headline
+        underlined\">\r\n              Citation\r\n            </div>\r\n\r\n            <div>\r\n
+        \             <p>\r\n                <strong>Felden, J; Möller, L; Schindler,
+        U; Huber, R; Schumacher, S; Koppe, R; Diepenbroek, M; Glöckner, FO (2023):</strong>\r\n
+        \               PANGAEA &ndash; Data Publisher for Earth &amp; Environmental
+        Science. <em>Scientific Data</em>, <strong>10(1)</strong>, 347,\r\n                <a
+        class=\"text-linkwrap doi-link\" href=\"https://doi.org/10.1038/s41597-023-02269-x\"
+        target=\"_blank\">https://doi.org/10.1038/s41597-023-02269-x</a>\r\n              </p>\r\n
+        \           </div>\r\n          </div>\r\n\r\n          <div class=\"col-lg-12
+        col-md-24 col-sm-24 col-xs-24\">\r\n            <div class=\"headline underlined\">\r\n
+        \             PANGAEA is certified by\r\n            </div>\r\n            \r\n
+        \           <div>\r\n              <a href=\"//www.worlddatasystem.org/\"
+        target=\"_blank\" title=\"World Data System\">\r\n                <img class=\"col-lg-6
+        col-md-6 col-sm-6 col-xs-6\" src=\"//www.pangaea.de/assets/v.6b7105a5fd061af46552d8c6ee53c11c/logos/logo-wds-block.png\"
+        alt=\"World Data System\">\r\n              </a>\r\n              <a href=\"//www.wmo.int/\"
+        target=\"_blank\" title=\"World Meteorological Organization\">\r\n                <img
+        class=\"col-lg-6 col-md-6 col-sm-6 col-xs-6\" src=\"//www.pangaea.de/assets/v.6b7105a5fd061af46552d8c6ee53c11c/logos/logo-wmo-block.png\"
+        alt=\"World Meteorological Organization\">\r\n              </a>\r\n              <a
+        href=\"//www.coretrustseal.org/\" target=\"_blank\" title=\"CoreTrustSeal\">\r\n
+        \               <img class=\"col-lg-6 col-md-6 col-sm-6 col-xs-6\" src=\"//www.pangaea.de/assets/v.6b7105a5fd061af46552d8c6ee53c11c/logos/logo-coretrustseal-block.png\"
+        alt=\"CoreTrustSeal\">\r\n              </a>\r\n            </div>\r\n          </div>\r\n
+        \       </div>\r\n                \r\n        <div id=\"footer-menu-area\"
+        class=\"col-lg-24 col-md-24 col-sm-24 col-xs-24\">\r\n          <div class=\"blindspalte
+        col-lg-3 col-md-4 col-sm-4 col-xs-4\"></div>\r\n          <div id=\"footer-menu-wrapper\"
+        class=\"col-lg-21 col-md-20 col-sm-24 col-xs-24\">\r\n            <nav id=\"footer-nav\">\r\n
+        \             <ul>\r\n                <li id=\"about-legal-notice\">\r\n                  <a
+        href=\"//www.pangaea.de/about/legal.php\">Legal notice</a>\r\n                </li>\r\n
+        \               <li id=\"about-term\">\r\n                  <a href=\"//www.pangaea.de/about/terms.php\">Terms
+        of use</a>\r\n                </li>\r\n                <li id=\"about-privacy-policy\">\r\n
+        \                 <a href=\"//www.pangaea.de/about/privacypolicy.php\">Privacy
+        policy</a>\r\n                </li>\r\n                <li id=\"about-cookies\">\r\n
+        \                 <a href=\"//www.pangaea.de/about/cookies.php\">Cookies</a>\r\n
+        \               </li>\r\n                <li id=\"about-jobs\">\r\n                  <a
+        href=\"//www.pangaea.de/about/jobs.php\">Jobs</a>\r\n                </li>\r\n
+        \               <li id=\"about-contact\">\r\n                  <a href=\"//www.pangaea.de/contact/\">Contact</a>\r\n
+        \               </li>\r\n              </ul>\r\n            </nav>\r\n            <div
+        class=\"clearfix\"></div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n
+        \   </footer>\r\n  </div>\r\n</div>\r\n</body>\n</html>\n"
+  recorded_at: 2025-07-24 03:41:50
+recorded_with: VCR-vcr/2.0.0
