@@ -31,7 +31,7 @@ Imports:
 Suggests:
     knitr,
     testthat,
-    vcr (>=2.0.0),
+    vcr (>= 2.0.0),
     markdown
 RoxygenNote: 7.3.2
 X-schema.org-applicationCategory: Biodiversity
